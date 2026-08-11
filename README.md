@@ -30,3 +30,8 @@ sandbox.py -- safe code execution environment
 pip install -r requirements.txt
 ```
 
+`sandbox.py` executes generated pandas code inside an isolated [E2B](https://e2b.dev) Firecracker microVM. Sign up for a free E2B account (no card required, 100 sandbox-hours/month), grab an API key from the dashboard, and export it:
+```bash
+export E2B_API_KEY=e2b_***
+```
+
