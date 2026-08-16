@@ -6,7 +6,7 @@ Generate pandas code to answer natural language questions about financial statem
 
 ```git clone https://huggingface.co/datasets/AIGuruTinix/ViFinQA```
 
-## Architecture 
+## Architecture
 
 ```
 metadata/
@@ -19,8 +19,12 @@ data/
 └── ...
 
 prepare.py -- Phase 1: text parsing, table extraction, metadata generation
-query.py -- Phase 2: table retrieval, schema description, LLM, execution
-sandbox.py -- safe code execution environment
+src/graph.py -- supported compiled workflow: retrieval, generation, validation, execution
+src/nodes.py -- graph node implementations
+src/helper.py -- graph validation and routing helpers
+src/prompt.py -- graph prompt templates and builders
+src/sandbox.py -- isolated code execution environment
+query.py -- deprecated retrieval-only wrapper
 ```
 
 ## Usage
@@ -30,8 +34,27 @@ sandbox.py -- safe code execution environment
 pip install -r requirements.txt
 ```
 
-`sandbox.py` executes generated pandas code inside an isolated [E2B](https://e2b.dev) Firecracker microVM. Sign up for a free E2B account (no card required, 100 sandbox-hours/month), grab an API key from the dashboard, and export it:
+`src/sandbox.py` executes generated pandas code inside an isolated
+[E2B](https://e2b.dev) Firecracker microVM with outbound internet disabled. DataFrames
+are transferred with dtype metadata, and only a bounded, validated numeric JSON result
+returns to the host. Create an E2B account, obtain an API key, and export it:
 ```bash
 export E2B_API_KEY=e2b_***
 ```
 
+Configure the embedding provider, Qdrant collection, and OpenAI-compatible LLM endpoint,
+then invoke the compiled graph with a canonical ViFinQA question:
+
+```python
+from src.graph import graph
+
+result = graph.invoke({"question": query_text, "max_attempts": 5})
+answer = result["answer_record"]
+```
+
+`max_attempts` defaults to `5` and accepts values from `1` through `5`. The final
+`answer_record` contains the numeric answer, evidence paths, relevant documents and
+tables, and the accepted pandas query. Transient LLM and Qdrant failures are retried
+up to three times with backoff without consuming a semantic generation attempt.
+`query.py` remains only as a deprecated retrieval-only compatibility wrapper; new
+callers should use the compiled graph.

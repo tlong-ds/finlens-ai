@@ -9,11 +9,29 @@ from functools import lru_cache
 from typing import Any
 
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import (
+    APIConnectionError,
+    APIStatusError,
+    APITimeoutError,
+    OpenAI,
+    RateLimitError,
+)
 
 
 class LLMProviderError(RuntimeError):
     """Raised when the configured LLM cannot produce a usable response."""
+
+
+class LLMTransientError(LLMProviderError):
+    """Raised for temporary provider failures that are safe to retry unchanged."""
+
+
+class LLMResponseError(LLMProviderError):
+    """Raised when the LLM response is empty or structurally unusable."""
+
+
+def _is_transient_status(error: APIStatusError) -> bool:
+    return error.status_code in {408, 409, 425, 429} or error.status_code >= 500
 
 
 def _required_env(name: str) -> str:
@@ -59,11 +77,19 @@ def generate(prompt: str, *, system_prompt: str | None = None) -> str:
             temperature=float(os.getenv("LLM_TEMPERATURE", "0")),
         )
         content = response.choices[0].message.content
+    except (APIConnectionError, APITimeoutError, RateLimitError) as exc:
+        raise LLMTransientError("Temporary LLM request failure") from exc
+    except APIStatusError as exc:
+        if _is_transient_status(exc):
+            raise LLMTransientError("Temporary LLM request failure") from exc
+        raise LLMProviderError("LLM request failed") from exc
+    except LLMProviderError:
+        raise
     except Exception as exc:
         raise LLMProviderError("LLM request failed") from exc
 
     if not content:
-        raise LLMProviderError("LLM returned an empty response")
+        raise LLMResponseError("LLM returned an empty response")
     return content.strip()
 
 
@@ -79,7 +105,7 @@ def generate_structured(
     try:
         value = json.loads(content)
     except json.JSONDecodeError as exc:
-        raise LLMProviderError("LLM response is not valid JSON") from exc
+        raise LLMResponseError("LLM response is not valid JSON") from exc
     if not isinstance(value, dict):
-        raise LLMProviderError("LLM JSON response must be an object")
+        raise LLMResponseError("LLM JSON response must be an object")
     return value

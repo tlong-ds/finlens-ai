@@ -5,9 +5,11 @@ from __future__ import annotations
 import logging
 from typing import Any, Mapping, Sequence
 
+import httpx
 from qdrant_client import models
+from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
 
-from src.qdrant import get_collection_name, get_qdrant_client
+from src.qdrant import QdrantConnectionError, get_collection_name, get_qdrant_client
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +22,10 @@ Candidate = dict[str, Any]
 
 class RetrievalError(RuntimeError):
     """Raised when table retrieval fails."""
+
+
+class TransientRetrievalError(RetrievalError):
+    """Raised for temporary Qdrant failures that are safe to retry unchanged."""
 
 
 class RerankerError(RuntimeError):
@@ -85,8 +91,16 @@ def retrieve(
             with_payload=True,
         )
         candidates = [_point_to_candidate(point) for point in response.points]
-    except RetrievalError:
+    except (RetrievalError, QdrantConnectionError):
         raise
+    except (httpx.TransportError, ResponseHandlingException) as exc:
+        raise TransientRetrievalError("Temporary Qdrant retrieval failure") from exc
+    except UnexpectedResponse as exc:
+        if exc.status_code in {408, 409, 425, 429} or exc.status_code >= 500:
+            raise TransientRetrievalError(
+                "Temporary Qdrant retrieval failure"
+            ) from exc
+        raise RetrievalError("Qdrant table retrieval failed") from exc
     except Exception as exc:
         raise RetrievalError("Qdrant table retrieval failed") from exc
 

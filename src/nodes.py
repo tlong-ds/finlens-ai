@@ -1,80 +1,72 @@
-"""LangGraph node adapters for Level 1 table retrieval."""
+"""LangGraph nodes for retrieval and validated pandas answer execution."""
 
 from __future__ import annotations
 
+import json
 import logging
-import re
-from typing import Any, Mapping
+from collections.abc import Mapping
+from pathlib import Path
+from typing import Any, Literal
 
-from src.llm import generate_structured
+import pandas as pd
+from langgraph.graph import END
+from langgraph.types import Command
+
+from src.sandbox import run_code
+from src.helper import (
+    concise_error,
+    find_question,
+    generator_feedback,
+    numeric_result,
+    ordered_unique,
+    retry_or_exhausted,
+    validate_filters,
+    validator_feedback,
+)
+from src.llm import LLMResponseError, generate_structured
+from src.prompt import (
+    GENERATOR_SYSTEM_PROMPT,
+    PARSE_SYSTEM_PROMPT,
+    VALIDATOR_SYSTEM_PROMPT,
+    build_generator_prompt,
+    build_parse_prompt,
+    build_validator_prompt,
+)
 from src.retrieval import rerank, retrieve
 
 logger = logging.getLogger(__name__)
 
-_TABLE_TYPES = {"balance_sheet", "income_statement", "cash_flow", "note_table"}
-_REPORT_TYPES = {"consolidated", "separate", "standalone"}
-_TICKER_RE = re.compile(r"[A-Z][A-Z0-9.-]{1,9}")
-
-_PARSE_SYSTEM_PROMPT = """You extract conservative metadata filters for financial-table retrieval.
-Return only one JSON object. Omit any field that is not explicit or highly certain.
-Allowed fields are ticker, year, report_type, and table_type; every value is an array.
-Allowed table_type values: balance_sheet, income_statement, cash_flow, note_table.
-Allowed report_type values: consolidated, separate, standalone.
-Do not infer a single table_type when the question may require multiple statements."""
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_SANDBOX_TIMEOUT_SECONDS = 5.0
 
 
-def _unique(values: list[Any]) -> list[Any]:
-    return list(dict.fromkeys(values))
+def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
+    """Resolve the input to exactly one canonical ViFinQA question."""
+    question = state.get("question")
+    if not isinstance(question, str) or not question.strip():
+        raise ValueError("question must not be empty")
 
+    max_attempts = state.get("max_attempts", 5)
+    if isinstance(max_attempts, bool) or not isinstance(max_attempts, int):
+        raise TypeError("max_attempts must be an integer")
+    if not 1 <= max_attempts <= 5:
+        raise ValueError("max_attempts must be between 1 and 5")
 
-def validate_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]:
-    """Drop unknown, malformed, or unsupported filter values locally."""
-    validated: dict[str, list[str | int]] = {}
-
-    tickers = value.get("ticker")
-    if isinstance(tickers, list):
-        clean_tickers = [
-            item.strip().upper()
-            for item in tickers
-            if isinstance(item, str) and _TICKER_RE.fullmatch(item.strip().upper())
-        ]
-        if clean_tickers:
-            validated["ticker"] = _unique(clean_tickers)
-
-    years = value.get("year")
-    if isinstance(years, list):
-        clean_years = [
-            item
-            for item in years
-            if isinstance(item, int)
-            and not isinstance(item, bool)
-            and 1900 <= item <= 2100
-        ]
-        if clean_years:
-            validated["year"] = _unique(clean_years)
-
-    for field, allowed in (
-        ("report_type", _REPORT_TYPES),
-        ("table_type", _TABLE_TYPES),
-    ):
-        values = value.get(field)
-        if isinstance(values, list):
-            clean_values = [
-                item.strip().lower()
-                for item in values
-                if isinstance(item, str) and item.strip().lower() in allowed
-            ]
-            if clean_values:
-                validated[field] = _unique(clean_values)
-
-    return validated
+    question_record = find_question(question)
+    return {
+        "question": str(question_record["question"]),
+        "question_record": question_record,
+        "max_attempts": max_attempts,
+        "attempt": 0,
+        "feedback": "",
+    }
 
 
 def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Parse conservative metadata filters from the original question."""
-    question = str(state["question"])
+    """Parse conservative metadata filters from the canonical question."""
+    question = str(state.get("question") or "")
     raw_filters = generate_structured(
-        f"Question: {question}", system_prompt=_PARSE_SYSTEM_PROMPT
+        build_parse_prompt(question), system_prompt=PARSE_SYSTEM_PROMPT
     )
     filters = validate_filters(raw_filters)
     logger.info("Question: %s", question)
@@ -85,7 +77,7 @@ def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
 def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Retrieve Top-N tables using the question and parsed filters."""
     candidates = retrieve(
-        question=str(state["question"]),
+        question=str(state.get("question") or ""),
         filters=state.get("filters", {}),
     )
     return {"candidates": candidates}
@@ -94,7 +86,7 @@ def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Rerank candidates and return the final Top-K tables."""
     retrieved_tables = rerank(
-        question=str(state["question"]),
+        question=str(state.get("question") or ""),
         candidates=state.get("candidates", []),
     )
     logger.info(
@@ -102,3 +94,196 @@ def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
         [item.get("table_id") for item in retrieved_tables],
     )
     return {"retrieved_tables": retrieved_tables}
+
+
+def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
+    """Load retrieved CSV tables and describe them for pandas generation."""
+    dataframes: dict[str, pd.DataFrame] = {}
+    evidence_sources: dict[str, dict[str, str]] = {}
+    descriptions: list[str] = []
+
+    for index, candidate in enumerate(state.get("retrieved_tables", []), start=1):
+        alias = f"df_{index}"
+        metadata_value = candidate["metadata"]
+        if not isinstance(metadata_value, Mapping):
+            raise TypeError("retrieved table metadata must be an object")
+
+        metadata = dict(metadata_value)
+        table_id = str(metadata.get("table_id", candidate["table_id"]))
+        doc_id = str(metadata["doc_id"])
+        csv_path = str(metadata["csv_path"])
+        dataframe = pd.read_csv(_PROJECT_ROOT / csv_path)
+
+        table_marker = "_table_"
+        if table_marker not in table_id:
+            raise ValueError(f"retrieved table_id has no table suffix: {table_id}")
+        table_number = table_id.rsplit(table_marker, maxsplit=1)[1]
+
+        dataframes[alias] = dataframe
+        evidence_sources[alias] = {
+            "csv_path": csv_path,
+            "doc_id": doc_id,
+            "relevant_table": f"{doc_id}|table_{table_number}",
+        }
+        schema = {
+            "alias": alias,
+            "metadata": metadata,
+            "columns": [
+                {"name": str(column), "dtype": str(dataframe[column].dtype)}
+                for column in dataframe.columns
+            ],
+            "sample_rows": json.loads(
+                dataframe.head(8).to_json(orient="records", force_ascii=False)
+            ),
+        }
+        descriptions.append(json.dumps(schema, ensure_ascii=False, default=str))
+
+    if not dataframes:
+        raise RuntimeError("Retrieval returned no tables")
+    return {
+        "dataframes": dataframes,
+        "evidence_sources": evidence_sources,
+        "dataframe_description": "\n".join(descriptions),
+    }
+
+
+def generate_code_node(
+    state: Mapping[str, Any],
+) -> Command[Literal["validate_code", "generate_code", "execute_code"]]:
+    """Generate one pandas candidate and increment the attempt counter."""
+    attempt = int(state.get("attempt", 0)) + 1
+    update: dict[str, Any] = {
+        "attempt": attempt,
+        "pandas_query": "",
+        "evidence_variables": [],
+    }
+    generator_prompt = build_generator_prompt(
+        question=str(state.get("question") or ""),
+        dataframe_description=str(state.get("dataframe_description") or ""),
+        feedback=str(state.get("feedback") or ""),
+    )
+    try:
+        generated = generate_structured(
+            generator_prompt,
+            system_prompt=GENERATOR_SYSTEM_PROMPT,
+        )
+    except LLMResponseError as error:
+        update["feedback"] = f"Generator call failed: {concise_error(error)}"
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    feedback = generator_feedback(generated)
+    if feedback:
+        update["feedback"] = feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    evidence_variables = generated["evidence_variables"]
+    evidence_sources = state.get("evidence_sources") or {}
+    unknown_aliases = [
+        alias for alias in evidence_variables if alias not in evidence_sources
+    ]
+    if unknown_aliases:
+        update["feedback"] = "Unknown evidence variables: " + ", ".join(
+            unknown_aliases
+        )
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    update.update(
+        {
+            "feedback": "",
+            "pandas_query": generated["pandas_query"],
+            "evidence_variables": evidence_variables,
+        }
+    )
+    return Command(update=update, goto="validate_code")
+
+
+def validate_code_node(
+    state: Mapping[str, Any],
+) -> Command[Literal["execute_code", "generate_code"]]:
+    """Ask the LLM to validate the generated pandas without executing it."""
+    validator_prompt = build_validator_prompt(
+        question=str(state.get("question") or ""),
+        available_aliases=list(state.get("dataframes") or {}),
+        dataframe_description=str(state.get("dataframe_description") or ""),
+        pandas_query=str(state.get("pandas_query") or ""),
+        evidence_variables=list(state.get("evidence_variables") or []),
+    )
+    try:
+        validation = generate_structured(
+            validator_prompt,
+            system_prompt=VALIDATOR_SYSTEM_PROMPT,
+        )
+    except LLMResponseError as error:
+        return retry_or_exhausted(
+            state,
+            {
+                "feedback": f"Validator call failed: {concise_error(error)}",
+            },
+        )
+
+    feedback = validator_feedback(validation)
+    if feedback:
+        return retry_or_exhausted(state, {"feedback": feedback})
+    return Command(update={"feedback": ""}, goto="execute_code")
+
+
+def execute_code_node(
+    state: Mapping[str, Any],
+) -> Command[Literal["generate_code", "__end__"]]:
+    """Execute approved code and build the final answer for numeric success."""
+    feedback = state.get("feedback") or ""
+    attempt = int(state.get("attempt", 0))
+    max_attempts = int(state.get("max_attempts", 5))
+    if feedback and attempt >= max_attempts:
+        raise RuntimeError(
+            "Unable to produce a valid numeric result after "
+            f"{attempt} attempts: {feedback}"
+        )
+
+    try:
+        result = run_code(
+            str(state.get("pandas_query") or ""),
+            state.get("dataframes") or {},
+            timeout_sec=_SANDBOX_TIMEOUT_SECONDS,
+        )
+    except (RuntimeError, TimeoutError, ValueError) as error:
+        execution_feedback = f"Sandbox execution failed: {concise_error(error)}"
+        if attempt >= max_attempts:
+            raise RuntimeError(
+                "Unable to produce a valid numeric result after "
+                f"{attempt} attempts: {execution_feedback}"
+            ) from error
+        return retry_or_exhausted(
+            state,
+            {"feedback": execution_feedback},
+        )
+
+    answer, feedback = numeric_result(result)
+    if feedback:
+        if attempt >= max_attempts:
+            raise RuntimeError(
+                "Unable to produce a valid numeric result after "
+                f"{attempt} attempts: {feedback}"
+            )
+        return retry_or_exhausted(state, {"feedback": feedback})
+
+    aliases = ordered_unique(list(state.get("evidence_variables") or []))
+    sources = state.get("evidence_sources") or {}
+    question_record = state.get("question_record") or {}
+    answer_record = {
+        "id": question_record["id"],
+        "question": state.get("question"),
+        "answer": answer,
+        "evidence": {alias: sources[alias]["csv_path"] for alias in aliases},
+        "relevant_docs": ordered_unique(
+            [sources[alias]["doc_id"] for alias in aliases]
+        ),
+        "relevant_tables": ordered_unique(
+            [sources[alias]["relevant_table"] for alias in aliases]
+        ),
+        "pandas_query": state.get("pandas_query"),
+    }
+    return Command(
+        update={"answer_record": answer_record, "feedback": ""},
+        goto=END,
+    )
