@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finlens-ai"
+version = "0.1.0"
+description = "Minimal LangGraph table-retrieval baseline for financial statements"
+requires-python = ">=3.11"
+dependencies = [
+    "e2b==2.26.0",
+    "e2b-code-interpreter>=1.0.0",
+    "langgraph>=0.2.0",
+    "openai>=1.0.0",
+    "pandas>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "qdrant-client>=1.12.0",
+    "tqdm>=4.60.0",
+]
+
+[tool.setuptools]
+packages = ["src"]
