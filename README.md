@@ -90,6 +90,18 @@ up to three times with backoff without consuming a semantic generation attempt.
 `query.py` remains only as a deprecated retrieval-only compatibility wrapper; new
 callers should use the compiled graph.
 
+Run a small end-to-end submission smoke test (three questions by default):
+
+```bash
+./scripts/test_submission.sh
+```
+
+Override the questions or output location when needed:
+
+```bash
+QUESTION_IDS=1,7,12 OUTPUT_DIR=/tmp/finlens-submission-test ./scripts/test_submission.sh
+```
+
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
 fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
 xếp hạng theo batch và chọn Top-10. Nếu manifest lệch payload Qdrant hoặc LLM reranker
