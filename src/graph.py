@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import inspect
 from typing import Any, NotRequired, TypedDict
 
 import pandas as pd
@@ -29,6 +30,7 @@ class RetrievalState(TypedDict):
     max_attempts: NotRequired[int]
     question_record: NotRequired[dict[str, Any]]
     filters: NotRequired[dict[str, list[str | int]]]
+    semantic_query: NotRequired[str]
     candidates: NotRequired[list[dict[str, Any]]]
     retrieved_tables: NotRequired[list[dict[str, Any]]]
     dataframes: NotRequired[dict[str, pd.DataFrame]]
@@ -49,18 +51,26 @@ _QDRANT_RETRY_POLICY = RetryPolicy(
 
 
 builder = StateGraph(RetrievalState)
-builder.add_node("match_question", match_question_node)
-builder.add_node("parse_query", parse_query_node, retry_policy=_LLM_RETRY_POLICY)
-builder.add_node(
-    "retrieve_tables",
-    retrieve_tables_node,
-    retry_policy=_QDRANT_RETRY_POLICY,
-)
-builder.add_node("rerank_tables", rerank_tables_node)
-builder.add_node("load_tables", load_tables_node)
-builder.add_node("generate_code", generate_code_node, retry_policy=_LLM_RETRY_POLICY)
-builder.add_node("validate_code", validate_code_node, retry_policy=_LLM_RETRY_POLICY)
-builder.add_node("execute_code", execute_code_node)
+
+
+def _add_node(name: str, action: Any, retry_policy: RetryPolicy | None = None) -> None:
+    """Support both LangGraph's ``retry`` and ``retry_policy`` keyword names."""
+    kwargs: dict[str, Any] = {}
+    if retry_policy is not None:
+        parameters = inspect.signature(builder.add_node).parameters
+        keyword = "retry_policy" if "retry_policy" in parameters else "retry"
+        kwargs[keyword] = retry_policy
+    builder.add_node(name, action, **kwargs)
+
+
+_add_node("match_question", match_question_node)
+_add_node("parse_query", parse_query_node, _LLM_RETRY_POLICY)
+_add_node("retrieve_tables", retrieve_tables_node, _QDRANT_RETRY_POLICY)
+_add_node("rerank_tables", rerank_tables_node, _LLM_RETRY_POLICY)
+_add_node("load_tables", load_tables_node)
+_add_node("generate_code", generate_code_node, _LLM_RETRY_POLICY)
+_add_node("validate_code", validate_code_node, _LLM_RETRY_POLICY)
+_add_node("execute_code", execute_code_node)
 
 builder.add_edge(START, "match_question")
 builder.add_edge("match_question", "parse_query")

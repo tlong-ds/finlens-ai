@@ -30,6 +30,14 @@ from src.embeddings import (
     DenseEmbeddingModel,
     EmbeddingError,
 )
+from src.contracts import (
+    MAX_YEAR,
+    MIN_YEAR,
+    PAYLOAD_FIELDS,
+    REPORT_TYPES,
+    TABLE_ID_PATTERN,
+    resolve_csv_path as resolve_contract_csv_path,
+)
 
 
 LOGGER = logging.getLogger("finlens.data_indexing")
@@ -52,22 +60,9 @@ ALIAS_DEFAULT = "finlens_tables_current"
 VECTOR_SIZE = EMBEDDING_VECTOR_SIZE
 INDEX_TEXT_VERSION = 1
 PAYLOAD_SCHEMA_VERSION = 2
-MIN_YEAR = 2015
-MAX_YEAR = 2025
-
-PAYLOAD_FIELDS = (
-    "table_id",
-    "doc_id",
-    "ticker",
-    "company_name",
-    "year",
-    "report_type",
-    "table_type",
-)
 FINLENS_NAMESPACE_UUID = uuid.uuid5(
     uuid.NAMESPACE_URL, "https://finlens.ai/qdrant/table"
 )
-TABLE_ID_PATTERN = re.compile(r"^[A-Za-z0-9_-]+$")
 YEAR_PATTERN = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
 YEAR_RANGE_PATTERN = re.compile(
     r"(?<!\d)(20\d{2})\s*(?:-|–|—|đến|den|tới|toi)\s*(20\d{2})(?!\d)",
@@ -208,16 +203,10 @@ def validate_table_id(table_id: str) -> str:
 
 def resolve_csv_path(table_id: str, project_root: Path = PROJECT_ROOT) -> Path:
     """Resolve the canonical CSV path and block path traversal."""
-    safe_id = validate_table_id(table_id)
-    data_root = (Path(project_root).resolve() / "data").resolve()
-    candidate = (data_root / f"{safe_id}.csv").resolve()
     try:
-        candidate.relative_to(data_root)
+        return resolve_contract_csv_path(validate_table_id(table_id), project_root)
     except ValueError as exc:
-        raise BaselineError(f"CSV path vượt ngoài data/: {candidate}") from exc
-    if not candidate.is_file():
-        raise FileNotFoundError(f"Không tìm thấy CSV cho {safe_id}: {candidate}")
-    return candidate
+        raise BaselineError(str(exc)) from exc
 
 
 def _iter_json_array_stdlib(path: Path, chunk_size: int = 1 << 20) -> Iterator[dict[str, Any]]:
@@ -1391,7 +1380,7 @@ def parse_query_buckets(
     invalid_years = [value for value in years if not MIN_YEAR <= int(value) <= MAX_YEAR]
     if invalid_years:
         raise RoutingError(f"Năm ngoài phạm vi dataset: {invalid_years}")
-    allowed_report_types = {"consolidated", "separate", "aggregated"}
+    allowed_report_types = REPORT_TYPES
     if any(value not in allowed_report_types for value in report_types):
         raise RoutingError(f"report_type không hợp lệ: {report_types}")
     table_type = parse_table_type(question)

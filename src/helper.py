@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import math
-import re
 import unicodedata
 from collections.abc import Mapping
 from numbers import Number
@@ -12,18 +11,10 @@ from pathlib import Path
 from typing import Any, Literal
 
 from langgraph.types import Command
+from src.routing import validate_llm_filters
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 _QUESTIONS_PATH = _PROJECT_ROOT / "ViFinQA" / "questions" / "questions.jsonl"
-
-_TABLE_TYPES = {"balance_sheet", "income_statement", "cash_flow", "note_table"}
-_REPORT_TYPES = {"consolidated", "separate", "standalone"}
-_TICKER_RE = re.compile(r"[A-Z][A-Z0-9.-]{1,9}")
-
-
-def _unique(values: list[Any]) -> list[Any]:
-    return list(dict.fromkeys(values))
-
 
 def normalize_question(value: str) -> str:
     """Normalize a question for canonical matching."""
@@ -56,16 +47,16 @@ def generator_feedback(response: Mapping[str, Any]) -> str | None:
     """Return actionable feedback for an invalid generator response."""
     required_keys = {"pandas_query", "evidence_variables"}
     if set(response) != required_keys:
-        return "Generator response must contain exactly pandas_query and evidence_variables."
+        return "Response generator phải có đúng pandas_query và evidence_variables."
     if not isinstance(response["pandas_query"], str) or not response[
         "pandas_query"
     ].strip():
-        return "pandas_query must be a non-empty string."
+        return "pandas_query phải là chuỗi không rỗng."
     evidence_variables = response["evidence_variables"]
     if not isinstance(evidence_variables, list) or not evidence_variables:
-        return "evidence_variables must be a non-empty list of DataFrame aliases."
+        return "evidence_variables phải là mảng alias DataFrame không rỗng."
     if not all(isinstance(alias, str) for alias in evidence_variables):
-        return "Every evidence variable must be a string alias."
+        return "Mọi evidence variable phải là alias dạng chuỗi."
     return None
 
 
@@ -73,13 +64,13 @@ def validator_feedback(response: Mapping[str, Any]) -> str | None:
     """Return actionable feedback for a rejected validator response."""
     required_keys = {"valid", "feedback"}
     if set(response) != required_keys:
-        return "Validator response must contain exactly valid and feedback."
+        return "Response validator phải có đúng valid và feedback."
     if not isinstance(response["valid"], bool):
-        return "Validator valid must be a boolean."
+        return "Trường valid của validator phải là boolean."
     if not isinstance(response["feedback"], str):
-        return "Validator feedback must be a string."
+        return "Trường feedback của validator phải là chuỗi."
     if not response["valid"]:
-        return response["feedback"].strip() or "The validator rejected the code."
+        return response["feedback"].strip() or "Validator đã từ chối đoạn mã."
     return None
 
 
@@ -124,53 +115,5 @@ def retry_or_exhausted(
 
 
 def validate_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]:
-    """Drop unknown, malformed, or unsupported filter values locally."""
-    validated: dict[str, list[str | int]] = {}
-
-    tickers = value.get("ticker")
-    if isinstance(tickers, list):
-        clean_tickers = [
-            item.strip().upper()
-            for item in tickers
-            if isinstance(item, str) and _TICKER_RE.fullmatch(item.strip().upper())
-        ]
-        if clean_tickers:
-            validated["ticker"] = _unique(clean_tickers)
-
-    company_names = value.get("company_name")
-    if isinstance(company_names, list):
-        clean_company_names = [
-            " ".join(item.split())
-            for item in company_names
-            if isinstance(item, str) and 1 < len(" ".join(item.split())) <= 200
-        ]
-        if clean_company_names:
-            validated["company_name"] = _unique(clean_company_names)
-
-    years = value.get("year")
-    if isinstance(years, list):
-        clean_years = [
-            item
-            for item in years
-            if isinstance(item, int)
-            and not isinstance(item, bool)
-            and 1900 <= item <= 2100
-        ]
-        if clean_years:
-            validated["year"] = _unique(clean_years)
-
-    for field, allowed in (
-        ("report_type", _REPORT_TYPES),
-        ("table_type", _TABLE_TYPES),
-    ):
-        values = value.get(field)
-        if isinstance(values, list):
-            clean_values = [
-                item.strip().lower()
-                for item in values
-                if isinstance(item, str) and item.strip().lower() in allowed
-            ]
-            if clean_values:
-                validated[field] = _unique(clean_values)
-
-    return validated
+    """Strict compatibility wrapper around the shared LLM filter contract."""
+    return validate_llm_filters(value)

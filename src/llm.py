@@ -41,13 +41,24 @@ def _required_env(name: str) -> str:
     return value
 
 
+def _normalize_base_url(value: str) -> str:
+    """Accept either an OpenAI API root or a full chat-completions endpoint."""
+    normalized = value.rstrip("/")
+    suffix = "/chat/completions"
+    if normalized.endswith(suffix):
+        normalized = normalized[: -len(suffix)]
+    if not normalized:
+        raise LLMProviderError("LLM_BASE_URL is invalid")
+    return normalized
+
+
 @lru_cache(maxsize=1)
 def get_llm_client() -> OpenAI:
     """Create one lazily initialized OpenAI-compatible client."""
     load_dotenv()
     try:
         return OpenAI(
-            base_url=_required_env("LLM_BASE_URL"),
+            base_url=_normalize_base_url(_required_env("LLM_BASE_URL")),
             api_key=os.getenv("LLM_API_KEY", "dummy") or "dummy",
             timeout=float(os.getenv("LLM_TIMEOUT", "60")),
         )

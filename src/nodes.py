@@ -13,6 +13,7 @@ from langgraph.graph import END
 from langgraph.types import Command
 
 from src.sandbox import run_code
+from src.contracts import resolve_csv_path, validate_qdrant_payload
 from src.helper import (
     concise_error,
     find_question,
@@ -20,7 +21,6 @@ from src.helper import (
     numeric_result,
     ordered_unique,
     retry_or_exhausted,
-    validate_filters,
     validator_feedback,
 )
 from src.llm import LLMResponseError, generate_structured
@@ -33,11 +33,18 @@ from src.prompt import (
     build_validator_prompt,
 )
 from src.retrieval import rerank, retrieve
+from src.routing import (
+    QueryRoutingError,
+    parse_years,
+    reconcile_query_filters,
+    resolve_tickers,
+)
 
 logger = logging.getLogger(__name__)
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 _SANDBOX_TIMEOUT_SECONDS = 5.0
+_STRUCTURED_RESPONSE_ATTEMPTS = 2
 
 
 def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
@@ -63,21 +70,45 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Parse conservative metadata filters from the canonical question."""
+    """Parse and reconcile strict metadata filters from the canonical question."""
     question = str(state.get("question") or "")
-    raw_filters = generate_structured(
-        build_parse_prompt(question), system_prompt=PARSE_SYSTEM_PROMPT
-    )
-    filters = validate_filters(raw_filters)
+    tickers, _, _ = resolve_tickers(question)
+    if not tickers:
+        raise QueryRoutingError(
+            "Không resolve được ticker; hệ thống không search global"
+        )
+    if not parse_years(question):
+        raise QueryRoutingError(
+            "Không resolve được năm trong phạm vi 2015–2025; hệ thống không search global"
+        )
+
+    feedback = ""
+    last_error = ""
+    for _ in range(_STRUCTURED_RESPONSE_ATTEMPTS):
+        try:
+            raw_filters = generate_structured(
+                build_parse_prompt(question, feedback),
+                system_prompt=PARSE_SYSTEM_PROMPT,
+            )
+            filters, semantic_query = reconcile_query_filters(question, raw_filters)
+            break
+        except (LLMResponseError, QueryRoutingError) as error:
+            last_error = concise_error(error)
+            feedback = "Response trước không hợp lệ: " + last_error
+    else:
+        raise LLMResponseError(
+            "Không parse được metadata filter hợp lệ: " + last_error
+        )
     logger.info("Question: %s", question)
     logger.info("Parsed filters: %s", filters)
-    return {"filters": filters}
+    logger.info("Semantic query: %s", semantic_query)
+    return {"filters": filters, "semantic_query": semantic_query}
 
 
 def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Retrieve Top-N tables using the question and parsed filters."""
     candidates = retrieve(
-        question=str(state.get("question") or ""),
+        query_text=str(state.get("semantic_query") or ""),
         filters=state.get("filters", {}),
     )
     return {"candidates": candidates}
@@ -108,11 +139,12 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
         if not isinstance(metadata_value, Mapping):
             raise TypeError("retrieved table metadata must be an object")
 
-        metadata = dict(metadata_value)
-        table_id = str(metadata.get("table_id", candidate["table_id"]))
-        doc_id = str(metadata["doc_id"])
-        csv_path = str(metadata["csv_path"])
-        dataframe = pd.read_csv(_PROJECT_ROOT / csv_path)
+        metadata = validate_qdrant_payload(metadata_value)
+        table_id = metadata["table_id"]
+        doc_id = metadata["doc_id"]
+        csv_file = resolve_csv_path(table_id, _PROJECT_ROOT)
+        csv_path = csv_file.relative_to(_PROJECT_ROOT.resolve()).as_posix()
+        dataframe = pd.read_csv(csv_file)
 
         table_marker = "_table_"
         if table_marker not in table_id:
