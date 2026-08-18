@@ -88,9 +88,10 @@ not arbitrary free text. `max_attempts` must be between 1 and 5.
   searchable Qdrant collection: it builds a manifest (JSONL) from the metadata catalog with a
   SQLite checkpoint (`.cache/qdrant_sync_v1.sqlite3`) for idempotent/resumable runs, embeds
   table text with `BAAI/bge-m3` (via FlagEmbedding), and upserts dense vectors + payload
-  (`table_id`, `doc_id`, `ticker`, `year`, `report_type`, `table_type`) into Qdrant, aliased for
-  atomic collection swaps. It also exposes `retrieve`/`route`/`resolve` for testing retrieval
-  without going through the LangGraph pipeline.
+  (`table_id`, `doc_id`, `ticker`, `company_name`, `year`, `report_type`, `table_type`,
+  `start_line`) into Qdrant, aliased for atomic collection swaps. It also exposes
+  `retrieve`/`route`/`resolve` for testing retrieval without going through the LangGraph
+  pipeline.
 
 ### Online graph (`src/`)
 
@@ -130,7 +131,7 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   routes to `execute_code`/raises instead of looping forever. Fresh code is generated on every
   retry (feedback is fed back into the prompt); nothing is cached across attempts.
 - On success, `execute_code_node` builds `answer_record`: the numeric answer, the pandas query,
-  and evidence (source CSV paths, doc IDs, `doc_id|table_N` table refs) derived from
+  and evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from
   `evidence_variables`, so every accepted answer carries traceable provenance.
 
 Transient failures are handled at the graph level, not inside nodes: `parse_query`,

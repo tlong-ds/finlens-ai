@@ -142,20 +142,16 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
         metadata = validate_qdrant_payload(metadata_value)
         table_id = metadata["table_id"]
         doc_id = metadata["doc_id"]
+        start_line = metadata["start_line"]
         csv_file = resolve_csv_path(table_id, _PROJECT_ROOT)
         csv_path = csv_file.relative_to(_PROJECT_ROOT.resolve()).as_posix()
         dataframe = pd.read_csv(csv_file)
-
-        table_marker = "_table_"
-        if table_marker not in table_id:
-            raise ValueError(f"retrieved table_id has no table suffix: {table_id}")
-        table_number = table_id.rsplit(table_marker, maxsplit=1)[1]
 
         dataframes[alias] = dataframe
         evidence_sources[alias] = {
             "csv_path": csv_path,
             "doc_id": doc_id,
-            "relevant_table": f"{doc_id}|table_{table_number}",
+            "relevant_table": f"{doc_id}|{start_line}",
         }
         schema = {
             "alias": alias,

@@ -24,6 +24,7 @@ def candidate() -> dict[str, object]:
         "year": 2018,
         "report_type": "separate",
         "table_type": "note_table",
+        "start_line": 42,
     }
     return {
         "table_id": metadata["table_id"],
@@ -50,7 +51,7 @@ class GraphTests(unittest.TestCase):
         )
         self.assertEqual(
             result["evidence_sources"]["df_1"]["relevant_table"],
-            "VJC_financial_statements_2018_separate|table_1",
+            "VJC_financial_statements_2018_separate|42",
         )
 
     def test_full_graph_returns_numeric_answer_record(self) -> None:
@@ -97,7 +98,7 @@ class GraphTests(unittest.TestCase):
         )
         self.assertEqual(
             answer["relevant_tables"],
-            ["VJC_financial_statements_2018_separate|table_1"],
+            ["VJC_financial_statements_2018_separate|42"],
         )
 
 
