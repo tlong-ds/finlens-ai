@@ -94,6 +94,21 @@ GENERIC_SUMMARY_TERMS = {
     "bảng thuyết minh",
     "bảng thuyết minh báo cáo tài chính",
 }
+# Common Vietnamese words used to keep untagged summaries/keywords in the
+# embedding text.  ``canonical_name_vi`` is trusted by field provenance, while
+# free-form ``semantic_summary`` and ``keywords`` need this lightweight,
+# deterministic guard to avoid embedding English-only text.
+VIETNAMESE_SIGNAL_WORDS = frozenset(
+    {
+        "báo", "cáo", "bảng", "doanh", "thu", "lợi", "nhuận", "chi",
+        "phí", "tài", "sản", "nợ", "vốn", "chủ", "sở", "hữu", "tiền",
+        "khoản", "phải", "trả", "người", "bán", "mua", "hàng", "tồn",
+        "kho", "ngắn", "dài", "hạn", "năm", "quý", "kỳ", "tháng",
+        "hoạt", "động", "kinh", "doanh", "thuế", "lãi", "vay", "cổ",
+        "phiếu", "đầu", "tư", "dòng", "lưu", "chuyển", "thuyết", "minh",
+        "giá", "trị", "khấu", "hao", "doanh", "nghiệp", "công", "ty",
+    }
+)
 
 
 class BaselineError(RuntimeError):
@@ -305,6 +320,28 @@ def _dedupe_terms(values: Iterable[Any], limit: int) -> list[str]:
     return result
 
 
+def _is_vietnamese_text(value: Any) -> bool:
+    """Return whether free-form metadata has a Vietnamese-language signal."""
+    text = normalize_text(value)
+    if not text:
+        return False
+    # Vietnamese-specific letters provide a strong signal, including for short
+    # terms such as ``lãi`` or ``quỹ``.
+    if re.search(r"[ăâđêôơưĂÂĐÊÔƠƯ]", text):
+        return True
+    # Accept common unaccented Vietnamese metadata while rejecting English-only
+    # labels such as ``Net revenue`` or ``Operating profit``.
+    words = set(re.findall(r"[a-zA-ZÀ-ỹĐđ]+", text.lower()))
+    return bool(words & VIETNAMESE_SIGNAL_WORDS)
+
+
+def _vietnamese_terms(values: Iterable[Any], limit: int) -> list[str]:
+    return _dedupe_terms(
+        (value for value in values if _is_vietnamese_text(value)),
+        limit,
+    )
+
+
 def _strip_identity(text: Any, record: Mapping[str, Any]) -> str:
     cleaned = normalize_text(text)
     identities = [
@@ -339,9 +376,9 @@ def _strip_identity(text: Any, record: Mapping[str, Any]) -> str:
 
 
 def build_index_text(record: Mapping[str, Any]) -> tuple[str, str]:
-    """Build V1 text from semantic metadata only; return text and quality."""
+    """Build the Vietnamese-only V1 text from semantic metadata."""
     table_type = normalize_text(record.get("table_type"))
-    type_label = TABLE_TYPE_VI.get(table_type, table_type.replace("_", " "))
+    type_label = TABLE_TYPE_VI.get(table_type, "")
     retrieval = record.get("retrieval_context") or {}
     if not isinstance(retrieval, Mapping):
         retrieval = {}
@@ -351,6 +388,8 @@ def build_index_text(record: Mapping[str, Any]) -> tuple[str, str]:
     if "note_unknown" in fold_text(raw_summary):
         summary_quality = "note_unknown"
     summary = _strip_identity(raw_summary, record)
+    if not _is_vietnamese_text(summary):
+        summary = ""
 
     semantic_fields = record.get("semantic_fields") or []
     canonical_values: list[Any] = []
@@ -358,14 +397,14 @@ def build_index_text(record: Mapping[str, Any]) -> tuple[str, str]:
         for field in semantic_fields:
             if not isinstance(field, Mapping):
                 continue
-            canonical_values.extend((field.get("canonical_name_vi"), field.get("canonical_name_en")))
-    canonical = _dedupe_terms(
+            canonical_values.append(field.get("canonical_name_vi"))
+    canonical = _vietnamese_terms(
         (_strip_identity(value, record) for value in canonical_values), 32
     )
 
     raw_keywords = retrieval.get("keywords") or []
     keyword_values = raw_keywords if isinstance(raw_keywords, list) else []
-    keywords = _dedupe_terms(
+    keywords = _vietnamese_terms(
         (_strip_identity(value, record) for value in keyword_values), 32
     )
     canonical_folded = {fold_text(item) for item in canonical}
@@ -390,10 +429,11 @@ def has_useful_note_metadata(record: Mapping[str, Any]) -> bool:
     retrieval = record.get("retrieval_context") or {}
     if not isinstance(retrieval, Mapping):
         retrieval = {}
-    if _strip_identity(retrieval.get("semantic_summary"), record):
+    summary = _strip_identity(retrieval.get("semantic_summary"), record)
+    if _is_vietnamese_text(summary):
         return True
     raw_keywords = retrieval.get("keywords") or []
-    if isinstance(raw_keywords, list) and _dedupe_terms(
+    if isinstance(raw_keywords, list) and _vietnamese_terms(
         (_strip_identity(value, record) for value in raw_keywords), 1
     ):
         return True
@@ -402,12 +442,8 @@ def has_useful_note_metadata(record: Mapping[str, Any]) -> bool:
         for field in semantic_fields:
             if not isinstance(field, Mapping):
                 continue
-            if _dedupe_terms(
-                (
-                    _strip_identity(field.get("canonical_name_vi"), record),
-                    _strip_identity(field.get("canonical_name_en"), record),
-                ),
-                1,
+            if _vietnamese_terms(
+                (_strip_identity(field.get("canonical_name_vi"), record),), 1
             ):
                 return True
     return False
@@ -1592,6 +1628,18 @@ def self_test() -> dict[str, Any]:
     index_text, quality = build_index_text(sample)
     folded_index = fold_text(index_text)
     assert "doanh thu" in folded_index
+    assert "net revenue" not in folded_index
+    english_only = dict(sample)
+    english_only["semantic_fields"] = [
+        {"canonical_name_en": "Operating profit"},
+    ]
+    english_only["retrieval_context"] = {
+        "semantic_summary": "Operating profit and net revenue",
+        "keywords": ["Operating profit", "Net revenue"],
+    }
+    english_index, _ = build_index_text(english_only)
+    assert "Operating profit" not in english_index
+    assert "Net revenue" not in english_index
     assert "aaa" not in folded_index
     assert "2023" not in index_text
     assert "hop nhat" not in folded_index

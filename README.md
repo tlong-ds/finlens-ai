@@ -11,7 +11,7 @@ Trả lời câu hỏi tài chính ViFinQA bằng dense retrieval, LLM reranking
 ```
 metadata/
 ├── docs_metadata.json   # Document catalog (doc_id, doc_path, ticker, year)
-└── tables_metadata.json # Table catalog (table_id, doc_id, table_type, semantic_fields, csv_path)
+└── tables_metadata.json # Table catalog (table_id, doc_id, ticker, company_name, table_type, semantic_fields, csv_path)
 
 data/
 ├── table_001.csv        # Extracted tables
@@ -53,6 +53,28 @@ named vector `dense` 384 chiều. Qdrant payload có đúng bảy trường: `ta
 Configure the embedding provider, Qdrant collection, `QDRANT_MANIFEST_PATH`, and
 OpenAI-compatible LLM endpoint, then invoke the compiled graph with an exact canonical
 ViFinQA question:
+
+```dotenv
+QDRANT_COLLECTION=finlens_tables_metadata_granite_97m_multilingual_r2_v1
+QDRANT_ALIAS=finlens_tables_current
+EMBEDDING_MODEL=ibm-granite/granite-embedding-97m-multilingual-r2
+EMBEDDING_REVISION=835ad14087e140460703cf0fae09f97d469d65c2
+EMBEDDING_DEVICE=auto
+EMBEDDING_MAX_LENGTH=512
+```
+
+The default Granite multilingual encoder uses 384-dimensional normalized dense
+vectors. Index metadata and queries are encoded without model-specific prefixes.
+The current V1 collection uses Vietnamese-only metadata for `index_text`: the
+Vietnamese table type label, Vietnamese semantic summary/keywords, and
+`canonical_name_vi`. English canonical names are excluded. After changing this
+contract, run `python data_indexing.py index --rebuild-manifest --force` during
+a maintenance window, then reconcile stale points and verify the collection
+before serving queries.
+
+Qdrant payloads include both `ticker` and the canonical `company_name` from
+`ViFinQA/code_stock.csv`; both fields are keyword-indexed and can be used as exact
+metadata filters.
 
 ```python
 from src.graph import graph
