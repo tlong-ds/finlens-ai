@@ -37,6 +37,9 @@ def get_qdrant_client() -> QdrantClient:
 
 
 def get_collection_name() -> str:
-    """Return the configured table-vector collection name."""
+    """Return the read alias, falling back to the physical collection."""
     load_dotenv()
+    alias = os.getenv("QDRANT_ALIAS", "").strip()
+    if alias:
+        return alias
     return _required_env("QDRANT_COLLECTION")

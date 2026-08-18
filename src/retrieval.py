@@ -3,19 +3,21 @@
 from __future__ import annotations
 
 import logging
+from functools import lru_cache
 from typing import Any, Mapping, Sequence
 
 import httpx
 from qdrant_client import models
 from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
 
+from src.embeddings import DENSE_VECTOR_NAME, DenseEmbeddingModel, EmbeddingError
 from src.qdrant import QdrantConnectionError, get_collection_name, get_qdrant_client
 
 logger = logging.getLogger(__name__)
 
 RETRIEVAL_TOP_K = 50
 RERANK_TOP_K = 10
-FILTER_FIELDS = ("ticker", "year", "report_type", "table_type")
+FILTER_FIELDS = ("ticker", "company_name", "year", "report_type", "table_type")
 
 Candidate = dict[str, Any]
 
@@ -49,16 +51,19 @@ def build_qdrant_filter(
     return models.Filter(must=conditions) if conditions else None
 
 
-def embed_query(question: str) -> list[float]:
-    """Embed a question.
+@lru_cache(maxsize=1)
+def _get_embedding_model() -> DenseEmbeddingModel:
+    return DenseEmbeddingModel.from_env()
 
-    The embedding provider and vector contract are intentionally deferred until
-    the Qdrant collection schema is available.
-    """
-    raise RetrievalError(
-        "Embedding provider is not configured. Implement embed_query() after "
-        "the Qdrant vector contract and embedding model are selected."
-    )
+
+def embed_query(question: str) -> list[float]:
+    """Embed a non-empty question with the shared Granite query contract."""
+    if not question.strip():
+        raise RetrievalError("Question must not be empty")
+    try:
+        return _get_embedding_model().encode_queries([question.strip()])[0]
+    except (EmbeddingError, TypeError, ValueError) as exc:
+        raise RetrievalError("Query embedding failed") from exc
 
 
 def _point_to_candidate(point: Any) -> Candidate:
@@ -86,6 +91,7 @@ def retrieve(
         response = get_qdrant_client().query_points(
             collection_name=get_collection_name(),
             query=embed_query(question),
+            using=DENSE_VECTOR_NAME,
             query_filter=build_qdrant_filter(filters),
             limit=top_n,
             with_payload=True,

@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
-import inspect
 import json
 import logging
 import math
@@ -22,25 +21,37 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator, Mapping, Sequence
 
+from src.embeddings import (
+    EMBEDDING_MAX_LENGTH,
+    EMBEDDING_MODEL_DEFAULT,
+    EMBEDDING_REVISION_DEFAULT,
+    EMBEDDING_VECTOR_SIZE,
+    DENSE_VECTOR_NAME,
+    DenseEmbeddingModel,
+    EmbeddingError,
+)
+
 
 LOGGER = logging.getLogger("finlens.data_indexing")
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_METADATA_PATH = PROJECT_ROOT / "metadata" / "tables_metadata.json"
 DEFAULT_STOCK_CODES_PATH = PROJECT_ROOT / "ViFinQA" / "code_stock.csv"
-DEFAULT_MANIFEST_PATH = PROJECT_ROOT / "intermediate" / "qdrant_manifest_v1.jsonl"
-DEFAULT_REJECTS_PATH = PROJECT_ROOT / "intermediate" / "qdrant_rejects_v1.jsonl"
-DEFAULT_STATE_PATH = PROJECT_ROOT / ".cache" / "qdrant_sync_v1.sqlite3"
+DEFAULT_MANIFEST_PATH = (
+    PROJECT_ROOT / "intermediate" / "qdrant_manifest_granite_97m_r2_v1.jsonl"
+)
+DEFAULT_REJECTS_PATH = (
+    PROJECT_ROOT / "intermediate" / "qdrant_rejects_granite_97m_r2_v1.jsonl"
+)
+DEFAULT_STATE_PATH = PROJECT_ROOT / ".cache" / "qdrant_sync_granite_97m_r2_v1.sqlite3"
 
 DATASET_ID = "AIGuruTinix/ViFinQA"
 DATASET_REVISION = "0450088ab22ec946f04f097586967ca405955b3b"
-EMBEDDING_MODEL_DEFAULT = "BAAI/bge-m3"
-EMBEDDING_REVISION_DEFAULT = "5617a9f61b028005a4858fdac845db406aefb181"
-COLLECTION_DEFAULT = "finlens_tables_metadata_bge_m3_v1"
+COLLECTION_DEFAULT = "finlens_tables_metadata_granite_97m_multilingual_r2_v1"
 ALIAS_DEFAULT = "finlens_tables_current"
-DENSE_VECTOR_NAME = "dense"
-VECTOR_SIZE = 1024
+VECTOR_SIZE = EMBEDDING_VECTOR_SIZE
 INDEX_TEXT_VERSION = 1
+PAYLOAD_SCHEMA_VERSION = 2
 MIN_YEAR = 2015
 MAX_YEAR = 2025
 
@@ -48,6 +59,7 @@ PAYLOAD_FIELDS = (
     "table_id",
     "doc_id",
     "ticker",
+    "company_name",
     "year",
     "report_type",
     "table_type",
@@ -119,7 +131,7 @@ class Config:
     upsert_batch_size: int = 256
     upload_parallel: int = 1
     upload_retries: int = 3
-    max_length: int = 512
+    max_length: int = EMBEDDING_MAX_LENGTH
 
     @classmethod
     def from_env(cls) -> "Config":
@@ -128,9 +140,18 @@ class Config:
             project_root=root,
             metadata_path=_env_path("TABLES_METADATA_PATH", root / "metadata" / "tables_metadata.json"),
             stock_codes_path=_env_path("STOCK_CODES_PATH", root / "ViFinQA" / "code_stock.csv"),
-            manifest_path=_env_path("QDRANT_MANIFEST_PATH", root / "intermediate" / "qdrant_manifest_v1.jsonl"),
-            rejects_path=_env_path("QDRANT_REJECTS_PATH", root / "intermediate" / "qdrant_rejects_v1.jsonl"),
-            state_path=_env_path("QDRANT_STATE_PATH", root / ".cache" / "qdrant_sync_v1.sqlite3"),
+            manifest_path=_env_path(
+                "QDRANT_MANIFEST_PATH",
+                root / "intermediate" / "qdrant_manifest_granite_97m_r2_v1.jsonl",
+            ),
+            rejects_path=_env_path(
+                "QDRANT_REJECTS_PATH",
+                root / "intermediate" / "qdrant_rejects_granite_97m_r2_v1.jsonl",
+            ),
+            state_path=_env_path(
+                "QDRANT_STATE_PATH",
+                root / ".cache" / "qdrant_sync_granite_97m_r2_v1.sqlite3",
+            ),
             qdrant_url=os.getenv("QDRANT_URL", "http://localhost:6333"),
             qdrant_api_key=os.getenv("QDRANT_API_KEY") or None,
             collection_name=os.getenv("QDRANT_COLLECTION", COLLECTION_DEFAULT),
@@ -145,7 +166,9 @@ class Config:
             upsert_batch_size=int(os.getenv("UPSERT_BATCH_SIZE", "256")),
             upload_parallel=int(os.getenv("QDRANT_UPLOAD_PARALLEL", "1")),
             upload_retries=int(os.getenv("QDRANT_UPLOAD_RETRIES", "3")),
-            max_length=int(os.getenv("EMBEDDING_MAX_LENGTH", "512")),
+            max_length=int(
+                os.getenv("EMBEDDING_MAX_LENGTH", str(EMBEDDING_MAX_LENGTH))
+            ),
         )
 
 
@@ -299,6 +322,7 @@ def _strip_identity(text: Any, record: Mapping[str, Any]) -> str:
         record.get("table_id"),
         record.get("doc_id"),
         record.get("ticker"),
+        record.get("company_name"),
         record.get("csv_path"),
         record.get("year"),
     ]
@@ -405,6 +429,7 @@ def build_payload(record: Mapping[str, Any]) -> dict[str, Any]:
         "table_id": validate_table_id(normalize_text(record.get("table_id"))),
         "doc_id": normalize_text(record.get("doc_id")),
         "ticker": normalize_text(record.get("ticker")).upper(),
+        "company_name": normalize_text(record.get("company_name")),
         "year": int(record.get("year")),
         "report_type": normalize_text(record.get("report_type")),
         "table_type": normalize_text(record.get("table_type")),
@@ -423,9 +448,24 @@ def compute_content_hash(
     index_text: str,
     model: str = EMBEDDING_MODEL_DEFAULT,
     revision: str = EMBEDDING_REVISION_DEFAULT,
+    payload: Mapping[str, Any] | None = None,
 ) -> str:
+    payload_json = json.dumps(
+        dict(payload or {}),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
     content = "\n".join(
-        (validate_table_id(table_id), index_text, str(INDEX_TEXT_VERSION), model, revision)
+        (
+            validate_table_id(table_id),
+            index_text,
+            str(INDEX_TEXT_VERSION),
+            str(PAYLOAD_SCHEMA_VERSION),
+            payload_json,
+            model,
+            revision,
+        )
     )
     return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
@@ -464,7 +504,14 @@ def _record_rejection(record: Mapping[str, Any], reason: str) -> dict[str, Any]:
 def _candidate_to_manifest(
     record: Mapping[str, Any], config: Config, check_files: bool
 ) -> dict[str, Any]:
-    required = ("table_id", "doc_id", "ticker", "year", "table_type")
+    required = (
+        "table_id",
+        "doc_id",
+        "ticker",
+        "company_name",
+        "year",
+        "table_type",
+    )
     missing = [field for field in required if not normalize_text(record.get(field))]
     if missing:
         raise BaselineError("missing_required:" + ",".join(missing))
@@ -499,6 +546,7 @@ def _candidate_to_manifest(
             index_text,
             config.embedding_model,
             config.embedding_revision,
+            payload,
         ),
         "index_text_version": INDEX_TEXT_VERSION,
         "metadata_quality": metadata_quality,
@@ -539,6 +587,7 @@ def build_manifest(
         "vector_name": DENSE_VECTOR_NAME,
         "vector_size": VECTOR_SIZE,
         "index_text_version": INDEX_TEXT_VERSION,
+        "payload_schema_version": PAYLOAD_SCHEMA_VERSION,
         "git_commit": _git_commit(config.project_root),
     }
 
@@ -672,100 +721,33 @@ def manifest_stats(path: Path) -> dict[str, Any]:
     }
 
 
-class EmbeddingModel:
-    """Pinned BGE-M3 dense encoder, loaded lazily."""
+class EmbeddingModel(DenseEmbeddingModel):
+    """Indexing adapter for the shared pinned Granite encoder."""
 
     def __init__(self, config: Config):
         self.config = config
-        self._model: Any = None
-
-    def _resolve_model_path(self) -> str:
-        if self.config.embedding_model_path:
-            model_path = Path(self.config.embedding_model_path).resolve()
-            if not model_path.is_dir():
-                raise BaselineError(f"EMBEDDING_MODEL_PATH không tồn tại: {model_path}")
-            return str(model_path)
-        try:
-            from huggingface_hub import snapshot_download  # type: ignore
-        except ImportError as exc:
-            raise BaselineError(
-                "Thiếu huggingface_hub/FlagEmbedding. Hãy cài requirements.txt trước."
-            ) from exc
-        LOGGER.info(
-            "Resolve model snapshot %s@%s",
-            self.config.embedding_model,
-            self.config.embedding_revision,
+        super().__init__(
+            model_id=config.embedding_model,
+            revision=config.embedding_revision,
+            model_path=config.embedding_model_path,
+            device=config.embedding_device,
+            batch_size=config.embedding_batch_size,
+            max_length=config.max_length,
         )
-        return snapshot_download(
-            repo_id=self.config.embedding_model,
-            revision=self.config.embedding_revision,
-        )
-
-    def load(self) -> None:
-        if self._model is not None:
-            return
-        try:
-            from FlagEmbedding import BGEM3FlagModel  # type: ignore
-        except ImportError as exc:
-            raise BaselineError(
-                "Thiếu FlagEmbedding. Chạy: pip install -r requirements.txt"
-            ) from exc
-
-        model_path = self._resolve_model_path()
-        device = self.config.embedding_device.strip().lower()
-        use_fp16 = False
-        if device == "auto":
-            try:
-                import torch  # type: ignore
-
-                use_fp16 = bool(torch.cuda.is_available())
-            except ImportError:
-                use_fp16 = False
-        else:
-            use_fp16 = device.startswith("cuda")
-
-        kwargs: dict[str, Any] = {"use_fp16": use_fp16}
-        signature = inspect.signature(BGEM3FlagModel)
-        if device != "auto":
-            if "devices" in signature.parameters:
-                kwargs["devices"] = device
-            elif "device" in signature.parameters:
-                kwargs["device"] = device
-        LOGGER.info("Load BGE-M3 từ %s (device=%s, fp16=%s)", model_path, device, use_fp16)
-        self._model = BGEM3FlagModel(model_path, **kwargs)
 
     def encode(self, texts: Sequence[str]) -> list[list[float]]:
-        if not texts:
-            return []
-        self.load()
-        result = self._model.encode(
-            list(texts),
-            batch_size=self.config.embedding_batch_size,
-            max_length=self.config.max_length,
-            return_dense=True,
-            return_sparse=False,
-            return_colbert_vecs=False,
-        )
-        dense = result.get("dense_vecs") if isinstance(result, Mapping) else None
-        if dense is None:
-            raise BaselineError("BGE-M3 không trả về dense_vecs")
-        raw_vectors = dense.tolist() if hasattr(dense, "tolist") else list(dense)
-        vectors: list[list[float]] = []
-        for raw in raw_vectors:
-            vector = [float(value) for value in raw]
-            if len(vector) != VECTOR_SIZE:
-                raise BaselineError(
-                    f"Sai vector size: nhận {len(vector)}, kỳ vọng {VECTOR_SIZE}"
-                )
-            if not all(math.isfinite(value) for value in vector):
-                raise BaselineError("Embedding chứa NaN hoặc Inf")
-            norm = math.sqrt(sum(value * value for value in vector))
-            if norm <= 0:
-                raise BaselineError("Embedding có norm bằng 0")
-            vectors.append([value / norm for value in vector])
-        if len(vectors) != len(texts):
-            raise BaselineError("Số embedding không khớp số input")
-        return vectors
+        """Encode index documents with the Granite text contract."""
+        try:
+            return self.encode_passages(texts)
+        except EmbeddingError as exc:
+            raise BaselineError(str(exc)) from exc
+
+    def encode_query(self, texts: Sequence[str]) -> list[list[float]]:
+        """Encode retrieval queries with the Granite text contract."""
+        try:
+            return self.encode_queries(texts)
+        except EmbeddingError as exc:
+            raise BaselineError(str(exc)) from exc
 
 
 def _qdrant_imports() -> tuple[Any, Any]:
@@ -831,6 +813,7 @@ def ensure_collection(config: Config, client: Any | None = None) -> dict[str, An
 
     index_schemas = {
         "ticker": models.PayloadSchemaType.KEYWORD,
+        "company_name": models.PayloadSchemaType.KEYWORD,
         "year": models.PayloadSchemaType.INTEGER,
         "report_type": models.PayloadSchemaType.KEYWORD,
         "table_type": models.PayloadSchemaType.KEYWORD,
@@ -1006,6 +989,7 @@ def _validate_manifest_header(header: Mapping[str, Any], config: Config) -> None
         "vector_name": DENSE_VECTOR_NAME,
         "vector_size": VECTOR_SIZE,
         "index_text_version": INDEX_TEXT_VERSION,
+        "payload_schema_version": PAYLOAD_SCHEMA_VERSION,
     }
     mismatches = {
         key: (header.get(key), value)
@@ -1450,7 +1434,7 @@ def retrieve_tables(
     if per_bucket <= 0 or max_candidates <= 0:
         raise ValueError("top-k và max-candidates phải > 0")
     encoder = encoder or EmbeddingModel(config)
-    query_vector = encoder.encode([semantic_query])[0]
+    query_vector = encoder.encode_query([semantic_query])[0]
     client = client or create_qdrant_client(config)
     _, models = _qdrant_imports()
     collection = config.alias_name or config.collection_name
@@ -1602,6 +1586,7 @@ def self_test() -> dict[str, Any]:
         "table_id": "AAA_financial_statements_2023_consolidated_table_9",
         "doc_id": "AAA_financial_statements_2023_consolidated",
         "ticker": "AAA",
+        "company_name": "Công ty cổ phần An Phát",
         "year": 2023,
         "report_type": "consolidated",
         "table_type": "income_statement",
@@ -1628,13 +1613,20 @@ def self_test() -> dict[str, Any]:
     assert tuple(payload) == PAYLOAD_FIELDS
     assert set(payload) == set(PAYLOAD_FIELDS)
     assert "csv_path" not in payload
-    checks.append("six_field_payload")
+    checks.append("seven_field_payload")
 
     point_id = make_point_id(sample["table_id"])
     assert point_id == make_point_id(sample["table_id"])
     assert point_id != make_point_id(sample["table_id"] + "_other")
     original_hash = compute_content_hash(sample["table_id"], index_text)
     assert original_hash != compute_content_hash(sample["table_id"], index_text + " changed")
+    assert compute_content_hash(
+        sample["table_id"], index_text, payload=payload
+    ) != compute_content_hash(
+        sample["table_id"],
+        index_text,
+        payload={**payload, "company_name": "Tên công ty đã đổi"},
+    )
     checks.append("deterministic_id_and_hash")
 
     with tempfile.TemporaryDirectory(prefix="finlens-index-test-") as temp_name:
@@ -1735,7 +1727,7 @@ def self_test() -> dict[str, Any]:
             def get_aliases(self) -> Any:
                 alias_item = FakeAliasModel(
                     alias_name="finlens_tables_current",
-                    collection_name="finlens_tables_metadata_bge_m3_v0",
+                    collection_name="finlens_tables_metadata_granite_97m_multilingual_r2_v0",
                 )
                 return FakeAliasModel(aliases=[alias_item])
 
@@ -1747,7 +1739,7 @@ def self_test() -> dict[str, Any]:
         fake_alias_client = FakeAliasClient()
         alias_result = activate_alias(
             fake_alias_client,
-            "finlens_tables_metadata_bge_m3_v1",
+            "finlens_tables_metadata_granite_97m_multilingual_r2_v1",
             "finlens_tables_current",
             FakeAliasModels,
         )
@@ -1883,19 +1875,11 @@ def _check_indexing_dependencies(config: Config) -> None:
     """Fail before the expensive metadata scan when runtime packages are absent."""
     _qdrant_imports()
     try:
-        import FlagEmbedding  # noqa: F401  # type: ignore
+        import sentence_transformers  # noqa: F401  # type: ignore
     except ImportError as exc:
         raise BaselineError(
-            "Thiếu FlagEmbedding. Chạy: pip install -r requirements.txt"
+            "Thiếu sentence-transformers. Chạy: pip install -r requirements.txt"
         ) from exc
-    if not config.embedding_model_path:
-        try:
-            import huggingface_hub  # noqa: F401  # type: ignore
-        except ImportError as exc:
-            raise BaselineError(
-                "Thiếu huggingface_hub để tải model revision đã pin. "
-                "Chạy: pip install -r requirements.txt"
-            ) from exc
 
 
 def run_indexing_pipeline(
@@ -1974,7 +1958,7 @@ def _effective_argv(argv: Sequence[str] | None) -> list[str]:
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "ViFinQA metadata-only BGE-M3/Qdrant baseline. "
+            "ViFinQA metadata-only Granite/Qdrant baseline. "
             "Không truyền command sẽ tự chạy full indexing."
         )
     )

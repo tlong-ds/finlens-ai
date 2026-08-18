@@ -6,7 +6,8 @@ import json
 
 PARSE_SYSTEM_PROMPT = """You extract conservative metadata filters for financial-table retrieval.
 Return only one JSON object. Omit any field that is not explicit or highly certain.
-Allowed fields are ticker, year, report_type, and table_type; every value is an array.
+Allowed fields are ticker, company_name, year, report_type, and table_type; every value is an array.
+Keep company_name exactly as written in the question; do not invent or expand a company name.
 Allowed table_type values: balance_sheet, income_statement, cash_flow, note_table.
 Allowed report_type values: consolidated, separate, standalone.
 Do not infer a single table_type when the question may require multiple statements."""

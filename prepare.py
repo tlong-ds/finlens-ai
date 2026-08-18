@@ -20,7 +20,7 @@ from bisect import bisect_right
 from collections import Counter, defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Mapping, Optional
 
 import pandas as pd
 
@@ -1426,9 +1426,35 @@ def build_retrieval_context(tables: list[dict]) -> list[dict]:
 # Generate metadata
 # ═════════════════════════════════════════════════════════════════════
 
-def generate_all_metadata(tables: list[dict], output_dir: str) -> None:
+def load_company_names(path: str | Path) -> dict[str, str]:
+    """Load the canonical company name for each ticker from ``code_stock.csv``."""
+    company_names: dict[str, str] = {}
+    with open(path, 'r', encoding='utf-8-sig', newline='') as handle:
+        for row in csv.DictReader(handle):
+            ticker = str(row.get('Mã CK') or row.get('ticker') or '').strip().upper()
+            company_name = str(
+                row.get('Tên công ty') or row.get('company_name') or ''
+            ).strip()
+            if not ticker or not company_name:
+                continue
+            previous = company_names.get(ticker)
+            if previous and previous != company_name:
+                raise ValueError(f'Conflicting company names for ticker {ticker}')
+            company_names[ticker] = company_name
+    return company_names
+
+
+def generate_all_metadata(
+    tables: list[dict],
+    output_dir: str,
+    company_names: Mapping[str, str] | None = None,
+) -> None:
     out_dir_path = Path(output_dir)
     out_dir_path.mkdir(parents=True, exist_ok=True)
+    names_by_ticker = {
+        str(ticker).strip().upper(): str(company_name).strip()
+        for ticker, company_name in (company_names or {}).items()
+    }
 
     docs_map = {}
     tables_metadata = []
@@ -1449,6 +1475,10 @@ def generate_all_metadata(tables: list[dict], output_dir: str) -> None:
             }
 
         table_id = t.get('table_id', '')
+        ticker = str(t.get('ticker', '')).strip().upper()
+        company_name = str(t.get('company_name', '')).strip()
+        if not company_name:
+            company_name = names_by_ticker.get(ticker, '')
         report_type = t.get('folder_type', '')
         if report_type not in ('consolidated', 'separate', 'aggregated', 'other'):
             report_type = 'consolidated' if t.get('consolidated', False) else 'separate'
@@ -1457,7 +1487,8 @@ def generate_all_metadata(tables: list[dict], output_dir: str) -> None:
             'table_id': table_id,
             'doc_id': doc_id,
             'start_line': t.get('start_line', 0),
-            'ticker': t.get('ticker', ''),
+            'ticker': ticker,
+            'company_name': company_name,
             'year': t.get('year', 0),
             'report_type': report_type,
             'table_type': t.get('table_type', ''),
@@ -1546,7 +1577,8 @@ def prepare(financial_statements_dir: str) -> None:
 
     # ── Stage 6: Metadata ──────────────────────────────────────────
     print("═══ Stage 6: Generate metadata ═══")
-    generate_all_metadata(with_ctx, str(root / "metadata"))
+    company_names = load_company_names(root / "ViFinQA" / "code_stock.csv")
+    generate_all_metadata(with_ctx, str(root / "metadata"), company_names)
     print("  docs_metadata.json · tables_metadata.json")
 
     print("\n✓ Pipeline complete")

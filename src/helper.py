@@ -137,6 +137,16 @@ def validate_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]:
         if clean_tickers:
             validated["ticker"] = _unique(clean_tickers)
 
+    company_names = value.get("company_name")
+    if isinstance(company_names, list):
+        clean_company_names = [
+            " ".join(item.split())
+            for item in company_names
+            if isinstance(item, str) and 1 < len(" ".join(item.split())) <= 200
+        ]
+        if clean_company_names:
+            validated["company_name"] = _unique(clean_company_names)
+
     years = value.get("year")
     if isinstance(years, list):
         clean_years = [
