@@ -34,6 +34,7 @@ from src.contracts import (
     MAX_YEAR,
     MIN_YEAR,
     PAYLOAD_FIELDS,
+    PAYLOAD_SCHEMA_VERSION,
     REPORT_TYPES,
     TABLE_ID_PATTERN,
     resolve_csv_path as resolve_contract_csv_path,
@@ -59,7 +60,6 @@ COLLECTION_DEFAULT = "finlens_tables_metadata_granite_97m_multilingual_r2_v1"
 ALIAS_DEFAULT = "finlens_tables_current"
 VECTOR_SIZE = EMBEDDING_VECTOR_SIZE
 INDEX_TEXT_VERSION = 1
-PAYLOAD_SCHEMA_VERSION = 2
 FINLENS_NAMESPACE_UUID = uuid.uuid5(
     uuid.NAMESPACE_URL, "https://finlens.ai/qdrant/table"
 )
@@ -450,6 +450,9 @@ def has_useful_note_metadata(record: Mapping[str, Any]) -> bool:
 
 
 def build_payload(record: Mapping[str, Any]) -> dict[str, Any]:
+    start_line = record.get("start_line")
+    if isinstance(start_line, bool) or not isinstance(start_line, int) or start_line < 1:
+        raise BaselineError("missing_or_invalid_start_line")
     payload = {
         "table_id": validate_table_id(normalize_text(record.get("table_id"))),
         "doc_id": normalize_text(record.get("doc_id")),
@@ -458,6 +461,7 @@ def build_payload(record: Mapping[str, Any]) -> dict[str, Any]:
         "year": int(record.get("year")),
         "report_type": normalize_text(record.get("report_type")),
         "table_type": normalize_text(record.get("table_type")),
+        "start_line": start_line,
     }
     if tuple(payload) != PAYLOAD_FIELDS:
         raise AssertionError("Payload allowlist bị thay đổi")
@@ -1615,6 +1619,7 @@ def self_test() -> dict[str, Any]:
         "year": 2023,
         "report_type": "consolidated",
         "table_type": "income_statement",
+        "start_line": 321,
         "csv_path": "data/AAA_financial_statements_2023_consolidated_table_9.csv",
         "semantic_fields": [
             {"canonical_name_vi": "Doanh thu thuần", "canonical_name_en": "Net revenue"},
@@ -1650,7 +1655,16 @@ def self_test() -> dict[str, Any]:
     assert tuple(payload) == PAYLOAD_FIELDS
     assert set(payload) == set(PAYLOAD_FIELDS)
     assert "csv_path" not in payload
-    checks.append("seven_field_payload")
+    assert payload["start_line"] == 321
+    invalid_start_line = dict(sample)
+    invalid_start_line["start_line"] = 0
+    try:
+        build_payload(invalid_start_line)
+    except BaselineError as exc:
+        assert str(exc) == "missing_or_invalid_start_line"
+    else:
+        raise AssertionError("start_line không hợp lệ vẫn được chấp nhận")
+    checks.append("eight_field_payload_and_start_line_validation")
 
     point_id = make_point_id(sample["table_id"])
     assert point_id == make_point_id(sample["table_id"])

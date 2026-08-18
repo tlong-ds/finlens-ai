@@ -9,6 +9,7 @@ from typing import Any, TypedDict
 
 MIN_YEAR = 2015
 MAX_YEAR = 2025
+PAYLOAD_SCHEMA_VERSION = 3
 
 PAYLOAD_FIELDS = (
     "table_id",
@@ -18,6 +19,7 @@ PAYLOAD_FIELDS = (
     "year",
     "report_type",
     "table_type",
+    "start_line",
 )
 FILTER_FIELDS = ("ticker", "company_name", "year", "report_type", "table_type")
 REPORT_TYPES = frozenset({"consolidated", "separate", "aggregated", "other"})
@@ -35,6 +37,7 @@ class QdrantTablePayload(TypedDict):
     year: int
     report_type: str
     table_type: str
+    start_line: int
 
 
 def validate_table_id(value: Any) -> str:
@@ -64,10 +67,10 @@ def resolve_csv_path(table_id: str, project_root: Path) -> Path:
 
 
 def validate_qdrant_payload(value: Mapping[str, Any]) -> QdrantTablePayload:
-    """Return a normalized payload only when it exactly matches schema v2."""
+    """Return a normalized payload only when it exactly matches schema v3."""
     if set(value) != set(PAYLOAD_FIELDS):
         raise ValueError(
-            "Payload Qdrant phải có đúng 7 trường: " + ", ".join(PAYLOAD_FIELDS)
+            "Payload Qdrant phải có đúng 8 trường: " + ", ".join(PAYLOAD_FIELDS)
         )
 
     string_fields = (
@@ -99,4 +102,11 @@ def validate_qdrant_payload(value: Mapping[str, Any]) -> QdrantTablePayload:
         raise ValueError(f"report_type không hợp lệ: {normalized['report_type']}")
     if normalized["table_type"] not in TABLE_TYPES:
         raise ValueError(f"table_type không hợp lệ: {normalized['table_type']}")
+
+    start_line = value["start_line"]
+    if isinstance(start_line, bool) or not isinstance(start_line, int):
+        raise ValueError("Payload field start_line phải là số nguyên")
+    if start_line < 1:
+        raise ValueError("Payload field start_line phải lớn hơn hoặc bằng 1")
+    normalized["start_line"] = start_line
     return normalized  # type: ignore[return-value]

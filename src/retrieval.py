@@ -15,7 +15,11 @@ import httpx
 from qdrant_client import models
 from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
 
-from src.contracts import FILTER_FIELDS, validate_qdrant_payload
+from src.contracts import (
+    FILTER_FIELDS,
+    PAYLOAD_SCHEMA_VERSION,
+    validate_qdrant_payload,
+)
 from src.embeddings import (
     DENSE_VECTOR_NAME,
     EMBEDDING_VECTOR_SIZE,
@@ -199,8 +203,11 @@ def _load_manifest_cached(path_text: str, mtime_ns: int) -> dict[str, dict[str, 
                     raise RerankerError("Manifest dùng sai named vector")
                 if item.get("vector_size") != EMBEDDING_VECTOR_SIZE:
                     raise RerankerError("Manifest không dùng vector Granite 384 chiều")
-                if item.get("payload_schema_version") != 2:
-                    raise RerankerError("Manifest không dùng payload schema version 2")
+                if item.get("payload_schema_version") != PAYLOAD_SCHEMA_VERSION:
+                    raise RerankerError(
+                        "Manifest không dùng payload schema version "
+                        f"{PAYLOAD_SCHEMA_VERSION}"
+                    )
                 continue
             if item.get("record_type") != "point":
                 raise RerankerError(

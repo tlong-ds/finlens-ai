@@ -46,8 +46,8 @@ export E2B_API_KEY=e2b_***
 
 Chạy `prepare.py` và `data_indexing.py` trước để collection Qdrant, manifest JSONL và
 các file `data/{table_id}.csv` được sinh từ cùng một phiên dữ liệu. Collection phải dùng
-named vector `dense` 384 chiều. Qdrant payload có đúng bảy trường: `table_id`, `doc_id`,
-`ticker`, `company_name`, `year`, `report_type`, `table_type`. Manifest cung cấp
+named vector `dense` 384 chiều. Qdrant payload có đúng tám trường: `table_id`, `doc_id`,
+`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`. Manifest cung cấp
 `index_text` cho LLM reranker; graph không chờ `index_text` hoặc `csv_path` trong payload.
 
 Configure the embedding provider, Qdrant collection, `QDRANT_MANIFEST_PATH`, and
