@@ -50,14 +50,7 @@ def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
     requested = request["số_lượng_phải_chọn"]
     selected = request["ứng_viên"][:requested]
     return {
-        "ranked_candidates": [
-            {
-                "table_id": item["table_id"],
-                "score": 100 - index,
-                "reason": "Có chỉ tiêu phù hợp",
-            }
-            for index, item in enumerate(selected)
-        ]
+        "ranked_candidate_keys": [item["candidate_key"] for item in selected]
     }
 
 
@@ -81,7 +74,58 @@ class RerankerTests(unittest.TestCase):
         self.assertEqual([item["rerank_rank"] for item in result], list(range(1, 11)))
         self.assertTrue(all("rerank_context" in item for item in result))
 
-    def test_rerank_retries_invalid_schema_then_fails(self) -> None:
+    def test_prompt_uses_opaque_keys_and_hides_table_id(self) -> None:
+        requests: list[dict[str, object]] = []
+
+        def capture(prompt: str, **kwargs: object) -> dict[str, object]:
+            request = json.loads(prompt)
+            requests.append(request)
+            return valid_llm_response(prompt, **kwargs)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 2)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch("src.retrieval.generate_structured", side_effect=capture),
+            ):
+                rerank("Câu hỏi", candidates(2))
+
+        prompt_candidates = requests[0]["ứng_viên"]
+        self.assertEqual(
+            [item["candidate_key"] for item in prompt_candidates],
+            ["c01", "c02"],
+        )
+        self.assertTrue(all("table_id" not in item for item in prompt_candidates))
+        self.assertTrue(
+            all("table_id" not in item["metadata"] for item in prompt_candidates)
+        )
+
+    def test_salvages_partial_response_and_fills_by_dense_rank(self) -> None:
+        response = {
+            "ranked_candidate_keys": ["c02", "not-a-key", "c02"],
+            "extra_key": "ignored",
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 3)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch("src.retrieval.generate_structured", return_value=response) as call,
+            ):
+                result = rerank("Câu hỏi", candidates(3))
+
+        self.assertEqual(call.call_count, 1)
+        self.assertEqual(
+            [item["table_id"] for item in result],
+            [payload(2)["table_id"], payload(1)["table_id"], payload(3)["table_id"]],
+        )
+        self.assertEqual(
+            [item["rerank_source"] for item in result],
+            ["llm", "dense_fallback", "dense_fallback"],
+        )
+
+    def test_rerank_retries_unusable_schema_then_falls_back(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             write_csvs(root, 2)
@@ -89,12 +133,42 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch(
                     "src.retrieval.generate_structured",
-                    return_value={"ranked_candidates": []},
+                    return_value={"ranked_candidate_keys": []},
                 ) as call,
             ):
-                with self.assertRaisesRegex(RerankerError, "không hợp lệ"):
-                    rerank("Câu hỏi", candidates(2))
+                result = rerank("Câu hỏi", candidates(2))
         self.assertEqual(call.call_count, 2)
+        self.assertEqual(
+            [item["table_id"] for item in result],
+            [payload(1)["table_id"], payload(2)["table_id"]],
+        )
+        self.assertTrue(all(item["rerank_source"] == "dense_fallback" for item in result))
+
+    def test_invalid_batch_falls_back_and_hierarchy_continues(self) -> None:
+        responses = [
+            {"ranked_candidate_keys": []},
+            {"ranked_candidate_keys": []},
+        ]
+
+        def invalid_then_valid(prompt: str, **kwargs: object) -> dict[str, object]:
+            if responses:
+                return responses.pop(0)
+            return valid_llm_response(prompt, **kwargs)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 50)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=invalid_then_valid,
+                ) as call,
+            ):
+                result = rerank("Câu hỏi", candidates(50))
+
+        self.assertEqual(call.call_count, 7)
+        self.assertEqual(len(result), 10)
 
     def test_attaches_question_aware_context_without_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

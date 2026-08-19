@@ -117,7 +117,10 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   dense search) and `rerank()`. Retrieval embeds the semantic query with the shared Granite
   encoder and validates the exact eight-field Qdrant payload. Reranking resolves each candidate
   CSV from `table_id`, builds bounded question-aware context from its columns and relevant rows,
-  then performs hierarchical LLM reranking. The offline manifest is not read at runtime.
+  then performs hierarchical LLM reranking. The LLM only sees opaque candidate keys; local code
+  maps them back to validated table IDs, salvages partial rankings, and uses deterministic dense
+  fallback when both structured-response attempts are unusable. The offline manifest is not read
+  at runtime.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.

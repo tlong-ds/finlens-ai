@@ -106,6 +106,7 @@ QUESTION_IDS=1,7,12 OUTPUT_DIR=/tmp/finlens-submission-test ./scripts/test_submi
 
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
 fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
-xếp hạng theo batch và chọn Top-10. Nếu CSV candidate bị thiếu/không đọc được hoặc LLM
-reranker vẫn trả sai schema sau hai lần sửa, graph dừng với lỗi rõ ràng thay vì âm thầm
-dùng dense score.
+xếp hạng theo batch và chọn Top-10 bằng các opaque candidate key. Response thiếu, thừa,
+trùng hoặc chứa key ngoài batch được salvage và điền theo dense rank; nếu response vẫn
+không dùng được sau hai lần sửa, batch/final stage fallback theo dense rank để graph tiếp
+tục. CSV candidate bị thiếu/không đọc được vẫn là lỗi terminal.

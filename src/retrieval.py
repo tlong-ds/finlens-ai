@@ -293,44 +293,108 @@ def _validate_rerank_response(
     candidates: Sequence[Mapping[str, Any]],
     top_k: int,
 ) -> list[Candidate]:
-    if set(response) != {"ranked_candidates"}:
-        raise ValueError("JSON phải có duy nhất key ranked_candidates")
-    ranked = response["ranked_candidates"]
-    if not isinstance(ranked, list) or len(ranked) != top_k:
-        raise ValueError(f"ranked_candidates phải có đúng {top_k} phần tử")
+    ranked = response.get("ranked_candidate_keys")
+    if not isinstance(ranked, list):
+        raise ValueError("ranked_candidate_keys phải là một mảng")
 
-    by_id = {str(item["table_id"]): item for item in candidates}
-    selected: list[Candidate] = []
+    by_key = {
+        f"c{index:02d}": item
+        for index, item in enumerate(candidates, start=1)
+    }
+    selected_keys: list[str] = []
     seen: set[str] = set()
-    for position, raw in enumerate(ranked, start=1):
-        if not isinstance(raw, Mapping) or set(raw) != {"table_id", "score", "reason"}:
-            raise ValueError("Mỗi kết quả phải có table_id, score và reason")
-        table_id = raw["table_id"]
-        score = raw["score"]
-        reason = raw["reason"]
-        if not isinstance(table_id, str) or table_id not in by_id:
-            raise ValueError(f"LLM trả table_id không thuộc ứng viên: {table_id!r}")
-        if table_id in seen:
-            raise ValueError(f"LLM trả table_id trùng: {table_id}")
-        if (
-            isinstance(score, bool)
-            or not isinstance(score, int)
-            or not 0 <= score <= 100
-        ):
-            raise ValueError(f"score của {table_id} phải là số nguyên 0–100")
-        if not isinstance(reason, str) or not reason.strip():
-            raise ValueError(f"reason của {table_id} phải là chuỗi không rỗng")
-        seen.add(table_id)
-        item = dict(by_id[table_id])
+    dropped = 0
+    for raw_key in ranked:
+        if not isinstance(raw_key, str) or raw_key not in by_key or raw_key in seen:
+            dropped += 1
+            continue
+        seen.add(raw_key)
+        selected_keys.append(raw_key)
+        if len(selected_keys) == top_k:
+            break
+
+    if not selected_keys:
+        raise ValueError("LLM không trả candidate_key hợp lệ")
+
+    fallback_keys = sorted(
+        (key for key in by_key if key not in seen),
+        key=lambda key: _fallback_sort_key(by_key[key]),
+    )
+    missing = top_k - len(selected_keys)
+    selected_keys.extend(fallback_keys[:missing])
+    if dropped or missing > 0 or len(ranked) > top_k:
+        logger.warning(
+            "Salvaged reranker response: dropped=%d filled=%d returned=%d requested=%d",
+            dropped,
+            max(missing, 0),
+            len(ranked),
+            top_k,
+        )
+    return _materialize_ranking(
+        selected_keys,
+        by_key,
+        llm_selected_count=top_k - max(missing, 0),
+    )
+
+
+def _fallback_sort_key(candidate: Mapping[str, Any]) -> tuple[float, float, str]:
+    """Order candidates deterministically by dense rank, then retrieval score."""
+    dense_rank = candidate.get("dense_rank")
+    rank_value = (
+        float(dense_rank)
+        if isinstance(dense_rank, (int, float)) and not isinstance(dense_rank, bool)
+        else math.inf
+    )
+    retrieval_score = candidate.get("retrieval_score")
+    score_value = (
+        float(retrieval_score)
+        if isinstance(retrieval_score, (int, float))
+        and not isinstance(retrieval_score, bool)
+        and math.isfinite(float(retrieval_score))
+        else -math.inf
+    )
+    return rank_value, -score_value, str(candidate.get("table_id") or "")
+
+
+def _materialize_ranking(
+    selected_keys: Sequence[str],
+    by_key: Mapping[str, Mapping[str, Any]],
+    *,
+    llm_selected_count: int,
+) -> list[Candidate]:
+    """Map opaque keys back to candidates and attach compatible rank metadata."""
+    result: list[Candidate] = []
+    count = len(selected_keys)
+    for position, key in enumerate(selected_keys, start=1):
+        item = dict(by_key[key])
+        source = "llm" if position <= llm_selected_count else "dense_fallback"
         item.update(
             {
-                "rerank_score": score / 100.0,
-                "rerank_reason": " ".join(reason.split())[:500],
+                "rerank_score": (count - position + 1) / count,
+                "rerank_reason": source,
                 "rerank_rank": position,
+                "rerank_source": source,
             }
         )
-        selected.append(item)
-    return selected
+        result.append(item)
+    return result
+
+
+def _fallback_ranking(
+    candidates: Sequence[Mapping[str, Any]],
+    top_k: int,
+) -> list[Candidate]:
+    """Return a deterministic dense-ranked shortlist after unusable LLM output."""
+    ordered = sorted(candidates, key=_fallback_sort_key)[:top_k]
+    by_key = {
+        f"c{index:02d}": item
+        for index, item in enumerate(ordered, start=1)
+    }
+    return _materialize_ranking(
+        list(by_key),
+        by_key,
+        llm_selected_count=0,
+    )
 
 
 def _rank_listwise(
@@ -352,7 +416,13 @@ def _rank_listwise(
         except ValueError as exc:
             last_error = str(exc)
         feedback = "Response trước không hợp lệ: " + last_error
-    raise RerankerError("LLM reranker trả dữ liệu không hợp lệ: " + last_error)
+    logger.warning(
+        "LLM reranker output remained unusable after %d attempts; "
+        "falling back to dense rank: %s",
+        RERANK_RESPONSE_ATTEMPTS,
+        last_error,
+    )
+    return _fallback_ranking(candidates, top_k)
 
 
 def rerank(
