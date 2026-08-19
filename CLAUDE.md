@@ -114,10 +114,10 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   table_type); `src/helper.py:validate_filters` locally drops anything malformed or not in the
   allowed vocab before it ever reaches Qdrant.
 - `retrieve_tables_node` / `rerank_tables_node` call `src/retrieval.py`'s `retrieve()` (Qdrant
-  dense search) and `rerank()`. **Both are currently stubs**: `embed_query()` raises
-  `RetrievalError` unconditionally (no embedding provider wired in yet), and `rerank()` is just
-  a retrieval-score sort placeholder — replace the scoring block once a real
-  (question, table) reranker is chosen; the function contract and graph don't need to change.
+  dense search) and `rerank()`. Retrieval embeds the semantic query with the shared Granite
+  encoder and validates the exact eight-field Qdrant payload. Reranking resolves each candidate
+  CSV from `table_id`, builds bounded question-aware context from its columns and relevant rows,
+  then performs hierarchical LLM reranking. The offline manifest is not read at runtime.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.

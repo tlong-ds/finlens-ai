@@ -5,7 +5,8 @@ from __future__ import annotations
 import json
 import logging
 import math
-import os
+import csv
+import re
 from collections.abc import Mapping, Sequence
 from functools import lru_cache
 from pathlib import Path
@@ -17,12 +18,11 @@ from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedR
 
 from src.contracts import (
     FILTER_FIELDS,
-    PAYLOAD_SCHEMA_VERSION,
+    resolve_csv_path,
     validate_qdrant_payload,
 )
 from src.embeddings import (
     DENSE_VECTOR_NAME,
-    EMBEDDING_VECTOR_SIZE,
     DenseEmbeddingModel,
     EmbeddingError,
 )
@@ -33,14 +33,38 @@ from src.qdrant import QdrantConnectionError, get_collection_name, get_qdrant_cl
 logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_MANIFEST_PATH = (
-    PROJECT_ROOT / "intermediate" / "qdrant_manifest_granite_97m_r2_v1.jsonl"
-)
 RETRIEVAL_TOP_K = 50
 RERANK_TOP_K = 10
 RERANK_BATCH_SIZE = 10
 RERANK_BATCH_SHORTLIST = 5
 RERANK_RESPONSE_ATTEMPTS = 2
+RERANK_CONTEXT_SCAN_ROWS = 500
+RERANK_CONTEXT_MAX_ROWS = 12
+RERANK_CONTEXT_MAX_COLUMNS = 24
+RERANK_CONTEXT_MAX_CELL_CHARS = 160
+RERANK_CONTEXT_MAX_CHARS = 6_000
+
+_QUESTION_STOP_WORDS = frozenset(
+    {
+        "bao",
+        "bằng",
+        "của",
+        "cuối",
+        "đến",
+        "đồng",
+        "là",
+        "năm",
+        "ngày",
+        "nhiêu",
+        "số",
+        "tháng",
+        "theo",
+        "trong",
+        "triệu",
+        "tỷ",
+        "vào",
+    }
+)
 
 Candidate = dict[str, Any]
 
@@ -171,84 +195,79 @@ def retrieve(
     return candidates
 
 
-def get_manifest_path() -> Path:
-    return Path(os.getenv("QDRANT_MANIFEST_PATH", str(DEFAULT_MANIFEST_PATH))).resolve()
+def _compact_cell(value: Any) -> str:
+    return " ".join(str(value).split())[:RERANK_CONTEXT_MAX_CELL_CHARS]
 
 
-@lru_cache(maxsize=4)
-def _load_manifest_cached(path_text: str, mtime_ns: int) -> dict[str, dict[str, Any]]:
-    del mtime_ns  # The value only invalidates the cache when the file changes.
-    path = Path(path_text)
-    entries: dict[str, dict[str, Any]] = {}
-    header_seen = False
-    with path.open("r", encoding="utf-8") as handle:
-        for line_number, line in enumerate(handle, start=1):
-            if not line.strip():
-                continue
-            try:
-                item = json.loads(line)
-            except json.JSONDecodeError as exc:
-                raise RerankerError(
-                    f"Manifest JSONL lỗi tại dòng {line_number}: {path}"
-                ) from exc
-            if not isinstance(item, dict):
-                raise RerankerError(
-                    f"Manifest record không phải object tại dòng {line_number}"
-                )
-            if item.get("record_type") == "header":
-                if header_seen or line_number != 1:
-                    raise RerankerError("Manifest phải có đúng một header ở dòng đầu")
-                header_seen = True
-                if item.get("vector_name") != DENSE_VECTOR_NAME:
-                    raise RerankerError("Manifest dùng sai named vector")
-                if item.get("vector_size") != EMBEDDING_VECTOR_SIZE:
-                    raise RerankerError("Manifest không dùng vector Granite 384 chiều")
-                if item.get("payload_schema_version") != PAYLOAD_SCHEMA_VERSION:
-                    raise RerankerError(
-                        "Manifest không dùng payload schema version "
-                        f"{PAYLOAD_SCHEMA_VERSION}"
-                    )
-                continue
-            if item.get("record_type") != "point":
-                raise RerankerError(
-                    f"Manifest record_type không hợp lệ tại dòng {line_number}"
-                )
-            try:
-                payload = validate_qdrant_payload(item["payload"])
-                table_id = payload["table_id"]
-                index_text = item["index_text"]
-            except (KeyError, TypeError, ValueError) as exc:
-                raise RerankerError(
-                    f"Manifest point không hợp lệ tại dòng {line_number}"
-                ) from exc
-            if not isinstance(index_text, str) or not index_text.strip():
-                raise RerankerError(f"Manifest thiếu index_text tại dòng {line_number}")
-            if table_id in entries:
-                raise RerankerError(f"Manifest trùng table_id: {table_id}")
-            entries[table_id] = {"payload": payload, "index_text": index_text.strip()}
-    if not header_seen:
-        raise RerankerError(f"Manifest thiếu header: {path}")
-    return entries
+def _question_tokens(question: str) -> set[str]:
+    return {
+        token
+        for token in re.findall(r"\w+", question.casefold(), flags=re.UNICODE)
+        if len(token) > 1 and token not in _QUESTION_STOP_WORDS
+    }
 
 
-def load_manifest_index(path: Path | None = None) -> dict[str, dict[str, Any]]:
-    manifest_path = (path or get_manifest_path()).resolve()
+def build_csv_rerank_context(question: str, table_id: str) -> str:
+    """Build bounded, question-aware rerank context directly from a table CSV."""
     try:
-        stat = manifest_path.stat()
-    except OSError as exc:
-        raise RerankerError(
-            f"Không đọc được manifest reranker: {manifest_path}"
-        ) from exc
-    return _load_manifest_cached(str(manifest_path), stat.st_mtime_ns)
+        csv_file = resolve_csv_path(table_id, PROJECT_ROOT)
+        with csv_file.open("r", encoding="utf-8-sig", newline="") as handle:
+            reader = csv.reader(handle)
+            raw_columns = next(reader)
+            columns = [
+                _compact_cell(column)
+                for column in raw_columns[:RERANK_CONTEXT_MAX_COLUMNS]
+            ]
+            if not columns or not any(columns):
+                raise ValueError("CSV không có header hữu ích")
+
+            query_tokens = _question_tokens(question)
+            scored_rows: list[tuple[int, int, list[str]]] = []
+            scanned = 0
+            for row_number, raw_row in enumerate(reader, start=2):
+                if scanned >= RERANK_CONTEXT_SCAN_ROWS:
+                    break
+                scanned += 1
+                cells = [
+                    _compact_cell(value)
+                    for value in raw_row[:RERANK_CONTEXT_MAX_COLUMNS]
+                ]
+                if not any(cells):
+                    continue
+                row_tokens = set(
+                    re.findall(r"\w+", " ".join(cells).casefold(), flags=re.UNICODE)
+                )
+                score = len(query_tokens & row_tokens)
+                scored_rows.append((score, row_number, cells))
+    except (OSError, UnicodeError, csv.Error, StopIteration, ValueError) as exc:
+        raise RerankerError(f"Không dựng được rerank context từ CSV: {table_id}") from exc
+
+    ranked_rows = sorted(scored_rows, key=lambda item: (-item[0], item[1]))[
+        :RERANK_CONTEXT_MAX_ROWS
+    ]
+    context: dict[str, Any] = {
+        "columns": columns,
+        "rows_scanned": scanned,
+        "relevant_rows": [],
+    }
+    for _, row_number, cells in ranked_rows:
+        compact_row = {
+            "row": row_number,
+            "cells": cells,
+        }
+        candidate_context = {**context, "relevant_rows": [*context["relevant_rows"], compact_row]}
+        serialized = json.dumps(candidate_context, ensure_ascii=False)
+        if len(serialized) > RERANK_CONTEXT_MAX_CHARS:
+            break
+        context = candidate_context
+    return json.dumps(context, ensure_ascii=False)
 
 
-def enrich_candidates(
+def attach_rerank_context(
+    question: str,
     candidates: Sequence[Mapping[str, Any]],
-    *,
-    manifest_path: Path | None = None,
 ) -> list[Candidate]:
-    """Attach the exact embedded index_text and reject stale manifest data."""
-    manifest = load_manifest_index(manifest_path)
+    """Validate Qdrant candidates and attach bounded context from local CSVs."""
     enriched: list[Candidate] = []
     seen: set[str] = set()
     for raw_candidate in candidates:
@@ -263,15 +282,8 @@ def enrich_candidates(
                 f"Candidate table_id không hợp lệ hoặc bị trùng: {table_id}"
             )
         seen.add(table_id)
-        manifest_item = manifest.get(table_id)
-        if manifest_item is None:
-            raise RerankerError(f"Manifest không có table_id từ Qdrant: {table_id}")
-        if manifest_item["payload"] != payload:
-            raise RerankerError(
-                f"Payload manifest đã lệch Qdrant cho table_id: {table_id}"
-            )
         candidate["metadata"] = payload
-        candidate["index_text"] = manifest_item["index_text"]
+        candidate["rerank_context"] = build_csv_rerank_context(question, table_id)
         enriched.append(candidate)
     return enriched
 
@@ -348,7 +360,6 @@ def rerank(
     candidates: Sequence[Mapping[str, Any]],
     *,
     top_k: int = RERANK_TOP_K,
-    manifest_path: Path | None = None,
 ) -> list[Candidate]:
     """Hierarchically rerank dense candidates with the configured LLM."""
     if not question.strip():
@@ -358,7 +369,7 @@ def rerank(
     if not candidates:
         raise RerankerError("Không có candidate để rerank")
 
-    enriched = enrich_candidates(candidates, manifest_path=manifest_path)
+    enriched = attach_rerank_context(question, candidates)
     final_size = min(top_k, len(enriched))
     if len(enriched) <= top_k:
         result = _rank_listwise(question, enriched, final_size)

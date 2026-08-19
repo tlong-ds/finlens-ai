@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.retrieval import RerankerError, enrich_candidates, rerank
+from src.retrieval import RerankerError, attach_rerank_context, rerank
 
 
 def payload(index: int) -> dict[str, object]:
@@ -18,6 +18,7 @@ def payload(index: int) -> dict[str, object]:
         "year": 2018,
         "report_type": "separate",
         "table_type": "note_table",
+        "start_line": index,
     }
 
 
@@ -33,28 +34,15 @@ def candidates(count: int) -> list[dict[str, object]]:
     ]
 
 
-def write_manifest(path: Path, count: int) -> None:
-    records = [
-        {
-            "record_type": "header",
-            "vector_name": "dense",
-            "vector_size": 384,
-            "payload_schema_version": 2,
-        }
-    ]
-    records.extend(
-        {
-            "record_type": "point",
-            "table_id": payload(index)["table_id"],
-            "payload": payload(index),
-            "index_text": f"Loại bảng: thuyết minh\nChỉ tiêu: mục tài chính {index}",
-        }
-        for index in range(1, count + 1)
-    )
-    path.write_text(
-        "".join(json.dumps(record, ensure_ascii=False) + "\n" for record in records),
-        encoding="utf-8",
-    )
+def write_csvs(root: Path, count: int) -> None:
+    data_dir = root / "data"
+    data_dir.mkdir()
+    for index in range(1, count + 1):
+        table_id = payload(index)["table_id"]
+        (data_dir / f"{table_id}.csv").write_text(
+            "Chỉ tiêu,2018\nLãi tiền gửi,123\nChi phí lãi vay,45\n",
+            encoding="utf-8",
+        )
 
 
 def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
@@ -76,39 +64,60 @@ def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
 class RerankerTests(unittest.TestCase):
     def test_hierarchical_rerank_uses_batches_and_final(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
-            manifest = Path(temp_dir) / "manifest.jsonl"
-            write_manifest(manifest, 50)
-            with patch(
-                "src.retrieval.generate_structured", side_effect=valid_llm_response
-            ) as call:
+            root = Path(temp_dir)
+            write_csvs(root, 50)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=valid_llm_response,
+                ) as call,
+            ):
                 result = rerank(
-                    "Lãi tiền gửi là bao nhiêu?", candidates(50), manifest_path=manifest
+                    "Lãi tiền gửi là bao nhiêu?", candidates(50)
                 )
         self.assertEqual(len(result), 10)
         self.assertEqual(call.call_count, 6)  # five batches and one final
         self.assertEqual([item["rerank_rank"] for item in result], list(range(1, 11)))
-        self.assertTrue(all("index_text" in item for item in result))
+        self.assertTrue(all("rerank_context" in item for item in result))
 
     def test_rerank_retries_invalid_schema_then_fails(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
-            manifest = Path(temp_dir) / "manifest.jsonl"
-            write_manifest(manifest, 2)
-            with patch(
-                "src.retrieval.generate_structured",
-                return_value={"ranked_candidates": []},
-            ) as call:
+            root = Path(temp_dir)
+            write_csvs(root, 2)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    return_value={"ranked_candidates": []},
+                ) as call,
+            ):
                 with self.assertRaisesRegex(RerankerError, "không hợp lệ"):
-                    rerank("Câu hỏi", candidates(2), manifest_path=manifest)
+                    rerank("Câu hỏi", candidates(2))
         self.assertEqual(call.call_count, 2)
 
-    def test_rejects_stale_manifest_payload(self) -> None:
+    def test_attaches_question_aware_context_without_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
-            manifest = Path(temp_dir) / "manifest.jsonl"
-            write_manifest(manifest, 1)
-            stale = candidates(1)
-            stale[0]["metadata"] = {**stale[0]["metadata"], "year": 2019}
-            with self.assertRaisesRegex(RerankerError, "lệch Qdrant"):
-                enrich_candidates(stale, manifest_path=manifest)
+            root = Path(temp_dir)
+            write_csvs(root, 1)
+            with patch("src.retrieval.PROJECT_ROOT", root):
+                enriched = attach_rerank_context(
+                    "Lãi tiền gửi là bao nhiêu?", candidates(1)
+                )
+        context = json.loads(enriched[0]["rerank_context"])
+        self.assertEqual(context["columns"], ["Chỉ tiêu", "2018"])
+        self.assertEqual(context["relevant_rows"][0]["cells"][0], "Lãi tiền gửi")
+
+    def test_rejects_duplicate_qdrant_candidate(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 1)
+            duplicate = [*candidates(1), *candidates(1)]
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                self.assertRaisesRegex(RerankerError, "bị trùng"),
+            ):
+                attach_rerank_context("Câu hỏi", duplicate)
 
 
 if __name__ == "__main__":

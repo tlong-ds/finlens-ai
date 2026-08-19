@@ -44,14 +44,16 @@ returns to the host. Create an E2B account, obtain an API key, and export it:
 export E2B_API_KEY=e2b_***
 ```
 
-Chạy `prepare.py` và `data_indexing.py` trước để collection Qdrant, manifest JSONL và
-các file `data/{table_id}.csv` được sinh từ cùng một phiên dữ liệu. Collection phải dùng
+Chạy `prepare.py` và `data_indexing.py` trước để collection Qdrant và các file
+`data/{table_id}.csv` được sinh từ cùng một phiên dữ liệu. Collection phải dùng
 named vector `dense` 384 chiều. Qdrant payload có đúng tám trường: `table_id`, `doc_id`,
-`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`. Manifest cung cấp
-`index_text` cho LLM reranker; graph không chờ `index_text` hoặc `csv_path` trong payload.
+`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`. Sau dense
+retrieval, graph resolve `data/{table_id}.csv` an toàn và dựng rerank context có giới hạn
+trực tiếp từ header/các dòng liên quan trong CSV. Manifest chỉ là artifact indexing offline,
+không được đọc trong runtime graph.
 
-Configure the embedding provider, Qdrant collection, `QDRANT_MANIFEST_PATH`, and
-OpenAI-compatible LLM endpoint, then invoke the compiled graph with an exact canonical
+Configure the embedding provider, Qdrant collection, and OpenAI-compatible LLM endpoint,
+then invoke the compiled graph with an exact canonical
 ViFinQA question:
 
 ```dotenv
@@ -65,12 +67,12 @@ EMBEDDING_MAX_LENGTH=512
 
 The default Granite multilingual encoder uses 384-dimensional normalized dense
 vectors. Index metadata and queries are encoded without model-specific prefixes.
-The current V1 collection uses Vietnamese-only metadata for `index_text`: the
-Vietnamese table type label, Vietnamese semantic summary/keywords, and
-`canonical_name_vi`. English canonical names are excluded. After changing this
-contract, run `python data_indexing.py index --rebuild-manifest --force` during
-a maintenance window, then reconcile stale points and verify the collection
-before serving queries.
+The offline manifest still uses Vietnamese-only metadata for embedding `index_text`:
+the Vietnamese table type label, semantic summary/keywords, and `canonical_name_vi`.
+Runtime reranking does not read that manifest; it builds bounded, question-aware context
+from the candidate CSVs returned by Qdrant. After changing the embedding contract, run
+`python data_indexing.py index --rebuild-manifest --force` during a maintenance window,
+then reconcile stale points and verify the collection before serving queries.
 
 Qdrant payloads include both `ticker` and the canonical `company_name` from
 `ViFinQA/code_stock.csv`; both fields are keyword-indexed and can be used as exact
@@ -104,5 +106,6 @@ QUESTION_IDS=1,7,12 OUTPUT_DIR=/tmp/finlens-submission-test ./scripts/test_submi
 
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
 fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
-xếp hạng theo batch và chọn Top-10. Nếu manifest lệch payload Qdrant hoặc LLM reranker
-vẫn trả sai schema sau hai lần sửa, graph dừng với lỗi rõ ràng thay vì âm thầm dùng dense score.
+xếp hạng theo batch và chọn Top-10. Nếu CSV candidate bị thiếu/không đọc được hoặc LLM
+reranker vẫn trả sai schema sau hai lần sửa, graph dừng với lỗi rõ ràng thay vì âm thầm
+dùng dense score.
