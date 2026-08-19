@@ -5,11 +5,17 @@ from __future__ import annotations
 import logging
 import math
 import os
+import threading
 from pathlib import Path
 from typing import Any, Sequence
 
 
 logger = logging.getLogger(__name__)
+
+# Transformers temporarily changes process-global torch dtype while constructing
+# some model architectures. Serializing model construction prevents concurrent
+# loads from leaving a ModernBERT instance with mixed Float/BFloat16 parameters.
+_MODEL_LOAD_LOCK = threading.Lock()
 
 EMBEDDING_MODEL_DEFAULT = "ibm-granite/granite-embedding-97m-multilingual-r2"
 EMBEDDING_REVISION_DEFAULT = "835ad14087e140460703cf0fae09f97d469d65c2"
@@ -50,6 +56,7 @@ class DenseEmbeddingModel:
         self.batch_size = batch_size
         self.max_length = max_length
         self._model: Any = None
+        self._encode_lock = threading.Lock()
 
     @classmethod
     def from_env(cls) -> "DenseEmbeddingModel":
@@ -68,41 +75,44 @@ class DenseEmbeddingModel:
     def load(self) -> None:
         if self._model is not None:
             return
-        try:
-            from sentence_transformers import SentenceTransformer  # type: ignore
-        except ImportError as exc:
-            raise EmbeddingError(
-                "Missing sentence-transformers. Run: pip install -r requirements.txt"
-            ) from exc
+        with _MODEL_LOAD_LOCK:
+            if self._model is not None:
+                return
+            try:
+                from sentence_transformers import SentenceTransformer  # type: ignore
+            except ImportError as exc:
+                raise EmbeddingError(
+                    "Missing sentence-transformers. Run: pip install -r requirements.txt"
+                ) from exc
 
-        source = self.model_id
-        kwargs: dict[str, Any] = {"trust_remote_code": False}
-        if self.model_path:
-            path = Path(self.model_path).resolve()
-            if not path.is_dir():
-                raise EmbeddingError(f"EMBEDDING_MODEL_PATH does not exist: {path}")
-            source = str(path)
-        else:
-            kwargs["revision"] = self.revision
-        if self.device != "auto":
-            kwargs["device"] = self.device
+            source = self.model_id
+            kwargs: dict[str, Any] = {"trust_remote_code": False}
+            if self.model_path:
+                path = Path(self.model_path).resolve()
+                if not path.is_dir():
+                    raise EmbeddingError(f"EMBEDDING_MODEL_PATH does not exist: {path}")
+                source = str(path)
+            else:
+                kwargs["revision"] = self.revision
+            if self.device != "auto":
+                kwargs["device"] = self.device
 
-        try:
-            model = SentenceTransformer(source, **kwargs)
-        except Exception as exc:
-            raise EmbeddingError(
-                f"Cannot load embedding model {self.model_id}@{self.revision}"
-            ) from exc
-        model.max_seq_length = self.max_length
-        get_dimension = getattr(model, "get_embedding_dimension", None)
-        if not callable(get_dimension):
-            get_dimension = model.get_sentence_embedding_dimension
-        dimension = get_dimension()
-        if int(dimension or 0) != EMBEDDING_VECTOR_SIZE:
-            raise EmbeddingError(
-                f"Embedding dimension is {dimension}; expected {EMBEDDING_VECTOR_SIZE}"
-            )
-        self._model = model
+            try:
+                model = SentenceTransformer(source, **kwargs)
+            except Exception as exc:
+                raise EmbeddingError(
+                    f"Cannot load embedding model {self.model_id}@{self.revision}"
+                ) from exc
+            model.max_seq_length = self.max_length
+            get_dimension = getattr(model, "get_embedding_dimension", None)
+            if not callable(get_dimension):
+                get_dimension = model.get_sentence_embedding_dimension
+            dimension = get_dimension()
+            if int(dimension or 0) != EMBEDDING_VECTOR_SIZE:
+                raise EmbeddingError(
+                    f"Embedding dimension is {dimension}; expected {EMBEDDING_VECTOR_SIZE}"
+                )
+            self._model = model
         logger.info(
             "Loaded %s@%s (device=%s, max_length=%d)",
             self.model_id,
@@ -123,13 +133,14 @@ class DenseEmbeddingModel:
 
         self.load()
         try:
-            result = self._model.encode(
-                prepared,
-                batch_size=self.batch_size,
-                normalize_embeddings=True,
-                convert_to_numpy=True,
-                show_progress_bar=False,
-            )
+            with self._encode_lock:
+                result = self._model.encode(
+                    prepared,
+                    batch_size=self.batch_size,
+                    normalize_embeddings=True,
+                    convert_to_numpy=True,
+                    show_progress_bar=False,
+                )
         except Exception as exc:
             raise EmbeddingError("Embedding inference failed") from exc
 

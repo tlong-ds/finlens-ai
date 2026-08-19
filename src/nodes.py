@@ -115,7 +115,7 @@ def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Rerank candidates and return the final Top-K tables."""
+    """Rerank candidates and return up to the configured maximum tables."""
     retrieved_tables = rerank(
         question=str(state.get("question") or ""),
         candidates=state.get("candidates", []),

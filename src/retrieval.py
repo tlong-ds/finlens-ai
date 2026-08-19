@@ -7,8 +7,8 @@ import logging
 import math
 import csv
 import re
+import threading
 from collections.abc import Mapping, Sequence
-from functools import lru_cache
 from pathlib import Path
 from typing import Any, cast
 
@@ -68,6 +68,9 @@ _QUESTION_STOP_WORDS = frozenset(
 
 Candidate = dict[str, Any]
 
+_embedding_model: DenseEmbeddingModel | None = None
+_embedding_model_lock = threading.Lock()
+
 
 class RetrievalError(RuntimeError):
     """Raised when table retrieval fails."""
@@ -112,9 +115,16 @@ def build_qdrant_filter(
     return models.Filter(must=cast(Any, conditions)) if conditions else None
 
 
-@lru_cache(maxsize=1)
 def _get_embedding_model() -> DenseEmbeddingModel:
-    return DenseEmbeddingModel.from_env()
+    """Return one fully loaded encoder, even under concurrent first access."""
+    global _embedding_model
+    if _embedding_model is None:
+        with _embedding_model_lock:
+            if _embedding_model is None:
+                model = DenseEmbeddingModel.from_env()
+                model.load()
+                _embedding_model = model
+    return _embedding_model
 
 
 def embed_query(query_text: str) -> list[float]:
@@ -316,24 +326,18 @@ def _validate_rerank_response(
     if not selected_keys:
         raise ValueError("LLM không trả candidate_key hợp lệ")
 
-    fallback_keys = sorted(
-        (key for key in by_key if key not in seen),
-        key=lambda key: _fallback_sort_key(by_key[key]),
-    )
-    missing = top_k - len(selected_keys)
-    selected_keys.extend(fallback_keys[:missing])
-    if dropped or missing > 0 or len(ranked) > top_k:
+    if dropped or len(ranked) > top_k:
         logger.warning(
-            "Salvaged reranker response: dropped=%d filled=%d returned=%d requested=%d",
+            "Salvaged reranker response: dropped=%d kept=%d returned=%d maximum=%d",
             dropped,
-            max(missing, 0),
+            len(selected_keys),
             len(ranked),
             top_k,
         )
     return _materialize_ranking(
         selected_keys,
         by_key,
-        llm_selected_count=top_k - max(missing, 0),
+        llm_selected_count=len(selected_keys),
     )
 
 
@@ -431,7 +435,7 @@ def rerank(
     *,
     top_k: int = RERANK_TOP_K,
 ) -> list[Candidate]:
-    """Hierarchically rerank dense candidates with the configured LLM."""
+    """Hierarchically rerank dense candidates up to the configured maximum."""
     if not question.strip():
         raise ValueError("question must not be empty")
     if top_k < 1:

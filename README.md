@@ -92,21 +92,38 @@ up to three times with backoff without consuming a semantic generation attempt.
 `query.py` remains only as a deprecated retrieval-only compatibility wrapper; new
 callers should use the compiled graph.
 
-Run a small end-to-end submission smoke test (three questions by default):
+Mỗi lần sinh submission được tách thành một experiment run độc lập:
 
 ```bash
-./scripts/test_submission.sh
+python generate_submission.py --run-id baseline-reranker-v2 full --ids 1,7,12
 ```
 
-Override the questions or output location when needed:
+Nếu bỏ `--run-id`, CLI tự tạo ID theo timestamp. Kết quả nằm tại
+`submission/runs/<run-id>/`, gồm `status.json`, `submission.json`, `submission.zip`,
+`failures.jsonl` và thư mục evidence `data/`. `submission/latest_run.json` trỏ đến run
+được khởi tạo gần nhất. Theo dõi tiến độ bằng:
 
 ```bash
-QUESTION_IDS=1,7,12 OUTPUT_DIR=/tmp/finlens-submission-test ./scripts/test_submission.sh
+python -m json.tool submission/runs/baseline-reranker-v2/status.json
 ```
+
+Run đã tồn tại không bị ghi đè ngầm. Để chạy lại các câu chưa thành công trong đúng
+experiment đó, dùng cùng selection và resume rõ ràng:
+
+```bash
+python generate_submission.py --run-id baseline-reranker-v2 --resume full --ids 1,7,12
+```
+
+Resume giữ nguyên tập câu hỏi và các cấu hình ảnh hưởng kết quả như model, temperature,
+Qdrant collection, embedding contract và `max_attempts`; thay đổi một trong các giá trị
+này phải tạo run mới. Mỗi lần resume được ghi thêm vào `invocations` trong `status.json`.
+Lệnh `full` trả exit code `1` nếu còn câu thất bại, dù checkpoint và submission một phần
+vẫn được giữ đầy đủ để resume.
 
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
 fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
-xếp hạng theo batch và chọn Top-10 bằng các opaque candidate key. Response thiếu, thừa,
-trùng hoặc chứa key ngoài batch được salvage và điền theo dense rank; nếu response vẫn
+xếp hạng theo batch và chọn tối đa 5 bảng mỗi batch, sau đó chọn tối đa 10
+finalist bằng các opaque candidate key. Response thừa, trùng hoặc chứa key ngoài batch
+được salvage mà không điền cho đủ mức tối đa; nếu response hoàn toàn
 không dùng được sau hai lần sửa, batch/final stage fallback theo dense rank để graph tiếp
 tục. CSV candidate bị thiếu/không đọc được vẫn là lỗi terminal.

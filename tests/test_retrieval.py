@@ -47,8 +47,8 @@ def write_csvs(root: Path, count: int) -> None:
 
 def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
     request = json.loads(prompt)
-    requested = request["số_lượng_phải_chọn"]
-    selected = request["ứng_viên"][:requested]
+    maximum = request["số_lượng_tối_đa"]
+    selected = request["ứng_viên"][:maximum]
     return {
         "ranked_candidate_keys": [item["candidate_key"] for item in selected]
     }
@@ -101,7 +101,7 @@ class RerankerTests(unittest.TestCase):
             all("table_id" not in item["metadata"] for item in prompt_candidates)
         )
 
-    def test_salvages_partial_response_and_fills_by_dense_rank(self) -> None:
+    def test_salvages_partial_response_without_filling_to_maximum(self) -> None:
         response = {
             "ranked_candidate_keys": ["c02", "not-a-key", "c02"],
             "extra_key": "ignored",
@@ -118,12 +118,60 @@ class RerankerTests(unittest.TestCase):
         self.assertEqual(call.call_count, 1)
         self.assertEqual(
             [item["table_id"] for item in result],
-            [payload(2)["table_id"], payload(1)["table_id"], payload(3)["table_id"]],
+            [payload(2)["table_id"]],
         )
+        self.assertEqual([item["rerank_source"] for item in result], ["llm"])
+
+    def test_hierarchical_rerank_can_return_less_than_batch_and_final_maximum(self) -> None:
+        requests: list[dict[str, object]] = []
+
+        def select_only_best(prompt: str, **_: object) -> dict[str, object]:
+            request = json.loads(prompt)
+            requests.append(request)
+            return {
+                "ranked_candidate_keys": [request["ứng_viên"][0]["candidate_key"]]
+            }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 50)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=select_only_best,
+                ),
+            ):
+                result = rerank("Câu hỏi", candidates(50))
+
+        self.assertEqual(len(result), 1)
         self.assertEqual(
-            [item["rerank_source"] for item in result],
-            ["llm", "dense_fallback", "dense_fallback"],
+            [request["số_lượng_tối_đa"] for request in requests],
+            [5, 5, 5, 5, 5, 5],
         )
+
+    def test_hierarchical_rerank_truncates_output_above_each_maximum(self) -> None:
+        def select_every_candidate(prompt: str, **_: object) -> dict[str, object]:
+            request = json.loads(prompt)
+            return {
+                "ranked_candidate_keys": [
+                    item["candidate_key"] for item in request["ứng_viên"]
+                ]
+            }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, 50)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=select_every_candidate,
+                ),
+            ):
+                result = rerank("Câu hỏi", candidates(50))
+
+        self.assertEqual(len(result), 10)
 
     def test_rerank_retries_unusable_schema_then_falls_back(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

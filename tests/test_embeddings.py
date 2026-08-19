@@ -1,6 +1,10 @@
 import math
+import time
 import unittest
+from concurrent.futures import ThreadPoolExecutor
+from unittest.mock import patch
 
+from src import retrieval
 from src.embeddings import (
     EMBEDDING_MODEL_DEFAULT,
     EMBEDDING_REVISION_DEFAULT,
@@ -18,6 +22,15 @@ class _FakeSentenceTransformer:
         self.inputs = inputs
         self.kwargs = kwargs
         return [[2.0] + [0.0] * (EMBEDDING_VECTOR_SIZE - 1) for _ in inputs]
+
+
+class _SlowFakeEncoder:
+    def __init__(self) -> None:
+        self.load_count = 0
+
+    def load(self) -> None:
+        self.load_count += 1
+        time.sleep(0.05)
 
 
 class DenseEmbeddingContractTests(unittest.TestCase):
@@ -58,6 +71,22 @@ class DenseEmbeddingContractTests(unittest.TestCase):
     def test_empty_inputs_do_not_load_or_call_model(self) -> None:
         self.assertEqual(self.encoder.encode_passages([]), [])
         self.assertEqual(self.fake_model.inputs, [])
+
+    def test_concurrent_first_access_loads_one_shared_encoder(self) -> None:
+        fake_encoder = _SlowFakeEncoder()
+        with (
+            patch("src.retrieval._embedding_model", None),
+            patch(
+                "src.retrieval.DenseEmbeddingModel.from_env",
+                return_value=fake_encoder,
+            ) as factory,
+            ThreadPoolExecutor(max_workers=2) as executor,
+        ):
+            models = list(executor.map(lambda _: retrieval._get_embedding_model(), range(2)))
+
+        self.assertIs(models[0], models[1])
+        self.assertEqual(factory.call_count, 1)
+        self.assertEqual(fake_encoder.load_count, 1)
 
 
 if __name__ == "__main__":
