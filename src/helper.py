@@ -8,13 +8,13 @@ import unicodedata
 from collections.abc import Mapping
 from numbers import Number
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any
 
-from langgraph.types import Command
 from src.routing import validate_llm_filters
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 _QUESTIONS_PATH = _PROJECT_ROOT / "ViFinQA" / "questions" / "questions.jsonl"
+
 
 def normalize_question(value: str) -> str:
     """Normalize a question for canonical matching."""
@@ -88,30 +88,18 @@ def numeric_result(value: Any) -> tuple[float | None, str | None]:
 
 
 def concise_error(error: BaseException) -> str:
-    """Return a bounded single-line exception message."""
+    """Return the diagnostic tail of a bounded single-line exception message."""
     message = " ".join(str(error).split())
-    return message[:500] or type(error).__name__
+    if not message:
+        return type(error).__name__
+    if len(message) <= 300:
+        return message
+    return "..." + message[-300:]
 
 
 def ordered_unique(values: list[str]) -> list[str]:
     """Deduplicate strings without changing their order."""
     return list(dict.fromkeys(values))
-
-
-def retry_or_exhausted(
-    state: Mapping[str, Any],
-    update: dict[str, Any],
-    *,
-    attempt: int | None = None,
-) -> Command[Literal["generate_code", "execute_code"]]:
-    """Route feedback to regeneration or execution's terminal failure path."""
-    current_attempt = int(state.get("attempt", 0)) if attempt is None else attempt
-    destination = (
-        "generate_code"
-        if current_attempt < int(state.get("max_attempts", 5))
-        else "execute_code"
-    )
-    return Command(update=update, goto=destination)
 
 
 def validate_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]:

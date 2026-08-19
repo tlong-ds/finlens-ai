@@ -16,6 +16,7 @@ import argparse
 import json
 import logging
 import os
+import re
 import shutil
 import sys
 import tempfile
@@ -35,6 +36,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 QUESTIONS_PATH = PROJECT_ROOT / "ViFinQA" / "questions" / "questions.jsonl"
 
 _write_lock = threading.Lock()
+_RESULT_ASSIGNMENT_PATTERN = re.compile(
+    r"^(?P<indent>[ \t]*)result\s*=(?!=)\s*", re.MULTILINE
+)
+
+
+def submission_pandas_query(code: str) -> str:
+    """Remove result assignment syntax from code shown in the submission."""
+    return _RESULT_ASSIGNMENT_PATTERN.sub(r"\g<indent>", code)
 
 
 def load_questions() -> list[dict[str, Any]]:
@@ -84,7 +93,7 @@ def to_submission_item(answer_record: dict[str, Any], output_dir: Path) -> dict[
         "relevant_docs": answer_record["relevant_docs"],
         "relevant_tables": answer_record["relevant_tables"],
         "evidence": evidence,
-        "pandas_query": answer_record["pandas_query"],
+        "pandas_query": submission_pandas_query(answer_record["pandas_query"]),
     }
 
 
@@ -102,7 +111,13 @@ def _atomic_replace(target: Path, write_fn: Any, *, suffix: str) -> None:
 
 
 def write_submission_json(records: dict[int, dict[str, Any]], json_path: Path) -> None:
-    items = [records[key] for key in sorted(records)]
+    items = []
+    for key in sorted(records):
+        item = dict(records[key])
+        pandas_query = item.get("pandas_query")
+        if isinstance(pandas_query, str):
+            item["pandas_query"] = submission_pandas_query(pandas_query)
+        items.append(item)
 
     def _write(tmp_path: Path) -> None:
         with open(tmp_path, "w", encoding="utf-8") as fh:
@@ -130,6 +145,37 @@ def save_and_package(records: dict[int, dict[str, Any]], output_dir: Path) -> No
         build_zip(output_dir, output_dir / "submission.zip")
 
 
+def _exception_attempt_history(error: BaseException) -> list[dict[str, Any]]:
+    """Find attempt history attached anywhere in an exception chain."""
+    current: BaseException | None = error
+    seen: set[int] = set()
+    while current is not None and id(current) not in seen:
+        seen.add(id(current))
+        attempts = getattr(current, "attempt_history", None)
+        if isinstance(attempts, list):
+            return attempts
+        current = current.__cause__ or current.__context__
+    return []
+
+
+def append_failure(
+    failures_path: Path,
+    *,
+    question_id: int | None,
+    question: str,
+    error: BaseException,
+) -> None:
+    """Append only failed requests, including every generated candidate attempt."""
+    record = {
+        "id": question_id,
+        "question": question,
+        "error": str(error),
+        "attempts": _exception_attempt_history(error),
+    }
+    with _write_lock, open(failures_path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(record, ensure_ascii=False, default=str) + "\n")
+
+
 def _run_single(args: argparse.Namespace) -> int:
     output_dir: Path = args.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -147,6 +193,22 @@ def _run_single(args: argparse.Namespace) -> int:
         answer_record = run_question(question_text, args.max_attempts)
     except Exception as exc:
         logger.exception("Failed to answer question: %s", question_text)
+        question_id = args.question_id
+        if question_id is None:
+            question_id = next(
+                (
+                    item["id"]
+                    for item in load_questions()
+                    if item["question"] == question_text
+                ),
+                None,
+            )
+        append_failure(
+            output_dir / "failures.jsonl",
+            question_id=question_id,
+            question=question_text,
+            error=exc,
+        )
         print(f"FAILED: {exc}", file=sys.stderr)
         return 1
 
@@ -201,14 +263,12 @@ def _run_full(args: argparse.Namespace) -> int:
                 failed_ids.append(question["id"])
                 logger.exception("Question id=%s failed", question["id"])
                 print(f"FAIL id={question['id']}: {exc}", file=sys.stderr)
-                with _write_lock, open(failures_path, "a", encoding="utf-8") as fh:
-                    fh.write(
-                        json.dumps(
-                            {"id": question["id"], "question": question["question"], "error": str(exc)},
-                            ensure_ascii=False,
-                        )
-                        + "\n"
-                    )
+                append_failure(
+                    failures_path,
+                    question_id=question["id"],
+                    question=question["question"],
+                    error=exc,
+                )
                 continue
 
             with _write_lock:

@@ -27,6 +27,8 @@ Required environment (see `.env.example`, loaded via `python-dotenv` / `.envrc` 
   OpenAI-compatible chat completions endpoint.
 - `E2B_API_KEY` — required by `src/sandbox.py` to create the isolated microVM used for code
   execution.
+- `FINLENS_RUN_LOG_FILE` — optional path for the shared audit log; defaults to `log.json` in
+  the project root.
 
 The ViFinQA dataset is a separate git repo/submodule, not vendored: `git clone
 https://huggingface.co/datasets/AIGuruTinix/ViFinQA`. It's gitignored here
@@ -100,12 +102,7 @@ TypedDict, threaded through these nodes (`src/nodes.py`):
 
 ```
 match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables -> generate_code
-                                                                                        |  ^
-                                                                                        v  |
-                                                                                  validate_code
-                                                                                        |
-                                                                                        v
-                                                                                  execute_code -> END
+                                                                                       -> END
 ```
 
 - `match_question_node` resolves free text to exactly one canonical question record from
@@ -119,23 +116,31 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   CSV from `table_id`, builds bounded question-aware context from its columns and relevant rows,
   then performs hierarchical LLM reranking. The offline manifest is not read at runtime.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
-  ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
-  generator prompt.
-- `generate_code_node` / `validate_code_node` / `execute_code_node` form a bounded retry loop
-  using `langgraph.types.Command` for explicit routing: the generator LLM proposes pandas code
-  + `evidence_variables` (which DataFrame aliases were actually used), a second LLM pass
-  validates it without executing it, and only validated code reaches the sandbox. Any failure
-  at any stage (bad LLM JSON, unknown alias, validator rejection, sandbox error, non-numeric
-  result) sets `feedback` and routes back to `generate_code` via
-  `src/helper.py:retry_or_exhausted` — until `attempt >= max_attempts`, at which point the loop
-  routes to `execute_code`/raises instead of looping forever. Fresh code is generated on every
-  retry (feedback is fed back into the prompt); nothing is cached across attempts.
-- On success, `execute_code_node` builds `answer_record`: the numeric answer, the pandas query,
-  and evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from
+  ...) and builds a compact JSON schema description (columns, dtypes, sample rows), a nested
+  `ticker -> year -> table entries` alias map, and a question-ranked semantic lookup containing
+  exact original/normalized labels and item codes for the generator prompt.
+- `generate_code_node` owns a bounded in-node retry loop. For each attempt, the generator LLM
+  proposes pandas code + `evidence_variables`; deterministic AST checks enforce syntax, result
+  assignment, available aliases, exact evidence usage, and guarded `.iloc[0]` access. Every
+  `.iloc[0]` must use a named mask preceded by
+  `if not mask.any(): raise ValueError("<specific error>")` before the code can reach the sandbox.
+  A successfully executed finite scalar then goes through a second LLM pass for semantic
+  validation. Any failure becomes feedback for a fresh candidate until `max_attempts` is reached.
+- On success, `generate_code_node` builds `answer_record`: the sandbox result, pandas query, and
+  evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from the checked
   `evidence_variables`, so every accepted answer carries traceable provenance.
+- Every invocation of `generate_code_node` upserts its run into `log.json`, including input,
+  generated responses, deterministic and semantic validation, sandbox results, retry feedback,
+  timestamps, and final status. Updates use a file lock and atomic replacement so concurrent
+  questions do not overwrite each other's entries.
+- `submission/failures.jsonl` receives records only for failed requests. A generation failure
+  includes the complete per-attempt candidate history (raw generated response, contract check,
+  sandbox result/error, semantic validation, and feedback); successful requests are not added.
+  Bounded feedback uses the last 300 characters of an exception so the root traceback line is
+  retained.
 
 Transient failures are handled at the graph level, not inside nodes: `parse_query`,
-`generate_code`, and `validate_code` are wrapped with a `RetryPolicy` retrying
+and `generate_code` are wrapped with a `RetryPolicy` retrying
 `LLMTransientError` (`src/llm.py`), and `retrieve_tables` retries `TransientRetrievalError`
 (`src/retrieval.py`) — both up to 3 attempts with backoff, and neither consumes a semantic
 `attempt` from `max_attempts`.

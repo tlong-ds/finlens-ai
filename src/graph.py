@@ -6,19 +6,17 @@ import inspect
 from typing import Any, NotRequired, TypedDict
 
 import pandas as pd
-from langgraph.graph import START, StateGraph
+from langgraph.graph import END, START, StateGraph
 from langgraph.types import RetryPolicy
 
 from src.llm import LLMTransientError
 from src.nodes import (
-    execute_code_node,
     generate_code_node,
     load_tables_node,
     match_question_node,
     parse_query_node,
     rerank_tables_node,
     retrieve_tables_node,
-    validate_code_node,
 )
 from src.retrieval import TransientRetrievalError
 
@@ -35,6 +33,10 @@ class RetrievalState(TypedDict):
     retrieved_tables: NotRequired[list[dict[str, Any]]]
     dataframes: NotRequired[dict[str, pd.DataFrame]]
     evidence_sources: NotRequired[dict[str, dict[str, str]]]
+    entity_year_aliases: NotRequired[
+        dict[str, dict[str, list[dict[str, str]]]]
+    ]
+    semantic_lookup: NotRequired[dict[str, dict[str, Any]]]
     dataframe_description: NotRequired[str]
     attempt: NotRequired[int]
     feedback: NotRequired[str]
@@ -69,8 +71,6 @@ _add_node("retrieve_tables", retrieve_tables_node, _QDRANT_RETRY_POLICY)
 _add_node("rerank_tables", rerank_tables_node, _LLM_RETRY_POLICY)
 _add_node("load_tables", load_tables_node)
 _add_node("generate_code", generate_code_node, _LLM_RETRY_POLICY)
-_add_node("validate_code", validate_code_node, _LLM_RETRY_POLICY)
-_add_node("execute_code", execute_code_node)
 
 builder.add_edge(START, "match_question")
 builder.add_edge("match_question", "parse_query")
@@ -78,5 +78,6 @@ builder.add_edge("parse_query", "retrieve_tables")
 builder.add_edge("retrieve_tables", "rerank_tables")
 builder.add_edge("rerank_tables", "load_tables")
 builder.add_edge("load_tables", "generate_code")
+builder.add_edge("generate_code", END)
 
 graph = builder.compile()
