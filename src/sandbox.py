@@ -15,13 +15,14 @@ from e2b_code_interpreter import Sandbox, TimeoutException
 _RESULT_PATH = "/tmp/__finlens_result.json"
 _MAX_RESULT_BYTES = 1_024
 _SANDBOX_TTL_BUFFER_SECONDS = 10
-_RESERVED_ALIASES = {"pd", "result"}
+_RESERVED_ALIASES = {"pd", "result", "alias_metadata"}
 
 
 def _validate_inputs(
     code: str,
     dataframes: Mapping[str, pd.DataFrame],
     timeout_sec: float,
+    alias_metadata: Mapping[str, Mapping[str, Any]] | None = None,
 ) -> None:
     if not isinstance(code, str) or not code.strip():
         raise ValueError("code must be a non-empty string")
@@ -34,6 +35,8 @@ def _validate_inputs(
         raise ValueError("timeout_sec must be a positive finite number")
     if not dataframes:
         raise ValueError("dataframes must not be empty")
+    if alias_metadata is not None and not isinstance(alias_metadata, Mapping):
+        raise TypeError("alias_metadata must be a mapping")
 
     for alias, dataframe in dataframes.items():
         if (
@@ -152,12 +155,14 @@ def _read_numeric_result(sandbox: Sandbox) -> float:
 
 def run_code(
     code: str,
-    dataframes: dict[str, pd.DataFrame],
+    dataframes: Mapping[str, pd.DataFrame],
+    alias_metadata: Mapping[str, Mapping[str, Any]] | None = None,
     timeout_sec: float = 5.0,
 ) -> float:
     """Execute generated code in a fresh network-disabled E2B microVM.
 
-    The supplied DataFrames are available under their dictionary aliases. Generated code
+    The supplied DataFrames are available under their dictionary aliases, and any supplied
+    alias metadata is available in the ``alias_metadata`` dictionary. Generated code
     must assign a finite numeric scalar to ``result``. Only a small validated JSON payload
     crosses from the untrusted VM back into the host process.
 
@@ -167,7 +172,7 @@ def run_code(
         ValueError: If inputs or the generated result are invalid.
         RuntimeError: If execution or the result protocol fails.
     """
-    _validate_inputs(code, dataframes, timeout_sec)
+    _validate_inputs(code, dataframes, timeout_sec, alias_metadata=alias_metadata)
     sandbox_timeout = math.ceil(float(timeout_sec)) + _SANDBOX_TTL_BUFFER_SECONDS
 
     try:
@@ -186,8 +191,18 @@ def run_code(
                     f"_finlens_json.loads({dtype_payload!r}))"
                 )
 
+            metadata_dict = dict(alias_metadata) if alias_metadata is not None else {}
+            metadata_payload = json.dumps(metadata_dict, ensure_ascii=False)
+            load_lines.append(
+                f"alias_metadata = _finlens_json.loads({metadata_payload!r})"
+            )
+
             execution = sandbox.run_code(
-                "import json as _finlens_json\nimport pandas as pd\n"
+                "import json as _finlens_json\n"
+                "import pandas as pd\n"
+                "import numpy as np\n"
+                "import matplotlib.pyplot as plt\n"
+                "import seaborn as sns\n"
                 + "\n".join(load_lines)
                 + "\n\n"
                 + code,

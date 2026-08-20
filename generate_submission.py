@@ -48,10 +48,37 @@ IMMUTABLE_RUN_CONFIG_FIELDS = (
 
 _write_lock = threading.Lock()
 
+LOG_PATH = PROJECT_ROOT / "log.json"
+_LOG_LOCK_PATH = PROJECT_ROOT / ".log.json.lock"
+
 
 def _utc_now() -> str:
     """Return an ISO-8601 UTC timestamp suitable for run metadata."""
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def append_log_entry(entry: dict[str, Any]) -> None:
+    """Append one entry to the global log.json, safe across threads and processes.
+
+    Uses a sibling ``.log.json.lock`` file as an advisory lock so that concurrent
+    runs writing failures at the same time do not corrupt the JSON array.
+    The lock is held only during the read-modify-write cycle and released
+    immediately after the atomic replace, so contention is negligible.
+    """
+    import fcntl
+
+    with open(_LOG_LOCK_PATH, "a", encoding="utf-8") as lock_fh:
+        fcntl.flock(lock_fh, fcntl.LOCK_EX)
+        try:
+            if LOG_PATH.exists() and LOG_PATH.stat().st_size > 0:
+                with open(LOG_PATH, encoding="utf-8") as fh:
+                    entries: list[dict[str, Any]] = json.load(fh)
+            else:
+                entries = []
+            entries.append(entry)
+            _write_json(entries, LOG_PATH)
+        finally:
+            fcntl.flock(lock_fh, fcntl.LOCK_UN)
 
 
 def _new_run_id() -> str:
@@ -433,11 +460,21 @@ def _run_single(args: argparse.Namespace) -> int:
         answer_record = run_question(str(question["question"]), args.max_attempts)
     except Exception as exc:
         logger.exception("Failed to answer question: %s", question["question"])
+        run_attempt = status["questions"][str(question_id)]["run_attempts"]
         _append_failure(
             failures_path,
             question=question,
             error=exc,
-            attempt=status["questions"][str(question_id)]["run_attempts"],
+            attempt=run_attempt,
+        )
+        append_log_entry(
+            {
+                "id": int(question["id"]),
+                "question": str(question["question"]),
+                "error": str(exc),
+                "run_attempt": run_attempt,
+                "failed_at": _utc_now(),
+            }
         )
         _mark_question(
             status,
@@ -547,11 +584,12 @@ def _run_full(args: argparse.Namespace) -> int:
                 logger.exception("Question id=%s failed", question["id"])
                 print(f"FAIL id={question['id']}: {exc}", file=sys.stderr)
                 with _write_lock:
+                    run_attempt = status["questions"][str(question["id"])]["run_attempts"]
                     _append_failure(
                         failures_path,
                         question=question,
                         error=exc,
-                        attempt=status["questions"][str(question["id"])]["run_attempts"],
+                        attempt=run_attempt,
                     )
                     _mark_question(
                         status,
@@ -560,6 +598,15 @@ def _run_full(args: argparse.Namespace) -> int:
                         "failed",
                         error=str(exc),
                     )
+                append_log_entry(
+                    {
+                        "id": int(question["id"]),
+                        "question": str(question["question"]),
+                        "error": str(exc),
+                        "run_attempt": run_attempt,
+                        "failed_at": _utc_now(),
+                    }
+                )
                 continue
 
             with _write_lock:

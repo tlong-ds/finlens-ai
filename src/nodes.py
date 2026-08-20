@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ast
 import json
 import logging
 from collections.abc import Mapping
@@ -49,6 +50,58 @@ logger = logging.getLogger(__name__)
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 _SANDBOX_TIMEOUT_SECONDS = 5.0
 _STRUCTURED_RESPONSE_ATTEMPTS = 2
+_UNSUPPORTED_DATAFRAME_ATTRIBUTES = {"metadata", "attrs"}
+
+
+def _unsupported_dataframe_attribute_feedback(
+    code: str,
+    aliases: set[str],
+) -> str | None:
+    """Reject generated access to provenance as if it were a DataFrame attribute.
+
+    Table provenance belongs to the graph state and is supplied to the generator as
+    ``alias_metadata``.  A pandas DataFrame has no stable ``metadata`` contract, and
+    ``attrs`` is intentionally not populated when CSVs are loaded.
+    """
+    try:
+        tree = ast.parse(code)
+    except SyntaxError:
+        # The normal code validator provides the more useful syntax feedback.
+        return None
+
+    dataframe_names = set(aliases)
+    # Generated code sometimes assigns an alias to a shorter local name before
+    # indexing it. Follow simple name-to-name assignments so that
+    # ``table = df_1; table.metadata`` cannot bypass the contract.
+    changed = True
+    while changed:
+        changed = False
+        for node in ast.walk(tree):
+            if not (
+                isinstance(node, ast.Assign)
+                and isinstance(node.value, ast.Name)
+                and node.value.id in dataframe_names
+            ):
+                continue
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id not in dataframe_names:
+                    dataframe_names.add(target.id)
+                    changed = True
+
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Attribute):
+            continue
+        if (
+            isinstance(node.value, ast.Name)
+            and node.value.id in dataframe_names
+            and node.attr in _UNSUPPORTED_DATAFRAME_ATTRIBUTES
+        ):
+            return (
+                f"Không dùng {node.value.id}.{node.attr}: DataFrame không mang "
+                "metadata/provenance. Hãy lấy năm, ticker và loại báo cáo từ "
+                "alias_metadata được cung cấp trong prompt."
+            )
+    return None
 
 
 def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
@@ -200,6 +253,7 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Load retrieved CSV tables and describe them for pandas generation."""
     dataframes: dict[str, pd.DataFrame] = {}
     evidence_sources: dict[str, dict[str, str]] = {}
+    alias_metadata: dict[str, dict[str, Any]] = {}
     descriptions: list[str] = []
 
     for index, candidate in enumerate(state.get("retrieved_tables", []), start=1):
@@ -222,6 +276,16 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
             "doc_id": doc_id,
             "relevant_table": f"{doc_id}|{start_line}",
         }
+        # Keep provenance outside the DataFrame. CSV round-tripping deliberately
+        # discards DataFrame.attrs, so attaching metadata to pandas objects would
+        # be unreliable in the sandbox as well.
+        alias_metadata[alias] = {
+            "ticker": metadata["ticker"],
+            "company_name": metadata["company_name"],
+            "year": metadata["year"],
+            "report_type": metadata["report_type"],
+            "table_type": metadata["table_type"],
+        }
         schema = {
             "alias": alias,
             "metadata": metadata,
@@ -240,6 +304,7 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "dataframes": dataframes,
         "evidence_sources": evidence_sources,
+        "alias_metadata": alias_metadata,
         "dataframe_description": "\n".join(descriptions),
     }
 
@@ -257,6 +322,7 @@ def generate_code_node(
     generator_prompt = build_generator_prompt(
         question=str(state.get("question") or ""),
         dataframe_description=str(state.get("dataframe_description") or ""),
+        alias_metadata=state.get("alias_metadata") or {},
         feedback=str(state.get("feedback") or ""),
     )
     try:
@@ -282,6 +348,14 @@ def generate_code_node(
         update["feedback"] = "Unknown evidence variables: " + ", ".join(
             unknown_aliases
         )
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    attribute_feedback = _unsupported_dataframe_attribute_feedback(
+        generated["pandas_query"],
+        set(state.get("dataframes") or {}),
+    )
+    if attribute_feedback:
+        update["feedback"] = attribute_feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
     update.update(
@@ -341,6 +415,7 @@ def execute_code_node(
         result = run_code(
             str(state.get("pandas_query") or ""),
             state.get("dataframes") or {},
+            alias_metadata=state.get("alias_metadata"),
             timeout_sec=_SANDBOX_TIMEOUT_SECONDS,
         )
     except (RuntimeError, TimeoutError, ValueError) as error:
