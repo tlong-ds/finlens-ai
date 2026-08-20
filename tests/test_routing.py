@@ -3,10 +3,80 @@ from __future__ import annotations
 import unittest
 
 from src.retrieval import build_qdrant_filter
-from src.routing import QueryRoutingError, reconcile_query_filters, validate_llm_filters
+from src.routing import (
+    QueryRoutingError,
+    reconcile_query_filters,
+    resolve_tickers,
+    resolve_tickers_conservatively,
+    validate_llm_filters,
+    validate_llm_ticker_resolution,
+)
 
 
 class RoutingTests(unittest.TestCase):
+    def test_resolves_only_high_confidence_catalog_matches(self) -> None:
+        self.assertEqual(
+            resolve_tickers("Quỹ khen thưởng của HT1 cuối năm 2019 là bao nhiêu?")[0],
+            ["HT1"],
+        )
+        self.assertEqual(
+            resolve_tickers("CTCP Chứng khoán FPT năm 2023")[0],
+            ["FTS"],
+        )
+        resolution, _ = resolve_tickers_conservatively(
+            "Công ty Phân bón Dầu khí năm 2023"
+        )
+        self.assertEqual(resolution.status, "needs_llm")
+
+    def test_prefers_specific_alias_for_nested_company_names(self) -> None:
+        self.assertEqual(
+            resolve_tickers(
+                "CTCP Nông nghiệp Quốc tế Hoàng Anh Gia Lai (HNG) năm 2022"
+            )[0],
+            ["HNG"],
+        )
+
+    def test_validates_catalog_constrained_ticker_response(self) -> None:
+        canonical = {"DPM": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP"}
+        self.assertEqual(
+            validate_llm_ticker_resolution(
+                {
+                    "matches": [
+                        {
+                            "entity_text": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+                            "ticker": "DPM",
+                        }
+                    ],
+                    "unresolved_entities": [],
+                },
+                "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP năm 2023 là bao nhiêu?",
+                canonical,
+            ),
+            ["DPM"],
+        )
+        with self.assertRaisesRegex(QueryRoutingError, "không có trong catalog"):
+            validate_llm_ticker_resolution(
+                {
+                    "matches": [
+                        {
+                            "entity_text": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+                            "ticker": "XXX",
+                        }
+                    ],
+                    "unresolved_entities": [],
+                },
+                "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP năm 2023",
+                canonical,
+            )
+
+    def test_reconcile_accepts_validated_ticker_override(self) -> None:
+        filters, _ = reconcile_query_filters(
+            "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP năm 2023 là bao nhiêu?",
+            {"year": [2023]},
+            ticker_overrides=["DPM"],
+        )
+        self.assertEqual(filters["ticker"], ["DPM"])
+
     def test_reconciles_canonical_identity_and_semantic_query(self) -> None:
         question = (
             "Lãi tiền gửi năm 2018 của công ty mẹ CTCP Hàng không Vietjet "
@@ -16,13 +86,12 @@ class RoutingTests(unittest.TestCase):
             question,
             {
                 "ticker": ["VJC"],
-                "company_name": ["CTCP Hàng không Vietjet"],
                 "year": [2018],
                 "report_type": ["separate"],
             },
         )
         self.assertEqual(filters["ticker"], ["VJC"])
-        self.assertEqual(filters["company_name"], ["CTCP Hàng không Vietjet"])
+        self.assertNotIn("company_name", filters)
         self.assertEqual(filters["year"], [2018])
         self.assertEqual(filters["report_type"], ["separate"])
         self.assertNotIn("VJC", semantic_query)
@@ -65,7 +134,7 @@ class RoutingTests(unittest.TestCase):
         )
         self.assertEqual(filters["ticker"], ["GAS", "POW"])
         self.assertEqual(filters["year"], [2019, 2020, 2021])
-        self.assertEqual(len(filters["company_name"]), 2)
+        self.assertNotIn("company_name", filters)
 
     def test_report_type_contract_matches_indexing(self) -> None:
         self.assertEqual(
@@ -75,11 +144,14 @@ class RoutingTests(unittest.TestCase):
         with self.assertRaisesRegex(QueryRoutingError, "report_type không hợp lệ"):
             validate_llm_filters({"report_type": ["standalone"]})
 
+    def test_rejects_company_name_llm_filter(self) -> None:
+        with self.assertRaisesRegex(QueryRoutingError, "company_name"):
+            validate_llm_filters({"company_name": ["CTCP Hàng không Vietjet"]})
+
     def test_builds_match_any_for_all_payload_filter_fields(self) -> None:
         qdrant_filter = build_qdrant_filter(
             {
                 "ticker": ["VJC", "ACB"],
-                "company_name": ["CTCP Hàng không Vietjet"],
                 "year": [2018, 2022],
                 "report_type": ["separate"],
                 "table_type": ["note_table"],
@@ -90,13 +162,16 @@ class RoutingTests(unittest.TestCase):
             [condition.key for condition in qdrant_filter.must],
             [
                 "ticker",
-                "company_name",
                 "year",
                 "report_type",
                 "table_type",
             ],
         )
         self.assertEqual(qdrant_filter.must[0].match.any, ["VJC", "ACB"])
+
+    def test_rejects_company_name_qdrant_filter(self) -> None:
+        with self.assertRaisesRegex(ValueError, "company_name"):
+            build_qdrant_filter({"company_name": ["CTCP Hàng không Vietjet"]})
 
     def test_rejects_unknown_qdrant_filter(self) -> None:
         with self.assertRaisesRegex(ValueError, "Unsupported Qdrant filters"):

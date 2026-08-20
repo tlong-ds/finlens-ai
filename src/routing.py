@@ -6,6 +6,7 @@ import csv
 import re
 import unicodedata
 from collections.abc import Iterable, Mapping, Sequence
+from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -25,6 +26,24 @@ class QueryRoutingError(ValueError):
     """Raised when a question cannot be mapped to safe metadata buckets."""
 
 
+@dataclass(frozen=True)
+class TickerCandidate:
+    ticker: str
+    entity_text: str
+    match_type: str
+    score: int
+    matched_variant: str | None = None
+
+
+@dataclass(frozen=True)
+class TickerResolution:
+    status: str
+    tickers: tuple[str, ...]
+    candidates: tuple[TickerCandidate, ...]
+    matched_aliases: dict[str, tuple[str, ...]]
+    reason: str = ""
+
+
 def _as_filter_values(values: Iterable[str | int]) -> list[str | int]:
     return list(values)
 
@@ -42,6 +61,18 @@ def fold_text(value: Any) -> str:
         for char in unicodedata.normalize("NFD", text)
         if unicodedata.category(char) != "Mn"
     )
+
+
+def contains_folded_phrase(text: str, phrase: str) -> bool:
+    """Match a normalized phrase across punctuation but not inside a token."""
+    folded_text = fold_text(text)
+    folded_phrase = fold_text(phrase)
+    if not folded_phrase:
+        return False
+    return re.search(
+        rf"(?<![a-z0-9]){re.escape(folded_phrase)}(?![a-z0-9])",
+        folded_text,
+    ) is not None
 
 
 def _strip_company_prefix(name: str) -> str:
@@ -101,51 +132,197 @@ def load_company_catalog(
     return canonical, aliases
 
 
-def resolve_tickers(
-    question: str, stock_codes_path: Path = DEFAULT_STOCK_CODES_PATH
-) -> tuple[list[str], dict[str, list[str]], dict[str, str]]:
-    canonical, alias_catalog = load_company_catalog(
-        str(Path(stock_codes_path).resolve())
-    )
-    known = set(canonical)
-    direct = {
-        token.upper()
-        for token in re.findall(r"(?<![A-Za-z0-9])[A-Za-z]{3}(?![A-Za-z0-9])", question)
-        if token.upper() in known
-    }
-    folded_question = f" {fold_text(question)} "
-    matched_aliases: dict[str, list[str]] = {}
-    for ticker, alias_names in alias_catalog.items():
-        for name in alias_names:
-            if f" {fold_text(name)} " in folded_question:
-                direct.add(ticker)
-                matched_aliases.setdefault(ticker, []).append(name)
+@lru_cache(maxsize=4)
+def build_ticker_collision_index(
+    path_text: str = str(DEFAULT_STOCK_CODES_PATH),
+) -> dict[str, tuple[str, ...]]:
+    """Map a bare token to all catalog companies whose names contain it."""
+    canonical, _ = load_company_catalog(path_text)
+    collisions: dict[str, set[str]] = {}
+    for ticker, company in canonical.items():
+        tokens = {
+            token.upper()
+            for token in re.findall(r"(?<![A-Za-z0-9])[A-Za-z0-9]+(?![A-Za-z0-9])", company)
+            if len(token) >= 2
+        }
+        for token in tokens:
+            collisions.setdefault(token, set()).add(ticker)
+    return {token: tuple(sorted(tickers)) for token, tickers in collisions.items()}
+
+
+def _matched_company_variants(
+    question: str,
+    alias_catalog: Mapping[str, Sequence[str]],
+) -> list[tuple[str, str]]:
+    matches: list[tuple[str, str]] = []
+    for ticker, aliases in alias_catalog.items():
+        for alias in aliases:
+            if contains_folded_phrase(question, alias):
+                matches.append((ticker, alias))
                 break
 
-    strongly_explicit = {
+    # A shorter catalog name nested in a longer name is not an independent
+    # company match, e.g. HAG inside HNG's full legal name.
+    return [
+        (ticker, alias)
+        for ticker, alias in matches
+        if not any(
+            other_ticker != ticker
+            and len(fold_text(other_alias)) > len(fold_text(alias))
+            and f" {fold_text(alias)} " in f" {fold_text(other_alias)} "
+            for other_ticker, other_alias in matches
+        )
+    ]
+
+
+def resolve_tickers_conservatively(
+    question: str,
+    stock_codes_path: Path = DEFAULT_STOCK_CODES_PATH,
+) -> tuple[TickerResolution, dict[str, str]]:
+    """Resolve only high-confidence identities; defer ambiguity to the LLM."""
+    path_text = str(Path(stock_codes_path).resolve())
+    canonical, alias_catalog = load_company_catalog(path_text)
+    known = set(canonical)
+    collision_index = build_ticker_collision_index(path_text)
+
+    explicit = {
         token.upper()
         for token in re.findall(
-            r"(?:\(\s*|\bmã\s+)([A-Za-z]{3})(?:\s*\)|\b)",
+            r"(?:\(\s*|\bmã(?:\s+cổ\s+phiếu)?\s+)([A-Za-z0-9]+)(?:\s*\)|\b)",
             question,
             flags=re.I,
         )
         if token.upper() in known
     }
-    for company_ticker, matched_names in matched_aliases.items():
-        alias_tokens = {
-            token.upper()
-            for name in matched_names
-            for token in re.findall(r"(?<![A-Za-z0-9])[A-Za-z]{3}(?![A-Za-z0-9])", name)
-        }
-        direct = {
-            ticker
-            for ticker in direct
-            if ticker == company_ticker
-            or ticker in strongly_explicit
-            or ticker not in alias_tokens
-        }
-    direct.update(matched_aliases)
-    return sorted(direct), matched_aliases, canonical
+    if explicit:
+        candidates = tuple(
+            TickerCandidate(ticker, ticker, "explicit_ticker", 100)
+            for ticker in sorted(explicit)
+        )
+        return (
+            TickerResolution("resolved", tuple(sorted(explicit)), candidates, {}),
+            canonical,
+        )
+
+    variant_matches = _matched_company_variants(question, alias_catalog)
+    matched_by_ticker: dict[str, tuple[str, ...]] = {}
+    alias_tickers: set[str] = set()
+    candidates: list[TickerCandidate] = []
+    for ticker, alias in variant_matches:
+        alias_tickers.add(ticker)
+        matched_by_ticker.setdefault(ticker, tuple())
+        matched_by_ticker[ticker] = (*matched_by_ticker[ticker], alias)
+        candidates.append(
+            TickerCandidate(
+                ticker,
+                alias,
+                "company_name",
+                95 if alias == canonical[ticker] else 90,
+                alias,
+            )
+        )
+
+    # A one-token shortened name such as "Masan" is not safe when that token
+    # occurs in several catalog company names. Defer it to the LLM with all
+    # catalog owners as a bounded shortlist.
+    for ticker, alias in variant_matches:
+        alias_tokens = re.findall(
+            r"(?<![A-Za-z0-9])[A-Za-z0-9]+(?![A-Za-z0-9])", alias
+        )
+        if len(alias_tokens) != 1:
+            continue
+        token = alias_tokens[0].upper()
+        owners = collision_index.get(token, (ticker,))
+        if len(owners) <= 1:
+            continue
+        known_candidate_tickers = {candidate.ticker for candidate in candidates}
+        candidates.extend(
+            TickerCandidate(owner, token, "ambiguous_company_variant", 40)
+            for owner in owners
+            if owner not in known_candidate_tickers
+        )
+        return (
+            TickerResolution(
+                "needs_llm",
+                (),
+                tuple(candidates),
+                matched_by_ticker,
+                f"Tên rút gọn {alias!r} có thể thuộc: {', '.join(owners)}",
+            ),
+            canonical,
+        )
+
+    direct_tokens = {
+        token.upper()
+        for token in re.findall(
+            r"(?<![A-Za-z0-9])[A-Za-z0-9]+(?![A-Za-z0-9])", question
+        )
+        if token.upper() in known
+    }
+    alias_tokens = {
+        part.upper()
+        for aliases in matched_by_ticker.values()
+        for alias in aliases
+        for part in re.findall(
+            r"(?<![A-Za-z0-9])[A-Za-z0-9]+(?![A-Za-z0-9])", alias
+        )
+    }
+    direct_tokens -= alias_tokens
+
+    for ticker in sorted(direct_tokens):
+        owners = collision_index.get(ticker, (ticker,))
+        candidates.append(TickerCandidate(ticker, ticker, "bare_ticker", 70))
+        if len(owners) > 1:
+            known_candidate_tickers = {candidate.ticker for candidate in candidates}
+            candidates.extend(
+                TickerCandidate(owner, ticker, "collision_candidate", 40)
+                for owner in owners
+                if owner not in known_candidate_tickers
+            )
+            return (
+                TickerResolution(
+                    "needs_llm",
+                    (),
+                    tuple(candidates),
+                    matched_by_ticker,
+                    f"Bare ticker {ticker} có thể thuộc: {', '.join(owners)}",
+                ),
+                canonical,
+            )
+
+    resolved_tickers = set(alias_tickers) | direct_tokens
+    if resolved_tickers:
+        return (
+            TickerResolution(
+                "resolved",
+                tuple(sorted(resolved_tickers)),
+                tuple(candidates),
+                matched_by_ticker,
+            ),
+            canonical,
+        )
+
+    return (
+        TickerResolution(
+            "needs_llm", (), tuple(), {}, "Không có match deterministic đủ chắc chắn"
+        ),
+        canonical,
+    )
+
+
+def resolve_tickers(
+    question: str, stock_codes_path: Path = DEFAULT_STOCK_CODES_PATH
+) -> tuple[list[str], dict[str, list[str]], dict[str, str]]:
+    resolution, canonical = resolve_tickers_conservatively(
+        question, stock_codes_path
+    )
+    if resolution.status != "resolved":
+        return [], {}, canonical
+    return (
+        list(resolution.tickers),
+        {ticker: list(aliases) for ticker, aliases in resolution.matched_aliases.items()},
+        canonical,
+    )
 
 
 def parse_years(question: str) -> list[int]:
@@ -197,7 +374,7 @@ def validate_llm_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]
         )
 
     validated: dict[str, list[str | int]] = {}
-    for field in ("ticker", "company_name"):
+    for field in ("ticker",):
         raw = value.get(field, [])
         if not isinstance(raw, list) or not all(isinstance(item, str) for item in raw):
             raise QueryRoutingError(f"{field} phải là một mảng chuỗi")
@@ -230,6 +407,60 @@ def validate_llm_filters(value: Mapping[str, Any]) -> dict[str, list[str | int]]
         if cleaned:
             validated[field] = _as_filter_values(cleaned)
     return validated
+
+
+def validate_llm_ticker_resolution(
+    value: Mapping[str, Any],
+    question: str,
+    canonical: Mapping[str, str],
+    allowed_tickers: Sequence[str] | None = None,
+) -> list[str]:
+    """Validate a catalog-constrained LLM ticker resolution response."""
+    if set(value) != {"matches", "unresolved_entities"}:
+        raise QueryRoutingError(
+            "Ticker resolver phải có đúng matches và unresolved_entities"
+        )
+
+    matches = value["matches"]
+    unresolved = value["unresolved_entities"]
+    if not isinstance(matches, list) or not isinstance(unresolved, list):
+        raise QueryRoutingError(
+            "matches và unresolved_entities phải là các mảng"
+        )
+    if not all(isinstance(item, str) and normalize_text(item) for item in unresolved):
+        raise QueryRoutingError("unresolved_entities phải là mảng chuỗi không rỗng")
+
+    resolved: list[str] = []
+    seen_entities: set[str] = set()
+    allowed = set(allowed_tickers or canonical)
+    for item in matches:
+        if not isinstance(item, Mapping):
+            raise QueryRoutingError("Mỗi ticker match phải là một object")
+        if set(item) != {"entity_text", "ticker"}:
+            raise QueryRoutingError("Ticker match phải có entity_text và ticker")
+        if not isinstance(item["entity_text"], str) or not isinstance(
+            item["ticker"], str
+        ):
+            raise QueryRoutingError("entity_text và ticker phải là chuỗi")
+        entity_text = normalize_text(item["entity_text"])
+        ticker = normalize_text(item["ticker"]).upper()
+        folded_entity = fold_text(entity_text)
+        if not entity_text or not folded_entity:
+            raise QueryRoutingError("entity_text không được rỗng")
+        if not contains_folded_phrase(question, entity_text):
+            raise QueryRoutingError(
+                f"entity_text không xuất hiện trong câu hỏi: {entity_text!r}"
+            )
+        if ticker not in canonical:
+            raise QueryRoutingError(f"Ticker không có trong catalog: {ticker}")
+        if ticker not in allowed:
+            raise QueryRoutingError(f"Ticker không nằm trong candidate shortlist: {ticker}")
+        if folded_entity in seen_entities or ticker in resolved:
+            raise QueryRoutingError("Ticker resolver trả match trùng")
+        seen_entities.add(folded_entity)
+        resolved.append(ticker)
+
+    return sorted(resolved)
 
 
 def build_semantic_query(
@@ -298,10 +529,41 @@ def reconcile_query_filters(
     question: str,
     llm_value: Mapping[str, Any],
     stock_codes_path: Path = DEFAULT_STOCK_CODES_PATH,
+    ticker_overrides: Sequence[str] | None = None,
 ) -> tuple[dict[str, list[str | int]], str]:
     """Combine strict LLM semantics with deterministic identity routing."""
     parsed = validate_llm_filters(llm_value)
-    tickers, matched_aliases, canonical = resolve_tickers(question, stock_codes_path)
+    if ticker_overrides is None:
+        tickers, matched_aliases, canonical = resolve_tickers(
+            question, stock_codes_path
+        )
+    else:
+        canonical, alias_catalog = load_company_catalog(
+            str(Path(stock_codes_path).resolve())
+        )
+        tickers = sorted(
+            {
+                normalize_text(ticker).upper()
+                for ticker in ticker_overrides
+                if normalize_text(ticker)
+            }
+        )
+        unknown = [ticker for ticker in tickers if ticker not in canonical]
+        if unknown:
+            raise QueryRoutingError(
+                "Ticker override không có trong catalog: " + ", ".join(unknown)
+            )
+        matched_aliases = {
+            ticker: [
+                alias
+                for alias in alias_catalog.get(ticker, ())
+                if contains_folded_phrase(question, alias)
+            ]
+            for ticker in tickers
+        }
+        matched_aliases = {
+            ticker: aliases for ticker, aliases in matched_aliases.items() if aliases
+        }
     years = parse_years(question)
     if not tickers:
         raise QueryRoutingError(
@@ -312,11 +574,10 @@ def reconcile_query_filters(
             f"Không resolve được năm trong phạm vi {MIN_YEAR}–{MAX_YEAR}; hệ thống không search global"
         )
 
-    llm_tickers = set(parsed.get("ticker", []))
-    if llm_tickers and llm_tickers != set(tickers):
-        raise QueryRoutingError(
-            f"Ticker do LLM parse {sorted(llm_tickers)} không khớp câu hỏi {tickers}"
-        )
+    # Ticker identity is resolved by the conservative resolver or the dedicated
+    # catalog-constrained fallback above. The generic metadata parser is not
+    # authoritative for ticker identity, so an incidental LLM ticker guess must
+    # not invalidate an otherwise valid resolution.
     llm_years = set(parsed.get("year", []))
     if llm_years and llm_years != set(years):
         raise QueryRoutingError(
@@ -325,8 +586,13 @@ def reconcile_query_filters(
 
     explicit_reports = parse_report_types(question)
     # Identity filters must be conservative. Explicit Vietnamese phrases win; when
-    # absent, search both normal statement variants instead of trusting an LLM guess.
-    report_types = explicit_reports or ["consolidated", "separate"]
+    # absent, search every dataset report variant instead of trusting an LLM guess.
+    report_types = explicit_reports or [
+        "consolidated",
+        "separate",
+        "aggregated",
+        "other",
+    ]
 
     explicit_table = parse_table_type(question)
     # A metric can live in a note even when its wording resembles a main statement.
@@ -335,7 +601,6 @@ def reconcile_query_filters(
 
     filters: dict[str, list[str | int]] = {
         "ticker": _as_filter_values(tickers),
-        "company_name": _as_filter_values(canonical[ticker] for ticker in tickers),
         "year": _as_filter_values(years),
         "report_type": _as_filter_values(report_types),
     }

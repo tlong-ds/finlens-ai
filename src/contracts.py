@@ -21,7 +21,7 @@ PAYLOAD_FIELDS = (
     "table_type",
     "start_line",
 )
-FILTER_FIELDS = ("ticker", "company_name", "year", "report_type", "table_type")
+FILTER_FIELDS = ("ticker", "year", "report_type", "table_type")
 REPORT_TYPES = frozenset({"consolidated", "separate", "aggregated", "other"})
 TABLE_TYPES = frozenset(
     {"balance_sheet", "income_statement", "cash_flow", "note_table"}

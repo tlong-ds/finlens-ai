@@ -27,17 +27,21 @@ from src.llm import LLMResponseError, generate_structured
 from src.prompt import (
     GENERATOR_SYSTEM_PROMPT,
     PARSE_SYSTEM_PROMPT,
+    TICKER_RESOLUTION_SYSTEM_PROMPT,
     VALIDATOR_SYSTEM_PROMPT,
     build_generator_prompt,
     build_parse_prompt,
+    build_ticker_resolution_prompt,
     build_validator_prompt,
 )
 from src.retrieval import rerank, retrieve
 from src.routing import (
     QueryRoutingError,
+    load_company_catalog,
     parse_years,
     reconcile_query_filters,
-    resolve_tickers,
+    resolve_tickers_conservatively,
+    validate_llm_ticker_resolution,
 )
 
 logger = logging.getLogger(__name__)
@@ -69,13 +73,74 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
+def _resolve_tickers_with_llm(
+    question: str,
+    deterministic_candidates: list[dict[str, Any]],
+    reason: str,
+) -> list[str]:
+    """Resolve an unresolved question against the bounded stock catalog."""
+    canonical, _ = load_company_catalog()
+    company_catalog = [
+        {"ticker": ticker, "company_name": company}
+        for ticker, company in sorted(canonical.items())
+    ]
+    feedback = ""
+    last_error = ""
+    for _ in range(_STRUCTURED_RESPONSE_ATTEMPTS):
+        try:
+            response = generate_structured(
+                build_ticker_resolution_prompt(
+                    question,
+                    company_catalog,
+                    feedback,
+                    candidates=deterministic_candidates,
+                    reason=reason,
+                ),
+                system_prompt=TICKER_RESOLUTION_SYSTEM_PROMPT,
+            )
+            tickers = validate_llm_ticker_resolution(
+                response,
+                question,
+                canonical,
+                allowed_tickers=[
+                    str(candidate["ticker"])
+                    for candidate in deterministic_candidates
+                ] or None,
+            )
+            if not tickers:
+                raise QueryRoutingError(
+                    "LLM không xác định được doanh nghiệp chính trong câu hỏi"
+                )
+            return tickers
+        except (LLMResponseError, QueryRoutingError) as error:
+            last_error = concise_error(error)
+            feedback = "Response trước không hợp lệ: " + last_error
+    raise QueryRoutingError(
+        "Không resolve được ticker bằng deterministic resolver hoặc LLM fallback: "
+        + last_error
+    )
+
+
 def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Parse and reconcile strict metadata filters from the canonical question."""
     question = str(state.get("question") or "")
-    tickers, _, _ = resolve_tickers(question)
-    if not tickers:
-        raise QueryRoutingError(
-            "Không resolve được ticker; hệ thống không search global"
+    resolution, _ = resolve_tickers_conservatively(question)
+    ticker_overrides: list[str]
+    if resolution.status == "resolved":
+        ticker_overrides = list(resolution.tickers)
+    else:
+        ticker_overrides = _resolve_tickers_with_llm(
+            question,
+            [
+                {
+                    "ticker": candidate.ticker,
+                    "entity_text": candidate.entity_text,
+                    "match_type": candidate.match_type,
+                    "matched_variant": candidate.matched_variant,
+                }
+                for candidate in resolution.candidates
+            ],
+            resolution.reason,
         )
     if not parse_years(question):
         raise QueryRoutingError(
@@ -90,7 +155,11 @@ def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
                 build_parse_prompt(question, feedback),
                 system_prompt=PARSE_SYSTEM_PROMPT,
             )
-            filters, semantic_query = reconcile_query_filters(question, raw_filters)
+            filters, semantic_query = reconcile_query_filters(
+                question,
+                raw_filters,
+                ticker_overrides=ticker_overrides,
+            )
             break
         except (LLMResponseError, QueryRoutingError) as error:
             last_error = concise_error(error)

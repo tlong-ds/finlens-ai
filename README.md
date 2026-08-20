@@ -75,8 +75,8 @@ from the candidate CSVs returned by Qdrant. After changing the embedding contrac
 then reconcile stale points and verify the collection before serving queries.
 
 Qdrant payloads include both `ticker` and the canonical `company_name` from
-`ViFinQA/code_stock.csv`; both fields are keyword-indexed and can be used as exact
-metadata filters.
+`ViFinQA/code_stock.csv`; both fields remain keyword-indexed in the payload schema,
+but runtime query filters use `ticker`, `year`, `report_type`, and `table_type` only.
 
 ```python
 from src.graph import graph
