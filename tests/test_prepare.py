@@ -375,6 +375,89 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(metadata['year'], 2024)
         self.assertEqual(metadata['report_type'], 'separate')
 
+    def test_metadata_excludes_toc_and_tables_without_csv(self) -> None:
+        tables = [
+            {
+                'table_id': 'AAA_toc',
+                'doc_id': 'AAA_doc',
+                'table_type': 'table_of_contents',
+                'folder_type': 'consolidated',
+                'csv_path': '',
+            },
+            {
+                'table_id': 'AAA_unexported',
+                'doc_id': 'AAA_doc',
+                'table_type': 'note_table',
+                'folder_type': 'consolidated',
+                'csv_path': '',
+            },
+            {
+                'table_id': 'AAA_statement',
+                'doc_id': 'AAA_doc',
+                'table_type': 'balance_sheet',
+                'folder_type': 'consolidated',
+                'csv_path': 'data/AAA_statement.csv',
+            },
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            prepare.generate_all_metadata(tables, tmp)
+            metadata = json.loads(
+                (Path(tmp) / 'tables_metadata.json').read_text(encoding='utf-8')
+            )
+        self.assertEqual([row['table_id'] for row in metadata], ['AAA_statement'])
+
+    def test_inventory_drives_document_metadata_for_documents_without_tables(self) -> None:
+        tables = [{
+            'table_id': 'AAA_statement',
+            'doc_id': 'AAA_doc',
+            'table_type': 'balance_sheet',
+            'folder_type': 'consolidated',
+            'csv_path': 'data/AAA_statement.csv',
+        }]
+        inventory = [
+            {
+                'doc_id': 'AAA_doc',
+                'file_path': 'AAA/2024/AAA_doc/AAA_doc_extracted.txt',
+                'ticker': 'AAA',
+                'year': 2024,
+                'folder_type': 'consolidated',
+            },
+            {
+                'doc_id': 'AAA_empty_doc',
+                'file_path': 'AAA/2024/AAA_empty_doc/AAA_empty_doc_extracted.txt',
+                'ticker': 'AAA',
+                'year': 2024,
+                'folder_type': 'other',
+            },
+        ]
+        with tempfile.TemporaryDirectory() as tmp:
+            prepare.generate_all_metadata(
+                tables,
+                tmp,
+                inventory=inventory,
+                entity_type_map={'AAA': 'DN'},
+            )
+            docs = json.loads(
+                (Path(tmp) / 'docs_metadata.json').read_text(encoding='utf-8')
+            )
+        self.assertEqual(len(docs), 2)
+        empty_doc = next(row for row in docs if row['doc_id'] == 'AAA_empty_doc')
+        self.assertEqual(empty_doc['report_type'], 'other')
+        self.assertEqual(empty_doc['table_count'], 0)
+
+    def test_retrieval_context_preserves_non_binary_report_type(self) -> None:
+        table = {
+            'table_type': 'note_table',
+            'folder_type': 'aggregated',
+            'ticker': 'AAA',
+            'year': 2024,
+            'note_title': 'Doanh thu',
+            'note_number': '1',
+            'semantic_fields': [],
+        }
+        prepare.build_retrieval_context([table])
+        self.assertIn('| aggregated |', table['retrieval_context']['embedding_text'])
+
 
 class ViFinQARegressionTests(unittest.TestCase):
     def test_real_bvh_toc_and_statement_layout(self) -> None:

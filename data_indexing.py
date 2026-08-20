@@ -1324,7 +1324,9 @@ def parse_report_types(question: str) -> list[str]:
         selected.append("separate")
     if "hop nhat" in folded:
         selected.append("consolidated")
-    return selected or ["consolidated", "separate"]
+    if "tong hop" in folded:
+        selected.append("aggregated")
+    return selected or ["consolidated", "separate", "aggregated", "other"]
 
 
 def parse_table_type(question: str) -> str | None:
@@ -1372,6 +1374,8 @@ def build_semantic_query(
         "riêng",
         "consolidated",
         "separate",
+        "aggregated",
+        "other",
     )
     for phrase in report_phrases:
         semantic = re.sub(re.escape(phrase), " ", semantic, flags=re.IGNORECASE)
@@ -2067,7 +2071,7 @@ def _build_parser() -> argparse.ArgumentParser:
     retrieve.add_argument(
         "--report-type",
         action="append",
-        choices=("consolidated", "separate", "aggregated"),
+        choices=("consolidated", "separate", "aggregated", "other"),
         dest="report_types",
     )
     retrieve.add_argument("--top-k-per-bucket", type=int)
@@ -2081,7 +2085,7 @@ def _build_parser() -> argparse.ArgumentParser:
     route.add_argument(
         "--report-type",
         action="append",
-        choices=("consolidated", "separate", "aggregated"),
+        choices=("consolidated", "separate", "aggregated", "other"),
         dest="report_types",
     )
 

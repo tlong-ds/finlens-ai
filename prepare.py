@@ -76,6 +76,13 @@ ENTITY_DETECT_PATTERNS = {
 ENTITY_FALLBACK_PRIORITY = {'TCTD': 1, 'CTCK': 2, 'BH': 3}
 ENTITY_FALLBACK_MIN_COUNTS = {'TCTD': 3, 'CTCK': 3, 'BH': 100}
 
+REPORT_TYPE_VI = {
+    'consolidated': 'hợp nhất',
+    'separate': 'riêng',
+    'aggregated': 'tổng hợp',
+    'other': 'không xác định',
+}
+
 # Heading patterns for table type classification (with OCR-error tolerance)
 HEADING_BALANCE_SHEET_RE = re.compile(
     r'b[ảa]ng\s*c[âấ]n\s*đ[ốổ]i\s*k[ếể]\s*to[áa]n'
@@ -1362,8 +1369,10 @@ def build_retrieval_context(tables: list[dict]) -> list[dict]:
             continue
         ticker = t.get('ticker', '')
         year = t.get('year', '')
-        is_consolidated = t.get('consolidated', False)
-        folder_type_vi = 'hợp nhất' if is_consolidated else 'riêng'
+        report_type = t.get('folder_type', 'other')
+        if report_type not in REPORT_TYPE_VI:
+            report_type = 'other'
+        folder_type_vi = REPORT_TYPE_VI[report_type]
 
         keywords = []
         semantic_summary = ""
@@ -1409,9 +1418,7 @@ def build_retrieval_context(tables: list[dict]) -> list[dict]:
                 subtype_str = note_subtype or 'note_unknown'
                 semantic_summary = f"Thuyết minh {subtype_str} của {ticker} năm {year}"
 
-        folder_type_str = 'consolidated' if is_consolidated else 'separate'
-
-        embedding_text = f"{ticker} | {table_type} | {year} | {folder_type_str} | {semantic_summary}"
+        embedding_text = f"{ticker} | {table_type} | {year} | {report_type} | {semantic_summary}"
 
         t['retrieval_context'] = {
             'keywords': keywords,
@@ -1448,6 +1455,8 @@ def generate_all_metadata(
     tables: list[dict],
     output_dir: str,
     company_names: Mapping[str, str] | None = None,
+    inventory: pd.DataFrame | list[dict] | None = None,
+    entity_type_map: Mapping[str, str] | None = None,
 ) -> None:
     out_dir_path = Path(output_dir)
     out_dir_path.mkdir(parents=True, exist_ok=True)
@@ -1460,19 +1469,30 @@ def generate_all_metadata(
     tables_metadata = []
 
     for t in tables:
+        # The final catalog is intentionally one-to-one with exported CSVs.
+        # TOC tables and tables which produced no CSV remain available in the
+        # intermediate audit files, but must not enter the searchable catalog.
+        if t.get('table_type') == 'table_of_contents' or not t.get('csv_path'):
+            continue
         doc_id = t.get('doc_id')
         if not doc_id:
             continue
 
         if doc_id not in docs_map:
+            doc_report_type = t.get('folder_type', 'other')
+            if doc_report_type not in REPORT_TYPE_VI:
+                doc_report_type = 'other'
             docs_map[doc_id] = {
                 'doc_id': doc_id,
                 'doc_path': t.get('doc_path', ''),
                 'ticker': t.get('ticker', ''),
                 'year': t.get('year', 0),
                 'entity_type': t.get('entity_type', ''),
-                'consolidated': t.get('consolidated', False)
+                'report_type': doc_report_type,
+                'consolidated': doc_report_type == 'consolidated',
+                'table_count': 0,
             }
+        docs_map[doc_id]['table_count'] += 1
 
         table_id = t.get('table_id', '')
         ticker = str(t.get('ticker', '')).strip().upper()
@@ -1498,7 +1518,38 @@ def generate_all_metadata(
         }
         tables_metadata.append(tm)
 
-    docs_metadata = list(docs_map.values())
+    if inventory is not None:
+        inventory_records = (
+            inventory.to_dict('records')
+            if hasattr(inventory, 'to_dict')
+            else list(inventory)
+        )
+        docs_metadata = []
+        for row in inventory_records:
+            doc_id = str(row.get('doc_id') or '').strip()
+            if not doc_id:
+                continue
+            report_type = row.get('folder_type') or 'other'
+            if report_type not in REPORT_TYPE_VI:
+                report_type = 'other'
+            ticker = str(row.get('ticker') or '').strip().upper()
+            docs_metadata.append({
+                'doc_id': doc_id,
+                'doc_path': str(row.get('file_path') or '').replace('\\', '/'),
+                'ticker': ticker,
+                'year': int(row.get('year') or 0),
+                'entity_type': (entity_type_map or {}).get(ticker, 'DN'),
+                'report_type': report_type,
+                # Kept for compatibility with existing consumers.  It is not
+                # sufficient to distinguish separate/aggregated/other.
+                'consolidated': report_type == 'consolidated',
+                'table_count': sum(
+                    1 for table in tables
+                    if table.get('doc_id') == doc_id and table.get('csv_path')
+                ),
+            })
+    else:
+        docs_metadata = list(docs_map.values())
 
     with open(out_dir_path / 'docs_metadata.json', 'w', encoding='utf-8') as f:
         json.dump(docs_metadata, f, ensure_ascii=False, indent=2)
@@ -1514,6 +1565,84 @@ def generate_all_metadata(
 def _ensure_dirs(root: Path) -> None:
     for d in ("data", "metadata", "intermediate", "taxonomy"):
         (root / d).mkdir(parents=True, exist_ok=True)
+
+
+def _clear_generated_csvs(output_dir: Path) -> int:
+    """Remove only generated CSV artifacts before a full rebuild.
+
+    ``normalize_and_export`` already skips TOC tables, but old CSVs remain in
+    ``data/`` when the directory is reused.  Clearing only ``*.csv`` makes the
+    rebuild deterministic while preserving ``.gitkeep`` and unrelated files.
+    """
+    removed = 0
+    for path in output_dir.glob('*.csv'):
+        if path.is_file():
+            path.unlink()
+            removed += 1
+    return removed
+
+
+def _save_skipped_tables(tables: list[dict], path: Path) -> None:
+    """Persist non-exported tables with a reason for auditability."""
+    records = []
+    for table in tables:
+        if table.get('table_type') == 'table_of_contents':
+            reason = 'table_of_contents'
+        elif not table.get('csv_path'):
+            reason = 'normalization_produced_no_csv'
+        else:
+            continue
+        records.append({
+            'table_id': table.get('table_id'),
+            'doc_id': table.get('doc_id'),
+            'ticker': table.get('ticker'),
+            'year': table.get('year'),
+            'report_type': table.get('folder_type', 'other'),
+            'table_type': table.get('table_type'),
+            'reason': reason,
+        })
+    _save_jsonl(records, path)
+
+
+def validate_generated_outputs(
+    tables: list[dict],
+    data_dir: str | Path,
+    metadata_dir: str | Path,
+) -> None:
+    """Validate the final one-to-one CSV/table metadata contract."""
+    usable = [table for table in tables if table.get('csv_path')]
+    table_ids = [str(table.get('table_id') or '') for table in usable]
+    if any(table.get('table_type') == 'table_of_contents' for table in tables):
+        raise ValueError('table_of_contents không được xuất vào catalog cuối')
+    if any(not table_id for table_id in table_ids):
+        raise ValueError('table metadata có table_id rỗng')
+    if len(table_ids) != len(set(table_ids)):
+        raise ValueError('table_id bị trùng trong catalog cuối')
+
+    data_root = Path(data_dir)
+    expected_csvs = {f'{table_id}.csv' for table_id in table_ids}
+    actual_csvs = {path.name for path in data_root.glob('*.csv')}
+    if expected_csvs != actual_csvs:
+        missing = sorted(expected_csvs - actual_csvs)[:5]
+        orphan = sorted(actual_csvs - expected_csvs)[:5]
+        raise ValueError(
+            f'CSV/catalog mismatch: missing={missing}, orphan={orphan}'
+        )
+    for table in usable:
+        csv_path = str(table.get('csv_path') or '')
+        if csv_path != f"data/{table['table_id']}.csv":
+            raise ValueError(f"csv_path không canonical cho {table['table_id']}")
+        if table.get('folder_type', 'other') not in {
+            'consolidated', 'separate', 'aggregated', 'other',
+        }:
+            raise ValueError(f"report_type không hợp lệ cho {table['table_id']}")
+
+    metadata_path = Path(metadata_dir) / 'tables_metadata.json'
+    with metadata_path.open(encoding='utf-8') as handle:
+        metadata = json.load(handle)
+    metadata_ids = [str(row.get('table_id') or '') for row in metadata]
+    if metadata_ids != table_ids:
+        raise ValueError('tables_metadata.json không khớp với các table đã export')
 
 
 def _save_jsonl(records: list[dict[str, Any]], path: Path) -> None:
@@ -1559,26 +1688,38 @@ def prepare(financial_statements_dir: str) -> None:
 
     # ── Stage 3: Normalize & export CSV ────────────────────────────
     print("═══ Stage 3: Normalize & export CSV ═══")
+    removed_stale = _clear_generated_csvs(root / "data")
+    if removed_stale:
+        print(f"  Removed {removed_stale} stale CSV artifacts")
     exported = normalize_and_export(classified, str(root / "data"))
+    _save_skipped_tables(exported, root / "intermediate" / "skipped_tables.jsonl")
+    exported_tables = [table for table in exported if table.get('csv_path')]
     exported_count = sum(bool(table.get('csv_path')) for table in exported)
     print(f"  {exported_count} CSV files written")
 
     # ── Stage 4: Build taxonomy ────────────────────────────────────
     print("═══ Stage 4: Build taxonomy ═══")
-    taxonomy = build_taxonomy(exported, str(root / "taxonomy"))
+    taxonomy = build_taxonomy(exported_tables, str(root / "taxonomy"))
     total_entries = sum(len(v) for v in taxonomy.values())
     print(f"  {len(taxonomy)} entity-types · {total_entries} entries")
 
     # ── Stage 5: Semantic fields + retrieval_context (no LLM) ──────
     print("═══ Stage 5: Semantic fields + retrieval context ═══")
-    with_sem = assign_semantic_fields(exported, taxonomy)
+    with_sem = assign_semantic_fields(exported_tables, taxonomy)
     with_ctx = build_retrieval_context(with_sem)
     print(f"  Assigned semantic fields & retrieval context to {len(with_ctx)} tables")
 
     # ── Stage 6: Metadata ──────────────────────────────────────────
     print("═══ Stage 6: Generate metadata ═══")
     company_names = load_company_names(root / "ViFinQA" / "code_stock.csv")
-    generate_all_metadata(with_ctx, str(root / "metadata"), company_names)
+    generate_all_metadata(
+        with_ctx,
+        str(root / "metadata"),
+        company_names,
+        inventory=inventory,
+        entity_type_map=entity_map,
+    )
+    validate_generated_outputs(with_ctx, root / "data", root / "metadata")
     print("  docs_metadata.json · tables_metadata.json")
 
     print("\n✓ Pipeline complete")
