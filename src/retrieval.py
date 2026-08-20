@@ -76,6 +76,10 @@ class RetrievalError(RuntimeError):
     """Raised when table retrieval fails."""
 
 
+class NoMatchingCandidatesError(RetrievalError):
+    """Raised when a valid Qdrant query returns no matching candidates."""
+
+
 class TransientRetrievalError(RetrievalError):
     """Raised for temporary Qdrant failures that are safe to retry unchanged."""
 
@@ -196,7 +200,9 @@ def retrieve(
         raise RetrievalError("Qdrant table retrieval failed") from exc
 
     if not candidates:
-        raise RetrievalError("Không tìm thấy bảng nào khớp metadata filter")
+        raise NoMatchingCandidatesError(
+            "Không tìm thấy bảng nào khớp metadata filter"
+        )
     logger.info("Retrieved %d table candidates", len(candidates))
     logger.debug(
         "Retrieval scores: %s",

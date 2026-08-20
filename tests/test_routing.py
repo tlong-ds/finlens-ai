@@ -131,6 +131,7 @@ class RoutingTests(unittest.TestCase):
         filters, _ = reconcile_query_filters(
             question,
             {"ticker": ["GAS", "POW"], "year": [2019, 2020, 2021]},
+            year_overrides=[2019, 2020, 2021],
         )
         self.assertEqual(filters["ticker"], ["GAS", "POW"])
         self.assertEqual(filters["year"], [2019, 2020, 2021])

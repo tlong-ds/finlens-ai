@@ -17,7 +17,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_STOCK_CODES_PATH = PROJECT_ROOT / "ViFinQA" / "code_stock.csv"
 YEAR_PATTERN = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
 YEAR_RANGE_PATTERN = re.compile(
-    r"(?<!\d)(20\d{2})\s*(?:-|–|—|đến|den|tới|toi)\s*(20\d{2})(?!\d)",
+    r"(?<!\d)(20\d{2})(?!\d)"
+    r"\s*(?:(?:-|–|—)|(?:đến|den|tới|toi))\s*"
+    r"(?:(?:đầu|cuối)\s+)?(?:năm\s+)?"
+    r"(20\d{2})(?!\d)",
+    re.IGNORECASE,
+)
+YEAR_RELATIVE_PATTERN = re.compile(
+    r"\b(?:trước|sau|tiếp theo|liền trước|liền sau|so với|từ|đến)\b",
     re.IGNORECASE,
 )
 
@@ -41,6 +48,21 @@ class TickerResolution:
     tickers: tuple[str, ...]
     candidates: tuple[TickerCandidate, ...]
     matched_aliases: dict[str, tuple[str, ...]]
+    reason: str = ""
+
+
+@dataclass(frozen=True)
+class YearCandidate:
+    expression: str
+    years: tuple[int, ...]
+    match_type: str
+
+
+@dataclass(frozen=True)
+class YearResolution:
+    status: str
+    years: tuple[int, ...]
+    candidates: tuple[YearCandidate, ...]
     reason: str = ""
 
 
@@ -325,19 +347,97 @@ def resolve_tickers(
     )
 
 
-def parse_years(question: str) -> list[int]:
-    years: set[int] = set()
+def extract_year_candidates(question: str) -> tuple[YearCandidate, ...]:
+    """Extract year evidence without deciding which years the query needs."""
+    candidates: list[YearCandidate] = []
+    covered_spans: list[tuple[int, int]] = []
     for match in YEAR_RANGE_PATTERN.finditer(question):
         start, end = int(match.group(1)), int(match.group(2))
         low, high = sorted((start, end))
-        if high - low <= 20:
-            years.update(range(max(low, MIN_YEAR), min(high, MAX_YEAR) + 1))
-    years.update(
-        year
-        for year in map(int, YEAR_PATTERN.findall(question))
-        if MIN_YEAR <= year <= MAX_YEAR
+        if high - low > 20:
+            years = tuple(
+                year
+                for year in (low, high)
+                if MIN_YEAR <= year <= MAX_YEAR
+            )
+        else:
+            years = tuple(
+                range(max(low, MIN_YEAR), min(high, MAX_YEAR) + 1)
+            )
+        candidates.append(YearCandidate(match.group(0), years, "range"))
+        covered_spans.append(match.span())
+
+    for match in YEAR_PATTERN.finditer(question):
+        if any(start <= match.start() < end for start, end in covered_spans):
+            continue
+        year = int(match.group(1))
+        if MIN_YEAR <= year <= MAX_YEAR:
+            candidates.append(YearCandidate(match.group(0), (year,), "explicit"))
+
+    return tuple(candidates)
+
+
+def _candidate_years(candidates: Sequence[YearCandidate]) -> tuple[int, ...]:
+    return tuple(
+        sorted({year for candidate in candidates for year in candidate.years})
     )
-    return sorted(years)
+
+
+def resolve_years_conservatively(question: str) -> YearResolution:
+    """Resolve only unambiguous absolute years; defer temporal semantics to LLM."""
+    candidates = list(extract_year_candidates(question))
+    if not candidates:
+        return YearResolution(
+            "needs_llm", (), tuple(candidates), "Không có năm tuyệt đối hợp lệ trong câu hỏi"
+        )
+
+    if any(candidate.match_type == "range" for candidate in candidates):
+        return YearResolution(
+            "needs_llm",
+            (),
+            tuple(candidates),
+            "Khoảng năm cần phân tích ngữ nghĩa bởi year resolver riêng",
+        )
+
+    if YEAR_RELATIVE_PATTERN.search(question):
+        anchored_years = _candidate_years(candidates)
+        relative_years = tuple(
+            sorted(
+                {
+                    year + delta
+                    for year in anchored_years
+                    for delta in (-1, 0, 1)
+                    if MIN_YEAR <= year + delta <= MAX_YEAR
+                }
+            )
+        )
+        if relative_years:
+            candidates.append(
+                YearCandidate(
+                    "relative-year neighborhood",
+                    relative_years,
+                    "relative_candidate",
+                )
+            )
+        return YearResolution(
+            "needs_llm",
+            (),
+            tuple(candidates),
+            "Câu hỏi có quan hệ thời gian cần phân tích ngữ nghĩa",
+        )
+
+    years = _candidate_years(candidates)
+    if years:
+        return YearResolution("resolved", years, tuple(candidates))
+    return YearResolution(
+        "needs_llm", (), candidates, "Không có năm nằm trong phạm vi dữ liệu"
+    )
+
+
+def parse_years(question: str) -> list[int]:
+    """Compatibility wrapper returning only high-confidence deterministic years."""
+    resolution = resolve_years_conservatively(question)
+    return list(resolution.years) if resolution.status == "resolved" else []
 
 
 def parse_report_types(question: str) -> list[str]:
@@ -530,13 +630,43 @@ def reconcile_query_filters(
     llm_value: Mapping[str, Any],
     stock_codes_path: Path = DEFAULT_STOCK_CODES_PATH,
     ticker_overrides: Sequence[str] | None = None,
+    year_overrides: Sequence[int] | None = None,
 ) -> tuple[dict[str, list[str | int]], str]:
-    """Combine strict LLM semantics with deterministic identity routing."""
+    """Combine deterministic matches with one initial LLM metadata response."""
     parsed = validate_llm_filters(llm_value)
     if ticker_overrides is None:
-        tickers, matched_aliases, canonical = resolve_tickers(
+        ticker_resolution, canonical = resolve_tickers_conservatively(
             question, stock_codes_path
         )
+        if ticker_resolution.status == "resolved":
+            tickers = list(ticker_resolution.tickers)
+            matched_aliases = {
+                ticker: list(aliases)
+                for ticker, aliases in ticker_resolution.matched_aliases.items()
+            }
+        else:
+            _, alias_catalog = load_company_catalog(
+                str(Path(stock_codes_path).resolve())
+            )
+            tickers = list(parsed.get("ticker", []))
+            unknown = [ticker for ticker in tickers if ticker not in canonical]
+            if unknown:
+                raise QueryRoutingError(
+                    "Ticker do LLM parse không có trong catalog: " + ", ".join(unknown)
+                )
+            matched_aliases = {
+                ticker: [
+                    alias
+                    for alias in alias_catalog.get(ticker, ())
+                    if contains_folded_phrase(question, alias)
+                ]
+                for ticker in tickers
+            }
+            matched_aliases = {
+                ticker: aliases
+                for ticker, aliases in matched_aliases.items()
+                if aliases
+            }
     else:
         canonical, alias_catalog = load_company_catalog(
             str(Path(stock_codes_path).resolve())
@@ -564,7 +694,24 @@ def reconcile_query_filters(
         matched_aliases = {
             ticker: aliases for ticker, aliases in matched_aliases.items() if aliases
         }
-    years = parse_years(question)
+    if year_overrides is None:
+        year_resolution = resolve_years_conservatively(question)
+        years = (
+            list(year_resolution.years)
+            if year_resolution.status == "resolved"
+            else list(parsed.get("year", []))
+        )
+    else:
+        years = list(dict.fromkeys(year_overrides))
+        if any(
+            isinstance(year, bool)
+            or not isinstance(year, int)
+            or not MIN_YEAR <= year <= MAX_YEAR
+            for year in years
+        ):
+            raise QueryRoutingError(
+                f"Year override phải là các số nguyên trong phạm vi {MIN_YEAR}–{MAX_YEAR}"
+            )
     if not tickers:
         raise QueryRoutingError(
             "Không resolve được ticker; hệ thống không search global"
@@ -574,15 +721,9 @@ def reconcile_query_filters(
             f"Không resolve được năm trong phạm vi {MIN_YEAR}–{MAX_YEAR}; hệ thống không search global"
         )
 
-    # Ticker identity is resolved by the conservative resolver or the dedicated
-    # catalog-constrained fallback above. The generic metadata parser is not
-    # authoritative for ticker identity, so an incidental LLM ticker guess must
-    # not invalidate an otherwise valid resolution.
-    llm_years = set(parsed.get("year", []))
-    if llm_years and llm_years != set(years):
-        raise QueryRoutingError(
-            f"Năm do LLM parse {sorted(llm_years)} không khớp câu hỏi {years}"
-        )
+    # High-confidence deterministic matches win. For ambiguous ticker/year
+    # expressions, the same initial metadata LLM response supplies the value;
+    # no additional resolver call is made.
 
     explicit_reports = parse_report_types(question)
     # Identity filters must be conservative. Explicit Vietnamese phrases win; when

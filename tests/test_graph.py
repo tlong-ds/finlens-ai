@@ -6,7 +6,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from src.graph import graph
-from src.nodes import load_tables_node
+from src.nodes import load_tables_node, retrieve_tables_node
+from src.retrieval import NoMatchingCandidatesError, RetrievalError
 
 
 QUESTION = (
@@ -35,6 +36,100 @@ def candidate() -> dict[str, object]:
 
 
 class GraphTests(unittest.TestCase):
+    def test_retrieve_falls_back_to_all_report_types_on_no_match(self) -> None:
+        calls: list[dict[str, object]] = []
+
+        def retrieve_side_effect(*, query_text: str, filters: dict[str, object]) -> list[dict[str, object]]:
+            calls.append({"query_text": query_text, "filters": filters})
+            if len(calls) == 1:
+                raise NoMatchingCandidatesError("no match")
+            return [candidate()]
+
+        initial_filters = {
+            "ticker": ["VJC"],
+            "year": [2018],
+            "report_type": ["consolidated"],
+            "table_type": ["note_table"],
+        }
+        with patch("src.nodes.retrieve", side_effect=retrieve_side_effect):
+            result = retrieve_tables_node(
+                {
+                    "semantic_query": "Lãi tiền gửi",
+                    "filters": initial_filters,
+                }
+            )
+
+        self.assertEqual(result["candidates"], [candidate()])
+        self.assertEqual(calls[0]["filters"], initial_filters)
+        self.assertEqual(
+            calls[1]["filters"],
+            {
+                "ticker": ["VJC"],
+                "year": [2018],
+                "table_type": ["note_table"],
+            },
+        )
+        self.assertEqual(result["filters"], calls[1]["filters"])
+
+    def test_retrieve_does_not_fallback_without_report_type_filter(self) -> None:
+        error = NoMatchingCandidatesError("no match")
+        with patch("src.nodes.retrieve", side_effect=error) as retrieve_mock:
+            with self.assertRaises(NoMatchingCandidatesError):
+                retrieve_tables_node(
+                    {
+                        "semantic_query": "Lãi tiền gửi",
+                        "filters": {"ticker": ["VJC"], "year": [2018]},
+                    }
+                )
+        retrieve_mock.assert_called_once()
+
+    def test_retrieve_does_not_fallback_on_other_retrieval_errors(self) -> None:
+        error = RetrievalError("Qdrant query failed")
+        with patch("src.nodes.retrieve", side_effect=error) as retrieve_mock:
+            with self.assertRaises(RetrievalError):
+                retrieve_tables_node(
+                    {
+                        "semantic_query": "Lãi tiền gửi",
+                        "filters": {
+                            "ticker": ["VJC"],
+                            "year": [2018],
+                            "report_type": ["consolidated"],
+                        },
+                    }
+                )
+        retrieve_mock.assert_called_once()
+
+    def test_retrieve_propagates_no_match_when_fallback_is_empty(self) -> None:
+        error = NoMatchingCandidatesError("no match")
+        with patch("src.nodes.retrieve", side_effect=[error, error]) as retrieve_mock:
+            with self.assertRaises(NoMatchingCandidatesError):
+                retrieve_tables_node(
+                    {
+                        "semantic_query": "Lãi tiền gửi",
+                        "filters": {
+                            "ticker": ["VJC"],
+                            "year": [2018],
+                            "report_type": ["consolidated"],
+                        },
+                    }
+                )
+        self.assertEqual(retrieve_mock.call_count, 2)
+
+    def test_retrieve_does_not_retry_when_first_query_has_candidates(self) -> None:
+        with patch("src.nodes.retrieve", return_value=[candidate()]) as retrieve_mock:
+            result = retrieve_tables_node(
+                {
+                    "semantic_query": "Lãi tiền gửi",
+                    "filters": {
+                        "ticker": ["VJC"],
+                        "year": [2018],
+                        "report_type": ["consolidated"],
+                    },
+                }
+            )
+        self.assertEqual(result["candidates"], [candidate()])
+        retrieve_mock.assert_called_once()
+
     def test_load_tables_derives_csv_path_from_table_id(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
