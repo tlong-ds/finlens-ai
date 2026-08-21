@@ -162,3 +162,63 @@ prototype, not imported by anything (`src/nodes.py` imports `src.sandbox`, not r
 
 `query.py` is a deprecated retrieval-only wrapper around `graph.invoke` (returns just
 `retrieved_tables`, no answer generation). New callers should invoke `src.graph.graph` directly.
+
+## Official submission format
+
+Submit one ZIP archive through **My Submissions** at
+`http://leaderboard.aiguru.com.vn/`. The archive must contain exactly one result JSON file and a
+`data/` directory at the archive root; do not wrap them in another parent directory:
+
+```text
+submission.zip
+├── submission.json
+└── data/
+    ├── <table_1>.csv
+    ├── <table_2>.csv
+    └── ...
+```
+
+`submission.json` must be a JSON array. Every included prediction must have exactly this shape
+(the placeholders below describe types and are not literal JSON):
+
+```json
+[
+  {
+    "id": 1,
+    "question": "<financial question>",
+    "answer": 63075000000.0,
+    "relevant_docs": ["AAA_financial_statements_2015_consolidated"],
+    "relevant_tables": ["AAA_financial_statements_2015_consolidated|350"],
+    "evidence": [
+      {
+        "variable": "df_1",
+        "csv_path": "data/AAA_financial_statements_2015_consolidated_table_1.csv"
+      }
+    ],
+    "pandas_query": "result = df_1.loc[df_1['year'] == 2023, 'net_revenue'].iloc[0]"
+  }
+]
+```
+
+Field contract:
+
+- `id` is the integer question ID, and `question` is the canonical question text.
+- `answer` is a finite floating-point result.
+- `relevant_docs` contains the relevant report IDs. A report ID is the final filename component
+  with its `.txt` extension removed.
+- `relevant_tables` contains directly relevant tables in `<report_id>|<start_line>` form, where
+  `start_line` is the table's starting line in the organizer-provided OCR report.
+- `evidence` lists every CSV DataFrame needed to run `pandas_query`. Each `variable` must be a
+  unique valid Python identifier within that question and must match the DataFrame name used by
+  the query. Each `csv_path` must be a relative path beginning with `data/`, and the referenced
+  file must exist in the ZIP.
+- `pandas_query` is a pandas statement or program that can be rerun against only the declared
+  evidence DataFrames and reproduces `answer` as a numeric scalar. Do not declare unused evidence,
+  reference undeclared DataFrames, or submit constant placeholder answers unrelated to evidence.
+
+Before calling a run ready, validate the JSON schema and types, unique IDs and evidence variable
+names, canonical question text, finite answers, `relevant_docs`/`relevant_tables` provenance,
+presence of every referenced CSV, replayability of every `pandas_query`, and the ZIP's root-level
+layout. For repository readiness checks, fewer than 1,000 predictions is not by itself a blocker;
+validate all records that are present unless the user explicitly requests a completeness check.
+Missing or malformed records and missing evidence files are not valid predictions.
