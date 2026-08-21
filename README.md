@@ -120,6 +120,21 @@ này phải tạo run mới. Mỗi lần resume được ghi thêm vào `invocat
 Lệnh `full` trả exit code `1` nếu còn câu thất bại, dù checkpoint và submission một phần
 vẫn được giữ đầy đủ để resume.
 
+Đánh giá trên labelled valset (`golden_100.json`) bằng CLI riêng:
+
+```bash
+python run_valset.py --run-id val-reranker-v1 ids --ids 1,5,7
+python run_valset.py --run-id val-reranker-v1 --resume ids --ids 1,5,7
+python run_valset.py --run-id val-full-v1 full
+```
+
+Output nằm tại `val_submission/runs/<run-id>/`. Ngoài `submission.json` và
+`submission.zip`, mỗi run có `metrics.json`, `metrics_per_question.jsonl`, `status.json`,
+`failures.jsonl`, log tổng tại `artifacts/run.log`, và trace từng lần chạy node tại
+`artifacts/questions/<id>/attempt-<n>.json`. Ngưỡng so đáp án mặc định là
+`rtol=1e-6`, `atol=1e-6`; có thể thay bằng `--answer-rtol` và `--answer-atol` để khớp
+ngưỡng chính thức của BTC.
+
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
 fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
 xếp hạng theo batch và chọn tối đa 5 bảng mỗi batch, sau đó chọn tối đa 10
