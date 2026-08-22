@@ -6,8 +6,9 @@ from pathlib import Path
 from unittest.mock import patch
 
 from src.graph import graph
-from src.nodes import load_tables_node, retrieve_tables_node
+from src.nodes import load_tables_node, parse_query_node, retrieve_tables_node
 from src.retrieval import NoMatchingCandidatesError, RetrievalError
+from src.routing import QueryRoutingError
 
 
 QUESTION = (
@@ -31,16 +32,106 @@ def candidate() -> dict[str, object]:
         "table_id": metadata["table_id"],
         "metadata": metadata,
         "retrieval_score": 0.9,
+        "dense_rank": 1,
         "rerank_score": 0.98,
     }
 
 
 class GraphTests(unittest.TestCase):
+    def test_parse_uses_one_llm_request_and_materializes_candidate_key(self) -> None:
+        with patch(
+            "src.parser.generate_structured",
+            return_value={
+                "ticker": ["c01"],
+                "year": [2018],
+                "report_type": ["separate"],
+            },
+        ) as generate_mock:
+            result = parse_query_node({"question": QUESTION})
+
+        generate_mock.assert_called_once()
+        self.assertEqual(result["filters"]["ticker"], ["VJC"])
+        self.assertEqual(result["filters"]["year"], [2018])
+        self.assertEqual(result["filters"]["report_type"], ["separate"])
+        prompt = generate_mock.call_args.args[0]
+        self.assertIn('"candidate_key": "c01"', prompt)
+
+    def test_parse_repairs_response_that_adds_table_type(self) -> None:
+        responses = [
+            {
+                "ticker": ["c01"],
+                "year": [2018],
+                "report_type": ["separate"],
+                "table_type": "note_table",
+            },
+            {
+                "ticker": ["c01"],
+                "year": [2018],
+                "report_type": ["separate"],
+            },
+        ]
+        with patch(
+            "src.parser.generate_structured",
+            side_effect=responses,
+        ) as generate_mock:
+            result = parse_query_node(
+                {"question": QUESTION, "question_record": {"id": 1}}
+            )
+
+        self.assertEqual(generate_mock.call_count, 2)
+        repair_prompt = generate_mock.call_args_list[1].args[0]
+        self.assertIn("table_type", repair_prompt)
+        self.assertEqual(result["filters"]["report_type"], ["separate"])
+        self.assertNotIn("table_type", result["filters"])
+
+    def test_parse_repairs_invalid_schema_once(self) -> None:
+        responses = [
+            {"ticker": ["c01"], "year": 2018, "report_type": ["separate"]},
+            {
+                "ticker": ["c01"],
+                "year": [2018],
+                "report_type": ["separate"],
+            },
+        ]
+        with patch(
+            "src.parser.generate_structured", side_effect=responses
+        ) as generate_mock:
+            result = parse_query_node(
+                {"question": QUESTION, "question_record": {"id": 1}}
+            )
+
+        self.assertEqual(generate_mock.call_count, 2)
+        repair_prompt = generate_mock.call_args_list[1].args[0]
+        self.assertIn('"response_trước"', repair_prompt)
+        self.assertIn("year phải là một mảng số nguyên", repair_prompt)
+        self.assertEqual(result["filters"]["year"], [2018])
+
+    def test_parse_fails_after_two_invalid_responses(self) -> None:
+        invalid = {
+            "ticker": ["c01"],
+            "year": 2018,
+            "report_type": ["separate"],
+        }
+        with patch(
+            "src.parser.generate_structured", return_value=invalid
+        ) as generate_mock:
+            with self.assertRaisesRegex(
+                QueryRoutingError, "sau 2 lần"
+            ):
+                parse_query_node(
+                    {"question": QUESTION, "question_record": {"id": 1}}
+                )
+        self.assertEqual(generate_mock.call_count, 2)
+
     def test_retrieve_falls_back_to_all_report_types_on_no_match(self) -> None:
         calls: list[dict[str, object]] = []
 
-        def retrieve_side_effect(*, query_text: str, filters: dict[str, object]) -> list[dict[str, object]]:
-            calls.append({"query_text": query_text, "filters": filters})
+        def retrieve_side_effect(
+            *, query_text: str, filters: dict[str, object], top_n: int
+        ) -> list[dict[str, object]]:
+            calls.append(
+                {"query_text": query_text, "filters": filters, "top_n": top_n}
+            )
             if len(calls) == 1:
                 raise NoMatchingCandidatesError("no match")
             return [candidate()]
@@ -70,6 +161,54 @@ class GraphTests(unittest.TestCase):
             },
         )
         self.assertEqual(result["filters"], calls[1]["filters"])
+
+    def test_retrieve_materializes_balanced_bucket_per_ticker(self) -> None:
+        calls: list[dict[str, object]] = []
+
+        def ticker_candidate(ticker: str, index: int) -> dict[str, object]:
+            item = candidate()
+            table_id = f"{ticker}_financial_statements_2018_separate_table_{index}"
+            item["table_id"] = table_id
+            item["metadata"] = {
+                **dict(item["metadata"]),
+                "table_id": table_id,
+                "doc_id": f"{ticker}_financial_statements_2018_separate",
+                "ticker": ticker,
+            }
+            return item
+
+        def retrieve_side_effect(
+            *, query_text: str, filters: dict[str, object], top_n: int
+        ) -> list[dict[str, object]]:
+            calls.append(
+                {"query_text": query_text, "filters": filters, "top_n": top_n}
+            )
+            ticker = str(filters["ticker"][0])
+            return [ticker_candidate(ticker, 1), ticker_candidate(ticker, 2)]
+
+        with patch("src.nodes.retrieve", side_effect=retrieve_side_effect):
+            result = retrieve_tables_node(
+                {
+                    "semantic_query": "Doanh thu thuần",
+                    "filters": {
+                        "ticker": ["VJC", "ACB"],
+                        "year": [2018],
+                        "report_type": ["consolidated"],
+                    },
+                }
+            )
+
+        self.assertEqual(
+            [call["filters"]["ticker"] for call in calls], [["VJC"], ["ACB"]]
+        )
+        self.assertEqual([call["top_n"] for call in calls], [25, 25])
+        self.assertEqual(
+            [item["metadata"]["ticker"] for item in result["candidates"]],
+            ["VJC", "ACB", "VJC", "ACB"],
+        )
+        self.assertEqual(
+            [item["dense_rank"] for item in result["candidates"]], [1, 2, 3, 4]
+        )
 
     def test_retrieve_does_not_fallback_without_report_type_filter(self) -> None:
         error = NoMatchingCandidatesError("no match")
@@ -164,7 +303,7 @@ class GraphTests(unittest.TestCase):
             ) -> dict[str, object]:
                 if system_prompt and "bộ định tuyến" in system_prompt:
                     return {
-                        "ticker": ["VJC"],
+                        "ticker": ["c01"],
                         "year": [2018],
                         "report_type": ["separate"],
                     }
@@ -175,6 +314,7 @@ class GraphTests(unittest.TestCase):
 
             with (
                 patch("src.nodes._PROJECT_ROOT", root),
+                patch("src.parser.generate_structured", side_effect=structured_response),
                 patch("src.nodes.generate_structured", side_effect=structured_response),
                 patch("src.nodes.retrieve", return_value=[candidate()]),
                 patch("src.nodes.rerank", return_value=[candidate()]),

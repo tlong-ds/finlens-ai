@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": 655,
+  "question": "Tốc độ tăng trưởng % tổng tiền và các khoản tương đương tiền của VIC từ năm 2019 đến năm 2021 là bao nhiêu?",
+  "started_at": "2026-08-22T06:35:59+00:00",
+  "finished_at": "2026-08-22T06:36:02+00:00",
+  "duration_seconds": 2.5183345719997305,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VIC"
+    ],
+    "year": [
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VIC"
+    ],
+    "year": [
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Tốc độ tăng trưởng % tổng tiền và các khoản tương đương tiền",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VIC",
+        "company_name": "Tập đoàn VINGROUP - CTCP",
+        "matched_text": "VIC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

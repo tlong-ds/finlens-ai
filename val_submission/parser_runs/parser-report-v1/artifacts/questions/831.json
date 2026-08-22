@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": 831,
+  "question": "Doanh thu hoạt động tài chính bình quân của DLG, VJC, ACV và VSC năm 2015 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:36:10+00:00",
+  "finished_at": "2026-08-22T06:36:11+00:00",
+  "duration_seconds": 1.623832842000411,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DLG",
+      "VJC",
+      "ACV",
+      "VSC"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "ACV",
+      "DLG",
+      "VJC",
+      "VSC"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Doanh thu hoạt động tài chính bình quân , , và tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "ACV",
+        "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+        "matched_text": "ACV",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "DLG",
+        "company_name": "CTCP Tập đoàn Đức Long Gia Lai",
+        "matched_text": "DLG",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "VJC",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "matched_text": "VSC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02",
+            "c03",
+            "c01",
+            "c04"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

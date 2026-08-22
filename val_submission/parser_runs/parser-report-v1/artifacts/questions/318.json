@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": 318,
+  "question": "Số dư phải trả người bán ngắn hạn của CTCP Đầu tư Hạ tầng Giao thông Đèo Cả (HHV) cuối năm 2022 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-22T06:35:42+00:00",
+  "finished_at": "2026-08-22T06:35:43+00:00",
+  "duration_seconds": 1.3458225669965032,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Số dư phải trả người bán ngắn hạn CTCP Đầu tư Hạ tầng Giao thông Đèo Cả cuối trăm tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "matched_text": "HHV",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

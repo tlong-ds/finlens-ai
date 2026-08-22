@@ -24,23 +24,20 @@ from src.helper import (
     retry_or_exhausted,
 )
 from src.llm import LLMResponseError, generate_structured
-from src.prompt import (
-    GENERATOR_SYSTEM_PROMPT,
-    PARSE_SYSTEM_PROMPT,
-    build_generator_prompt,
-    build_parse_prompt,
+from src.parser import parse_query_with_diagnostics
+from src.prompt import GENERATOR_SYSTEM_PROMPT, build_generator_prompt
+from src.retrieval import (
+    RETRIEVAL_TOP_K,
+    NoMatchingCandidatesError,
+    rerank,
+    retrieve,
 )
-from src.retrieval import NoMatchingCandidatesError, rerank, retrieve
-from src.routing import (
-    QueryRoutingError,
-    reconcile_query_filters,
-)
+from src.routing import QueryRoutingError
 
 logger = logging.getLogger(__name__)
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 _SANDBOX_TIMEOUT_SECONDS = 5.0
-_STRUCTURED_RESPONSE_ATTEMPTS = 2
 _UNSUPPORTED_DATAFRAME_ATTRIBUTES = {"metadata", "attrs"}
 
 
@@ -119,50 +116,85 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
 def parse_query_node(state: Mapping[str, Any]) -> dict[str, Any]:
     """Parse and reconcile strict metadata filters from the canonical question."""
     question = str(state.get("question") or "")
-    feedback = ""
-    last_error = ""
-    for _ in range(_STRUCTURED_RESPONSE_ATTEMPTS):
-        try:
-            raw_filters = generate_structured(
-                build_parse_prompt(question, feedback),
-                system_prompt=PARSE_SYSTEM_PROMPT,
-            )
-            filters, semantic_query = reconcile_query_filters(
-                question,
-                raw_filters,
-            )
-            break
-        except (LLMResponseError, QueryRoutingError) as error:
-            last_error = concise_error(error)
-            feedback = "Response trước không hợp lệ: " + last_error
-    else:
-        raise LLMResponseError(
-            "Không parse được metadata filter hợp lệ: " + last_error
-        )
-    logger.info("Question: %s", question)
-    logger.info("Parsed filters: %s", filters)
-    logger.info("Semantic query: %s", semantic_query)
-    return {"filters": filters, "semantic_query": semantic_query}
+    question_record = state.get("question_record") or {}
+    parsed = parse_query_with_diagnostics(
+        question,
+        question_id=question_record.get("id", "unknown"),
+    )
+    return {
+        "filters": parsed["filters"],
+        "semantic_query": parsed["semantic_query"],
+    }
 
 
 def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Retrieve Top-N tables using the question and parsed filters."""
+    """Retrieve balanced Top-N candidates from one metadata bucket per ticker."""
     query_text = str(state.get("semantic_query") or "")
     filters = dict(state.get("filters", {}) or {})
-    try:
-        candidates = retrieve(query_text=query_text, filters=filters)
-        return {"candidates": candidates}
-    except NoMatchingCandidatesError:
-        if not filters.get("report_type"):
-            raise
+    raw_tickers = filters.get("ticker", [])
+    if not isinstance(raw_tickers, list) or not raw_tickers or not all(
+        isinstance(ticker, str) and ticker for ticker in raw_tickers
+    ):
+        raise QueryRoutingError("Filter ticker phải là một mảng chuỗi không rỗng")
+    tickers = list(dict.fromkeys(raw_tickers))
+    question_record = state.get("question_record") or {}
+    question_id = question_record.get("id", "unknown")
+    quota = (RETRIEVAL_TOP_K + len(tickers) - 1) // len(tickers)
+    bucket_results: list[list[dict[str, Any]]] = []
+    relaxed_report_type = False
 
-        fallback_filters = dict(filters)
-        fallback_filters.pop("report_type", None)
-        logger.info(
-            "No candidates found with report_type filter; retrying all report types"
-        )
-        candidates = retrieve(query_text=query_text, filters=fallback_filters)
-        return {"candidates": candidates, "filters": fallback_filters}
+    for ticker in tickers:
+        bucket_filters = {**filters, "ticker": [ticker]}
+        try:
+            bucket = retrieve(
+                query_text=query_text,
+                filters=bucket_filters,
+                top_n=quota,
+            )
+        except NoMatchingCandidatesError:
+            if not bucket_filters.get("report_type"):
+                raise
+            fallback_bucket_filters = dict(bucket_filters)
+            fallback_bucket_filters.pop("report_type", None)
+            relaxed_report_type = True
+            logger.info(
+                "question_id=%s no candidates for ticker=%s with report_type; "
+                "retrying that bucket without report_type",
+                question_id,
+                ticker,
+            )
+            bucket = retrieve(
+                query_text=query_text,
+                filters=fallback_bucket_filters,
+                top_n=quota,
+            )
+        bucket_results.append(bucket)
+
+    candidates: list[dict[str, Any]] = []
+    seen_table_ids: set[str] = set()
+    max_bucket_size = max((len(bucket) for bucket in bucket_results), default=0)
+    for bucket_rank in range(max_bucket_size):
+        for bucket in bucket_results:
+            if bucket_rank >= len(bucket):
+                continue
+            candidate = dict(bucket[bucket_rank])
+            table_id = str(candidate.get("table_id") or "")
+            if not table_id or table_id in seen_table_ids:
+                continue
+            seen_table_ids.add(table_id)
+            candidate["dense_rank"] = len(candidates) + 1
+            candidates.append(candidate)
+            if len(candidates) == RETRIEVAL_TOP_K:
+                break
+        if len(candidates) == RETRIEVAL_TOP_K:
+            break
+
+    result: dict[str, Any] = {"candidates": candidates}
+    if relaxed_report_type:
+        effective_filters = dict(filters)
+        effective_filters.pop("report_type", None)
+        result["filters"] = effective_filters
+    return result
 
 
 def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:

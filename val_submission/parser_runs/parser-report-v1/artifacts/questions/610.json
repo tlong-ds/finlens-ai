@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": 610,
+  "question": "Tỉ lệ tăng trưởng chi phí mua khí từ các chủ mỏ của GAS trong năm 2022 so với năm 2020 là bao nhiêu %?",
+  "started_at": "2026-08-22T06:35:57+00:00",
+  "finished_at": "2026-08-22T06:35:59+00:00",
+  "duration_seconds": 2.1689288260022295,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2022,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2020,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỉ lệ tăng trưởng chi phí mua khí từ các chủ mỏ trong so với %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "matched_text": "GAS",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

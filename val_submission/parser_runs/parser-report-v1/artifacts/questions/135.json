@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": 135,
+  "question": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:35:37+00:00",
+  "finished_at": "2026-08-22T06:35:39+00:00",
+  "duration_seconds": 1.8520101819958654,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Số dư khoản phải thu ngắn hạn khách hàng bên thứ ba đến ngày 31/12/ tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "matched_text": "Tổng Công ty Khí Việt Nam - CTCP",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

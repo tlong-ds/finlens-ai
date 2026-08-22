@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": 106,
+  "question": "Tỷ lệ sở hữu của công ty mẹ Tập đoàn Xăng Dầu Việt Nam (PLX) tại Công ty TNHH Hóa chất PTN vào cuối năm 2016 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T06:35:34+00:00",
+  "finished_at": "2026-08-22T06:35:37+00:00",
+  "duration_seconds": 3.0593021909953677,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "PLX"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "PLX"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tỷ lệ sở hữu Tập đoàn Xăng Dầu Việt Nam tại Công ty TNHH Hóa chất PTN vào cuối phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "PLX",
+        "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+        "matched_text": "PLX",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

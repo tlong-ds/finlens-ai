@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": 243,
+  "question": "Trả trước của các bên liên quan cuối năm 2021 của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật (IJC) là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T06:35:40+00:00",
+  "finished_at": "2026-08-22T06:35:42+00:00",
+  "duration_seconds": 1.7155512140016071,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "IJC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "IJC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Trả trước các bên liên quan cuối CTCP Phát triển Hạ tầng Kỹ thuật triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "matched_text": "IJC",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

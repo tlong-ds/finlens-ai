@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": 67,
+  "question": "Tổng giá vốn hàng bán và dịch vụ cung cấp của công ty mẹ CTCP Phát triển Bất động sản Văn Phú (VPI) năm 2025 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:35:30+00:00",
+  "finished_at": "2026-08-22T06:35:32+00:00",
+  "duration_seconds": 2.3279255609959364,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VPI"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VPI"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Tổng giá vốn hàng bán và dịch vụ cung cấp CTCP Phát triển Bất động sản Văn Phú tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VPI",
+        "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+        "matched_text": "VPI",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PDR",
+        "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+        "matched_text": "Phát triển Bất động sản",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

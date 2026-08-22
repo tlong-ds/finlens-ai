@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": 824,
+  "question": "Số lượng trung bình cổ phiếu phổ thông đang lưu hành của CTCP Hàng không Vietjet (VJC) vào cuối các năm 2016, 2019 và 2021 là bao nhiêu triệu cổ phiếu?",
+  "started_at": "2026-08-22T06:36:09+00:00",
+  "finished_at": "2026-08-22T06:36:12+00:00",
+  "duration_seconds": 2.19811896399915,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VJC"
+    ],
+    "year": [
+      2016,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VJC"
+    ],
+    "year": [
+      2016,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "note_table"
+    ]
+  },
+  "semantic_query": "Số lượng trung bình cổ phiếu phổ thông đang lưu hành CTCP Hàng không Vietjet vào cuối các , và triệu cổ phiếu",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "VJC",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2019,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "note_table"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

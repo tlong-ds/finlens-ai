@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": 935,
+  "question": "Giá trị trung bình tỷ lệ trích lập Quỹ khen thưởng, phúc lợi so với Lợi nhuận thuần của HDG, GEG và DNH tại đơn vị công ty mẹ trong năm 2023 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T06:36:18+00:00",
+  "finished_at": "2026-08-22T06:36:20+00:00",
+  "duration_seconds": 1.7398295829989365,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HDG",
+      "GEG",
+      "DNH"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DNH",
+      "GEG",
+      "HDG"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Giá trị trung bình tỷ lệ trích lập Quỹ khen thưởng, phúc lợi so với Lợi nhuận thuần , và tại đơn vị trong phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DNH",
+        "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+        "matched_text": "DNH",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "GEG",
+        "company_name": "CTCP Điện Gia Lai",
+        "matched_text": "GEG",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "HDG",
+        "company_name": "CTCP Tập đoàn Hà Đô",
+        "matched_text": "HDG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

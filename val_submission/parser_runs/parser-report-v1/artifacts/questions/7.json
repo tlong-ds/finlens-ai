@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": 7,
+  "question": "Quỹ khen thưởng, phúc lợi của HT1 cuối năm 2019 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:35:26+00:00",
+  "finished_at": "2026-08-22T06:35:28+00:00",
+  "duration_seconds": 2.487735745002283,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HT1"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HT1"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Quỹ khen thưởng, phúc lợi cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HT1",
+        "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+        "matched_text": "HT1",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

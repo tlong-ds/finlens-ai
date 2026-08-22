@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "id": 471,
+  "question": "Năm 2016, trong bốn mã cổ phiếu AAA, DCM, DPM và GVR, tổng doanh thu thuần của các công ty có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần lớn hơn 10% là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T06:35:51+00:00",
+  "finished_at": "2026-08-22T06:35:53+00:00",
+  "duration_seconds": 1.5048714830045355,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "AAA",
+      "DCM",
+      "DPM",
+      "GVR"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "AAA",
+      "DCM",
+      "DPM",
+      "GVR"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "trong bốn mã cổ phiếu , , và , tổng doanh thu thuần các công ty có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần lớn hơn 10% nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "AAA",
+        "company_name": "CTCP Nhựa An Phát Xanh",
+        "matched_text": "AAA",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "DCM",
+        "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+        "matched_text": "DCM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "DPM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "GVR",
+        "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+        "matched_text": "GVR",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03",
+            "c04"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

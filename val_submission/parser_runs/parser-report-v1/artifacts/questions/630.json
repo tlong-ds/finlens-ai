@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": 630,
+  "question": "Chênh lệch tổng chi phí thuế TNDN hiện hành của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội (SHB) giữa năm 2025 và năm 2024 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T06:35:59+00:00",
+  "finished_at": "2026-08-22T06:36:01+00:00",
+  "duration_seconds": 2.1177466939989245,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SHB"
+    ],
+    "year": [
+      2024,
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SHB"
+    ],
+    "year": [
+      2024,
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Chênh lệch tổng chi phí thuế TNDN hiện hành Ngân hàng TMCP Sài Gòn - Hà Nội giữa và triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "matched_text": "SHB",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024,
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

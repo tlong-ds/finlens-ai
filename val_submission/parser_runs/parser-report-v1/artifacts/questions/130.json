@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": 130,
+  "question": "Tổng doanh thu thuần năm 2024 của CTCP Tập đoàn Dabaco Việt Nam là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T06:35:37+00:00",
+  "finished_at": "2026-08-22T06:35:38+00:00",
+  "duration_seconds": 1.4839180469934945,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Tổng doanh thu thuần nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DBC",
+        "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+        "matched_text": "CTCP Tập đoàn Dabaco Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

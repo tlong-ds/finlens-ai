@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": 900,
+  "question": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+  "started_at": "2026-08-22T06:36:12+00:00",
+  "finished_at": "2026-08-22T06:36:14+00:00",
+  "duration_seconds": 1.8704701499955263,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2016,
+      2017,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2016,
+      2017,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Với CTCP Tập đoàn Masan , nào trong các , , và có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "matched_text": "MSN",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2017,
+            2019,
+            2021
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

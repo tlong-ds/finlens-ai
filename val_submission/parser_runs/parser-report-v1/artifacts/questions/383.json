@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": 383,
+  "question": "Trong giai đoạn 2021-2024 của MWG, có bao nhiêu năm sau năm đầu tiên vừa cải thiện biên lợi nhuận gộp so với năm trước, vừa có CFO margin cao hơn trung vị CFO margin của cả giai đoạn?",
+  "started_at": "2026-08-22T06:35:45+00:00",
+  "finished_at": "2026-08-22T06:35:47+00:00",
+  "duration_seconds": 1.691830037998443,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "income_statement",
+      "cash_flow"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , có sau đầu tiên vừa cải thiện biên lợi nhuận gộp so với trước, vừa có CFO margin cao hơn trung vị CFO margin cả",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MWG",
+        "company_name": "CTCP Đầu tư Thế giới Di động",
+        "matched_text": "MWG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "income_statement",
+            "cash_flow"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

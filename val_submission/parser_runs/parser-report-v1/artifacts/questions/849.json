@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": 849,
+  "question": "Tỷ trọng chi phí khấu hao và phân bổ trong tổng chi phí sản xuất và kinh doanh theo yếu tố của Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn đạt mức cao nhất trong các năm 2018, 2020, 2024 và 2025 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T06:36:11+00:00",
+  "finished_at": "2026-08-22T06:36:14+00:00",
+  "duration_seconds": 2.5733390470049926,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2018,
+      2020,
+      2024,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2018,
+      2020,
+      2024,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỷ trọng chi phí khấu hao và phân bổ trong tổng chi phí sản xuất và kinh doanh theo yếu tố đạt mức cao nhất trong các , , và phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SAB",
+        "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "matched_text": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018,
+            2020,
+            2024,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

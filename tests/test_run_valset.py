@@ -175,7 +175,7 @@ class TraceTests(unittest.TestCase):
         def structured_response(_: str, *, system_prompt: str | None = None):
             if system_prompt and "bộ định tuyến" in system_prompt:
                 return {
-                    "ticker": ["VJC"],
+                    "ticker": ["c01"],
                     "year": [2018],
                     "report_type": ["separate"],
                 }
@@ -192,6 +192,7 @@ class TraceTests(unittest.TestCase):
             )
             with (
                 patch("src.nodes._PROJECT_ROOT", root),
+                patch("src.parser.generate_structured", side_effect=structured_response),
                 patch("src.nodes.generate_structured", side_effect=structured_response),
                 patch("src.nodes.retrieve", return_value=[candidate]),
                 patch("src.nodes.rerank", return_value=[candidate]),

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": 838,
+  "question": "Trong các mốc cuối năm 2017, 2018, 2020, 2021 và 2024, MSN có số dư Đầu tư tài chính dài hạn cao nhất là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T06:36:11+00:00",
+  "finished_at": "2026-08-22T06:36:12+00:00",
+  "duration_seconds": 1.45891546200437,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Trong các mốc cuối , , , và , có số dư Đầu tư tài chính dài hạn cao nhất nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "matched_text": "MSN",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017,
+            2018,
+            2020,
+            2021,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

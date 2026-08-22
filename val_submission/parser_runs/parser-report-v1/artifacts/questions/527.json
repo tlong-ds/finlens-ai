@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": 527,
+  "question": "Trong các năm 2016, 2020, 2021 và 2023, lợi nhuận trước thuế bằng bao nhiêu % doanh thu cung cấp dịch vụ của công ty mẹ Tổng Công ty Cảng Hàng không Việt Nam - CTCP trong năm có khoản phải thu khác về cổ tức, lợi nhuận được chia lớn nhất?",
+  "started_at": "2026-08-22T06:35:53+00:00",
+  "finished_at": "2026-08-22T06:35:55+00:00",
+  "duration_seconds": 2.3572259440043126,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "ACV"
+    ],
+    "year": [
+      2016,
+      2020,
+      2021,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "ACV"
+    ],
+    "year": [
+      2016,
+      2020,
+      2021,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Trong các , , và , lợi nhuận trước thuế bằng % doanh thu cung cấp dịch vụ trong có khoản phải thu khác về cổ tức, lợi nhuận được chia lớn nhất",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "ACV",
+        "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+        "matched_text": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "Hàng không Việt",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "MSB",
+        "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+        "matched_text": "Hàng không Việt Nam",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2020,
+            2021,
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

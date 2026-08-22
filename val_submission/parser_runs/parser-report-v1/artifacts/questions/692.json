@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": 692,
+  "question": "Tỷ lệ dự phòng rủi ro trên dư nợ cho vay khách hàng của công ty mẹ Ngân hàng TMCP Đầu tư và Phát triển Việt Nam vào cuối năm 2018 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T06:36:02+00:00",
+  "finished_at": "2026-08-22T06:36:05+00:00",
+  "duration_seconds": 3.443901195001672,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BID"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BID"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tỷ lệ dự phòng rủi ro trên dư nợ cho vay khách hàng vào cuối phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BID",
+        "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+        "matched_text": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "HPX",
+        "company_name": "CTCP Đầu tư Hải Phát",
+        "matched_text": "Đầu tư và Phát",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

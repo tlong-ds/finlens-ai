@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": 514,
+  "question": "Trong các năm 2015, 2016, 2017, 2018 và 2019, số dư khách hàng mua căn hộ trả tiền trước cuối năm của công ty mẹ CTCP Tập đoàn Hà Đô tại năm có lưu chuyển tiền thuần từ hoạt động tài chính thấp nhất là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:35:52+00:00",
+  "finished_at": "2026-08-22T06:35:54+00:00",
+  "duration_seconds": 2.0931233640003484,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HDG"
+    ],
+    "year": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HDG"
+    ],
+    "year": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "balance_sheet",
+      "cash_flow"
+    ]
+  },
+  "semantic_query": "Trong các , , , và , số dư khách hàng mua căn hộ trả tiền trước cuối tại có lưu chuyển tiền thuần từ hoạt động tài chính thấp nhất tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HDG",
+        "company_name": "CTCP Tập đoàn Hà Đô",
+        "matched_text": "CTCP Tập đoàn Hà Đô",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "balance_sheet",
+            "cash_flow"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

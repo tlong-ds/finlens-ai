@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "id": 764,
+  "question": "Khoản chênh lệch số dư Quỹ đầu tư phát triển cuối năm 2015 giữa Tập đoàn Công nghiệp Cao su Việt Nam và Tổng công ty Phân bón và Hóa chất Dầu khí là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T06:36:06+00:00",
+  "finished_at": "2026-08-22T06:36:08+00:00",
+  "duration_seconds": 2.2378078999972786,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GVR",
+      "DPM"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DPM",
+      "GVR"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Khoản chênh lệch số dư Quỹ đầu tư phát triển cuối giữa và nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "Phân bón và Hóa chất Dầu khí",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "GVR",
+        "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+        "matched_text": "Công nghiệp Cao su Việt Nam",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "VNM",
+        "company_name": "CTCP Sữa Việt Nam",
+        "matched_text": "su Việt Nam",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "HPX",
+        "company_name": "CTCP Đầu tư Hải Phát",
+        "matched_text": "đầu tư phát",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c05",
+        "ticker": "BID",
+        "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+        "matched_text": "đầu tư phát triển cuối năm",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

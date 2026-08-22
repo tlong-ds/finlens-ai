@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": 578,
+  "question": "Tổng số dư trả trước cho người bán ngắn hạn của công ty mẹ CTCP Nông nghiệp BAF Việt Nam cuối năm 2025 trừ đi mức cuối năm 2022 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:35:56+00:00",
+  "finished_at": "2026-08-22T06:35:59+00:00",
+  "duration_seconds": 2.3504712599969935,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BAF"
+    ],
+    "year": [
+      2025,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BAF"
+    ],
+    "year": [
+      2025,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Tổng số dư trả trước cho người bán ngắn hạn CTCP Nông nghiệp Việt Nam cuối trừ đi mức cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BAF",
+        "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+        "matched_text": "BAF",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2025,
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

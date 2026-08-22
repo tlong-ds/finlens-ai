@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": 495,
+  "question": "Trong các năm 2018, 2020, 2021 và 2022, tổng tiền thuê tối thiểu phải trả theo các hợp đồng thuê hoạt động không được hủy ngang của Tập đoàn Dệt May Việt Nam là bao nhiêu tỷ đồng tại năm có số dư cuối năm của các khoản phải thu ngắn hạn khác từ các bên liên quan lớn nhất?",
+  "started_at": "2026-08-22T06:35:52+00:00",
+  "finished_at": "2026-08-22T06:35:54+00:00",
+  "duration_seconds": 2.7991064130037557,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VGT"
+    ],
+    "year": [
+      2018,
+      2020,
+      2021,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VGT"
+    ],
+    "year": [
+      2018,
+      2020,
+      2021,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet",
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Trong các , , và , tổng tiền thuê tối thiểu phải trả theo các hợp đồng thuê hoạt động không được hủy ngang tỷ đồng tại có số dư cuối các khoản phải thu ngắn hạn khác từ các bên liên quan lớn nhất",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VGT",
+        "company_name": "Tập đoàn Dệt May Việt Nam",
+        "matched_text": "Tập đoàn Dệt May Việt Nam",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018,
+            2020,
+            2021,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet",
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

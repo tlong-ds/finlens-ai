@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": 683,
+  "question": "Kết quả thuần từ hoạt động dịch vụ của Ngân hàng TMCP Quốc Dân trong năm tài chính 2015 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T06:36:01+00:00",
+  "finished_at": "2026-08-22T06:36:03+00:00",
+  "duration_seconds": 1.6368751130066812,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "income_statement"
+    ]
+  },
+  "semantic_query": "Kết quả thuần từ hoạt động dịch vụ trong tài chính tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "matched_text": "Ngân hàng TMCP Quốc Dân",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "income_statement"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}

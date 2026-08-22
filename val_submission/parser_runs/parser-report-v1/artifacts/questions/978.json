@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": 978,
+  "question": "Trong các năm 2020, 2022 và 2025, năm nào CTCP Tập đoàn Đầu tư Địa ốc No Va có số dư chi phí xây dựng phải trả ngắn hạn cao nhất?",
+  "started_at": "2026-08-22T06:36:23+00:00",
+  "finished_at": "2026-08-22T06:36:25+00:00",
+  "duration_seconds": 1.304978004998702,
+  "provider_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "NVL"
+    ],
+    "year": [
+      2020,
+      2022,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "NVL"
+    ],
+    "year": [
+      2020,
+      2022,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ],
+    "table_type": [
+      "balance_sheet"
+    ]
+  },
+  "semantic_query": "Trong các , và , nào có số dư chi phí xây dựng phải trả ngắn hạn cao nhất",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "NVL",
+        "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+        "matched_text": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2022,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ],
+          "table_type": [
+            "balance_sheet"
+          ]
+        },
+        "validation_error": null,
+        "table_type_scalar_coerced": false
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "error": null
+}
