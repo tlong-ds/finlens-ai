@@ -1,0 +1,1090 @@
+{
+  "schema_version": 1,
+  "id": 838,
+  "question": "Trong các mốc cuối năm 2017, 2018, 2020, 2021 và 2024, MSN có số dư Đầu tư tài chính dài hạn cao nhất là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T13:38:56+00:00",
+  "finished_at": "2026-08-22T13:38:57+00:00",
+  "duration_seconds": 0.3459828820050461,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MSN_financial_statements_2017_consolidated",
+      "MSN_financial_statements_2018_consolidated",
+      "MSN_financial_statements_2020_consolidated",
+      "MSN_financial_statements_2021_consolidated",
+      "MSN_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "MSN_financial_statements_2017_consolidated|133",
+      "MSN_financial_statements_2018_consolidated|189",
+      "MSN_financial_statements_2020_consolidated|152",
+      "MSN_financial_statements_2021_consolidated|233",
+      "MSN_financial_statements_2024_consolidated|179"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong các mốc cuối , , , và , có số dư Đầu tư tài chính dài hạn cao nhất nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "matched_text": "MSN",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017,
+            2018,
+            2020,
+            2021,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Trong các mốc cuối , , , và , có số dư Đầu tư tài chính dài hạn cao nhất nghìn tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "MSN",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MSN"
+          ],
+          "year": [
+            2017,
+            2018,
+            2020,
+            2021,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_37",
+        "retrieval_score": 0.8682528,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_37",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1591
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_23",
+        "retrieval_score": 0.86198056,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_23",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1096
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_41",
+        "retrieval_score": 0.86188847,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_41",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1667
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_3",
+        "retrieval_score": 0.8606969,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_3",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 152
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_63",
+        "retrieval_score": 0.8582329,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_63",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2073
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_71",
+        "retrieval_score": 0.8577136,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_71",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2146
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_23",
+        "retrieval_score": 0.8557949,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_23",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1137
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_31",
+        "retrieval_score": 0.8551693,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_31",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1434
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_94",
+        "retrieval_score": 0.8527282,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_94",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2609
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_23",
+        "retrieval_score": 0.8525553,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_23",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1329
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_86",
+        "retrieval_score": 0.85186374,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_86",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2378
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_51",
+        "retrieval_score": 0.8515955,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_51",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1843
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_75",
+        "retrieval_score": 0.85132426,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_75",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2231
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_49",
+        "retrieval_score": 0.85102874,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_49",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1831
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_67",
+        "retrieval_score": 0.8507,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_67",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2005
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_25",
+        "retrieval_score": 0.85051894,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_25",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1172
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_95",
+        "retrieval_score": 0.85031706,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_95",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2638
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_112",
+        "retrieval_score": 0.8499211,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_112",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2840
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_54",
+        "retrieval_score": 0.84864604,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_54",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1569
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_41",
+        "retrieval_score": 0.8485775,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_41",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1397
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_93",
+        "retrieval_score": 0.84837914,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_93",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2494
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_32",
+        "retrieval_score": 0.8481664,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_32",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1258
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_77",
+        "retrieval_score": 0.84791636,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_77",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1931
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_27",
+        "retrieval_score": 0.84757775,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_27",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1351
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_55",
+        "retrieval_score": 0.8464837,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_55",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1831
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_28",
+        "retrieval_score": 0.8461474,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_28",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1378
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_54",
+        "retrieval_score": 0.8459786,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_54",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1565
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_2",
+        "retrieval_score": 0.8459405,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_2",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 119
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.8459405,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_10",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 219
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_1",
+        "retrieval_score": 0.8459405,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_1",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 175
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_33",
+        "retrieval_score": 0.8458497,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_33",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1457
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_85",
+        "retrieval_score": 0.8448843,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_85",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2350
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_27",
+        "retrieval_score": 0.84476733,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_27",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1201
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_11",
+        "retrieval_score": 0.84449065,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_11",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 233
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_3",
+        "retrieval_score": 0.84449065,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_3",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 179
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_76",
+        "retrieval_score": 0.8443734,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_76",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2239
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_54",
+        "retrieval_score": 0.8439033,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_54",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1893
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_77",
+        "retrieval_score": 0.84367144,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_77",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1954
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_100",
+        "retrieval_score": 0.84340703,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_100",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2697
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_9",
+        "retrieval_score": 0.8433213,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_9",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 243
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_54",
+        "retrieval_score": 0.8433138,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_54",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1812
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_3",
+        "retrieval_score": 0.84292,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_3",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 133
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "MSN_financial_statements_2018_consolidated_table_2",
+        "retrieval_score": 0.84292,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2018_consolidated_table_2",
+          "doc_id": "MSN_financial_statements_2018_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 189
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_33",
+        "retrieval_score": 0.8428749,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_33",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1277
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_37",
+        "retrieval_score": 0.84266114,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_37",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1520
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_64",
+        "retrieval_score": 0.84261906,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_64",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1948
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "MSN_financial_statements_2020_consolidated_table_83",
+        "retrieval_score": 0.8425043,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2020_consolidated_table_83",
+          "doc_id": "MSN_financial_statements_2020_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2351
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "MSN_financial_statements_2024_consolidated_table_50",
+        "retrieval_score": 0.84234905,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2024_consolidated_table_50",
+          "doc_id": "MSN_financial_statements_2024_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1839
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "MSN_financial_statements_2021_consolidated_table_81",
+        "retrieval_score": 0.84198654,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2021_consolidated_table_81",
+          "doc_id": "MSN_financial_statements_2021_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2293
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "MSN_financial_statements_2017_consolidated_table_70",
+        "retrieval_score": 0.84183884,
+        "metadata": {
+          "table_id": "MSN_financial_statements_2017_consolidated_table_70",
+          "doc_id": "MSN_financial_statements_2017_consolidated",
+          "ticker": "MSN",
+          "company_name": "CTCP Tập đoàn Masan",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1846
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "MSN_financial_statements_2024_consolidated",
+            "MSN_financial_statements_2017_consolidated",
+            "MSN_financial_statements_2021_consolidated",
+            "MSN_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "MSN_financial_statements_2024_consolidated|1591",
+            "MSN_financial_statements_2017_consolidated|1096",
+            "MSN_financial_statements_2021_consolidated|1667",
+            "MSN_financial_statements_2020_consolidated|152",
+            "MSN_financial_statements_2024_consolidated|2073"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.2,
+          "f2": 0.2,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f2": 0.8333333333333334,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "MSN_financial_statements_2024_consolidated",
+            "MSN_financial_statements_2017_consolidated",
+            "MSN_financial_statements_2021_consolidated",
+            "MSN_financial_statements_2020_consolidated",
+            "MSN_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "MSN_financial_statements_2024_consolidated|1591",
+            "MSN_financial_statements_2017_consolidated|1096",
+            "MSN_financial_statements_2021_consolidated|1667",
+            "MSN_financial_statements_2020_consolidated|152",
+            "MSN_financial_statements_2024_consolidated|2073",
+            "MSN_financial_statements_2021_consolidated|2146",
+            "MSN_financial_statements_2018_consolidated|1137",
+            "MSN_financial_statements_2020_consolidated|1434",
+            "MSN_financial_statements_2021_consolidated|2609",
+            "MSN_financial_statements_2024_consolidated|1329"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.2,
+          "f2": 0.16666666666666666,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "MSN_financial_statements_2024_consolidated",
+            "MSN_financial_statements_2017_consolidated",
+            "MSN_financial_statements_2021_consolidated",
+            "MSN_financial_statements_2020_consolidated",
+            "MSN_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "MSN_financial_statements_2024_consolidated|1591",
+            "MSN_financial_statements_2017_consolidated|1096",
+            "MSN_financial_statements_2021_consolidated|1667",
+            "MSN_financial_statements_2020_consolidated|152",
+            "MSN_financial_statements_2024_consolidated|2073",
+            "MSN_financial_statements_2021_consolidated|2146",
+            "MSN_financial_statements_2018_consolidated|1137",
+            "MSN_financial_statements_2020_consolidated|1434",
+            "MSN_financial_statements_2021_consolidated|2609",
+            "MSN_financial_statements_2024_consolidated|1329",
+            "MSN_financial_statements_2020_consolidated|2378",
+            "MSN_financial_statements_2024_consolidated|1843",
+            "MSN_financial_statements_2020_consolidated|2231",
+            "MSN_financial_statements_2024_consolidated|1831",
+            "MSN_financial_statements_2020_consolidated|2005",
+            "MSN_financial_statements_2018_consolidated|1172",
+            "MSN_financial_statements_2021_consolidated|2638",
+            "MSN_financial_statements_2021_consolidated|2840",
+            "MSN_financial_statements_2018_consolidated|1569",
+            "MSN_financial_statements_2017_consolidated|1397"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 0.2,
+          "f2": 0.125,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "MSN_financial_statements_2024_consolidated",
+            "MSN_financial_statements_2017_consolidated",
+            "MSN_financial_statements_2021_consolidated",
+            "MSN_financial_statements_2020_consolidated",
+            "MSN_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "MSN_financial_statements_2024_consolidated|1591",
+            "MSN_financial_statements_2017_consolidated|1096",
+            "MSN_financial_statements_2021_consolidated|1667",
+            "MSN_financial_statements_2020_consolidated|152",
+            "MSN_financial_statements_2024_consolidated|2073",
+            "MSN_financial_statements_2021_consolidated|2146",
+            "MSN_financial_statements_2018_consolidated|1137",
+            "MSN_financial_statements_2020_consolidated|1434",
+            "MSN_financial_statements_2021_consolidated|2609",
+            "MSN_financial_statements_2024_consolidated|1329",
+            "MSN_financial_statements_2020_consolidated|2378",
+            "MSN_financial_statements_2024_consolidated|1843",
+            "MSN_financial_statements_2020_consolidated|2231",
+            "MSN_financial_statements_2024_consolidated|1831",
+            "MSN_financial_statements_2020_consolidated|2005",
+            "MSN_financial_statements_2018_consolidated|1172",
+            "MSN_financial_statements_2021_consolidated|2638",
+            "MSN_financial_statements_2021_consolidated|2840",
+            "MSN_financial_statements_2018_consolidated|1569",
+            "MSN_financial_statements_2017_consolidated|1397",
+            "MSN_financial_statements_2020_consolidated|2494",
+            "MSN_financial_statements_2017_consolidated|1258",
+            "MSN_financial_statements_2018_consolidated|1931",
+            "MSN_financial_statements_2020_consolidated|1351",
+            "MSN_financial_statements_2020_consolidated|1831",
+            "MSN_financial_statements_2020_consolidated|1378",
+            "MSN_financial_statements_2017_consolidated|1565",
+            "MSN_financial_statements_2017_consolidated|119",
+            "MSN_financial_statements_2021_consolidated|219",
+            "MSN_financial_statements_2018_consolidated|175",
+            "MSN_financial_statements_2020_consolidated|1457",
+            "MSN_financial_statements_2021_consolidated|2350",
+            "MSN_financial_statements_2018_consolidated|1201",
+            "MSN_financial_statements_2021_consolidated|233",
+            "MSN_financial_statements_2024_consolidated|179",
+            "MSN_financial_statements_2020_consolidated|2239",
+            "MSN_financial_statements_2024_consolidated|1893",
+            "MSN_financial_statements_2017_consolidated|1954",
+            "MSN_financial_statements_2021_consolidated|2697",
+            "MSN_financial_statements_2017_consolidated|243",
+            "MSN_financial_statements_2020_consolidated|1812",
+            "MSN_financial_statements_2017_consolidated|133",
+            "MSN_financial_statements_2018_consolidated|189",
+            "MSN_financial_statements_2017_consolidated|1277",
+            "MSN_financial_statements_2020_consolidated|1520",
+            "MSN_financial_statements_2020_consolidated|1948",
+            "MSN_financial_statements_2020_consolidated|2351",
+            "MSN_financial_statements_2024_consolidated|1839",
+            "MSN_financial_statements_2021_consolidated|2293",
+            "MSN_financial_statements_2017_consolidated|1846"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

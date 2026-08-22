@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 49,
+  "question": "Chi phí dịch vụ mua ngoài của CTCP Tập Đoàn PC1 (PC1) năm 2018 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:50:44+00:00",
+  "finished_at": "2026-08-22T13:50:45+00:00",
+  "duration_seconds": 0.8497558419912821,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "PC1"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "PC1_financial_statements_2018_consolidated"
+    ],
+    "relevant_tables": [
+      "PC1_financial_statements_2018_consolidated|1592"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "PC1"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Chi phí dịch vụ mua ngoài CTCP Tập Đoàn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "PC1",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Chi phí dịch vụ mua ngoài CTCP Tập Đoàn tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "PC1",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "PC1"
+          ],
+          "year": [
+            2018
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_65",
+        "retrieval_score": 0.8251287,
+        "retrieval_rank": 1,
+        "dense_score": 0.8251287,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_65",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 1700
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_25",
+        "retrieval_score": 0.82511127,
+        "retrieval_rank": 2,
+        "dense_score": 0.82511127,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_25",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1103
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_7",
+        "retrieval_score": 0.81454384,
+        "retrieval_rank": 3,
+        "dense_score": 0.81454384,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_7",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2018,
+          "start_line": 270
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_34",
+        "retrieval_score": 0.8139874,
+        "retrieval_rank": 4,
+        "dense_score": 0.8139874,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_34",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1329
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_20",
+        "retrieval_score": 0.8127718,
+        "retrieval_rank": 5,
+        "dense_score": 0.8127718,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_20",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1048
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_30",
+        "retrieval_score": 0.8020014,
+        "retrieval_rank": 6,
+        "dense_score": 0.8020014,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_30",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1280
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_24",
+        "retrieval_score": 0.80194056,
+        "retrieval_rank": 7,
+        "dense_score": 0.80194056,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_24",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1090
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_33",
+        "retrieval_score": 0.8009283,
+        "retrieval_rank": 8,
+        "dense_score": 0.8009283,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_33",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1314
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_52",
+        "retrieval_score": 0.79809517,
+        "retrieval_rank": 9,
+        "dense_score": 0.79809517,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_52",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1534
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_19",
+        "retrieval_score": 0.7932912,
+        "retrieval_rank": 10,
+        "dense_score": 0.7932912,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_19",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_55",
+        "retrieval_score": 0.792017,
+        "retrieval_rank": 11,
+        "dense_score": 0.792017,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_55",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_38",
+        "retrieval_score": 0.7916292,
+        "retrieval_rank": 12,
+        "dense_score": 0.7916292,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_38",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1382
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_18",
+        "retrieval_score": 0.79149765,
+        "retrieval_rank": 13,
+        "dense_score": 0.79149765,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_18",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1012
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_54",
+        "retrieval_score": 0.7891832,
+        "retrieval_rank": 14,
+        "dense_score": 0.7891832,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_54",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1542
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_59",
+        "retrieval_score": 0.7884712,
+        "retrieval_rank": 15,
+        "dense_score": 0.7884712,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_59",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1592
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_23",
+        "retrieval_score": 0.7882313,
+        "retrieval_rank": 16,
+        "dense_score": 0.7882313,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_23",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1088
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_9",
+        "retrieval_score": 0.788018,
+        "retrieval_rank": 17,
+        "dense_score": 0.788018,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_9",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 326
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_10",
+        "retrieval_score": 0.78763366,
+        "retrieval_rank": 18,
+        "dense_score": 0.78763366,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_10",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 434
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_53",
+        "retrieval_score": 0.7869147,
+        "retrieval_rank": 19,
+        "dense_score": 0.7869147,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_53",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1538
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_17",
+        "retrieval_score": 0.7857481,
+        "retrieval_rank": 20,
+        "dense_score": 0.7857481,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_17",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 989
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_4",
+        "retrieval_score": 0.78572273,
+        "retrieval_rank": 21,
+        "dense_score": 0.78572273,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_4",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 193
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_8",
+        "retrieval_score": 0.7843171,
+        "retrieval_rank": 22,
+        "dense_score": 0.7843171,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_8",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 305
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_22",
+        "retrieval_score": 0.78369254,
+        "retrieval_rank": 23,
+        "dense_score": 0.78369254,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_22",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1069
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_63",
+        "retrieval_score": 0.78230435,
+        "retrieval_rank": 24,
+        "dense_score": 0.78230435,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_63",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1658
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_21",
+        "retrieval_score": 0.7816814,
+        "retrieval_rank": 25,
+        "dense_score": 0.7816814,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_21",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1052
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_12",
+        "retrieval_score": 0.7814128,
+        "retrieval_rank": 26,
+        "dense_score": 0.7814128,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_12",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 451
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_35",
+        "retrieval_score": 0.7813146,
+        "retrieval_rank": 27,
+        "dense_score": 0.7813146,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_35",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_6",
+        "retrieval_score": 0.78054273,
+        "retrieval_rank": 28,
+        "dense_score": 0.78054273,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_6",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 237
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_56",
+        "retrieval_score": 0.77977395,
+        "retrieval_rank": 29,
+        "dense_score": 0.77977395,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_56",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1563
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_60",
+        "retrieval_score": 0.77937376,
+        "retrieval_rank": 30,
+        "dense_score": 0.77937376,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_60",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1600
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_51",
+        "retrieval_score": 0.77722657,
+        "retrieval_rank": 31,
+        "dense_score": 0.77722657,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_51",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1519
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_5",
+        "retrieval_score": 0.77602893,
+        "retrieval_rank": 32,
+        "dense_score": 0.77602893,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_5",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 216
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_36",
+        "retrieval_score": 0.77563745,
+        "retrieval_rank": 33,
+        "dense_score": 0.77563745,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_36",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1348
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_39",
+        "retrieval_score": 0.7756081,
+        "retrieval_rank": 34,
+        "dense_score": 0.7756081,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_39",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1386
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_11",
+        "retrieval_score": 0.7752819,
+        "retrieval_rank": 35,
+        "dense_score": 0.7752819,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_11",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 447
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_26",
+        "retrieval_score": 0.7730094,
+        "retrieval_rank": 36,
+        "dense_score": 0.7730094,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_26",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_48",
+        "retrieval_score": 0.7719502,
+        "retrieval_rank": 37,
+        "dense_score": 0.7719502,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_48",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1496
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_57",
+        "retrieval_score": 0.769916,
+        "retrieval_rank": 38,
+        "dense_score": 0.769916,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_57",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1567
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_49",
+        "retrieval_score": 0.7681955,
+        "retrieval_rank": 39,
+        "dense_score": 0.7681955,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_49",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1511
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_61",
+        "retrieval_score": 0.7681775,
+        "retrieval_rank": 40,
+        "dense_score": 0.7681775,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_61",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1615
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_62",
+        "retrieval_score": 0.76597524,
+        "retrieval_rank": 41,
+        "dense_score": 0.76597524,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_62",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1650
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_45",
+        "retrieval_score": 0.76495486,
+        "retrieval_rank": 42,
+        "dense_score": 0.76495486,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_45",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 1475
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_40",
+        "retrieval_score": 0.7647389,
+        "retrieval_rank": 43,
+        "dense_score": 0.7647389,
+        "dense_rank": 43,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_40",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1390
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_14",
+        "retrieval_score": 0.7645346,
+        "retrieval_rank": 44,
+        "dense_score": 0.7645346,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_14",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 960
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_66",
+        "retrieval_score": 0.7634914,
+        "retrieval_rank": 45,
+        "dense_score": 0.7634914,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_66",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1723
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_15",
+        "retrieval_score": 0.7630719,
+        "retrieval_rank": 46,
+        "dense_score": 0.7630719,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_15",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 964
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_58",
+        "retrieval_score": 0.7630507,
+        "retrieval_rank": 47,
+        "dense_score": 0.7630507,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_58",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2018,
+          "start_line": 1584
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_47",
+        "retrieval_score": 0.7625638,
+        "retrieval_rank": 48,
+        "dense_score": 0.7625638,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_47",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1492
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_13",
+        "retrieval_score": 0.7562055,
+        "retrieval_rank": 49,
+        "dense_score": 0.7562055,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_13",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 629
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "PC1_financial_statements_2018_consolidated_table_32",
+        "retrieval_score": 0.75538564,
+        "retrieval_rank": 50,
+        "dense_score": 0.75538564,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "PC1_financial_statements_2018_consolidated_table_32",
+          "doc_id": "PC1_financial_statements_2018_consolidated",
+          "ticker": "PC1",
+          "company_name": "CTCP Tập Đoàn PC1",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1310
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "PC1_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "PC1_financial_statements_2018_consolidated|1700",
+            "PC1_financial_statements_2018_consolidated|1103",
+            "PC1_financial_statements_2018_consolidated|270",
+            "PC1_financial_statements_2018_consolidated|1329",
+            "PC1_financial_statements_2018_consolidated|1048"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "PC1_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "PC1_financial_statements_2018_consolidated|1700",
+            "PC1_financial_statements_2018_consolidated|1103",
+            "PC1_financial_statements_2018_consolidated|270",
+            "PC1_financial_statements_2018_consolidated|1329",
+            "PC1_financial_statements_2018_consolidated|1048",
+            "PC1_financial_statements_2018_consolidated|1280",
+            "PC1_financial_statements_2018_consolidated|1090",
+            "PC1_financial_statements_2018_consolidated|1314",
+            "PC1_financial_statements_2018_consolidated|1534",
+            "PC1_financial_statements_2018_consolidated|1033"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "PC1_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "PC1_financial_statements_2018_consolidated|1700",
+            "PC1_financial_statements_2018_consolidated|1103",
+            "PC1_financial_statements_2018_consolidated|270",
+            "PC1_financial_statements_2018_consolidated|1329",
+            "PC1_financial_statements_2018_consolidated|1048",
+            "PC1_financial_statements_2018_consolidated|1280",
+            "PC1_financial_statements_2018_consolidated|1090",
+            "PC1_financial_statements_2018_consolidated|1314",
+            "PC1_financial_statements_2018_consolidated|1534",
+            "PC1_financial_statements_2018_consolidated|1033",
+            "PC1_financial_statements_2018_consolidated|1546",
+            "PC1_financial_statements_2018_consolidated|1382",
+            "PC1_financial_statements_2018_consolidated|1012",
+            "PC1_financial_statements_2018_consolidated|1542",
+            "PC1_financial_statements_2018_consolidated|1592",
+            "PC1_financial_statements_2018_consolidated|1088",
+            "PC1_financial_statements_2018_consolidated|326",
+            "PC1_financial_statements_2018_consolidated|434",
+            "PC1_financial_statements_2018_consolidated|1538",
+            "PC1_financial_statements_2018_consolidated|989"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "PC1_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "PC1_financial_statements_2018_consolidated|1700",
+            "PC1_financial_statements_2018_consolidated|1103",
+            "PC1_financial_statements_2018_consolidated|270",
+            "PC1_financial_statements_2018_consolidated|1329",
+            "PC1_financial_statements_2018_consolidated|1048",
+            "PC1_financial_statements_2018_consolidated|1280",
+            "PC1_financial_statements_2018_consolidated|1090",
+            "PC1_financial_statements_2018_consolidated|1314",
+            "PC1_financial_statements_2018_consolidated|1534",
+            "PC1_financial_statements_2018_consolidated|1033",
+            "PC1_financial_statements_2018_consolidated|1546",
+            "PC1_financial_statements_2018_consolidated|1382",
+            "PC1_financial_statements_2018_consolidated|1012",
+            "PC1_financial_statements_2018_consolidated|1542",
+            "PC1_financial_statements_2018_consolidated|1592",
+            "PC1_financial_statements_2018_consolidated|1088",
+            "PC1_financial_statements_2018_consolidated|326",
+            "PC1_financial_statements_2018_consolidated|434",
+            "PC1_financial_statements_2018_consolidated|1538",
+            "PC1_financial_statements_2018_consolidated|989",
+            "PC1_financial_statements_2018_consolidated|193",
+            "PC1_financial_statements_2018_consolidated|305",
+            "PC1_financial_statements_2018_consolidated|1069",
+            "PC1_financial_statements_2018_consolidated|1658",
+            "PC1_financial_statements_2018_consolidated|1052",
+            "PC1_financial_statements_2018_consolidated|451",
+            "PC1_financial_statements_2018_consolidated|1344",
+            "PC1_financial_statements_2018_consolidated|237",
+            "PC1_financial_statements_2018_consolidated|1563",
+            "PC1_financial_statements_2018_consolidated|1600",
+            "PC1_financial_statements_2018_consolidated|1519",
+            "PC1_financial_statements_2018_consolidated|216",
+            "PC1_financial_statements_2018_consolidated|1348",
+            "PC1_financial_statements_2018_consolidated|1386",
+            "PC1_financial_statements_2018_consolidated|447",
+            "PC1_financial_statements_2018_consolidated|1135",
+            "PC1_financial_statements_2018_consolidated|1496",
+            "PC1_financial_statements_2018_consolidated|1567",
+            "PC1_financial_statements_2018_consolidated|1511",
+            "PC1_financial_statements_2018_consolidated|1615",
+            "PC1_financial_statements_2018_consolidated|1650",
+            "PC1_financial_statements_2018_consolidated|1475",
+            "PC1_financial_statements_2018_consolidated|1390",
+            "PC1_financial_statements_2018_consolidated|960",
+            "PC1_financial_statements_2018_consolidated|1723",
+            "PC1_financial_statements_2018_consolidated|964",
+            "PC1_financial_statements_2018_consolidated|1584",
+            "PC1_financial_statements_2018_consolidated|1492",
+            "PC1_financial_statements_2018_consolidated|629",
+            "PC1_financial_statements_2018_consolidated|1310"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1075 @@
+{
+  "schema_version": 1,
+  "id": 978,
+  "question": "Trong các năm 2020, 2022 và 2025, năm nào CTCP Tập đoàn Đầu tư Địa ốc No Va có số dư chi phí xây dựng phải trả ngắn hạn cao nhất?",
+  "started_at": "2026-08-22T13:38:59+00:00",
+  "finished_at": "2026-08-22T13:39:00+00:00",
+  "duration_seconds": 0.32185089400445577,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "NVL"
+    ],
+    "year": [
+      2020,
+      2022,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "NVL_financial_statements_2020_consolidated",
+      "NVL_financial_statements_2022_consolidated",
+      "NVL_financial_statements_2025_consolidated"
+    ],
+    "relevant_tables": [
+      "NVL_financial_statements_2020_consolidated|1575",
+      "NVL_financial_statements_2022_consolidated|1612",
+      "NVL_financial_statements_2025_consolidated|2264"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "NVL"
+    ],
+    "year": [
+      2020,
+      2022,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong các , và , nào có số dư chi phí xây dựng phải trả ngắn hạn cao nhất",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "NVL",
+        "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+        "matched_text": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2022,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Trong các , và , nào có số dư chi phí xây dựng phải trả ngắn hạn cao nhất",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "NVL",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "NVL"
+          ],
+          "year": [
+            2020,
+            2022,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_41",
+        "retrieval_score": 0.87579876,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_41",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2141
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_47",
+        "retrieval_score": 0.86833745,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_47",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2264
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_48",
+        "retrieval_score": 0.8681752,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_48",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2285
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_26",
+        "retrieval_score": 0.8649963,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_26",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1909
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_8",
+        "retrieval_score": 0.86491746,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_8",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 488
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.86476004,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_8",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 232
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_29",
+        "retrieval_score": 0.8631596,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_29",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1959
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_33",
+        "retrieval_score": 0.85894126,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_33",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2029
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_45",
+        "retrieval_score": 0.8587034,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_45",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1460
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_41",
+        "retrieval_score": 0.858635,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_41",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1408
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.8577843,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_7",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 217
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_83",
+        "retrieval_score": 0.857428,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_83",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 3353
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_52",
+        "retrieval_score": 0.85735875,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_52",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1444
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_54",
+        "retrieval_score": 0.85733217,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_54",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1457
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_9",
+        "retrieval_score": 0.8560787,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_9",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 505
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_57",
+        "retrieval_score": 0.854838,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_57",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1612
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_66",
+        "retrieval_score": 0.854838,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_66",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1575
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.85329723,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_7",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 219
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.85329723,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_6",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 203
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_7",
+        "retrieval_score": 0.85329723,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_7",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 467
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.85309005,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_8",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 230
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.8514615,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_9",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 247
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_31",
+        "retrieval_score": 0.85059804,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_31",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1992
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_27",
+        "retrieval_score": 0.8496568,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_27",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1928
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_95",
+        "retrieval_score": 0.84710443,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_95",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2208
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_44",
+        "retrieval_score": 0.84530675,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_44",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2178
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_39",
+        "retrieval_score": 0.844291,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_39",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2108
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_97",
+        "retrieval_score": 0.84428054,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_97",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2457
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_48",
+        "retrieval_score": 0.843786,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_48",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_42",
+        "retrieval_score": 0.84178674,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_42",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2147
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_13",
+        "retrieval_score": 0.8414249,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_13",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 349
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_49",
+        "retrieval_score": 0.84134823,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_49",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1409
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_42",
+        "retrieval_score": 0.84134823,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_42",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_37",
+        "retrieval_score": 0.84117925,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_37",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1354
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_46",
+        "retrieval_score": 0.8404045,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_46",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1464
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_44",
+        "retrieval_score": 0.83866596,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_44",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1456
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_92",
+        "retrieval_score": 0.8381726,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_92",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2416
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_72",
+        "retrieval_score": 0.8380787,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_72",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 3164
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_50",
+        "retrieval_score": 0.837996,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_50",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2318
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "NVL_financial_statements_2022_consolidated_table_77",
+        "retrieval_score": 0.8374583,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2022_consolidated_table_77",
+          "doc_id": "NVL_financial_statements_2022_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2251
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_30",
+        "retrieval_score": 0.83722603,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_30",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1973
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_55",
+        "retrieval_score": 0.8370574,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_55",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2936
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_102",
+        "retrieval_score": 0.8360808,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_102",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2254
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_68",
+        "retrieval_score": 0.83581483,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_68",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1585
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_66",
+        "retrieval_score": 0.83569145,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_66",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 3110
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_83",
+        "retrieval_score": 0.83559346,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_83",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2074
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_68",
+        "retrieval_score": 0.83531165,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_68",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 3133
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_92",
+        "retrieval_score": 0.8351249,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_92",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2181
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "NVL_financial_statements_2020_consolidated_table_57",
+        "retrieval_score": 0.83450866,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2020_consolidated_table_57",
+          "doc_id": "NVL_financial_statements_2020_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1491
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "NVL_financial_statements_2025_consolidated_table_45",
+        "retrieval_score": 0.8331518,
+        "metadata": {
+          "table_id": "NVL_financial_statements_2025_consolidated_table_45",
+          "doc_id": "NVL_financial_statements_2025_consolidated",
+          "ticker": "NVL",
+          "company_name": "CTCP Tập đoàn Đầu tư Địa ốc No Va",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2184
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "NVL_financial_statements_2025_consolidated"
+          ],
+          "tables": [
+            "NVL_financial_statements_2025_consolidated|2141",
+            "NVL_financial_statements_2025_consolidated|2264",
+            "NVL_financial_statements_2025_consolidated|2285",
+            "NVL_financial_statements_2025_consolidated|1909",
+            "NVL_financial_statements_2025_consolidated|488"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.3333333333333333,
+          "f2": 0.29411764705882354,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f2": 0.3846153846153846,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "NVL_financial_statements_2025_consolidated",
+            "NVL_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "NVL_financial_statements_2025_consolidated|2141",
+            "NVL_financial_statements_2025_consolidated|2264",
+            "NVL_financial_statements_2025_consolidated|2285",
+            "NVL_financial_statements_2025_consolidated|1909",
+            "NVL_financial_statements_2025_consolidated|488",
+            "NVL_financial_statements_2022_consolidated|232",
+            "NVL_financial_statements_2025_consolidated|1959",
+            "NVL_financial_statements_2025_consolidated|2029",
+            "NVL_financial_statements_2022_consolidated|1460",
+            "NVL_financial_statements_2022_consolidated|1408"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.3333333333333333,
+          "f2": 0.22727272727272724,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f2": 0.7142857142857142,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "NVL_financial_statements_2025_consolidated",
+            "NVL_financial_statements_2022_consolidated",
+            "NVL_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "NVL_financial_statements_2025_consolidated|2141",
+            "NVL_financial_statements_2025_consolidated|2264",
+            "NVL_financial_statements_2025_consolidated|2285",
+            "NVL_financial_statements_2025_consolidated|1909",
+            "NVL_financial_statements_2025_consolidated|488",
+            "NVL_financial_statements_2022_consolidated|232",
+            "NVL_financial_statements_2025_consolidated|1959",
+            "NVL_financial_statements_2025_consolidated|2029",
+            "NVL_financial_statements_2022_consolidated|1460",
+            "NVL_financial_statements_2022_consolidated|1408",
+            "NVL_financial_statements_2020_consolidated|217",
+            "NVL_financial_statements_2025_consolidated|3353",
+            "NVL_financial_statements_2020_consolidated|1444",
+            "NVL_financial_statements_2020_consolidated|1457",
+            "NVL_financial_statements_2025_consolidated|505",
+            "NVL_financial_statements_2022_consolidated|1612",
+            "NVL_financial_statements_2020_consolidated|1575",
+            "NVL_financial_statements_2022_consolidated|219",
+            "NVL_financial_statements_2020_consolidated|203",
+            "NVL_financial_statements_2025_consolidated|467"
+          ]
+        },
+        "tables": {
+          "precision": 0.15,
+          "recall": 1.0,
+          "f2": 0.46875,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "NVL_financial_statements_2025_consolidated",
+            "NVL_financial_statements_2022_consolidated",
+            "NVL_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "NVL_financial_statements_2025_consolidated|2141",
+            "NVL_financial_statements_2025_consolidated|2264",
+            "NVL_financial_statements_2025_consolidated|2285",
+            "NVL_financial_statements_2025_consolidated|1909",
+            "NVL_financial_statements_2025_consolidated|488",
+            "NVL_financial_statements_2022_consolidated|232",
+            "NVL_financial_statements_2025_consolidated|1959",
+            "NVL_financial_statements_2025_consolidated|2029",
+            "NVL_financial_statements_2022_consolidated|1460",
+            "NVL_financial_statements_2022_consolidated|1408",
+            "NVL_financial_statements_2020_consolidated|217",
+            "NVL_financial_statements_2025_consolidated|3353",
+            "NVL_financial_statements_2020_consolidated|1444",
+            "NVL_financial_statements_2020_consolidated|1457",
+            "NVL_financial_statements_2025_consolidated|505",
+            "NVL_financial_statements_2022_consolidated|1612",
+            "NVL_financial_statements_2020_consolidated|1575",
+            "NVL_financial_statements_2022_consolidated|219",
+            "NVL_financial_statements_2020_consolidated|203",
+            "NVL_financial_statements_2025_consolidated|467",
+            "NVL_financial_statements_2020_consolidated|230",
+            "NVL_financial_statements_2022_consolidated|247",
+            "NVL_financial_statements_2025_consolidated|1992",
+            "NVL_financial_statements_2025_consolidated|1928",
+            "NVL_financial_statements_2020_consolidated|2208",
+            "NVL_financial_statements_2025_consolidated|2178",
+            "NVL_financial_statements_2025_consolidated|2108",
+            "NVL_financial_statements_2022_consolidated|2457",
+            "NVL_financial_statements_2020_consolidated|1394",
+            "NVL_financial_statements_2025_consolidated|2147",
+            "NVL_financial_statements_2020_consolidated|349",
+            "NVL_financial_statements_2020_consolidated|1409",
+            "NVL_financial_statements_2022_consolidated|1421",
+            "NVL_financial_statements_2022_consolidated|1354",
+            "NVL_financial_statements_2022_consolidated|1464",
+            "NVL_financial_statements_2022_consolidated|1456",
+            "NVL_financial_statements_2022_consolidated|2416",
+            "NVL_financial_statements_2025_consolidated|3164",
+            "NVL_financial_statements_2025_consolidated|2318",
+            "NVL_financial_statements_2022_consolidated|2251",
+            "NVL_financial_statements_2025_consolidated|1973",
+            "NVL_financial_statements_2025_consolidated|2936",
+            "NVL_financial_statements_2020_consolidated|2254",
+            "NVL_financial_statements_2020_consolidated|1585",
+            "NVL_financial_statements_2025_consolidated|3110",
+            "NVL_financial_statements_2020_consolidated|2074",
+            "NVL_financial_statements_2025_consolidated|3133",
+            "NVL_financial_statements_2020_consolidated|2181",
+            "NVL_financial_statements_2020_consolidated|1491",
+            "NVL_financial_statements_2025_consolidated|2184"
+          ]
+        },
+        "tables": {
+          "precision": 0.06,
+          "recall": 1.0,
+          "f2": 0.24193548387096772,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

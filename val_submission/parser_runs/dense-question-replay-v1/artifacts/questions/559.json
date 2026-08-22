@@ -1,0 +1,1142 @@
+{
+  "schema_version": 1,
+  "id": 559,
+  "question": "Trong nhóm DCM, DPM và PRT, xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương ở cả năm 2019 và 2020, trung bình tỷ lệ thay đổi doanh thu thuần năm 2020 so với năm 2019 là bao nhiêu %?",
+  "started_at": "2026-08-22T13:39:23+00:00",
+  "finished_at": "2026-08-22T13:39:24+00:00",
+  "duration_seconds": 0.9441397189948475,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DCM",
+      "DPM",
+      "PRT"
+    ],
+    "year": [
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DCM_financial_statements_2019_consolidated",
+      "DCM_financial_statements_2020_consolidated",
+      "DPM_financial_statements_2019_consolidated",
+      "DPM_financial_statements_2020_consolidated",
+      "PRT_financial_statements_2019_consolidated",
+      "PRT_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "DCM_financial_statements_2019_consolidated|424",
+      "DCM_financial_statements_2020_consolidated|523",
+      "DPM_financial_statements_2019_consolidated|375",
+      "DPM_financial_statements_2020_consolidated|384",
+      "PRT_financial_statements_2019_consolidated|330",
+      "PRT_financial_statements_2020_consolidated|282",
+      "DCM_financial_statements_2019_consolidated|391",
+      "DCM_financial_statements_2020_consolidated|470",
+      "DPM_financial_statements_2019_consolidated|337",
+      "DPM_financial_statements_2020_consolidated|351"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DCM",
+      "DPM",
+      "PRT"
+    ],
+    "year": [
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong nhóm , và , xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương ở cả và , trung bình tỷ lệ thay đổi doanh thu thuần so với %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DCM",
+        "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+        "matched_text": "DCM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "DPM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "PRT",
+        "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+        "matched_text": "PRT",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Trong nhóm DCM, DPM và PRT, xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương ở cả năm 2019 và 2020, trung bình tỷ lệ thay đổi doanh thu thuần năm 2020 so với năm 2019 là bao nhiêu %?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DCM",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DCM"
+          ],
+          "year": [
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "DPM",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DPM"
+          ],
+          "year": [
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "PRT",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "PRT"
+          ],
+          "year": [
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_8",
+        "retrieval_score": 0.8645128,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_8",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 424
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.8665042,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_8",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 384
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_9",
+        "retrieval_score": 0.85420877,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_9",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 303
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.84947497,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_9",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 451
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_44",
+        "retrieval_score": 0.85086447,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_44",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1228
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_8",
+        "retrieval_score": 0.84947497,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_8",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 353
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_39",
+        "retrieval_score": 0.8487669,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_39",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1412
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.84947497,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_7",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 402
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_74",
+        "retrieval_score": 0.84802127,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_74",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2176
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.84424865,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_7",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 470
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.8460667,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_7",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 351
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.84794563,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_8",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 282
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.84331894,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_7",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 391
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_5",
+        "retrieval_score": 0.8458393,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_5",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 337
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_70",
+        "retrieval_score": 0.8464928,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_70",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1996
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_36",
+        "retrieval_score": 0.84288234,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_36",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1351
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_50",
+        "retrieval_score": 0.84575236,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_50",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1145
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_69",
+        "retrieval_score": 0.8464928,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_69",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1975
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_40",
+        "retrieval_score": 0.8398697,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_40",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 1414
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_28",
+        "retrieval_score": 0.8422464,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_28",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1049
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_73",
+        "retrieval_score": 0.84627795,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_73",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2161
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_41",
+        "retrieval_score": 0.8397906,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_41",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1103
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_42",
+        "retrieval_score": 0.8411471,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_42",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1091
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_45",
+        "retrieval_score": 0.8421144,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_45",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1704
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.83942014,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_37",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_6",
+        "retrieval_score": 0.8382448,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_6",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 375
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_43",
+        "retrieval_score": 0.8421144,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_43",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1664
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_55",
+        "retrieval_score": 0.8385759,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_55",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_16",
+        "retrieval_score": 0.838012,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_16",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 884
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.84001625,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_7",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 330
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.8376326,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_8",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 523
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_13",
+        "retrieval_score": 0.83727986,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_13",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 775
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.83765084,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_7",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 251
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_50",
+        "retrieval_score": 0.8368153,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_50",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1518
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_40",
+        "retrieval_score": 0.8371277,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_40",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1184
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_6",
+        "retrieval_score": 0.83765084,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_6",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 303
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_35",
+        "retrieval_score": 0.83657986,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_35",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1047
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_12",
+        "retrieval_score": 0.83338207,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_12",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 773
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_50",
+        "retrieval_score": 0.8371973,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_50",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1731
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_34",
+        "retrieval_score": 0.83657986,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_34",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1333
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_59",
+        "retrieval_score": 0.83184874,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_59",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1373
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_46",
+        "retrieval_score": 0.833426,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_46",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1708
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_49",
+        "retrieval_score": 0.8337319,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_49",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1502
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_53",
+        "retrieval_score": 0.83167434,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_53",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1206
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "PRT_financial_statements_2019_consolidated_table_52",
+        "retrieval_score": 0.83188087,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2019_consolidated_table_52",
+          "doc_id": "PRT_financial_statements_2019_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1755
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DCM_financial_statements_2020_consolidated_table_54",
+        "retrieval_score": 0.83137655,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2020_consolidated_table_54",
+          "doc_id": "DCM_financial_statements_2020_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1604
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DPM_financial_statements_2019_consolidated_table_14",
+        "retrieval_score": 0.83142567,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2019_consolidated_table_14",
+          "doc_id": "DPM_financial_statements_2019_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 792
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "PRT_financial_statements_2020_consolidated_table_44",
+        "retrieval_score": 0.83141714,
+        "metadata": {
+          "table_id": "PRT_financial_statements_2020_consolidated_table_44",
+          "doc_id": "PRT_financial_statements_2020_consolidated",
+          "ticker": "PRT",
+          "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1668
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DCM_financial_statements_2019_consolidated_table_30",
+        "retrieval_score": 0.83090585,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2019_consolidated_table_30",
+          "doc_id": "DCM_financial_statements_2019_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 993
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DPM_financial_statements_2020_consolidated_table_58",
+        "retrieval_score": 0.83105433,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2020_consolidated_table_58",
+          "doc_id": "DPM_financial_statements_2020_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1369
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DCM_financial_statements_2019_consolidated",
+            "DPM_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "DCM_financial_statements_2019_consolidated|424",
+            "DPM_financial_statements_2020_consolidated|384",
+            "PRT_financial_statements_2020_consolidated|303",
+            "DCM_financial_statements_2019_consolidated|451",
+            "DPM_financial_statements_2020_consolidated|1228"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.2,
+          "f2": 0.22222222222222224,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DCM_financial_statements_2019_consolidated",
+            "DPM_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2019_consolidated",
+            "DCM_financial_statements_2020_consolidated",
+            "DPM_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "DCM_financial_statements_2019_consolidated|424",
+            "DPM_financial_statements_2020_consolidated|384",
+            "PRT_financial_statements_2020_consolidated|303",
+            "DCM_financial_statements_2019_consolidated|451",
+            "DPM_financial_statements_2020_consolidated|1228",
+            "PRT_financial_statements_2019_consolidated|353",
+            "DCM_financial_statements_2020_consolidated|1412",
+            "DPM_financial_statements_2019_consolidated|402",
+            "PRT_financial_statements_2019_consolidated|2176",
+            "DCM_financial_statements_2020_consolidated|470"
+          ]
+        },
+        "tables": {
+          "precision": 0.3,
+          "recall": 0.3,
+          "f2": 0.3,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DCM_financial_statements_2019_consolidated",
+            "DPM_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2019_consolidated",
+            "DCM_financial_statements_2020_consolidated",
+            "DPM_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "DCM_financial_statements_2019_consolidated|424",
+            "DPM_financial_statements_2020_consolidated|384",
+            "PRT_financial_statements_2020_consolidated|303",
+            "DCM_financial_statements_2019_consolidated|451",
+            "DPM_financial_statements_2020_consolidated|1228",
+            "PRT_financial_statements_2019_consolidated|353",
+            "DCM_financial_statements_2020_consolidated|1412",
+            "DPM_financial_statements_2019_consolidated|402",
+            "PRT_financial_statements_2019_consolidated|2176",
+            "DCM_financial_statements_2020_consolidated|470",
+            "DPM_financial_statements_2020_consolidated|351",
+            "PRT_financial_statements_2020_consolidated|282",
+            "DCM_financial_statements_2019_consolidated|391",
+            "DPM_financial_statements_2019_consolidated|337",
+            "PRT_financial_statements_2019_consolidated|1996",
+            "DCM_financial_statements_2020_consolidated|1351",
+            "DPM_financial_statements_2019_consolidated|1145",
+            "PRT_financial_statements_2020_consolidated|1975",
+            "DCM_financial_statements_2020_consolidated|1414",
+            "DPM_financial_statements_2020_consolidated|1049"
+          ]
+        },
+        "tables": {
+          "precision": 0.35,
+          "recall": 0.7,
+          "f2": 0.5833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DCM_financial_statements_2019_consolidated",
+            "DPM_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2020_consolidated",
+            "PRT_financial_statements_2019_consolidated",
+            "DCM_financial_statements_2020_consolidated",
+            "DPM_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "DCM_financial_statements_2019_consolidated|424",
+            "DPM_financial_statements_2020_consolidated|384",
+            "PRT_financial_statements_2020_consolidated|303",
+            "DCM_financial_statements_2019_consolidated|451",
+            "DPM_financial_statements_2020_consolidated|1228",
+            "PRT_financial_statements_2019_consolidated|353",
+            "DCM_financial_statements_2020_consolidated|1412",
+            "DPM_financial_statements_2019_consolidated|402",
+            "PRT_financial_statements_2019_consolidated|2176",
+            "DCM_financial_statements_2020_consolidated|470",
+            "DPM_financial_statements_2020_consolidated|351",
+            "PRT_financial_statements_2020_consolidated|282",
+            "DCM_financial_statements_2019_consolidated|391",
+            "DPM_financial_statements_2019_consolidated|337",
+            "PRT_financial_statements_2019_consolidated|1996",
+            "DCM_financial_statements_2020_consolidated|1351",
+            "DPM_financial_statements_2019_consolidated|1145",
+            "PRT_financial_statements_2020_consolidated|1975",
+            "DCM_financial_statements_2020_consolidated|1414",
+            "DPM_financial_statements_2020_consolidated|1049",
+            "PRT_financial_statements_2019_consolidated|2161",
+            "DCM_financial_statements_2019_consolidated|1103",
+            "DPM_financial_statements_2019_consolidated|1091",
+            "PRT_financial_statements_2019_consolidated|1704",
+            "DCM_financial_statements_2019_consolidated|1059",
+            "DPM_financial_statements_2019_consolidated|375",
+            "PRT_financial_statements_2020_consolidated|1664",
+            "DCM_financial_statements_2019_consolidated|1235",
+            "DPM_financial_statements_2020_consolidated|884",
+            "PRT_financial_statements_2019_consolidated|330",
+            "DCM_financial_statements_2020_consolidated|523",
+            "DPM_financial_statements_2019_consolidated|775",
+            "PRT_financial_statements_2020_consolidated|251",
+            "DCM_financial_statements_2020_consolidated|1518",
+            "DPM_financial_statements_2020_consolidated|1184",
+            "PRT_financial_statements_2019_consolidated|303",
+            "DCM_financial_statements_2019_consolidated|1047",
+            "DPM_financial_statements_2019_consolidated|773",
+            "PRT_financial_statements_2020_consolidated|1731",
+            "DCM_financial_statements_2020_consolidated|1333",
+            "DPM_financial_statements_2020_consolidated|1373",
+            "PRT_financial_statements_2019_consolidated|1708",
+            "DCM_financial_statements_2020_consolidated|1502",
+            "DPM_financial_statements_2019_consolidated|1206",
+            "PRT_financial_statements_2019_consolidated|1755",
+            "DCM_financial_statements_2020_consolidated|1604",
+            "DPM_financial_statements_2019_consolidated|792",
+            "PRT_financial_statements_2020_consolidated|1668",
+            "DCM_financial_statements_2019_consolidated|993",
+            "DPM_financial_statements_2020_consolidated|1369"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

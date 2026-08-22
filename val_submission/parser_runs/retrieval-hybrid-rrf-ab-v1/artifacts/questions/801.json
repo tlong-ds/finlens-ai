@@ -1,0 +1,1387 @@
+{
+  "schema_version": 1,
+  "id": 801,
+  "question": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:51:23+00:00",
+  "finished_at": "2026-08-22T13:51:24+00:00",
+  "duration_seconds": 0.7777498809882673,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VJC",
+      "VSC"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VJC_financial_statements_2016_consolidated",
+      "VSC_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "VJC_financial_statements_2016_consolidated|198",
+      "VSC_financial_statements_2016_consolidated|166"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VJC",
+      "VSC"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa và đến ngày 31/12/ tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "CTCP Hàng không Vietjet",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "matched_text": "CTCP Container Việt Nam",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa và đến ngày 31/12/ tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VJC",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VJC"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "VSC",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VSC"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_31",
+        "retrieval_score": 0.03225806451612903,
+        "retrieval_rank": 1,
+        "dense_score": 0.8813781,
+        "dense_rank": 2,
+        "bm25_score": 17.912811505933654,
+        "bm25_rank": 2,
+        "rrf_score": 0.03225806451612903,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_31",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 969
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+        "retrieval_score": 0.03177805800756621,
+        "retrieval_rank": 2,
+        "dense_score": 0.8533131,
+        "dense_rank": 5,
+        "bm25_score": 13.778188261160308,
+        "bm25_rank": 1,
+        "rrf_score": 0.03177805800756621,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 166
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+        "retrieval_score": 0.031544957774465976,
+        "retrieval_rank": 3,
+        "dense_score": 0.85552377,
+        "dense_rank": 6,
+        "bm25_score": 18.054548234990328,
+        "bm25_rank": 1,
+        "rrf_score": 0.031544957774465976,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 198
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.031024531024531024,
+        "retrieval_rank": 4,
+        "dense_score": 0.8486645,
+        "dense_rank": 6,
+        "bm25_score": 13.047545555870776,
+        "bm25_rank": 3,
+        "rrf_score": 0.031024531024531024,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_6",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 132
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_40",
+        "retrieval_score": 0.031024531024531024,
+        "retrieval_rank": 5,
+        "dense_score": 0.8627391,
+        "dense_rank": 3,
+        "bm25_score": 10.456447232140182,
+        "bm25_rank": 6,
+        "rrf_score": 0.031024531024531024,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_40",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1057
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_25",
+        "retrieval_score": 0.030621785881252923,
+        "retrieval_rank": 6,
+        "dense_score": 0.8452612,
+        "dense_rank": 9,
+        "bm25_score": 13.664880342200515,
+        "bm25_rank": 2,
+        "rrf_score": 0.030621785881252923,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_25",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 722
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_41",
+        "retrieval_score": 0.030886196246139225,
+        "retrieval_rank": 7,
+        "dense_score": 0.8977442,
+        "dense_rank": 1,
+        "bm25_score": 9.709343551838728,
+        "bm25_rank": 9,
+        "rrf_score": 0.030886196246139225,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_41",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1080
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_31",
+        "retrieval_score": 0.03055037313432836,
+        "retrieval_rank": 8,
+        "dense_score": 0.8535363,
+        "dense_rank": 4,
+        "bm25_score": 6.772324311274925,
+        "bm25_rank": 7,
+        "rrf_score": 0.03055037313432836,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_31",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 780
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_35",
+        "retrieval_score": 0.030090497737556562,
+        "retrieval_rank": 9,
+        "dense_score": 0.8581473,
+        "dense_rank": 5,
+        "bm25_score": 10.25729065524922,
+        "bm25_rank": 8,
+        "rrf_score": 0.030090497737556562,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_35",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1001
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_33",
+        "retrieval_score": 0.0304147465437788,
+        "retrieval_rank": 10,
+        "dense_score": 0.8659841,
+        "dense_rank": 2,
+        "bm25_score": 5.999707484402906,
+        "bm25_rank": 10,
+        "rrf_score": 0.0304147465437788,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_33",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 819
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.02844551282051282,
+        "retrieval_rank": 11,
+        "dense_score": 0.83821905,
+        "dense_rank": 18,
+        "bm25_score": 11.873659701999264,
+        "bm25_rank": 4,
+        "rrf_score": 0.02844551282051282,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_6",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 168
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_38",
+        "retrieval_score": 0.03009207275993712,
+        "retrieval_rank": 12,
+        "dense_score": 0.8669511,
+        "dense_rank": 1,
+        "bm25_score": 4.628149823732205,
+        "bm25_rank": 13,
+        "rrf_score": 0.03009207275993712,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_38",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 900
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_38",
+        "retrieval_score": 0.02803921568627451,
+        "retrieval_rank": 13,
+        "dense_score": 0.8548616,
+        "dense_rank": 8,
+        "bm25_score": 6.413141885738696,
+        "bm25_rank": 15,
+        "rrf_score": 0.02803921568627451,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_38",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1045
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_29",
+        "retrieval_score": 0.029910714285714284,
+        "retrieval_rank": 14,
+        "dense_score": 0.84318525,
+        "dense_rank": 10,
+        "bm25_score": 12.816979969322807,
+        "bm25_rank": 4,
+        "rrf_score": 0.029910714285714284,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_29",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 768
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.027650648360030512,
+        "retrieval_rank": 15,
+        "dense_score": 0.8545385,
+        "dense_rank": 9,
+        "bm25_score": 6.295177504212786,
+        "bm25_rank": 16,
+        "rrf_score": 0.027650648360030512,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_36",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1011
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_24",
+        "retrieval_score": 0.028790389395194696,
+        "retrieval_rank": 16,
+        "dense_score": 0.84604734,
+        "dense_rank": 8,
+        "bm25_score": 5.72227323132401,
+        "bm25_rank": 11,
+        "rrf_score": 0.028790389395194696,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_24",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 701
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_39",
+        "retrieval_score": 0.027598020555767037,
+        "retrieval_rank": 17,
+        "dense_score": 0.8493968,
+        "dense_rank": 11,
+        "bm25_score": 6.471274201227927,
+        "bm25_rank": 14,
+        "rrf_score": 0.027598020555767037,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_39",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1051
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_35",
+        "retrieval_score": 0.028438886647841874,
+        "retrieval_rank": 18,
+        "dense_score": 0.84618914,
+        "dense_rank": 7,
+        "bm25_score": 4.021914861677351,
+        "bm25_rank": 14,
+        "rrf_score": 0.028438886647841874,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_35",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 844
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_17",
+        "retrieval_score": 0.02758751902587519,
+        "retrieval_rank": 19,
+        "dense_score": 0.8487805,
+        "dense_rank": 12,
+        "bm25_score": 6.583622905827573,
+        "bm25_rank": 13,
+        "rrf_score": 0.02758751902587519,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_17",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 778
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.028381642512077296,
+        "retrieval_rank": 20,
+        "dense_score": 0.8386932,
+        "dense_rank": 12,
+        "bm25_score": 6.1312519845262266,
+        "bm25_rank": 9,
+        "rrf_score": 0.028381642512077296,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_30",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 774
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_55",
+        "retrieval_score": 0.026973565905412694,
+        "retrieval_rank": 21,
+        "dense_score": 0.8554054,
+        "dense_rank": 7,
+        "bm25_score": 5.5079237534894325,
+        "bm25_rank": 23,
+        "rrf_score": 0.026973565905412694,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_55",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1276
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_28",
+        "retrieval_score": 0.02728937728937729,
+        "retrieval_rank": 22,
+        "dense_score": 0.82513785,
+        "dense_rank": 24,
+        "bm25_score": 8.726592065022752,
+        "bm25_rank": 5,
+        "rrf_score": 0.02728937728937729,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_28",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 751
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_7",
+        "retrieval_score": 0.0266900790166813,
+        "retrieval_rank": 23,
+        "dense_score": 0.8309009,
+        "dense_rank": 25,
+        "bm25_score": 10.291962337117166,
+        "bm25_rank": 7,
+        "rrf_score": 0.0266900790166813,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_7",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 182
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_10",
+        "retrieval_score": 0.026916221033868093,
+        "retrieval_rank": 24,
+        "dense_score": 0.82501996,
+        "dense_rank": 25,
+        "bm25_score": 7.182643685110035,
+        "bm25_rank": 6,
+        "rrf_score": 0.026916221033868093,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_10",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 219
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_34",
+        "retrieval_score": 0.025859192525859193,
+        "retrieval_rank": 25,
+        "dense_score": 0.84528935,
+        "dense_rank": 14,
+        "bm25_score": 5.797743505987777,
+        "bm25_rank": 21,
+        "rrf_score": 0.025859192525859193,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_34",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 997
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_15",
+        "retrieval_score": 0.02690501986276634,
+        "retrieval_rank": 26,
+        "dense_score": 0.8390192,
+        "dense_rank": 11,
+        "bm25_score": 3.4951559777621686,
+        "bm25_rank": 18,
+        "rrf_score": 0.02690501986276634,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_15",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 607
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_28",
+        "retrieval_score": 0.025807525807525808,
+        "retrieval_rank": 27,
+        "dense_score": 0.8392737,
+        "dense_rank": 17,
+        "bm25_score": 6.144503516363994,
+        "bm25_rank": 18,
+        "rrf_score": 0.025807525807525808,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_28",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 927
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_22",
+        "retrieval_score": 0.02581612258494337,
+        "retrieval_rank": 28,
+        "dense_score": 0.8358981,
+        "dense_rank": 16,
+        "bm25_score": 3.484906322829923,
+        "bm25_rank": 19,
+        "rrf_score": 0.02581612258494337,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_22",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 693
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_23",
+        "retrieval_score": 0.025158227848101268,
+        "retrieval_rank": 29,
+        "dense_score": 0.8367645,
+        "dense_rank": 19,
+        "bm25_score": 5.909421090772231,
+        "bm25_rank": 20,
+        "rrf_score": 0.025158227848101268,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_23",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 861
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_32",
+        "retrieval_score": 0.02574682290807064,
+        "retrieval_rank": 30,
+        "dense_score": 0.83784896,
+        "dense_rank": 13,
+        "bm25_score": 2.1218222837142453,
+        "bm25_rank": 23,
+        "rrf_score": 0.02574682290807064,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_32",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 805
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_44",
+        "retrieval_score": 0.02411038489469862,
+        "retrieval_rank": 31,
+        "dense_score": 0.8343459,
+        "dense_rank": 21,
+        "bm25_score": 5.244587145422445,
+        "bm25_rank": 25,
+        "rrf_score": 0.02411038489469862,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_44",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1108
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_49",
+        "retrieval_score": 0.02548701298701299,
+        "retrieval_rank": 32,
+        "dense_score": 0.83378315,
+        "dense_rank": 17,
+        "bm25_score": 3.335721957227843,
+        "bm25_rank": 20,
+        "rrf_score": 0.02548701298701299,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_49",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1032
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_43",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 33,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 12.555961224187985,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_43",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1090
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_11",
+        "retrieval_score": 0.025098039215686277,
+        "retrieval_rank": 34,
+        "dense_score": 0.83610713,
+        "dense_rank": 15,
+        "bm25_score": 2.026535806871803,
+        "bm25_rank": 25,
+        "rrf_score": 0.025098039215686277,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_11",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 238
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 35,
+        "dense_score": 0.861475,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1120
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_47",
+        "retrieval_score": 0.024404761904761905,
+        "retrieval_rank": 36,
+        "dense_score": 0.83042413,
+        "dense_rank": 20,
+        "bm25_score": 2.042141844680987,
+        "bm25_rank": 24,
+        "rrf_score": 0.024404761904761905,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_47",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1001
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_33",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 37,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.687555380299447,
+        "bm25_rank": 5,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_33",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 993
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_50",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 38,
+        "dense_score": 0.85598975,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_50",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1049
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.429127449337946,
+        "bm25_rank": 10,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 829
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_7",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.460314977850054,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_7",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 149
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_21",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 41,
+        "dense_score": 0.85074985,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_21",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 835
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_18",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.123207960513026,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_18",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 640
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_24",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.2843010517124895,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_24",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 877
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 44,
+        "dense_score": 0.83763325,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_36",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 877
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 45,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.022376729917705,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 809
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_23",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 46,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.908491372155466,
+        "bm25_rank": 15,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_23",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 697
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 47,
+        "dense_score": 0.8464821,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1423
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_16",
+        "retrieval_score": 0.013157894736842105,
+        "retrieval_rank": 48,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.705149381127163,
+        "bm25_rank": 16,
+        "rrf_score": 0.013157894736842105,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_16",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 615
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_3",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 49,
+        "dense_score": 0.84020925,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_3",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 25
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VSC_financial_statements_2016_consolidated_table_20",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.5138977142494294,
+        "bm25_rank": 17,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "VSC_financial_statements_2016_consolidated_table_20",
+          "doc_id": "VSC_financial_statements_2016_consolidated",
+          "ticker": "VSC",
+          "company_name": "CTCP Container Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 653
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2016_consolidated",
+            "VSC_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2016_consolidated|969",
+            "VSC_financial_statements_2016_consolidated|166",
+            "VJC_financial_statements_2016_consolidated|198",
+            "VSC_financial_statements_2016_consolidated|132",
+            "VJC_financial_statements_2016_consolidated|1057"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f2": 0.7692307692307692,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2016_consolidated",
+            "VSC_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2016_consolidated|969",
+            "VSC_financial_statements_2016_consolidated|166",
+            "VJC_financial_statements_2016_consolidated|198",
+            "VSC_financial_statements_2016_consolidated|132",
+            "VJC_financial_statements_2016_consolidated|1057",
+            "VSC_financial_statements_2016_consolidated|722",
+            "VJC_financial_statements_2016_consolidated|1080",
+            "VSC_financial_statements_2016_consolidated|780",
+            "VJC_financial_statements_2016_consolidated|1001",
+            "VSC_financial_statements_2016_consolidated|819"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2016_consolidated",
+            "VSC_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2016_consolidated|969",
+            "VSC_financial_statements_2016_consolidated|166",
+            "VJC_financial_statements_2016_consolidated|198",
+            "VSC_financial_statements_2016_consolidated|132",
+            "VJC_financial_statements_2016_consolidated|1057",
+            "VSC_financial_statements_2016_consolidated|722",
+            "VJC_financial_statements_2016_consolidated|1080",
+            "VSC_financial_statements_2016_consolidated|780",
+            "VJC_financial_statements_2016_consolidated|1001",
+            "VSC_financial_statements_2016_consolidated|819",
+            "VJC_financial_statements_2016_consolidated|168",
+            "VSC_financial_statements_2016_consolidated|900",
+            "VJC_financial_statements_2016_consolidated|1045",
+            "VSC_financial_statements_2016_consolidated|768",
+            "VJC_financial_statements_2016_consolidated|1011",
+            "VSC_financial_statements_2016_consolidated|701",
+            "VJC_financial_statements_2016_consolidated|1051",
+            "VSC_financial_statements_2016_consolidated|844",
+            "VJC_financial_statements_2016_consolidated|778",
+            "VSC_financial_statements_2016_consolidated|774"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2016_consolidated",
+            "VSC_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2016_consolidated|969",
+            "VSC_financial_statements_2016_consolidated|166",
+            "VJC_financial_statements_2016_consolidated|198",
+            "VSC_financial_statements_2016_consolidated|132",
+            "VJC_financial_statements_2016_consolidated|1057",
+            "VSC_financial_statements_2016_consolidated|722",
+            "VJC_financial_statements_2016_consolidated|1080",
+            "VSC_financial_statements_2016_consolidated|780",
+            "VJC_financial_statements_2016_consolidated|1001",
+            "VSC_financial_statements_2016_consolidated|819",
+            "VJC_financial_statements_2016_consolidated|168",
+            "VSC_financial_statements_2016_consolidated|900",
+            "VJC_financial_statements_2016_consolidated|1045",
+            "VSC_financial_statements_2016_consolidated|768",
+            "VJC_financial_statements_2016_consolidated|1011",
+            "VSC_financial_statements_2016_consolidated|701",
+            "VJC_financial_statements_2016_consolidated|1051",
+            "VSC_financial_statements_2016_consolidated|844",
+            "VJC_financial_statements_2016_consolidated|778",
+            "VSC_financial_statements_2016_consolidated|774",
+            "VJC_financial_statements_2016_consolidated|1276",
+            "VSC_financial_statements_2016_consolidated|751",
+            "VJC_financial_statements_2016_consolidated|182",
+            "VSC_financial_statements_2016_consolidated|219",
+            "VJC_financial_statements_2016_consolidated|997",
+            "VSC_financial_statements_2016_consolidated|607",
+            "VJC_financial_statements_2016_consolidated|927",
+            "VSC_financial_statements_2016_consolidated|693",
+            "VJC_financial_statements_2016_consolidated|861",
+            "VSC_financial_statements_2016_consolidated|805",
+            "VJC_financial_statements_2016_consolidated|1108",
+            "VSC_financial_statements_2016_consolidated|1032",
+            "VJC_financial_statements_2016_consolidated|1090",
+            "VSC_financial_statements_2016_consolidated|238",
+            "VJC_financial_statements_2016_consolidated|1120",
+            "VSC_financial_statements_2016_consolidated|1001",
+            "VJC_financial_statements_2016_consolidated|993",
+            "VSC_financial_statements_2016_consolidated|1049",
+            "VJC_financial_statements_2016_consolidated|829",
+            "VSC_financial_statements_2016_consolidated|149",
+            "VJC_financial_statements_2016_consolidated|835",
+            "VSC_financial_statements_2016_consolidated|640",
+            "VJC_financial_statements_2016_consolidated|877",
+            "VSC_financial_statements_2016_consolidated|877",
+            "VJC_financial_statements_2016_consolidated|809",
+            "VSC_financial_statements_2016_consolidated|697",
+            "VJC_financial_statements_2016_consolidated|1423",
+            "VSC_financial_statements_2016_consolidated|615",
+            "VJC_financial_statements_2016_consolidated|25",
+            "VSC_financial_statements_2016_consolidated|653"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

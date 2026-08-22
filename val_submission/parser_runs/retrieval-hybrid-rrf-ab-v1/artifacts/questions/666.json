@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 666,
+  "question": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+  "started_at": "2026-08-22T13:51:21+00:00",
+  "finished_at": "2026-08-22T13:51:22+00:00",
+  "duration_seconds": 0.5343652939918684,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "KBC_financial_statements_2015_separate"
+    ],
+    "relevant_tables": [
+      "KBC_financial_statements_2015_separate|268"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tính lãi ròng từ hoạt động tài chính theo đơn vị tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "matched_text": "KBC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Tính lãi ròng từ hoạt động tài chính theo đơn vị tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "KBC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "KBC"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "KBC_financial_statements_2015_separate_table_43",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 1,
+        "dense_score": 0.86958575,
+        "dense_rank": 2,
+        "bm25_score": 17.881948585973934,
+        "bm25_rank": 1,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_43",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1332
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "KBC_financial_statements_2015_separate_table_46",
+        "retrieval_score": 0.03055037313432836,
+        "retrieval_rank": 2,
+        "dense_score": 0.85776436,
+        "dense_rank": 4,
+        "bm25_score": 8.882557227871853,
+        "bm25_rank": 7,
+        "rrf_score": 0.03055037313432836,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_46",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1359
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "KBC_financial_statements_2015_separate_table_9",
+        "retrieval_score": 0.03009207275993712,
+        "retrieval_rank": 3,
+        "dense_score": 0.87400854,
+        "dense_rank": 1,
+        "bm25_score": 6.227042289225219,
+        "bm25_rank": 13,
+        "rrf_score": 0.03009207275993712,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_9",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 299
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "KBC_financial_statements_2015_separate_table_18",
+        "retrieval_score": 0.029857397504456328,
+        "retrieval_rank": 4,
+        "dense_score": 0.83653265,
+        "dense_rank": 8,
+        "bm25_score": 9.178832430572424,
+        "bm25_rank": 6,
+        "rrf_score": 0.029857397504456328,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_18",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 882
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "KBC_financial_statements_2015_separate_table_58",
+        "retrieval_score": 0.02976190476190476,
+        "retrieval_rank": 5,
+        "dense_score": 0.8321812,
+        "dense_rank": 12,
+        "bm25_score": 14.201354720651317,
+        "bm25_rank": 3,
+        "rrf_score": 0.02976190476190476,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_58",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1573
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "KBC_financial_statements_2015_separate_table_54",
+        "retrieval_score": 0.028612012987012988,
+        "retrieval_rank": 6,
+        "dense_score": 0.82292426,
+        "dense_rank": 17,
+        "bm25_score": 10.994741636152384,
+        "bm25_rank": 4,
+        "rrf_score": 0.028612012987012988,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_54",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1485
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "KBC_financial_statements_2015_separate_table_6",
+        "retrieval_score": 0.02857142857142857,
+        "retrieval_rank": 7,
+        "dense_score": 0.8327901,
+        "dense_rank": 10,
+        "bm25_score": 6.499609298231867,
+        "bm25_rank": 10,
+        "rrf_score": 0.02857142857142857,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_6",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 224
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "KBC_financial_statements_2015_separate_table_8",
+        "retrieval_score": 0.027912386121341344,
+        "retrieval_rank": 8,
+        "dense_score": 0.8402595,
+        "dense_rank": 7,
+        "bm25_score": 4.250463663991389,
+        "bm25_rank": 17,
+        "rrf_score": 0.027912386121341344,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_8",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 268
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "KBC_financial_statements_2015_separate_table_44",
+        "retrieval_score": 0.02701252236135957,
+        "retrieval_rank": 9,
+        "dense_score": 0.8032499,
+        "dense_rank": 26,
+        "bm25_score": 9.516203854503088,
+        "bm25_rank": 5,
+        "rrf_score": 0.02701252236135957,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_44",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1340
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "KBC_financial_statements_2015_separate_table_10",
+        "retrieval_score": 0.02649122807017544,
+        "retrieval_rank": 10,
+        "dense_score": 0.8281398,
+        "dense_rank": 15,
+        "bm25_score": 5.360103464084599,
+        "bm25_rank": 16,
+        "rrf_score": 0.02649122807017544,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_10",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 314
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "KBC_financial_statements_2015_separate_table_7",
+        "retrieval_score": 0.026262626262626265,
+        "retrieval_rank": 11,
+        "dense_score": 0.84220886,
+        "dense_rank": 6,
+        "bm25_score": 0.8715321829063934,
+        "bm25_rank": 30,
+        "rrf_score": 0.026262626262626265,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_7",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 239
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "KBC_financial_statements_2015_separate_table_5",
+        "retrieval_score": 0.026137303556658397,
+        "retrieval_rank": 12,
+        "dense_score": 0.8458679,
+        "dense_rank": 5,
+        "bm25_score": 4.566366053851697e-06,
+        "bm25_rank": 33,
+        "rrf_score": 0.026137303556658397,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_5",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 209
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "KBC_financial_statements_2015_separate_table_31",
+        "retrieval_score": 0.026132699813337858,
+        "retrieval_rank": 13,
+        "dense_score": 0.8057041,
+        "dense_rank": 23,
+        "bm25_score": 6.406913413398347,
+        "bm25_rank": 11,
+        "rrf_score": 0.026132699813337858,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_31",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "KBC_financial_statements_2015_separate_table_23",
+        "retrieval_score": 0.025837770122142185,
+        "retrieval_rank": 14,
+        "dense_score": 0.78571045,
+        "dense_rank": 43,
+        "bm25_score": 17.280834030027535,
+        "bm25_rank": 2,
+        "rrf_score": 0.025837770122142185,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_23",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 980
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "KBC_financial_statements_2015_separate_table_38",
+        "retrieval_score": 0.025728708679368183,
+        "retrieval_rank": 15,
+        "dense_score": 0.8336222,
+        "dense_rank": 9,
+        "bm25_score": 0.8841571540871744,
+        "bm25_rank": 29,
+        "rrf_score": 0.025728708679368183,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_38",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1278
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "KBC_financial_statements_2015_separate_table_60",
+        "retrieval_score": 0.025478740668614087,
+        "retrieval_rank": 16,
+        "dense_score": 0.8170833,
+        "dense_rank": 19,
+        "bm25_score": 3.1356106528578533,
+        "bm25_rank": 18,
+        "rrf_score": 0.025478740668614087,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_60",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 1641
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "KBC_financial_statements_2015_separate_table_39",
+        "retrieval_score": 0.024963924963924963,
+        "retrieval_rank": 17,
+        "dense_score": 0.8664376,
+        "dense_rank": 3,
+        "bm25_score": 3.321190444360361e-06,
+        "bm25_rank": 50,
+        "rrf_score": 0.024963924963924963,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_39",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1282
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "KBC_financial_statements_2015_separate_table_20",
+        "retrieval_score": 0.024909420289855072,
+        "retrieval_rank": 18,
+        "dense_score": 0.7958317,
+        "dense_rank": 36,
+        "bm25_score": 6.713474040256157,
+        "bm25_rank": 9,
+        "rrf_score": 0.024909420289855072,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_20",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 918
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "KBC_financial_statements_2015_separate_table_42",
+        "retrieval_score": 0.024184149184149184,
+        "retrieval_rank": 19,
+        "dense_score": 0.8224057,
+        "dense_rank": 18,
+        "bm25_score": 0.9557945182990313,
+        "bm25_rank": 28,
+        "rrf_score": 0.024184149184149184,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_42",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 1315
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "KBC_financial_statements_2015_separate_table_41",
+        "retrieval_score": 0.02411038489469862,
+        "retrieval_rank": 20,
+        "dense_score": 0.81686413,
+        "dense_rank": 21,
+        "bm25_score": 1.0902733159898743,
+        "bm25_rank": 25,
+        "rrf_score": 0.02411038489469862,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_41",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1311
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "KBC_financial_statements_2015_separate_table_14",
+        "retrieval_score": 0.02399425287356322,
+        "retrieval_rank": 21,
+        "dense_score": 0.8170303,
+        "dense_rank": 20,
+        "bm25_score": 0.9992989838106392,
+        "bm25_rank": 27,
+        "rrf_score": 0.02399425287356322,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_14",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 833
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "KBC_financial_statements_2015_separate_table_55",
+        "retrieval_score": 0.023796791443850267,
+        "retrieval_rank": 22,
+        "dense_score": 0.7665864,
+        "dense_rank": 50,
+        "bm25_score": 7.976929867908639,
+        "bm25_rank": 8,
+        "rrf_score": 0.023796791443850267,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_55",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1502
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "KBC_financial_statements_2015_separate_table_49",
+        "retrieval_score": 0.023735955056179776,
+        "retrieval_rank": 23,
+        "dense_score": 0.8022063,
+        "dense_rank": 29,
+        "bm25_score": 1.41153422051593,
+        "bm25_rank": 20,
+        "rrf_score": 0.023735955056179776,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_49",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "KBC_financial_statements_2015_separate_table_57",
+        "retrieval_score": 0.023234323432343235,
+        "retrieval_rank": 24,
+        "dense_score": 0.786603,
+        "dense_rank": 41,
+        "bm25_score": 5.441280323126417,
+        "bm25_rank": 15,
+        "rrf_score": 0.023234323432343235,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_57",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1550
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "KBC_financial_statements_2015_separate_table_32",
+        "retrieval_score": 0.023159303882195448,
+        "retrieval_rank": 25,
+        "dense_score": 0.8020606,
+        "dense_rank": 30,
+        "bm25_score": 1.1522606238886988,
+        "bm25_rank": 23,
+        "rrf_score": 0.023159303882195448,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_32",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1154
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "KBC_financial_statements_2015_separate_table_47",
+        "retrieval_score": 0.02312889812889813,
+        "retrieval_rank": 26,
+        "dense_score": 0.82842773,
+        "dense_rank": 14,
+        "bm25_score": 3.7018417817593745e-06,
+        "bm25_rank": 44,
+        "rrf_score": 0.02312889812889813,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_47",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1363
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "KBC_financial_statements_2015_separate_table_34",
+        "retrieval_score": 0.023058884835852007,
+        "retrieval_rank": 27,
+        "dense_score": 0.825776,
+        "dense_rank": 16,
+        "bm25_score": 3.858388915243324e-06,
+        "bm25_rank": 41,
+        "rrf_score": 0.023058884835852007,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_34",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1179
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "KBC_financial_statements_2015_separate_table_48",
+        "retrieval_score": 0.022947810123262524,
+        "retrieval_rank": 28,
+        "dense_score": 0.8003119,
+        "dense_rank": 33,
+        "bm25_score": 1.1675791020621056,
+        "bm25_rank": 22,
+        "rrf_score": 0.022947810123262524,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_48",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1367
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "KBC_financial_statements_2015_separate_table_16",
+        "retrieval_score": 0.02287199480181936,
+        "retrieval_rank": 29,
+        "dense_score": 0.796448,
+        "dense_rank": 35,
+        "bm25_score": 1.227411905347448,
+        "bm25_rank": 21,
+        "rrf_score": 0.02287199480181936,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_16",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 847
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "KBC_financial_statements_2015_separate_table_17",
+        "retrieval_score": 0.02254305977710233,
+        "retrieval_rank": 30,
+        "dense_score": 0.8039515,
+        "dense_rank": 24,
+        "bm25_score": 4.165497211667647e-06,
+        "bm25_rank": 34,
+        "rrf_score": 0.02254305977710233,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_17",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 872
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "KBC_financial_statements_2015_separate_table_36",
+        "retrieval_score": 0.022462149416728715,
+        "retrieval_rank": 31,
+        "dense_score": 0.7863872,
+        "dense_rank": 42,
+        "bm25_score": 1.4268225404502102,
+        "bm25_rank": 19,
+        "rrf_score": 0.022462149416728715,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_36",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1217
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "KBC_financial_statements_2015_separate_table_45",
+        "retrieval_score": 0.021865715983363045,
+        "retrieval_rank": 32,
+        "dense_score": 0.8032779,
+        "dense_rank": 25,
+        "bm25_score": 3.919745104064403e-06,
+        "bm25_rank": 39,
+        "rrf_score": 0.021865715983363045,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_45",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "KBC_financial_statements_2015_separate_table_59",
+        "retrieval_score": 0.021629084215370457,
+        "retrieval_rank": 33,
+        "dense_score": 0.8134701,
+        "dense_rank": 22,
+        "bm25_score": 3.594435301433448e-06,
+        "bm25_rank": 46,
+        "rrf_score": 0.021629084215370457,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_59",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1637
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "KBC_financial_statements_2015_separate_table_35",
+        "retrieval_score": 0.021202990737640887,
+        "retrieval_rank": 34,
+        "dense_score": 0.8027668,
+        "dense_rank": 27,
+        "bm25_score": 3.7795075350132627e-06,
+        "bm25_rank": 43,
+        "rrf_score": 0.021202990737640887,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_35",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1200
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "KBC_financial_statements_2015_separate_table_22",
+        "retrieval_score": 0.02107907383136741,
+        "retrieval_rank": 35,
+        "dense_score": 0.77097315,
+        "dense_rank": 49,
+        "bm25_score": 1.1373387230360081,
+        "bm25_rank": 24,
+        "rrf_score": 0.02107907383136741,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_22",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 965
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "KBC_financial_statements_2015_separate_table_40",
+        "retrieval_score": 0.020709430756159726,
+        "retrieval_rank": 36,
+        "dense_score": 0.8024572,
+        "dense_rank": 28,
+        "bm25_score": 3.4937970581825136e-06,
+        "bm25_rank": 47,
+        "rrf_score": 0.020709430756159726,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_40",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "KBC_financial_statements_2015_separate_table_24",
+        "retrieval_score": 0.020334805381534354,
+        "retrieval_rank": 37,
+        "dense_score": 0.7755525,
+        "dense_rank": 47,
+        "bm25_score": 5.366281682279922e-06,
+        "bm25_rank": 31,
+        "rrf_score": 0.020334805381534354,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_24",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 992
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "KBC_financial_statements_2015_separate_table_15",
+        "retrieval_score": 0.020303527481542245,
+        "retrieval_rank": 38,
+        "dense_score": 0.7765202,
+        "dense_rank": 46,
+        "bm25_score": 5.323319475216419e-06,
+        "bm25_rank": 32,
+        "rrf_score": 0.020303527481542245,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_15",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 839
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "KBC_financial_statements_2015_separate_table_30",
+        "retrieval_score": 0.02024827024827025,
+        "retrieval_rank": 39,
+        "dense_score": 0.80199933,
+        "dense_rank": 31,
+        "bm25_score": 3.4449681034321207e-06,
+        "bm25_rank": 48,
+        "rrf_score": 0.02024827024827025,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_30",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1131
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "KBC_financial_statements_2015_separate_table_12",
+        "retrieval_score": 0.02003205128205128,
+        "retrieval_rank": 40,
+        "dense_score": 0.7847163,
+        "dense_rank": 44,
+        "bm25_score": 4.033446338755967e-06,
+        "bm25_rank": 36,
+        "rrf_score": 0.02003205128205128,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_12",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 493
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "KBC_financial_statements_2015_separate_table_13",
+        "retrieval_score": 0.02000800320128051,
+        "retrieval_rank": 41,
+        "dense_score": 0.7928539,
+        "dense_rank": 38,
+        "bm25_score": 3.7989239528089607e-06,
+        "bm25_rank": 42,
+        "rrf_score": 0.02000800320128051,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_13",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 812
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "KBC_financial_statements_2015_separate_table_26",
+        "retrieval_score": 0.01978557504873294,
+        "retrieval_rank": 42,
+        "dense_score": 0.77329355,
+        "dense_rank": 48,
+        "bm25_score": 4.066637406481309e-06,
+        "bm25_rank": 35,
+        "rrf_score": 0.01978557504873294,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_26",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1017
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "KBC_financial_statements_2015_separate_table_37",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 43,
+        "dense_score": 0.8324986,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_37",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 1257
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "KBC_financial_statements_2015_separate_table_56",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.245195729955945,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_56",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1523
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "KBC_financial_statements_2015_separate_table_51",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 45,
+        "dense_score": 0.83089006,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_51",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "KBC_financial_statements_2015_separate_table_21",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 46,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.538919514325625,
+        "bm25_rank": 14,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_21",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 947
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "KBC_financial_statements_2015_separate_table_19",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 0.9992991115599705,
+        "bm25_rank": 26,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_19",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 899
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "KBC_financial_statements_2015_separate_table_52",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 48,
+        "dense_score": 0.80068016,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_52",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1448
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "KBC_financial_statements_2015_separate_table_29",
+        "retrieval_score": 0.010638297872340425,
+        "retrieval_rank": 49,
+        "dense_score": 0.79649645,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010638297872340425,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_29",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1114
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "KBC_financial_statements_2015_separate_table_3",
+        "retrieval_score": 0.010309278350515464,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.983084200159603e-06,
+        "bm25_rank": 37,
+        "rrf_score": 0.010309278350515464,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2015_separate_table_3",
+          "doc_id": "KBC_financial_statements_2015_separate",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 50
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2015_separate"
+          ],
+          "tables": [
+            "KBC_financial_statements_2015_separate|1332",
+            "KBC_financial_statements_2015_separate|1359",
+            "KBC_financial_statements_2015_separate|299",
+            "KBC_financial_statements_2015_separate|882",
+            "KBC_financial_statements_2015_separate|1573"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2015_separate"
+          ],
+          "tables": [
+            "KBC_financial_statements_2015_separate|1332",
+            "KBC_financial_statements_2015_separate|1359",
+            "KBC_financial_statements_2015_separate|299",
+            "KBC_financial_statements_2015_separate|882",
+            "KBC_financial_statements_2015_separate|1573",
+            "KBC_financial_statements_2015_separate|1485",
+            "KBC_financial_statements_2015_separate|224",
+            "KBC_financial_statements_2015_separate|268",
+            "KBC_financial_statements_2015_separate|1340",
+            "KBC_financial_statements_2015_separate|314"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2015_separate"
+          ],
+          "tables": [
+            "KBC_financial_statements_2015_separate|1332",
+            "KBC_financial_statements_2015_separate|1359",
+            "KBC_financial_statements_2015_separate|299",
+            "KBC_financial_statements_2015_separate|882",
+            "KBC_financial_statements_2015_separate|1573",
+            "KBC_financial_statements_2015_separate|1485",
+            "KBC_financial_statements_2015_separate|224",
+            "KBC_financial_statements_2015_separate|268",
+            "KBC_financial_statements_2015_separate|1340",
+            "KBC_financial_statements_2015_separate|314",
+            "KBC_financial_statements_2015_separate|239",
+            "KBC_financial_statements_2015_separate|209",
+            "KBC_financial_statements_2015_separate|1135",
+            "KBC_financial_statements_2015_separate|980",
+            "KBC_financial_statements_2015_separate|1278",
+            "KBC_financial_statements_2015_separate|1641",
+            "KBC_financial_statements_2015_separate|1282",
+            "KBC_financial_statements_2015_separate|918",
+            "KBC_financial_statements_2015_separate|1315",
+            "KBC_financial_statements_2015_separate|1311"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2015_separate"
+          ],
+          "tables": [
+            "KBC_financial_statements_2015_separate|1332",
+            "KBC_financial_statements_2015_separate|1359",
+            "KBC_financial_statements_2015_separate|299",
+            "KBC_financial_statements_2015_separate|882",
+            "KBC_financial_statements_2015_separate|1573",
+            "KBC_financial_statements_2015_separate|1485",
+            "KBC_financial_statements_2015_separate|224",
+            "KBC_financial_statements_2015_separate|268",
+            "KBC_financial_statements_2015_separate|1340",
+            "KBC_financial_statements_2015_separate|314",
+            "KBC_financial_statements_2015_separate|239",
+            "KBC_financial_statements_2015_separate|209",
+            "KBC_financial_statements_2015_separate|1135",
+            "KBC_financial_statements_2015_separate|980",
+            "KBC_financial_statements_2015_separate|1278",
+            "KBC_financial_statements_2015_separate|1641",
+            "KBC_financial_statements_2015_separate|1282",
+            "KBC_financial_statements_2015_separate|918",
+            "KBC_financial_statements_2015_separate|1315",
+            "KBC_financial_statements_2015_separate|1311",
+            "KBC_financial_statements_2015_separate|833",
+            "KBC_financial_statements_2015_separate|1502",
+            "KBC_financial_statements_2015_separate|1394",
+            "KBC_financial_statements_2015_separate|1550",
+            "KBC_financial_statements_2015_separate|1154",
+            "KBC_financial_statements_2015_separate|1363",
+            "KBC_financial_statements_2015_separate|1179",
+            "KBC_financial_statements_2015_separate|1367",
+            "KBC_financial_statements_2015_separate|847",
+            "KBC_financial_statements_2015_separate|872",
+            "KBC_financial_statements_2015_separate|1217",
+            "KBC_financial_statements_2015_separate|1344",
+            "KBC_financial_statements_2015_separate|1637",
+            "KBC_financial_statements_2015_separate|1200",
+            "KBC_financial_statements_2015_separate|965",
+            "KBC_financial_statements_2015_separate|1290",
+            "KBC_financial_statements_2015_separate|992",
+            "KBC_financial_statements_2015_separate|839",
+            "KBC_financial_statements_2015_separate|1131",
+            "KBC_financial_statements_2015_separate|493",
+            "KBC_financial_statements_2015_separate|812",
+            "KBC_financial_statements_2015_separate|1017",
+            "KBC_financial_statements_2015_separate|1257",
+            "KBC_financial_statements_2015_separate|1523",
+            "KBC_financial_statements_2015_separate|1438",
+            "KBC_financial_statements_2015_separate|947",
+            "KBC_financial_statements_2015_separate|899",
+            "KBC_financial_statements_2015_separate|1448",
+            "KBC_financial_statements_2015_separate|1114",
+            "KBC_financial_statements_2015_separate|50"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

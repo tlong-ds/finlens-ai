@@ -1,0 +1,1383 @@
+{
+  "schema_version": 1,
+  "id": 440,
+  "question": "Trong giai đoạn 2021–2024 của DIG, năm mà có tỷ lệ nợ phải trả trên vốn chủ sở hữu cao nhất, lợi nhuận trước lãi vay và thuế trong năm đó gấp bao nhiêu lần chi phí lãi vay?",
+  "started_at": "2026-08-22T13:50:48+00:00",
+  "finished_at": "2026-08-22T13:50:48+00:00",
+  "duration_seconds": 0.3034668140026042,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DIG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DIG_financial_statements_2021_consolidated",
+      "DIG_financial_statements_2022_consolidated",
+      "DIG_financial_statements_2023_consolidated",
+      "DIG_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "DIG_financial_statements_2021_consolidated|322",
+      "DIG_financial_statements_2022_consolidated|241",
+      "DIG_financial_statements_2023_consolidated|351",
+      "DIG_financial_statements_2024_consolidated|350",
+      "DIG_financial_statements_2024_consolidated|371"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DIG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , mà có tỷ lệ nợ phải trả trên vốn chủ sở hữu cao nhất, lợi nhuận trước lãi vay và thuế trong đó gấp lần chi phí lãi vay",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DIG",
+        "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+        "matched_text": "DIG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Trong giai đoạn , mà có tỷ lệ nợ phải trả trên vốn chủ sở hữu cao nhất, lợi nhuận trước lãi vay và thuế trong đó gấp lần chi phí lãi vay",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DIG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DIG"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_60",
+        "retrieval_score": 0.8618411,
+        "retrieval_rank": 1,
+        "dense_score": 0.8618411,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_60",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_29",
+        "retrieval_score": 0.85743535,
+        "retrieval_rank": 2,
+        "dense_score": 0.85743535,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_29",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1266
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_6",
+        "retrieval_score": 0.8531176,
+        "retrieval_rank": 3,
+        "dense_score": 0.8531176,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_6",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 351
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.8531176,
+        "retrieval_rank": 4,
+        "dense_score": 0.8531176,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_6",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 350
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_5",
+        "retrieval_score": 0.8531176,
+        "retrieval_rank": 5,
+        "dense_score": 0.8531176,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_5",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 241
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_5",
+        "retrieval_score": 0.85226715,
+        "retrieval_rank": 6,
+        "dense_score": 0.85226715,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_5",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 322
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_37",
+        "retrieval_score": 0.85206157,
+        "retrieval_rank": 7,
+        "dense_score": 0.85206157,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_37",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1152
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_56",
+        "retrieval_score": 0.8515736,
+        "retrieval_rank": 8,
+        "dense_score": 0.8515736,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_56",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1424
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.84977275,
+        "retrieval_rank": 9,
+        "dense_score": 0.84977275,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_40",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1361
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_69",
+        "retrieval_score": 0.84873855,
+        "retrieval_rank": 10,
+        "dense_score": 0.84873855,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_69",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1696
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_20",
+        "retrieval_score": 0.84804565,
+        "retrieval_rank": 11,
+        "dense_score": 0.84804565,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_20",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1153
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_64",
+        "retrieval_score": 0.84775794,
+        "retrieval_rank": 12,
+        "dense_score": 0.84775794,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_64",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1507
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_68",
+        "retrieval_score": 0.84775794,
+        "retrieval_rank": 13,
+        "dense_score": 0.84775794,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_68",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1373
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_21",
+        "retrieval_score": 0.8472778,
+        "retrieval_rank": 14,
+        "dense_score": 0.8472778,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_21",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 938
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_52",
+        "retrieval_score": 0.84496725,
+        "retrieval_rank": 15,
+        "dense_score": 0.84496725,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_52",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1399
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.84425807,
+        "retrieval_rank": 16,
+        "dense_score": 0.84425807,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_4",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 316
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_41",
+        "retrieval_score": 0.8431464,
+        "retrieval_rank": 17,
+        "dense_score": 0.8431464,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_41",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1040
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_57",
+        "retrieval_score": 0.8428657,
+        "retrieval_rank": 18,
+        "dense_score": 0.8428657,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_57",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1369
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.84253186,
+        "retrieval_rank": 19,
+        "dense_score": 0.84253186,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_32",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_3",
+        "retrieval_score": 0.8420558,
+        "retrieval_rank": 20,
+        "dense_score": 0.8420558,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_3",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 279
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_39",
+        "retrieval_score": 0.8420549,
+        "retrieval_rank": 21,
+        "dense_score": 0.8420549,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_39",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1197
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_53",
+        "retrieval_score": 0.84144604,
+        "retrieval_rank": 22,
+        "dense_score": 0.84144604,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_53",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1333
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_4",
+        "retrieval_score": 0.8412077,
+        "retrieval_rank": 23,
+        "dense_score": 0.8412077,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_4",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 309
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_40",
+        "retrieval_score": 0.8410141,
+        "retrieval_rank": 24,
+        "dense_score": 0.8410141,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_40",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1036
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_38",
+        "retrieval_score": 0.8407761,
+        "retrieval_rank": 25,
+        "dense_score": 0.8407761,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_38",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1007
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_37",
+        "retrieval_score": 0.83985484,
+        "retrieval_rank": 26,
+        "dense_score": 0.83985484,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_37",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1114
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.8398359,
+        "retrieval_rank": 27,
+        "dense_score": 0.8398359,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_7",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 382
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_34",
+        "retrieval_score": 0.83960634,
+        "retrieval_rank": 28,
+        "dense_score": 0.83960634,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_34",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1314
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_75",
+        "retrieval_score": 0.8392431,
+        "retrieval_rank": 29,
+        "dense_score": 0.8392431,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_75",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1770
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_46",
+        "retrieval_score": 0.83880126,
+        "retrieval_rank": 30,
+        "dense_score": 0.83880126,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_46",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1150
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_19",
+        "retrieval_score": 0.83847946,
+        "retrieval_rank": 31,
+        "dense_score": 0.83847946,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_19",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 954
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_22",
+        "retrieval_score": 0.83847946,
+        "retrieval_rank": 32,
+        "dense_score": 0.83847946,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_22",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 837
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_56",
+        "retrieval_score": 0.8383459,
+        "retrieval_rank": 33,
+        "dense_score": 0.8383459,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_56",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1273
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_58",
+        "retrieval_score": 0.8380881,
+        "retrieval_rank": 34,
+        "dense_score": 0.8380881,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_58",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1591
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_34",
+        "retrieval_score": 0.83788466,
+        "retrieval_rank": 35,
+        "dense_score": 0.83788466,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_34",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1126
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_68",
+        "retrieval_score": 0.83630353,
+        "retrieval_rank": 36,
+        "dense_score": 0.83630353,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_68",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1692
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_63",
+        "retrieval_score": 0.83630353,
+        "retrieval_rank": 37,
+        "dense_score": 0.83630353,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_63",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1503
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.83565235,
+        "retrieval_rank": 38,
+        "dense_score": 0.83565235,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_8",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 405
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_42",
+        "retrieval_score": 0.8345886,
+        "retrieval_rank": 39,
+        "dense_score": 0.8345886,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_42",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1282
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_8",
+        "retrieval_score": 0.83389074,
+        "retrieval_rank": 40,
+        "dense_score": 0.83389074,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_8",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 398
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.83389074,
+        "retrieval_rank": 41,
+        "dense_score": 0.83389074,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_7",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 282
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_29",
+        "retrieval_score": 0.83354956,
+        "retrieval_rank": 42,
+        "dense_score": 0.83354956,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_29",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1075
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_37",
+        "retrieval_score": 0.83243334,
+        "retrieval_rank": 43,
+        "dense_score": 0.83243334,
+        "dense_rank": 43,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_37",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1334
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DIG_financial_statements_2023_consolidated_table_20",
+        "retrieval_score": 0.8321601,
+        "retrieval_rank": 44,
+        "dense_score": 0.8321601,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2023_consolidated_table_20",
+          "doc_id": "DIG_financial_statements_2023_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 971
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_61",
+        "retrieval_score": 0.8314809,
+        "retrieval_rank": 45,
+        "dense_score": 0.8314809,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_61",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1603
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_143",
+        "retrieval_score": 0.83112603,
+        "retrieval_rank": 46,
+        "dense_score": 0.83112603,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_143",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3595
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_21",
+        "retrieval_score": 0.83071285,
+        "retrieval_rank": 47,
+        "dense_score": 0.83071285,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_21",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1175
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_57",
+        "retrieval_score": 0.83038896,
+        "retrieval_rank": 48,
+        "dense_score": 0.83038896,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_57",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1568
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DIG_financial_statements_2022_consolidated_table_48",
+        "retrieval_score": 0.83025235,
+        "retrieval_rank": 49,
+        "dense_score": 0.83025235,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2022_consolidated_table_48",
+          "doc_id": "DIG_financial_statements_2022_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1206
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DIG_financial_statements_2021_consolidated_table_45",
+        "retrieval_score": 0.82961977,
+        "retrieval_rank": 50,
+        "dense_score": 0.82961977,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2021_consolidated_table_45",
+          "doc_id": "DIG_financial_statements_2021_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1254
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2022_consolidated",
+            "DIG_financial_statements_2024_consolidated",
+            "DIG_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2022_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1266",
+            "DIG_financial_statements_2023_consolidated|351",
+            "DIG_financial_statements_2024_consolidated|350",
+            "DIG_financial_statements_2022_consolidated|241"
+          ]
+        },
+        "tables": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f2": 0.6,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f2": 0.7894736842105263,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2022_consolidated",
+            "DIG_financial_statements_2024_consolidated",
+            "DIG_financial_statements_2023_consolidated",
+            "DIG_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2022_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1266",
+            "DIG_financial_statements_2023_consolidated|351",
+            "DIG_financial_statements_2024_consolidated|350",
+            "DIG_financial_statements_2022_consolidated|241",
+            "DIG_financial_statements_2021_consolidated|322",
+            "DIG_financial_statements_2023_consolidated|1152",
+            "DIG_financial_statements_2023_consolidated|1424",
+            "DIG_financial_statements_2024_consolidated|1361",
+            "DIG_financial_statements_2024_consolidated|1696"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.8,
+          "f2": 0.6666666666666666,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2022_consolidated",
+            "DIG_financial_statements_2024_consolidated",
+            "DIG_financial_statements_2023_consolidated",
+            "DIG_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2022_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1266",
+            "DIG_financial_statements_2023_consolidated|351",
+            "DIG_financial_statements_2024_consolidated|350",
+            "DIG_financial_statements_2022_consolidated|241",
+            "DIG_financial_statements_2021_consolidated|322",
+            "DIG_financial_statements_2023_consolidated|1152",
+            "DIG_financial_statements_2023_consolidated|1424",
+            "DIG_financial_statements_2024_consolidated|1361",
+            "DIG_financial_statements_2024_consolidated|1696",
+            "DIG_financial_statements_2024_consolidated|1153",
+            "DIG_financial_statements_2023_consolidated|1507",
+            "DIG_financial_statements_2022_consolidated|1373",
+            "DIG_financial_statements_2021_consolidated|938",
+            "DIG_financial_statements_2023_consolidated|1399",
+            "DIG_financial_statements_2024_consolidated|316",
+            "DIG_financial_statements_2022_consolidated|1040",
+            "DIG_financial_statements_2021_consolidated|1369",
+            "DIG_financial_statements_2024_consolidated|1290",
+            "DIG_financial_statements_2021_consolidated|279"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.8,
+          "f2": 0.5,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2022_consolidated",
+            "DIG_financial_statements_2024_consolidated",
+            "DIG_financial_statements_2023_consolidated",
+            "DIG_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2022_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1266",
+            "DIG_financial_statements_2023_consolidated|351",
+            "DIG_financial_statements_2024_consolidated|350",
+            "DIG_financial_statements_2022_consolidated|241",
+            "DIG_financial_statements_2021_consolidated|322",
+            "DIG_financial_statements_2023_consolidated|1152",
+            "DIG_financial_statements_2023_consolidated|1424",
+            "DIG_financial_statements_2024_consolidated|1361",
+            "DIG_financial_statements_2024_consolidated|1696",
+            "DIG_financial_statements_2024_consolidated|1153",
+            "DIG_financial_statements_2023_consolidated|1507",
+            "DIG_financial_statements_2022_consolidated|1373",
+            "DIG_financial_statements_2021_consolidated|938",
+            "DIG_financial_statements_2023_consolidated|1399",
+            "DIG_financial_statements_2024_consolidated|316",
+            "DIG_financial_statements_2022_consolidated|1040",
+            "DIG_financial_statements_2021_consolidated|1369",
+            "DIG_financial_statements_2024_consolidated|1290",
+            "DIG_financial_statements_2021_consolidated|279",
+            "DIG_financial_statements_2023_consolidated|1197",
+            "DIG_financial_statements_2021_consolidated|1333",
+            "DIG_financial_statements_2023_consolidated|309",
+            "DIG_financial_statements_2022_consolidated|1036",
+            "DIG_financial_statements_2022_consolidated|1007",
+            "DIG_financial_statements_2021_consolidated|1114",
+            "DIG_financial_statements_2021_consolidated|382",
+            "DIG_financial_statements_2024_consolidated|1314",
+            "DIG_financial_statements_2024_consolidated|1770",
+            "DIG_financial_statements_2022_consolidated|1150",
+            "DIG_financial_statements_2023_consolidated|954",
+            "DIG_financial_statements_2022_consolidated|837",
+            "DIG_financial_statements_2022_consolidated|1273",
+            "DIG_financial_statements_2024_consolidated|1591",
+            "DIG_financial_statements_2023_consolidated|1126",
+            "DIG_financial_statements_2024_consolidated|1692",
+            "DIG_financial_statements_2023_consolidated|1503",
+            "DIG_financial_statements_2024_consolidated|405",
+            "DIG_financial_statements_2023_consolidated|1282",
+            "DIG_financial_statements_2023_consolidated|398",
+            "DIG_financial_statements_2022_consolidated|282",
+            "DIG_financial_statements_2023_consolidated|1075",
+            "DIG_financial_statements_2024_consolidated|1334",
+            "DIG_financial_statements_2023_consolidated|971",
+            "DIG_financial_statements_2024_consolidated|1603",
+            "DIG_financial_statements_2024_consolidated|3595",
+            "DIG_financial_statements_2024_consolidated|1175",
+            "DIG_financial_statements_2024_consolidated|1568",
+            "DIG_financial_statements_2022_consolidated|1206",
+            "DIG_financial_statements_2021_consolidated|1254"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 0.8,
+          "f2": 0.28571428571428575,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

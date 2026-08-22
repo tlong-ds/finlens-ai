@@ -1,8 +1,10 @@
-"""Evaluate FinLens query parsing and dense retrieval on the validation set.
+"""Evaluate FinLens query parsing and table retrieval on the validation set.
 
-This runner stops after Qdrant dense retrieval.  It never calls reranking, code
-generation, or the sandbox.  It writes isolated parser/retrieval artifacts under
-``val_submission/parser_runs/<run-id>/``.
+This runner stops after dense or hybrid retrieval.  It never calls reranking,
+code generation, or the sandbox.  It writes isolated artifacts under
+``val_submission/parser_runs/<run-id>/``.  Retrieval can use either the parser's
+semantic query or the original question, and parser artifacts can be replayed so
+that retrieval experiments use identical filters.
 """
 
 from __future__ import annotations
@@ -29,6 +31,7 @@ from dotenv import load_dotenv
 from src.llm import LLMTransientError
 from src.parser import parse_query_with_diagnostics
 from src.retrieval import (
+    RETRIEVAL_MODE_DEFAULT,
     RETRIEVAL_TOP_K,
     NoMatchingCandidatesError,
     TransientRetrievalError,
@@ -428,8 +431,9 @@ def _retrieve_balanced(
     filters: Mapping[str, Sequence[str | int]],
     *,
     top_n: int,
+    retrieval_mode: str = "dense",
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    """Mirror the graph's per-ticker balanced dense retrieval."""
+    """Mirror the graph's per-ticker balanced retrieval."""
     raw_tickers = filters.get("ticker", [])
     if not isinstance(raw_tickers, list) or not raw_tickers or not all(
         isinstance(ticker, str) and ticker for ticker in raw_tickers
@@ -449,6 +453,7 @@ def _retrieve_balanced(
                 query_text=query_text,
                 filters=bucket_filters,
                 top_n=quota,
+                mode=retrieval_mode,
             )
         except NoMatchingCandidatesError:
             if not bucket_filters.get("report_type"):
@@ -459,6 +464,7 @@ def _retrieve_balanced(
                 query_text=query_text,
                 filters=effective_filters,
                 top_n=quota,
+                mode=retrieval_mode,
             )
         bucket_results.append(bucket)
         bucket_diagnostics.append(
@@ -466,6 +472,7 @@ def _retrieve_balanced(
                 "ticker": ticker,
                 "requested_top_n": quota,
                 "candidate_count": len(bucket),
+                "retrieval_mode": retrieval_mode,
                 "relaxed_report_type": relaxed_report_type,
                 "effective_filters": effective_filters,
             }
@@ -483,7 +490,7 @@ def _retrieve_balanced(
             if not table_id or table_id in seen_table_ids:
                 continue
             seen_table_ids.add(table_id)
-            candidate["dense_rank"] = len(candidates) + 1
+            candidate["retrieval_rank"] = len(candidates) + 1
             candidates.append(candidate)
             if len(candidates) == top_n:
                 break
@@ -500,6 +507,12 @@ def _compact_candidates(
             "rank": index,
             "table_id": candidate.get("table_id"),
             "retrieval_score": candidate.get("retrieval_score"),
+            "retrieval_rank": candidate.get("retrieval_rank", index),
+            "dense_score": candidate.get("dense_score"),
+            "dense_rank": candidate.get("dense_rank"),
+            "bm25_score": candidate.get("bm25_score"),
+            "bm25_rank": candidate.get("bm25_rank"),
+            "rrf_score": candidate.get("rrf_score"),
             "metadata": dict(candidate.get("metadata") or {}),
         }
         for index, candidate in enumerate(candidates, start=1)
@@ -507,7 +520,12 @@ def _compact_candidates(
 
 
 def _parse_with_transient_retry(
-    record: Mapping[str, Any], top_ks: Sequence[int]
+    record: Mapping[str, Any],
+    top_ks: Sequence[int],
+    *,
+    retrieval_query_source: str = "semantic",
+    retrieval_mode: str = "dense",
+    parser_source: Mapping[str, Any] | None = None,
 ) -> dict[str, Any]:
     question_id = int(record["id"])
     started_at = _utc_now()
@@ -517,35 +535,61 @@ def _parse_with_transient_retry(
     filters: dict[str, list[str | int]] | None = None
     semantic_query: str | None = None
     parser_error: dict[str, str] | None = None
-    for provider_attempt in range(1, _PROVIDER_ATTEMPTS + 1):
-        provider_attempts = provider_attempt
-        try:
-            result = parse_query_with_diagnostics(
-                str(record["question"]), question_id=question_id
-            )
-            filters = dict(result["filters"])
-            semantic_query = str(result["semantic_query"])
-            diagnostics = dict(result["diagnostics"])
-            break
-        except LLMTransientError as exc:
-            if provider_attempt == _PROVIDER_ATTEMPTS:
+    if retrieval_query_source not in {"semantic", "question"}:
+        raise ValueError("retrieval_query_source must be semantic or question")
+    if parser_source is not None:
+        source_filters = parser_source.get("filters")
+        source_semantic_query = parser_source.get("semantic_query")
+        source_diagnostics = parser_source.get("diagnostics", {})
+        source_error = parser_source.get("parser_error")
+        if (
+            int(parser_source.get("id", -1)) != question_id
+            or parser_source.get("question") != record["question"]
+            or source_error is not None
+            or not isinstance(source_filters, Mapping)
+            or not isinstance(source_semantic_query, str)
+            or not source_semantic_query.strip()
+            or not isinstance(source_diagnostics, Mapping)
+        ):
+            raise ValueError(f"Parser source artifact is invalid for id={question_id}")
+        filters = {
+            str(field): list(values)
+            for field, values in source_filters.items()
+            if isinstance(values, list)
+        }
+        semantic_query = source_semantic_query
+        diagnostics = dict(source_diagnostics)
+        provider_attempts = int(parser_source.get("provider_attempts", 0))
+    else:
+        for provider_attempt in range(1, _PROVIDER_ATTEMPTS + 1):
+            provider_attempts = provider_attempt
+            try:
+                result = parse_query_with_diagnostics(
+                    str(record["question"]), question_id=question_id
+                )
+                filters = dict(result["filters"])
+                semantic_query = str(result["semantic_query"])
+                diagnostics = dict(result["diagnostics"])
+                break
+            except LLMTransientError as exc:
+                if provider_attempt == _PROVIDER_ATTEMPTS:
+                    parser_error = {
+                        "stage": "parser",
+                        "type": type(exc).__name__,
+                        "message": str(exc),
+                    }
+                    break
+                time.sleep(0.5 * (2 ** (provider_attempt - 1)))
+            except Exception as exc:
+                possible_diagnostics = getattr(exc, "diagnostics", {})
+                if isinstance(possible_diagnostics, Mapping):
+                    diagnostics = dict(possible_diagnostics)
                 parser_error = {
                     "stage": "parser",
                     "type": type(exc).__name__,
                     "message": str(exc),
                 }
                 break
-            time.sleep(0.5 * (2 ** (provider_attempt - 1)))
-        except Exception as exc:
-            possible_diagnostics = getattr(exc, "diagnostics", {})
-            if isinstance(possible_diagnostics, Mapping):
-                diagnostics = dict(possible_diagnostics)
-            parser_error = {
-                "stage": "parser",
-                "type": type(exc).__name__,
-                "message": str(exc),
-            }
-            break
 
     expected = derive_golden_filters(record)
     golden_retrieval = {
@@ -556,14 +600,20 @@ def _parse_with_transient_retry(
     bucket_diagnostics: list[dict[str, Any]] = []
     retrieval_attempts = 0
     retrieval_error: dict[str, str] | None = None
+    retrieval_query = (
+        str(record["question"])
+        if retrieval_query_source == "question"
+        else semantic_query
+    )
     if parser_error is None and filters is not None and semantic_query is not None:
         for retrieval_attempt in range(1, _RETRIEVAL_ATTEMPTS + 1):
             retrieval_attempts = retrieval_attempt
             try:
                 candidates, bucket_diagnostics = _retrieve_balanced(
-                    semantic_query,
+                    str(retrieval_query),
                     filters,
                     top_n=max(top_ks),
+                    retrieval_mode=retrieval_mode,
                 )
                 break
             except TransientRetrievalError as exc:
@@ -606,6 +656,9 @@ def _parse_with_transient_retry(
         "repair_changed_fields": _changed_repair_fields(diagnostics),
         "metrics": score_parser_output(expected, filters),
         "retrieval": {
+            "mode": retrieval_mode,
+            "query_source": retrieval_query_source,
+            "query_text": retrieval_query,
             "requested_top_ks": list(top_ks),
             "max_top_k": max(top_ks),
             "bucket_diagnostics": bucket_diagnostics,
@@ -687,6 +740,25 @@ def _run(args: argparse.Namespace) -> int:
     run_id = _validate_run_id(args.run_id or _new_run_id())
     run_dir = args.output_dir.resolve() / run_id
     status_path = run_dir / "status.json"
+    parser_source_dir = (
+        args.parser_source_run.resolve() if args.parser_source_run else None
+    )
+    parser_sources: dict[int, dict[str, Any]] = {}
+    if parser_source_dir is not None:
+        for record in selected:
+            question_id = int(record["id"])
+            source_path = (
+                parser_source_dir / "artifacts" / "questions" / f"{question_id}.json"
+            )
+            if not source_path.is_file():
+                raise FileNotFoundError(
+                    f"Missing parser source artifact for id={question_id}: {source_path}"
+                )
+            with source_path.open(encoding="utf-8") as handle:
+                source = json.load(handle)
+            if not isinstance(source, Mapping):
+                raise ValueError(f"Invalid parser source artifact: {source_path}")
+            parser_sources[question_id] = dict(source)
     config = {
         "golden_path": str(golden_path),
         "golden_sha256": _sha256(golden_path),
@@ -697,6 +769,9 @@ def _run(args: argparse.Namespace) -> int:
         "embedding_model": os.getenv("EMBEDDING_MODEL"),
         "embedding_revision": os.getenv("EMBEDDING_REVISION"),
         "retrieval_top_ks": list(args.top_ks),
+        "retrieval_mode": args.retrieval_mode,
+        "retrieval_query_source": args.retrieval_query,
+        "parser_source_run": str(parser_source_dir) if parser_source_dir else None,
         "concurrency": args.concurrency,
     }
     if run_dir.exists() and not args.resume:
@@ -717,6 +792,9 @@ def _run(args: argparse.Namespace) -> int:
             "embedding_model",
             "embedding_revision",
             "retrieval_top_ks",
+            "retrieval_mode",
+            "retrieval_query_source",
+            "parser_source_run",
         ):
             if status.get("config", {}).get(field) != config[field]:
                 raise ValueError(f"Resumed parser run changed immutable config: {field}")
@@ -760,7 +838,14 @@ def _run(args: argparse.Namespace) -> int:
         )
         with ThreadPoolExecutor(max_workers=args.concurrency) as executor:
             futures = {
-                executor.submit(_parse_with_transient_retry, record, args.top_ks): record
+                executor.submit(
+                    _parse_with_transient_retry,
+                    record,
+                    args.top_ks,
+                    retrieval_query_source=args.retrieval_query,
+                    retrieval_mode=args.retrieval_mode,
+                    parser_source=parser_sources.get(int(record["id"])),
+                ): record
                 for record in pending
             }
             for future in as_completed(futures):
@@ -817,7 +902,7 @@ def _parse_top_ks(value: str) -> tuple[int, ...]:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Evaluate FinLens query parsing and dense retrieval"
+        description="Evaluate FinLens query parsing and dense/hybrid retrieval"
     )
     parser.add_argument("--golden", type=Path, default=DEFAULT_GOLDEN_PATH)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_ROOT)
@@ -829,6 +914,23 @@ def _build_parser() -> argparse.ArgumentParser:
         "--top-k",
         default=",".join(map(str, DEFAULT_TOP_KS)),
         help="comma-separated retrieval cutoffs (default: 5,10,20,50)",
+    )
+    parser.add_argument(
+        "--retrieval-mode",
+        choices=("dense", "hybrid"),
+        default=RETRIEVAL_MODE_DEFAULT,
+        help="retrieval strategy (default: hybrid)",
+    )
+    parser.add_argument(
+        "--retrieval-query",
+        choices=("semantic", "question"),
+        default="semantic",
+        help="text embedded for dense retrieval (default: semantic)",
+    )
+    parser.add_argument(
+        "--parser-source-run",
+        type=Path,
+        help="reuse filters/semantic queries from an existing parser run directory",
     )
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--verbose", action="store_true")

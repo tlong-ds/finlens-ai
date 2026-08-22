@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 252,
+  "question": "Giá trị Dự án nâng cấp mở rộng Nhà máy Lọc dầu Dung Quát của công ty mẹ BSR cuối năm 2025 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-22T13:51:15+00:00",
+  "finished_at": "2026-08-22T13:51:15+00:00",
+  "duration_seconds": 0.3986285060091177,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BSR"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "BSR_financial_statements_2025_separate"
+    ],
+    "relevant_tables": [
+      "BSR_financial_statements_2025_separate|1120"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BSR"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Giá trị Dự án nâng cấp mở rộng Nhà máy Lọc dầu Dung Quát cuối trăm tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BSR",
+        "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+        "matched_text": "BSR",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Giá trị Dự án nâng cấp mở rộng Nhà máy Lọc dầu Dung Quát cuối trăm tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "BSR",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "BSR"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "BSR_financial_statements_2025_separate_table_24",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 1,
+        "dense_score": 0.88449985,
+        "dense_rank": 1,
+        "bm25_score": 48.872005305754755,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_24",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1120
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "BSR_financial_statements_2025_separate_table_11",
+        "retrieval_score": 0.0315136476426799,
+        "retrieval_rank": 2,
+        "dense_score": 0.8164983,
+        "dense_rank": 5,
+        "bm25_score": 20.164660907198563,
+        "bm25_rank": 2,
+        "rrf_score": 0.0315136476426799,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_11",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 831
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "BSR_financial_statements_2025_separate_table_54",
+        "retrieval_score": 0.03149801587301587,
+        "retrieval_rank": 3,
+        "dense_score": 0.8279213,
+        "dense_rank": 3,
+        "bm25_score": 16.99058565974064,
+        "bm25_rank": 4,
+        "rrf_score": 0.03149801587301587,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_54",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1471
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "BSR_financial_statements_2025_separate_table_47",
+        "retrieval_score": 0.031009615384615385,
+        "retrieval_rank": 4,
+        "dense_score": 0.8222987,
+        "dense_rank": 4,
+        "bm25_score": 14.907182613003217,
+        "bm25_rank": 5,
+        "rrf_score": 0.031009615384615385,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_47",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1405
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "BSR_financial_statements_2025_separate_table_36",
+        "retrieval_score": 0.030834914611005692,
+        "retrieval_rank": 5,
+        "dense_score": 0.83526385,
+        "dense_rank": 2,
+        "bm25_score": 9.967482378441032,
+        "bm25_rank": 8,
+        "rrf_score": 0.030834914611005692,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_36",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1285
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "BSR_financial_statements_2025_separate_table_46",
+        "retrieval_score": 0.030158730158730156,
+        "retrieval_rank": 6,
+        "dense_score": 0.80419004,
+        "dense_rank": 10,
+        "bm25_score": 18.407850801514275,
+        "bm25_rank": 3,
+        "rrf_score": 0.030158730158730156,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_46",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1391
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "BSR_financial_statements_2025_separate_table_53",
+        "retrieval_score": 0.029857397504456328,
+        "retrieval_rank": 7,
+        "dense_score": 0.8140296,
+        "dense_rank": 8,
+        "bm25_score": 14.426010038282223,
+        "bm25_rank": 6,
+        "rrf_score": 0.029857397504456328,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_53",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1455
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "BSR_financial_statements_2025_separate_table_35",
+        "retrieval_score": 0.028850145288501453,
+        "retrieval_rank": 8,
+        "dense_score": 0.81512606,
+        "dense_rank": 6,
+        "bm25_score": 7.90342913830199,
+        "bm25_rank": 13,
+        "rrf_score": 0.028850145288501453,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_35",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1281
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "BSR_financial_statements_2025_separate_table_15",
+        "retrieval_score": 0.02877846790890269,
+        "retrieval_rank": 9,
+        "dense_score": 0.8091839,
+        "dense_rank": 9,
+        "bm25_score": 9.494069320454033,
+        "bm25_rank": 10,
+        "rrf_score": 0.02877846790890269,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_15",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1011
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "BSR_financial_statements_2025_separate_table_48",
+        "retrieval_score": 0.028083267871170464,
+        "retrieval_rank": 10,
+        "dense_score": 0.7690745,
+        "dense_rank": 16,
+        "bm25_score": 13.992235133338045,
+        "bm25_rank": 7,
+        "rrf_score": 0.028083267871170464,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_48",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1409
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "BSR_financial_statements_2025_separate_table_17",
+        "retrieval_score": 0.02797339593114241,
+        "retrieval_rank": 11,
+        "dense_score": 0.79472953,
+        "dense_rank": 11,
+        "bm25_score": 7.976758594694107,
+        "bm25_rank": 12,
+        "rrf_score": 0.02797339593114241,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_17",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1045
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "BSR_financial_statements_2025_separate_table_10",
+        "retrieval_score": 0.027583600982429624,
+        "retrieval_rank": 12,
+        "dense_score": 0.8141511,
+        "dense_rank": 7,
+        "bm25_score": 5.80514733750793,
+        "bm25_rank": 19,
+        "rrf_score": 0.027583600982429624,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_10",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 639
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "BSR_financial_statements_2025_separate_table_52",
+        "retrieval_score": 0.027046783625730993,
+        "retrieval_rank": 13,
+        "dense_score": 0.7918978,
+        "dense_rank": 12,
+        "bm25_score": 6.683684202342831,
+        "bm25_rank": 16,
+        "rrf_score": 0.027046783625730993,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_52",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1441
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "BSR_financial_statements_2025_separate_table_23",
+        "retrieval_score": 0.026687875574407917,
+        "retrieval_rank": 14,
+        "dense_score": 0.757604,
+        "dense_rank": 22,
+        "bm25_score": 9.532726312790768,
+        "bm25_rank": 9,
+        "rrf_score": 0.026687875574407917,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_23",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1114
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "BSR_financial_statements_2025_separate_table_22",
+        "retrieval_score": 0.026334026334026334,
+        "retrieval_rank": 15,
+        "dense_score": 0.7634784,
+        "dense_rank": 18,
+        "bm25_score": 7.698614991723828,
+        "bm25_rank": 14,
+        "rrf_score": 0.026334026334026334,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_22",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1096
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "BSR_financial_statements_2025_separate_table_30",
+        "retrieval_score": 0.0261986301369863,
+        "retrieval_rank": 16,
+        "dense_score": 0.78918225,
+        "dense_rank": 13,
+        "bm25_score": 5.8007539085016075,
+        "bm25_rank": 20,
+        "rrf_score": 0.0261986301369863,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_30",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1193
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "BSR_financial_statements_2025_separate_table_33",
+        "retrieval_score": 0.025478740668614087,
+        "retrieval_rank": 17,
+        "dense_score": 0.75916004,
+        "dense_rank": 19,
+        "bm25_score": 5.983891162663955,
+        "bm25_rank": 18,
+        "rrf_score": 0.025478740668614087,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_33",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1247
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "BSR_financial_statements_2025_separate_table_25",
+        "retrieval_score": 0.024961240310077522,
+        "retrieval_rank": 18,
+        "dense_score": 0.753907,
+        "dense_rank": 26,
+        "bm25_score": 7.589815434851026,
+        "bm25_rank": 15,
+        "rrf_score": 0.024961240310077522,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_25",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1142
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "BSR_financial_statements_2025_separate_table_18",
+        "retrieval_score": 0.02483719521429653,
+        "retrieval_rank": 19,
+        "dense_score": 0.74475706,
+        "dense_rank": 33,
+        "bm25_score": 8.899951000257298,
+        "bm25_rank": 11,
+        "rrf_score": 0.02483719521429653,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_18",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1049
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "BSR_financial_statements_2025_separate_table_26",
+        "retrieval_score": 0.02475171886936593,
+        "retrieval_rank": 20,
+        "dense_score": 0.76650894,
+        "dense_rank": 17,
+        "bm25_score": 3.055585206064395,
+        "bm25_rank": 25,
+        "rrf_score": 0.02475171886936593,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_26",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1146
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "BSR_financial_statements_2025_separate_table_31",
+        "retrieval_score": 0.02456928838951311,
+        "retrieval_rank": 21,
+        "dense_score": 0.7695167,
+        "dense_rank": 15,
+        "bm25_score": 1.7961219497174854,
+        "bm25_rank": 29,
+        "rrf_score": 0.02456928838951311,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_31",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1213
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "BSR_financial_statements_2025_separate_table_20",
+        "retrieval_score": 0.024266201685556526,
+        "retrieval_rank": 22,
+        "dense_score": 0.7700886,
+        "dense_rank": 14,
+        "bm25_score": 1.1352634822762637,
+        "bm25_rank": 33,
+        "rrf_score": 0.024266201685556526,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_20",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1073
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "BSR_financial_statements_2025_separate_table_49",
+        "retrieval_score": 0.023542445644647556,
+        "retrieval_rank": 23,
+        "dense_score": 0.7565827,
+        "dense_rank": 23,
+        "bm25_score": 2.4515830082244507,
+        "bm25_rank": 27,
+        "rrf_score": 0.023542445644647556,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_49",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1427
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "BSR_financial_statements_2025_separate_table_6",
+        "retrieval_score": 0.0231841329402305,
+        "retrieval_rank": 24,
+        "dense_score": 0.74975044,
+        "dense_rank": 31,
+        "bm25_score": 4.482910188352845,
+        "bm25_rank": 22,
+        "rrf_score": 0.0231841329402305,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_6",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 441
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "BSR_financial_statements_2025_separate_table_39",
+        "retrieval_score": 0.0227390180878553,
+        "retrieval_rank": 25,
+        "dense_score": 0.7497546,
+        "dense_rank": 30,
+        "bm25_score": 2.522360448956552,
+        "bm25_rank": 26,
+        "rrf_score": 0.0227390180878553,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_39",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1309
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "BSR_financial_statements_2025_separate_table_4",
+        "retrieval_score": 0.022695750851090657,
+        "retrieval_rank": 26,
+        "dense_score": 0.73282725,
+        "dense_rank": 43,
+        "bm25_score": 6.5003858478300085,
+        "bm25_rank": 17,
+        "rrf_score": 0.022695750851090657,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_4",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 370
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "BSR_financial_statements_2025_separate_table_27",
+        "retrieval_score": 0.02265495736286114,
+        "retrieval_rank": 27,
+        "dense_score": 0.7377812,
+        "dense_rank": 37,
+        "bm25_score": 5.644481718838135,
+        "bm25_rank": 21,
+        "rrf_score": 0.02265495736286114,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_27",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1164
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "BSR_financial_statements_2025_separate_table_37",
+        "retrieval_score": 0.02265495736286114,
+        "retrieval_rank": 28,
+        "dense_score": 0.7578893,
+        "dense_rank": 21,
+        "bm25_score": 1.4469922231270127e-06,
+        "bm25_rank": 37,
+        "rrf_score": 0.02265495736286114,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_37",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "BSR_financial_statements_2025_separate_table_45",
+        "retrieval_score": 0.02259959141981614,
+        "retrieval_rank": 29,
+        "dense_score": 0.7512126,
+        "dense_rank": 29,
+        "bm25_score": 1.8251199438152033,
+        "bm25_rank": 28,
+        "rrf_score": 0.02259959141981614,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_45",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1373
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "BSR_financial_statements_2025_separate_table_12",
+        "retrieval_score": 0.022431077694235586,
+        "retrieval_rank": 30,
+        "dense_score": 0.74336874,
+        "dense_rank": 35,
+        "bm25_score": 4.179713308647813,
+        "bm25_rank": 24,
+        "rrf_score": 0.022431077694235586,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_12",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 851
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "BSR_financial_statements_2025_separate_table_38",
+        "retrieval_score": 0.022233201581027668,
+        "retrieval_rank": 31,
+        "dense_score": 0.7526464,
+        "dense_rank": 28,
+        "bm25_score": 1.1651927945849414,
+        "bm25_rank": 32,
+        "rrf_score": 0.022233201581027668,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_38",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1305
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "BSR_financial_statements_2025_separate_table_28",
+        "retrieval_score": 0.022115384615384617,
+        "retrieval_rank": 32,
+        "dense_score": 0.7580176,
+        "dense_rank": 20,
+        "bm25_score": 1.2728469654044516e-06,
+        "bm25_rank": 44,
+        "rrf_score": 0.022115384615384617,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_28",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1168
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "BSR_financial_statements_2025_separate_table_14",
+        "retrieval_score": 0.022048192771084336,
+        "retrieval_rank": 33,
+        "dense_score": 0.736993,
+        "dense_rank": 40,
+        "bm25_score": 4.408744651966906,
+        "bm25_rank": 23,
+        "rrf_score": 0.022048192771084336,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_14",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 991
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "BSR_financial_statements_2025_separate_table_40",
+        "retrieval_score": 0.02149425287356322,
+        "retrieval_rank": 34,
+        "dense_score": 0.7527092,
+        "dense_rank": 27,
+        "bm25_score": 1.3407397610552696e-06,
+        "bm25_rank": 40,
+        "rrf_score": 0.02149425287356322,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_40",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1313
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "BSR_financial_statements_2025_separate_table_7",
+        "retrieval_score": 0.021315192743764172,
+        "retrieval_rank": 35,
+        "dense_score": 0.73760957,
+        "dense_rank": 38,
+        "bm25_score": 1.4009053569256875,
+        "bm25_rank": 30,
+        "rrf_score": 0.021315192743764172,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_7",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2025,
+          "start_line": 488
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "BSR_financial_statements_2025_separate_table_21",
+        "retrieval_score": 0.020317656765676567,
+        "retrieval_rank": 36,
+        "dense_score": 0.7366398,
+        "dense_rank": 41,
+        "bm25_score": 1.4952695165109477e-06,
+        "bm25_rank": 36,
+        "rrf_score": 0.020317656765676567,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_21",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1079
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "BSR_financial_statements_2025_separate_table_51",
+        "retrieval_score": 0.020305091733663162,
+        "retrieval_rank": 37,
+        "dense_score": 0.73730874,
+        "dense_rank": 39,
+        "bm25_score": 1.435979956035792e-06,
+        "bm25_rank": 38,
+        "rrf_score": 0.020305091733663162,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_51",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1437
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "BSR_financial_statements_2025_separate_table_41",
+        "retrieval_score": 0.02004387714399681,
+        "retrieval_rank": 38,
+        "dense_score": 0.7473435,
+        "dense_rank": 32,
+        "bm25_score": 1.1120580101805487e-06,
+        "bm25_rank": 49,
+        "rrf_score": 0.02004387714399681,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_41",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1331
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "BSR_financial_statements_2025_separate_table_16",
+        "retrieval_score": 0.019897557131599686,
+        "retrieval_rank": 39,
+        "dense_score": 0.72082037,
+        "dense_rank": 48,
+        "bm25_score": 1.506175321602133e-06,
+        "bm25_rank": 34,
+        "rrf_score": 0.019897557131599686,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_16",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1019
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "BSR_financial_statements_2025_separate_table_29",
+        "retrieval_score": 0.019897557131599686,
+        "retrieval_rank": 40,
+        "dense_score": 0.7434557,
+        "dense_rank": 34,
+        "bm25_score": 1.122183495847776e-06,
+        "bm25_rank": 48,
+        "rrf_score": 0.019897557131599686,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_29",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1172
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "BSR_financial_statements_2025_separate_table_2",
+        "retrieval_score": 0.01896117900790798,
+        "retrieval_rank": 41,
+        "dense_score": 0.73010546,
+        "dense_rank": 44,
+        "bm25_score": 1.1645990193941712e-06,
+        "bm25_rank": 47,
+        "rrf_score": 0.01896117900790798,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_2",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 194
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "BSR_financial_statements_2025_separate_table_1",
+        "retrieval_score": 0.018957771787960466,
+        "retrieval_rank": 42,
+        "dense_score": 0.7282025,
+        "dense_rank": 45,
+        "bm25_score": 1.1757086773224852e-06,
+        "bm25_rank": 46,
+        "rrf_score": 0.018957771787960466,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_1",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 190
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "BSR_financial_statements_2025_separate_table_13",
+        "retrieval_score": 0.018957771787960466,
+        "retrieval_rank": 43,
+        "dense_score": 0.7281467,
+        "dense_rank": 46,
+        "bm25_score": 1.2663079842696536e-06,
+        "bm25_rank": 45,
+        "rrf_score": 0.018957771787960466,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_13",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 971
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "BSR_financial_statements_2025_separate_table_3",
+        "retrieval_score": 0.01889483065953654,
+        "retrieval_rank": 44,
+        "dense_score": 0.71458614,
+        "dense_rank": 50,
+        "bm25_score": 1.3135443722431446e-06,
+        "bm25_rank": 42,
+        "rrf_score": 0.01889483065953654,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_3",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 198
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "BSR_financial_statements_2025_separate_table_44",
+        "retrieval_score": 0.01889483065953654,
+        "retrieval_rank": 45,
+        "dense_score": 0.733937,
+        "dense_rank": 42,
+        "bm25_score": 1.0686663146903054e-06,
+        "bm25_rank": 50,
+        "rrf_score": 0.01889483065953654,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_44",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1361
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "BSR_financial_statements_2025_separate_table_50",
+        "retrieval_score": 0.018883049790683174,
+        "retrieval_rank": 46,
+        "dense_score": 0.71463144,
+        "dense_rank": 49,
+        "bm25_score": 1.3135443722431446e-06,
+        "bm25_rank": 43,
+        "rrf_score": 0.018883049790683174,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_50",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1433
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "BSR_financial_statements_2025_separate_table_19",
+        "retrieval_score": 0.011904761904761904,
+        "retrieval_rank": 47,
+        "dense_score": 0.75525016,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011904761904761904,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_19",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1069
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "BSR_financial_statements_2025_separate_table_42",
+        "retrieval_score": 0.011764705882352941,
+        "retrieval_rank": 48,
+        "dense_score": 0.75508416,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011764705882352941,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_42",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1335
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "BSR_financial_statements_2025_separate_table_5",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.3391415406100895,
+        "bm25_rank": 31,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_5",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 399
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "BSR_financial_statements_2025_separate_table_34",
+        "retrieval_score": 0.010526315789473684,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.4970278733395048e-06,
+        "bm25_rank": 35,
+        "rrf_score": 0.010526315789473684,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2025_separate_table_34",
+          "doc_id": "BSR_financial_statements_2025_separate",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 1253
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "BSR_financial_statements_2025_separate|1120",
+            "BSR_financial_statements_2025_separate|831",
+            "BSR_financial_statements_2025_separate|1471",
+            "BSR_financial_statements_2025_separate|1405",
+            "BSR_financial_statements_2025_separate|1285"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "BSR_financial_statements_2025_separate|1120",
+            "BSR_financial_statements_2025_separate|831",
+            "BSR_financial_statements_2025_separate|1471",
+            "BSR_financial_statements_2025_separate|1405",
+            "BSR_financial_statements_2025_separate|1285",
+            "BSR_financial_statements_2025_separate|1391",
+            "BSR_financial_statements_2025_separate|1455",
+            "BSR_financial_statements_2025_separate|1281",
+            "BSR_financial_statements_2025_separate|1011",
+            "BSR_financial_statements_2025_separate|1409"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "BSR_financial_statements_2025_separate|1120",
+            "BSR_financial_statements_2025_separate|831",
+            "BSR_financial_statements_2025_separate|1471",
+            "BSR_financial_statements_2025_separate|1405",
+            "BSR_financial_statements_2025_separate|1285",
+            "BSR_financial_statements_2025_separate|1391",
+            "BSR_financial_statements_2025_separate|1455",
+            "BSR_financial_statements_2025_separate|1281",
+            "BSR_financial_statements_2025_separate|1011",
+            "BSR_financial_statements_2025_separate|1409",
+            "BSR_financial_statements_2025_separate|1045",
+            "BSR_financial_statements_2025_separate|639",
+            "BSR_financial_statements_2025_separate|1441",
+            "BSR_financial_statements_2025_separate|1114",
+            "BSR_financial_statements_2025_separate|1096",
+            "BSR_financial_statements_2025_separate|1193",
+            "BSR_financial_statements_2025_separate|1247",
+            "BSR_financial_statements_2025_separate|1142",
+            "BSR_financial_statements_2025_separate|1049",
+            "BSR_financial_statements_2025_separate|1146"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "BSR_financial_statements_2025_separate|1120",
+            "BSR_financial_statements_2025_separate|831",
+            "BSR_financial_statements_2025_separate|1471",
+            "BSR_financial_statements_2025_separate|1405",
+            "BSR_financial_statements_2025_separate|1285",
+            "BSR_financial_statements_2025_separate|1391",
+            "BSR_financial_statements_2025_separate|1455",
+            "BSR_financial_statements_2025_separate|1281",
+            "BSR_financial_statements_2025_separate|1011",
+            "BSR_financial_statements_2025_separate|1409",
+            "BSR_financial_statements_2025_separate|1045",
+            "BSR_financial_statements_2025_separate|639",
+            "BSR_financial_statements_2025_separate|1441",
+            "BSR_financial_statements_2025_separate|1114",
+            "BSR_financial_statements_2025_separate|1096",
+            "BSR_financial_statements_2025_separate|1193",
+            "BSR_financial_statements_2025_separate|1247",
+            "BSR_financial_statements_2025_separate|1142",
+            "BSR_financial_statements_2025_separate|1049",
+            "BSR_financial_statements_2025_separate|1146",
+            "BSR_financial_statements_2025_separate|1213",
+            "BSR_financial_statements_2025_separate|1073",
+            "BSR_financial_statements_2025_separate|1427",
+            "BSR_financial_statements_2025_separate|441",
+            "BSR_financial_statements_2025_separate|1309",
+            "BSR_financial_statements_2025_separate|370",
+            "BSR_financial_statements_2025_separate|1164",
+            "BSR_financial_statements_2025_separate|1301",
+            "BSR_financial_statements_2025_separate|1373",
+            "BSR_financial_statements_2025_separate|851",
+            "BSR_financial_statements_2025_separate|1305",
+            "BSR_financial_statements_2025_separate|1168",
+            "BSR_financial_statements_2025_separate|991",
+            "BSR_financial_statements_2025_separate|1313",
+            "BSR_financial_statements_2025_separate|488",
+            "BSR_financial_statements_2025_separate|1079",
+            "BSR_financial_statements_2025_separate|1437",
+            "BSR_financial_statements_2025_separate|1331",
+            "BSR_financial_statements_2025_separate|1019",
+            "BSR_financial_statements_2025_separate|1172",
+            "BSR_financial_statements_2025_separate|194",
+            "BSR_financial_statements_2025_separate|190",
+            "BSR_financial_statements_2025_separate|971",
+            "BSR_financial_statements_2025_separate|198",
+            "BSR_financial_statements_2025_separate|1361",
+            "BSR_financial_statements_2025_separate|1433",
+            "BSR_financial_statements_2025_separate|1069",
+            "BSR_financial_statements_2025_separate|1335",
+            "BSR_financial_statements_2025_separate|399",
+            "BSR_financial_statements_2025_separate|1253"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

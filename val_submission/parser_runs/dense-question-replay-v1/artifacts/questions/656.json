@@ -1,0 +1,1065 @@
+{
+  "schema_version": 1,
+  "id": 656,
+  "question": "Tỷ trọng các khoản tương đương tiền trên tổng tài sản của CTCP Viễn thông FPT cuối năm 2024 là bao nhiêu %?",
+  "started_at": "2026-08-22T13:39:25+00:00",
+  "finished_at": "2026-08-22T13:39:25+00:00",
+  "duration_seconds": 0.3870132320007542,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "FOX"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "FOX_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "FOX_financial_statements_2024_consolidated|188"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "FOX"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỷ trọng các khoản tương đương tiền trên tổng tài sản cuối %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "FPT",
+        "company_name": "CTCP FPT",
+        "matched_text": "FPT",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "FOX",
+        "company_name": "CTCP Viễn thông FPT",
+        "matched_text": "CTCP Viễn thông FPT",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "FTS",
+        "company_name": "CTCP Chứng khoán FPT",
+        "matched_text": "FPT",
+        "match_type": "collision"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tỷ trọng các khoản tương đương tiền trên tổng tài sản của CTCP Viễn thông FPT cuối năm 2024 là bao nhiêu %?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "FOX",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "FOX"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.8759418,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_9",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 318
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_54",
+        "retrieval_score": 0.8541005,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_54",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1420
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_59",
+        "retrieval_score": 0.8506886,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_59",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1472
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_39",
+        "retrieval_score": 0.8466485,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_39",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1224
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_62",
+        "retrieval_score": 0.84364533,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_62",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1503
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_53",
+        "retrieval_score": 0.8378165,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_53",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1403
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_52",
+        "retrieval_score": 0.8375188,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_52",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1395
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_51",
+        "retrieval_score": 0.8331645,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_51",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1364
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.8284395,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_11",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 534
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_21",
+        "retrieval_score": 0.82557476,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_21",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1034
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_50",
+        "retrieval_score": 0.8245999,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_50",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1345
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.8219594,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_7",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 238
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_49",
+        "retrieval_score": 0.8219406,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_49",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1337
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.82087225,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_8",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 262
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_19",
+        "retrieval_score": 0.8180718,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_19",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1023
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_34",
+        "retrieval_score": 0.81656915,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_34",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1134
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.8155845,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_6",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 207
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_48",
+        "retrieval_score": 0.8144101,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_48",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1320
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_60",
+        "retrieval_score": 0.8119376,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_60",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1489
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_5",
+        "retrieval_score": 0.809844,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_5",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 188
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_13",
+        "retrieval_score": 0.80894583,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_13",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 835
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_61",
+        "retrieval_score": 0.80741984,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_61",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1497
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_22",
+        "retrieval_score": 0.80729336,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_22",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1052
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_42",
+        "retrieval_score": 0.8063572,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_42",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 1264
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_41",
+        "retrieval_score": 0.80502033,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_41",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1241
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_47",
+        "retrieval_score": 0.8040852,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_47",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1305
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_45",
+        "retrieval_score": 0.8028037,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_45",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_12",
+        "retrieval_score": 0.80274904,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_12",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 792
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.8022348,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_10",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 496
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_44",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_44",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1293
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_32",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1128
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_20",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_20",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1032
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_25",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_25",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1104
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_16",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_16",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 953
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_15",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_15",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 949
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_55",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_55",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1437
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_31",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_31",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1122
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_17",
+        "retrieval_score": 0.79987574,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_17",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 963
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_43",
+        "retrieval_score": 0.7993535,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_43",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1289
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_24",
+        "retrieval_score": 0.79914063,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_24",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1088
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_14",
+        "retrieval_score": 0.79840523,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_14",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 940
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_57",
+        "retrieval_score": 0.7966372,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_57",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1447
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_35",
+        "retrieval_score": 0.7964946,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_35",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1179
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_46",
+        "retrieval_score": 0.7942324,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_46",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_33",
+        "retrieval_score": 0.7890482,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_33",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1130
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_38",
+        "retrieval_score": 0.7859707,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_38",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1218
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.7857188,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_40",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1228
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_56",
+        "retrieval_score": 0.7837129,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_56",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1443
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_36",
+        "retrieval_score": 0.7830875,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_36",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1185
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "FOX_financial_statements_2024_consolidated_table_29",
+        "retrieval_score": 0.7830875,
+        "metadata": {
+          "table_id": "FOX_financial_statements_2024_consolidated_table_29",
+          "doc_id": "FOX_financial_statements_2024_consolidated",
+          "ticker": "FOX",
+          "company_name": "CTCP Viễn thông FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1116
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "FOX_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FOX_financial_statements_2024_consolidated|318",
+            "FOX_financial_statements_2024_consolidated|1420",
+            "FOX_financial_statements_2024_consolidated|1472",
+            "FOX_financial_statements_2024_consolidated|1224",
+            "FOX_financial_statements_2024_consolidated|1503"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "FOX_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FOX_financial_statements_2024_consolidated|318",
+            "FOX_financial_statements_2024_consolidated|1420",
+            "FOX_financial_statements_2024_consolidated|1472",
+            "FOX_financial_statements_2024_consolidated|1224",
+            "FOX_financial_statements_2024_consolidated|1503",
+            "FOX_financial_statements_2024_consolidated|1403",
+            "FOX_financial_statements_2024_consolidated|1395",
+            "FOX_financial_statements_2024_consolidated|1364",
+            "FOX_financial_statements_2024_consolidated|534",
+            "FOX_financial_statements_2024_consolidated|1034"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "FOX_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FOX_financial_statements_2024_consolidated|318",
+            "FOX_financial_statements_2024_consolidated|1420",
+            "FOX_financial_statements_2024_consolidated|1472",
+            "FOX_financial_statements_2024_consolidated|1224",
+            "FOX_financial_statements_2024_consolidated|1503",
+            "FOX_financial_statements_2024_consolidated|1403",
+            "FOX_financial_statements_2024_consolidated|1395",
+            "FOX_financial_statements_2024_consolidated|1364",
+            "FOX_financial_statements_2024_consolidated|534",
+            "FOX_financial_statements_2024_consolidated|1034",
+            "FOX_financial_statements_2024_consolidated|1345",
+            "FOX_financial_statements_2024_consolidated|238",
+            "FOX_financial_statements_2024_consolidated|1337",
+            "FOX_financial_statements_2024_consolidated|262",
+            "FOX_financial_statements_2024_consolidated|1023",
+            "FOX_financial_statements_2024_consolidated|1134",
+            "FOX_financial_statements_2024_consolidated|207",
+            "FOX_financial_statements_2024_consolidated|1320",
+            "FOX_financial_statements_2024_consolidated|1489",
+            "FOX_financial_statements_2024_consolidated|188"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "FOX_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FOX_financial_statements_2024_consolidated|318",
+            "FOX_financial_statements_2024_consolidated|1420",
+            "FOX_financial_statements_2024_consolidated|1472",
+            "FOX_financial_statements_2024_consolidated|1224",
+            "FOX_financial_statements_2024_consolidated|1503",
+            "FOX_financial_statements_2024_consolidated|1403",
+            "FOX_financial_statements_2024_consolidated|1395",
+            "FOX_financial_statements_2024_consolidated|1364",
+            "FOX_financial_statements_2024_consolidated|534",
+            "FOX_financial_statements_2024_consolidated|1034",
+            "FOX_financial_statements_2024_consolidated|1345",
+            "FOX_financial_statements_2024_consolidated|238",
+            "FOX_financial_statements_2024_consolidated|1337",
+            "FOX_financial_statements_2024_consolidated|262",
+            "FOX_financial_statements_2024_consolidated|1023",
+            "FOX_financial_statements_2024_consolidated|1134",
+            "FOX_financial_statements_2024_consolidated|207",
+            "FOX_financial_statements_2024_consolidated|1320",
+            "FOX_financial_statements_2024_consolidated|1489",
+            "FOX_financial_statements_2024_consolidated|188",
+            "FOX_financial_statements_2024_consolidated|835",
+            "FOX_financial_statements_2024_consolidated|1497",
+            "FOX_financial_statements_2024_consolidated|1052",
+            "FOX_financial_statements_2024_consolidated|1264",
+            "FOX_financial_statements_2024_consolidated|1241",
+            "FOX_financial_statements_2024_consolidated|1305",
+            "FOX_financial_statements_2024_consolidated|1297",
+            "FOX_financial_statements_2024_consolidated|792",
+            "FOX_financial_statements_2024_consolidated|496",
+            "FOX_financial_statements_2024_consolidated|1293",
+            "FOX_financial_statements_2024_consolidated|1128",
+            "FOX_financial_statements_2024_consolidated|1032",
+            "FOX_financial_statements_2024_consolidated|1104",
+            "FOX_financial_statements_2024_consolidated|953",
+            "FOX_financial_statements_2024_consolidated|949",
+            "FOX_financial_statements_2024_consolidated|1437",
+            "FOX_financial_statements_2024_consolidated|1122",
+            "FOX_financial_statements_2024_consolidated|963",
+            "FOX_financial_statements_2024_consolidated|1289",
+            "FOX_financial_statements_2024_consolidated|1088",
+            "FOX_financial_statements_2024_consolidated|940",
+            "FOX_financial_statements_2024_consolidated|1447",
+            "FOX_financial_statements_2024_consolidated|1179",
+            "FOX_financial_statements_2024_consolidated|1301",
+            "FOX_financial_statements_2024_consolidated|1130",
+            "FOX_financial_statements_2024_consolidated|1218",
+            "FOX_financial_statements_2024_consolidated|1228",
+            "FOX_financial_statements_2024_consolidated|1443",
+            "FOX_financial_statements_2024_consolidated|1185",
+            "FOX_financial_statements_2024_consolidated|1116"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

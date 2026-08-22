@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "run_id": "reranker-05-smoke",
+  "state": "completed",
+  "created_at": "2026-08-22T14:49:30+00:00",
+  "finished_at": "2026-08-22T14:52:08+00:00",
+  "config": {
+    "golden_path": "/home/tuanta/Financial_AI/finlens-ai/golden_100.json",
+    "golden_sha256": "c9b80d776c3c8eb9a072d724a61c5c4fd8585d100f2accc8f602e3226d04eb0b",
+    "source_run": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-03",
+    "selected_question_ids": [
+      9,
+      281,
+      551,
+      862,
+      978
+    ],
+    "llm_model": "gpt-oss-20b",
+    "llm_temperature": "0.1",
+    "concurrency": 4
+  },
+  "questions": {
+    "9": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/9.json"
+    },
+    "281": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/281.json"
+    },
+    "551": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/551.json"
+    },
+    "862": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/862.json"
+    },
+    "978": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/978.json"
+    }
+  },
+  "updated_at": "2026-08-22T14:52:08+00:00",
+  "counts": {
+    "selected": 5,
+    "succeeded": 5,
+    "failed": 0
+  }
+}

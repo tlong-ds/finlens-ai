@@ -1,0 +1,135 @@
+{
+  "run_id": "reranker-04",
+  "updated_at": "2026-08-22T14:18:01+00:00",
+  "source_run": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-03",
+  "selected_queries": 100,
+  "evaluated_queries": 100,
+  "failed_queries": 0,
+  "stage_metrics": {
+    "retriever": {
+      "TABLES F2-MACRO": 0.1900138251384578,
+      "DOCS F2-MACRO": 0.9866260822510823,
+      "TABLES PRECISION": 0.05243255813953488,
+      "TABLES RECALL": 0.9022866161616162,
+      "TABLES MRR5": 0.355,
+      "DOCS PRECISION": 0.9766904761904762,
+      "DOCS RECALL": 0.9940000000000001,
+      "DOCS MRR5": 0.9753333333333333
+    },
+    "shortlist": {
+      "TABLES F2-MACRO": 0.25892469545565605,
+      "DOCS F2-MACRO": 0.9866260822510823,
+      "TABLES PRECISION": 0.08233333333333333,
+      "TABLES RECALL": 0.8588152958152958,
+      "TABLES MRR5": 0.4406666666666667,
+      "DOCS PRECISION": 0.9766904761904762,
+      "DOCS RECALL": 0.9940000000000001,
+      "DOCS MRR5": 0.9753333333333333
+    },
+    "scout_union": {
+      "TABLES F2-MACRO": 0.5985962225689759,
+      "DOCS F2-MACRO": 0.9596034504943469,
+      "TABLES PRECISION": 0.36836106948606945,
+      "TABLES RECALL": 0.782223124098124,
+      "TABLES MRR5": 0.6506666666666666,
+      "DOCS PRECISION": 0.9768333333333333,
+      "DOCS RECALL": 0.9606984126984127,
+      "DOCS MRR5": 0.987
+    },
+    "finalists": {
+      "TABLES F2-MACRO": 0.5978398321240455,
+      "DOCS F2-MACRO": 0.9866260822510823,
+      "TABLES PRECISION": 0.36340580253080257,
+      "TABLES RECALL": 0.783132215007215,
+      "TABLES MRR5": 0.6506666666666666,
+      "DOCS PRECISION": 0.9766904761904762,
+      "DOCS RECALL": 0.9940000000000001,
+      "DOCS MRR5": 0.987
+    },
+    "final_llm": {
+      "TABLES F2-MACRO": 0.6502748902525362,
+      "DOCS F2-MACRO": 0.9265393053764492,
+      "TABLES PRECISION": 0.6530833333333333,
+      "TABLES RECALL": 0.6538582251082251,
+      "TABLES MRR5": 0.7033333333333333,
+      "DOCS PRECISION": 0.95,
+      "DOCS RECALL": 0.9248333333333334,
+      "DOCS MRR5": 0.95
+    },
+    "reranker": {
+      "TABLES F2-MACRO": 0.664106454717945,
+      "DOCS F2-MACRO": 0.9747133535504975,
+      "TABLES PRECISION": 0.6680138888888889,
+      "TABLES RECALL": 0.6677786796536797,
+      "TABLES MRR5": 0.7233333333333333,
+      "DOCS PRECISION": 0.99,
+      "DOCS RECALL": 0.9736428571428571,
+      "DOCS MRR5": 0.99
+    }
+  },
+  "slice_metrics": {
+    "single_gold_table": {
+      "queries": 42,
+      "reranker": {
+        "TABLES F2-MACRO": 0.7063492063492064,
+        "DOCS F2-MACRO": 1.0,
+        "TABLES PRECISION": 0.6904761904761905,
+        "TABLES RECALL": 0.7142857142857143,
+        "TABLES MRR5": 0.6904761904761905,
+        "DOCS PRECISION": 1.0,
+        "DOCS RECALL": 1.0,
+        "DOCS MRR5": 1.0
+      }
+    },
+    "one_table_per_document": {
+      "queries": 40,
+      "reranker": {
+        "TABLES F2-MACRO": 0.6843534482758621,
+        "DOCS F2-MACRO": 0.9802411294352824,
+        "TABLES PRECISION": 0.6829166666666666,
+        "TABLES RECALL": 0.6870833333333334,
+        "TABLES MRR5": 0.75,
+        "DOCS PRECISION": 0.9875,
+        "DOCS RECALL": 0.9816666666666667,
+        "DOCS MRR5": 0.9875
+      }
+    },
+    "multi_table_per_document": {
+      "queries": 18,
+      "reranker": {
+        "TABLES F2-MACRO": 0.5205467152274085,
+        "DOCS F2-MACRO": 0.9034272320910252,
+        "TABLES PRECISION": 0.5824845679012346,
+        "TABLES RECALL": 0.516363035113035,
+        "TABLES MRR5": 0.7407407407407408,
+        "DOCS PRECISION": 0.9722222222222222,
+        "DOCS RECALL": 0.8943121693121694,
+        "DOCS MRR5": 0.9722222222222222
+      }
+    }
+  },
+  "diagnostics": {
+    "gold_table_terminal_counts": {
+      "final_llm": 20,
+      "retriever": 45,
+      "scout_union": 38,
+      "selected": 189,
+      "shortlist": 15
+    },
+    "gold_table_absent_by_stage": {
+      "final_llm": 135,
+      "finalists": 98,
+      "reranker": 118,
+      "retriever": 45,
+      "scout_union": 99,
+      "shortlist": 60
+    },
+    "required_bucket_gold_recall": 0.9180327868852459,
+    "required_bucket_precision": 0.9781659388646288,
+    "coverage_completion_sources": {
+      "coverage_completion_anchor": 4,
+      "coverage_completion_scout": 10
+    },
+    "uncovered_concept_count": 21
+  }
+}

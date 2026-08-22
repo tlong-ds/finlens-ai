@@ -1,0 +1,1373 @@
+{
+  "schema_version": 1,
+  "id": 824,
+  "question": "Số lượng trung bình cổ phiếu phổ thông đang lưu hành của CTCP Hàng không Vietjet (VJC) vào cuối các năm 2016, 2019 và 2021 là bao nhiêu triệu cổ phiếu?",
+  "started_at": "2026-08-22T13:51:24+00:00",
+  "finished_at": "2026-08-22T13:51:24+00:00",
+  "duration_seconds": 0.3681914859917015,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VJC"
+    ],
+    "year": [
+      2016,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VJC_financial_statements_2016_consolidated",
+      "VJC_financial_statements_2019_consolidated",
+      "VJC_financial_statements_2021_consolidated"
+    ],
+    "relevant_tables": [
+      "VJC_financial_statements_2016_consolidated|1138",
+      "VJC_financial_statements_2019_consolidated|1157",
+      "VJC_financial_statements_2021_consolidated|1431"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VJC"
+    ],
+    "year": [
+      2016,
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Số lượng trung bình cổ phiếu phổ thông đang lưu hành CTCP Hàng không Vietjet vào cuối các , và triệu cổ phiếu",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "VJC",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2019,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Số lượng trung bình cổ phiếu phổ thông đang lưu hành CTCP Hàng không Vietjet vào cuối các , và triệu cổ phiếu",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VJC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VJC"
+          ],
+          "year": [
+            2016,
+            2019,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_9",
+        "retrieval_score": 0.030679156908665108,
+        "retrieval_rank": 1,
+        "dense_score": 0.8951615,
+        "dense_rank": 1,
+        "bm25_score": 12.557065783579604,
+        "bm25_rank": 10,
+        "rrf_score": 0.030679156908665108,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_9",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 268
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_51",
+        "retrieval_score": 0.030621785881252923,
+        "retrieval_rank": 2,
+        "dense_score": 0.8594241,
+        "dense_rank": 9,
+        "bm25_score": 29.26811472681979,
+        "bm25_rank": 2,
+        "rrf_score": 0.030621785881252923,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_51",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1473
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_47",
+        "retrieval_score": 0.03047794966520434,
+        "retrieval_rank": 3,
+        "dense_score": 0.85769844,
+        "dense_rank": 11,
+        "bm25_score": 31.180743857810576,
+        "bm25_rank": 1,
+        "rrf_score": 0.03047794966520434,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_47",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1431
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_15",
+        "retrieval_score": 0.030117753623188408,
+        "retrieval_rank": 4,
+        "dense_score": 0.87071186,
+        "dense_rank": 4,
+        "bm25_score": 12.741427550328838,
+        "bm25_rank": 9,
+        "rrf_score": 0.030117753623188408,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_15",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 356
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_10",
+        "retrieval_score": 0.029273504273504274,
+        "retrieval_rank": 5,
+        "dense_score": 0.870304,
+        "dense_rank": 5,
+        "bm25_score": 12.41255957669332,
+        "bm25_rank": 12,
+        "rrf_score": 0.029273504273504274,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_10",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 281
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_18",
+        "retrieval_score": 0.029211087420042643,
+        "retrieval_rank": 6,
+        "dense_score": 0.85878825,
+        "dense_rank": 10,
+        "bm25_score": 13.223889569692998,
+        "bm25_rank": 7,
+        "rrf_score": 0.029211087420042643,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_18",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 807
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_14",
+        "retrieval_score": 0.028850145288501453,
+        "retrieval_rank": 7,
+        "dense_score": 0.8686557,
+        "dense_rank": 6,
+        "bm25_score": 11.677339594559614,
+        "bm25_rank": 13,
+        "rrf_score": 0.028850145288501453,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_14",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 344
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_44",
+        "retrieval_score": 0.02871794871794872,
+        "retrieval_rank": 8,
+        "dense_score": 0.8539752,
+        "dense_rank": 15,
+        "bm25_score": 21.64572426011541,
+        "bm25_rank": 5,
+        "rrf_score": 0.02871794871794872,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_44",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1157
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+        "retrieval_score": 0.027598020555767037,
+        "retrieval_rank": 9,
+        "dense_score": 0.85568815,
+        "dense_rank": 14,
+        "bm25_score": 12.44049079719593,
+        "bm25_rank": 11,
+        "rrf_score": 0.027598020555767037,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 829
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.02749719416386083,
+        "retrieval_rank": 10,
+        "dense_score": 0.84952205,
+        "dense_rank": 21,
+        "bm25_score": 16.01880012691893,
+        "bm25_rank": 6,
+        "rrf_score": 0.02749719416386083,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1120
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_11",
+        "retrieval_score": 0.027364110201042444,
+        "retrieval_rank": 11,
+        "dense_score": 0.8646198,
+        "dense_rank": 8,
+        "bm25_score": 11.06216709918067,
+        "bm25_rank": 19,
+        "rrf_score": 0.027364110201042444,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_11",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_15",
+        "retrieval_score": 0.02654569892473118,
+        "retrieval_rank": 12,
+        "dense_score": 0.8805281,
+        "dense_rank": 2,
+        "bm25_score": 7.631855503984001,
+        "bm25_rank": 36,
+        "rrf_score": 0.02654569892473118,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_15",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1036
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_22",
+        "retrieval_score": 0.026200135226504394,
+        "retrieval_rank": 13,
+        "dense_score": 0.8427435,
+        "dense_rank": 27,
+        "bm25_score": 12.846225957869551,
+        "bm25_rank": 8,
+        "rrf_score": 0.026200135226504394,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_22",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 855
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_22",
+        "retrieval_score": 0.025561706284597852,
+        "retrieval_rank": 14,
+        "dense_score": 0.8491256,
+        "dense_rank": 23,
+        "bm25_score": 11.645153312774188,
+        "bm25_rank": 14,
+        "rrf_score": 0.025561706284597852,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_22",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 885
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_47",
+        "retrieval_score": 0.025528455284552845,
+        "retrieval_rank": 15,
+        "dense_score": 0.8494456,
+        "dense_rank": 22,
+        "bm25_score": 11.341269082969992,
+        "bm25_rank": 15,
+        "rrf_score": 0.025528455284552845,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_47",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1138
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.02506265664160401,
+        "retrieval_rank": 16,
+        "dense_score": 0.8534608,
+        "dense_rank": 16,
+        "bm25_score": 9.705346397153765,
+        "bm25_rank": 24,
+        "rrf_score": 0.02506265664160401,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_6",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 201
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_10",
+        "retrieval_score": 0.024925373134328358,
+        "retrieval_rank": 17,
+        "dense_score": 0.86815494,
+        "dense_rank": 7,
+        "bm25_score": 7.1119790165233345,
+        "bm25_rank": 40,
+        "rrf_score": 0.024925373134328358,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_10",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 242
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_60",
+        "retrieval_score": 0.02381289865343728,
+        "retrieval_rank": 18,
+        "dense_score": 0.84723365,
+        "dense_rank": 25,
+        "bm25_score": 9.987962146357502,
+        "bm25_rank": 23,
+        "rrf_score": 0.02381289865343728,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_60",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1372
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_34",
+        "retrieval_score": 0.023513328776486674,
+        "retrieval_rank": 19,
+        "dense_score": 0.8398316,
+        "dense_rank": 35,
+        "bm25_score": 11.241871336514402,
+        "bm25_rank": 17,
+        "rrf_score": 0.023513328776486674,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_34",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1024
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_40",
+        "retrieval_score": 0.023361976369495163,
+        "retrieval_rank": 20,
+        "dense_score": 0.8373544,
+        "dense_rank": 38,
+        "bm25_score": 11.31473498778481,
+        "bm25_rank": 16,
+        "rrf_score": 0.023361976369495163,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_40",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1105
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_15",
+        "retrieval_score": 0.023024594453165882,
+        "retrieval_rank": 21,
+        "dense_score": 0.852453,
+        "dense_rank": 18,
+        "bm25_score": 7.261036137600428,
+        "bm25_rank": 38,
+        "rrf_score": 0.023024594453165882,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_15",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 776
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_8",
+        "retrieval_score": 0.022431077694235586,
+        "retrieval_rank": 22,
+        "dense_score": 0.84903544,
+        "dense_rank": 24,
+        "bm25_score": 7.733939825869095,
+        "bm25_rank": 35,
+        "rrf_score": 0.022431077694235586,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_8",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 231
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_21",
+        "retrieval_score": 0.022352647352647352,
+        "retrieval_rank": 23,
+        "dense_score": 0.8413432,
+        "dense_rank": 31,
+        "bm25_score": 9.605039616943444,
+        "bm25_rank": 28,
+        "rrf_score": 0.022352647352647352,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_21",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 861
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.021937185327259648,
+        "retrieval_rank": 24,
+        "dense_score": 0.8380326,
+        "dense_rank": 37,
+        "bm25_score": 9.645107171024772,
+        "bm25_rank": 26,
+        "rrf_score": 0.021937185327259648,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_9",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 228
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+        "retrieval_score": 0.02181050656660413,
+        "retrieval_rank": 25,
+        "dense_score": 0.8354432,
+        "dense_rank": 44,
+        "bm25_score": 10.2848691368593,
+        "bm25_rank": 22,
+        "rrf_score": 0.02181050656660413,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 809
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_36",
+        "retrieval_score": 0.02147344374643061,
+        "retrieval_rank": 26,
+        "dense_score": 0.8358761,
+        "dense_rank": 43,
+        "bm25_score": 9.686197217725432,
+        "bm25_rank": 25,
+        "rrf_score": 0.02147344374643061,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_36",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1051
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_13",
+        "retrieval_score": 0.02097902097902098,
+        "retrieval_rank": 27,
+        "dense_score": 0.842574,
+        "dense_rank": 28,
+        "bm25_score": 6.329727552115611,
+        "bm25_rank": 44,
+        "rrf_score": 0.02097902097902098,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_13",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_38",
+        "retrieval_score": 0.020495214315439034,
+        "retrieval_rank": 28,
+        "dense_score": 0.83383316,
+        "dense_rank": 48,
+        "bm25_score": 9.46889855717387,
+        "bm25_rank": 29,
+        "rrf_score": 0.020495214315439034,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_38",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1306
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_52",
+        "retrieval_score": 0.020202020202020204,
+        "retrieval_rank": 29,
+        "dense_score": 0.83684945,
+        "dense_rank": 39,
+        "bm25_score": 7.196670045192873,
+        "bm25_rank": 39,
+        "rrf_score": 0.020202020202020204,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_52",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1236
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_50",
+        "retrieval_score": 0.019246784491533265,
+        "retrieval_rank": 30,
+        "dense_score": 0.8339997,
+        "dense_rank": 47,
+        "bm25_score": 7.109319468476258,
+        "bm25_rank": 41,
+        "rrf_score": 0.019246784491533265,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_50",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1244
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_9",
+        "retrieval_score": 0.01869812145041503,
+        "retrieval_rank": 31,
+        "dense_score": 0.8337714,
+        "dense_rank": 49,
+        "bm25_score": 6.289994909639205,
+        "bm25_rank": 45,
+        "rrf_score": 0.01869812145041503,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_9",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 225
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_61",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 32,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 24.807754506370237,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_61",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1376
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 33,
+        "dense_score": 0.8751367,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_10",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 279
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_62",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 34,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 22.57102612655572,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_62",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1400
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_33",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 35,
+        "dense_score": 0.85718393,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_33",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1246
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_14",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 36,
+        "dense_score": 0.8566886,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_14",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1019
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_43",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 37,
+        "dense_score": 0.85249174,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_43",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1138
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_30",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.092194118008086,
+        "bm25_rank": 18,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_30",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1216
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_16",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 39,
+        "dense_score": 0.8523185,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_16",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.039089124781775,
+        "bm25_rank": 20,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1423
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 41,
+        "dense_score": 0.8518816,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_7",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 216
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_27",
+        "retrieval_score": 0.012345679012345678,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.863801396350423,
+        "bm25_rank": 21,
+        "rrf_score": 0.012345679012345678,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_27",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 953
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_49",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 43,
+        "dense_score": 0.8440321,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_49",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1452
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.614205682431937,
+        "bm25_rank": 27,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_7",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 178
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_60",
+        "retrieval_score": 0.011235955056179775,
+        "retrieval_rank": 45,
+        "dense_score": 0.8418417,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011235955056179775,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_60",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1613
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VJC_financial_statements_2019_consolidated_table_38",
+        "retrieval_score": 0.011111111111111112,
+        "retrieval_rank": 46,
+        "dense_score": 0.8416149,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011111111111111112,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2019_consolidated_table_38",
+          "doc_id": "VJC_financial_statements_2019_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1078
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VJC_financial_statements_2021_consolidated_table_5",
+        "retrieval_score": 0.011111111111111112,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.074249242784386,
+        "bm25_rank": 30,
+        "rrf_score": 0.011111111111111112,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2021_consolidated_table_5",
+          "doc_id": "VJC_financial_statements_2021_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 170
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_5",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 48,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.373791927338011,
+        "bm25_rank": 31,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_5",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 35
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_4",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.219680236949568,
+        "bm25_rank": 32,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_4",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 31
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VJC_financial_statements_2016_consolidated_table_58",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 50,
+        "dense_score": 0.8412467,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "VJC_financial_statements_2016_consolidated_table_58",
+          "doc_id": "VJC_financial_statements_2016_consolidated",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1301
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2021_consolidated",
+            "VJC_financial_statements_2016_consolidated",
+            "VJC_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2021_consolidated|268",
+            "VJC_financial_statements_2021_consolidated|1473",
+            "VJC_financial_statements_2021_consolidated|1431",
+            "VJC_financial_statements_2016_consolidated|356",
+            "VJC_financial_statements_2019_consolidated|281"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.3333333333333333,
+          "f2": 0.29411764705882354,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2021_consolidated",
+            "VJC_financial_statements_2016_consolidated",
+            "VJC_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2021_consolidated|268",
+            "VJC_financial_statements_2021_consolidated|1473",
+            "VJC_financial_statements_2021_consolidated|1431",
+            "VJC_financial_statements_2016_consolidated|356",
+            "VJC_financial_statements_2019_consolidated|281",
+            "VJC_financial_statements_2019_consolidated|807",
+            "VJC_financial_statements_2016_consolidated|344",
+            "VJC_financial_statements_2019_consolidated|1157",
+            "VJC_financial_statements_2016_consolidated|829",
+            "VJC_financial_statements_2016_consolidated|1120"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.6666666666666666,
+          "f2": 0.4545454545454545,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2021_consolidated",
+            "VJC_financial_statements_2016_consolidated",
+            "VJC_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2021_consolidated|268",
+            "VJC_financial_statements_2021_consolidated|1473",
+            "VJC_financial_statements_2021_consolidated|1431",
+            "VJC_financial_statements_2016_consolidated|356",
+            "VJC_financial_statements_2019_consolidated|281",
+            "VJC_financial_statements_2019_consolidated|807",
+            "VJC_financial_statements_2016_consolidated|344",
+            "VJC_financial_statements_2019_consolidated|1157",
+            "VJC_financial_statements_2016_consolidated|829",
+            "VJC_financial_statements_2016_consolidated|1120",
+            "VJC_financial_statements_2019_consolidated|296",
+            "VJC_financial_statements_2021_consolidated|1036",
+            "VJC_financial_statements_2016_consolidated|855",
+            "VJC_financial_statements_2019_consolidated|885",
+            "VJC_financial_statements_2016_consolidated|1138",
+            "VJC_financial_statements_2021_consolidated|201",
+            "VJC_financial_statements_2016_consolidated|242",
+            "VJC_financial_statements_2019_consolidated|1372",
+            "VJC_financial_statements_2019_consolidated|1024",
+            "VJC_financial_statements_2019_consolidated|1105"
+          ]
+        },
+        "tables": {
+          "precision": 0.15,
+          "recall": 1.0,
+          "f2": 0.46875,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VJC_financial_statements_2021_consolidated",
+            "VJC_financial_statements_2016_consolidated",
+            "VJC_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VJC_financial_statements_2021_consolidated|268",
+            "VJC_financial_statements_2021_consolidated|1473",
+            "VJC_financial_statements_2021_consolidated|1431",
+            "VJC_financial_statements_2016_consolidated|356",
+            "VJC_financial_statements_2019_consolidated|281",
+            "VJC_financial_statements_2019_consolidated|807",
+            "VJC_financial_statements_2016_consolidated|344",
+            "VJC_financial_statements_2019_consolidated|1157",
+            "VJC_financial_statements_2016_consolidated|829",
+            "VJC_financial_statements_2016_consolidated|1120",
+            "VJC_financial_statements_2019_consolidated|296",
+            "VJC_financial_statements_2021_consolidated|1036",
+            "VJC_financial_statements_2016_consolidated|855",
+            "VJC_financial_statements_2019_consolidated|885",
+            "VJC_financial_statements_2016_consolidated|1138",
+            "VJC_financial_statements_2021_consolidated|201",
+            "VJC_financial_statements_2016_consolidated|242",
+            "VJC_financial_statements_2019_consolidated|1372",
+            "VJC_financial_statements_2019_consolidated|1024",
+            "VJC_financial_statements_2019_consolidated|1105",
+            "VJC_financial_statements_2019_consolidated|776",
+            "VJC_financial_statements_2021_consolidated|231",
+            "VJC_financial_statements_2019_consolidated|861",
+            "VJC_financial_statements_2019_consolidated|228",
+            "VJC_financial_statements_2016_consolidated|809",
+            "VJC_financial_statements_2019_consolidated|1051",
+            "VJC_financial_statements_2016_consolidated|296",
+            "VJC_financial_statements_2021_consolidated|1306",
+            "VJC_financial_statements_2016_consolidated|1236",
+            "VJC_financial_statements_2019_consolidated|1244",
+            "VJC_financial_statements_2016_consolidated|225",
+            "VJC_financial_statements_2019_consolidated|1376",
+            "VJC_financial_statements_2021_consolidated|279",
+            "VJC_financial_statements_2016_consolidated|1400",
+            "VJC_financial_statements_2021_consolidated|1246",
+            "VJC_financial_statements_2021_consolidated|1019",
+            "VJC_financial_statements_2019_consolidated|1138",
+            "VJC_financial_statements_2021_consolidated|1216",
+            "VJC_financial_statements_2021_consolidated|1059",
+            "VJC_financial_statements_2016_consolidated|1423",
+            "VJC_financial_statements_2021_consolidated|216",
+            "VJC_financial_statements_2019_consolidated|953",
+            "VJC_financial_statements_2021_consolidated|1452",
+            "VJC_financial_statements_2019_consolidated|178",
+            "VJC_financial_statements_2021_consolidated|1613",
+            "VJC_financial_statements_2019_consolidated|1078",
+            "VJC_financial_statements_2021_consolidated|170",
+            "VJC_financial_statements_2016_consolidated|35",
+            "VJC_financial_statements_2016_consolidated|31",
+            "VJC_financial_statements_2016_consolidated|1301"
+          ]
+        },
+        "tables": {
+          "precision": 0.06,
+          "recall": 1.0,
+          "f2": 0.24193548387096772,
+          "mrr5": 0.3333333333333333
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

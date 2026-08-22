@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 683,
+  "question": "Kết quả thuần từ hoạt động dịch vụ của Ngân hàng TMCP Quốc Dân trong năm tài chính 2015 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:38:54+00:00",
+  "finished_at": "2026-08-22T13:38:54+00:00",
+  "duration_seconds": 0.42134815799363423,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "NVB_financial_statements_2015_consolidated"
+    ],
+    "relevant_tables": [
+      "NVB_financial_statements_2015_consolidated|319"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Kết quả thuần từ hoạt động dịch vụ trong tài chính tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "matched_text": "Ngân hàng TMCP Quốc Dân",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Kết quả thuần từ hoạt động dịch vụ trong tài chính tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "NVB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "NVB"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_8",
+        "retrieval_score": 0.8559611,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_8",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 319
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_40",
+        "retrieval_score": 0.85217345,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_40",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1190
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_42",
+        "retrieval_score": 0.8464957,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_42",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1211
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_41",
+        "retrieval_score": 0.84277695,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_41",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1207
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_9",
+        "retrieval_score": 0.8345893,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_9",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 348
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_44",
+        "retrieval_score": 0.83425474,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_44",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1219
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_11",
+        "retrieval_score": 0.8272221,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_11",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 386
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_43",
+        "retrieval_score": 0.82505465,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_43",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1215
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_12",
+        "retrieval_score": 0.82485366,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_12",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 510
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_38",
+        "retrieval_score": 0.82485366,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_38",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 1182
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_10",
+        "retrieval_score": 0.8234465,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_10",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 367
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_50",
+        "retrieval_score": 0.8229182,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_50",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1277
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_45",
+        "retrieval_score": 0.82229376,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_45",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_46",
+        "retrieval_score": 0.8215361,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_46",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1242
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_23",
+        "retrieval_score": 0.81783277,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_23",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 995
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_24",
+        "retrieval_score": 0.81783277,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_24",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1008
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_25",
+        "retrieval_score": 0.8173175,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_25",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1029
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_52",
+        "retrieval_score": 0.81693006,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_52",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1300
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_26",
+        "retrieval_score": 0.81659716,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_26",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_59",
+        "retrieval_score": 0.8154703,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_59",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1519
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_6",
+        "retrieval_score": 0.8151296,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_6",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 290
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_21",
+        "retrieval_score": 0.8126096,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_21",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 965
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_55",
+        "retrieval_score": 0.81222034,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_55",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1419
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_47",
+        "retrieval_score": 0.8117136,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_47",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1246
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_54",
+        "retrieval_score": 0.81098133,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_54",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1333
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_51",
+        "retrieval_score": 0.81022966,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_51",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1296
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_16",
+        "retrieval_score": 0.8089038,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_16",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 904
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_56",
+        "retrieval_score": 0.8082975,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_56",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_18",
+        "retrieval_score": 0.8076628,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_18",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 925
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_30",
+        "retrieval_score": 0.8074465,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_30",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1081
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_20",
+        "retrieval_score": 0.8074153,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_20",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 948
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_60",
+        "retrieval_score": 0.8068567,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_60",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1536
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_36",
+        "retrieval_score": 0.8059034,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_36",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1157
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_35",
+        "retrieval_score": 0.8056131,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_35",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1144
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_39",
+        "retrieval_score": 0.8045703,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_39",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1186
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_4",
+        "retrieval_score": 0.8043058,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_4",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 254
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_7",
+        "retrieval_score": 0.80290186,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_7",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 294
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_31",
+        "retrieval_score": 0.802455,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_31",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1100
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_28",
+        "retrieval_score": 0.80238414,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_28",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1073
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_33",
+        "retrieval_score": 0.8019372,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_33",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1110
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_19",
+        "retrieval_score": 0.8018432,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_19",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 944
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_34",
+        "retrieval_score": 0.8013623,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_34",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1127
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_13",
+        "retrieval_score": 0.7961535,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_13",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 584
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_29",
+        "retrieval_score": 0.79456663,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_29",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_22",
+        "retrieval_score": 0.79417145,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_22",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 982
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_14",
+        "retrieval_score": 0.7932059,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_14",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 767
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_49",
+        "retrieval_score": 0.79258585,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_49",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1271
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_58",
+        "retrieval_score": 0.7919054,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_58",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1488
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_57",
+        "retrieval_score": 0.7919054,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_57",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1467
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "NVB_financial_statements_2015_consolidated_table_3",
+        "retrieval_score": 0.7919054,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2015_consolidated_table_3",
+          "doc_id": "NVB_financial_statements_2015_consolidated",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 235
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "NVB_financial_statements_2015_consolidated|319",
+            "NVB_financial_statements_2015_consolidated|1190",
+            "NVB_financial_statements_2015_consolidated|1211",
+            "NVB_financial_statements_2015_consolidated|1207",
+            "NVB_financial_statements_2015_consolidated|348"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "NVB_financial_statements_2015_consolidated|319",
+            "NVB_financial_statements_2015_consolidated|1190",
+            "NVB_financial_statements_2015_consolidated|1211",
+            "NVB_financial_statements_2015_consolidated|1207",
+            "NVB_financial_statements_2015_consolidated|348",
+            "NVB_financial_statements_2015_consolidated|1219",
+            "NVB_financial_statements_2015_consolidated|386",
+            "NVB_financial_statements_2015_consolidated|1215",
+            "NVB_financial_statements_2015_consolidated|510",
+            "NVB_financial_statements_2015_consolidated|1182"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "NVB_financial_statements_2015_consolidated|319",
+            "NVB_financial_statements_2015_consolidated|1190",
+            "NVB_financial_statements_2015_consolidated|1211",
+            "NVB_financial_statements_2015_consolidated|1207",
+            "NVB_financial_statements_2015_consolidated|348",
+            "NVB_financial_statements_2015_consolidated|1219",
+            "NVB_financial_statements_2015_consolidated|386",
+            "NVB_financial_statements_2015_consolidated|1215",
+            "NVB_financial_statements_2015_consolidated|510",
+            "NVB_financial_statements_2015_consolidated|1182",
+            "NVB_financial_statements_2015_consolidated|367",
+            "NVB_financial_statements_2015_consolidated|1277",
+            "NVB_financial_statements_2015_consolidated|1223",
+            "NVB_financial_statements_2015_consolidated|1242",
+            "NVB_financial_statements_2015_consolidated|995",
+            "NVB_financial_statements_2015_consolidated|1008",
+            "NVB_financial_statements_2015_consolidated|1029",
+            "NVB_financial_statements_2015_consolidated|1300",
+            "NVB_financial_statements_2015_consolidated|1033",
+            "NVB_financial_statements_2015_consolidated|1519"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "NVB_financial_statements_2015_consolidated|319",
+            "NVB_financial_statements_2015_consolidated|1190",
+            "NVB_financial_statements_2015_consolidated|1211",
+            "NVB_financial_statements_2015_consolidated|1207",
+            "NVB_financial_statements_2015_consolidated|348",
+            "NVB_financial_statements_2015_consolidated|1219",
+            "NVB_financial_statements_2015_consolidated|386",
+            "NVB_financial_statements_2015_consolidated|1215",
+            "NVB_financial_statements_2015_consolidated|510",
+            "NVB_financial_statements_2015_consolidated|1182",
+            "NVB_financial_statements_2015_consolidated|367",
+            "NVB_financial_statements_2015_consolidated|1277",
+            "NVB_financial_statements_2015_consolidated|1223",
+            "NVB_financial_statements_2015_consolidated|1242",
+            "NVB_financial_statements_2015_consolidated|995",
+            "NVB_financial_statements_2015_consolidated|1008",
+            "NVB_financial_statements_2015_consolidated|1029",
+            "NVB_financial_statements_2015_consolidated|1300",
+            "NVB_financial_statements_2015_consolidated|1033",
+            "NVB_financial_statements_2015_consolidated|1519",
+            "NVB_financial_statements_2015_consolidated|290",
+            "NVB_financial_statements_2015_consolidated|965",
+            "NVB_financial_statements_2015_consolidated|1419",
+            "NVB_financial_statements_2015_consolidated|1246",
+            "NVB_financial_statements_2015_consolidated|1333",
+            "NVB_financial_statements_2015_consolidated|1296",
+            "NVB_financial_statements_2015_consolidated|904",
+            "NVB_financial_statements_2015_consolidated|1438",
+            "NVB_financial_statements_2015_consolidated|925",
+            "NVB_financial_statements_2015_consolidated|1081",
+            "NVB_financial_statements_2015_consolidated|948",
+            "NVB_financial_statements_2015_consolidated|1536",
+            "NVB_financial_statements_2015_consolidated|1157",
+            "NVB_financial_statements_2015_consolidated|1144",
+            "NVB_financial_statements_2015_consolidated|1186",
+            "NVB_financial_statements_2015_consolidated|254",
+            "NVB_financial_statements_2015_consolidated|294",
+            "NVB_financial_statements_2015_consolidated|1100",
+            "NVB_financial_statements_2015_consolidated|1073",
+            "NVB_financial_statements_2015_consolidated|1110",
+            "NVB_financial_statements_2015_consolidated|944",
+            "NVB_financial_statements_2015_consolidated|1127",
+            "NVB_financial_statements_2015_consolidated|584",
+            "NVB_financial_statements_2015_consolidated|1077",
+            "NVB_financial_statements_2015_consolidated|982",
+            "NVB_financial_statements_2015_consolidated|767",
+            "NVB_financial_statements_2015_consolidated|1271",
+            "NVB_financial_statements_2015_consolidated|1488",
+            "NVB_financial_statements_2015_consolidated|1467",
+            "NVB_financial_statements_2015_consolidated|235"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

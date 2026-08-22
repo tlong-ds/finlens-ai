@@ -1,0 +1,1098 @@
+{
+  "schema_version": 1,
+  "id": 742,
+  "question": "Cuối năm 2019, số dư dự phòng rủi ro cho vay cụ thể của Ngân hàng TMCP Hàng hải Việt Nam chênh lệch bao nhiêu triệu đồng so với Ngân hàng TMCP Ngoại thương Việt Nam ?",
+  "started_at": "2026-08-22T13:39:26+00:00",
+  "finished_at": "2026-08-22T13:39:27+00:00",
+  "duration_seconds": 1.2260693729913328,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MSB",
+      "VCB"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MSB_financial_statements_2019_consolidated",
+      "VCB_financial_statements_2019_consolidated"
+    ],
+    "relevant_tables": [
+      "MSB_financial_statements_2019_consolidated|1408",
+      "VCB_financial_statements_2019_consolidated|1164"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VCB",
+      "MSB"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Cuối , số dư dự phòng rủi ro cho vay cụ thể chênh lệch triệu đồng so với",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VCB",
+        "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+        "matched_text": "Ngân hàng TMCP Ngoại thương Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "MSB",
+        "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+        "matched_text": "Ngân hàng TMCP Hàng hải Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "CTG",
+        "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+        "matched_text": "thương Việt Nam",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "matched_text": "hải Việt Nam",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02",
+            "c01"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Cuối năm 2019, số dư dự phòng rủi ro cho vay cụ thể của Ngân hàng TMCP Hàng hải Việt Nam chênh lệch bao nhiêu triệu đồng so với Ngân hàng TMCP Ngoại thương Việt Nam ?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VCB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VCB"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "MSB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MSB"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_52",
+        "retrieval_score": 0.875485,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_52",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1313
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.8665022,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_7",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 150
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_51",
+        "retrieval_score": 0.875485,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_51",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1294
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_61",
+        "retrieval_score": 0.8654268,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_61",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1668
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_82",
+        "retrieval_score": 0.8671115,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_82",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1656
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_20",
+        "retrieval_score": 0.8609656,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_20",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1267
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_93",
+        "retrieval_score": 0.8643055,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_93",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1821
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_91",
+        "retrieval_score": 0.8594363,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_91",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1994
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_61",
+        "retrieval_score": 0.86279494,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_61",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1434
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_79",
+        "retrieval_score": 0.8558148,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_79",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1869
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_92",
+        "retrieval_score": 0.85654634,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_92",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1813
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_62",
+        "retrieval_score": 0.8514516,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_62",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1672
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.8562492,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_9",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 202
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_110",
+        "retrieval_score": 0.8466914,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_110",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2306
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_24",
+        "retrieval_score": 0.8508338,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_24",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1044
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_12",
+        "retrieval_score": 0.84553504,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_12",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 275
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_17",
+        "retrieval_score": 0.85030234,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_17",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 414
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_111",
+        "retrieval_score": 0.8426861,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_111",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2327
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.8486699,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_37",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1150
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.8421937,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_37",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1408
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_62",
+        "retrieval_score": 0.8460257,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_62",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_35",
+        "retrieval_score": 0.84117776,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_35",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1371
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_75",
+        "retrieval_score": 0.8438734,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_75",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1589
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_90",
+        "retrieval_score": 0.8397919,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_90",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1971
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_48",
+        "retrieval_score": 0.8431574,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_48",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1244
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_77",
+        "retrieval_score": 0.8396123,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_77",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1844
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_38",
+        "retrieval_score": 0.8425794,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_38",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1164
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_47",
+        "retrieval_score": 0.83951366,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_47",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1485
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_40",
+        "retrieval_score": 0.84047306,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_40",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1172
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_67",
+        "retrieval_score": 0.8380672,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_67",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1722
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_67",
+        "retrieval_score": 0.8401848,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_67",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1485
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_46",
+        "retrieval_score": 0.8379309,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_46",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1481
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_95",
+        "retrieval_score": 0.84012955,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_95",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1865
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_23",
+        "retrieval_score": 0.837487,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_23",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_65",
+        "retrieval_score": 0.83957964,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_65",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1465
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_69",
+        "retrieval_score": 0.837428,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_69",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1761
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_11",
+        "retrieval_score": 0.8391965,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_11",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 234
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_71",
+        "retrieval_score": 0.8369766,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_71",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_28",
+        "retrieval_score": 0.8375369,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_28",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1074
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_57",
+        "retrieval_score": 0.83665514,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_57",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1637
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_43",
+        "retrieval_score": 0.8373722,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_43",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1199
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_96",
+        "retrieval_score": 0.8358747,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_96",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2103
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_30",
+        "retrieval_score": 0.8373722,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_30",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1082
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_97",
+        "retrieval_score": 0.8357386,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_97",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2115
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_46",
+        "retrieval_score": 0.8373722,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_46",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1219
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_98",
+        "retrieval_score": 0.8355422,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_98",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2152
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_14",
+        "retrieval_score": 0.83648205,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_14",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 322
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_41",
+        "retrieval_score": 0.8354948,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_41",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1439
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VCB_financial_statements_2019_consolidated_table_31",
+        "retrieval_score": 0.83599824,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2019_consolidated_table_31",
+          "doc_id": "VCB_financial_statements_2019_consolidated",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1096
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "MSB_financial_statements_2019_consolidated_table_92",
+        "retrieval_score": 0.83451927,
+        "metadata": {
+          "table_id": "MSB_financial_statements_2019_consolidated_table_92",
+          "doc_id": "MSB_financial_statements_2019_consolidated",
+          "ticker": "MSB",
+          "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1998
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2019_consolidated",
+            "MSB_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VCB_financial_statements_2019_consolidated|1313",
+            "MSB_financial_statements_2019_consolidated|150",
+            "VCB_financial_statements_2019_consolidated|1294",
+            "MSB_financial_statements_2019_consolidated|1668",
+            "VCB_financial_statements_2019_consolidated|1656"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2019_consolidated",
+            "MSB_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VCB_financial_statements_2019_consolidated|1313",
+            "MSB_financial_statements_2019_consolidated|150",
+            "VCB_financial_statements_2019_consolidated|1294",
+            "MSB_financial_statements_2019_consolidated|1668",
+            "VCB_financial_statements_2019_consolidated|1656",
+            "MSB_financial_statements_2019_consolidated|1267",
+            "VCB_financial_statements_2019_consolidated|1821",
+            "MSB_financial_statements_2019_consolidated|1994",
+            "VCB_financial_statements_2019_consolidated|1434",
+            "MSB_financial_statements_2019_consolidated|1869"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2019_consolidated",
+            "MSB_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VCB_financial_statements_2019_consolidated|1313",
+            "MSB_financial_statements_2019_consolidated|150",
+            "VCB_financial_statements_2019_consolidated|1294",
+            "MSB_financial_statements_2019_consolidated|1668",
+            "VCB_financial_statements_2019_consolidated|1656",
+            "MSB_financial_statements_2019_consolidated|1267",
+            "VCB_financial_statements_2019_consolidated|1821",
+            "MSB_financial_statements_2019_consolidated|1994",
+            "VCB_financial_statements_2019_consolidated|1434",
+            "MSB_financial_statements_2019_consolidated|1869",
+            "VCB_financial_statements_2019_consolidated|1813",
+            "MSB_financial_statements_2019_consolidated|1672",
+            "VCB_financial_statements_2019_consolidated|202",
+            "MSB_financial_statements_2019_consolidated|2306",
+            "VCB_financial_statements_2019_consolidated|1044",
+            "MSB_financial_statements_2019_consolidated|275",
+            "VCB_financial_statements_2019_consolidated|414",
+            "MSB_financial_statements_2019_consolidated|2327",
+            "VCB_financial_statements_2019_consolidated|1150",
+            "MSB_financial_statements_2019_consolidated|1408"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 0.5,
+          "f2": 0.17857142857142858,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2019_consolidated",
+            "MSB_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "VCB_financial_statements_2019_consolidated|1313",
+            "MSB_financial_statements_2019_consolidated|150",
+            "VCB_financial_statements_2019_consolidated|1294",
+            "MSB_financial_statements_2019_consolidated|1668",
+            "VCB_financial_statements_2019_consolidated|1656",
+            "MSB_financial_statements_2019_consolidated|1267",
+            "VCB_financial_statements_2019_consolidated|1821",
+            "MSB_financial_statements_2019_consolidated|1994",
+            "VCB_financial_statements_2019_consolidated|1434",
+            "MSB_financial_statements_2019_consolidated|1869",
+            "VCB_financial_statements_2019_consolidated|1813",
+            "MSB_financial_statements_2019_consolidated|1672",
+            "VCB_financial_statements_2019_consolidated|202",
+            "MSB_financial_statements_2019_consolidated|2306",
+            "VCB_financial_statements_2019_consolidated|1044",
+            "MSB_financial_statements_2019_consolidated|275",
+            "VCB_financial_statements_2019_consolidated|414",
+            "MSB_financial_statements_2019_consolidated|2327",
+            "VCB_financial_statements_2019_consolidated|1150",
+            "MSB_financial_statements_2019_consolidated|1408",
+            "VCB_financial_statements_2019_consolidated|1438",
+            "MSB_financial_statements_2019_consolidated|1371",
+            "VCB_financial_statements_2019_consolidated|1589",
+            "MSB_financial_statements_2019_consolidated|1971",
+            "VCB_financial_statements_2019_consolidated|1244",
+            "MSB_financial_statements_2019_consolidated|1844",
+            "VCB_financial_statements_2019_consolidated|1164",
+            "MSB_financial_statements_2019_consolidated|1485",
+            "VCB_financial_statements_2019_consolidated|1172",
+            "MSB_financial_statements_2019_consolidated|1722",
+            "VCB_financial_statements_2019_consolidated|1485",
+            "MSB_financial_statements_2019_consolidated|1481",
+            "VCB_financial_statements_2019_consolidated|1865",
+            "MSB_financial_statements_2019_consolidated|1297",
+            "VCB_financial_statements_2019_consolidated|1465",
+            "MSB_financial_statements_2019_consolidated|1761",
+            "VCB_financial_statements_2019_consolidated|234",
+            "MSB_financial_statements_2019_consolidated|1788",
+            "VCB_financial_statements_2019_consolidated|1074",
+            "MSB_financial_statements_2019_consolidated|1637",
+            "VCB_financial_statements_2019_consolidated|1199",
+            "MSB_financial_statements_2019_consolidated|2103",
+            "VCB_financial_statements_2019_consolidated|1082",
+            "MSB_financial_statements_2019_consolidated|2115",
+            "VCB_financial_statements_2019_consolidated|1219",
+            "MSB_financial_statements_2019_consolidated|2152",
+            "VCB_financial_statements_2019_consolidated|322",
+            "MSB_financial_statements_2019_consolidated|1439",
+            "VCB_financial_statements_2019_consolidated|1096",
+            "MSB_financial_statements_2019_consolidated|1998"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

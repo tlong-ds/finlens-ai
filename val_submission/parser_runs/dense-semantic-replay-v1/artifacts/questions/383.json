@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "id": 383,
+  "question": "Trong giai đoạn 2021-2024 của MWG, có bao nhiêu năm sau năm đầu tiên vừa cải thiện biên lợi nhuận gộp so với năm trước, vừa có CFO margin cao hơn trung vị CFO margin của cả giai đoạn?",
+  "started_at": "2026-08-22T13:38:50+00:00",
+  "finished_at": "2026-08-22T13:38:50+00:00",
+  "duration_seconds": 0.3360240689944476,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MWG_financial_statements_2021_consolidated",
+      "MWG_financial_statements_2022_consolidated",
+      "MWG_financial_statements_2023_consolidated",
+      "MWG_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "MWG_financial_statements_2021_consolidated|222",
+      "MWG_financial_statements_2021_consolidated|251",
+      "MWG_financial_statements_2022_consolidated|227",
+      "MWG_financial_statements_2022_consolidated|256",
+      "MWG_financial_statements_2023_consolidated|231",
+      "MWG_financial_statements_2023_consolidated|262",
+      "MWG_financial_statements_2024_consolidated|232",
+      "MWG_financial_statements_2024_consolidated|263"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , có sau đầu tiên vừa cải thiện biên lợi nhuận gộp so với trước, vừa có CFO margin cao hơn trung vị CFO margin cả",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MWG",
+        "company_name": "CTCP Đầu tư Thế giới Di động",
+        "matched_text": "MWG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Trong giai đoạn , có sau đầu tiên vừa cải thiện biên lợi nhuận gộp so với trước, vừa có CFO margin cao hơn trung vị CFO margin cả",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "MWG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MWG"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.8574787,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_7",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 222
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.85543823,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_7",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 232
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_7",
+        "retrieval_score": 0.8551161,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_7",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 231
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.8531514,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_8",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 227
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_29",
+        "retrieval_score": 0.8456537,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_29",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 889
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_43",
+        "retrieval_score": 0.84212303,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_43",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 1069
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_5",
+        "retrieval_score": 0.84130794,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_5",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 188
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_6",
+        "retrieval_score": 0.84027475,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_6",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 200
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.84027475,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_6",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 201
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_51",
+        "retrieval_score": 0.83880305,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_51",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1193
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.8387865,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_7",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 210
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.8387865,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_6",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 205
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_5",
+        "retrieval_score": 0.8375981,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_5",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 186
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_5",
+        "retrieval_score": 0.8375981,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_5",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 183
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_6",
+        "retrieval_score": 0.8375981,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_6",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 193
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_39",
+        "retrieval_score": 0.83749974,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_39",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_38",
+        "retrieval_score": 0.83717185,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_38",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1029
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_21",
+        "retrieval_score": 0.8353193,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_21",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 808
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_37",
+        "retrieval_score": 0.8345004,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_37",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1055
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_38",
+        "retrieval_score": 0.8340265,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_38",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_8",
+        "retrieval_score": 0.83309937,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_8",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 251
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_27",
+        "retrieval_score": 0.8330809,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_27",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 896
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_28",
+        "retrieval_score": 0.8326292,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_28",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 839
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_40",
+        "retrieval_score": 0.8326055,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_40",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1019
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_30",
+        "retrieval_score": 0.83229554,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_30",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 928
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_35",
+        "retrieval_score": 0.83227265,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_35",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 989
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.8322083,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_8",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 263
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.8316704,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_9",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 256
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_44",
+        "retrieval_score": 0.83161664,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_44",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1113
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_36",
+        "retrieval_score": 0.83161515,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_36",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1010
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_42",
+        "retrieval_score": 0.83117455,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_42",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1047
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_8",
+        "retrieval_score": 0.83116186,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_8",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 262
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_38",
+        "retrieval_score": 0.83114153,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_38",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1011
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_44",
+        "retrieval_score": 0.83076125,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_44",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1120
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_41",
+        "retrieval_score": 0.83067864,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_41",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1048
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_16",
+        "retrieval_score": 0.8306493,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_16",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 794
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_18",
+        "retrieval_score": 0.8306425,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_18",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 748
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_37",
+        "retrieval_score": 0.8306225,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_37",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1019
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_41",
+        "retrieval_score": 0.8306086,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_41",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1066
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_26",
+        "retrieval_score": 0.8299769,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_26",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 893
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_45",
+        "retrieval_score": 0.8299595,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_45",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1137
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_33",
+        "retrieval_score": 0.82966936,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_33",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 981
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_52",
+        "retrieval_score": 0.8293092,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_52",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1192
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "MWG_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.8289051,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2024_consolidated_table_40",
+          "doc_id": "MWG_financial_statements_2024_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_35",
+        "retrieval_score": 0.82814026,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_35",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1006
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_36",
+        "retrieval_score": 0.82814026,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_36",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_19",
+        "retrieval_score": 0.8279363,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_19",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 817
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "MWG_financial_statements_2021_consolidated_table_13",
+        "retrieval_score": 0.8273821,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2021_consolidated_table_13",
+          "doc_id": "MWG_financial_statements_2021_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 697
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "MWG_financial_statements_2023_consolidated_table_36",
+        "retrieval_score": 0.82730764,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2023_consolidated_table_36",
+          "doc_id": "MWG_financial_statements_2023_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 993
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "MWG_financial_statements_2022_consolidated_table_34",
+        "retrieval_score": 0.8267072,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2022_consolidated_table_34",
+          "doc_id": "MWG_financial_statements_2022_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 988
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "MWG_financial_statements_2021_consolidated",
+            "MWG_financial_statements_2024_consolidated",
+            "MWG_financial_statements_2023_consolidated",
+            "MWG_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MWG_financial_statements_2021_consolidated|222",
+            "MWG_financial_statements_2024_consolidated|232",
+            "MWG_financial_statements_2023_consolidated|231",
+            "MWG_financial_statements_2022_consolidated|227",
+            "MWG_financial_statements_2022_consolidated|889"
+          ]
+        },
+        "tables": {
+          "precision": 0.8,
+          "recall": 0.5,
+          "f2": 0.5405405405405405,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "MWG_financial_statements_2021_consolidated",
+            "MWG_financial_statements_2024_consolidated",
+            "MWG_financial_statements_2023_consolidated",
+            "MWG_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MWG_financial_statements_2021_consolidated|222",
+            "MWG_financial_statements_2024_consolidated|232",
+            "MWG_financial_statements_2023_consolidated|231",
+            "MWG_financial_statements_2022_consolidated|227",
+            "MWG_financial_statements_2022_consolidated|889",
+            "MWG_financial_statements_2023_consolidated|1069",
+            "MWG_financial_statements_2021_consolidated|188",
+            "MWG_financial_statements_2023_consolidated|200",
+            "MWG_financial_statements_2024_consolidated|201",
+            "MWG_financial_statements_2024_consolidated|1193"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f2": 0.47619047619047616,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "MWG_financial_statements_2021_consolidated",
+            "MWG_financial_statements_2024_consolidated",
+            "MWG_financial_statements_2023_consolidated",
+            "MWG_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MWG_financial_statements_2021_consolidated|222",
+            "MWG_financial_statements_2024_consolidated|232",
+            "MWG_financial_statements_2023_consolidated|231",
+            "MWG_financial_statements_2022_consolidated|227",
+            "MWG_financial_statements_2022_consolidated|889",
+            "MWG_financial_statements_2023_consolidated|1069",
+            "MWG_financial_statements_2021_consolidated|188",
+            "MWG_financial_statements_2023_consolidated|200",
+            "MWG_financial_statements_2024_consolidated|201",
+            "MWG_financial_statements_2024_consolidated|1193",
+            "MWG_financial_statements_2022_consolidated|210",
+            "MWG_financial_statements_2021_consolidated|205",
+            "MWG_financial_statements_2024_consolidated|186",
+            "MWG_financial_statements_2023_consolidated|183",
+            "MWG_financial_statements_2022_consolidated|193",
+            "MWG_financial_statements_2022_consolidated|1027",
+            "MWG_financial_statements_2021_consolidated|1029",
+            "MWG_financial_statements_2022_consolidated|808",
+            "MWG_financial_statements_2024_consolidated|1055",
+            "MWG_financial_statements_2024_consolidated|1059"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f2": 0.3846153846153846,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "MWG_financial_statements_2021_consolidated",
+            "MWG_financial_statements_2024_consolidated",
+            "MWG_financial_statements_2023_consolidated",
+            "MWG_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MWG_financial_statements_2021_consolidated|222",
+            "MWG_financial_statements_2024_consolidated|232",
+            "MWG_financial_statements_2023_consolidated|231",
+            "MWG_financial_statements_2022_consolidated|227",
+            "MWG_financial_statements_2022_consolidated|889",
+            "MWG_financial_statements_2023_consolidated|1069",
+            "MWG_financial_statements_2021_consolidated|188",
+            "MWG_financial_statements_2023_consolidated|200",
+            "MWG_financial_statements_2024_consolidated|201",
+            "MWG_financial_statements_2024_consolidated|1193",
+            "MWG_financial_statements_2022_consolidated|210",
+            "MWG_financial_statements_2021_consolidated|205",
+            "MWG_financial_statements_2024_consolidated|186",
+            "MWG_financial_statements_2023_consolidated|183",
+            "MWG_financial_statements_2022_consolidated|193",
+            "MWG_financial_statements_2022_consolidated|1027",
+            "MWG_financial_statements_2021_consolidated|1029",
+            "MWG_financial_statements_2022_consolidated|808",
+            "MWG_financial_statements_2024_consolidated|1055",
+            "MWG_financial_statements_2024_consolidated|1059",
+            "MWG_financial_statements_2021_consolidated|251",
+            "MWG_financial_statements_2023_consolidated|896",
+            "MWG_financial_statements_2021_consolidated|839",
+            "MWG_financial_statements_2023_consolidated|1019",
+            "MWG_financial_statements_2024_consolidated|928",
+            "MWG_financial_statements_2023_consolidated|989",
+            "MWG_financial_statements_2024_consolidated|263",
+            "MWG_financial_statements_2022_consolidated|256",
+            "MWG_financial_statements_2024_consolidated|1113",
+            "MWG_financial_statements_2021_consolidated|1010",
+            "MWG_financial_statements_2023_consolidated|1047",
+            "MWG_financial_statements_2023_consolidated|262",
+            "MWG_financial_statements_2023_consolidated|1011",
+            "MWG_financial_statements_2021_consolidated|1120",
+            "MWG_financial_statements_2022_consolidated|1048",
+            "MWG_financial_statements_2024_consolidated|794",
+            "MWG_financial_statements_2021_consolidated|748",
+            "MWG_financial_statements_2022_consolidated|1019",
+            "MWG_financial_statements_2021_consolidated|1066",
+            "MWG_financial_statements_2024_consolidated|893",
+            "MWG_financial_statements_2024_consolidated|1137",
+            "MWG_financial_statements_2021_consolidated|981",
+            "MWG_financial_statements_2023_consolidated|1192",
+            "MWG_financial_statements_2024_consolidated|1077",
+            "MWG_financial_statements_2021_consolidated|1006",
+            "MWG_financial_statements_2022_consolidated|1000",
+            "MWG_financial_statements_2023_consolidated|817",
+            "MWG_financial_statements_2021_consolidated|697",
+            "MWG_financial_statements_2023_consolidated|993",
+            "MWG_financial_statements_2022_consolidated|988"
+          ]
+        },
+        "tables": {
+          "precision": 0.16,
+          "recall": 1.0,
+          "f2": 0.4878048780487805,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1058 @@
+{
+  "schema_version": 1,
+  "id": 356,
+  "question": "Số dư dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Công Thương Việt Nam đến ngày 31 tháng 12 năm 2019 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:39:21+00:00",
+  "finished_at": "2026-08-22T13:39:21+00:00",
+  "duration_seconds": 0.3185847530112369,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "CTG"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "CTG_financial_statements_2019_separate"
+    ],
+    "relevant_tables": [
+      "CTG_financial_statements_2019_separate|1212"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "CTG"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Số dư dự phòng rủi ro cho vay khách hàng đến ngày 31 tháng 12 triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "CTG",
+        "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+        "matched_text": "Ngân hàng TMCP Công Thương Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VCB",
+        "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+        "matched_text": "Thương Việt Nam",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Số dư dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Công Thương Việt Nam đến ngày 31 tháng 12 năm 2019 là bao nhiêu triệu đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "CTG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "CTG"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "CTG_financial_statements_2019_separate_table_25",
+        "retrieval_score": 0.89636177,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_25",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1187
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "CTG_financial_statements_2019_separate_table_26",
+        "retrieval_score": 0.8851968,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_26",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1206
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "CTG_financial_statements_2019_separate_table_24",
+        "retrieval_score": 0.88334787,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_24",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1183
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "CTG_financial_statements_2019_separate_table_23",
+        "retrieval_score": 0.878023,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_23",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1164
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "CTG_financial_statements_2019_separate_table_71",
+        "retrieval_score": 0.87616736,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_71",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1713
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "CTG_financial_statements_2019_separate_table_27",
+        "retrieval_score": 0.86751246,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_27",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1212
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "CTG_financial_statements_2019_separate_table_36",
+        "retrieval_score": 0.8673859,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_36",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "CTG_financial_statements_2019_separate_table_41",
+        "retrieval_score": 0.8672355,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_41",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1365
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "CTG_financial_statements_2019_separate_table_10",
+        "retrieval_score": 0.861787,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_10",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 447
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "CTG_financial_statements_2019_separate_table_17",
+        "retrieval_score": 0.8577386,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_17",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1129
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "CTG_financial_statements_2019_separate_table_33",
+        "retrieval_score": 0.8572016,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_33",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1270
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "CTG_financial_statements_2019_separate_table_35",
+        "retrieval_score": 0.8567245,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_35",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1293
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "CTG_financial_statements_2019_separate_table_42",
+        "retrieval_score": 0.85619396,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_42",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1371
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "CTG_financial_statements_2019_separate_table_57",
+        "retrieval_score": 0.85554475,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_57",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1537
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "CTG_financial_statements_2019_separate_table_28",
+        "retrieval_score": 0.855181,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_28",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1216
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "CTG_financial_statements_2019_separate_table_32",
+        "retrieval_score": 0.85511404,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_32",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1264
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "CTG_financial_statements_2019_separate_table_62",
+        "retrieval_score": 0.85471916,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_62",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1570
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "CTG_financial_statements_2019_separate_table_45",
+        "retrieval_score": 0.8538658,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_45",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "CTG_financial_statements_2019_separate_table_50",
+        "retrieval_score": 0.85150313,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_50",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1442
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "CTG_financial_statements_2019_separate_table_43",
+        "retrieval_score": 0.8491851,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_43",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1375
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "CTG_financial_statements_2019_separate_table_22",
+        "retrieval_score": 0.849102,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_22",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1160
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "CTG_financial_statements_2019_separate_table_76",
+        "retrieval_score": 0.8484211,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_76",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 2053
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "CTG_financial_statements_2019_separate_table_46",
+        "retrieval_score": 0.84837836,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_46",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1411
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "CTG_financial_statements_2019_separate_table_49",
+        "retrieval_score": 0.84605277,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_49",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "CTG_financial_statements_2019_separate_table_60",
+        "retrieval_score": 0.8452018,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_60",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1562
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "CTG_financial_statements_2019_separate_table_55",
+        "retrieval_score": 0.8444761,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_55",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1516
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "CTG_financial_statements_2019_separate_table_18",
+        "retrieval_score": 0.84421635,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_18",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1133
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "CTG_financial_statements_2019_separate_table_81",
+        "retrieval_score": 0.8440969,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_81",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2276
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "CTG_financial_statements_2019_separate_table_16",
+        "retrieval_score": 0.8432037,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_16",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1098
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "CTG_financial_statements_2019_separate_table_4",
+        "retrieval_score": 0.84310025,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_4",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 264
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "CTG_financial_statements_2019_separate_table_29",
+        "retrieval_score": 0.84209055,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_29",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "CTG_financial_statements_2019_separate_table_51",
+        "retrieval_score": 0.841932,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_51",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1446
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "CTG_financial_statements_2019_separate_table_12",
+        "retrieval_score": 0.84012234,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_12",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 643
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "CTG_financial_statements_2019_separate_table_74",
+        "retrieval_score": 0.8394468,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_74",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1906
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "CTG_financial_statements_2019_separate_table_39",
+        "retrieval_score": 0.83928216,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_39",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "CTG_financial_statements_2019_separate_table_65",
+        "retrieval_score": 0.83876026,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_65",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1610
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "CTG_financial_statements_2019_separate_table_68",
+        "retrieval_score": 0.8385242,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_68",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1686
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "CTG_financial_statements_2019_separate_table_63",
+        "retrieval_score": 0.8383754,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_63",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1587
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "CTG_financial_statements_2019_separate_table_59",
+        "retrieval_score": 0.8359176,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_59",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1545
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "CTG_financial_statements_2019_separate_table_77",
+        "retrieval_score": 0.835153,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_77",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2196
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "CTG_financial_statements_2019_separate_table_56",
+        "retrieval_score": 0.83433247,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_56",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1520
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "CTG_financial_statements_2019_separate_table_15",
+        "retrieval_score": 0.83415425,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_15",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1094
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "CTG_financial_statements_2019_separate_table_30",
+        "retrieval_score": 0.83384013,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_30",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1241
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "CTG_financial_statements_2019_separate_table_78",
+        "retrieval_score": 0.8338312,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_78",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 2221
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "CTG_financial_statements_2019_separate_table_66",
+        "retrieval_score": 0.83227164,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_66",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1622
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "CTG_financial_statements_2019_separate_table_20",
+        "retrieval_score": 0.8319493,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_20",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1141
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "CTG_financial_statements_2019_separate_table_11",
+        "retrieval_score": 0.8313618,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_11",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 622
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "CTG_financial_statements_2019_separate_table_44",
+        "retrieval_score": 0.8306728,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_44",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1390
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "CTG_financial_statements_2019_separate_table_67",
+        "retrieval_score": 0.8281614,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_67",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1665
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "CTG_financial_statements_2019_separate_table_54",
+        "retrieval_score": 0.8263657,
+        "metadata": {
+          "table_id": "CTG_financial_statements_2019_separate_table_54",
+          "doc_id": "CTG_financial_statements_2019_separate",
+          "ticker": "CTG",
+          "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1510
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "CTG_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "CTG_financial_statements_2019_separate|1187",
+            "CTG_financial_statements_2019_separate|1206",
+            "CTG_financial_statements_2019_separate|1183",
+            "CTG_financial_statements_2019_separate|1164",
+            "CTG_financial_statements_2019_separate|1713"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "CTG_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "CTG_financial_statements_2019_separate|1187",
+            "CTG_financial_statements_2019_separate|1206",
+            "CTG_financial_statements_2019_separate|1183",
+            "CTG_financial_statements_2019_separate|1164",
+            "CTG_financial_statements_2019_separate|1713",
+            "CTG_financial_statements_2019_separate|1212",
+            "CTG_financial_statements_2019_separate|1297",
+            "CTG_financial_statements_2019_separate|1365",
+            "CTG_financial_statements_2019_separate|447",
+            "CTG_financial_statements_2019_separate|1129"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "CTG_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "CTG_financial_statements_2019_separate|1187",
+            "CTG_financial_statements_2019_separate|1206",
+            "CTG_financial_statements_2019_separate|1183",
+            "CTG_financial_statements_2019_separate|1164",
+            "CTG_financial_statements_2019_separate|1713",
+            "CTG_financial_statements_2019_separate|1212",
+            "CTG_financial_statements_2019_separate|1297",
+            "CTG_financial_statements_2019_separate|1365",
+            "CTG_financial_statements_2019_separate|447",
+            "CTG_financial_statements_2019_separate|1129",
+            "CTG_financial_statements_2019_separate|1270",
+            "CTG_financial_statements_2019_separate|1293",
+            "CTG_financial_statements_2019_separate|1371",
+            "CTG_financial_statements_2019_separate|1537",
+            "CTG_financial_statements_2019_separate|1216",
+            "CTG_financial_statements_2019_separate|1264",
+            "CTG_financial_statements_2019_separate|1570",
+            "CTG_financial_statements_2019_separate|1394",
+            "CTG_financial_statements_2019_separate|1442",
+            "CTG_financial_statements_2019_separate|1375"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "CTG_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "CTG_financial_statements_2019_separate|1187",
+            "CTG_financial_statements_2019_separate|1206",
+            "CTG_financial_statements_2019_separate|1183",
+            "CTG_financial_statements_2019_separate|1164",
+            "CTG_financial_statements_2019_separate|1713",
+            "CTG_financial_statements_2019_separate|1212",
+            "CTG_financial_statements_2019_separate|1297",
+            "CTG_financial_statements_2019_separate|1365",
+            "CTG_financial_statements_2019_separate|447",
+            "CTG_financial_statements_2019_separate|1129",
+            "CTG_financial_statements_2019_separate|1270",
+            "CTG_financial_statements_2019_separate|1293",
+            "CTG_financial_statements_2019_separate|1371",
+            "CTG_financial_statements_2019_separate|1537",
+            "CTG_financial_statements_2019_separate|1216",
+            "CTG_financial_statements_2019_separate|1264",
+            "CTG_financial_statements_2019_separate|1570",
+            "CTG_financial_statements_2019_separate|1394",
+            "CTG_financial_statements_2019_separate|1442",
+            "CTG_financial_statements_2019_separate|1375",
+            "CTG_financial_statements_2019_separate|1160",
+            "CTG_financial_statements_2019_separate|2053",
+            "CTG_financial_statements_2019_separate|1411",
+            "CTG_financial_statements_2019_separate|1438",
+            "CTG_financial_statements_2019_separate|1562",
+            "CTG_financial_statements_2019_separate|1516",
+            "CTG_financial_statements_2019_separate|1133",
+            "CTG_financial_statements_2019_separate|2276",
+            "CTG_financial_statements_2019_separate|1098",
+            "CTG_financial_statements_2019_separate|264",
+            "CTG_financial_statements_2019_separate|1235",
+            "CTG_financial_statements_2019_separate|1446",
+            "CTG_financial_statements_2019_separate|643",
+            "CTG_financial_statements_2019_separate|1906",
+            "CTG_financial_statements_2019_separate|1344",
+            "CTG_financial_statements_2019_separate|1610",
+            "CTG_financial_statements_2019_separate|1686",
+            "CTG_financial_statements_2019_separate|1587",
+            "CTG_financial_statements_2019_separate|1545",
+            "CTG_financial_statements_2019_separate|2196",
+            "CTG_financial_statements_2019_separate|1520",
+            "CTG_financial_statements_2019_separate|1094",
+            "CTG_financial_statements_2019_separate|1241",
+            "CTG_financial_statements_2019_separate|2221",
+            "CTG_financial_statements_2019_separate|1622",
+            "CTG_financial_statements_2019_separate|1141",
+            "CTG_financial_statements_2019_separate|622",
+            "CTG_financial_statements_2019_separate|1390",
+            "CTG_financial_statements_2019_separate|1665",
+            "CTG_financial_statements_2019_separate|1510"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

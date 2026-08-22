@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 718,
+  "question": "Tỷ lệ giá vốn hàng bán trên doanh thu thuần của Công ty Cổ phần Bluemarq Group năm 2017 là bao nhiêu %?",
+  "started_at": "2026-08-22T13:38:54+00:00",
+  "finished_at": "2026-08-22T13:38:55+00:00",
+  "duration_seconds": 0.3164905129960971,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DXG"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DXG_financial_statements_2017_consolidated"
+    ],
+    "relevant_tables": [
+      "DXG_financial_statements_2017_consolidated|252"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DXG"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỷ lệ giá vốn hàng bán trên doanh thu thuần %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DXG",
+        "company_name": "CTCP Bluemarq Group",
+        "matched_text": "Bluemarq Group",
+        "match_type": "normalized_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Tỷ lệ giá vốn hàng bán trên doanh thu thuần %",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DXG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DXG"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_8",
+        "retrieval_score": 0.8721558,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_8",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_88",
+        "retrieval_score": 0.87096536,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_88",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1501
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_87",
+        "retrieval_score": 0.8619658,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_87",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1475
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_106",
+        "retrieval_score": 0.8533779,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_106",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 1751
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_107",
+        "retrieval_score": 0.8531349,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_107",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 1769
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_7",
+        "retrieval_score": 0.8510553,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_7",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 220
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_96",
+        "retrieval_score": 0.85012114,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_96",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1584
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_20",
+        "retrieval_score": 0.8489405,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_20",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 830
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_104",
+        "retrieval_score": 0.8472034,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_104",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 1713
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_105",
+        "retrieval_score": 0.84174407,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_105",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 1733
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.84098226,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_6",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 203
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_50",
+        "retrieval_score": 0.8355671,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_50",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1149
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_85",
+        "retrieval_score": 0.83324516,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_85",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1453
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_90",
+        "retrieval_score": 0.8294757,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_90",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1509
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_5",
+        "retrieval_score": 0.82685244,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_5",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 186
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_52",
+        "retrieval_score": 0.82549083,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_52",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1167
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_37",
+        "retrieval_score": 0.82411695,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_37",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1018
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_38",
+        "retrieval_score": 0.82281864,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_38",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1024
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_9",
+        "retrieval_score": 0.8225622,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_9",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 278
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_42",
+        "retrieval_score": 0.8224235,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_42",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1083
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_95",
+        "retrieval_score": 0.8193461,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_95",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1560
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_55",
+        "retrieval_score": 0.81754845,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_55",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1191
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_89",
+        "retrieval_score": 0.8157032,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_89",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1505
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_18",
+        "retrieval_score": 0.8148626,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_18",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 794
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_33",
+        "retrieval_score": 0.81240535,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_33",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 969
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_92",
+        "retrieval_score": 0.8121415,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_92",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1530
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_84",
+        "retrieval_score": 0.8119757,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_84",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1423
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_75",
+        "retrieval_score": 0.8111727,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_75",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1341
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_77",
+        "retrieval_score": 0.8111727,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_77",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1349
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_25",
+        "retrieval_score": 0.81064034,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_25",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 888
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_16",
+        "retrieval_score": 0.81062716,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_16",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 786
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_27",
+        "retrieval_score": 0.80994457,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_27",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 896
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_91",
+        "retrieval_score": 0.80911285,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_91",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1526
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_69",
+        "retrieval_score": 0.8088286,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_69",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1292
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_93",
+        "retrieval_score": 0.8083215,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_93",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1534
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_83",
+        "retrieval_score": 0.80803347,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_83",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1407
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_41",
+        "retrieval_score": 0.8077729,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_41",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1079
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_24",
+        "retrieval_score": 0.80769557,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_24",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 884
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_68",
+        "retrieval_score": 0.8076611,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_68",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1288
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_71",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_71",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1302
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_64",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_64",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_67",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_67",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1278
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_60",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_60",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1233
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_65",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_65",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1253
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_61",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_61",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1237
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_76",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_76",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1345
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_62",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_62",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1241
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_59",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_59",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1229
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_73",
+        "retrieval_score": 0.8074119,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_73",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1333
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DXG_financial_statements_2017_consolidated_table_26",
+        "retrieval_score": 0.80712575,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2017_consolidated_table_26",
+          "doc_id": "DXG_financial_statements_2017_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 892
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DXG_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "DXG_financial_statements_2017_consolidated|252",
+            "DXG_financial_statements_2017_consolidated|1501",
+            "DXG_financial_statements_2017_consolidated|1475",
+            "DXG_financial_statements_2017_consolidated|1751",
+            "DXG_financial_statements_2017_consolidated|1769"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DXG_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "DXG_financial_statements_2017_consolidated|252",
+            "DXG_financial_statements_2017_consolidated|1501",
+            "DXG_financial_statements_2017_consolidated|1475",
+            "DXG_financial_statements_2017_consolidated|1751",
+            "DXG_financial_statements_2017_consolidated|1769",
+            "DXG_financial_statements_2017_consolidated|220",
+            "DXG_financial_statements_2017_consolidated|1584",
+            "DXG_financial_statements_2017_consolidated|830",
+            "DXG_financial_statements_2017_consolidated|1713",
+            "DXG_financial_statements_2017_consolidated|1733"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DXG_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "DXG_financial_statements_2017_consolidated|252",
+            "DXG_financial_statements_2017_consolidated|1501",
+            "DXG_financial_statements_2017_consolidated|1475",
+            "DXG_financial_statements_2017_consolidated|1751",
+            "DXG_financial_statements_2017_consolidated|1769",
+            "DXG_financial_statements_2017_consolidated|220",
+            "DXG_financial_statements_2017_consolidated|1584",
+            "DXG_financial_statements_2017_consolidated|830",
+            "DXG_financial_statements_2017_consolidated|1713",
+            "DXG_financial_statements_2017_consolidated|1733",
+            "DXG_financial_statements_2017_consolidated|203",
+            "DXG_financial_statements_2017_consolidated|1149",
+            "DXG_financial_statements_2017_consolidated|1453",
+            "DXG_financial_statements_2017_consolidated|1509",
+            "DXG_financial_statements_2017_consolidated|186",
+            "DXG_financial_statements_2017_consolidated|1167",
+            "DXG_financial_statements_2017_consolidated|1018",
+            "DXG_financial_statements_2017_consolidated|1024",
+            "DXG_financial_statements_2017_consolidated|278",
+            "DXG_financial_statements_2017_consolidated|1083"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DXG_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "DXG_financial_statements_2017_consolidated|252",
+            "DXG_financial_statements_2017_consolidated|1501",
+            "DXG_financial_statements_2017_consolidated|1475",
+            "DXG_financial_statements_2017_consolidated|1751",
+            "DXG_financial_statements_2017_consolidated|1769",
+            "DXG_financial_statements_2017_consolidated|220",
+            "DXG_financial_statements_2017_consolidated|1584",
+            "DXG_financial_statements_2017_consolidated|830",
+            "DXG_financial_statements_2017_consolidated|1713",
+            "DXG_financial_statements_2017_consolidated|1733",
+            "DXG_financial_statements_2017_consolidated|203",
+            "DXG_financial_statements_2017_consolidated|1149",
+            "DXG_financial_statements_2017_consolidated|1453",
+            "DXG_financial_statements_2017_consolidated|1509",
+            "DXG_financial_statements_2017_consolidated|186",
+            "DXG_financial_statements_2017_consolidated|1167",
+            "DXG_financial_statements_2017_consolidated|1018",
+            "DXG_financial_statements_2017_consolidated|1024",
+            "DXG_financial_statements_2017_consolidated|278",
+            "DXG_financial_statements_2017_consolidated|1083",
+            "DXG_financial_statements_2017_consolidated|1560",
+            "DXG_financial_statements_2017_consolidated|1191",
+            "DXG_financial_statements_2017_consolidated|1505",
+            "DXG_financial_statements_2017_consolidated|794",
+            "DXG_financial_statements_2017_consolidated|969",
+            "DXG_financial_statements_2017_consolidated|1530",
+            "DXG_financial_statements_2017_consolidated|1423",
+            "DXG_financial_statements_2017_consolidated|1341",
+            "DXG_financial_statements_2017_consolidated|1349",
+            "DXG_financial_statements_2017_consolidated|888",
+            "DXG_financial_statements_2017_consolidated|786",
+            "DXG_financial_statements_2017_consolidated|896",
+            "DXG_financial_statements_2017_consolidated|1526",
+            "DXG_financial_statements_2017_consolidated|1292",
+            "DXG_financial_statements_2017_consolidated|1534",
+            "DXG_financial_statements_2017_consolidated|1407",
+            "DXG_financial_statements_2017_consolidated|1079",
+            "DXG_financial_statements_2017_consolidated|884",
+            "DXG_financial_statements_2017_consolidated|1288",
+            "DXG_financial_statements_2017_consolidated|1302",
+            "DXG_financial_statements_2017_consolidated|1249",
+            "DXG_financial_statements_2017_consolidated|1278",
+            "DXG_financial_statements_2017_consolidated|1233",
+            "DXG_financial_statements_2017_consolidated|1253",
+            "DXG_financial_statements_2017_consolidated|1237",
+            "DXG_financial_statements_2017_consolidated|1345",
+            "DXG_financial_statements_2017_consolidated|1241",
+            "DXG_financial_statements_2017_consolidated|1229",
+            "DXG_financial_statements_2017_consolidated|1333",
+            "DXG_financial_statements_2017_consolidated|892"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

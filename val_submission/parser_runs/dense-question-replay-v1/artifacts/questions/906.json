@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "id": 906,
+  "question": "Giá trị Tài sản cố định hữu hình của VGT công ty mẹ vào cuối năm nào là lớn nhất trong các năm 2015, 2017, 2018, 2020, 2022?",
+  "started_at": "2026-08-22T13:39:30+00:00",
+  "finished_at": "2026-08-22T13:39:30+00:00",
+  "duration_seconds": 0.36032127100043,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VGT"
+    ],
+    "year": [
+      2015,
+      2017,
+      2018,
+      2020,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VGT_financial_statements_2015_separate",
+      "VGT_financial_statements_2017_separate",
+      "VGT_financial_statements_2018_separate",
+      "VGT_financial_statements_2020_separate",
+      "VGT_financial_statements_2022_separate"
+    ],
+    "relevant_tables": [
+      "VGT_financial_statements_2015_separate|170",
+      "VGT_financial_statements_2017_separate|184",
+      "VGT_financial_statements_2018_separate|162",
+      "VGT_financial_statements_2020_separate|153",
+      "VGT_financial_statements_2022_separate|230"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VGT"
+    ],
+    "year": [
+      2015,
+      2017,
+      2018,
+      2020,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Giá trị Tài sản cố định hữu hình vào cuối nào là lớn nhất trong các",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VGT",
+        "company_name": "Tập đoàn Dệt May Việt Nam",
+        "matched_text": "VGT",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015,
+            2017,
+            2018,
+            2020,
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Giá trị Tài sản cố định hữu hình của VGT công ty mẹ vào cuối năm nào là lớn nhất trong các năm 2015, 2017, 2018, 2020, 2022?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VGT",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VGT"
+          ],
+          "year": [
+            2015,
+            2017,
+            2018,
+            2020,
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VGT_financial_statements_2020_separate_table_12",
+        "retrieval_score": 0.82894504,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_12",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 792
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VGT_financial_statements_2015_separate_table_15",
+        "retrieval_score": 0.82818794,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_15",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 930
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VGT_financial_statements_2018_separate_table_31",
+        "retrieval_score": 0.82592463,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_31",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1148
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VGT_financial_statements_2017_separate_table_26",
+        "retrieval_score": 0.82537794,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_26",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1022
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VGT_financial_statements_2020_separate_table_40",
+        "retrieval_score": 0.82520974,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_40",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VGT_financial_statements_2017_separate_table_16",
+        "retrieval_score": 0.8242098,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_16",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 847
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VGT_financial_statements_2015_separate_table_25",
+        "retrieval_score": 0.8238629,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_25",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VGT_financial_statements_2018_separate_table_14",
+        "retrieval_score": 0.8228686,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_14",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 838
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VGT_financial_statements_2015_separate_table_24",
+        "retrieval_score": 0.8223451,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_24",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1095
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VGT_financial_statements_2015_separate_table_60",
+        "retrieval_score": 0.8218462,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_60",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1725
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VGT_financial_statements_2018_separate_table_26",
+        "retrieval_score": 0.8213157,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_26",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1067
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VGT_financial_statements_2020_separate_table_47",
+        "retrieval_score": 0.82044995,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_47",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1450
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VGT_financial_statements_2020_separate_table_57",
+        "retrieval_score": 0.82004213,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_57",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1586
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VGT_financial_statements_2017_separate_table_55",
+        "retrieval_score": 0.81998485,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_55",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1506
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VGT_financial_statements_2022_separate_table_9",
+        "retrieval_score": 0.8198346,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_9",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 820
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VGT_financial_statements_2017_separate_table_15",
+        "retrieval_score": 0.8192632,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_15",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 830
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VGT_financial_statements_2020_separate_table_56",
+        "retrieval_score": 0.81913143,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_56",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1571
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VGT_financial_statements_2020_separate_table_58",
+        "retrieval_score": 0.818632,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_58",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1601
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VGT_financial_statements_2022_separate_table_57",
+        "retrieval_score": 0.81853086,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_57",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1676
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VGT_financial_statements_2018_separate_table_37",
+        "retrieval_score": 0.81841266,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_37",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1247
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VGT_financial_statements_2022_separate_table_16",
+        "retrieval_score": 0.8183912,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_16",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1001
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VGT_financial_statements_2017_separate_table_52",
+        "retrieval_score": 0.81830114,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_52",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1481
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VGT_financial_statements_2020_separate_table_18",
+        "retrieval_score": 0.81826735,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_18",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 929
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VGT_financial_statements_2017_separate_table_39",
+        "retrieval_score": 0.81796616,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_39",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1240
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VGT_financial_statements_2017_separate_table_62",
+        "retrieval_score": 0.8179301,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_62",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1605
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VGT_financial_statements_2022_separate_table_59",
+        "retrieval_score": 0.8179198,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_59",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1708
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VGT_financial_statements_2017_separate_table_33",
+        "retrieval_score": 0.81721157,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_33",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1148
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VGT_financial_statements_2022_separate_table_21",
+        "retrieval_score": 0.816948,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_21",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1104
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VGT_financial_statements_2017_separate_table_4",
+        "retrieval_score": 0.81633663,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_4",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 35
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VGT_financial_statements_2015_separate_table_48",
+        "retrieval_score": 0.8160649,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_48",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1551
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VGT_financial_statements_2015_separate_table_26",
+        "retrieval_score": 0.81523025,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_26",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1139
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VGT_financial_statements_2017_separate_table_65",
+        "retrieval_score": 0.8147212,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_65",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1654
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VGT_financial_statements_2020_separate_table_53",
+        "retrieval_score": 0.81469774,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_53",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1520
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VGT_financial_statements_2022_separate_table_37",
+        "retrieval_score": 0.8142153,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_37",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1407
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VGT_financial_statements_2017_separate_table_64",
+        "retrieval_score": 0.81377715,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_64",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1635
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VGT_financial_statements_2017_separate_table_45",
+        "retrieval_score": 0.813704,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_45",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1369
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VGT_financial_statements_2020_separate_table_24",
+        "retrieval_score": 0.8135787,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2020_separate_table_24",
+          "doc_id": "VGT_financial_statements_2020_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1039
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VGT_financial_statements_2018_separate_table_15",
+        "retrieval_score": 0.8134282,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_15",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 869
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VGT_financial_statements_2022_separate_table_32",
+        "retrieval_score": 0.8131181,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_32",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1270
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VGT_financial_statements_2022_separate_table_44",
+        "retrieval_score": 0.8123007,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_44",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1515
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VGT_financial_statements_2017_separate_table_27",
+        "retrieval_score": 0.81214064,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_27",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1045
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VGT_financial_statements_2015_separate_table_58",
+        "retrieval_score": 0.81201386,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_58",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1691
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VGT_financial_statements_2018_separate_table_13",
+        "retrieval_score": 0.81161046,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_13",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 823
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VGT_financial_statements_2017_separate_table_23",
+        "retrieval_score": 0.81124556,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2017_separate_table_23",
+          "doc_id": "VGT_financial_statements_2017_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 976
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VGT_financial_statements_2015_separate_table_55",
+        "retrieval_score": 0.8112327,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_55",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1634
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VGT_financial_statements_2018_separate_table_60",
+        "retrieval_score": 0.8109169,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_60",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1649
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VGT_financial_statements_2015_separate_table_30",
+        "retrieval_score": 0.8104981,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2015_separate_table_30",
+          "doc_id": "VGT_financial_statements_2015_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1227
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VGT_financial_statements_2022_separate_table_22",
+        "retrieval_score": 0.8100954,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2022_separate_table_22",
+          "doc_id": "VGT_financial_statements_2022_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1125
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VGT_financial_statements_2018_separate_table_61",
+        "retrieval_score": 0.80819345,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_61",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1666
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VGT_financial_statements_2018_separate_table_24",
+        "retrieval_score": 0.80703413,
+        "metadata": {
+          "table_id": "VGT_financial_statements_2018_separate_table_24",
+          "doc_id": "VGT_financial_statements_2018_separate",
+          "ticker": "VGT",
+          "company_name": "Tập đoàn Dệt May Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1025
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VGT_financial_statements_2020_separate",
+            "VGT_financial_statements_2015_separate",
+            "VGT_financial_statements_2018_separate",
+            "VGT_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "VGT_financial_statements_2020_separate|792",
+            "VGT_financial_statements_2015_separate|930",
+            "VGT_financial_statements_2018_separate|1148",
+            "VGT_financial_statements_2017_separate|1022",
+            "VGT_financial_statements_2020_separate|1344"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f2": 0.8333333333333334,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VGT_financial_statements_2020_separate",
+            "VGT_financial_statements_2015_separate",
+            "VGT_financial_statements_2018_separate",
+            "VGT_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "VGT_financial_statements_2020_separate|792",
+            "VGT_financial_statements_2015_separate|930",
+            "VGT_financial_statements_2018_separate|1148",
+            "VGT_financial_statements_2017_separate|1022",
+            "VGT_financial_statements_2020_separate|1344",
+            "VGT_financial_statements_2017_separate|847",
+            "VGT_financial_statements_2015_separate|1118",
+            "VGT_financial_statements_2018_separate|838",
+            "VGT_financial_statements_2015_separate|1095",
+            "VGT_financial_statements_2015_separate|1725"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f2": 0.8333333333333334,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VGT_financial_statements_2020_separate",
+            "VGT_financial_statements_2015_separate",
+            "VGT_financial_statements_2018_separate",
+            "VGT_financial_statements_2017_separate",
+            "VGT_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "VGT_financial_statements_2020_separate|792",
+            "VGT_financial_statements_2015_separate|930",
+            "VGT_financial_statements_2018_separate|1148",
+            "VGT_financial_statements_2017_separate|1022",
+            "VGT_financial_statements_2020_separate|1344",
+            "VGT_financial_statements_2017_separate|847",
+            "VGT_financial_statements_2015_separate|1118",
+            "VGT_financial_statements_2018_separate|838",
+            "VGT_financial_statements_2015_separate|1095",
+            "VGT_financial_statements_2015_separate|1725",
+            "VGT_financial_statements_2018_separate|1067",
+            "VGT_financial_statements_2020_separate|1450",
+            "VGT_financial_statements_2020_separate|1586",
+            "VGT_financial_statements_2017_separate|1506",
+            "VGT_financial_statements_2022_separate|820",
+            "VGT_financial_statements_2017_separate|830",
+            "VGT_financial_statements_2020_separate|1571",
+            "VGT_financial_statements_2020_separate|1601",
+            "VGT_financial_statements_2022_separate|1676",
+            "VGT_financial_statements_2018_separate|1247"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VGT_financial_statements_2020_separate",
+            "VGT_financial_statements_2015_separate",
+            "VGT_financial_statements_2018_separate",
+            "VGT_financial_statements_2017_separate",
+            "VGT_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "VGT_financial_statements_2020_separate|792",
+            "VGT_financial_statements_2015_separate|930",
+            "VGT_financial_statements_2018_separate|1148",
+            "VGT_financial_statements_2017_separate|1022",
+            "VGT_financial_statements_2020_separate|1344",
+            "VGT_financial_statements_2017_separate|847",
+            "VGT_financial_statements_2015_separate|1118",
+            "VGT_financial_statements_2018_separate|838",
+            "VGT_financial_statements_2015_separate|1095",
+            "VGT_financial_statements_2015_separate|1725",
+            "VGT_financial_statements_2018_separate|1067",
+            "VGT_financial_statements_2020_separate|1450",
+            "VGT_financial_statements_2020_separate|1586",
+            "VGT_financial_statements_2017_separate|1506",
+            "VGT_financial_statements_2022_separate|820",
+            "VGT_financial_statements_2017_separate|830",
+            "VGT_financial_statements_2020_separate|1571",
+            "VGT_financial_statements_2020_separate|1601",
+            "VGT_financial_statements_2022_separate|1676",
+            "VGT_financial_statements_2018_separate|1247",
+            "VGT_financial_statements_2022_separate|1001",
+            "VGT_financial_statements_2017_separate|1481",
+            "VGT_financial_statements_2020_separate|929",
+            "VGT_financial_statements_2017_separate|1240",
+            "VGT_financial_statements_2017_separate|1605",
+            "VGT_financial_statements_2022_separate|1708",
+            "VGT_financial_statements_2017_separate|1148",
+            "VGT_financial_statements_2022_separate|1104",
+            "VGT_financial_statements_2017_separate|35",
+            "VGT_financial_statements_2015_separate|1551",
+            "VGT_financial_statements_2015_separate|1139",
+            "VGT_financial_statements_2017_separate|1654",
+            "VGT_financial_statements_2020_separate|1520",
+            "VGT_financial_statements_2022_separate|1407",
+            "VGT_financial_statements_2017_separate|1635",
+            "VGT_financial_statements_2017_separate|1369",
+            "VGT_financial_statements_2020_separate|1039",
+            "VGT_financial_statements_2018_separate|869",
+            "VGT_financial_statements_2022_separate|1270",
+            "VGT_financial_statements_2022_separate|1515",
+            "VGT_financial_statements_2017_separate|1045",
+            "VGT_financial_statements_2015_separate|1691",
+            "VGT_financial_statements_2018_separate|823",
+            "VGT_financial_statements_2017_separate|976",
+            "VGT_financial_statements_2015_separate|1634",
+            "VGT_financial_statements_2018_separate|1649",
+            "VGT_financial_statements_2015_separate|1227",
+            "VGT_financial_statements_2022_separate|1125",
+            "VGT_financial_statements_2018_separate|1666",
+            "VGT_financial_statements_2018_separate|1025"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

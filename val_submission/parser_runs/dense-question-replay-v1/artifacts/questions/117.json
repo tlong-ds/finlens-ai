@@ -1,0 +1,1065 @@
+{
+  "schema_version": 1,
+  "id": 117,
+  "question": "Giá vốn của dịch vụ đã cung cấp của FPT trong năm 2024 là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T13:39:19+00:00",
+  "finished_at": "2026-08-22T13:39:19+00:00",
+  "duration_seconds": 0.3996113410103135,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "FPT"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "FPT_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "FPT_financial_statements_2024_consolidated|3961"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "FPT"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Giá vốn dịch vụ đã cung cấp trong nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "FPT",
+        "company_name": "CTCP FPT",
+        "matched_text": "FPT",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "FOX",
+        "company_name": "CTCP Viễn thông FPT",
+        "matched_text": "FPT",
+        "match_type": "collision"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "FTS",
+        "company_name": "CTCP Chứng khoán FPT",
+        "matched_text": "FPT",
+        "match_type": "collision"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Giá vốn của dịch vụ đã cung cấp của FPT trong năm 2024 là bao nhiêu nghìn tỷ đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "FPT",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "FPT"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_33",
+        "retrieval_score": 0.8358683,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_33",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3347
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_38",
+        "retrieval_score": 0.8196595,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_38",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3528
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_70",
+        "retrieval_score": 0.81856203,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_70",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4190
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_88",
+        "retrieval_score": 0.81769043,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_88",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4607
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_71",
+        "retrieval_score": 0.8171201,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_71",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4208
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_69",
+        "retrieval_score": 0.81503963,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_69",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4172
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_45",
+        "retrieval_score": 0.8138858,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_45",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3663
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_65",
+        "retrieval_score": 0.8136468,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_65",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4090
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_64",
+        "retrieval_score": 0.8136468,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_64",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4084
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_87",
+        "retrieval_score": 0.8133301,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_87",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4591
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_86",
+        "retrieval_score": 0.8129222,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_86",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4575
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_12",
+        "retrieval_score": 0.81119,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_12",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 727
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_41",
+        "retrieval_score": 0.8085912,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_41",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3556
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_85",
+        "retrieval_score": 0.8084253,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_85",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4559
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_34",
+        "retrieval_score": 0.8084129,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_34",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3442
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_35",
+        "retrieval_score": 0.8053666,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_35",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3458
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_61",
+        "retrieval_score": 0.80510956,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_61",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3961
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.8049908,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_9",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 468
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_89",
+        "retrieval_score": 0.8041719,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_89",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4624
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_44",
+        "retrieval_score": 0.8009953,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_44",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3568
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_24",
+        "retrieval_score": 0.8006539,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_24",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3191
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.8003546,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_32",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3343
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_84",
+        "retrieval_score": 0.79863614,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_84",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4543
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_60",
+        "retrieval_score": 0.7967938,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_60",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3957
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_26",
+        "retrieval_score": 0.7960108,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_26",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3212
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_58",
+        "retrieval_score": 0.7943497,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_58",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 3919
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_76",
+        "retrieval_score": 0.7941443,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_76",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4363
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_56",
+        "retrieval_score": 0.79392296,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_56",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3862
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_53",
+        "retrieval_score": 0.7934456,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_53",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3838
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_75",
+        "retrieval_score": 0.79107034,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_75",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4263
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.79101914,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_11",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 509
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_73",
+        "retrieval_score": 0.7902375,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_73",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4249
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_72",
+        "retrieval_score": 0.7902375,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_72",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4245
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_83",
+        "retrieval_score": 0.78995395,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_83",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4506
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_63",
+        "retrieval_score": 0.78991526,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_63",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4080
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.7898537,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_8",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 445
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_43",
+        "retrieval_score": 0.7896913,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_43",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3564
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_31",
+        "retrieval_score": 0.7879295,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_31",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3326
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_27",
+        "retrieval_score": 0.78774124,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_27",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3216
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_79",
+        "retrieval_score": 0.7872566,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_79",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4390
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_47",
+        "retrieval_score": 0.7852461,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_47",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3699
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.7851427,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_6",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 415
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_57",
+        "retrieval_score": 0.78398097,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_57",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3880
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_82",
+        "retrieval_score": 0.7829315,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_82",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4500
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_39",
+        "retrieval_score": 0.7826073,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_39",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3534
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_78",
+        "retrieval_score": 0.78061837,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_78",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4386
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_66",
+        "retrieval_score": 0.78061837,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_66",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 4110
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_46",
+        "retrieval_score": 0.7805718,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_46",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3677
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_14",
+        "retrieval_score": 0.7799853,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_14",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1563
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "FPT_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.7795831,
+        "metadata": {
+          "table_id": "FPT_financial_statements_2024_consolidated_table_4",
+          "doc_id": "FPT_financial_statements_2024_consolidated",
+          "ticker": "FPT",
+          "company_name": "CTCP FPT",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 201
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "FPT_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FPT_financial_statements_2024_consolidated|3347",
+            "FPT_financial_statements_2024_consolidated|3528",
+            "FPT_financial_statements_2024_consolidated|4190",
+            "FPT_financial_statements_2024_consolidated|4607",
+            "FPT_financial_statements_2024_consolidated|4208"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "FPT_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FPT_financial_statements_2024_consolidated|3347",
+            "FPT_financial_statements_2024_consolidated|3528",
+            "FPT_financial_statements_2024_consolidated|4190",
+            "FPT_financial_statements_2024_consolidated|4607",
+            "FPT_financial_statements_2024_consolidated|4208",
+            "FPT_financial_statements_2024_consolidated|4172",
+            "FPT_financial_statements_2024_consolidated|3663",
+            "FPT_financial_statements_2024_consolidated|4090",
+            "FPT_financial_statements_2024_consolidated|4084",
+            "FPT_financial_statements_2024_consolidated|4591"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "FPT_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FPT_financial_statements_2024_consolidated|3347",
+            "FPT_financial_statements_2024_consolidated|3528",
+            "FPT_financial_statements_2024_consolidated|4190",
+            "FPT_financial_statements_2024_consolidated|4607",
+            "FPT_financial_statements_2024_consolidated|4208",
+            "FPT_financial_statements_2024_consolidated|4172",
+            "FPT_financial_statements_2024_consolidated|3663",
+            "FPT_financial_statements_2024_consolidated|4090",
+            "FPT_financial_statements_2024_consolidated|4084",
+            "FPT_financial_statements_2024_consolidated|4591",
+            "FPT_financial_statements_2024_consolidated|4575",
+            "FPT_financial_statements_2024_consolidated|727",
+            "FPT_financial_statements_2024_consolidated|3556",
+            "FPT_financial_statements_2024_consolidated|4559",
+            "FPT_financial_statements_2024_consolidated|3442",
+            "FPT_financial_statements_2024_consolidated|3458",
+            "FPT_financial_statements_2024_consolidated|3961",
+            "FPT_financial_statements_2024_consolidated|468",
+            "FPT_financial_statements_2024_consolidated|4624",
+            "FPT_financial_statements_2024_consolidated|3568"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "FPT_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "FPT_financial_statements_2024_consolidated|3347",
+            "FPT_financial_statements_2024_consolidated|3528",
+            "FPT_financial_statements_2024_consolidated|4190",
+            "FPT_financial_statements_2024_consolidated|4607",
+            "FPT_financial_statements_2024_consolidated|4208",
+            "FPT_financial_statements_2024_consolidated|4172",
+            "FPT_financial_statements_2024_consolidated|3663",
+            "FPT_financial_statements_2024_consolidated|4090",
+            "FPT_financial_statements_2024_consolidated|4084",
+            "FPT_financial_statements_2024_consolidated|4591",
+            "FPT_financial_statements_2024_consolidated|4575",
+            "FPT_financial_statements_2024_consolidated|727",
+            "FPT_financial_statements_2024_consolidated|3556",
+            "FPT_financial_statements_2024_consolidated|4559",
+            "FPT_financial_statements_2024_consolidated|3442",
+            "FPT_financial_statements_2024_consolidated|3458",
+            "FPT_financial_statements_2024_consolidated|3961",
+            "FPT_financial_statements_2024_consolidated|468",
+            "FPT_financial_statements_2024_consolidated|4624",
+            "FPT_financial_statements_2024_consolidated|3568",
+            "FPT_financial_statements_2024_consolidated|3191",
+            "FPT_financial_statements_2024_consolidated|3343",
+            "FPT_financial_statements_2024_consolidated|4543",
+            "FPT_financial_statements_2024_consolidated|3957",
+            "FPT_financial_statements_2024_consolidated|3212",
+            "FPT_financial_statements_2024_consolidated|3919",
+            "FPT_financial_statements_2024_consolidated|4363",
+            "FPT_financial_statements_2024_consolidated|3862",
+            "FPT_financial_statements_2024_consolidated|3838",
+            "FPT_financial_statements_2024_consolidated|4263",
+            "FPT_financial_statements_2024_consolidated|509",
+            "FPT_financial_statements_2024_consolidated|4249",
+            "FPT_financial_statements_2024_consolidated|4245",
+            "FPT_financial_statements_2024_consolidated|4506",
+            "FPT_financial_statements_2024_consolidated|4080",
+            "FPT_financial_statements_2024_consolidated|445",
+            "FPT_financial_statements_2024_consolidated|3564",
+            "FPT_financial_statements_2024_consolidated|3326",
+            "FPT_financial_statements_2024_consolidated|3216",
+            "FPT_financial_statements_2024_consolidated|4390",
+            "FPT_financial_statements_2024_consolidated|3699",
+            "FPT_financial_statements_2024_consolidated|415",
+            "FPT_financial_statements_2024_consolidated|3880",
+            "FPT_financial_statements_2024_consolidated|4500",
+            "FPT_financial_statements_2024_consolidated|3534",
+            "FPT_financial_statements_2024_consolidated|4386",
+            "FPT_financial_statements_2024_consolidated|4110",
+            "FPT_financial_statements_2024_consolidated|3677",
+            "FPT_financial_statements_2024_consolidated|1563",
+            "FPT_financial_statements_2024_consolidated|201"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

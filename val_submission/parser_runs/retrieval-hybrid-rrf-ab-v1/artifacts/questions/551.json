@@ -1,0 +1,1467 @@
+{
+  "schema_version": 1,
+  "id": 551,
+  "question": "Trong nhóm GEE, GEX và SAM, xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương trong cả ba năm 2022, 2023 và 2024, tỷ lệ lợi nhuận sau thuế trên doanh thu thuần cao nhất năm 2024 là bao nhiêu %?",
+  "started_at": "2026-08-22T13:51:18+00:00",
+  "finished_at": "2026-08-22T13:51:20+00:00",
+  "duration_seconds": 1.3911714410060085,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GEE",
+      "GEX",
+      "SAM"
+    ],
+    "year": [
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "GEE_financial_statements_2022_consolidated",
+      "GEE_financial_statements_2023_consolidated",
+      "GEE_financial_statements_2024_consolidated",
+      "GEX_financial_statements_2022_consolidated",
+      "GEX_financial_statements_2023_consolidated",
+      "GEX_financial_statements_2024_consolidated",
+      "SAM_financial_statements_2022_consolidated",
+      "SAM_financial_statements_2023_consolidated",
+      "SAM_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "GEE_financial_statements_2022_consolidated|447",
+      "GEE_financial_statements_2023_consolidated|494",
+      "GEE_financial_statements_2024_consolidated|523",
+      "GEX_financial_statements_2022_consolidated|472",
+      "GEX_financial_statements_2023_consolidated|487",
+      "GEX_financial_statements_2024_consolidated|533",
+      "SAM_financial_statements_2022_consolidated|338",
+      "SAM_financial_statements_2023_consolidated|270",
+      "SAM_financial_statements_2024_consolidated|366",
+      "GEE_financial_statements_2024_consolidated|484",
+      "GEX_financial_statements_2024_consolidated|498"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "GEE",
+      "GEX",
+      "SAM"
+    ],
+    "year": [
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong nhóm , và , xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương trong cả ba , và , tỷ lệ lợi nhuận sau thuế trên doanh thu thuần cao nhất %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "matched_text": "GEE",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "matched_text": "GEX",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "SAM",
+        "company_name": "CTCP SAM Holdings",
+        "matched_text": "SAM",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Trong nhóm , và , xét các công ty có lưu chuyển tiền thuần từ hoạt động kinh doanh dương trong cả ba , và , tỷ lệ lợi nhuận sau thuế trên doanh thu thuần cao nhất %",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "GEE",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GEE"
+          ],
+          "year": [
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "GEX",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GEX"
+          ],
+          "year": [
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "SAM",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SAM"
+          ],
+          "year": [
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.03125,
+        "retrieval_rank": 1,
+        "dense_score": 0.88665664,
+        "dense_rank": 4,
+        "bm25_score": 28.19050102698523,
+        "bm25_rank": 4,
+        "rrf_score": 0.03125,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_9",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 447
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.031099324975891997,
+        "retrieval_rank": 2,
+        "dense_score": 0.8887964,
+        "dense_rank": 1,
+        "bm25_score": 24.358596759942444,
+        "bm25_rank": 8,
+        "rrf_score": 0.031099324975891997,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_9",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 498
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.031754032258064516,
+        "retrieval_rank": 3,
+        "dense_score": 0.8804439,
+        "dense_rank": 2,
+        "bm25_score": 23.326549825774222,
+        "bm25_rank": 4,
+        "rrf_score": 0.031754032258064516,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_8",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 303
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "GEE_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.031054405392392875,
+        "retrieval_rank": 4,
+        "dense_score": 0.887375,
+        "dense_rank": 2,
+        "bm25_score": 24.617339476101893,
+        "bm25_rank": 7,
+        "rrf_score": 0.031054405392392875,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2024_consolidated_table_9",
+          "doc_id": "GEE_financial_statements_2024_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 484
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "GEX_financial_statements_2023_consolidated_table_10",
+        "retrieval_score": 0.031024531024531024,
+        "retrieval_rank": 5,
+        "dense_score": 0.88665664,
+        "dense_rank": 3,
+        "bm25_score": 28.19050102698523,
+        "bm25_rank": 6,
+        "rrf_score": 0.031024531024531024,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2023_consolidated_table_10",
+          "doc_id": "GEX_financial_statements_2023_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 487
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SAM_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.031544957774465976,
+        "retrieval_rank": 6,
+        "dense_score": 0.8804439,
+        "dense_rank": 1,
+        "bm25_score": 23.326549825774222,
+        "bm25_rank": 6,
+        "rrf_score": 0.031544957774465976,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2024_consolidated_table_8",
+          "doc_id": "SAM_financial_statements_2024_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 329
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.030886196246139225,
+        "retrieval_rank": 7,
+        "dense_score": 0.88741577,
+        "dense_rank": 1,
+        "bm25_score": 24.395141504608798,
+        "bm25_rank": 9,
+        "rrf_score": 0.030886196246139225,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_8",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 414
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_6",
+        "retrieval_score": 0.031009615384615385,
+        "retrieval_rank": 8,
+        "dense_score": 0.88665664,
+        "dense_rank": 4,
+        "bm25_score": 28.19050102698523,
+        "bm25_rank": 5,
+        "rrf_score": 0.031009615384615385,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_6",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 472
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SAM_financial_statements_2023_consolidated_table_8",
+        "retrieval_score": 0.03125763125763126,
+        "retrieval_rank": 9,
+        "dense_score": 0.8804439,
+        "dense_rank": 3,
+        "bm25_score": 23.326549825774222,
+        "bm25_rank": 5,
+        "rrf_score": 0.03125763125763126,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2023_consolidated_table_8",
+          "doc_id": "SAM_financial_statements_2023_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 230
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_8",
+        "retrieval_score": 0.03057889822595705,
+        "retrieval_rank": 10,
+        "dense_score": 0.88697326,
+        "dense_rank": 3,
+        "bm25_score": 24.577106256098254,
+        "bm25_rank": 8,
+        "rrf_score": 0.03057889822595705,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_8",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 459
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_5",
+        "retrieval_score": 0.030621785881252923,
+        "retrieval_rank": 11,
+        "dense_score": 0.88837826,
+        "dense_rank": 2,
+        "bm25_score": 24.3193637656901,
+        "bm25_rank": 9,
+        "rrf_score": 0.030621785881252923,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_5",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 434
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SAM_financial_statements_2023_consolidated_table_7",
+        "retrieval_score": 0.029910714285714284,
+        "retrieval_rank": 12,
+        "dense_score": 0.87850004,
+        "dense_rank": 4,
+        "bm25_score": 18.052130448859984,
+        "bm25_rank": 10,
+        "rrf_score": 0.029910714285714284,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2023_consolidated_table_7",
+          "doc_id": "SAM_financial_statements_2023_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 197
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_9",
+        "retrieval_score": 0.030536130536130537,
+        "retrieval_rank": 13,
+        "dense_score": 0.8840941,
+        "dense_rank": 6,
+        "bm25_score": 27.666126371907698,
+        "bm25_rank": 5,
+        "rrf_score": 0.030536130536130537,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_9",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 494
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "GEX_financial_statements_2023_consolidated_table_1",
+        "retrieval_score": 0.03047794966520434,
+        "retrieval_rank": 14,
+        "dense_score": 0.8792579,
+        "dense_rank": 11,
+        "bm25_score": 29.14021002740526,
+        "bm25_rank": 1,
+        "rrf_score": 0.03047794966520434,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2023_consolidated_table_1",
+          "doc_id": "GEX_financial_statements_2023_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 83
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.029877369007803793,
+        "retrieval_rank": 15,
+        "dense_score": 0.87850004,
+        "dense_rank": 5,
+        "bm25_score": 18.052130448859984,
+        "bm25_rank": 9,
+        "rrf_score": 0.029877369007803793,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_7",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 260
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "GEE_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.030536130536130537,
+        "retrieval_rank": 16,
+        "dense_score": 0.88412154,
+        "dense_rank": 5,
+        "bm25_score": 27.541774719180793,
+        "bm25_rank": 6,
+        "rrf_score": 0.030536130536130537,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2024_consolidated_table_10",
+          "doc_id": "GEE_financial_statements_2024_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 523
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_1",
+        "retrieval_score": 0.02964254577157803,
+        "retrieval_rank": 17,
+        "dense_score": 0.87701184,
+        "dense_rank": 14,
+        "bm25_score": 29.025417618212757,
+        "bm25_rank": 2,
+        "rrf_score": 0.02964254577157803,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_1",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 122
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_81",
+        "retrieval_score": 0.029418126757516764,
+        "retrieval_rank": 18,
+        "dense_score": 0.87024456,
+        "dense_rank": 9,
+        "bm25_score": 18.343293936248784,
+        "bm25_rank": 7,
+        "rrf_score": 0.029418126757516764,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_81",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 1966
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "GEE_financial_statements_2024_consolidated_table_1",
+        "retrieval_score": 0.03009207275993712,
+        "retrieval_rank": 19,
+        "dense_score": 0.87701184,
+        "dense_rank": 13,
+        "bm25_score": 29.025417618212757,
+        "bm25_rank": 1,
+        "rrf_score": 0.03009207275993712,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2024_consolidated_table_1",
+          "doc_id": "GEE_financial_statements_2024_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 122
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 20,
+        "dense_score": 0.88152385,
+        "dense_rank": 8,
+        "bm25_score": 27.58851007657468,
+        "bm25_rank": 7,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_10",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 533
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SAM_financial_statements_2023_consolidated_table_67",
+        "retrieval_score": 0.029411764705882353,
+        "retrieval_rank": 21,
+        "dense_score": 0.87024456,
+        "dense_rank": 8,
+        "bm25_score": 18.343293936248784,
+        "bm25_rank": 8,
+        "rrf_score": 0.029411764705882353,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2023_consolidated_table_67",
+          "doc_id": "SAM_financial_statements_2023_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 1722
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_1",
+        "retrieval_score": 0.027799227799227798,
+        "retrieval_rank": 22,
+        "dense_score": 0.87556016,
+        "dense_rank": 14,
+        "bm25_score": 22.391558097075738,
+        "bm25_rank": 10,
+        "rrf_score": 0.027799227799227798,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_1",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 81
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "GEX_financial_statements_2023_consolidated_table_9",
+        "retrieval_score": 0.02857142857142857,
+        "retrieval_rank": 23,
+        "dense_score": 0.8804439,
+        "dense_rank": 10,
+        "bm25_score": 23.326549825774222,
+        "bm25_rank": 10,
+        "rrf_score": 0.02857142857142857,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2023_consolidated_table_9",
+          "doc_id": "GEX_financial_statements_2023_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 455
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SAM_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.029236022193768675,
+        "retrieval_rank": 24,
+        "dense_score": 0.87850004,
+        "dense_rank": 6,
+        "bm25_score": 18.052130448859984,
+        "bm25_rank": 11,
+        "rrf_score": 0.029236022193768675,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2024_consolidated_table_7",
+          "doc_id": "SAM_financial_statements_2024_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 295
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_1",
+        "retrieval_score": 0.027417840375586856,
+        "retrieval_rank": 25,
+        "dense_score": 0.87556016,
+        "dense_rank": 15,
+        "bm25_score": 22.391558097075738,
+        "bm25_rank": 11,
+        "rrf_score": 0.027417840375586856,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_1",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 134
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 26,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.89923827021082,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_7",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 497
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SAM_financial_statements_2024_consolidated_table_68",
+        "retrieval_score": 0.028258706467661692,
+        "retrieval_rank": 27,
+        "dense_score": 0.8745649,
+        "dense_rank": 7,
+        "bm25_score": 15.660049866060653,
+        "bm25_rank": 15,
+        "rrf_score": 0.028258706467661692,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2024_consolidated_table_68",
+          "doc_id": "SAM_financial_statements_2024_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1767
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_10",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 28,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.89923827021082,
+        "bm25_rank": 2,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_10",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 472
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 29,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.89923827021082,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_11",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 558
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.027402402402402402,
+        "retrieval_rank": 30,
+        "dense_score": 0.8642446,
+        "dense_rank": 14,
+        "bm25_score": 17.797740414276934,
+        "bm25_rank": 12,
+        "rrf_score": 0.027402402402402402,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_9",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 338
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_10",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 31,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.740035054708418,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_10",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 521
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_79",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 32,
+        "dense_score": 0.88339293,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_79",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 1906
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SAM_financial_statements_2023_consolidated_table_10",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 33,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 29.935590459707363,
+        "bm25_rank": 1,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2023_consolidated_table_10",
+          "doc_id": "SAM_financial_statements_2023_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 293
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_6",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 34,
+        "dense_score": 0.88293463,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_6",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 352
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "GEX_financial_statements_2023_consolidated_table_88",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 35,
+        "dense_score": 0.88339293,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2023_consolidated_table_88",
+          "doc_id": "GEX_financial_statements_2023_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 2053
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SAM_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 36,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 29.935590459707363,
+        "bm25_rank": 2,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2024_consolidated_table_10",
+          "doc_id": "SAM_financial_statements_2024_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 389
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "GEE_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 37,
+        "dense_score": 0.8794194,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2022_consolidated_table_7",
+          "doc_id": "GEE_financial_statements_2022_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 377
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_91",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 38,
+        "dense_score": 0.88339293,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_91",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 2198
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_10",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.844048270772802,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_10",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 361
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_7",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 40,
+        "dense_score": 0.8794194,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_7",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 422
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_2",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 41,
+        "dense_score": 0.88140184,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_2",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 348
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SAM_financial_statements_2024_consolidated_table_12",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 42,
+        "dense_score": 0.8677221,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2024_consolidated_table_12",
+          "doc_id": "SAM_financial_statements_2024_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 952
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "GEE_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 43,
+        "dense_score": 0.8787881,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2024_consolidated_table_8",
+          "doc_id": "GEE_financial_statements_2024_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 449
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "GEX_financial_statements_2022_consolidated_table_67",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 23.141125042390513,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2022_consolidated_table_67",
+          "doc_id": "GEX_financial_statements_2022_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1778
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_14",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 45,
+        "dense_score": 0.8677221,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_14",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 876
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "GEE_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 46,
+        "dense_score": 0.87780404,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2024_consolidated_table_7",
+          "doc_id": "GEE_financial_statements_2024_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 422
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "GEX_financial_statements_2023_consolidated_table_87",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 22.450677694200643,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2023_consolidated_table_87",
+          "doc_id": "GEX_financial_statements_2023_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 2049
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SAM_financial_statements_2022_consolidated_table_72",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 48,
+        "dense_score": 0.86673963,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "SAM_financial_statements_2022_consolidated_table_72",
+          "doc_id": "SAM_financial_statements_2022_consolidated",
+          "ticker": "SAM",
+          "company_name": "CTCP SAM Holdings",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1836
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "GEE_financial_statements_2023_consolidated_table_6",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 49,
+        "dense_score": 0.87780404,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "GEE_financial_statements_2023_consolidated_table_6",
+          "doc_id": "GEE_financial_statements_2023_consolidated",
+          "ticker": "GEE",
+          "company_name": "CTCP Điện lực Gelex",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 397
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "GEX_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 50,
+        "dense_score": 0.8772252,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "GEX_financial_statements_2024_consolidated_table_6",
+          "doc_id": "GEX_financial_statements_2024_consolidated",
+          "ticker": "GEX",
+          "company_name": "CTCP Tập đoàn GELEX",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 410
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "GEE_financial_statements_2022_consolidated",
+            "GEX_financial_statements_2024_consolidated",
+            "SAM_financial_statements_2022_consolidated",
+            "GEE_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GEE_financial_statements_2022_consolidated|447",
+            "GEX_financial_statements_2024_consolidated|498",
+            "SAM_financial_statements_2022_consolidated|303",
+            "GEE_financial_statements_2024_consolidated|484",
+            "GEX_financial_statements_2023_consolidated|487"
+          ]
+        },
+        "tables": {
+          "precision": 0.8,
+          "recall": 0.36363636363636365,
+          "f2": 0.4081632653061224,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.5555555555555556,
+          "f2": 0.6097560975609756,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "GEE_financial_statements_2022_consolidated",
+            "GEX_financial_statements_2024_consolidated",
+            "SAM_financial_statements_2022_consolidated",
+            "GEE_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2023_consolidated",
+            "SAM_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2022_consolidated",
+            "SAM_financial_statements_2023_consolidated",
+            "GEE_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GEE_financial_statements_2022_consolidated|447",
+            "GEX_financial_statements_2024_consolidated|498",
+            "SAM_financial_statements_2022_consolidated|303",
+            "GEE_financial_statements_2024_consolidated|484",
+            "GEX_financial_statements_2023_consolidated|487",
+            "SAM_financial_statements_2024_consolidated|329",
+            "GEE_financial_statements_2022_consolidated|414",
+            "GEX_financial_statements_2022_consolidated|472",
+            "SAM_financial_statements_2023_consolidated|230",
+            "GEE_financial_statements_2023_consolidated|459"
+          ]
+        },
+        "tables": {
+          "precision": 0.5,
+          "recall": 0.45454545454545453,
+          "f2": 0.4629629629629629,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "GEE_financial_statements_2022_consolidated",
+            "GEX_financial_statements_2024_consolidated",
+            "SAM_financial_statements_2022_consolidated",
+            "GEE_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2023_consolidated",
+            "SAM_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2022_consolidated",
+            "SAM_financial_statements_2023_consolidated",
+            "GEE_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GEE_financial_statements_2022_consolidated|447",
+            "GEX_financial_statements_2024_consolidated|498",
+            "SAM_financial_statements_2022_consolidated|303",
+            "GEE_financial_statements_2024_consolidated|484",
+            "GEX_financial_statements_2023_consolidated|487",
+            "SAM_financial_statements_2024_consolidated|329",
+            "GEE_financial_statements_2022_consolidated|414",
+            "GEX_financial_statements_2022_consolidated|472",
+            "SAM_financial_statements_2023_consolidated|230",
+            "GEE_financial_statements_2023_consolidated|459",
+            "GEX_financial_statements_2022_consolidated|434",
+            "SAM_financial_statements_2023_consolidated|197",
+            "GEE_financial_statements_2023_consolidated|494",
+            "GEX_financial_statements_2023_consolidated|83",
+            "SAM_financial_statements_2022_consolidated|260",
+            "GEE_financial_statements_2024_consolidated|523",
+            "GEX_financial_statements_2024_consolidated|122",
+            "SAM_financial_statements_2022_consolidated|1966",
+            "GEE_financial_statements_2024_consolidated|122",
+            "GEX_financial_statements_2024_consolidated|533"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.7272727272727273,
+          "f2": 0.625,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "GEE_financial_statements_2022_consolidated",
+            "GEX_financial_statements_2024_consolidated",
+            "SAM_financial_statements_2022_consolidated",
+            "GEE_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2023_consolidated",
+            "SAM_financial_statements_2024_consolidated",
+            "GEX_financial_statements_2022_consolidated",
+            "SAM_financial_statements_2023_consolidated",
+            "GEE_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GEE_financial_statements_2022_consolidated|447",
+            "GEX_financial_statements_2024_consolidated|498",
+            "SAM_financial_statements_2022_consolidated|303",
+            "GEE_financial_statements_2024_consolidated|484",
+            "GEX_financial_statements_2023_consolidated|487",
+            "SAM_financial_statements_2024_consolidated|329",
+            "GEE_financial_statements_2022_consolidated|414",
+            "GEX_financial_statements_2022_consolidated|472",
+            "SAM_financial_statements_2023_consolidated|230",
+            "GEE_financial_statements_2023_consolidated|459",
+            "GEX_financial_statements_2022_consolidated|434",
+            "SAM_financial_statements_2023_consolidated|197",
+            "GEE_financial_statements_2023_consolidated|494",
+            "GEX_financial_statements_2023_consolidated|83",
+            "SAM_financial_statements_2022_consolidated|260",
+            "GEE_financial_statements_2024_consolidated|523",
+            "GEX_financial_statements_2024_consolidated|122",
+            "SAM_financial_statements_2022_consolidated|1966",
+            "GEE_financial_statements_2024_consolidated|122",
+            "GEX_financial_statements_2024_consolidated|533",
+            "SAM_financial_statements_2023_consolidated|1722",
+            "GEE_financial_statements_2022_consolidated|81",
+            "GEX_financial_statements_2023_consolidated|455",
+            "SAM_financial_statements_2024_consolidated|295",
+            "GEE_financial_statements_2023_consolidated|134",
+            "GEX_financial_statements_2022_consolidated|497",
+            "SAM_financial_statements_2024_consolidated|1767",
+            "GEE_financial_statements_2022_consolidated|472",
+            "GEX_financial_statements_2024_consolidated|558",
+            "SAM_financial_statements_2022_consolidated|338",
+            "GEE_financial_statements_2023_consolidated|521",
+            "GEX_financial_statements_2022_consolidated|1906",
+            "SAM_financial_statements_2023_consolidated|293",
+            "GEE_financial_statements_2022_consolidated|352",
+            "GEX_financial_statements_2023_consolidated|2053",
+            "SAM_financial_statements_2024_consolidated|389",
+            "GEE_financial_statements_2022_consolidated|377",
+            "GEX_financial_statements_2024_consolidated|2198",
+            "SAM_financial_statements_2022_consolidated|361",
+            "GEE_financial_statements_2023_consolidated|422",
+            "GEX_financial_statements_2022_consolidated|348",
+            "SAM_financial_statements_2024_consolidated|952",
+            "GEE_financial_statements_2024_consolidated|449",
+            "GEX_financial_statements_2022_consolidated|1778",
+            "SAM_financial_statements_2022_consolidated|876",
+            "GEE_financial_statements_2024_consolidated|422",
+            "GEX_financial_statements_2023_consolidated|2049",
+            "SAM_financial_statements_2022_consolidated|1836",
+            "GEE_financial_statements_2023_consolidated|397",
+            "GEX_financial_statements_2024_consolidated|410"
+          ]
+        },
+        "tables": {
+          "precision": 0.18,
+          "recall": 0.8181818181818182,
+          "f2": 0.4787234042553192,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

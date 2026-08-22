@@ -1,0 +1,1363 @@
+{
+  "schema_version": 1,
+  "id": 578,
+  "question": "Tổng số dư trả trước cho người bán ngắn hạn của công ty mẹ CTCP Nông nghiệp BAF Việt Nam cuối năm 2025 trừ đi mức cuối năm 2022 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:51:19+00:00",
+  "finished_at": "2026-08-22T13:51:20+00:00",
+  "duration_seconds": 0.41336832400702406,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BAF"
+    ],
+    "year": [
+      2025,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "BAF_financial_statements_2025_separate",
+      "BAF_financial_statements_2022_separate"
+    ],
+    "relevant_tables": [
+      "BAF_financial_statements_2025_separate|240",
+      "BAF_financial_statements_2022_separate|242"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BAF"
+    ],
+    "year": [
+      2025,
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tổng số dư trả trước cho người bán ngắn hạn CTCP Nông nghiệp Việt Nam cuối trừ đi mức cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BAF",
+        "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+        "matched_text": "BAF",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2025,
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Tổng số dư trả trước cho người bán ngắn hạn CTCP Nông nghiệp Việt Nam cuối trừ đi mức cuối tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "BAF",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "BAF"
+          ],
+          "year": [
+            2025,
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "BAF_financial_statements_2025_separate_table_17",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 1,
+        "dense_score": 0.84104776,
+        "dense_rank": 8,
+        "bm25_score": 14.53138740559106,
+        "bm25_rank": 7,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_17",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 800
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "BAF_financial_statements_2022_separate_table_7",
+        "retrieval_score": 0.028985507246376812,
+        "retrieval_rank": 2,
+        "dense_score": 0.84069586,
+        "dense_rank": 9,
+        "bm25_score": 13.286598326701144,
+        "bm25_rank": 9,
+        "rrf_score": 0.028985507246376812,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_7",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 272
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "BAF_financial_statements_2022_separate_table_56",
+        "retrieval_score": 0.028958333333333336,
+        "retrieval_rank": 3,
+        "dense_score": 0.8482735,
+        "dense_rank": 4,
+        "bm25_score": 11.323420525559897,
+        "bm25_rank": 15,
+        "rrf_score": 0.028958333333333336,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_56",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1122
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "BAF_financial_statements_2022_separate_table_17",
+        "retrieval_score": 0.028693528693528692,
+        "retrieval_rank": 4,
+        "dense_score": 0.8364414,
+        "dense_rank": 18,
+        "bm25_score": 17.21454692943341,
+        "bm25_rank": 3,
+        "rrf_score": 0.028693528693528692,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_17",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 763
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "BAF_financial_statements_2025_separate_table_12",
+        "retrieval_score": 0.028629032258064516,
+        "retrieval_rank": 5,
+        "dense_score": 0.8511476,
+        "dense_rank": 2,
+        "bm25_score": 9.587949410027104,
+        "bm25_rank": 20,
+        "rrf_score": 0.028629032258064516,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_12",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 373
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "BAF_financial_statements_2025_separate_table_59",
+        "retrieval_score": 0.02804284323271665,
+        "retrieval_rank": 6,
+        "dense_score": 0.8446162,
+        "dense_rank": 5,
+        "bm25_score": 10.093683379085476,
+        "bm25_rank": 19,
+        "rrf_score": 0.02804284323271665,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_59",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1373
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "BAF_financial_statements_2025_separate_table_7",
+        "retrieval_score": 0.027443609022556388,
+        "retrieval_rank": 7,
+        "dense_score": 0.83731604,
+        "dense_rank": 16,
+        "bm25_score": 13.282431359521954,
+        "bm25_rank": 10,
+        "rrf_score": 0.027443609022556388,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_7",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 272
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "BAF_financial_statements_2025_separate_table_62",
+        "retrieval_score": 0.026916221033868093,
+        "retrieval_rank": 8,
+        "dense_score": 0.84112644,
+        "dense_rank": 6,
+        "bm25_score": 8.786310422467773,
+        "bm25_rank": 25,
+        "rrf_score": 0.026916221033868093,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_62",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1396
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "BAF_financial_statements_2022_separate_table_16",
+        "retrieval_score": 0.026013513513513515,
+        "retrieval_rank": 9,
+        "dense_score": 0.8353002,
+        "dense_rank": 20,
+        "bm25_score": 11.985377766620234,
+        "bm25_rank": 14,
+        "rrf_score": 0.026013513513513515,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_16",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 759
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "BAF_financial_statements_2022_separate_table_5",
+        "retrieval_score": 0.025904203323558164,
+        "retrieval_rank": 10,
+        "dense_score": 0.8264787,
+        "dense_rank": 33,
+        "bm25_score": 15.295819533977891,
+        "bm25_rank": 6,
+        "rrf_score": 0.025904203323558164,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_5",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 242
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "BAF_financial_statements_2022_separate_table_8",
+        "retrieval_score": 0.02523465148484382,
+        "retrieval_rank": 11,
+        "dense_score": 0.84105647,
+        "dense_rank": 7,
+        "bm25_score": 7.15461172463943,
+        "bm25_rank": 37,
+        "rrf_score": 0.02523465148484382,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_8",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 298
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "BAF_financial_statements_2025_separate_table_5",
+        "retrieval_score": 0.025093353248693055,
+        "retrieval_rank": 12,
+        "dense_score": 0.8211587,
+        "dense_rank": 43,
+        "bm25_score": 15.569775305564725,
+        "bm25_rank": 5,
+        "rrf_score": 0.025093353248693055,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_5",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 240
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "BAF_financial_statements_2022_separate_table_59",
+        "retrieval_score": 0.02478580171358629,
+        "retrieval_rank": 13,
+        "dense_score": 0.8317492,
+        "dense_rank": 26,
+        "bm25_score": 11.053305582173797,
+        "bm25_rank": 16,
+        "rrf_score": 0.02478580171358629,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_59",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1145
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "BAF_financial_statements_2022_separate_table_12",
+        "retrieval_score": 0.024722804914593947,
+        "retrieval_rank": 14,
+        "dense_score": 0.84034467,
+        "dense_rank": 11,
+        "bm25_score": 7.511815912065258,
+        "bm25_rank": 34,
+        "rrf_score": 0.024722804914593947,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_12",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 398
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "BAF_financial_statements_2022_separate_table_36",
+        "retrieval_score": 0.024691358024691357,
+        "retrieval_rank": 15,
+        "dense_score": 0.8350897,
+        "dense_rank": 21,
+        "bm25_score": 9.57591485268245,
+        "bm25_rank": 21,
+        "rrf_score": 0.024691358024691357,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_36",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 955
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "BAF_financial_statements_2025_separate_table_8",
+        "retrieval_score": 0.024489795918367346,
+        "retrieval_rank": 16,
+        "dense_score": 0.84043974,
+        "dense_rank": 10,
+        "bm25_score": 7.131297913892086,
+        "bm25_rank": 38,
+        "rrf_score": 0.024489795918367346,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_8",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 287
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "BAF_financial_statements_2022_separate_table_70",
+        "retrieval_score": 0.022872942063591806,
+        "retrieval_rank": 17,
+        "dense_score": 0.819328,
+        "dense_rank": 49,
+        "bm25_score": 12.065993883558276,
+        "bm25_rank": 13,
+        "rrf_score": 0.022872942063591806,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_70",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "BAF_financial_statements_2025_separate_table_82",
+        "retrieval_score": 0.02279093455564044,
+        "retrieval_rank": 18,
+        "dense_score": 0.82195604,
+        "dense_rank": 42,
+        "bm25_score": 10.429667479301878,
+        "bm25_rank": 17,
+        "rrf_score": 0.02279093455564044,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_82",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1843
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "BAF_financial_statements_2025_separate_table_83",
+        "retrieval_score": 0.022574508560558024,
+        "retrieval_rank": 19,
+        "dense_score": 0.83433145,
+        "dense_rank": 23,
+        "bm25_score": 7.348524409025905,
+        "bm25_rank": 35,
+        "rrf_score": 0.022574508560558024,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_83",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1860
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "BAF_financial_statements_2025_separate_table_75",
+        "retrieval_score": 0.022347066167290888,
+        "retrieval_rank": 20,
+        "dense_score": 0.82786536,
+        "dense_rank": 30,
+        "bm25_score": 8.188319785578297,
+        "bm25_rank": 29,
+        "rrf_score": 0.022347066167290888,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_75",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1729
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "BAF_financial_statements_2025_separate_table_38",
+        "retrieval_score": 0.021627906976744188,
+        "retrieval_rank": 21,
+        "dense_score": 0.8225424,
+        "dense_rank": 40,
+        "bm25_score": 8.720379688833031,
+        "bm25_rank": 26,
+        "rrf_score": 0.021627906976744188,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_38",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1076
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "BAF_financial_statements_2025_separate_table_45",
+        "retrieval_score": 0.021395881006864986,
+        "retrieval_rank": 22,
+        "dense_score": 0.8249039,
+        "dense_rank": 35,
+        "bm25_score": 7.813587374217488,
+        "bm25_rank": 32,
+        "rrf_score": 0.021395881006864986,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_45",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1154
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "BAF_financial_statements_2025_separate_table_54",
+        "retrieval_score": 0.021264626462646263,
+        "retrieval_rank": 23,
+        "dense_score": 0.82960457,
+        "dense_rank": 28,
+        "bm25_score": 6.486297640482531,
+        "bm25_rank": 41,
+        "rrf_score": 0.021264626462646263,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_54",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "BAF_financial_statements_2025_separate_table_63",
+        "retrieval_score": 0.020622895622895623,
+        "retrieval_rank": 24,
+        "dense_score": 0.8198544,
+        "dense_rank": 48,
+        "bm25_score": 8.206748944079127,
+        "bm25_rank": 28,
+        "rrf_score": 0.020622895622895623,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_63",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1400
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "BAF_financial_statements_2025_separate_table_73",
+        "retrieval_score": 0.020512820512820516,
+        "retrieval_rank": 25,
+        "dense_score": 0.820762,
+        "dense_rank": 45,
+        "bm25_score": 7.939828673913187,
+        "bm25_rank": 31,
+        "rrf_score": 0.020512820512820516,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_73",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1691
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "BAF_financial_statements_2025_separate_table_46",
+        "retrieval_score": 0.019433962264150943,
+        "retrieval_rank": 26,
+        "dense_score": 0.8202392,
+        "dense_rank": 46,
+        "bm25_score": 6.908317721360347,
+        "bm25_rank": 40,
+        "rrf_score": 0.019433962264150943,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_46",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1173
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "BAF_financial_statements_2025_separate_table_67",
+        "retrieval_score": 0.018614718614718615,
+        "retrieval_rank": 27,
+        "dense_score": 0.81892717,
+        "dense_rank": 50,
+        "bm25_score": 5.985291762198653,
+        "bm25_rank": 45,
+        "rrf_score": 0.018614718614718615,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_67",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1452
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "BAF_financial_statements_2025_separate_table_24",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 28,
+        "dense_score": 0.85347545,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_24",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 865
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "BAF_financial_statements_2025_separate_table_39",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 29,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 22.03355424062562,
+        "bm25_rank": 1,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_39",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1080
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "BAF_financial_statements_2022_separate_table_37",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 30,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 20.384490156313475,
+        "bm25_rank": 2,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_37",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 959
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "BAF_financial_statements_2025_separate_table_27",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 31,
+        "dense_score": 0.85078865,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_27",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 888
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "BAF_financial_statements_2025_separate_table_19",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 32,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 16.746031734013616,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_19",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 821
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "BAF_financial_statements_2022_separate_table_69",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 33,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 13.475278021406304,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_69",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1404
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "BAF_financial_statements_2022_separate_table_38",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 34,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 12.793098627926158,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_38",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 963
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "BAF_financial_statements_2022_separate_table_34",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 35,
+        "dense_score": 0.83876544,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_34",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 928
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "BAF_financial_statements_2025_separate_table_9",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 36,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 12.745742238581059,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_9",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2025,
+          "start_line": 302
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "BAF_financial_statements_2025_separate_table_47",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 37,
+        "dense_score": 0.8387605,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_47",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1196
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "BAF_financial_statements_2025_separate_table_13",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 38,
+        "dense_score": 0.8383809,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_13",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 387
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "BAF_financial_statements_2022_separate_table_32",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 39,
+        "dense_score": 0.8382554,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_32",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 887
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "BAF_financial_statements_2022_separate_table_18",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 40,
+        "dense_score": 0.8365059,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_18",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 778
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "BAF_financial_statements_2022_separate_table_66",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 41,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.402870752009944,
+        "bm25_rank": 18,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_66",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1349
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "BAF_financial_statements_2025_separate_table_36",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 42,
+        "dense_score": 0.836362,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_36",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 986
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "BAF_financial_statements_2025_separate_table_55",
+        "retrieval_score": 0.012195121951219513,
+        "retrieval_rank": 43,
+        "dense_score": 0.8344964,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012195121951219513,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_55",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 1306
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "BAF_financial_statements_2025_separate_table_6",
+        "retrieval_score": 0.012195121951219513,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.198186747249949,
+        "bm25_rank": 22,
+        "rrf_score": 0.012195121951219513,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_6",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 257
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "BAF_financial_statements_2022_separate_table_9",
+        "retrieval_score": 0.012048192771084338,
+        "retrieval_rank": 45,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.131836454320052,
+        "bm25_rank": 23,
+        "rrf_score": 0.012048192771084338,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_9",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 324
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "BAF_financial_statements_2022_separate_table_6",
+        "retrieval_score": 0.011904761904761904,
+        "retrieval_rank": 46,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.975716243561145,
+        "bm25_rank": 24,
+        "rrf_score": 0.011904761904761904,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2022_separate_table_6",
+          "doc_id": "BAF_financial_statements_2022_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 257
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "BAF_financial_statements_2025_separate_table_37",
+        "retrieval_score": 0.011904761904761904,
+        "retrieval_rank": 47,
+        "dense_score": 0.8330191,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011904761904761904,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_37",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "BAF_financial_statements_2025_separate_table_21",
+        "retrieval_score": 0.011764705882352941,
+        "retrieval_rank": 48,
+        "dense_score": 0.8321582,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011764705882352941,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_21",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 842
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "BAF_financial_statements_2025_separate_table_40",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.549417772370736,
+        "bm25_rank": 27,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_40",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1084
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "BAF_financial_statements_2025_separate_table_64",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 50,
+        "dense_score": 0.82960755,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "BAF_financial_statements_2025_separate_table_64",
+          "doc_id": "BAF_financial_statements_2025_separate",
+          "ticker": "BAF",
+          "company_name": "CTCP Nông nghiệp BAF Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1404
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "BAF_financial_statements_2025_separate",
+            "BAF_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "BAF_financial_statements_2025_separate|800",
+            "BAF_financial_statements_2022_separate|272",
+            "BAF_financial_statements_2022_separate|1122",
+            "BAF_financial_statements_2022_separate|763",
+            "BAF_financial_statements_2025_separate|373"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "BAF_financial_statements_2025_separate",
+            "BAF_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "BAF_financial_statements_2025_separate|800",
+            "BAF_financial_statements_2022_separate|272",
+            "BAF_financial_statements_2022_separate|1122",
+            "BAF_financial_statements_2022_separate|763",
+            "BAF_financial_statements_2025_separate|373",
+            "BAF_financial_statements_2025_separate|1373",
+            "BAF_financial_statements_2025_separate|272",
+            "BAF_financial_statements_2025_separate|1396",
+            "BAF_financial_statements_2022_separate|759",
+            "BAF_financial_statements_2022_separate|242"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f2": 0.2777777777777778,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "BAF_financial_statements_2025_separate",
+            "BAF_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "BAF_financial_statements_2025_separate|800",
+            "BAF_financial_statements_2022_separate|272",
+            "BAF_financial_statements_2022_separate|1122",
+            "BAF_financial_statements_2022_separate|763",
+            "BAF_financial_statements_2025_separate|373",
+            "BAF_financial_statements_2025_separate|1373",
+            "BAF_financial_statements_2025_separate|272",
+            "BAF_financial_statements_2025_separate|1396",
+            "BAF_financial_statements_2022_separate|759",
+            "BAF_financial_statements_2022_separate|242",
+            "BAF_financial_statements_2022_separate|298",
+            "BAF_financial_statements_2025_separate|240",
+            "BAF_financial_statements_2022_separate|1145",
+            "BAF_financial_statements_2022_separate|398",
+            "BAF_financial_statements_2022_separate|955",
+            "BAF_financial_statements_2025_separate|287",
+            "BAF_financial_statements_2022_separate|1421",
+            "BAF_financial_statements_2025_separate|1843",
+            "BAF_financial_statements_2025_separate|1860",
+            "BAF_financial_statements_2025_separate|1729"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "BAF_financial_statements_2025_separate",
+            "BAF_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "BAF_financial_statements_2025_separate|800",
+            "BAF_financial_statements_2022_separate|272",
+            "BAF_financial_statements_2022_separate|1122",
+            "BAF_financial_statements_2022_separate|763",
+            "BAF_financial_statements_2025_separate|373",
+            "BAF_financial_statements_2025_separate|1373",
+            "BAF_financial_statements_2025_separate|272",
+            "BAF_financial_statements_2025_separate|1396",
+            "BAF_financial_statements_2022_separate|759",
+            "BAF_financial_statements_2022_separate|242",
+            "BAF_financial_statements_2022_separate|298",
+            "BAF_financial_statements_2025_separate|240",
+            "BAF_financial_statements_2022_separate|1145",
+            "BAF_financial_statements_2022_separate|398",
+            "BAF_financial_statements_2022_separate|955",
+            "BAF_financial_statements_2025_separate|287",
+            "BAF_financial_statements_2022_separate|1421",
+            "BAF_financial_statements_2025_separate|1843",
+            "BAF_financial_statements_2025_separate|1860",
+            "BAF_financial_statements_2025_separate|1729",
+            "BAF_financial_statements_2025_separate|1076",
+            "BAF_financial_statements_2025_separate|1154",
+            "BAF_financial_statements_2025_separate|1290",
+            "BAF_financial_statements_2025_separate|1400",
+            "BAF_financial_statements_2025_separate|1691",
+            "BAF_financial_statements_2025_separate|1173",
+            "BAF_financial_statements_2025_separate|1452",
+            "BAF_financial_statements_2025_separate|865",
+            "BAF_financial_statements_2025_separate|1080",
+            "BAF_financial_statements_2022_separate|959",
+            "BAF_financial_statements_2025_separate|888",
+            "BAF_financial_statements_2025_separate|821",
+            "BAF_financial_statements_2022_separate|1404",
+            "BAF_financial_statements_2022_separate|963",
+            "BAF_financial_statements_2022_separate|928",
+            "BAF_financial_statements_2025_separate|302",
+            "BAF_financial_statements_2025_separate|1196",
+            "BAF_financial_statements_2025_separate|387",
+            "BAF_financial_statements_2022_separate|887",
+            "BAF_financial_statements_2022_separate|778",
+            "BAF_financial_statements_2022_separate|1349",
+            "BAF_financial_statements_2025_separate|986",
+            "BAF_financial_statements_2025_separate|1306",
+            "BAF_financial_statements_2025_separate|257",
+            "BAF_financial_statements_2022_separate|324",
+            "BAF_financial_statements_2022_separate|257",
+            "BAF_financial_statements_2025_separate|1000",
+            "BAF_financial_statements_2025_separate|842",
+            "BAF_financial_statements_2025_separate|1084",
+            "BAF_financial_statements_2025_separate|1404"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

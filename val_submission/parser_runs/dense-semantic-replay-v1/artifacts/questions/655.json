@@ -1,0 +1,1070 @@
+{
+  "schema_version": 1,
+  "id": 655,
+  "question": "Tốc độ tăng trưởng % tổng tiền và các khoản tương đương tiền của VIC từ năm 2019 đến năm 2021 là bao nhiêu?",
+  "started_at": "2026-08-22T13:38:54+00:00",
+  "finished_at": "2026-08-22T13:38:54+00:00",
+  "duration_seconds": 0.27799861899984535,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VIC"
+    ],
+    "year": [
+      2019,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VIC_financial_statements_2019_consolidated",
+      "VIC_financial_statements_2021_consolidated"
+    ],
+    "relevant_tables": [
+      "VIC_financial_statements_2019_consolidated|229",
+      "VIC_financial_statements_2021_consolidated|219"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VIC"
+    ],
+    "year": [
+      2019,
+      2020,
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tốc độ tăng trưởng % tổng tiền và các khoản tương đương tiền",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VIC",
+        "company_name": "Tập đoàn VINGROUP - CTCP",
+        "matched_text": "VIC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019,
+            2020,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": false,
+      "coverage": true,
+      "missing": [],
+      "extra": [
+        2020
+      ]
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Tốc độ tăng trưởng % tổng tiền và các khoản tương đương tiền",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VIC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VIC"
+          ],
+          "year": [
+            2019,
+            2020,
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_11",
+        "retrieval_score": 0.8451363,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_11",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 376
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_11",
+        "retrieval_score": 0.8430816,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_11",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 352
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_10",
+        "retrieval_score": 0.8430816,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_10",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 376
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.83960974,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_10",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 339
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_9",
+        "retrieval_score": 0.83536834,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_9",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 361
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_68",
+        "retrieval_score": 0.82872105,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_68",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 2214
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_20",
+        "retrieval_score": 0.8275248,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_20",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 1275
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_10",
+        "retrieval_score": 0.8268568,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_10",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 359
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_74",
+        "retrieval_score": 0.82664746,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_74",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 2251
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_67",
+        "retrieval_score": 0.8245429,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_67",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 2139
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_4",
+        "retrieval_score": 0.8226872,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_4",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 229
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_3",
+        "retrieval_score": 0.8226872,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_3",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 235
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_4",
+        "retrieval_score": 0.8226872,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_4",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 219
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_46",
+        "retrieval_score": 0.82250607,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_46",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1785
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_15",
+        "retrieval_score": 0.82163095,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_15",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 1271
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_52",
+        "retrieval_score": 0.8194049,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_52",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1889
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_73",
+        "retrieval_score": 0.8186723,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_73",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2439
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_51",
+        "retrieval_score": 0.81795573,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_51",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1895
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_82",
+        "retrieval_score": 0.8179351,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_82",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2511
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_57",
+        "retrieval_score": 0.8174788,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_57",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2005
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_51",
+        "retrieval_score": 0.8174788,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_51",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1959
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_80",
+        "retrieval_score": 0.8171293,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_80",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2486
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.81618065,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_8",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 334
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_9",
+        "retrieval_score": 0.81618065,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_9",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 310
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.81618065,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_9",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 326
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_70",
+        "retrieval_score": 0.8158475,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_70",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 2171
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_46",
+        "retrieval_score": 0.8155761,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_46",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1827
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_49",
+        "retrieval_score": 0.8146312,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_49",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1878
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_15",
+        "retrieval_score": 0.81429386,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_15",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1191
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_55",
+        "retrieval_score": 0.81321084,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_55",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1925
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_72",
+        "retrieval_score": 0.8111515,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_72",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2422
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_5",
+        "retrieval_score": 0.8110667,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_5",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 246
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_4",
+        "retrieval_score": 0.8110667,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_4",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_5",
+        "retrieval_score": 0.8110667,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_5",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 234
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_58",
+        "retrieval_score": 0.81072974,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_58",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2009
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.81060636,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_7",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 265
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.81060636,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_6",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 286
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.81060636,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_7",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 280
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_79",
+        "retrieval_score": 0.8104304,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_79",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2467
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_14",
+        "retrieval_score": 0.81040466,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_14",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 1164
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_64",
+        "retrieval_score": 0.81030416,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_64",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 2116
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VIC_financial_statements_2021_consolidated_table_14",
+        "retrieval_score": 0.8093038,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2021_consolidated_table_14",
+          "doc_id": "VIC_financial_statements_2021_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 1217
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_72",
+        "retrieval_score": 0.8091195,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_72",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2316
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_69",
+        "retrieval_score": 0.80893373,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_69",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2147
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_50",
+        "retrieval_score": 0.80780727,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_50",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1790
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_54",
+        "retrieval_score": 0.8076751,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_54",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1909
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_78",
+        "retrieval_score": 0.8071007,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_78",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2449
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_17",
+        "retrieval_score": 0.80709666,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_17",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VIC_financial_statements_2020_consolidated_table_73",
+        "retrieval_score": 0.8070364,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2020_consolidated_table_73",
+          "doc_id": "VIC_financial_statements_2020_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 2333
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VIC_financial_statements_2019_consolidated_table_41",
+        "retrieval_score": 0.8070206,
+        "metadata": {
+          "table_id": "VIC_financial_statements_2019_consolidated_table_41",
+          "doc_id": "VIC_financial_statements_2019_consolidated",
+          "ticker": "VIC",
+          "company_name": "Tập đoàn VINGROUP - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1631
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VIC_financial_statements_2019_consolidated",
+            "VIC_financial_statements_2021_consolidated",
+            "VIC_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "VIC_financial_statements_2019_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|352",
+            "VIC_financial_statements_2020_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|339",
+            "VIC_financial_statements_2020_consolidated|361"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VIC_financial_statements_2019_consolidated",
+            "VIC_financial_statements_2021_consolidated",
+            "VIC_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "VIC_financial_statements_2019_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|352",
+            "VIC_financial_statements_2020_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|339",
+            "VIC_financial_statements_2020_consolidated|361",
+            "VIC_financial_statements_2021_consolidated|2214",
+            "VIC_financial_statements_2019_consolidated|1275",
+            "VIC_financial_statements_2019_consolidated|359",
+            "VIC_financial_statements_2019_consolidated|2251",
+            "VIC_financial_statements_2020_consolidated|2139"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VIC_financial_statements_2019_consolidated",
+            "VIC_financial_statements_2021_consolidated",
+            "VIC_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "VIC_financial_statements_2019_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|352",
+            "VIC_financial_statements_2020_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|339",
+            "VIC_financial_statements_2020_consolidated|361",
+            "VIC_financial_statements_2021_consolidated|2214",
+            "VIC_financial_statements_2019_consolidated|1275",
+            "VIC_financial_statements_2019_consolidated|359",
+            "VIC_financial_statements_2019_consolidated|2251",
+            "VIC_financial_statements_2020_consolidated|2139",
+            "VIC_financial_statements_2019_consolidated|229",
+            "VIC_financial_statements_2020_consolidated|235",
+            "VIC_financial_statements_2021_consolidated|219",
+            "VIC_financial_statements_2020_consolidated|1785",
+            "VIC_financial_statements_2021_consolidated|1271",
+            "VIC_financial_statements_2019_consolidated|1889",
+            "VIC_financial_statements_2021_consolidated|2439",
+            "VIC_financial_statements_2020_consolidated|1895",
+            "VIC_financial_statements_2019_consolidated|2511",
+            "VIC_financial_statements_2019_consolidated|2005"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VIC_financial_statements_2019_consolidated",
+            "VIC_financial_statements_2021_consolidated",
+            "VIC_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "VIC_financial_statements_2019_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|352",
+            "VIC_financial_statements_2020_consolidated|376",
+            "VIC_financial_statements_2021_consolidated|339",
+            "VIC_financial_statements_2020_consolidated|361",
+            "VIC_financial_statements_2021_consolidated|2214",
+            "VIC_financial_statements_2019_consolidated|1275",
+            "VIC_financial_statements_2019_consolidated|359",
+            "VIC_financial_statements_2019_consolidated|2251",
+            "VIC_financial_statements_2020_consolidated|2139",
+            "VIC_financial_statements_2019_consolidated|229",
+            "VIC_financial_statements_2020_consolidated|235",
+            "VIC_financial_statements_2021_consolidated|219",
+            "VIC_financial_statements_2020_consolidated|1785",
+            "VIC_financial_statements_2021_consolidated|1271",
+            "VIC_financial_statements_2019_consolidated|1889",
+            "VIC_financial_statements_2021_consolidated|2439",
+            "VIC_financial_statements_2020_consolidated|1895",
+            "VIC_financial_statements_2019_consolidated|2511",
+            "VIC_financial_statements_2019_consolidated|2005",
+            "VIC_financial_statements_2021_consolidated|1959",
+            "VIC_financial_statements_2019_consolidated|2486",
+            "VIC_financial_statements_2020_consolidated|334",
+            "VIC_financial_statements_2021_consolidated|310",
+            "VIC_financial_statements_2019_consolidated|326",
+            "VIC_financial_statements_2019_consolidated|2171",
+            "VIC_financial_statements_2021_consolidated|1827",
+            "VIC_financial_statements_2021_consolidated|1878",
+            "VIC_financial_statements_2019_consolidated|1191",
+            "VIC_financial_statements_2019_consolidated|1925",
+            "VIC_financial_statements_2021_consolidated|2422",
+            "VIC_financial_statements_2019_consolidated|246",
+            "VIC_financial_statements_2020_consolidated|252",
+            "VIC_financial_statements_2021_consolidated|234",
+            "VIC_financial_statements_2019_consolidated|2009",
+            "VIC_financial_statements_2021_consolidated|265",
+            "VIC_financial_statements_2020_consolidated|286",
+            "VIC_financial_statements_2019_consolidated|280",
+            "VIC_financial_statements_2019_consolidated|2467",
+            "VIC_financial_statements_2019_consolidated|1164",
+            "VIC_financial_statements_2021_consolidated|2116",
+            "VIC_financial_statements_2021_consolidated|1217",
+            "VIC_financial_statements_2020_consolidated|2316",
+            "VIC_financial_statements_2020_consolidated|2147",
+            "VIC_financial_statements_2019_consolidated|1790",
+            "VIC_financial_statements_2019_consolidated|1909",
+            "VIC_financial_statements_2019_consolidated|2449",
+            "VIC_financial_statements_2020_consolidated|1297",
+            "VIC_financial_statements_2020_consolidated|2333",
+            "VIC_financial_statements_2019_consolidated|1631"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

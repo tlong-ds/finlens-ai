@@ -1,0 +1,1058 @@
+{
+  "schema_version": 1,
+  "id": 200,
+  "question": "Giá gốc hàng gửi đi bán của công ty mẹ CTCP Tập đoàn Sao Mai (ASM) vào cuối năm 2019 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:38:49+00:00",
+  "finished_at": "2026-08-22T13:38:49+00:00",
+  "duration_seconds": 0.30527752300258726,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "ASM"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "ASM_financial_statements_2019_separate"
+    ],
+    "relevant_tables": [
+      "ASM_financial_statements_2019_separate|1118"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "ASM"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Giá gốc hàng gửi đi bán CTCP Tập đoàn Sao Mai vào cuối triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "ASM",
+        "company_name": "CTCP Tập đoàn Sao Mai",
+        "matched_text": "ASM",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Giá gốc hàng gửi đi bán CTCP Tập đoàn Sao Mai vào cuối triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "ASM",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "ASM"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "ASM_financial_statements_2019_separate_table_33",
+        "retrieval_score": 0.83108246,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_33",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1279
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "ASM_financial_statements_2019_separate_table_31",
+        "retrieval_score": 0.8307632,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_31",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1256
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "ASM_financial_statements_2019_separate_table_16",
+        "retrieval_score": 0.81866664,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_16",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "ASM_financial_statements_2019_separate_table_58",
+        "retrieval_score": 0.8176085,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_58",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1572
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "ASM_financial_statements_2019_separate_table_9",
+        "retrieval_score": 0.81622106,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_9",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 373
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "ASM_financial_statements_2019_separate_table_13",
+        "retrieval_score": 0.81550485,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_13",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 483
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "ASM_financial_statements_2019_separate_table_11",
+        "retrieval_score": 0.8133637,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_11",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 417
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "ASM_financial_statements_2019_separate_table_17",
+        "retrieval_score": 0.8097217,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_17",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1044
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "ASM_financial_statements_2019_separate_table_28",
+        "retrieval_score": 0.8095451,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_28",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1198
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "ASM_financial_statements_2019_separate_table_5",
+        "retrieval_score": 0.8093132,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_5",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 297
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "ASM_financial_statements_2019_separate_table_32",
+        "retrieval_score": 0.8088857,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_32",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1275
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "ASM_financial_statements_2019_separate_table_49",
+        "retrieval_score": 0.80857277,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_49",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1480
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "ASM_financial_statements_2019_separate_table_10",
+        "retrieval_score": 0.806952,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_10",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 396
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "ASM_financial_statements_2019_separate_table_55",
+        "retrieval_score": 0.8061008,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_55",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 1529
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "ASM_financial_statements_2019_separate_table_45",
+        "retrieval_score": 0.8056257,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_45",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1445
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "ASM_financial_statements_2019_separate_table_59",
+        "retrieval_score": 0.80493665,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_59",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1591
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "ASM_financial_statements_2019_separate_table_30",
+        "retrieval_score": 0.80493057,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_30",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1240
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "ASM_financial_statements_2019_separate_table_21",
+        "retrieval_score": 0.8038656,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_21",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1110
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "ASM_financial_statements_2019_separate_table_35",
+        "retrieval_score": 0.8030658,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_35",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1310
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "ASM_financial_statements_2019_separate_table_60",
+        "retrieval_score": 0.8028575,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_60",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1595
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "ASM_financial_statements_2019_separate_table_37",
+        "retrieval_score": 0.80065525,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_37",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1351
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "ASM_financial_statements_2019_separate_table_23",
+        "retrieval_score": 0.79976237,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_23",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1131
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "ASM_financial_statements_2019_separate_table_66",
+        "retrieval_score": 0.7975967,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_66",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1728
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "ASM_financial_statements_2019_separate_table_26",
+        "retrieval_score": 0.79716027,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_26",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1170
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "ASM_financial_statements_2019_separate_table_34",
+        "retrieval_score": 0.7970628,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_34",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1295
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "ASM_financial_statements_2019_separate_table_44",
+        "retrieval_score": 0.79674065,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_44",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1439
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "ASM_financial_statements_2019_separate_table_46",
+        "retrieval_score": 0.79621613,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_46",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1449
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "ASM_financial_statements_2019_separate_table_22",
+        "retrieval_score": 0.7961487,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_22",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "ASM_financial_statements_2019_separate_table_18",
+        "retrieval_score": 0.79611015,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_18",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1071
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "ASM_financial_statements_2019_separate_table_63",
+        "retrieval_score": 0.7955861,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_63",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1651
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "ASM_financial_statements_2019_separate_table_61",
+        "retrieval_score": 0.7938703,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_61",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1614
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "ASM_financial_statements_2019_separate_table_27",
+        "retrieval_score": 0.7934162,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_27",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1194
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "ASM_financial_statements_2019_separate_table_51",
+        "retrieval_score": 0.7923556,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_51",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1490
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "ASM_financial_statements_2019_separate_table_57",
+        "retrieval_score": 0.79217654,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_57",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1568
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "ASM_financial_statements_2019_separate_table_6",
+        "retrieval_score": 0.7903361,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_6",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 316
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "ASM_financial_statements_2019_separate_table_25",
+        "retrieval_score": 0.78993285,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_25",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1147
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "ASM_financial_statements_2019_separate_table_29",
+        "retrieval_score": 0.7896822,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_29",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1222
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "ASM_financial_statements_2019_separate_table_7",
+        "retrieval_score": 0.7889611,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_7",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 335
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "ASM_financial_statements_2019_separate_table_50",
+        "retrieval_score": 0.78882015,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_50",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1486
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "ASM_financial_statements_2019_separate_table_64",
+        "retrieval_score": 0.7881144,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_64",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1663
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "ASM_financial_statements_2019_separate_table_20",
+        "retrieval_score": 0.78724784,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_20",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1104
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "ASM_financial_statements_2019_separate_table_19",
+        "retrieval_score": 0.7871171,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_19",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "ASM_financial_statements_2019_separate_table_48",
+        "retrieval_score": 0.78667694,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_48",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1474
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "ASM_financial_statements_2019_separate_table_67",
+        "retrieval_score": 0.7862516,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_67",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1763
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "ASM_financial_statements_2019_separate_table_47",
+        "retrieval_score": 0.7855264,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_47",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1453
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "ASM_financial_statements_2019_separate_table_54",
+        "retrieval_score": 0.78452426,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_54",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1521
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "ASM_financial_statements_2019_separate_table_62",
+        "retrieval_score": 0.7829323,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_62",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1636
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "ASM_financial_statements_2019_separate_table_52",
+        "retrieval_score": 0.7829301,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_52",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1496
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "ASM_financial_statements_2019_separate_table_56",
+        "retrieval_score": 0.77983963,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_56",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1564
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "ASM_financial_statements_2019_separate_table_41",
+        "retrieval_score": 0.7778551,
+        "metadata": {
+          "table_id": "ASM_financial_statements_2019_separate_table_41",
+          "doc_id": "ASM_financial_statements_2019_separate",
+          "ticker": "ASM",
+          "company_name": "CTCP Tập đoàn Sao Mai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1401
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "ASM_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "ASM_financial_statements_2019_separate|1279",
+            "ASM_financial_statements_2019_separate|1256",
+            "ASM_financial_statements_2019_separate|1027",
+            "ASM_financial_statements_2019_separate|1572",
+            "ASM_financial_statements_2019_separate|373"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "ASM_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "ASM_financial_statements_2019_separate|1279",
+            "ASM_financial_statements_2019_separate|1256",
+            "ASM_financial_statements_2019_separate|1027",
+            "ASM_financial_statements_2019_separate|1572",
+            "ASM_financial_statements_2019_separate|373",
+            "ASM_financial_statements_2019_separate|483",
+            "ASM_financial_statements_2019_separate|417",
+            "ASM_financial_statements_2019_separate|1044",
+            "ASM_financial_statements_2019_separate|1198",
+            "ASM_financial_statements_2019_separate|297"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "ASM_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "ASM_financial_statements_2019_separate|1279",
+            "ASM_financial_statements_2019_separate|1256",
+            "ASM_financial_statements_2019_separate|1027",
+            "ASM_financial_statements_2019_separate|1572",
+            "ASM_financial_statements_2019_separate|373",
+            "ASM_financial_statements_2019_separate|483",
+            "ASM_financial_statements_2019_separate|417",
+            "ASM_financial_statements_2019_separate|1044",
+            "ASM_financial_statements_2019_separate|1198",
+            "ASM_financial_statements_2019_separate|297",
+            "ASM_financial_statements_2019_separate|1275",
+            "ASM_financial_statements_2019_separate|1480",
+            "ASM_financial_statements_2019_separate|396",
+            "ASM_financial_statements_2019_separate|1529",
+            "ASM_financial_statements_2019_separate|1445",
+            "ASM_financial_statements_2019_separate|1591",
+            "ASM_financial_statements_2019_separate|1240",
+            "ASM_financial_statements_2019_separate|1110",
+            "ASM_financial_statements_2019_separate|1310",
+            "ASM_financial_statements_2019_separate|1595"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "ASM_financial_statements_2019_separate"
+          ],
+          "tables": [
+            "ASM_financial_statements_2019_separate|1279",
+            "ASM_financial_statements_2019_separate|1256",
+            "ASM_financial_statements_2019_separate|1027",
+            "ASM_financial_statements_2019_separate|1572",
+            "ASM_financial_statements_2019_separate|373",
+            "ASM_financial_statements_2019_separate|483",
+            "ASM_financial_statements_2019_separate|417",
+            "ASM_financial_statements_2019_separate|1044",
+            "ASM_financial_statements_2019_separate|1198",
+            "ASM_financial_statements_2019_separate|297",
+            "ASM_financial_statements_2019_separate|1275",
+            "ASM_financial_statements_2019_separate|1480",
+            "ASM_financial_statements_2019_separate|396",
+            "ASM_financial_statements_2019_separate|1529",
+            "ASM_financial_statements_2019_separate|1445",
+            "ASM_financial_statements_2019_separate|1591",
+            "ASM_financial_statements_2019_separate|1240",
+            "ASM_financial_statements_2019_separate|1110",
+            "ASM_financial_statements_2019_separate|1310",
+            "ASM_financial_statements_2019_separate|1595",
+            "ASM_financial_statements_2019_separate|1351",
+            "ASM_financial_statements_2019_separate|1131",
+            "ASM_financial_statements_2019_separate|1728",
+            "ASM_financial_statements_2019_separate|1170",
+            "ASM_financial_statements_2019_separate|1295",
+            "ASM_financial_statements_2019_separate|1439",
+            "ASM_financial_statements_2019_separate|1449",
+            "ASM_financial_statements_2019_separate|1118",
+            "ASM_financial_statements_2019_separate|1071",
+            "ASM_financial_statements_2019_separate|1651",
+            "ASM_financial_statements_2019_separate|1614",
+            "ASM_financial_statements_2019_separate|1194",
+            "ASM_financial_statements_2019_separate|1490",
+            "ASM_financial_statements_2019_separate|1568",
+            "ASM_financial_statements_2019_separate|316",
+            "ASM_financial_statements_2019_separate|1147",
+            "ASM_financial_statements_2019_separate|1222",
+            "ASM_financial_statements_2019_separate|335",
+            "ASM_financial_statements_2019_separate|1486",
+            "ASM_financial_statements_2019_separate|1663",
+            "ASM_financial_statements_2019_separate|1104",
+            "ASM_financial_statements_2019_separate|1077",
+            "ASM_financial_statements_2019_separate|1474",
+            "ASM_financial_statements_2019_separate|1763",
+            "ASM_financial_statements_2019_separate|1453",
+            "ASM_financial_statements_2019_separate|1521",
+            "ASM_financial_statements_2019_separate|1636",
+            "ASM_financial_statements_2019_separate|1496",
+            "ASM_financial_statements_2019_separate|1564",
+            "ASM_financial_statements_2019_separate|1401"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

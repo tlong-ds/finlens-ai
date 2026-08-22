@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 46,
+  "question": "Thuế TNDN phải nộp cuối năm 2024 của BAB là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:51:12+00:00",
+  "finished_at": "2026-08-22T13:51:13+00:00",
+  "duration_seconds": 1.007775225007208,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BAB"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "BAB_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "BAB_financial_statements_2024_consolidated|1326"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BAB"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Thuế TNDN phải nộp cuối triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BAB",
+        "company_name": "Ngân hàng TMCP Bắc Á",
+        "matched_text": "BAB",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Thuế TNDN phải nộp cuối triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "BAB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "BAB"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_53",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 1,
+        "dense_score": 0.84919584,
+        "dense_rank": 1,
+        "bm25_score": 14.125604403322662,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_53",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1326
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_57",
+        "retrieval_score": 0.03225806451612903,
+        "retrieval_rank": 2,
+        "dense_score": 0.8323094,
+        "dense_rank": 2,
+        "bm25_score": 12.130813913874439,
+        "bm25_rank": 2,
+        "rrf_score": 0.03225806451612903,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_57",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1372
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.031746031746031744,
+        "retrieval_rank": 3,
+        "dense_score": 0.8139497,
+        "dense_rank": 3,
+        "bm25_score": 7.343439020805333,
+        "bm25_rank": 3,
+        "rrf_score": 0.031746031746031744,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_40",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1217
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_52",
+        "retrieval_score": 0.031009615384615385,
+        "retrieval_rank": 4,
+        "dense_score": 0.8057604,
+        "dense_rank": 4,
+        "bm25_score": 5.148794632224698,
+        "bm25_rank": 5,
+        "rrf_score": 0.031009615384615385,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_52",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1322
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.030536130536130537,
+        "retrieval_rank": 5,
+        "dense_score": 0.8047646,
+        "dense_rank": 5,
+        "bm25_score": 4.812994667257096,
+        "bm25_rank": 6,
+        "rrf_score": 0.030536130536130537,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_8",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 301
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.030330882352941176,
+        "retrieval_rank": 6,
+        "dense_score": 0.8019119,
+        "dense_rank": 8,
+        "bm25_score": 5.817258240937097,
+        "bm25_rank": 4,
+        "rrf_score": 0.030330882352941176,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_7",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 270
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_33",
+        "retrieval_score": 0.03007688828584351,
+        "retrieval_rank": 7,
+        "dense_score": 0.80398357,
+        "dense_rank": 6,
+        "bm25_score": 4.178187686431278,
+        "bm25_rank": 7,
+        "rrf_score": 0.03007688828584351,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_33",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1165
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_62",
+        "retrieval_score": 0.027777777777777776,
+        "retrieval_rank": 8,
+        "dense_score": 0.80068064,
+        "dense_rank": 12,
+        "bm25_score": 1.8996485280528614,
+        "bm25_rank": 12,
+        "rrf_score": 0.027777777777777776,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_62",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1523
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_21",
+        "retrieval_score": 0.026742734890354787,
+        "retrieval_rank": 9,
+        "dense_score": 0.8013268,
+        "dense_rank": 11,
+        "bm25_score": 0.818791318938278,
+        "bm25_rank": 19,
+        "rrf_score": 0.026742734890354787,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_21",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1060
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_69",
+        "retrieval_score": 0.02667140825035562,
+        "retrieval_rank": 10,
+        "dense_score": 0.79801667,
+        "dense_rank": 16,
+        "bm25_score": 1.5916367994467482,
+        "bm25_rank": 14,
+        "rrf_score": 0.02667140825035562,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_69",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1681
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_59",
+        "retrieval_score": 0.02661064425770308,
+        "retrieval_rank": 11,
+        "dense_score": 0.78975743,
+        "dense_rank": 24,
+        "bm25_score": 2.1629059190587885,
+        "bm25_rank": 8,
+        "rrf_score": 0.02661064425770308,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_59",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1409
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_65",
+        "retrieval_score": 0.02632034632034632,
+        "retrieval_rank": 12,
+        "dense_score": 0.79880744,
+        "dense_rank": 15,
+        "bm25_score": 1.1821265494402418,
+        "bm25_rank": 17,
+        "rrf_score": 0.02632034632034632,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_65",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1607
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.026279628993473032,
+        "retrieval_rank": 13,
+        "dense_score": 0.7902137,
+        "dense_rank": 22,
+        "bm25_score": 1.9041785299347127,
+        "bm25_rank": 11,
+        "rrf_score": 0.026279628993473032,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_4",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 194
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_5",
+        "retrieval_score": 0.02625745950554135,
+        "retrieval_rank": 14,
+        "dense_score": 0.7874946,
+        "dense_rank": 25,
+        "bm25_score": 2.064251985172749,
+        "bm25_rank": 9,
+        "rrf_score": 0.02625745950554135,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_5",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 214
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_61",
+        "retrieval_score": 0.026144907723855092,
+        "retrieval_rank": 15,
+        "dense_score": 0.79735446,
+        "dense_rank": 17,
+        "bm25_score": 1.2649442584085528,
+        "bm25_rank": 16,
+        "rrf_score": 0.026144907723855092,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_61",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1504
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_19",
+        "retrieval_score": 0.02371967654986523,
+        "retrieval_rank": 16,
+        "dense_score": 0.77221656,
+        "dense_rank": 46,
+        "bm25_score": 2.047484308595063,
+        "bm25_rank": 10,
+        "rrf_score": 0.02371967654986523,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_19",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1043
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_63",
+        "retrieval_score": 0.023698630136986303,
+        "retrieval_rank": 17,
+        "dense_score": 0.7744908,
+        "dense_rank": 40,
+        "bm25_score": 1.6167879126240343,
+        "bm25_rank": 13,
+        "rrf_score": 0.023698630136986303,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_63",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.023042071197411,
+        "retrieval_rank": 18,
+        "dense_score": 0.7734803,
+        "dense_rank": 43,
+        "bm25_score": 1.3542389414565779,
+        "bm25_rank": 15,
+        "rrf_score": 0.023042071197411,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_6",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 237
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_68",
+        "retrieval_score": 0.02262443438914027,
+        "retrieval_rank": 19,
+        "dense_score": 0.7735529,
+        "dense_rank": 42,
+        "bm25_score": 1.11351176618045,
+        "bm25_rank": 18,
+        "rrf_score": 0.02262443438914027,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_68",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1664
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_56",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 20,
+        "dense_score": 0.8020495,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_56",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1368
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_51",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 21,
+        "dense_score": 0.8014488,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_51",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1318
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_17",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 22,
+        "dense_score": 0.80134726,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_17",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1035
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_22",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 23,
+        "dense_score": 0.79991865,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_22",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1075
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 24,
+        "dense_score": 0.7993704,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_9",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 320
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_36",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 25,
+        "dense_score": 0.79626185,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_36",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1186
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_30",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 26,
+        "dense_score": 0.7951136,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_30",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1131
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_27",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 27,
+        "dense_score": 0.7923638,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_27",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1106
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_37",
+        "retrieval_score": 0.012345679012345678,
+        "retrieval_rank": 28,
+        "dense_score": 0.7914865,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012345679012345678,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_37",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1201
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_34",
+        "retrieval_score": 0.012048192771084338,
+        "retrieval_rank": 29,
+        "dense_score": 0.7900587,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012048192771084338,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_34",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1178
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_55",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 30,
+        "dense_score": 0.7849623,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_55",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1353
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_31",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 31,
+        "dense_score": 0.7838926,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_31",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1146
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_71",
+        "retrieval_score": 0.011363636363636364,
+        "retrieval_rank": 32,
+        "dense_score": 0.7829592,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011363636363636364,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_71",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1712
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_58",
+        "retrieval_score": 0.011235955056179775,
+        "retrieval_rank": 33,
+        "dense_score": 0.7828963,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011235955056179775,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_58",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1405
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_50",
+        "retrieval_score": 0.011111111111111112,
+        "retrieval_rank": 34,
+        "dense_score": 0.78253305,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011111111111111112,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_50",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1305
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_15",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 35,
+        "dense_score": 0.78218,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_15",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1014
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_42",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 36,
+        "dense_score": 0.78194237,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_42",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_18",
+        "retrieval_score": 0.010752688172043012,
+        "retrieval_rank": 37,
+        "dense_score": 0.7807595,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010752688172043012,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_18",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1039
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_41",
+        "retrieval_score": 0.010638297872340425,
+        "retrieval_rank": 38,
+        "dense_score": 0.77954555,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010638297872340425,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_41",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 1243
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_67",
+        "retrieval_score": 0.010526315789473684,
+        "retrieval_rank": 39,
+        "dense_score": 0.77748597,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010526315789473684,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_67",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1645
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_28",
+        "retrieval_score": 0.010416666666666666,
+        "retrieval_rank": 40,
+        "dense_score": 0.77729654,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010416666666666666,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_28",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1110
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_38",
+        "retrieval_score": 0.010309278350515464,
+        "retrieval_rank": 41,
+        "dense_score": 0.7759482,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010309278350515464,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_38",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1207
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_45",
+        "retrieval_score": 0.01020408163265306,
+        "retrieval_rank": 42,
+        "dense_score": 0.7747418,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01020408163265306,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_45",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1276
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_24",
+        "retrieval_score": 0.010101010101010102,
+        "retrieval_rank": 43,
+        "dense_score": 0.7745106,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010101010101010102,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_24",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1083
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_70",
+        "retrieval_score": 0.009900990099009901,
+        "retrieval_rank": 44,
+        "dense_score": 0.77441114,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009900990099009901,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_70",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1706
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_48",
+        "retrieval_score": 0.009615384615384616,
+        "retrieval_rank": 45,
+        "dense_score": 0.77278554,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009615384615384616,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_48",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.009523809523809525,
+        "retrieval_rank": 46,
+        "dense_score": 0.77254456,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009523809523809525,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_32",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1152
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_46",
+        "retrieval_score": 0.009345794392523364,
+        "retrieval_rank": 47,
+        "dense_score": 0.771631,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009345794392523364,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_46",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1280
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_25",
+        "retrieval_score": 0.009259259259259259,
+        "retrieval_rank": 48,
+        "dense_score": 0.7695794,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009259259259259259,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_25",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1089
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_49",
+        "retrieval_score": 0.009174311926605505,
+        "retrieval_rank": 49,
+        "dense_score": 0.76725495,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009174311926605505,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_49",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "BAB_financial_statements_2024_consolidated_table_64",
+        "retrieval_score": 0.00909090909090909,
+        "retrieval_rank": 50,
+        "dense_score": 0.7654845,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.00909090909090909,
+        "metadata": {
+          "table_id": "BAB_financial_statements_2024_consolidated_table_64",
+          "doc_id": "BAB_financial_statements_2024_consolidated",
+          "ticker": "BAB",
+          "company_name": "Ngân hàng TMCP Bắc Á",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1561
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "BAB_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "BAB_financial_statements_2024_consolidated|1326",
+            "BAB_financial_statements_2024_consolidated|1372",
+            "BAB_financial_statements_2024_consolidated|1217",
+            "BAB_financial_statements_2024_consolidated|1322",
+            "BAB_financial_statements_2024_consolidated|301"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "BAB_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "BAB_financial_statements_2024_consolidated|1326",
+            "BAB_financial_statements_2024_consolidated|1372",
+            "BAB_financial_statements_2024_consolidated|1217",
+            "BAB_financial_statements_2024_consolidated|1322",
+            "BAB_financial_statements_2024_consolidated|301",
+            "BAB_financial_statements_2024_consolidated|270",
+            "BAB_financial_statements_2024_consolidated|1165",
+            "BAB_financial_statements_2024_consolidated|1523",
+            "BAB_financial_statements_2024_consolidated|1060",
+            "BAB_financial_statements_2024_consolidated|1681"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "BAB_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "BAB_financial_statements_2024_consolidated|1326",
+            "BAB_financial_statements_2024_consolidated|1372",
+            "BAB_financial_statements_2024_consolidated|1217",
+            "BAB_financial_statements_2024_consolidated|1322",
+            "BAB_financial_statements_2024_consolidated|301",
+            "BAB_financial_statements_2024_consolidated|270",
+            "BAB_financial_statements_2024_consolidated|1165",
+            "BAB_financial_statements_2024_consolidated|1523",
+            "BAB_financial_statements_2024_consolidated|1060",
+            "BAB_financial_statements_2024_consolidated|1681",
+            "BAB_financial_statements_2024_consolidated|1409",
+            "BAB_financial_statements_2024_consolidated|1607",
+            "BAB_financial_statements_2024_consolidated|194",
+            "BAB_financial_statements_2024_consolidated|214",
+            "BAB_financial_statements_2024_consolidated|1504",
+            "BAB_financial_statements_2024_consolidated|1043",
+            "BAB_financial_statements_2024_consolidated|1546",
+            "BAB_financial_statements_2024_consolidated|237",
+            "BAB_financial_statements_2024_consolidated|1664",
+            "BAB_financial_statements_2024_consolidated|1368"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "BAB_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "BAB_financial_statements_2024_consolidated|1326",
+            "BAB_financial_statements_2024_consolidated|1372",
+            "BAB_financial_statements_2024_consolidated|1217",
+            "BAB_financial_statements_2024_consolidated|1322",
+            "BAB_financial_statements_2024_consolidated|301",
+            "BAB_financial_statements_2024_consolidated|270",
+            "BAB_financial_statements_2024_consolidated|1165",
+            "BAB_financial_statements_2024_consolidated|1523",
+            "BAB_financial_statements_2024_consolidated|1060",
+            "BAB_financial_statements_2024_consolidated|1681",
+            "BAB_financial_statements_2024_consolidated|1409",
+            "BAB_financial_statements_2024_consolidated|1607",
+            "BAB_financial_statements_2024_consolidated|194",
+            "BAB_financial_statements_2024_consolidated|214",
+            "BAB_financial_statements_2024_consolidated|1504",
+            "BAB_financial_statements_2024_consolidated|1043",
+            "BAB_financial_statements_2024_consolidated|1546",
+            "BAB_financial_statements_2024_consolidated|237",
+            "BAB_financial_statements_2024_consolidated|1664",
+            "BAB_financial_statements_2024_consolidated|1368",
+            "BAB_financial_statements_2024_consolidated|1318",
+            "BAB_financial_statements_2024_consolidated|1035",
+            "BAB_financial_statements_2024_consolidated|1075",
+            "BAB_financial_statements_2024_consolidated|320",
+            "BAB_financial_statements_2024_consolidated|1186",
+            "BAB_financial_statements_2024_consolidated|1131",
+            "BAB_financial_statements_2024_consolidated|1106",
+            "BAB_financial_statements_2024_consolidated|1201",
+            "BAB_financial_statements_2024_consolidated|1178",
+            "BAB_financial_statements_2024_consolidated|1353",
+            "BAB_financial_statements_2024_consolidated|1146",
+            "BAB_financial_statements_2024_consolidated|1712",
+            "BAB_financial_statements_2024_consolidated|1405",
+            "BAB_financial_statements_2024_consolidated|1305",
+            "BAB_financial_statements_2024_consolidated|1014",
+            "BAB_financial_statements_2024_consolidated|1249",
+            "BAB_financial_statements_2024_consolidated|1039",
+            "BAB_financial_statements_2024_consolidated|1243",
+            "BAB_financial_statements_2024_consolidated|1645",
+            "BAB_financial_statements_2024_consolidated|1110",
+            "BAB_financial_statements_2024_consolidated|1207",
+            "BAB_financial_statements_2024_consolidated|1276",
+            "BAB_financial_statements_2024_consolidated|1083",
+            "BAB_financial_statements_2024_consolidated|1706",
+            "BAB_financial_statements_2024_consolidated|1297",
+            "BAB_financial_statements_2024_consolidated|1152",
+            "BAB_financial_statements_2024_consolidated|1280",
+            "BAB_financial_statements_2024_consolidated|1089",
+            "BAB_financial_statements_2024_consolidated|1301",
+            "BAB_financial_statements_2024_consolidated|1561"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "id": 1005,
+  "question": "Trong số CTCP Đầu tư Thế giới Di động, CTCP Đầu tư Dịch vụ Hoàng Huy, CTCP Vàng bạc Đá quý Phú Nhuận và CTCP Tasco, có bao nhiêu công ty có số lượng cổ phiếu phổ thông đang lưu hành cuối năm 2020 lớn hơn 400 triệu cổ phiếu?",
+  "started_at": "2026-08-22T13:39:32+00:00",
+  "finished_at": "2026-08-22T13:39:33+00:00",
+  "duration_seconds": 1.1557456929876935,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MWG",
+      "HHS",
+      "PNJ",
+      "HUT"
+    ],
+    "year": [
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MWG_financial_statements_2020_consolidated",
+      "HHS_financial_statements_2020_consolidated",
+      "PNJ_financial_statements_2020_consolidated",
+      "HUT_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "MWG_financial_statements_2020_consolidated|979",
+      "HHS_financial_statements_2020_consolidated|1097",
+      "PNJ_financial_statements_2020_consolidated|801",
+      "HUT_financial_statements_2020_consolidated|1192"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "PNJ",
+      "HHS",
+      "MWG",
+      "HUT"
+    ],
+    "year": [
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong số , , và , có có số lượng cổ phiếu phổ thông đang lưu hành cuối lớn hơn 400 triệu cổ phiếu",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "PNJ",
+        "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+        "matched_text": "CTCP Vàng bạc Đá quý Phú Nhuận",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "HHS",
+        "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+        "matched_text": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "MWG",
+        "company_name": "CTCP Đầu tư Thế giới Di động",
+        "matched_text": "CTCP Đầu tư Thế giới Di động",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "HUT",
+        "company_name": "CTCP Tasco",
+        "matched_text": "CTCP Tasco",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03",
+            "c04"
+          ],
+          "year": [
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Trong số CTCP Đầu tư Thế giới Di động, CTCP Đầu tư Dịch vụ Hoàng Huy, CTCP Vàng bạc Đá quý Phú Nhuận và CTCP Tasco, có bao nhiêu công ty có số lượng cổ phiếu phổ thông đang lưu hành cuối năm 2020 lớn hơn 400 triệu cổ phiếu?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "PNJ",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "PNJ"
+          ],
+          "year": [
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "HHS",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HHS"
+          ],
+          "year": [
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "MWG",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MWG"
+          ],
+          "year": [
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "HUT",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HUT"
+          ],
+          "year": [
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_10",
+        "retrieval_score": 0.84535146,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_10",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 589
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_45",
+        "retrieval_score": 0.8418741,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_45",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1489
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_17",
+        "retrieval_score": 0.86063164,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_17",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 707
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_11",
+        "retrieval_score": 0.8496497,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_11",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 840
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_26",
+        "retrieval_score": 0.84364575,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_26",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 726
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_19",
+        "retrieval_score": 0.84058297,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_19",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 942
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_24",
+        "retrieval_score": 0.8517262,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_24",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 774
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.84920716,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_7",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 389
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.8418852,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_6",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 220
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_11",
+        "retrieval_score": 0.83806884,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_11",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 410
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_36",
+        "retrieval_score": 0.85091233,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_36",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 979
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_34",
+        "retrieval_score": 0.84826297,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_34",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1192
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_19",
+        "retrieval_score": 0.84103906,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_19",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 674
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_44",
+        "retrieval_score": 0.8379717,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_44",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1485
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_11",
+        "retrieval_score": 0.8442229,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_11",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_49",
+        "retrieval_score": 0.8350835,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_49",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1340
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_34",
+        "retrieval_score": 0.8408794,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_34",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 805
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_29",
+        "retrieval_score": 0.83734727,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_29",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1093
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_19",
+        "retrieval_score": 0.84254456,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_19",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 729
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_12",
+        "retrieval_score": 0.8350246,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_12",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 859
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_27",
+        "retrieval_score": 0.84031594,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_27",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 733
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_16",
+        "retrieval_score": 0.8352622,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_16",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 893
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_18",
+        "retrieval_score": 0.8421524,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_18",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 713
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_53",
+        "retrieval_score": 0.83430386,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_53",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1365
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_33",
+        "retrieval_score": 0.8357471,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_33",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 801
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_18",
+        "retrieval_score": 0.83444595,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_18",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 934
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_26",
+        "retrieval_score": 0.8415154,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_26",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 797
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_47",
+        "retrieval_score": 0.83221227,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_47",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1309
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_20",
+        "retrieval_score": 0.83445233,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_20",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 687
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_10",
+        "retrieval_score": 0.83394825,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_10",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 383
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_15",
+        "retrieval_score": 0.84096354,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_15",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 685
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_28",
+        "retrieval_score": 0.8309264,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_28",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1146
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_36",
+        "retrieval_score": 0.83212566,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_36",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 835
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_34",
+        "retrieval_score": 0.83003515,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_34",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1161
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_31",
+        "retrieval_score": 0.8381767,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_31",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 862
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_23",
+        "retrieval_score": 0.82856715,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_23",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1007
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_9",
+        "retrieval_score": 0.83202267,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_9",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 583
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_39",
+        "retrieval_score": 0.8295405,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_39",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1225
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_32",
+        "retrieval_score": 0.8365691,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_32",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 923
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_51",
+        "retrieval_score": 0.82821816,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_51",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1346
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.82888085,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_7",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 332
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_27",
+        "retrieval_score": 0.8279398,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_27",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1060
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_30",
+        "retrieval_score": 0.83505523,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_30",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 835
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_54",
+        "retrieval_score": 0.82539046,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_54",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1386
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_4",
+        "retrieval_score": 0.82279193,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_4",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 169
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_30",
+        "retrieval_score": 0.82535267,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_30",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1097
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "MWG_financial_statements_2020_consolidated_table_48",
+        "retrieval_score": 0.83453673,
+        "metadata": {
+          "table_id": "MWG_financial_statements_2020_consolidated_table_48",
+          "doc_id": "MWG_financial_statements_2020_consolidated",
+          "ticker": "MWG",
+          "company_name": "CTCP Đầu tư Thế giới Di động",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1096
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HUT_financial_statements_2020_consolidated_table_35",
+        "retrieval_score": 0.82525194,
+        "metadata": {
+          "table_id": "HUT_financial_statements_2020_consolidated_table_35",
+          "doc_id": "HUT_financial_statements_2020_consolidated",
+          "ticker": "HUT",
+          "company_name": "CTCP Tasco",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1196
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "PNJ_financial_statements_2020_consolidated_table_35",
+        "retrieval_score": 0.82097805,
+        "metadata": {
+          "table_id": "PNJ_financial_statements_2020_consolidated_table_35",
+          "doc_id": "PNJ_financial_statements_2020_consolidated",
+          "ticker": "PNJ",
+          "company_name": "CTCP Vàng bạc Đá quý Phú Nhuận",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 822
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "HHS_financial_statements_2020_consolidated_table_26",
+        "retrieval_score": 0.82096326,
+        "metadata": {
+          "table_id": "HHS_financial_statements_2020_consolidated_table_26",
+          "doc_id": "HHS_financial_statements_2020_consolidated",
+          "ticker": "HHS",
+          "company_name": "CTCP Đầu tư Dịch vụ Hoàng Huy",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1041
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "PNJ_financial_statements_2020_consolidated",
+            "HHS_financial_statements_2020_consolidated",
+            "MWG_financial_statements_2020_consolidated",
+            "HUT_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "PNJ_financial_statements_2020_consolidated|589",
+            "HHS_financial_statements_2020_consolidated|1489",
+            "MWG_financial_statements_2020_consolidated|707",
+            "HUT_financial_statements_2020_consolidated|840",
+            "PNJ_financial_statements_2020_consolidated|726"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "PNJ_financial_statements_2020_consolidated",
+            "HHS_financial_statements_2020_consolidated",
+            "MWG_financial_statements_2020_consolidated",
+            "HUT_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "PNJ_financial_statements_2020_consolidated|589",
+            "HHS_financial_statements_2020_consolidated|1489",
+            "MWG_financial_statements_2020_consolidated|707",
+            "HUT_financial_statements_2020_consolidated|840",
+            "PNJ_financial_statements_2020_consolidated|726",
+            "HHS_financial_statements_2020_consolidated|942",
+            "MWG_financial_statements_2020_consolidated|774",
+            "HUT_financial_statements_2020_consolidated|389",
+            "PNJ_financial_statements_2020_consolidated|220",
+            "HHS_financial_statements_2020_consolidated|410"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "PNJ_financial_statements_2020_consolidated",
+            "HHS_financial_statements_2020_consolidated",
+            "MWG_financial_statements_2020_consolidated",
+            "HUT_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "PNJ_financial_statements_2020_consolidated|589",
+            "HHS_financial_statements_2020_consolidated|1489",
+            "MWG_financial_statements_2020_consolidated|707",
+            "HUT_financial_statements_2020_consolidated|840",
+            "PNJ_financial_statements_2020_consolidated|726",
+            "HHS_financial_statements_2020_consolidated|942",
+            "MWG_financial_statements_2020_consolidated|774",
+            "HUT_financial_statements_2020_consolidated|389",
+            "PNJ_financial_statements_2020_consolidated|220",
+            "HHS_financial_statements_2020_consolidated|410",
+            "MWG_financial_statements_2020_consolidated|979",
+            "HUT_financial_statements_2020_consolidated|1192",
+            "PNJ_financial_statements_2020_consolidated|674",
+            "HHS_financial_statements_2020_consolidated|1485",
+            "MWG_financial_statements_2020_consolidated|296",
+            "HUT_financial_statements_2020_consolidated|1340",
+            "PNJ_financial_statements_2020_consolidated|805",
+            "HHS_financial_statements_2020_consolidated|1093",
+            "MWG_financial_statements_2020_consolidated|729",
+            "HUT_financial_statements_2020_consolidated|859"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f2": 0.2777777777777778,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "PNJ_financial_statements_2020_consolidated",
+            "HHS_financial_statements_2020_consolidated",
+            "MWG_financial_statements_2020_consolidated",
+            "HUT_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "PNJ_financial_statements_2020_consolidated|589",
+            "HHS_financial_statements_2020_consolidated|1489",
+            "MWG_financial_statements_2020_consolidated|707",
+            "HUT_financial_statements_2020_consolidated|840",
+            "PNJ_financial_statements_2020_consolidated|726",
+            "HHS_financial_statements_2020_consolidated|942",
+            "MWG_financial_statements_2020_consolidated|774",
+            "HUT_financial_statements_2020_consolidated|389",
+            "PNJ_financial_statements_2020_consolidated|220",
+            "HHS_financial_statements_2020_consolidated|410",
+            "MWG_financial_statements_2020_consolidated|979",
+            "HUT_financial_statements_2020_consolidated|1192",
+            "PNJ_financial_statements_2020_consolidated|674",
+            "HHS_financial_statements_2020_consolidated|1485",
+            "MWG_financial_statements_2020_consolidated|296",
+            "HUT_financial_statements_2020_consolidated|1340",
+            "PNJ_financial_statements_2020_consolidated|805",
+            "HHS_financial_statements_2020_consolidated|1093",
+            "MWG_financial_statements_2020_consolidated|729",
+            "HUT_financial_statements_2020_consolidated|859",
+            "PNJ_financial_statements_2020_consolidated|733",
+            "HHS_financial_statements_2020_consolidated|893",
+            "MWG_financial_statements_2020_consolidated|713",
+            "HUT_financial_statements_2020_consolidated|1365",
+            "PNJ_financial_statements_2020_consolidated|801",
+            "HHS_financial_statements_2020_consolidated|934",
+            "MWG_financial_statements_2020_consolidated|797",
+            "HUT_financial_statements_2020_consolidated|1309",
+            "PNJ_financial_statements_2020_consolidated|687",
+            "HHS_financial_statements_2020_consolidated|383",
+            "MWG_financial_statements_2020_consolidated|685",
+            "HUT_financial_statements_2020_consolidated|1146",
+            "PNJ_financial_statements_2020_consolidated|835",
+            "HHS_financial_statements_2020_consolidated|1161",
+            "MWG_financial_statements_2020_consolidated|862",
+            "HUT_financial_statements_2020_consolidated|1007",
+            "PNJ_financial_statements_2020_consolidated|583",
+            "HHS_financial_statements_2020_consolidated|1225",
+            "MWG_financial_statements_2020_consolidated|923",
+            "HUT_financial_statements_2020_consolidated|1346",
+            "PNJ_financial_statements_2020_consolidated|332",
+            "HHS_financial_statements_2020_consolidated|1060",
+            "MWG_financial_statements_2020_consolidated|835",
+            "HUT_financial_statements_2020_consolidated|1386",
+            "PNJ_financial_statements_2020_consolidated|169",
+            "HHS_financial_statements_2020_consolidated|1097",
+            "MWG_financial_statements_2020_consolidated|1096",
+            "HUT_financial_statements_2020_consolidated|1196",
+            "PNJ_financial_statements_2020_consolidated|822",
+            "HHS_financial_statements_2020_consolidated|1041"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 1.0,
+          "f2": 0.30303030303030304,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

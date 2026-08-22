@@ -1,0 +1,1095 @@
+{
+  "schema_version": 1,
+  "id": 363,
+  "question": "Trong giai đoạn 2016-2020, vào năm KBC có tỷ số D/E cao nhất, hệ số khả năng thanh toán lãi vay là bao nhiêu lần?",
+  "started_at": "2026-08-22T13:38:50+00:00",
+  "finished_at": "2026-08-22T13:38:50+00:00",
+  "duration_seconds": 0.3299500180000905,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "KBC_financial_statements_2016_consolidated",
+      "KBC_financial_statements_2017_consolidated",
+      "KBC_financial_statements_2018_consolidated",
+      "KBC_financial_statements_2019_consolidated",
+      "KBC_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "KBC_financial_statements_2016_consolidated|243",
+      "KBC_financial_statements_2016_consolidated|258",
+      "KBC_financial_statements_2017_consolidated|255",
+      "KBC_financial_statements_2017_consolidated|270",
+      "KBC_financial_statements_2018_consolidated|252",
+      "KBC_financial_statements_2018_consolidated|269",
+      "KBC_financial_statements_2019_consolidated|232",
+      "KBC_financial_statements_2019_consolidated|247",
+      "KBC_financial_statements_2020_consolidated|248",
+      "KBC_financial_statements_2020_consolidated|265",
+      "KBC_financial_statements_2020_consolidated|296"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , vào có tỷ số D/E cao nhất, hệ số khả năng thanh toán lãi vay lần",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "matched_text": "KBC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Trong giai đoạn , vào có tỷ số D/E cao nhất, hệ số khả năng thanh toán lãi vay lần",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "KBC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "KBC"
+          ],
+          "year": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_10",
+        "retrieval_score": 0.8512184,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_10",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 331
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_9",
+        "retrieval_score": 0.8424016,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_9",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 300
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_33",
+        "retrieval_score": 0.84131306,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_33",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1256
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.8407673,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_36",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1226
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_8",
+        "retrieval_score": 0.84041107,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_8",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 328
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_37",
+        "retrieval_score": 0.83973503,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_37",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.8394474,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_9",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 305
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_7",
+        "retrieval_score": 0.83832765,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_7",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 269
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_9",
+        "retrieval_score": 0.83813334,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_9",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 337
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.83809674,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_37",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1322
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_35",
+        "retrieval_score": 0.8360298,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_35",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1385
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.8351328,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_6",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 270
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_7",
+        "retrieval_score": 0.8351328,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_7",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 258
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.8351205,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_8",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 265
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.8351205,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_7",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 247
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_34",
+        "retrieval_score": 0.8336728,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_34",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1277
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_49",
+        "retrieval_score": 0.8327726,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_49",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1550
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.83185756,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_6",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 243
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_5",
+        "retrieval_score": 0.83185756,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_5",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 255
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_44",
+        "retrieval_score": 0.8315432,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_44",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1504
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_5",
+        "retrieval_score": 0.8312449,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_5",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 235
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_4",
+        "retrieval_score": 0.8312449,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_4",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 240
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_5",
+        "retrieval_score": 0.8312449,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_5",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 228
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_5",
+        "retrieval_score": 0.8310151,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_5",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 217
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.8310151,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_6",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 231
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_31",
+        "retrieval_score": 0.8307374,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_31",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1308
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_34",
+        "retrieval_score": 0.83057535,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_34",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1365
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_16",
+        "retrieval_score": 0.8288896,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_16",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 975
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_40",
+        "retrieval_score": 0.8282876,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_40",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1363
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_43",
+        "retrieval_score": 0.8280655,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_43",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1392
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_36",
+        "retrieval_score": 0.82701534,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_36",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1302
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_41",
+        "retrieval_score": 0.827015,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_41",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1475
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_47",
+        "retrieval_score": 0.8257076,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_47",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1460
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_6",
+        "retrieval_score": 0.82542837,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_6",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_6",
+        "retrieval_score": 0.82542837,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_6",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 232
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.82542837,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_7",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 248
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_18",
+        "retrieval_score": 0.82537824,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_18",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 946
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_62",
+        "retrieval_score": 0.82522494,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_62",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1703
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_32",
+        "retrieval_score": 0.82355946,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_32",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1248
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_15",
+        "retrieval_score": 0.8233621,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_15",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 940
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "KBC_financial_statements_2020_consolidated_table_32",
+        "retrieval_score": 0.8224128,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2020_consolidated_table_32",
+          "doc_id": "KBC_financial_statements_2020_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1312
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_58",
+        "retrieval_score": 0.82206684,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_58",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1726
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_31",
+        "retrieval_score": 0.8218998,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_31",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1141
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_42",
+        "retrieval_score": 0.8212399,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_42",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1318
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_44",
+        "retrieval_score": 0.8197924,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_44",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1416
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "KBC_financial_statements_2017_consolidated_table_3",
+        "retrieval_score": 0.8196525,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2017_consolidated_table_3",
+          "doc_id": "KBC_financial_statements_2017_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 225
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_4",
+        "retrieval_score": 0.8196525,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_4",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 213
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_45",
+        "retrieval_score": 0.81842184,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_45",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1345
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "KBC_financial_statements_2018_consolidated_table_4",
+        "retrieval_score": 0.818375,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2018_consolidated_table_4",
+          "doc_id": "KBC_financial_statements_2018_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 218
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "KBC_financial_statements_2019_consolidated_table_4",
+        "retrieval_score": 0.818375,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2019_consolidated_table_4",
+          "doc_id": "KBC_financial_statements_2019_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 202
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2020_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "KBC_financial_statements_2020_consolidated|331",
+            "KBC_financial_statements_2016_consolidated|300",
+            "KBC_financial_statements_2017_consolidated|1256",
+            "KBC_financial_statements_2016_consolidated|1226",
+            "KBC_financial_statements_2017_consolidated|328"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f2": 0.6521739130434783,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2020_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2017_consolidated",
+            "KBC_financial_statements_2019_consolidated",
+            "KBC_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "KBC_financial_statements_2020_consolidated|331",
+            "KBC_financial_statements_2016_consolidated|300",
+            "KBC_financial_statements_2017_consolidated|1256",
+            "KBC_financial_statements_2016_consolidated|1226",
+            "KBC_financial_statements_2017_consolidated|328",
+            "KBC_financial_statements_2020_consolidated|1394",
+            "KBC_financial_statements_2019_consolidated|305",
+            "KBC_financial_statements_2018_consolidated|269",
+            "KBC_financial_statements_2018_consolidated|337",
+            "KBC_financial_statements_2019_consolidated|1322"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.09090909090909091,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2020_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2017_consolidated",
+            "KBC_financial_statements_2019_consolidated",
+            "KBC_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "KBC_financial_statements_2020_consolidated|331",
+            "KBC_financial_statements_2016_consolidated|300",
+            "KBC_financial_statements_2017_consolidated|1256",
+            "KBC_financial_statements_2016_consolidated|1226",
+            "KBC_financial_statements_2017_consolidated|328",
+            "KBC_financial_statements_2020_consolidated|1394",
+            "KBC_financial_statements_2019_consolidated|305",
+            "KBC_financial_statements_2018_consolidated|269",
+            "KBC_financial_statements_2018_consolidated|337",
+            "KBC_financial_statements_2019_consolidated|1322",
+            "KBC_financial_statements_2018_consolidated|1385",
+            "KBC_financial_statements_2017_consolidated|270",
+            "KBC_financial_statements_2016_consolidated|258",
+            "KBC_financial_statements_2020_consolidated|265",
+            "KBC_financial_statements_2019_consolidated|247",
+            "KBC_financial_statements_2017_consolidated|1277",
+            "KBC_financial_statements_2020_consolidated|1550",
+            "KBC_financial_statements_2016_consolidated|243",
+            "KBC_financial_statements_2017_consolidated|255",
+            "KBC_financial_statements_2018_consolidated|1504"
+          ]
+        },
+        "tables": {
+          "precision": 0.35,
+          "recall": 0.6363636363636364,
+          "f2": 0.546875,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "KBC_financial_statements_2020_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2017_consolidated",
+            "KBC_financial_statements_2019_consolidated",
+            "KBC_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "KBC_financial_statements_2020_consolidated|331",
+            "KBC_financial_statements_2016_consolidated|300",
+            "KBC_financial_statements_2017_consolidated|1256",
+            "KBC_financial_statements_2016_consolidated|1226",
+            "KBC_financial_statements_2017_consolidated|328",
+            "KBC_financial_statements_2020_consolidated|1394",
+            "KBC_financial_statements_2019_consolidated|305",
+            "KBC_financial_statements_2018_consolidated|269",
+            "KBC_financial_statements_2018_consolidated|337",
+            "KBC_financial_statements_2019_consolidated|1322",
+            "KBC_financial_statements_2018_consolidated|1385",
+            "KBC_financial_statements_2017_consolidated|270",
+            "KBC_financial_statements_2016_consolidated|258",
+            "KBC_financial_statements_2020_consolidated|265",
+            "KBC_financial_statements_2019_consolidated|247",
+            "KBC_financial_statements_2017_consolidated|1277",
+            "KBC_financial_statements_2020_consolidated|1550",
+            "KBC_financial_statements_2016_consolidated|243",
+            "KBC_financial_statements_2017_consolidated|255",
+            "KBC_financial_statements_2018_consolidated|1504",
+            "KBC_financial_statements_2018_consolidated|235",
+            "KBC_financial_statements_2017_consolidated|240",
+            "KBC_financial_statements_2016_consolidated|228",
+            "KBC_financial_statements_2019_consolidated|217",
+            "KBC_financial_statements_2020_consolidated|231",
+            "KBC_financial_statements_2020_consolidated|1308",
+            "KBC_financial_statements_2018_consolidated|1365",
+            "KBC_financial_statements_2018_consolidated|975",
+            "KBC_financial_statements_2017_consolidated|1363",
+            "KBC_financial_statements_2017_consolidated|1392",
+            "KBC_financial_statements_2019_consolidated|1302",
+            "KBC_financial_statements_2018_consolidated|1475",
+            "KBC_financial_statements_2019_consolidated|1460",
+            "KBC_financial_statements_2018_consolidated|252",
+            "KBC_financial_statements_2019_consolidated|232",
+            "KBC_financial_statements_2020_consolidated|248",
+            "KBC_financial_statements_2019_consolidated|946",
+            "KBC_financial_statements_2019_consolidated|1703",
+            "KBC_financial_statements_2019_consolidated|1248",
+            "KBC_financial_statements_2018_consolidated|940",
+            "KBC_financial_statements_2020_consolidated|1312",
+            "KBC_financial_statements_2018_consolidated|1726",
+            "KBC_financial_statements_2016_consolidated|1141",
+            "KBC_financial_statements_2016_consolidated|1318",
+            "KBC_financial_statements_2019_consolidated|1416",
+            "KBC_financial_statements_2017_consolidated|225",
+            "KBC_financial_statements_2016_consolidated|213",
+            "KBC_financial_statements_2016_consolidated|1345",
+            "KBC_financial_statements_2018_consolidated|218",
+            "KBC_financial_statements_2019_consolidated|202"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.9090909090909091,
+          "f2": 0.5319148936170213,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

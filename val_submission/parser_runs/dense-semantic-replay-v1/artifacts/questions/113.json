@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 113,
+  "question": "Số dư tiền gửi của cá nhân và các đối tượng khác cuối năm 2015 của Công ty Cổ phần Ngân hàng TMCP Quốc tế Việt Nam (VIB) là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:38:48+00:00",
+  "finished_at": "2026-08-22T13:38:48+00:00",
+  "duration_seconds": 0.3228394680045312,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VIB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VIB_financial_statements_2015_consolidated"
+    ],
+    "relevant_tables": [
+      "VIB_financial_statements_2015_consolidated|1198"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VIB"
+    ],
+    "year": [
+      2015
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Số dư tiền gửi cá nhân và các đối tượng khác cuối Công ty Cổ phần Ngân hàng TMCP Quốc tế Việt Nam triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VIB",
+        "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+        "matched_text": "VIB",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Số dư tiền gửi cá nhân và các đối tượng khác cuối Công ty Cổ phần Ngân hàng TMCP Quốc tế Việt Nam triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VIB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VIB"
+          ],
+          "year": [
+            2015
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_11",
+        "retrieval_score": 0.8737563,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_11",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 317
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_57",
+        "retrieval_score": 0.8652399,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_57",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1315
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_17",
+        "retrieval_score": 0.8647953,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_17",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 889
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_73",
+        "retrieval_score": 0.8573698,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_73",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1714
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_46",
+        "retrieval_score": 0.85478276,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_46",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1177
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_72",
+        "retrieval_score": 0.85395515,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_72",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1691
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_21",
+        "retrieval_score": 0.8528855,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_21",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 917
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_63",
+        "retrieval_score": 0.85239387,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_63",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1363
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_28",
+        "retrieval_score": 0.8517731,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_28",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 992
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_32",
+        "retrieval_score": 0.85111606,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_32",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_16",
+        "retrieval_score": 0.85109675,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_16",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 870
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_76",
+        "retrieval_score": 0.8495151,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_76",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1881
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_9",
+        "retrieval_score": 0.84775454,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_9",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 254
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_70",
+        "retrieval_score": 0.8475566,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_70",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1604
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_75",
+        "retrieval_score": 0.84730357,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_75",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1862
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_67",
+        "retrieval_score": 0.8469926,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_67",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1486
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_10",
+        "retrieval_score": 0.8467591,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_10",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2015,
+          "start_line": 269
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_23",
+        "retrieval_score": 0.8466336,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_23",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 925
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_31",
+        "retrieval_score": 0.84614515,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_31",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1029
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_22",
+        "retrieval_score": 0.8460063,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_22",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 921
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_71",
+        "retrieval_score": 0.84466565,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_71",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1629
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_69",
+        "retrieval_score": 0.8441367,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_69",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1573
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_47",
+        "retrieval_score": 0.84399253,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_47",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1194
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_30",
+        "retrieval_score": 0.84013236,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_30",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1008
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_60",
+        "retrieval_score": 0.8398083,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_60",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1340
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_7",
+        "retrieval_score": 0.83959126,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_7",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 186
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_5",
+        "retrieval_score": 0.83956385,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_5",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 157
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_54",
+        "retrieval_score": 0.8394676,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_54",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1284
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_45",
+        "retrieval_score": 0.8387841,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_45",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1173
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_52",
+        "retrieval_score": 0.83770335,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_52",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1246
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_68",
+        "retrieval_score": 0.8367712,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_68",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2015,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_2",
+        "retrieval_score": 0.8361255,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_2",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 22
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_35",
+        "retrieval_score": 0.83436155,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_35",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1062
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_59",
+        "retrieval_score": 0.83340335,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_59",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1323
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_49",
+        "retrieval_score": 0.8333654,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_49",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1213
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_48",
+        "retrieval_score": 0.83270395,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_48",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1198
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_74",
+        "retrieval_score": 0.83208865,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_74",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1733
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_50",
+        "retrieval_score": 0.8320656,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_50",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1217
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_38",
+        "retrieval_score": 0.8317643,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_38",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1102
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_18",
+        "retrieval_score": 0.8314404,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_18",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 893
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_56",
+        "retrieval_score": 0.83088994,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_56",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2015,
+          "start_line": 1300
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_29",
+        "retrieval_score": 0.8303885,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_29",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_51",
+        "retrieval_score": 0.8299612,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_51",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1221
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_39",
+        "retrieval_score": 0.82987523,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_39",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1123
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_36",
+        "retrieval_score": 0.82974815,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_36",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1066
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_37",
+        "retrieval_score": 0.8292835,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_37",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1082
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_27",
+        "retrieval_score": 0.82896084,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_27",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 973
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_41",
+        "retrieval_score": 0.8278248,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_41",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1142
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_3",
+        "retrieval_score": 0.8274098,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_3",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 24
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VIB_financial_statements_2015_consolidated_table_42",
+        "retrieval_score": 0.8262296,
+        "metadata": {
+          "table_id": "VIB_financial_statements_2015_consolidated_table_42",
+          "doc_id": "VIB_financial_statements_2015_consolidated",
+          "ticker": "VIB",
+          "company_name": "Ngân hàng TMCP Quốc tế Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2015,
+          "start_line": 1146
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VIB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "VIB_financial_statements_2015_consolidated|317",
+            "VIB_financial_statements_2015_consolidated|1315",
+            "VIB_financial_statements_2015_consolidated|889",
+            "VIB_financial_statements_2015_consolidated|1714",
+            "VIB_financial_statements_2015_consolidated|1177"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VIB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "VIB_financial_statements_2015_consolidated|317",
+            "VIB_financial_statements_2015_consolidated|1315",
+            "VIB_financial_statements_2015_consolidated|889",
+            "VIB_financial_statements_2015_consolidated|1714",
+            "VIB_financial_statements_2015_consolidated|1177",
+            "VIB_financial_statements_2015_consolidated|1691",
+            "VIB_financial_statements_2015_consolidated|917",
+            "VIB_financial_statements_2015_consolidated|1363",
+            "VIB_financial_statements_2015_consolidated|992",
+            "VIB_financial_statements_2015_consolidated|1033"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VIB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "VIB_financial_statements_2015_consolidated|317",
+            "VIB_financial_statements_2015_consolidated|1315",
+            "VIB_financial_statements_2015_consolidated|889",
+            "VIB_financial_statements_2015_consolidated|1714",
+            "VIB_financial_statements_2015_consolidated|1177",
+            "VIB_financial_statements_2015_consolidated|1691",
+            "VIB_financial_statements_2015_consolidated|917",
+            "VIB_financial_statements_2015_consolidated|1363",
+            "VIB_financial_statements_2015_consolidated|992",
+            "VIB_financial_statements_2015_consolidated|1033",
+            "VIB_financial_statements_2015_consolidated|870",
+            "VIB_financial_statements_2015_consolidated|1881",
+            "VIB_financial_statements_2015_consolidated|254",
+            "VIB_financial_statements_2015_consolidated|1604",
+            "VIB_financial_statements_2015_consolidated|1862",
+            "VIB_financial_statements_2015_consolidated|1486",
+            "VIB_financial_statements_2015_consolidated|269",
+            "VIB_financial_statements_2015_consolidated|925",
+            "VIB_financial_statements_2015_consolidated|1029",
+            "VIB_financial_statements_2015_consolidated|921"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VIB_financial_statements_2015_consolidated"
+          ],
+          "tables": [
+            "VIB_financial_statements_2015_consolidated|317",
+            "VIB_financial_statements_2015_consolidated|1315",
+            "VIB_financial_statements_2015_consolidated|889",
+            "VIB_financial_statements_2015_consolidated|1714",
+            "VIB_financial_statements_2015_consolidated|1177",
+            "VIB_financial_statements_2015_consolidated|1691",
+            "VIB_financial_statements_2015_consolidated|917",
+            "VIB_financial_statements_2015_consolidated|1363",
+            "VIB_financial_statements_2015_consolidated|992",
+            "VIB_financial_statements_2015_consolidated|1033",
+            "VIB_financial_statements_2015_consolidated|870",
+            "VIB_financial_statements_2015_consolidated|1881",
+            "VIB_financial_statements_2015_consolidated|254",
+            "VIB_financial_statements_2015_consolidated|1604",
+            "VIB_financial_statements_2015_consolidated|1862",
+            "VIB_financial_statements_2015_consolidated|1486",
+            "VIB_financial_statements_2015_consolidated|269",
+            "VIB_financial_statements_2015_consolidated|925",
+            "VIB_financial_statements_2015_consolidated|1029",
+            "VIB_financial_statements_2015_consolidated|921",
+            "VIB_financial_statements_2015_consolidated|1629",
+            "VIB_financial_statements_2015_consolidated|1573",
+            "VIB_financial_statements_2015_consolidated|1194",
+            "VIB_financial_statements_2015_consolidated|1008",
+            "VIB_financial_statements_2015_consolidated|1340",
+            "VIB_financial_statements_2015_consolidated|186",
+            "VIB_financial_statements_2015_consolidated|157",
+            "VIB_financial_statements_2015_consolidated|1284",
+            "VIB_financial_statements_2015_consolidated|1173",
+            "VIB_financial_statements_2015_consolidated|1246",
+            "VIB_financial_statements_2015_consolidated|1546",
+            "VIB_financial_statements_2015_consolidated|22",
+            "VIB_financial_statements_2015_consolidated|1062",
+            "VIB_financial_statements_2015_consolidated|1323",
+            "VIB_financial_statements_2015_consolidated|1213",
+            "VIB_financial_statements_2015_consolidated|1198",
+            "VIB_financial_statements_2015_consolidated|1733",
+            "VIB_financial_statements_2015_consolidated|1217",
+            "VIB_financial_statements_2015_consolidated|1102",
+            "VIB_financial_statements_2015_consolidated|893",
+            "VIB_financial_statements_2015_consolidated|1300",
+            "VIB_financial_statements_2015_consolidated|1000",
+            "VIB_financial_statements_2015_consolidated|1221",
+            "VIB_financial_statements_2015_consolidated|1123",
+            "VIB_financial_statements_2015_consolidated|1066",
+            "VIB_financial_statements_2015_consolidated|1082",
+            "VIB_financial_statements_2015_consolidated|973",
+            "VIB_financial_statements_2015_consolidated|1142",
+            "VIB_financial_statements_2015_consolidated|24",
+            "VIB_financial_statements_2015_consolidated|1146"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

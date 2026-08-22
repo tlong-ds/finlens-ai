@@ -1,0 +1,1079 @@
+{
+  "schema_version": 1,
+  "id": 1008,
+  "question": "Tổng doanh thu cung cấp dịch vụ cho các bên liên quan của công ty mẹ SSH đạt mức cao nhất vào năm nào trong các năm 2020, 2021, 2022, 2023?",
+  "started_at": "2026-08-22T13:39:32+00:00",
+  "finished_at": "2026-08-22T13:39:32+00:00",
+  "duration_seconds": 0.3745580889953999,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SSH"
+    ],
+    "year": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SSH_financial_statements_2020_separate",
+      "SSH_financial_statements_2021_separate",
+      "SSH_financial_statements_2022_separate",
+      "SSH_financial_statements_2023_separate"
+    ],
+    "relevant_tables": [
+      "SSH_financial_statements_2020_separate|1053",
+      "SSH_financial_statements_2021_separate|1128",
+      "SSH_financial_statements_2022_separate|1059",
+      "SSH_financial_statements_2023_separate|1118"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SSH"
+    ],
+    "year": [
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tổng doanh thu cung cấp dịch vụ cho các bên liên quan đạt mức cao nhất vào nào trong các",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SSH",
+        "company_name": "CTCP Phát triển Sunshine Homes",
+        "matched_text": "SSH",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tổng doanh thu cung cấp dịch vụ cho các bên liên quan của công ty mẹ SSH đạt mức cao nhất vào năm nào trong các năm 2020, 2021, 2022, 2023?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "SSH",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SSH"
+          ],
+          "year": [
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "SSH_financial_statements_2020_separate_table_49",
+        "retrieval_score": 0.81352913,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_49",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1053
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "SSH_financial_statements_2021_separate_table_14",
+        "retrieval_score": 0.8082349,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_14",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 680
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SSH_financial_statements_2020_separate_table_15",
+        "retrieval_score": 0.8082349,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_15",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 667
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SSH_financial_statements_2021_separate_table_49",
+        "retrieval_score": 0.8079699,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_49",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1128
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "SSH_financial_statements_2020_separate_table_50",
+        "retrieval_score": 0.8076967,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_50",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1064
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SSH_financial_statements_2021_separate_table_50",
+        "retrieval_score": 0.8069716,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_50",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1139
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "SSH_financial_statements_2022_separate_table_44",
+        "retrieval_score": 0.80510193,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_44",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1071
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "SSH_financial_statements_2023_separate_table_41",
+        "retrieval_score": 0.80388194,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_41",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SSH_financial_statements_2022_separate_table_43",
+        "retrieval_score": 0.80369604,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_43",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "SSH_financial_statements_2023_separate_table_42",
+        "retrieval_score": 0.7994718,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_42",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1132
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "SSH_financial_statements_2021_separate_table_51",
+        "retrieval_score": 0.79929805,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_51",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1150
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SSH_financial_statements_2022_separate_table_42",
+        "retrieval_score": 0.7977684,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_42",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1046
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "SSH_financial_statements_2023_separate_table_5",
+        "retrieval_score": 0.7973517,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_5",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 277
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SSH_financial_statements_2021_separate_table_39",
+        "retrieval_score": 0.7969325,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_39",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 933
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SSH_financial_statements_2020_separate_table_6",
+        "retrieval_score": 0.7954162,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_6",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 277
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "SSH_financial_statements_2022_separate_table_5",
+        "retrieval_score": 0.7954162,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_5",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 297
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "SSH_financial_statements_2021_separate_table_5",
+        "retrieval_score": 0.7954162,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_5",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 279
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SSH_financial_statements_2021_separate_table_53",
+        "retrieval_score": 0.7946948,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_53",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1178
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "SSH_financial_statements_2023_separate_table_8",
+        "retrieval_score": 0.7944294,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_8",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 420
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "SSH_financial_statements_2022_separate_table_31",
+        "retrieval_score": 0.7942188,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_31",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 921
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SSH_financial_statements_2021_separate_table_52",
+        "retrieval_score": 0.79405534,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_52",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1165
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "SSH_financial_statements_2020_separate_table_35",
+        "retrieval_score": 0.793714,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_35",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 895
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "SSH_financial_statements_2023_separate_table_24",
+        "retrieval_score": 0.7935829,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_24",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 848
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SSH_financial_statements_2022_separate_table_45",
+        "retrieval_score": 0.7932401,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_45",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1083
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "SSH_financial_statements_2022_separate_table_46",
+        "retrieval_score": 0.79213023,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_46",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1106
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "SSH_financial_statements_2022_separate_table_34",
+        "retrieval_score": 0.7920058,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_34",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 962
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SSH_financial_statements_2022_separate_table_24",
+        "retrieval_score": 0.7918703,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_24",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 823
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "SSH_financial_statements_2023_separate_table_30",
+        "retrieval_score": 0.79163575,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_30",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 916
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "SSH_financial_statements_2022_separate_table_8",
+        "retrieval_score": 0.7916104,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_8",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 442
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SSH_financial_statements_2021_separate_table_23",
+        "retrieval_score": 0.7909767,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_23",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 759
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "SSH_financial_statements_2022_separate_table_16",
+        "retrieval_score": 0.79083073,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_16",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 729
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "SSH_financial_statements_2021_separate_table_35",
+        "retrieval_score": 0.7908259,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_35",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 887
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SSH_financial_statements_2020_separate_table_39",
+        "retrieval_score": 0.79079664,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_39",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 935
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SSH_financial_statements_2021_separate_table_18",
+        "retrieval_score": 0.7906832,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_18",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 715
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "SSH_financial_statements_2021_separate_table_34",
+        "retrieval_score": 0.79000217,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_34",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 872
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SSH_financial_statements_2023_separate_table_23",
+        "retrieval_score": 0.7889924,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_23",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 842
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "SSH_financial_statements_2020_separate_table_14",
+        "retrieval_score": 0.78839904,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_14",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 663
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "SSH_financial_statements_2020_separate_table_33",
+        "retrieval_score": 0.78832823,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_33",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 859
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SSH_financial_statements_2023_separate_table_25",
+        "retrieval_score": 0.7879976,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_25",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 865
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "SSH_financial_statements_2020_separate_table_22",
+        "retrieval_score": 0.7877911,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_22",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 739
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "SSH_financial_statements_2020_separate_table_32",
+        "retrieval_score": 0.78753734,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_32",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 846
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SSH_financial_statements_2020_separate_table_34",
+        "retrieval_score": 0.78708416,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_34",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 878
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "SSH_financial_statements_2022_separate_table_14",
+        "retrieval_score": 0.7870639,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_14",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 703
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SSH_financial_statements_2023_separate_table_14",
+        "retrieval_score": 0.7865196,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_14",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 713
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SSH_financial_statements_2021_separate_table_21",
+        "retrieval_score": 0.78637683,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_21",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 747
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "SSH_financial_statements_2023_separate_table_43",
+        "retrieval_score": 0.7860583,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2023_separate_table_43",
+          "doc_id": "SSH_financial_statements_2023_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1153
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "SSH_financial_statements_2020_separate_table_18",
+        "retrieval_score": 0.7856817,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2020_separate_table_18",
+          "doc_id": "SSH_financial_statements_2020_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 705
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SSH_financial_statements_2021_separate_table_17",
+        "retrieval_score": 0.78555816,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_17",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 707
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "SSH_financial_statements_2021_separate_table_16",
+        "retrieval_score": 0.785337,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2021_separate_table_16",
+          "doc_id": "SSH_financial_statements_2021_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 694
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "SSH_financial_statements_2022_separate_table_25",
+        "retrieval_score": 0.78521144,
+        "metadata": {
+          "table_id": "SSH_financial_statements_2022_separate_table_25",
+          "doc_id": "SSH_financial_statements_2022_separate",
+          "ticker": "SSH",
+          "company_name": "CTCP Phát triển Sunshine Homes",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 829
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "SSH_financial_statements_2020_separate",
+            "SSH_financial_statements_2021_separate"
+          ],
+          "tables": [
+            "SSH_financial_statements_2020_separate|1053",
+            "SSH_financial_statements_2021_separate|680",
+            "SSH_financial_statements_2020_separate|667",
+            "SSH_financial_statements_2021_separate|1128",
+            "SSH_financial_statements_2020_separate|1064"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f2": 0.47619047619047616,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "SSH_financial_statements_2020_separate",
+            "SSH_financial_statements_2021_separate",
+            "SSH_financial_statements_2022_separate",
+            "SSH_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "SSH_financial_statements_2020_separate|1053",
+            "SSH_financial_statements_2021_separate|680",
+            "SSH_financial_statements_2020_separate|667",
+            "SSH_financial_statements_2021_separate|1128",
+            "SSH_financial_statements_2020_separate|1064",
+            "SSH_financial_statements_2021_separate|1139",
+            "SSH_financial_statements_2022_separate|1071",
+            "SSH_financial_statements_2023_separate|1118",
+            "SSH_financial_statements_2022_separate|1059",
+            "SSH_financial_statements_2023_separate|1132"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f2": 0.7692307692307692,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "SSH_financial_statements_2020_separate",
+            "SSH_financial_statements_2021_separate",
+            "SSH_financial_statements_2022_separate",
+            "SSH_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "SSH_financial_statements_2020_separate|1053",
+            "SSH_financial_statements_2021_separate|680",
+            "SSH_financial_statements_2020_separate|667",
+            "SSH_financial_statements_2021_separate|1128",
+            "SSH_financial_statements_2020_separate|1064",
+            "SSH_financial_statements_2021_separate|1139",
+            "SSH_financial_statements_2022_separate|1071",
+            "SSH_financial_statements_2023_separate|1118",
+            "SSH_financial_statements_2022_separate|1059",
+            "SSH_financial_statements_2023_separate|1132",
+            "SSH_financial_statements_2021_separate|1150",
+            "SSH_financial_statements_2022_separate|1046",
+            "SSH_financial_statements_2023_separate|277",
+            "SSH_financial_statements_2021_separate|933",
+            "SSH_financial_statements_2020_separate|277",
+            "SSH_financial_statements_2022_separate|297",
+            "SSH_financial_statements_2021_separate|279",
+            "SSH_financial_statements_2021_separate|1178",
+            "SSH_financial_statements_2023_separate|420",
+            "SSH_financial_statements_2022_separate|921"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "SSH_financial_statements_2020_separate",
+            "SSH_financial_statements_2021_separate",
+            "SSH_financial_statements_2022_separate",
+            "SSH_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "SSH_financial_statements_2020_separate|1053",
+            "SSH_financial_statements_2021_separate|680",
+            "SSH_financial_statements_2020_separate|667",
+            "SSH_financial_statements_2021_separate|1128",
+            "SSH_financial_statements_2020_separate|1064",
+            "SSH_financial_statements_2021_separate|1139",
+            "SSH_financial_statements_2022_separate|1071",
+            "SSH_financial_statements_2023_separate|1118",
+            "SSH_financial_statements_2022_separate|1059",
+            "SSH_financial_statements_2023_separate|1132",
+            "SSH_financial_statements_2021_separate|1150",
+            "SSH_financial_statements_2022_separate|1046",
+            "SSH_financial_statements_2023_separate|277",
+            "SSH_financial_statements_2021_separate|933",
+            "SSH_financial_statements_2020_separate|277",
+            "SSH_financial_statements_2022_separate|297",
+            "SSH_financial_statements_2021_separate|279",
+            "SSH_financial_statements_2021_separate|1178",
+            "SSH_financial_statements_2023_separate|420",
+            "SSH_financial_statements_2022_separate|921",
+            "SSH_financial_statements_2021_separate|1165",
+            "SSH_financial_statements_2020_separate|895",
+            "SSH_financial_statements_2023_separate|848",
+            "SSH_financial_statements_2022_separate|1083",
+            "SSH_financial_statements_2022_separate|1106",
+            "SSH_financial_statements_2022_separate|962",
+            "SSH_financial_statements_2022_separate|823",
+            "SSH_financial_statements_2023_separate|916",
+            "SSH_financial_statements_2022_separate|442",
+            "SSH_financial_statements_2021_separate|759",
+            "SSH_financial_statements_2022_separate|729",
+            "SSH_financial_statements_2021_separate|887",
+            "SSH_financial_statements_2020_separate|935",
+            "SSH_financial_statements_2021_separate|715",
+            "SSH_financial_statements_2021_separate|872",
+            "SSH_financial_statements_2023_separate|842",
+            "SSH_financial_statements_2020_separate|663",
+            "SSH_financial_statements_2020_separate|859",
+            "SSH_financial_statements_2023_separate|865",
+            "SSH_financial_statements_2020_separate|739",
+            "SSH_financial_statements_2020_separate|846",
+            "SSH_financial_statements_2020_separate|878",
+            "SSH_financial_statements_2022_separate|703",
+            "SSH_financial_statements_2023_separate|713",
+            "SSH_financial_statements_2021_separate|747",
+            "SSH_financial_statements_2023_separate|1153",
+            "SSH_financial_statements_2020_separate|705",
+            "SSH_financial_statements_2021_separate|707",
+            "SSH_financial_statements_2021_separate|694",
+            "SSH_financial_statements_2022_separate|829"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 1.0,
+          "f2": 0.30303030303030304,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 82,
+  "question": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+  "started_at": "2026-08-22T13:39:19+00:00",
+  "finished_at": "2026-08-22T13:39:19+00:00",
+  "duration_seconds": 0.41702015699411277,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "NVB_financial_statements_2022_separate"
+    ],
+    "relevant_tables": [
+      "NVB_financial_statements_2022_separate|1035"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "NVB"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Số dư tiền gửi tại các TCTD khác Ngân hàng TMCP Quốc Dân triệu đồng vào ngày 31/12/",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "matched_text": "NVB",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "NVB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "NVB"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "NVB_financial_statements_2022_separate_table_31",
+        "retrieval_score": 0.8942332,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_31",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1248
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "NVB_financial_statements_2022_separate_table_16",
+        "retrieval_score": 0.8926102,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_16",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1035
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "NVB_financial_statements_2022_separate_table_15",
+        "retrieval_score": 0.8758746,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_15",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1029
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "NVB_financial_statements_2022_separate_table_9",
+        "retrieval_score": 0.87120986,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_9",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 450
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "NVB_financial_statements_2022_separate_table_57",
+        "retrieval_score": 0.87094355,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_57",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1704
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "NVB_financial_statements_2022_separate_table_18",
+        "retrieval_score": 0.8677375,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_18",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1056
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "NVB_financial_statements_2022_separate_table_21",
+        "retrieval_score": 0.8640882,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_21",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1104
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "NVB_financial_statements_2022_separate_table_35",
+        "retrieval_score": 0.8620857,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_35",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1319
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "NVB_financial_statements_2022_separate_table_17",
+        "retrieval_score": 0.8604,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_17",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1037
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "NVB_financial_statements_2022_separate_table_56",
+        "retrieval_score": 0.85865045,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_56",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 1685
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "NVB_financial_statements_2022_separate_table_52",
+        "retrieval_score": 0.8584633,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_52",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 1579
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "NVB_financial_statements_2022_separate_table_32",
+        "retrieval_score": 0.85654414,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_32",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1265
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "NVB_financial_statements_2022_separate_table_34",
+        "retrieval_score": 0.8531448,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_34",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "NVB_financial_statements_2022_separate_table_19",
+        "retrieval_score": 0.84878296,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_19",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "NVB_financial_statements_2022_separate_table_49",
+        "retrieval_score": 0.84833187,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_49",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1464
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "NVB_financial_statements_2022_separate_table_42",
+        "retrieval_score": 0.8479253,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_42",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1404
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "NVB_financial_statements_2022_separate_table_27",
+        "retrieval_score": 0.8453764,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_27",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1204
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "NVB_financial_statements_2022_separate_table_47",
+        "retrieval_score": 0.8453354,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_47",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1439
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "NVB_financial_statements_2022_separate_table_50",
+        "retrieval_score": 0.8446036,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_50",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1472
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "NVB_financial_statements_2022_separate_table_53",
+        "retrieval_score": 0.8438216,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_53",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1604
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "NVB_financial_statements_2022_separate_table_46",
+        "retrieval_score": 0.841223,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_46",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1435
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "NVB_financial_statements_2022_separate_table_5",
+        "retrieval_score": 0.8406237,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_5",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 365
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "NVB_financial_statements_2022_separate_table_48",
+        "retrieval_score": 0.8397038,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_48",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1458
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "NVB_financial_statements_2022_separate_table_25",
+        "retrieval_score": 0.8389545,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_25",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1179
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "NVB_financial_statements_2022_separate_table_23",
+        "retrieval_score": 0.8368501,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_23",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1133
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "NVB_financial_statements_2022_separate_table_3",
+        "retrieval_score": 0.8351065,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_3",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 329
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "NVB_financial_statements_2022_separate_table_10",
+        "retrieval_score": 0.834507,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_10",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 471
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "NVB_financial_statements_2022_separate_table_55",
+        "retrieval_score": 0.83397096,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_55",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1652
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "NVB_financial_statements_2022_separate_table_39",
+        "retrieval_score": 0.83099407,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_39",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1377
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "NVB_financial_statements_2022_separate_table_1",
+        "retrieval_score": 0.8301625,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_1",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 96
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "NVB_financial_statements_2022_separate_table_37",
+        "retrieval_score": 0.82951105,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_37",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1354
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "NVB_financial_statements_2022_separate_table_11",
+        "retrieval_score": 0.8294068,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_11",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 595
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "NVB_financial_statements_2022_separate_table_13",
+        "retrieval_score": 0.8287028,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_13",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 913
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "NVB_financial_statements_2022_separate_table_28",
+        "retrieval_score": 0.8286832,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_28",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "NVB_financial_statements_2022_separate_table_29",
+        "retrieval_score": 0.8286009,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_29",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1227
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "NVB_financial_statements_2022_separate_table_26",
+        "retrieval_score": 0.82622534,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_26",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1200
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "NVB_financial_statements_2022_separate_table_51",
+        "retrieval_score": 0.8251357,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_51",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 1493
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "NVB_financial_statements_2022_separate_table_8",
+        "retrieval_score": 0.8247809,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_8",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 431
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "NVB_financial_statements_2022_separate_table_45",
+        "retrieval_score": 0.824705,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_45",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1431
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "NVB_financial_statements_2022_separate_table_24",
+        "retrieval_score": 0.8228244,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_24",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1158
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "NVB_financial_statements_2022_separate_table_41",
+        "retrieval_score": 0.8204491,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_41",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1385
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "NVB_financial_statements_2022_separate_table_44",
+        "retrieval_score": 0.8193604,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_44",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 1412
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "NVB_financial_statements_2022_separate_table_20",
+        "retrieval_score": 0.81855726,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_20",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1085
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "NVB_financial_statements_2022_separate_table_40",
+        "retrieval_score": 0.81786644,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_40",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1381
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "NVB_financial_statements_2022_separate_table_12",
+        "retrieval_score": 0.8178428,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_12",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 683
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "NVB_financial_statements_2022_separate_table_33",
+        "retrieval_score": 0.817342,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_33",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1271
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "NVB_financial_statements_2022_separate_table_38",
+        "retrieval_score": 0.8164833,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_38",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1358
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "NVB_financial_statements_2022_separate_table_30",
+        "retrieval_score": 0.81577945,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_30",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1231
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "NVB_financial_statements_2022_separate_table_43",
+        "retrieval_score": 0.8138462,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_43",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1408
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "NVB_financial_statements_2022_separate_table_54",
+        "retrieval_score": 0.813031,
+        "metadata": {
+          "table_id": "NVB_financial_statements_2022_separate_table_54",
+          "doc_id": "NVB_financial_statements_2022_separate",
+          "ticker": "NVB",
+          "company_name": "Ngân hàng TMCP Quốc Dân",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 1635
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "NVB_financial_statements_2022_separate|1248",
+            "NVB_financial_statements_2022_separate|1035",
+            "NVB_financial_statements_2022_separate|1029",
+            "NVB_financial_statements_2022_separate|450",
+            "NVB_financial_statements_2022_separate|1704"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "NVB_financial_statements_2022_separate|1248",
+            "NVB_financial_statements_2022_separate|1035",
+            "NVB_financial_statements_2022_separate|1029",
+            "NVB_financial_statements_2022_separate|450",
+            "NVB_financial_statements_2022_separate|1704",
+            "NVB_financial_statements_2022_separate|1056",
+            "NVB_financial_statements_2022_separate|1104",
+            "NVB_financial_statements_2022_separate|1319",
+            "NVB_financial_statements_2022_separate|1037",
+            "NVB_financial_statements_2022_separate|1685"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "NVB_financial_statements_2022_separate|1248",
+            "NVB_financial_statements_2022_separate|1035",
+            "NVB_financial_statements_2022_separate|1029",
+            "NVB_financial_statements_2022_separate|450",
+            "NVB_financial_statements_2022_separate|1704",
+            "NVB_financial_statements_2022_separate|1056",
+            "NVB_financial_statements_2022_separate|1104",
+            "NVB_financial_statements_2022_separate|1319",
+            "NVB_financial_statements_2022_separate|1037",
+            "NVB_financial_statements_2022_separate|1685",
+            "NVB_financial_statements_2022_separate|1579",
+            "NVB_financial_statements_2022_separate|1265",
+            "NVB_financial_statements_2022_separate|1290",
+            "NVB_financial_statements_2022_separate|1077",
+            "NVB_financial_statements_2022_separate|1464",
+            "NVB_financial_statements_2022_separate|1404",
+            "NVB_financial_statements_2022_separate|1204",
+            "NVB_financial_statements_2022_separate|1439",
+            "NVB_financial_statements_2022_separate|1472",
+            "NVB_financial_statements_2022_separate|1604"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "NVB_financial_statements_2022_separate"
+          ],
+          "tables": [
+            "NVB_financial_statements_2022_separate|1248",
+            "NVB_financial_statements_2022_separate|1035",
+            "NVB_financial_statements_2022_separate|1029",
+            "NVB_financial_statements_2022_separate|450",
+            "NVB_financial_statements_2022_separate|1704",
+            "NVB_financial_statements_2022_separate|1056",
+            "NVB_financial_statements_2022_separate|1104",
+            "NVB_financial_statements_2022_separate|1319",
+            "NVB_financial_statements_2022_separate|1037",
+            "NVB_financial_statements_2022_separate|1685",
+            "NVB_financial_statements_2022_separate|1579",
+            "NVB_financial_statements_2022_separate|1265",
+            "NVB_financial_statements_2022_separate|1290",
+            "NVB_financial_statements_2022_separate|1077",
+            "NVB_financial_statements_2022_separate|1464",
+            "NVB_financial_statements_2022_separate|1404",
+            "NVB_financial_statements_2022_separate|1204",
+            "NVB_financial_statements_2022_separate|1439",
+            "NVB_financial_statements_2022_separate|1472",
+            "NVB_financial_statements_2022_separate|1604",
+            "NVB_financial_statements_2022_separate|1435",
+            "NVB_financial_statements_2022_separate|365",
+            "NVB_financial_statements_2022_separate|1458",
+            "NVB_financial_statements_2022_separate|1179",
+            "NVB_financial_statements_2022_separate|1133",
+            "NVB_financial_statements_2022_separate|329",
+            "NVB_financial_statements_2022_separate|471",
+            "NVB_financial_statements_2022_separate|1652",
+            "NVB_financial_statements_2022_separate|1377",
+            "NVB_financial_statements_2022_separate|96",
+            "NVB_financial_statements_2022_separate|1354",
+            "NVB_financial_statements_2022_separate|595",
+            "NVB_financial_statements_2022_separate|913",
+            "NVB_financial_statements_2022_separate|1223",
+            "NVB_financial_statements_2022_separate|1227",
+            "NVB_financial_statements_2022_separate|1200",
+            "NVB_financial_statements_2022_separate|1493",
+            "NVB_financial_statements_2022_separate|431",
+            "NVB_financial_statements_2022_separate|1431",
+            "NVB_financial_statements_2022_separate|1158",
+            "NVB_financial_statements_2022_separate|1385",
+            "NVB_financial_statements_2022_separate|1412",
+            "NVB_financial_statements_2022_separate|1085",
+            "NVB_financial_statements_2022_separate|1381",
+            "NVB_financial_statements_2022_separate|683",
+            "NVB_financial_statements_2022_separate|1271",
+            "NVB_financial_statements_2022_separate|1358",
+            "NVB_financial_statements_2022_separate|1231",
+            "NVB_financial_statements_2022_separate|1408",
+            "NVB_financial_statements_2022_separate|1635"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

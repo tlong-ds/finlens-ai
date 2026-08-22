@@ -1,0 +1,1059 @@
+{
+  "schema_version": 1,
+  "id": 692,
+  "question": "Tỷ lệ dự phòng rủi ro trên dư nợ cho vay khách hàng của công ty mẹ Ngân hàng TMCP Đầu tư và Phát triển Việt Nam vào cuối năm 2018 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T13:38:54+00:00",
+  "finished_at": "2026-08-22T13:38:54+00:00",
+  "duration_seconds": 0.38794235400564503,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BID"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "BID_financial_statements_2018_separate"
+    ],
+    "relevant_tables": [
+      "BID_financial_statements_2018_separate|1299",
+      "BID_financial_statements_2018_separate|1262"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BID"
+    ],
+    "year": [
+      2018
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tỷ lệ dự phòng rủi ro trên dư nợ cho vay khách hàng vào cuối phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BID",
+        "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+        "matched_text": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "HPX",
+        "company_name": "CTCP Đầu tư Hải Phát",
+        "matched_text": "Đầu tư và Phát",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Tỷ lệ dự phòng rủi ro trên dư nợ cho vay khách hàng vào cuối phần trăm",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "BID",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "BID"
+          ],
+          "year": [
+            2018
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "BID_financial_statements_2018_separate_table_30",
+        "retrieval_score": 0.8552705,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_30",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1274
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "BID_financial_statements_2018_separate_table_28",
+        "retrieval_score": 0.85171926,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_28",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1266
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "BID_financial_statements_2018_separate_table_29",
+        "retrieval_score": 0.8510511,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_29",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1270
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "BID_financial_statements_2018_separate_table_31",
+        "retrieval_score": 0.8477374,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_31",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1293
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "BID_financial_statements_2018_separate_table_21",
+        "retrieval_score": 0.84746706,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_21",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1208
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "BID_financial_statements_2018_separate_table_76",
+        "retrieval_score": 0.8438922,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_76",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1744
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "BID_financial_statements_2018_separate_table_38",
+        "retrieval_score": 0.8398206,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_38",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1355
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "BID_financial_statements_2018_separate_table_37",
+        "retrieval_score": 0.83769196,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_37",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1349
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "BID_financial_statements_2018_separate_table_92",
+        "retrieval_score": 0.83708996,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_92",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2051
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "BID_financial_statements_2018_separate_table_6",
+        "retrieval_score": 0.8303142,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_6",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2018,
+          "start_line": 304
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "BID_financial_statements_2018_separate_table_7",
+        "retrieval_score": 0.829568,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_7",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 339
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "BID_financial_statements_2018_separate_table_40",
+        "retrieval_score": 0.82382464,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_40",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1380
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "BID_financial_statements_2018_separate_table_64",
+        "retrieval_score": 0.82349014,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_64",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1639
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "BID_financial_statements_2018_separate_table_3",
+        "retrieval_score": 0.8228434,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_3",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2018,
+          "start_line": 235
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "BID_financial_statements_2018_separate_table_54",
+        "retrieval_score": 0.82271576,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_54",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1543
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "BID_financial_statements_2018_separate_table_68",
+        "retrieval_score": 0.822388,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_68",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1684
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "BID_financial_statements_2018_separate_table_75",
+        "retrieval_score": 0.8220044,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_75",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1740
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "BID_financial_statements_2018_separate_table_53",
+        "retrieval_score": 0.82161987,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_53",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1522
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "BID_financial_statements_2018_separate_table_72",
+        "retrieval_score": 0.8211891,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_72",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1715
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "BID_financial_statements_2018_separate_table_22",
+        "retrieval_score": 0.82096434,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_22",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1212
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "BID_financial_statements_2018_separate_table_33",
+        "retrieval_score": 0.82096434,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_33",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1303
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "BID_financial_statements_2018_separate_table_20",
+        "retrieval_score": 0.818529,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_20",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1202
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "BID_financial_statements_2018_separate_table_71",
+        "retrieval_score": 0.81801707,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_71",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1711
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "BID_financial_statements_2018_separate_table_9",
+        "retrieval_score": 0.8167974,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_9",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 424
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "BID_financial_statements_2018_separate_table_89",
+        "retrieval_score": 0.8165641,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_89",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1970
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "BID_financial_statements_2018_separate_table_67",
+        "retrieval_score": 0.815339,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_67",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1680
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "BID_financial_statements_2018_separate_table_74",
+        "retrieval_score": 0.8149249,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_74",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1736
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "BID_financial_statements_2018_separate_table_13",
+        "retrieval_score": 0.81470984,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_13",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 665
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "BID_financial_statements_2018_separate_table_32",
+        "retrieval_score": 0.81308115,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_32",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1299
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "BID_financial_statements_2018_separate_table_19",
+        "retrieval_score": 0.81198573,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_19",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1198
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "BID_financial_statements_2018_separate_table_12",
+        "retrieval_score": 0.8093141,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_12",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 646
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "BID_financial_statements_2018_separate_table_27",
+        "retrieval_score": 0.80704683,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_27",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1262
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "BID_financial_statements_2018_separate_table_93",
+        "retrieval_score": 0.8066931,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_93",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2117
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "BID_financial_statements_2018_separate_table_56",
+        "retrieval_score": 0.8060803,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_56",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1551
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "BID_financial_statements_2018_separate_table_84",
+        "retrieval_score": 0.8057857,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_84",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1841
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "BID_financial_statements_2018_separate_table_35",
+        "retrieval_score": 0.80518645,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_35",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1324
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "BID_financial_statements_2018_separate_table_41",
+        "retrieval_score": 0.8051002,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_41",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1386
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "BID_financial_statements_2018_separate_table_45",
+        "retrieval_score": 0.80426145,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_45",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1423
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "BID_financial_statements_2018_separate_table_18",
+        "retrieval_score": 0.80416054,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_18",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1179
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "BID_financial_statements_2018_separate_table_66",
+        "retrieval_score": 0.8038104,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_66",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1663
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "BID_financial_statements_2018_separate_table_73",
+        "retrieval_score": 0.8035885,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_73",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1719
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "BID_financial_statements_2018_separate_table_51",
+        "retrieval_score": 0.80285025,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_51",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1514
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "BID_financial_statements_2018_separate_table_65",
+        "retrieval_score": 0.8002911,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_65",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1645
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "BID_financial_statements_2018_separate_table_70",
+        "retrieval_score": 0.7996261,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_70",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1705
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "BID_financial_statements_2018_separate_table_8",
+        "retrieval_score": 0.7996152,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_8",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 354
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "BID_financial_statements_2018_separate_table_48",
+        "retrieval_score": 0.7992796,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_48",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1472
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "BID_financial_statements_2018_separate_table_24",
+        "retrieval_score": 0.7985457,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_24",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "BID_financial_statements_2018_separate_table_77",
+        "retrieval_score": 0.79844713,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_77",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1763
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "BID_financial_statements_2018_separate_table_60",
+        "retrieval_score": 0.79838914,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_60",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1595
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "BID_financial_statements_2018_separate_table_55",
+        "retrieval_score": 0.7980212,
+        "metadata": {
+          "table_id": "BID_financial_statements_2018_separate_table_55",
+          "doc_id": "BID_financial_statements_2018_separate",
+          "ticker": "BID",
+          "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1547
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "BID_financial_statements_2018_separate"
+          ],
+          "tables": [
+            "BID_financial_statements_2018_separate|1274",
+            "BID_financial_statements_2018_separate|1266",
+            "BID_financial_statements_2018_separate|1270",
+            "BID_financial_statements_2018_separate|1293",
+            "BID_financial_statements_2018_separate|1208"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "BID_financial_statements_2018_separate"
+          ],
+          "tables": [
+            "BID_financial_statements_2018_separate|1274",
+            "BID_financial_statements_2018_separate|1266",
+            "BID_financial_statements_2018_separate|1270",
+            "BID_financial_statements_2018_separate|1293",
+            "BID_financial_statements_2018_separate|1208",
+            "BID_financial_statements_2018_separate|1744",
+            "BID_financial_statements_2018_separate|1355",
+            "BID_financial_statements_2018_separate|1349",
+            "BID_financial_statements_2018_separate|2051",
+            "BID_financial_statements_2018_separate|304"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "BID_financial_statements_2018_separate"
+          ],
+          "tables": [
+            "BID_financial_statements_2018_separate|1274",
+            "BID_financial_statements_2018_separate|1266",
+            "BID_financial_statements_2018_separate|1270",
+            "BID_financial_statements_2018_separate|1293",
+            "BID_financial_statements_2018_separate|1208",
+            "BID_financial_statements_2018_separate|1744",
+            "BID_financial_statements_2018_separate|1355",
+            "BID_financial_statements_2018_separate|1349",
+            "BID_financial_statements_2018_separate|2051",
+            "BID_financial_statements_2018_separate|304",
+            "BID_financial_statements_2018_separate|339",
+            "BID_financial_statements_2018_separate|1380",
+            "BID_financial_statements_2018_separate|1639",
+            "BID_financial_statements_2018_separate|235",
+            "BID_financial_statements_2018_separate|1543",
+            "BID_financial_statements_2018_separate|1684",
+            "BID_financial_statements_2018_separate|1740",
+            "BID_financial_statements_2018_separate|1522",
+            "BID_financial_statements_2018_separate|1715",
+            "BID_financial_statements_2018_separate|1212"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "BID_financial_statements_2018_separate"
+          ],
+          "tables": [
+            "BID_financial_statements_2018_separate|1274",
+            "BID_financial_statements_2018_separate|1266",
+            "BID_financial_statements_2018_separate|1270",
+            "BID_financial_statements_2018_separate|1293",
+            "BID_financial_statements_2018_separate|1208",
+            "BID_financial_statements_2018_separate|1744",
+            "BID_financial_statements_2018_separate|1355",
+            "BID_financial_statements_2018_separate|1349",
+            "BID_financial_statements_2018_separate|2051",
+            "BID_financial_statements_2018_separate|304",
+            "BID_financial_statements_2018_separate|339",
+            "BID_financial_statements_2018_separate|1380",
+            "BID_financial_statements_2018_separate|1639",
+            "BID_financial_statements_2018_separate|235",
+            "BID_financial_statements_2018_separate|1543",
+            "BID_financial_statements_2018_separate|1684",
+            "BID_financial_statements_2018_separate|1740",
+            "BID_financial_statements_2018_separate|1522",
+            "BID_financial_statements_2018_separate|1715",
+            "BID_financial_statements_2018_separate|1212",
+            "BID_financial_statements_2018_separate|1303",
+            "BID_financial_statements_2018_separate|1202",
+            "BID_financial_statements_2018_separate|1711",
+            "BID_financial_statements_2018_separate|424",
+            "BID_financial_statements_2018_separate|1970",
+            "BID_financial_statements_2018_separate|1680",
+            "BID_financial_statements_2018_separate|1736",
+            "BID_financial_statements_2018_separate|665",
+            "BID_financial_statements_2018_separate|1299",
+            "BID_financial_statements_2018_separate|1198",
+            "BID_financial_statements_2018_separate|646",
+            "BID_financial_statements_2018_separate|1262",
+            "BID_financial_statements_2018_separate|2117",
+            "BID_financial_statements_2018_separate|1551",
+            "BID_financial_statements_2018_separate|1841",
+            "BID_financial_statements_2018_separate|1324",
+            "BID_financial_statements_2018_separate|1386",
+            "BID_financial_statements_2018_separate|1423",
+            "BID_financial_statements_2018_separate|1179",
+            "BID_financial_statements_2018_separate|1663",
+            "BID_financial_statements_2018_separate|1719",
+            "BID_financial_statements_2018_separate|1514",
+            "BID_financial_statements_2018_separate|1645",
+            "BID_financial_statements_2018_separate|1705",
+            "BID_financial_statements_2018_separate|354",
+            "BID_financial_statements_2018_separate|1472",
+            "BID_financial_statements_2018_separate|1235",
+            "BID_financial_statements_2018_separate|1763",
+            "BID_financial_statements_2018_separate|1595",
+            "BID_financial_statements_2018_separate|1547"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

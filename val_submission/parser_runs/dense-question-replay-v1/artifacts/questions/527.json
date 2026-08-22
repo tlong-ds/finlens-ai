@@ -1,0 +1,1097 @@
+{
+  "schema_version": 1,
+  "id": 527,
+  "question": "Trong các năm 2016, 2020, 2021 và 2023, lợi nhuận trước thuế bằng bao nhiêu % doanh thu cung cấp dịch vụ của công ty mẹ Tổng Công ty Cảng Hàng không Việt Nam - CTCP trong năm có khoản phải thu khác về cổ tức, lợi nhuận được chia lớn nhất?",
+  "started_at": "2026-08-22T13:39:22+00:00",
+  "finished_at": "2026-08-22T13:39:23+00:00",
+  "duration_seconds": 0.28551246000279207,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "ACV"
+    ],
+    "year": [
+      2016,
+      2020,
+      2021,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "ACV_financial_statements_2016_separate",
+      "ACV_financial_statements_2020_separate",
+      "ACV_financial_statements_2021_separate",
+      "ACV_financial_statements_2023_separate"
+    ],
+    "relevant_tables": [
+      "ACV_financial_statements_2016_separate|1265",
+      "ACV_financial_statements_2020_separate|931",
+      "ACV_financial_statements_2021_separate|918",
+      "ACV_financial_statements_2023_separate|891",
+      "ACV_financial_statements_2023_separate|304",
+      "ACV_financial_statements_2023_separate|1210"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "ACV"
+    ],
+    "year": [
+      2016,
+      2020,
+      2021,
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Trong các , , và , lợi nhuận trước thuế bằng % doanh thu cung cấp dịch vụ trong có khoản phải thu khác về cổ tức, lợi nhuận được chia lớn nhất",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "ACV",
+        "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+        "matched_text": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "Hàng không Việt",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "MSB",
+        "company_name": "Ngân hàng TMCP Hàng hải Việt Nam",
+        "matched_text": "Hàng không Việt Nam",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2020,
+            2021,
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Trong các năm 2016, 2020, 2021 và 2023, lợi nhuận trước thuế bằng bao nhiêu % doanh thu cung cấp dịch vụ của công ty mẹ Tổng Công ty Cảng Hàng không Việt Nam - CTCP trong năm có khoản phải thu khác về cổ tức, lợi nhuận được chia lớn nhất?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "ACV",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "ACV"
+          ],
+          "year": [
+            2016,
+            2020,
+            2021,
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "ACV_financial_statements_2016_separate_table_49",
+        "retrieval_score": 0.87874854,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_49",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1967
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "ACV_financial_statements_2020_separate_table_16",
+        "retrieval_score": 0.8756981,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_16",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 931
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "ACV_financial_statements_2021_separate_table_15",
+        "retrieval_score": 0.8729882,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_15",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 918
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "ACV_financial_statements_2023_separate_table_60",
+        "retrieval_score": 0.86928505,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_60",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1441
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "ACV_financial_statements_2023_separate_table_41",
+        "retrieval_score": 0.8684888,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_41",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1210
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "ACV_financial_statements_2021_separate_table_7",
+        "retrieval_score": 0.8647859,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_7",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 278
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "ACV_financial_statements_2016_separate_table_20",
+        "retrieval_score": 0.86282605,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_20",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1323
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "ACV_financial_statements_2016_separate_table_15",
+        "retrieval_score": 0.8627576,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_15",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1265
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "ACV_financial_statements_2016_separate_table_11",
+        "retrieval_score": 0.86122566,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_11",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1213
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "ACV_financial_statements_2016_separate_table_54",
+        "retrieval_score": 0.86117166,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_54",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2165
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "ACV_financial_statements_2020_separate_table_8",
+        "retrieval_score": 0.8605667,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_8",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 266
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "ACV_financial_statements_2016_separate_table_55",
+        "retrieval_score": 0.859129,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_55",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2186
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "ACV_financial_statements_2016_separate_table_40",
+        "retrieval_score": 0.85860044,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_40",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1834
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "ACV_financial_statements_2020_separate_table_53",
+        "retrieval_score": 0.8584201,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_53",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1534
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "ACV_financial_statements_2016_separate_table_34",
+        "retrieval_score": 0.85802895,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_34",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1726
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "ACV_financial_statements_2021_separate_table_52",
+        "retrieval_score": 0.85788,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_52",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1461
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "ACV_financial_statements_2023_separate_table_18",
+        "retrieval_score": 0.85656273,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_18",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 891
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "ACV_financial_statements_2020_separate_table_47",
+        "retrieval_score": 0.856467,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_47",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1448
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "ACV_financial_statements_2021_separate_table_31",
+        "retrieval_score": 0.8564405,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_31",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "ACV_financial_statements_2020_separate_table_41",
+        "retrieval_score": 0.85595423,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_41",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1371
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "ACV_financial_statements_2016_separate_table_29",
+        "retrieval_score": 0.85528326,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_29",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1526
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "ACV_financial_statements_2021_separate_table_46",
+        "retrieval_score": 0.85451233,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_46",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1389
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "ACV_financial_statements_2023_separate_table_16",
+        "retrieval_score": 0.8544478,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_16",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 876
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "ACV_financial_statements_2021_separate_table_29",
+        "retrieval_score": 0.8538583,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_29",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1116
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "ACV_financial_statements_2023_separate_table_22",
+        "retrieval_score": 0.8536834,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_22",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 947
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "ACV_financial_statements_2023_separate_table_55",
+        "retrieval_score": 0.8530692,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_55",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1349
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "ACV_financial_statements_2016_separate_table_26",
+        "retrieval_score": 0.85261595,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_26",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1451
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "ACV_financial_statements_2023_separate_table_49",
+        "retrieval_score": 0.8522368,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_49",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "ACV_financial_statements_2023_separate_table_59",
+        "retrieval_score": 0.8518481,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_59",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1428
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "ACV_financial_statements_2023_separate_table_19",
+        "retrieval_score": 0.8512345,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_19",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 915
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "ACV_financial_statements_2016_separate_table_30",
+        "retrieval_score": 0.85095406,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_30",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1549
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "ACV_financial_statements_2016_separate_table_48",
+        "retrieval_score": 0.8503958,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_48",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1944
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "ACV_financial_statements_2023_separate_table_57",
+        "retrieval_score": 0.85008484,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_57",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1400
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "ACV_financial_statements_2016_separate_table_27",
+        "retrieval_score": 0.849523,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_27",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1470
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "ACV_financial_statements_2016_separate_table_13",
+        "retrieval_score": 0.84850776,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_13",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1238
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "ACV_financial_statements_2016_separate_table_6",
+        "retrieval_score": 0.84768105,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_6",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 255
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "ACV_financial_statements_2021_separate_table_45",
+        "retrieval_score": 0.8476505,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_45",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1368
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "ACV_financial_statements_2016_separate_table_5",
+        "retrieval_score": 0.8472324,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_5",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 217
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "ACV_financial_statements_2016_separate_table_18",
+        "retrieval_score": 0.8469355,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_18",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1296
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "ACV_financial_statements_2020_separate_table_31",
+        "retrieval_score": 0.8469174,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_31",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1162
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "ACV_financial_statements_2023_separate_table_65",
+        "retrieval_score": 0.84667873,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_65",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1512
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "ACV_financial_statements_2020_separate_table_49",
+        "retrieval_score": 0.84571564,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_49",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 1471
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "ACV_financial_statements_2020_separate_table_32",
+        "retrieval_score": 0.8454665,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_32",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1166
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "ACV_financial_statements_2020_separate_table_46",
+        "retrieval_score": 0.84534115,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_46",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1423
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "ACV_financial_statements_2023_separate_table_8",
+        "retrieval_score": 0.8450746,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_8",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 304
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "ACV_financial_statements_2021_separate_table_30",
+        "retrieval_score": 0.8439183,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2021_separate_table_30",
+          "doc_id": "ACV_financial_statements_2021_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1131
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "ACV_financial_statements_2016_separate_table_50",
+        "retrieval_score": 0.84369284,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2016_separate_table_50",
+          "doc_id": "ACV_financial_statements_2016_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1990
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "ACV_financial_statements_2023_separate_table_42",
+        "retrieval_score": 0.84359634,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2023_separate_table_42",
+          "doc_id": "ACV_financial_statements_2023_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1229
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "ACV_financial_statements_2020_separate_table_44",
+        "retrieval_score": 0.84333354,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_44",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1396
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "ACV_financial_statements_2020_separate_table_39",
+        "retrieval_score": 0.84330624,
+        "metadata": {
+          "table_id": "ACV_financial_statements_2020_separate_table_39",
+          "doc_id": "ACV_financial_statements_2020_separate",
+          "ticker": "ACV",
+          "company_name": "Tổng Công ty Cảng Hàng không Việt Nam - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1348
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "ACV_financial_statements_2016_separate",
+            "ACV_financial_statements_2020_separate",
+            "ACV_financial_statements_2021_separate",
+            "ACV_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "ACV_financial_statements_2016_separate|1967",
+            "ACV_financial_statements_2020_separate|931",
+            "ACV_financial_statements_2021_separate|918",
+            "ACV_financial_statements_2023_separate|1441",
+            "ACV_financial_statements_2023_separate|1210"
+          ]
+        },
+        "tables": {
+          "precision": 0.6,
+          "recall": 0.5,
+          "f2": 0.5172413793103449,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "ACV_financial_statements_2016_separate",
+            "ACV_financial_statements_2020_separate",
+            "ACV_financial_statements_2021_separate",
+            "ACV_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "ACV_financial_statements_2016_separate|1967",
+            "ACV_financial_statements_2020_separate|931",
+            "ACV_financial_statements_2021_separate|918",
+            "ACV_financial_statements_2023_separate|1441",
+            "ACV_financial_statements_2023_separate|1210",
+            "ACV_financial_statements_2021_separate|278",
+            "ACV_financial_statements_2016_separate|1323",
+            "ACV_financial_statements_2016_separate|1265",
+            "ACV_financial_statements_2016_separate|1213",
+            "ACV_financial_statements_2016_separate|2165"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 0.6666666666666666,
+          "f2": 0.5882352941176471,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "ACV_financial_statements_2016_separate",
+            "ACV_financial_statements_2020_separate",
+            "ACV_financial_statements_2021_separate",
+            "ACV_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "ACV_financial_statements_2016_separate|1967",
+            "ACV_financial_statements_2020_separate|931",
+            "ACV_financial_statements_2021_separate|918",
+            "ACV_financial_statements_2023_separate|1441",
+            "ACV_financial_statements_2023_separate|1210",
+            "ACV_financial_statements_2021_separate|278",
+            "ACV_financial_statements_2016_separate|1323",
+            "ACV_financial_statements_2016_separate|1265",
+            "ACV_financial_statements_2016_separate|1213",
+            "ACV_financial_statements_2016_separate|2165",
+            "ACV_financial_statements_2020_separate|266",
+            "ACV_financial_statements_2016_separate|2186",
+            "ACV_financial_statements_2016_separate|1834",
+            "ACV_financial_statements_2020_separate|1534",
+            "ACV_financial_statements_2016_separate|1726",
+            "ACV_financial_statements_2021_separate|1461",
+            "ACV_financial_statements_2023_separate|891",
+            "ACV_financial_statements_2020_separate|1448",
+            "ACV_financial_statements_2021_separate|1135",
+            "ACV_financial_statements_2020_separate|1371"
+          ]
+        },
+        "tables": {
+          "precision": 0.25,
+          "recall": 0.8333333333333334,
+          "f2": 0.5681818181818181,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "ACV_financial_statements_2016_separate",
+            "ACV_financial_statements_2020_separate",
+            "ACV_financial_statements_2021_separate",
+            "ACV_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "ACV_financial_statements_2016_separate|1967",
+            "ACV_financial_statements_2020_separate|931",
+            "ACV_financial_statements_2021_separate|918",
+            "ACV_financial_statements_2023_separate|1441",
+            "ACV_financial_statements_2023_separate|1210",
+            "ACV_financial_statements_2021_separate|278",
+            "ACV_financial_statements_2016_separate|1323",
+            "ACV_financial_statements_2016_separate|1265",
+            "ACV_financial_statements_2016_separate|1213",
+            "ACV_financial_statements_2016_separate|2165",
+            "ACV_financial_statements_2020_separate|266",
+            "ACV_financial_statements_2016_separate|2186",
+            "ACV_financial_statements_2016_separate|1834",
+            "ACV_financial_statements_2020_separate|1534",
+            "ACV_financial_statements_2016_separate|1726",
+            "ACV_financial_statements_2021_separate|1461",
+            "ACV_financial_statements_2023_separate|891",
+            "ACV_financial_statements_2020_separate|1448",
+            "ACV_financial_statements_2021_separate|1135",
+            "ACV_financial_statements_2020_separate|1371",
+            "ACV_financial_statements_2016_separate|1526",
+            "ACV_financial_statements_2021_separate|1389",
+            "ACV_financial_statements_2023_separate|876",
+            "ACV_financial_statements_2021_separate|1116",
+            "ACV_financial_statements_2023_separate|947",
+            "ACV_financial_statements_2023_separate|1349",
+            "ACV_financial_statements_2016_separate|1451",
+            "ACV_financial_statements_2023_separate|1290",
+            "ACV_financial_statements_2023_separate|1428",
+            "ACV_financial_statements_2023_separate|915",
+            "ACV_financial_statements_2016_separate|1549",
+            "ACV_financial_statements_2016_separate|1944",
+            "ACV_financial_statements_2023_separate|1400",
+            "ACV_financial_statements_2016_separate|1470",
+            "ACV_financial_statements_2016_separate|1238",
+            "ACV_financial_statements_2016_separate|255",
+            "ACV_financial_statements_2021_separate|1368",
+            "ACV_financial_statements_2016_separate|217",
+            "ACV_financial_statements_2016_separate|1296",
+            "ACV_financial_statements_2020_separate|1162",
+            "ACV_financial_statements_2023_separate|1512",
+            "ACV_financial_statements_2020_separate|1471",
+            "ACV_financial_statements_2020_separate|1166",
+            "ACV_financial_statements_2020_separate|1423",
+            "ACV_financial_statements_2023_separate|304",
+            "ACV_financial_statements_2021_separate|1131",
+            "ACV_financial_statements_2016_separate|1990",
+            "ACV_financial_statements_2023_separate|1229",
+            "ACV_financial_statements_2020_separate|1396",
+            "ACV_financial_statements_2020_separate|1348"
+          ]
+        },
+        "tables": {
+          "precision": 0.12,
+          "recall": 1.0,
+          "f2": 0.4054054054054054,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

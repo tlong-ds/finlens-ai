@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 7,
+  "question": "Quỹ khen thưởng, phúc lợi của HT1 cuối năm 2019 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:38:38+00:00",
+  "finished_at": "2026-08-22T13:38:47+00:00",
+  "duration_seconds": 8.93487540500064,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HT1"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HT1_financial_statements_2019_consolidated"
+    ],
+    "relevant_tables": [
+      "HT1_financial_statements_2019_consolidated|1109"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HT1"
+    ],
+    "year": [
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Quỹ khen thưởng, phúc lợi cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HT1",
+        "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+        "matched_text": "HT1",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Quỹ khen thưởng, phúc lợi cuối tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "HT1",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HT1"
+          ],
+          "year": [
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_10",
+        "retrieval_score": 0.84581053,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_10",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 358
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_48",
+        "retrieval_score": 0.8265259,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_48",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1266
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_35",
+        "retrieval_score": 0.8250992,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_35",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1129
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_24",
+        "retrieval_score": 0.82363063,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_24",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 999
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_36",
+        "retrieval_score": 0.8223567,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_36",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1150
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_27",
+        "retrieval_score": 0.82169694,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_27",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1022
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_28",
+        "retrieval_score": 0.8183994,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_28",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1030
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.8178088,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_9",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2019,
+          "start_line": 343
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.8169086,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_37",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1154
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_17",
+        "retrieval_score": 0.816803,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_17",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 915
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_7",
+        "retrieval_score": 0.81311786,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_7",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 292
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_40",
+        "retrieval_score": 0.8115648,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_40",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1181
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_45",
+        "retrieval_score": 0.81152195,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_45",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_56",
+        "retrieval_score": 0.8086809,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_56",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1397
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_5",
+        "retrieval_score": 0.807238,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_5",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 262
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_22",
+        "retrieval_score": 0.8065978,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_22",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 974
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_15",
+        "retrieval_score": 0.8060865,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_15",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 896
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_33",
+        "retrieval_score": 0.80566794,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_33",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1109
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_44",
+        "retrieval_score": 0.805509,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_44",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1219
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_14",
+        "retrieval_score": 0.8050893,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_14",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 877
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_43",
+        "retrieval_score": 0.8041239,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_43",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1204
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_59",
+        "retrieval_score": 0.803994,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_59",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 1424
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_29",
+        "retrieval_score": 0.8034939,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_29",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1045
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_30",
+        "retrieval_score": 0.8017077,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_30",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1049
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_18",
+        "retrieval_score": 0.8000634,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_18",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 921
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_25",
+        "retrieval_score": 0.7999433,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_25",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1003
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_19",
+        "retrieval_score": 0.7973191,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_19",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 927
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_34",
+        "retrieval_score": 0.7959326,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_34",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1113
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_31",
+        "retrieval_score": 0.79580414,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_31",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1055
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_12",
+        "retrieval_score": 0.7955599,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_12",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 847
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_20",
+        "retrieval_score": 0.7951835,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_20",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 942
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_13",
+        "retrieval_score": 0.79411876,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_13",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 869
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_39",
+        "retrieval_score": 0.7935631,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_39",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1177
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_26",
+        "retrieval_score": 0.79311264,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_26",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1018
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_32",
+        "retrieval_score": 0.79265517,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_32",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1078
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_53",
+        "retrieval_score": 0.7922398,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_53",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1356
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_16",
+        "retrieval_score": 0.79158974,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_16",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 900
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_55",
+        "retrieval_score": 0.7911218,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_55",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1376
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_52",
+        "retrieval_score": 0.78929216,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_52",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1338
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_6",
+        "retrieval_score": 0.7880115,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_6",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2019,
+          "start_line": 277
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_8",
+        "retrieval_score": 0.7872252,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_8",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 317
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_51",
+        "retrieval_score": 0.78508186,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_51",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1321
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_21",
+        "retrieval_score": 0.783176,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_21",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 958
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_11",
+        "retrieval_score": 0.78256744,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_11",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 622
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_2",
+        "retrieval_score": 0.7812189,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_2",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 120
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_61",
+        "retrieval_score": 0.7809528,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_61",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1443
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_57",
+        "retrieval_score": 0.7779771,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_57",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1418
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_38",
+        "retrieval_score": 0.77607775,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_38",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2019,
+          "start_line": 1160
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_47",
+        "retrieval_score": 0.77511835,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_47",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1252
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "HT1_financial_statements_2019_consolidated_table_3",
+        "retrieval_score": 0.7747026,
+        "metadata": {
+          "table_id": "HT1_financial_statements_2019_consolidated_table_3",
+          "doc_id": "HT1_financial_statements_2019_consolidated",
+          "ticker": "HT1",
+          "company_name": "CTCP Xi Măng Vicem Hà Tiên",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 126
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "HT1_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "HT1_financial_statements_2019_consolidated|358",
+            "HT1_financial_statements_2019_consolidated|1266",
+            "HT1_financial_statements_2019_consolidated|1129",
+            "HT1_financial_statements_2019_consolidated|999",
+            "HT1_financial_statements_2019_consolidated|1150"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "HT1_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "HT1_financial_statements_2019_consolidated|358",
+            "HT1_financial_statements_2019_consolidated|1266",
+            "HT1_financial_statements_2019_consolidated|1129",
+            "HT1_financial_statements_2019_consolidated|999",
+            "HT1_financial_statements_2019_consolidated|1150",
+            "HT1_financial_statements_2019_consolidated|1022",
+            "HT1_financial_statements_2019_consolidated|1030",
+            "HT1_financial_statements_2019_consolidated|343",
+            "HT1_financial_statements_2019_consolidated|1154",
+            "HT1_financial_statements_2019_consolidated|915"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "HT1_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "HT1_financial_statements_2019_consolidated|358",
+            "HT1_financial_statements_2019_consolidated|1266",
+            "HT1_financial_statements_2019_consolidated|1129",
+            "HT1_financial_statements_2019_consolidated|999",
+            "HT1_financial_statements_2019_consolidated|1150",
+            "HT1_financial_statements_2019_consolidated|1022",
+            "HT1_financial_statements_2019_consolidated|1030",
+            "HT1_financial_statements_2019_consolidated|343",
+            "HT1_financial_statements_2019_consolidated|1154",
+            "HT1_financial_statements_2019_consolidated|915",
+            "HT1_financial_statements_2019_consolidated|292",
+            "HT1_financial_statements_2019_consolidated|1181",
+            "HT1_financial_statements_2019_consolidated|1223",
+            "HT1_financial_statements_2019_consolidated|1397",
+            "HT1_financial_statements_2019_consolidated|262",
+            "HT1_financial_statements_2019_consolidated|974",
+            "HT1_financial_statements_2019_consolidated|896",
+            "HT1_financial_statements_2019_consolidated|1109",
+            "HT1_financial_statements_2019_consolidated|1219",
+            "HT1_financial_statements_2019_consolidated|877"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "HT1_financial_statements_2019_consolidated"
+          ],
+          "tables": [
+            "HT1_financial_statements_2019_consolidated|358",
+            "HT1_financial_statements_2019_consolidated|1266",
+            "HT1_financial_statements_2019_consolidated|1129",
+            "HT1_financial_statements_2019_consolidated|999",
+            "HT1_financial_statements_2019_consolidated|1150",
+            "HT1_financial_statements_2019_consolidated|1022",
+            "HT1_financial_statements_2019_consolidated|1030",
+            "HT1_financial_statements_2019_consolidated|343",
+            "HT1_financial_statements_2019_consolidated|1154",
+            "HT1_financial_statements_2019_consolidated|915",
+            "HT1_financial_statements_2019_consolidated|292",
+            "HT1_financial_statements_2019_consolidated|1181",
+            "HT1_financial_statements_2019_consolidated|1223",
+            "HT1_financial_statements_2019_consolidated|1397",
+            "HT1_financial_statements_2019_consolidated|262",
+            "HT1_financial_statements_2019_consolidated|974",
+            "HT1_financial_statements_2019_consolidated|896",
+            "HT1_financial_statements_2019_consolidated|1109",
+            "HT1_financial_statements_2019_consolidated|1219",
+            "HT1_financial_statements_2019_consolidated|877",
+            "HT1_financial_statements_2019_consolidated|1204",
+            "HT1_financial_statements_2019_consolidated|1424",
+            "HT1_financial_statements_2019_consolidated|1045",
+            "HT1_financial_statements_2019_consolidated|1049",
+            "HT1_financial_statements_2019_consolidated|921",
+            "HT1_financial_statements_2019_consolidated|1003",
+            "HT1_financial_statements_2019_consolidated|927",
+            "HT1_financial_statements_2019_consolidated|1113",
+            "HT1_financial_statements_2019_consolidated|1055",
+            "HT1_financial_statements_2019_consolidated|847",
+            "HT1_financial_statements_2019_consolidated|942",
+            "HT1_financial_statements_2019_consolidated|869",
+            "HT1_financial_statements_2019_consolidated|1177",
+            "HT1_financial_statements_2019_consolidated|1018",
+            "HT1_financial_statements_2019_consolidated|1078",
+            "HT1_financial_statements_2019_consolidated|1356",
+            "HT1_financial_statements_2019_consolidated|900",
+            "HT1_financial_statements_2019_consolidated|1376",
+            "HT1_financial_statements_2019_consolidated|1338",
+            "HT1_financial_statements_2019_consolidated|277",
+            "HT1_financial_statements_2019_consolidated|317",
+            "HT1_financial_statements_2019_consolidated|1321",
+            "HT1_financial_statements_2019_consolidated|958",
+            "HT1_financial_statements_2019_consolidated|622",
+            "HT1_financial_statements_2019_consolidated|120",
+            "HT1_financial_statements_2019_consolidated|1443",
+            "HT1_financial_statements_2019_consolidated|1418",
+            "HT1_financial_statements_2019_consolidated|1160",
+            "HT1_financial_statements_2019_consolidated|1252",
+            "HT1_financial_statements_2019_consolidated|126"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

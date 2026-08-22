@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "id": 587,
+  "question": "Tính tốc độ tăng trưởng (%) của số dư tiền gửi tại Ngân hàng Nhà nước Việt Nam (bằng VND) của STB từ cuối năm 2016 đến cuối năm 2022.",
+  "started_at": "2026-08-22T13:39:24+00:00",
+  "finished_at": "2026-08-22T13:39:24+00:00",
+  "duration_seconds": 0.3769066199893132,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "STB"
+    ],
+    "year": [
+      2016,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "STB_financial_statements_2016_consolidated",
+      "STB_financial_statements_2022_consolidated"
+    ],
+    "relevant_tables": [
+      "STB_financial_statements_2016_consolidated|1005",
+      "STB_financial_statements_2022_consolidated|1224"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "STB"
+    ],
+    "year": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tính tốc độ tăng trưởng (%) số dư tiền gửi tại Ngân hàng Nhà nước Việt Nam (bằng VND) từ cuối",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "STB",
+        "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+        "matched_text": "STB",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": false,
+      "coverage": true,
+      "missing": [],
+      "extra": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ]
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tính tốc độ tăng trưởng (%) của số dư tiền gửi tại Ngân hàng Nhà nước Việt Nam (bằng VND) của STB từ cuối năm 2016 đến cuối năm 2022.",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "STB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "STB"
+          ],
+          "year": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "STB_financial_statements_2018_consolidated_table_8",
+        "retrieval_score": 0.87605447,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_8",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 266
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "STB_financial_statements_2018_consolidated_table_60",
+        "retrieval_score": 0.87535954,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_60",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2267
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "STB_financial_statements_2018_consolidated_table_46",
+        "retrieval_score": 0.86888474,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_46",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1932
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "STB_financial_statements_2018_consolidated_table_111",
+        "retrieval_score": 0.86504966,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_111",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 3393
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "STB_financial_statements_2018_consolidated_table_38",
+        "retrieval_score": 0.86433196,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_38",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "STB_financial_statements_2018_consolidated_table_77",
+        "retrieval_score": 0.8606188,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_77",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2494
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "STB_financial_statements_2018_consolidated_table_44",
+        "retrieval_score": 0.85960877,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_44",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1903
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "STB_financial_statements_2018_consolidated_table_9",
+        "retrieval_score": 0.85823894,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_9",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2018,
+          "start_line": 282
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "STB_financial_statements_2022_consolidated_table_66",
+        "retrieval_score": 0.8579111,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_66",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1761
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "STB_financial_statements_2018_consolidated_table_102",
+        "retrieval_score": 0.85783905,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_102",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 3146
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "STB_financial_statements_2018_consolidated_table_103",
+        "retrieval_score": 0.85783905,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_103",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 3169
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "STB_financial_statements_2018_consolidated_table_20",
+        "retrieval_score": 0.85750645,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_20",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "STB_financial_statements_2019_consolidated_table_6",
+        "retrieval_score": 0.85700077,
+        "metadata": {
+          "table_id": "STB_financial_statements_2019_consolidated_table_6",
+          "doc_id": "STB_financial_statements_2019_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 216
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "STB_financial_statements_2018_consolidated_table_21",
+        "retrieval_score": 0.8560636,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_21",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1554
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "STB_financial_statements_2018_consolidated_table_59",
+        "retrieval_score": 0.8559881,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_59",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2244
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "STB_financial_statements_2021_consolidated_table_22",
+        "retrieval_score": 0.85531276,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_22",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1189
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "STB_financial_statements_2022_consolidated_table_21",
+        "retrieval_score": 0.85531276,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_21",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1230
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "STB_financial_statements_2020_consolidated_table_19",
+        "retrieval_score": 0.85531276,
+        "metadata": {
+          "table_id": "STB_financial_statements_2020_consolidated_table_19",
+          "doc_id": "STB_financial_statements_2020_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1160
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "STB_financial_statements_2018_consolidated_table_96",
+        "retrieval_score": 0.85524035,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_96",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2780
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "STB_financial_statements_2018_consolidated_table_43",
+        "retrieval_score": 0.8550909,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_43",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1876
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "STB_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.8546549,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_6",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 196
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "STB_financial_statements_2019_consolidated_table_19",
+        "retrieval_score": 0.85456604,
+        "metadata": {
+          "table_id": "STB_financial_statements_2019_consolidated_table_19",
+          "doc_id": "STB_financial_statements_2019_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1173
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "STB_financial_statements_2021_consolidated_table_91",
+        "retrieval_score": 0.8545144,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_91",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1959
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "STB_financial_statements_2017_consolidated_table_70",
+        "retrieval_score": 0.8544192,
+        "metadata": {
+          "table_id": "STB_financial_statements_2017_consolidated_table_70",
+          "doc_id": "STB_financial_statements_2017_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1649
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "STB_financial_statements_2022_consolidated_table_88",
+        "retrieval_score": 0.8533147,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_88",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2001
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "STB_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.85310847,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_9",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 271
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "STB_financial_statements_2022_consolidated_table_20",
+        "retrieval_score": 0.85262585,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_20",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1224
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "STB_financial_statements_2020_consolidated_table_9",
+        "retrieval_score": 0.8525202,
+        "metadata": {
+          "table_id": "STB_financial_statements_2020_consolidated_table_9",
+          "doc_id": "STB_financial_statements_2020_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 284
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "STB_financial_statements_2022_consolidated_table_63",
+        "retrieval_score": 0.852078,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_63",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1732
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "STB_financial_statements_2017_consolidated_table_21",
+        "retrieval_score": 0.8515487,
+        "metadata": {
+          "table_id": "STB_financial_statements_2017_consolidated_table_21",
+          "doc_id": "STB_financial_statements_2017_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "STB_financial_statements_2016_consolidated_table_18",
+        "retrieval_score": 0.8515487,
+        "metadata": {
+          "table_id": "STB_financial_statements_2016_consolidated_table_18",
+          "doc_id": "STB_financial_statements_2016_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1011
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "STB_financial_statements_2019_consolidated_table_66",
+        "retrieval_score": 0.85128486,
+        "metadata": {
+          "table_id": "STB_financial_statements_2019_consolidated_table_66",
+          "doc_id": "STB_financial_statements_2019_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1676
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "STB_financial_statements_2021_consolidated_table_9",
+        "retrieval_score": 0.8508495,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_9",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 249
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "STB_financial_statements_2021_consolidated_table_117",
+        "retrieval_score": 0.85047793,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_117",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2660
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "STB_financial_statements_2016_consolidated_table_60",
+        "retrieval_score": 0.85029894,
+        "metadata": {
+          "table_id": "STB_financial_statements_2016_consolidated_table_60",
+          "doc_id": "STB_financial_statements_2016_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1433
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "STB_financial_statements_2018_consolidated_table_101",
+        "retrieval_score": 0.8502082,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_101",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 3121
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "STB_financial_statements_2018_consolidated_table_113",
+        "retrieval_score": 0.8501326,
+        "metadata": {
+          "table_id": "STB_financial_statements_2018_consolidated_table_113",
+          "doc_id": "STB_financial_statements_2018_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 3449
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "STB_financial_statements_2021_consolidated_table_27",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_27",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1230
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "STB_financial_statements_2019_consolidated_table_65",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2019_consolidated_table_65",
+          "doc_id": "STB_financial_statements_2019_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1672
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "STB_financial_statements_2022_consolidated_table_65",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_65",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1744
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "STB_financial_statements_2022_consolidated_table_26",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_26",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1282
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "STB_financial_statements_2020_consolidated_table_64",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2020_consolidated_table_64",
+          "doc_id": "STB_financial_statements_2020_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1666
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "STB_financial_statements_2021_consolidated_table_67",
+        "retrieval_score": 0.85004187,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_67",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1700
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "STB_financial_statements_2020_consolidated_table_65",
+        "retrieval_score": 0.85004044,
+        "metadata": {
+          "table_id": "STB_financial_statements_2020_consolidated_table_65",
+          "doc_id": "STB_financial_statements_2020_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1670
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "STB_financial_statements_2016_consolidated_table_71",
+        "retrieval_score": 0.8499413,
+        "metadata": {
+          "table_id": "STB_financial_statements_2016_consolidated_table_71",
+          "doc_id": "STB_financial_statements_2016_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1594
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "STB_financial_statements_2017_consolidated_table_25",
+        "retrieval_score": 0.8495863,
+        "metadata": {
+          "table_id": "STB_financial_statements_2017_consolidated_table_25",
+          "doc_id": "STB_financial_statements_2017_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1110
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "STB_financial_statements_2016_consolidated_table_22",
+        "retrieval_score": 0.8495863,
+        "metadata": {
+          "table_id": "STB_financial_statements_2016_consolidated_table_22",
+          "doc_id": "STB_financial_statements_2016_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1039
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "STB_financial_statements_2022_consolidated_table_28",
+        "retrieval_score": 0.84953773,
+        "metadata": {
+          "table_id": "STB_financial_statements_2022_consolidated_table_28",
+          "doc_id": "STB_financial_statements_2022_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "STB_financial_statements_2020_consolidated_table_26",
+        "retrieval_score": 0.84953773,
+        "metadata": {
+          "table_id": "STB_financial_statements_2020_consolidated_table_26",
+          "doc_id": "STB_financial_statements_2020_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1222
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "STB_financial_statements_2021_consolidated_table_29",
+        "retrieval_score": 0.84953773,
+        "metadata": {
+          "table_id": "STB_financial_statements_2021_consolidated_table_29",
+          "doc_id": "STB_financial_statements_2021_consolidated",
+          "ticker": "STB",
+          "company_name": "Ngân hàng TMCP Sài Gòn Tài Lộc",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1251
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "STB_financial_statements_2018_consolidated"
+          ],
+          "tables": [
+            "STB_financial_statements_2018_consolidated|266",
+            "STB_financial_statements_2018_consolidated|2267",
+            "STB_financial_statements_2018_consolidated|1932",
+            "STB_financial_statements_2018_consolidated|3393",
+            "STB_financial_statements_2018_consolidated|1788"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "STB_financial_statements_2018_consolidated",
+            "STB_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "STB_financial_statements_2018_consolidated|266",
+            "STB_financial_statements_2018_consolidated|2267",
+            "STB_financial_statements_2018_consolidated|1932",
+            "STB_financial_statements_2018_consolidated|3393",
+            "STB_financial_statements_2018_consolidated|1788",
+            "STB_financial_statements_2018_consolidated|2494",
+            "STB_financial_statements_2018_consolidated|1903",
+            "STB_financial_statements_2018_consolidated|282",
+            "STB_financial_statements_2022_consolidated|1761",
+            "STB_financial_statements_2018_consolidated|3146"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f2": 0.5,
+          "mrr5": 0.5
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "STB_financial_statements_2018_consolidated",
+            "STB_financial_statements_2022_consolidated",
+            "STB_financial_statements_2019_consolidated",
+            "STB_financial_statements_2021_consolidated",
+            "STB_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "STB_financial_statements_2018_consolidated|266",
+            "STB_financial_statements_2018_consolidated|2267",
+            "STB_financial_statements_2018_consolidated|1932",
+            "STB_financial_statements_2018_consolidated|3393",
+            "STB_financial_statements_2018_consolidated|1788",
+            "STB_financial_statements_2018_consolidated|2494",
+            "STB_financial_statements_2018_consolidated|1903",
+            "STB_financial_statements_2018_consolidated|282",
+            "STB_financial_statements_2022_consolidated|1761",
+            "STB_financial_statements_2018_consolidated|3146",
+            "STB_financial_statements_2018_consolidated|3169",
+            "STB_financial_statements_2018_consolidated|1546",
+            "STB_financial_statements_2019_consolidated|216",
+            "STB_financial_statements_2018_consolidated|1554",
+            "STB_financial_statements_2018_consolidated|2244",
+            "STB_financial_statements_2021_consolidated|1189",
+            "STB_financial_statements_2022_consolidated|1230",
+            "STB_financial_statements_2020_consolidated|1160",
+            "STB_financial_statements_2018_consolidated|2780",
+            "STB_financial_statements_2018_consolidated|1876"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f2": 0.3846153846153846,
+          "mrr5": 0.5
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "STB_financial_statements_2018_consolidated",
+            "STB_financial_statements_2022_consolidated",
+            "STB_financial_statements_2019_consolidated",
+            "STB_financial_statements_2021_consolidated",
+            "STB_financial_statements_2020_consolidated",
+            "STB_financial_statements_2017_consolidated",
+            "STB_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "STB_financial_statements_2018_consolidated|266",
+            "STB_financial_statements_2018_consolidated|2267",
+            "STB_financial_statements_2018_consolidated|1932",
+            "STB_financial_statements_2018_consolidated|3393",
+            "STB_financial_statements_2018_consolidated|1788",
+            "STB_financial_statements_2018_consolidated|2494",
+            "STB_financial_statements_2018_consolidated|1903",
+            "STB_financial_statements_2018_consolidated|282",
+            "STB_financial_statements_2022_consolidated|1761",
+            "STB_financial_statements_2018_consolidated|3146",
+            "STB_financial_statements_2018_consolidated|3169",
+            "STB_financial_statements_2018_consolidated|1546",
+            "STB_financial_statements_2019_consolidated|216",
+            "STB_financial_statements_2018_consolidated|1554",
+            "STB_financial_statements_2018_consolidated|2244",
+            "STB_financial_statements_2021_consolidated|1189",
+            "STB_financial_statements_2022_consolidated|1230",
+            "STB_financial_statements_2020_consolidated|1160",
+            "STB_financial_statements_2018_consolidated|2780",
+            "STB_financial_statements_2018_consolidated|1876",
+            "STB_financial_statements_2021_consolidated|196",
+            "STB_financial_statements_2019_consolidated|1173",
+            "STB_financial_statements_2021_consolidated|1959",
+            "STB_financial_statements_2017_consolidated|1649",
+            "STB_financial_statements_2022_consolidated|2001",
+            "STB_financial_statements_2022_consolidated|271",
+            "STB_financial_statements_2022_consolidated|1224",
+            "STB_financial_statements_2020_consolidated|284",
+            "STB_financial_statements_2022_consolidated|1732",
+            "STB_financial_statements_2017_consolidated|1077",
+            "STB_financial_statements_2016_consolidated|1011",
+            "STB_financial_statements_2019_consolidated|1676",
+            "STB_financial_statements_2021_consolidated|249",
+            "STB_financial_statements_2021_consolidated|2660",
+            "STB_financial_statements_2016_consolidated|1433",
+            "STB_financial_statements_2018_consolidated|3121",
+            "STB_financial_statements_2018_consolidated|3449",
+            "STB_financial_statements_2021_consolidated|1230",
+            "STB_financial_statements_2019_consolidated|1672",
+            "STB_financial_statements_2022_consolidated|1744",
+            "STB_financial_statements_2022_consolidated|1282",
+            "STB_financial_statements_2020_consolidated|1666",
+            "STB_financial_statements_2021_consolidated|1700",
+            "STB_financial_statements_2020_consolidated|1670",
+            "STB_financial_statements_2016_consolidated|1594",
+            "STB_financial_statements_2017_consolidated|1110",
+            "STB_financial_statements_2016_consolidated|1039",
+            "STB_financial_statements_2022_consolidated|1290",
+            "STB_financial_statements_2020_consolidated|1222",
+            "STB_financial_statements_2021_consolidated|1251"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 0.5,
+          "f2": 0.08620689655172414,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.2857142857142857,
+          "recall": 1.0,
+          "f2": 0.6666666666666666,
+          "mrr5": 0.5
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,4 +1,4 @@
-"""Dense retrieval and coverage-aware LLM reranking for financial tables."""
+"""Hybrid retrieval and coverage-aware LLM reranking for financial tables."""
 
 from __future__ import annotations
 
@@ -6,8 +6,10 @@ import csv
 import json
 import logging
 import math
+import os
 import re
 import threading
+from collections import Counter
 from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any, cast
@@ -16,6 +18,7 @@ import httpx
 from qdrant_client import models
 from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
 
+from src.bm25 import BM25IndexError, search_bm25
 from src.contracts import (
     FILTER_FIELDS,
     resolve_csv_path,
@@ -39,12 +42,26 @@ logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RETRIEVAL_TOP_K = 50
+RETRIEVAL_MODE_DEFAULT = "hybrid"
+RRF_K = 60
 RERANK_SHORTLIST_MAX = 30
 RERANK_SHORTLIST_RESCUE_MAX = 4
 RERANK_SCOUT_COUNT = 2
 RERANK_SCOUT_OUTPUT_MAX = 8
 RERANK_OUTPUT_MIN = 8
 RERANK_OUTPUT_MAX = 18
+RERANK_FINALIST_LEXICAL_RESCUE_MAX = 8
+RERANK_FINALIST_LEXICAL_RESCUE_PER_BUCKET = 2
+RERANK_CONCEPT_ROLES = frozenset(
+    {
+        "direct",
+        "numerator",
+        "denominator",
+        "beginning_balance",
+        "ending_balance",
+        "comparison_operand",
+    }
+)
 RERANK_CONTEXT_SMALL_TABLE_ROWS = 8
 RERANK_CONTEXT_SEED_ROWS = 3
 RERANK_CONTEXT_DETAIL_MAX_ROWS = 9
@@ -171,20 +188,18 @@ def _point_to_candidate(point: Any, dense_rank: int) -> Candidate:
         "table_id": payload["table_id"],
         "metadata": payload,
         "retrieval_score": retrieval_score,
+        "dense_score": retrieval_score,
         "dense_rank": dense_rank,
     }
 
 
-def retrieve(
+def _retrieve_dense(
     query_text: str,
     filters: Mapping[str, Sequence[str | int]] | None = None,
     *,
-    top_n: int = RETRIEVAL_TOP_K,
+    top_n: int,
 ) -> list[Candidate]:
-    """Embed a semantic query and return Top-N validated Qdrant candidates."""
-    if top_n < 1:
-        raise ValueError("top_n must be at least 1")
-
+    """Return validated dense candidates without enforcing a non-empty result."""
     try:
         response = get_qdrant_client().query_points(
             collection_name=get_collection_name(),
@@ -213,14 +228,138 @@ def retrieve(
     except Exception as exc:
         raise RetrievalError("Qdrant table retrieval failed") from exc
 
+    logger.info("Retrieved %d dense table candidates", len(candidates))
+    logger.debug(
+        "Retrieval scores: %s",
+        [(item["table_id"], item["retrieval_score"]) for item in candidates],
+    )
+    return candidates
+
+
+def reciprocal_rank_fusion(
+    dense_candidates: Sequence[Mapping[str, Any]],
+    bm25_candidates: Sequence[Mapping[str, Any]],
+    *,
+    top_n: int,
+    rrf_k: int = RRF_K,
+) -> list[Candidate]:
+    """Fuse dense and lexical rankings without calibrating their raw scores."""
+    if top_n < 1:
+        raise ValueError("top_n must be at least 1")
+    if rrf_k < 1:
+        raise ValueError("rrf_k must be at least 1")
+
+    by_table_id: dict[str, Candidate] = {}
+    for source, candidates in (
+        ("dense", dense_candidates),
+        ("bm25", bm25_candidates),
+    ):
+        rank_field = f"{source}_rank"
+        score_field = f"{source}_score"
+        for fallback_rank, raw_candidate in enumerate(candidates, start=1):
+            candidate = dict(raw_candidate)
+            table_id = str(candidate.get("table_id") or "")
+            metadata = candidate.get("metadata")
+            if not table_id or not isinstance(metadata, Mapping):
+                raise RetrievalError(f"Invalid {source} retrieval candidate")
+            rank = candidate.get(rank_field, fallback_rank)
+            if (
+                isinstance(rank, bool)
+                or not isinstance(rank, int)
+                or rank < 1
+            ):
+                raise RetrievalError(f"Invalid {source} rank for {table_id}")
+            existing = by_table_id.get(table_id)
+            if existing is None:
+                existing = {
+                    "table_id": table_id,
+                    "metadata": dict(metadata),
+                    "rrf_score": 0.0,
+                }
+                by_table_id[table_id] = existing
+            elif dict(existing["metadata"]) != dict(metadata):
+                raise RetrievalError(
+                    f"Dense/BM25 metadata mismatch for table {table_id}"
+                )
+            existing[rank_field] = rank
+            if score_field in candidate:
+                existing[score_field] = candidate[score_field]
+            elif source == "dense" and "retrieval_score" in candidate:
+                existing[score_field] = candidate["retrieval_score"]
+            existing["rrf_score"] = float(existing["rrf_score"]) + 1.0 / (
+                rrf_k + rank
+            )
+
+    ordered = sorted(
+        by_table_id.values(),
+        key=lambda candidate: (
+            -float(candidate["rrf_score"]),
+            min(
+                int(candidate.get("dense_rank", 10**9)),
+                int(candidate.get("bm25_rank", 10**9)),
+            ),
+            str(candidate["table_id"]),
+        ),
+    )[:top_n]
+    for rank, candidate in enumerate(ordered, start=1):
+        candidate["retrieval_rank"] = rank
+        candidate["retrieval_score"] = candidate["rrf_score"]
+        candidate["retrieval_mode"] = "hybrid"
+    return ordered
+
+
+def retrieve(
+    query_text: str,
+    filters: Mapping[str, Sequence[str | int]] | None = None,
+    *,
+    top_n: int = RETRIEVAL_TOP_K,
+    mode: str | None = None,
+) -> list[Candidate]:
+    """Return dense or BM25+dense RRF candidates under identical filters."""
+    if top_n < 1:
+        raise ValueError("top_n must be at least 1")
+    retrieval_mode = (
+        mode or os.getenv("RETRIEVAL_MODE", RETRIEVAL_MODE_DEFAULT)
+    ).strip().lower()
+    if retrieval_mode not in {"dense", "hybrid"}:
+        raise ValueError("retrieval mode must be dense or hybrid")
+
+    dense_candidates = _retrieve_dense(query_text, filters, top_n=top_n)
+    if retrieval_mode == "dense":
+        if not dense_candidates:
+            raise NoMatchingCandidatesError(
+                "Không tìm thấy bảng nào khớp metadata filter"
+            )
+        result: list[Candidate] = []
+        for rank, raw_candidate in enumerate(dense_candidates, start=1):
+            candidate = dict(raw_candidate)
+            candidate["retrieval_rank"] = rank
+            candidate["retrieval_mode"] = "dense"
+            result.append(candidate)
+        return result
+
+    try:
+        bm25_candidates = search_bm25(
+            query_text,
+            filters,
+            top_n=top_n,
+        )
+    except BM25IndexError as exc:
+        raise RetrievalError("BM25 table retrieval failed") from exc
+    candidates = reciprocal_rank_fusion(
+        dense_candidates,
+        bm25_candidates,
+        top_n=top_n,
+    )
     if not candidates:
         raise NoMatchingCandidatesError(
             "Không tìm thấy bảng nào khớp metadata filter"
         )
-    logger.info("Retrieved %d table candidates", len(candidates))
-    logger.debug(
-        "Retrieval scores: %s",
-        [(item["table_id"], item["retrieval_score"]) for item in candidates],
+    logger.info(
+        "Hybrid retrieval fused dense=%d bm25=%d output=%d",
+        len(dense_candidates),
+        len(bm25_candidates),
+        len(candidates),
     )
     return candidates
 
@@ -455,11 +594,12 @@ def _salvage_rerank_response(
 
 
 def _fallback_sort_key(candidate: Mapping[str, Any]) -> tuple[float, float, str]:
-    """Order candidates deterministically by dense rank, then retrieval score."""
-    dense_rank = candidate.get("dense_rank")
+    """Order candidates by effective retrieval rank, then retrieval score."""
+    retrieval_rank = candidate.get("retrieval_rank", candidate.get("dense_rank"))
     rank_value = (
-        float(dense_rank)
-        if isinstance(dense_rank, (int, float)) and not isinstance(dense_rank, bool)
+        float(retrieval_rank)
+        if isinstance(retrieval_rank, (int, float))
+        and not isinstance(retrieval_rank, bool)
         else math.inf
     )
     retrieval_score = candidate.get("retrieval_score")
@@ -575,14 +715,25 @@ def _build_match_summary(
         if item[3]["row"] not in exact_row_numbers
     ][:5]
 
+    exact_phrase_titles: list[str] = []
     matching_titles: list[str] = []
     raw_titles = context.get("table_titles")
     if isinstance(raw_titles, Sequence) and not isinstance(raw_titles, (str, bytes)):
+        exact_phrase_titles = [
+            str(title)
+            for title in raw_titles
+            if isinstance(title, str)
+            and (title_normalized := _normalized_words(title)[0])
+            and title_normalized in question_normalized
+            and len(_normalized_words(title)[1]) >= 2
+        ][:3]
+        exact_title_set = set(exact_phrase_titles)
         matching_titles = sorted(
             (
                 str(title)
                 for title in raw_titles
                 if isinstance(title, str)
+                and str(title) not in exact_title_set
                 and query_tokens & _question_tokens(title)
             ),
             key=lambda title: (
@@ -592,6 +743,7 @@ def _build_match_summary(
         )[:3]
     return {
         "exact_phrase_rows": exact_rows,
+        "exact_phrase_titles": exact_phrase_titles,
         "strong_overlap_rows": strong_rows,
         "table_titles": matching_titles,
     }
@@ -731,14 +883,103 @@ def _diversified_shortlist(
     return selected
 
 
-def _dynamic_output_cap(bucket_count: int, shortlist_size: int) -> int:
-    if bucket_count < 1 or shortlist_size < bucket_count:
+def _dynamic_output_cap(
+    required_bucket_count: int,
+    coverage_cell_count: int,
+    finalist_count: int,
+) -> int:
+    """Allow one slot per declared coverage cell without exceeding the hard cap."""
+    if (
+        required_bucket_count < 1
+        or coverage_cell_count < 0
+        or finalist_count < required_bucket_count
+    ):
         raise ValueError("Invalid rerank bucket or shortlist size")
-    normal_cap = min(
+    return min(
+        finalist_count,
         RERANK_OUTPUT_MAX,
-        max(RERANK_OUTPUT_MIN, 2 * bucket_count + 2),
+        max(RERANK_OUTPUT_MIN, required_bucket_count, coverage_cell_count),
     )
-    return min(shortlist_size, max(bucket_count, normal_cap))
+
+
+def _coverage_locked_buckets(
+    question: str,
+    available_buckets: Sequence[Mapping[str, Any]],
+) -> tuple[list[str], list[str]]:
+    """Lock structurally required comparison buckets without resolving tables."""
+    normalized = " ".join(question.casefold().split())
+    tickers = {str(bucket.get("ticker") or "") for bucket in available_buckets}
+    years = {bucket.get("year") for bucket in available_buckets}
+    reasons: list[str] = []
+    multi_ticker_terms = (
+        "trong nhóm",
+        "xét nhóm",
+        "nhóm doanh nghiệp",
+        "gồm",
+        "giữa",
+        "so sánh",
+        "so với",
+        "trung bình",
+        "bình quân",
+        "hiệu số",
+        "chênh lệch",
+        "tổng chi phí",
+        "tổng giá trị",
+    )
+    multi_year_terms = (
+        "trong giai đoạn",
+        "trong các năm",
+        "năm có",
+        "năm nào",
+        "cao nhất",
+        "thấp nhất",
+        "lớn nhất",
+        "nhỏ nhất",
+        "trung vị",
+        "cả ba năm",
+        "cả hai năm",
+    )
+    if len(tickers) > 1 and any(term in normalized for term in multi_ticker_terms):
+        reasons.append("multi_ticker_aggregation_or_comparison")
+    if len(years) > 1 and any(term in normalized for term in multi_year_terms):
+        reasons.append("multi_year_selection_or_filter")
+    if not reasons:
+        return [], []
+    return [str(bucket["bucket_key"]) for bucket in available_buckets], reasons
+
+
+def _exact_lexical_finalist_keys(
+    question: str,
+    by_key: Mapping[str, Mapping[str, Any]],
+    bucket_by_candidate_key: Mapping[str, str],
+) -> list[str]:
+    """Bypass scout pruning for a bounded set of exact row/title matches."""
+    scored: list[tuple[tuple[int, int, float, float], str]] = []
+    for key, candidate in by_key.items():
+        score = _lexical_rescue_score(question, candidate)
+        if score is not None and score[0] == 1:
+            scored.append((score, key))
+    ordered = sorted(
+        scored,
+        key=lambda item: (
+            -item[0][0],
+            -item[0][1],
+            -item[0][2],
+            -item[0][3],
+            *_fallback_sort_key(by_key[item[1]]),
+        ),
+    )
+    selected: list[str] = []
+    per_bucket: Counter[str] = Counter()
+    for _, key in ordered:
+        bucket_key = bucket_by_candidate_key[key]
+        if per_bucket[bucket_key] >= RERANK_FINALIST_LEXICAL_RESCUE_PER_BUCKET:
+            continue
+        selected.append(key)
+        per_bucket[bucket_key] += 1
+        if len(selected) == RERANK_FINALIST_LEXICAL_RESCUE_MAX:
+            break
+    return selected
 
 
 def _build_prompt_contract(
@@ -760,14 +1001,14 @@ def _build_prompt_contract(
         for index, doc_id in enumerate(doc_ids, start=1)
     }
 
-    required_buckets: list[dict[str, Any]] = []
+    available_buckets: list[dict[str, Any]] = []
     for doc_id in doc_ids:
         metadata = next(
             candidate["metadata"]
             for candidate in candidates
             if candidate["metadata"]["doc_id"] == doc_id
         )
-        required_buckets.append(
+        available_buckets.append(
             {
                 "bucket_key": bucket_key_by_doc[doc_id],
                 "ticker": metadata["ticker"],
@@ -792,14 +1033,16 @@ def _build_prompt_contract(
                 "candidate_key": key,
                 "bucket_key": bucket_key,
                 "table_type": candidate["metadata"]["table_type"],
-                "dense_rank": candidate.get("dense_rank"),
+                "dense_rank": candidate.get(
+                    "retrieval_rank", candidate.get("dense_rank")
+                ),
                 "context": _prioritized_rerank_context(
                     question,
                     candidate["rerank_context"],
                 ),
             }
         )
-    return required_buckets, prompt_candidates, by_key, bucket_by_candidate_key
+    return available_buckets, prompt_candidates, by_key, bucket_by_candidate_key
 
 
 def _balanced_scout_chunks(
@@ -840,60 +1083,242 @@ def _ensure_nomination_bucket_coverage(
     return selected
 
 
-def _complete_bucket_coverage(
-    llm_keys: Sequence[str],
+def _salvage_final_response(
+    response: Mapping[str, Any],
     by_key: Mapping[str, Mapping[str, Any]],
     bucket_by_candidate_key: Mapping[str, str],
-    required_bucket_keys: Sequence[str],
-    output_cap: int,
-) -> list[str]:
-    selected = list(llm_keys)
-    protected: set[str] = set()
+    available_bucket_keys: Sequence[str],
+) -> dict[str, Any]:
+    """Salvage the structured final decision without inventing required buckets."""
+    raw_required = response.get("required_bucket_keys")
+    if not isinstance(raw_required, list):
+        raise ValueError("required_bucket_keys phải là một mảng")
+    available = set(available_bucket_keys)
+    required_bucket_keys: list[str] = []
+    dropped_required = 0
+    for raw_key in raw_required:
+        if (
+            not isinstance(raw_key, str)
+            or raw_key not in available
+            or raw_key in required_bucket_keys
+        ):
+            dropped_required += 1
+            continue
+        required_bucket_keys.append(raw_key)
+    if not required_bucket_keys:
+        raise ValueError("Final LLM không trả required bucket hợp lệ")
+
+    raw_requirements = response.get("bucket_requirements")
+    if not isinstance(raw_requirements, list):
+        raw_requirements = []
+    requirements: list[dict[str, Any]] = []
+    seen_requirement_buckets: set[str] = set()
+    concept_bucket_by_key: dict[str, str] = {}
+    invalid_requirements = 0
+    for raw_requirement in raw_requirements:
+        if not isinstance(raw_requirement, Mapping):
+            invalid_requirements += 1
+            continue
+        bucket_key = raw_requirement.get("bucket_key")
+        if (
+            not isinstance(bucket_key, str)
+            or bucket_key not in required_bucket_keys
+            or bucket_key in seen_requirement_buckets
+        ):
+            invalid_requirements += 1
+            continue
+        raw_concepts = raw_requirement.get("concepts")
+        if not isinstance(raw_concepts, list):
+            raw_concepts = []
+        concepts: list[dict[str, str]] = []
+        for raw_concept in raw_concepts:
+            if not isinstance(raw_concept, Mapping):
+                invalid_requirements += 1
+                continue
+            concept_key = raw_concept.get("concept_key")
+            description = raw_concept.get("description")
+            role = raw_concept.get("role")
+            if (
+                not isinstance(concept_key, str)
+                or not concept_key.strip()
+                or concept_key in concept_bucket_by_key
+                or not isinstance(description, str)
+                or not description.strip()
+                or role not in RERANK_CONCEPT_ROLES
+            ):
+                invalid_requirements += 1
+                continue
+            concept_bucket_by_key[concept_key] = bucket_key
+            concepts.append(
+                {
+                    "concept_key": concept_key,
+                    "description": description.strip(),
+                    "role": str(role),
+                }
+            )
+        seen_requirement_buckets.add(bucket_key)
+        requirements.append({"bucket_key": bucket_key, "concepts": concepts})
     for bucket_key in required_bucket_keys:
-        representative = next(
+        if bucket_key not in seen_requirement_buckets:
+            requirements.append({"bucket_key": bucket_key, "concepts": []})
+
+    raw_selections = response.get("ranked_selections")
+    if not isinstance(raw_selections, list):
+        raw_selections = []
+    selected_keys: list[str] = []
+    covered_concepts_by_key: dict[str, list[str]] = {}
+    invalid_selections = 0
+    for raw_selection in raw_selections:
+        if not isinstance(raw_selection, Mapping):
+            invalid_selections += 1
+            continue
+        candidate_key = raw_selection.get("candidate_key")
+        if (
+            not isinstance(candidate_key, str)
+            or candidate_key not in by_key
+            or candidate_key in selected_keys
+        ):
+            invalid_selections += 1
+            continue
+        bucket_key = bucket_by_candidate_key[candidate_key]
+        if bucket_key not in required_bucket_keys:
+            invalid_selections += 1
+            continue
+        raw_covered = raw_selection.get("covered_concept_keys")
+        if not isinstance(raw_covered, list):
+            raw_covered = []
+        covered: list[str] = []
+        for concept_key in raw_covered:
+            if (
+                isinstance(concept_key, str)
+                and concept_bucket_by_key.get(concept_key) == bucket_key
+                and concept_key not in covered
+            ):
+                covered.append(concept_key)
+            else:
+                invalid_selections += 1
+        selected_keys.append(candidate_key)
+        covered_concepts_by_key[candidate_key] = covered
+
+    covered_concepts = {
+        concept_key
+        for values in covered_concepts_by_key.values()
+        for concept_key in values
+    }
+    if concept_bucket_by_key and not selected_keys:
+        raise ValueError(
+            "Final LLM khai báo concepts nhưng không trả ranked_selection hợp lệ"
+        )
+    return {
+        "required_bucket_keys": required_bucket_keys,
+        "bucket_requirements": requirements,
+        "selected_keys": selected_keys,
+        "covered_concepts_by_key": covered_concepts_by_key,
+        "uncovered_concept_keys": sorted(
+            set(concept_bucket_by_key) - covered_concepts
+        ),
+        "coverage_cell_count": len(concept_bucket_by_key),
+        "dropped_required_bucket_values": dropped_required,
+        "invalid_requirement_values": invalid_requirements,
+        "invalid_selection_values": invalid_selections,
+    }
+
+
+def _complete_required_bucket_coverage(
+    llm_keys: Sequence[str],
+    nominated_keys: Sequence[str],
+    lexical_rescue_keys: Sequence[str],
+    finalist_keys: Sequence[str],
+    bucket_by_candidate_key: Mapping[str, str],
+    required_bucket_keys: Sequence[str],
+    coverage_locked_bucket_keys: Sequence[str],
+) -> tuple[list[str], dict[str, str], list[str]]:
+    """Complete required buckets without treating an ordinary anchor as evidence."""
+    selected = list(dict.fromkeys(llm_keys))
+    completion_sources: dict[str, str] = {}
+    unresolved: list[str] = []
+    locked = set(coverage_locked_bucket_keys)
+    for bucket_key in required_bucket_keys:
+        if any(bucket_by_candidate_key[key] == bucket_key for key in selected):
+            continue
+        candidate_key = next(
             (
                 key
-                for key in selected
+                for key in nominated_keys
                 if bucket_by_candidate_key[key] == bucket_key
             ),
             None,
         )
-        if representative is None:
-            representative = next(
+        source = "coverage_completion_scout"
+        if candidate_key is None:
+            candidate_key = next(
+                (
+                    key
+                    for key in lexical_rescue_keys
+                    if bucket_by_candidate_key[key] == bucket_key
+                ),
+                None,
+            )
+            source = "coverage_completion_lexical"
+        if candidate_key is None and bucket_key in locked:
+            candidate_key = next(
                 key
-                for key in by_key
+                for key in finalist_keys
                 if bucket_by_candidate_key[key] == bucket_key
             )
-            selected.append(representative)
-        protected.add(representative)
+            source = "locked_bucket_presence"
+        if candidate_key is None:
+            unresolved.append(bucket_key)
+            continue
+        selected.append(candidate_key)
+        completion_sources[candidate_key] = source
+    return selected, completion_sources, unresolved
 
-    while len(selected) > output_cap:
-        removable_index = next(
-            (
-                index
-                for index in range(len(selected) - 1, -1, -1)
-                if selected[index] not in protected
-            ),
-            None,
-        )
-        if removable_index is None:
+
+def _trim_coverage_aware(
+    selected_keys: Sequence[str],
+    bucket_by_candidate_key: Mapping[str, str],
+    required_bucket_keys: Sequence[str],
+    covered_concepts_by_key: Mapping[str, Sequence[str]],
+    output_cap: int,
+) -> list[str]:
+    """Trim redundant tail candidates while protecting bucket/concept claims."""
+    ordered = list(dict.fromkeys(selected_keys))
+    if len(ordered) <= output_cap:
+        return ordered
+    required = set(required_bucket_keys)
+    protected: list[str] = []
+    covered_buckets: set[str] = set()
+    covered_concepts: set[str] = set()
+    for key in ordered:
+        bucket_key = bucket_by_candidate_key[key]
+        new_concepts = set(covered_concepts_by_key.get(key, ())) - covered_concepts
+        if bucket_key in required and (
+            bucket_key not in covered_buckets or new_concepts
+        ):
+            protected.append(key)
+            covered_buckets.add(bucket_key)
+            covered_concepts.update(new_concepts)
+    kept = protected[:output_cap]
+    for key in ordered:
+        if len(kept) == output_cap:
             break
-        selected.pop(removable_index)
-    return selected
+        if key not in kept:
+            kept.append(key)
+    return kept
 
 
 def _materialize_ranking(
     selected_keys: Sequence[str],
     by_key: Mapping[str, Mapping[str, Any]],
-    llm_keys: Sequence[str],
+    source_by_key: Mapping[str, str],
 ) -> list[Candidate]:
     """Map opaque keys back to candidates and attach compatible rank metadata."""
     result: list[Candidate] = []
     count = len(selected_keys)
-    llm_key_set = set(llm_keys)
     for position, key in enumerate(selected_keys, start=1):
         item = dict(by_key[key])
-        source = "llm" if key in llm_key_set else "coverage_completion"
+        source = source_by_key.get(key, "llm")
         item.update(
             {
                 "rerank_score": (count - position + 1) / count,
@@ -906,11 +1331,11 @@ def _materialize_ranking(
     return result
 
 
-def rerank(
+def rerank_with_diagnostics(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
-) -> list[Candidate]:
-    """Nominate with two bounded scouts, then choose with one final arbiter."""
+) -> tuple[list[Candidate], dict[str, Any]]:
+    """Rerank candidates and expose loss-attribution diagnostics."""
     if not question.strip():
         raise ValueError("question must not be empty")
     if not candidates:
@@ -919,21 +1344,33 @@ def rerank(
     validated = _validate_candidates(candidates)
     enriched_candidates = _attach_context_to_validated(question, validated)
     enriched = _diversified_shortlist(question, enriched_candidates)
-    required_buckets, prompt_candidates, by_key, bucket_by_key = (
+    available_buckets, prompt_candidates, by_key, bucket_by_key = (
         _build_prompt_contract(question, enriched)
     )
-    required_bucket_keys = [
+    available_bucket_keys = [
         str(bucket["bucket_key"])
-        for bucket in required_buckets
+        for bucket in available_buckets
     ]
+    coverage_locked_bucket_keys, coverage_lock_reasons = _coverage_locked_buckets(
+        question, available_buckets
+    )
+    lexical_rescue_keys = _exact_lexical_finalist_keys(
+        question, by_key, bucket_by_key
+    )
     scout_chunks = _balanced_scout_chunks(prompt_candidates)
     nominated_keys: list[str] = []
+    nomination_priorities: dict[str, tuple[Any, ...]] = {}
     scout_prompt_chars: list[int] = []
     scout_valid_counts: list[int] = []
+    scout_diagnostics: list[dict[str, Any]] = []
+    scout_prompt_payloads: list[dict[str, Any]] = []
     for scout_index, chunk in enumerate(scout_chunks, start=1):
         if not chunk:
             scout_prompt_chars.append(0)
             scout_valid_counts.append(0)
+            scout_diagnostics.append(
+                {"scout_index": scout_index, "input_keys": [], "response": None, "nominated_keys": [], "error": None}
+            )
             continue
         scout_maximum = min(RERANK_SCOUT_OUTPUT_MAX, len(chunk))
         scout_prompt = build_rerank_scout_prompt(
@@ -941,12 +1378,15 @@ def rerank(
             chunk,
             scout_maximum,
         )
+        scout_prompt_payloads.append(json.loads(scout_prompt))
         scout_prompt_chars.append(len(scout_prompt))
         chunk_by_key = {
             str(candidate["candidate_key"]): by_key[str(candidate["candidate_key"])]
             for candidate in chunk
         }
         scout_keys: list[str] = []
+        scout_response: Mapping[str, Any] | None = None
+        scout_error: str | None = None
         try:
             scout_response = generate_structured(
                 scout_prompt,
@@ -958,19 +1398,40 @@ def rerank(
                 scout_maximum,
             )
         except (LLMResponseError, ValueError) as exc:
+            scout_error = str(exc)
             logger.warning(
                 "Rerank scout %d output is unusable: %s",
                 scout_index,
                 exc,
             )
+        for position, key in enumerate(scout_keys, start=1):
+            nomination_priorities.setdefault(
+                key,
+                (position, *_fallback_sort_key(by_key[key])),
+            )
         nominated_keys.extend(scout_keys)
         scout_valid_counts.append(len(scout_keys))
+        scout_diagnostics.append(
+            {
+                "scout_index": scout_index,
+                "input_keys": [str(item["candidate_key"]) for item in chunk],
+                "response": dict(scout_response) if scout_response is not None else None,
+                "nominated_keys": scout_keys,
+                "error": scout_error,
+            }
+        )
 
+    nominated_keys = sorted(
+        set(nominated_keys),
+        key=lambda key: nomination_priorities[key],
+    )
+
+    finalist_seed_keys = list(dict.fromkeys([*nominated_keys, *lexical_rescue_keys]))
     finalist_keys = _ensure_nomination_bucket_coverage(
-        nominated_keys,
+        finalist_seed_keys,
         by_key,
         bucket_by_key,
-        required_bucket_keys,
+        available_bucket_keys,
     )
     prompt_candidate_by_key = {
         str(candidate["candidate_key"]): candidate
@@ -985,67 +1446,190 @@ def rerank(
         key: bucket_by_key[key]
         for key in finalist_keys
     }
-    output_cap = _dynamic_output_cap(
-        len(required_buckets),
-        len(final_prompt_candidates),
-    )
+    hard_maximum = min(RERANK_OUTPUT_MAX, len(final_prompt_candidates))
     final_prompt = build_rerank_prompt(
         question,
-        required_buckets,
+        available_buckets,
         final_prompt_candidates,
-        output_cap,
+        hard_maximum,
+        coverage_locked_bucket_keys,
     )
-    final_keys: list[str] = []
+    final_response: Mapping[str, Any] | None = None
+    final_decision: dict[str, Any] | None = None
+    final_error: str | None = None
     try:
         final_response = generate_structured(
             final_prompt,
             system_prompt=RERANK_SYSTEM_PROMPT,
         )
-        final_keys = _salvage_rerank_response(
+        final_decision = _salvage_final_response(
             final_response,
             final_by_key,
-            output_cap,
+            final_bucket_by_key,
+            available_bucket_keys,
         )
     except (LLMResponseError, ValueError) as exc:
+        final_error = str(exc)
         logger.warning(
-            "Final reranker output is unusable; using finalist bucket anchors: %s",
+            "Final reranker output is unusable; using scout nominations: %s",
             exc,
         )
 
-    if final_keys:
-        selected_keys = final_keys
-    else:
-        selected_keys = _complete_bucket_coverage(
-            [],
-            final_by_key,
+    completion_sources: dict[str, str] = {}
+    unresolved_required_bucket_keys: list[str] = []
+    policy_added_required_bucket_keys: list[str] = []
+    if final_decision is not None:
+        final_keys = list(final_decision["selected_keys"])
+        required_bucket_keys = list(final_decision["required_bucket_keys"])
+        policy_added_required_bucket_keys = [
+            key
+            for key in coverage_locked_bucket_keys
+            if key not in required_bucket_keys
+        ]
+        required_bucket_keys.extend(policy_added_required_bucket_keys)
+        bucket_requirements = list(final_decision["bucket_requirements"])
+        bucket_requirements.extend(
+            {"bucket_key": key, "concepts": []}
+            for key in policy_added_required_bucket_keys
+        )
+        output_cap = _dynamic_output_cap(
+            len(required_bucket_keys),
+            int(final_decision["coverage_cell_count"]),
+            len(finalist_keys),
+        )
+        (
+            selected_keys,
+            completion_sources,
+            unresolved_required_bucket_keys,
+        ) = _complete_required_bucket_coverage(
+            final_keys,
+            nominated_keys,
+            lexical_rescue_keys,
+            finalist_keys,
             final_bucket_by_key,
             required_bucket_keys,
+            coverage_locked_bucket_keys,
+        )
+        selected_keys = _trim_coverage_aware(
+            selected_keys,
+            final_bucket_by_key,
+            required_bucket_keys,
+            final_decision["covered_concepts_by_key"],
             output_cap,
         )
-    result = _materialize_ranking(selected_keys, by_key, final_keys)
-    coverage_added = sum(
-        item["rerank_source"] == "coverage_completion"
-        for item in result
-    )
+        source_by_key = {key: "llm" for key in final_keys}
+        source_by_key.update(completion_sources)
+    else:
+        if not nominated_keys and not coverage_locked_bucket_keys:
+            raise RerankerError(
+                "Final reranker và cả hai scout đều không trả candidate hợp lệ"
+            )
+        required_bucket_keys = list(coverage_locked_bucket_keys)
+        bucket_requirements = []
+        final_keys = []
+        output_cap = min(RERANK_OUTPUT_MAX, len(finalist_keys))
+        selected_keys = nominated_keys[:output_cap]
+        source_by_key = {key: "scout_fallback" for key in selected_keys}
+        if required_bucket_keys:
+            (
+                selected_keys,
+                completion_sources,
+                unresolved_required_bucket_keys,
+            ) = _complete_required_bucket_coverage(
+                selected_keys,
+                nominated_keys,
+                lexical_rescue_keys,
+                finalist_keys,
+                final_bucket_by_key,
+                required_bucket_keys,
+                coverage_locked_bucket_keys,
+            )
+            selected_keys = _trim_coverage_aware(
+                selected_keys,
+                final_bucket_by_key,
+                required_bucket_keys,
+                {},
+                output_cap,
+            )
+            source_by_key.update(completion_sources)
+
+    result = _materialize_ranking(selected_keys, by_key, source_by_key)
+    candidate_catalog = {
+        key: {
+            "bucket_key": bucket_by_key[key],
+            "table_id": candidate["table_id"],
+            "table_ref": (
+                f"{candidate['metadata']['doc_id']}|"
+                f"{candidate['metadata']['start_line']}"
+            ),
+            "doc_id": candidate["metadata"]["doc_id"],
+            "table_type": candidate["metadata"]["table_type"],
+            "retrieval_rank": candidate.get(
+                "retrieval_rank", candidate.get("dense_rank")
+            ),
+        }
+        for key, candidate in by_key.items()
+    }
+    diagnostics = {
+        "input_candidate_count": len(candidates),
+        "available_buckets": available_buckets,
+        "candidate_catalog": candidate_catalog,
+        "shortlist_keys": list(by_key),
+        "scout_prompts": scout_prompt_payloads,
+        "scouts": scout_diagnostics,
+        "scout_nominated_keys": nominated_keys,
+        "lexical_finalist_keys": lexical_rescue_keys,
+        "finalist_keys": finalist_keys,
+        "final_prompt": json.loads(final_prompt),
+        "final_response": dict(final_response) if final_response is not None else None,
+        "final_error": final_error,
+        "coverage_locked_bucket_keys": coverage_locked_bucket_keys,
+        "coverage_lock_reasons": coverage_lock_reasons,
+        "policy_added_required_bucket_keys": policy_added_required_bucket_keys,
+        "required_bucket_keys": required_bucket_keys,
+        "bucket_requirements": bucket_requirements,
+        "uncovered_concept_keys": (
+            final_decision["uncovered_concept_keys"] if final_decision else []
+        ),
+        "final_llm_keys": final_keys,
+        "coverage_completion": completion_sources,
+        "unresolved_required_bucket_keys": unresolved_required_bucket_keys,
+        "selected_keys": selected_keys,
+        "output_cap": output_cap,
+    }
     logger.info(
         "Rerank completed: input=%d buckets=%d shortlist=%d scout_chunks=%s "
         "scout_prompt_chars=%s scout_valid=%s finalists=%d final_prompt_chars=%d "
-        "output_cap=%d final_valid=%d coverage_added=%d output=%d",
+        "lexical_rescue=%d coverage_locked=%s required_buckets=%s output_cap=%d "
+        "final_valid=%d coverage_added=%d unresolved=%s output=%d",
         len(candidates),
-        len(required_buckets),
+        len(available_buckets),
         len(enriched),
         [len(chunk) for chunk in scout_chunks],
         scout_prompt_chars,
         scout_valid_counts,
         len(finalist_keys),
         len(final_prompt),
+        len(lexical_rescue_keys),
+        coverage_locked_bucket_keys,
+        required_bucket_keys,
         output_cap,
         len(final_keys),
-        coverage_added,
+        len(completion_sources),
+        unresolved_required_bucket_keys,
         len(result),
     )
     logger.debug(
         "Rerank scores: %s",
         [(item["table_id"], item["rerank_score"]) for item in result],
     )
+    return result, diagnostics
+
+
+def rerank(
+    question: str,
+    candidates: Sequence[Mapping[str, Any]],
+) -> list[Candidate]:
+    """Nominate with two bounded scouts, then choose with one final arbiter."""
+    result, _ = rerank_with_diagnostics(question, candidates)
     return result

@@ -1,0 +1,1392 @@
+{
+  "schema_version": 1,
+  "id": 400,
+  "question": "Trong các báo cáo hợp nhất của HPG giai đoạn 2020-2024, ở năm có tốc độ tăng doanh thu thuần so với năm liền trước cao nhất trong các năm tăng trưởng dương, tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên doanh thu thuần của năm đó là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T13:50:47+00:00",
+  "finished_at": "2026-08-22T13:50:47+00:00",
+  "duration_seconds": 0.32329930500418413,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HPG"
+    ],
+    "year": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HPG_financial_statements_2020_consolidated",
+      "HPG_financial_statements_2021_consolidated",
+      "HPG_financial_statements_2022_consolidated",
+      "HPG_financial_statements_2023_consolidated",
+      "HPG_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "HPG_financial_statements_2020_consolidated|292",
+      "HPG_financial_statements_2021_consolidated|235",
+      "HPG_financial_statements_2021_consolidated|278",
+      "HPG_financial_statements_2022_consolidated|234",
+      "HPG_financial_statements_2023_consolidated|270",
+      "HPG_financial_statements_2024_consolidated|239"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HPG"
+    ],
+    "year": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong các giai đoạn , ở có tốc độ tăng doanh thu thuần so với liền trước cao nhất trong các tăng trưởng dương, tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên doanh thu thuần đó phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HPG",
+        "company_name": "CTCP Tập đoàn Hòa Phát",
+        "matched_text": "HPG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Trong các giai đoạn , ở có tốc độ tăng doanh thu thuần so với liền trước cao nhất trong các tăng trưởng dương, tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên doanh thu thuần đó phần trăm",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "HPG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HPG"
+          ],
+          "year": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_73",
+        "retrieval_score": 0.8474205,
+        "retrieval_rank": 1,
+        "dense_score": 0.8474205,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_73",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1953
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_67",
+        "retrieval_score": 0.8474205,
+        "retrieval_rank": 2,
+        "dense_score": 0.8474205,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_67",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 2436
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.8464744,
+        "retrieval_rank": 3,
+        "dense_score": 0.8464744,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_4",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 174
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_3",
+        "retrieval_score": 0.8456931,
+        "retrieval_rank": 4,
+        "dense_score": 0.8456931,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_3",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 220
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_3",
+        "retrieval_score": 0.8456931,
+        "retrieval_rank": 5,
+        "dense_score": 0.8456931,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_3",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 169
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_3",
+        "retrieval_score": 0.8456931,
+        "retrieval_rank": 6,
+        "dense_score": 0.8456931,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_3",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 176
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_2",
+        "retrieval_score": 0.84540784,
+        "retrieval_rank": 7,
+        "dense_score": 0.84540784,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_2",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 210
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_7",
+        "retrieval_score": 0.84110427,
+        "retrieval_rank": 8,
+        "dense_score": 0.84110427,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_7",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 315
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.83999294,
+        "retrieval_rank": 9,
+        "dense_score": 0.83999294,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_10",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 297
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.8371973,
+        "retrieval_rank": 10,
+        "dense_score": 0.8371973,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_9",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_10",
+        "retrieval_score": 0.8371973,
+        "retrieval_rank": 11,
+        "dense_score": 0.8371973,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_10",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 368
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.8371973,
+        "retrieval_rank": 12,
+        "dense_score": 0.8371973,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_10",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 305
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_8",
+        "retrieval_score": 0.8364899,
+        "retrieval_rank": 13,
+        "dense_score": 0.8364899,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_8",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 334
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_8",
+        "retrieval_score": 0.835002,
+        "retrieval_rank": 14,
+        "dense_score": 0.835002,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_8",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 278
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.8326206,
+        "retrieval_rank": 15,
+        "dense_score": 0.8326206,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_8",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 279
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.8303691,
+        "retrieval_rank": 16,
+        "dense_score": 0.8303691,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_9",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 280
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.8296244,
+        "retrieval_rank": 17,
+        "dense_score": 0.8296244,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_7",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 239
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.8292892,
+        "retrieval_rank": 18,
+        "dense_score": 0.8292892,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_8",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2020,
+          "start_line": 345
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.8286195,
+        "retrieval_rank": 19,
+        "dense_score": 0.8286195,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_6",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 292
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.82778937,
+        "retrieval_rank": 20,
+        "dense_score": 0.82778937,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_6",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 235
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_5",
+        "retrieval_score": 0.82720983,
+        "retrieval_rank": 21,
+        "dense_score": 0.82720983,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_5",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 270
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_17",
+        "retrieval_score": 0.82696825,
+        "retrieval_rank": 22,
+        "dense_score": 0.82696825,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_17",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 976
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.8266029,
+        "retrieval_rank": 23,
+        "dense_score": 0.8266029,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_8",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 256
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.82637,
+        "retrieval_rank": 24,
+        "dense_score": 0.82637,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_7",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_6",
+        "retrieval_score": 0.82637,
+        "retrieval_rank": 25,
+        "dense_score": 0.82637,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_6",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 287
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.82637,
+        "retrieval_rank": 26,
+        "dense_score": 0.82637,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_7",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 253
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.82637,
+        "retrieval_rank": 27,
+        "dense_score": 0.82637,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_7",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 311
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_23",
+        "retrieval_score": 0.8262553,
+        "retrieval_rank": 28,
+        "dense_score": 0.8262553,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_23",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1238
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_6",
+        "retrieval_score": 0.8259336,
+        "retrieval_rank": 29,
+        "dense_score": 0.8259336,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_6",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 234
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_18",
+        "retrieval_score": 0.82568175,
+        "retrieval_rank": 30,
+        "dense_score": 0.82568175,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_18",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1474
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_20",
+        "retrieval_score": 0.82519466,
+        "retrieval_rank": 31,
+        "dense_score": 0.82519466,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_20",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1505
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_19",
+        "retrieval_score": 0.8251744,
+        "retrieval_rank": 32,
+        "dense_score": 0.8251744,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_19",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 993
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_21",
+        "retrieval_score": 0.8251744,
+        "retrieval_rank": 33,
+        "dense_score": 0.8251744,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_21",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1215
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_72",
+        "retrieval_score": 0.825159,
+        "retrieval_rank": 34,
+        "dense_score": 0.825159,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_72",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 1645
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_68",
+        "retrieval_score": 0.8248788,
+        "retrieval_rank": 35,
+        "dense_score": 0.8248788,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_68",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 2482
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_16",
+        "retrieval_score": 0.82353497,
+        "retrieval_rank": 36,
+        "dense_score": 0.82353497,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_16",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_19",
+        "retrieval_score": 0.8233907,
+        "retrieval_rank": 37,
+        "dense_score": 0.8233907,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_19",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 930
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_17",
+        "retrieval_score": 0.8233907,
+        "retrieval_rank": 38,
+        "dense_score": 0.8233907,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_17",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 914
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_74",
+        "retrieval_score": 0.822044,
+        "retrieval_rank": 39,
+        "dense_score": 0.822044,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_74",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1976
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_14",
+        "retrieval_score": 0.8216702,
+        "retrieval_rank": 40,
+        "dense_score": 0.8216702,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_14",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 982
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_2",
+        "retrieval_score": 0.8203458,
+        "retrieval_rank": 41,
+        "dense_score": 0.8203458,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_2",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 159
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_2",
+        "retrieval_score": 0.8203458,
+        "retrieval_rank": 42,
+        "dense_score": 0.8203458,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_2",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 203
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_1",
+        "retrieval_score": 0.8203458,
+        "retrieval_rank": 43,
+        "dense_score": 0.8203458,
+        "dense_rank": 43,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_1",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 193
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "HPG_financial_statements_2024_consolidated_table_3",
+        "retrieval_score": 0.8203458,
+        "retrieval_rank": 44,
+        "dense_score": 0.8203458,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2024_consolidated_table_3",
+          "doc_id": "HPG_financial_statements_2024_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 157
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_2",
+        "retrieval_score": 0.8203458,
+        "retrieval_rank": 45,
+        "dense_score": 0.8203458,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_2",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 150
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HPG_financial_statements_2022_consolidated_table_5",
+        "retrieval_score": 0.81656927,
+        "retrieval_rank": 46,
+        "dense_score": 0.81656927,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2022_consolidated_table_5",
+          "doc_id": "HPG_financial_statements_2022_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 212
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "HPG_financial_statements_2021_consolidated_table_5",
+        "retrieval_score": 0.81656927,
+        "retrieval_rank": 47,
+        "dense_score": 0.81656927,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2021_consolidated_table_5",
+          "doc_id": "HPG_financial_statements_2021_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 209
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HPG_financial_statements_2023_consolidated_table_4",
+        "retrieval_score": 0.81656927,
+        "retrieval_rank": 48,
+        "dense_score": 0.81656927,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2023_consolidated_table_4",
+          "doc_id": "HPG_financial_statements_2023_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 244
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_5",
+        "retrieval_score": 0.81656927,
+        "retrieval_rank": 49,
+        "dense_score": 0.81656927,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_5",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 256
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "HPG_financial_statements_2020_consolidated_table_4",
+        "retrieval_score": 0.8148283,
+        "retrieval_rank": 50,
+        "dense_score": 0.8148283,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "HPG_financial_statements_2020_consolidated_table_4",
+          "doc_id": "HPG_financial_statements_2020_consolidated",
+          "ticker": "HPG",
+          "company_name": "CTCP Tập đoàn Hòa Phát",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2020,
+          "start_line": 237
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "HPG_financial_statements_2021_consolidated",
+            "HPG_financial_statements_2020_consolidated",
+            "HPG_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "HPG_financial_statements_2021_consolidated|1953",
+            "HPG_financial_statements_2020_consolidated|2436",
+            "HPG_financial_statements_2024_consolidated|174",
+            "HPG_financial_statements_2020_consolidated|220",
+            "HPG_financial_statements_2021_consolidated|169"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f2": 0.6521739130434783,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "HPG_financial_statements_2021_consolidated",
+            "HPG_financial_statements_2020_consolidated",
+            "HPG_financial_statements_2024_consolidated",
+            "HPG_financial_statements_2022_consolidated",
+            "HPG_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "HPG_financial_statements_2021_consolidated|1953",
+            "HPG_financial_statements_2020_consolidated|2436",
+            "HPG_financial_statements_2024_consolidated|174",
+            "HPG_financial_statements_2020_consolidated|220",
+            "HPG_financial_statements_2021_consolidated|169",
+            "HPG_financial_statements_2022_consolidated|176",
+            "HPG_financial_statements_2023_consolidated|210",
+            "HPG_financial_statements_2023_consolidated|315",
+            "HPG_financial_statements_2024_consolidated|297",
+            "HPG_financial_statements_2022_consolidated|296"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "HPG_financial_statements_2021_consolidated",
+            "HPG_financial_statements_2020_consolidated",
+            "HPG_financial_statements_2024_consolidated",
+            "HPG_financial_statements_2022_consolidated",
+            "HPG_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "HPG_financial_statements_2021_consolidated|1953",
+            "HPG_financial_statements_2020_consolidated|2436",
+            "HPG_financial_statements_2024_consolidated|174",
+            "HPG_financial_statements_2020_consolidated|220",
+            "HPG_financial_statements_2021_consolidated|169",
+            "HPG_financial_statements_2022_consolidated|176",
+            "HPG_financial_statements_2023_consolidated|210",
+            "HPG_financial_statements_2023_consolidated|315",
+            "HPG_financial_statements_2024_consolidated|297",
+            "HPG_financial_statements_2022_consolidated|296",
+            "HPG_financial_statements_2020_consolidated|368",
+            "HPG_financial_statements_2021_consolidated|305",
+            "HPG_financial_statements_2023_consolidated|334",
+            "HPG_financial_statements_2021_consolidated|278",
+            "HPG_financial_statements_2022_consolidated|279",
+            "HPG_financial_statements_2024_consolidated|280",
+            "HPG_financial_statements_2024_consolidated|239",
+            "HPG_financial_statements_2020_consolidated|345",
+            "HPG_financial_statements_2020_consolidated|292",
+            "HPG_financial_statements_2021_consolidated|235"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.6666666666666666,
+          "f2": 0.4545454545454545,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "HPG_financial_statements_2021_consolidated",
+            "HPG_financial_statements_2020_consolidated",
+            "HPG_financial_statements_2024_consolidated",
+            "HPG_financial_statements_2022_consolidated",
+            "HPG_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "HPG_financial_statements_2021_consolidated|1953",
+            "HPG_financial_statements_2020_consolidated|2436",
+            "HPG_financial_statements_2024_consolidated|174",
+            "HPG_financial_statements_2020_consolidated|220",
+            "HPG_financial_statements_2021_consolidated|169",
+            "HPG_financial_statements_2022_consolidated|176",
+            "HPG_financial_statements_2023_consolidated|210",
+            "HPG_financial_statements_2023_consolidated|315",
+            "HPG_financial_statements_2024_consolidated|297",
+            "HPG_financial_statements_2022_consolidated|296",
+            "HPG_financial_statements_2020_consolidated|368",
+            "HPG_financial_statements_2021_consolidated|305",
+            "HPG_financial_statements_2023_consolidated|334",
+            "HPG_financial_statements_2021_consolidated|278",
+            "HPG_financial_statements_2022_consolidated|279",
+            "HPG_financial_statements_2024_consolidated|280",
+            "HPG_financial_statements_2024_consolidated|239",
+            "HPG_financial_statements_2020_consolidated|345",
+            "HPG_financial_statements_2020_consolidated|292",
+            "HPG_financial_statements_2021_consolidated|235",
+            "HPG_financial_statements_2023_consolidated|270",
+            "HPG_financial_statements_2022_consolidated|976",
+            "HPG_financial_statements_2024_consolidated|256",
+            "HPG_financial_statements_2021_consolidated|252",
+            "HPG_financial_statements_2023_consolidated|287",
+            "HPG_financial_statements_2022_consolidated|253",
+            "HPG_financial_statements_2020_consolidated|311",
+            "HPG_financial_statements_2021_consolidated|1238",
+            "HPG_financial_statements_2022_consolidated|234",
+            "HPG_financial_statements_2020_consolidated|1474",
+            "HPG_financial_statements_2020_consolidated|1505",
+            "HPG_financial_statements_2022_consolidated|993",
+            "HPG_financial_statements_2021_consolidated|1215",
+            "HPG_financial_statements_2024_consolidated|1645",
+            "HPG_financial_statements_2020_consolidated|2482",
+            "HPG_financial_statements_2023_consolidated|1000",
+            "HPG_financial_statements_2024_consolidated|930",
+            "HPG_financial_statements_2024_consolidated|914",
+            "HPG_financial_statements_2021_consolidated|1976",
+            "HPG_financial_statements_2023_consolidated|982",
+            "HPG_financial_statements_2022_consolidated|159",
+            "HPG_financial_statements_2020_consolidated|203",
+            "HPG_financial_statements_2023_consolidated|193",
+            "HPG_financial_statements_2024_consolidated|157",
+            "HPG_financial_statements_2021_consolidated|150",
+            "HPG_financial_statements_2022_consolidated|212",
+            "HPG_financial_statements_2021_consolidated|209",
+            "HPG_financial_statements_2023_consolidated|244",
+            "HPG_financial_statements_2020_consolidated|256",
+            "HPG_financial_statements_2020_consolidated|237"
+          ]
+        },
+        "tables": {
+          "precision": 0.12,
+          "recall": 1.0,
+          "f2": 0.4054054054054054,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

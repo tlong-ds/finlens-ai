@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "id": 610,
+  "question": "Tỉ lệ tăng trưởng chi phí mua khí từ các chủ mỏ của GAS trong năm 2022 so với năm 2020 là bao nhiêu %?",
+  "started_at": "2026-08-22T13:39:24+00:00",
+  "finished_at": "2026-08-22T13:39:24+00:00",
+  "duration_seconds": 0.4032887240027776,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2022,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "GAS_financial_statements_2022_consolidated",
+      "GAS_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "GAS_financial_statements_2022_consolidated|1737",
+      "GAS_financial_statements_2020_consolidated|1416"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "GAS"
+    ],
+    "year": [
+      2020,
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỉ lệ tăng trưởng chi phí mua khí từ các chủ mỏ trong so với %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "matched_text": "GAS",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2020,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tỉ lệ tăng trưởng chi phí mua khí từ các chủ mỏ của GAS trong năm 2022 so với năm 2020 là bao nhiêu %?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "GAS",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GAS"
+          ],
+          "year": [
+            2020,
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_45",
+        "retrieval_score": 0.8437821,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_45",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1339
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_50",
+        "retrieval_score": 0.8437821,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_50",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1673
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_69",
+        "retrieval_score": 0.84160376,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_69",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2172
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_76",
+        "retrieval_score": 0.8405187,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_76",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1719
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_77",
+        "retrieval_score": 0.8393854,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_77",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1725
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_49",
+        "retrieval_score": 0.8384963,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_49",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1669
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_71",
+        "retrieval_score": 0.8384865,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_71",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2182
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_44",
+        "retrieval_score": 0.83288604,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_44",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1335
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_13",
+        "retrieval_score": 0.8313192,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_13",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 487
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_30",
+        "retrieval_score": 0.8308889,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_30",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1331
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_24",
+        "retrieval_score": 0.82916754,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_24",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1082
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_7",
+        "retrieval_score": 0.8280627,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_7",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 311
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_31",
+        "retrieval_score": 0.81515765,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_31",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1154
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_54",
+        "retrieval_score": 0.81014496,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_54",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1737
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_51",
+        "retrieval_score": 0.80965436,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_51",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1416
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_38",
+        "retrieval_score": 0.80743957,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_38",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1222
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_66",
+        "retrieval_score": 0.80652416,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_66",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2125
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_43",
+        "retrieval_score": 0.80512875,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_43",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1515
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_36",
+        "retrieval_score": 0.8011517,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_36",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1390
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_68",
+        "retrieval_score": 0.7976498,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_68",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1674
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_71",
+        "retrieval_score": 0.7976498,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_71",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1686
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_58",
+        "retrieval_score": 0.79752046,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_58",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1529
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_73",
+        "retrieval_score": 0.7963823,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_73",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1694
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_59",
+        "retrieval_score": 0.79566437,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_59",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_57",
+        "retrieval_score": 0.79478645,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_57",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1828
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_58",
+        "retrieval_score": 0.79478645,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_58",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1849
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_11",
+        "retrieval_score": 0.7944413,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_11",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 400
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_14",
+        "retrieval_score": 0.79412305,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_14",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 504
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_60",
+        "retrieval_score": 0.7940151,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_60",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1552
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_40",
+        "retrieval_score": 0.79391587,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_40",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_8",
+        "retrieval_score": 0.79376847,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_8",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 342
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_37",
+        "retrieval_score": 0.79359424,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_37",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1398
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_24",
+        "retrieval_score": 0.7930883,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_24",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_61",
+        "retrieval_score": 0.7924215,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_61",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2021
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_69",
+        "retrieval_score": 0.7920157,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_69",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1678
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_54",
+        "retrieval_score": 0.7917058,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_54",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1489
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_21",
+        "retrieval_score": 0.79088825,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_21",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1171
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_35",
+        "retrieval_score": 0.7886375,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_35",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1375
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_30",
+        "retrieval_score": 0.7886375,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_30",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1141
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_55",
+        "retrieval_score": 0.7885592,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_55",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1504
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_11",
+        "retrieval_score": 0.7880253,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_11",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 928
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_32",
+        "retrieval_score": 0.78760934,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_32",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1158
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_27",
+        "retrieval_score": 0.78753966,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_27",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1260
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_33",
+        "retrieval_score": 0.78649694,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_33",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1343
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_45",
+        "retrieval_score": 0.7855113,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_45",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1552
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_68",
+        "retrieval_score": 0.7847161,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_68",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2151
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_17",
+        "retrieval_score": 0.78469706,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_17",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1115
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_39",
+        "retrieval_score": 0.7845063,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_39",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1453
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "GAS_financial_statements_2022_consolidated_table_23",
+        "retrieval_score": 0.7840862,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2022_consolidated_table_23",
+          "doc_id": "GAS_financial_statements_2022_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1216
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "GAS_financial_statements_2020_consolidated_table_34",
+        "retrieval_score": 0.7835958,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2020_consolidated_table_34",
+          "doc_id": "GAS_financial_statements_2020_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 1185
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2020_consolidated",
+            "GAS_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2020_consolidated|1339",
+            "GAS_financial_statements_2022_consolidated|1673",
+            "GAS_financial_statements_2022_consolidated|2172",
+            "GAS_financial_statements_2020_consolidated|1719",
+            "GAS_financial_statements_2020_consolidated|1725"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2020_consolidated",
+            "GAS_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2020_consolidated|1339",
+            "GAS_financial_statements_2022_consolidated|1673",
+            "GAS_financial_statements_2022_consolidated|2172",
+            "GAS_financial_statements_2020_consolidated|1719",
+            "GAS_financial_statements_2020_consolidated|1725",
+            "GAS_financial_statements_2022_consolidated|1669",
+            "GAS_financial_statements_2022_consolidated|2182",
+            "GAS_financial_statements_2020_consolidated|1335",
+            "GAS_financial_statements_2022_consolidated|487",
+            "GAS_financial_statements_2022_consolidated|1331"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2020_consolidated",
+            "GAS_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2020_consolidated|1339",
+            "GAS_financial_statements_2022_consolidated|1673",
+            "GAS_financial_statements_2022_consolidated|2172",
+            "GAS_financial_statements_2020_consolidated|1719",
+            "GAS_financial_statements_2020_consolidated|1725",
+            "GAS_financial_statements_2022_consolidated|1669",
+            "GAS_financial_statements_2022_consolidated|2182",
+            "GAS_financial_statements_2020_consolidated|1335",
+            "GAS_financial_statements_2022_consolidated|487",
+            "GAS_financial_statements_2022_consolidated|1331",
+            "GAS_financial_statements_2020_consolidated|1082",
+            "GAS_financial_statements_2020_consolidated|311",
+            "GAS_financial_statements_2020_consolidated|1154",
+            "GAS_financial_statements_2022_consolidated|1737",
+            "GAS_financial_statements_2020_consolidated|1416",
+            "GAS_financial_statements_2020_consolidated|1222",
+            "GAS_financial_statements_2022_consolidated|2125",
+            "GAS_financial_statements_2022_consolidated|1515",
+            "GAS_financial_statements_2022_consolidated|1390",
+            "GAS_financial_statements_2020_consolidated|1674"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2020_consolidated",
+            "GAS_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2020_consolidated|1339",
+            "GAS_financial_statements_2022_consolidated|1673",
+            "GAS_financial_statements_2022_consolidated|2172",
+            "GAS_financial_statements_2020_consolidated|1719",
+            "GAS_financial_statements_2020_consolidated|1725",
+            "GAS_financial_statements_2022_consolidated|1669",
+            "GAS_financial_statements_2022_consolidated|2182",
+            "GAS_financial_statements_2020_consolidated|1335",
+            "GAS_financial_statements_2022_consolidated|487",
+            "GAS_financial_statements_2022_consolidated|1331",
+            "GAS_financial_statements_2020_consolidated|1082",
+            "GAS_financial_statements_2020_consolidated|311",
+            "GAS_financial_statements_2020_consolidated|1154",
+            "GAS_financial_statements_2022_consolidated|1737",
+            "GAS_financial_statements_2020_consolidated|1416",
+            "GAS_financial_statements_2020_consolidated|1222",
+            "GAS_financial_statements_2022_consolidated|2125",
+            "GAS_financial_statements_2022_consolidated|1515",
+            "GAS_financial_statements_2022_consolidated|1390",
+            "GAS_financial_statements_2020_consolidated|1674",
+            "GAS_financial_statements_2020_consolidated|1686",
+            "GAS_financial_statements_2020_consolidated|1529",
+            "GAS_financial_statements_2020_consolidated|1694",
+            "GAS_financial_statements_2020_consolidated|1546",
+            "GAS_financial_statements_2022_consolidated|1828",
+            "GAS_financial_statements_2022_consolidated|1849",
+            "GAS_financial_statements_2022_consolidated|400",
+            "GAS_financial_statements_2022_consolidated|504",
+            "GAS_financial_statements_2020_consolidated|1552",
+            "GAS_financial_statements_2020_consolidated|1249",
+            "GAS_financial_statements_2020_consolidated|342",
+            "GAS_financial_statements_2022_consolidated|1398",
+            "GAS_financial_statements_2022_consolidated|1235",
+            "GAS_financial_statements_2022_consolidated|2021",
+            "GAS_financial_statements_2020_consolidated|1678",
+            "GAS_financial_statements_2020_consolidated|1489",
+            "GAS_financial_statements_2022_consolidated|1171",
+            "GAS_financial_statements_2022_consolidated|1375",
+            "GAS_financial_statements_2020_consolidated|1141",
+            "GAS_financial_statements_2020_consolidated|1504",
+            "GAS_financial_statements_2020_consolidated|928",
+            "GAS_financial_statements_2020_consolidated|1158",
+            "GAS_financial_statements_2022_consolidated|1260",
+            "GAS_financial_statements_2022_consolidated|1343",
+            "GAS_financial_statements_2022_consolidated|1552",
+            "GAS_financial_statements_2022_consolidated|2151",
+            "GAS_financial_statements_2022_consolidated|1115",
+            "GAS_financial_statements_2022_consolidated|1453",
+            "GAS_financial_statements_2022_consolidated|1216",
+            "GAS_financial_statements_2020_consolidated|1185"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,93 @@
+{
+  "run_id": "dense-question-replay-v1",
+  "updated_at": "2026-08-22T13:39:33+00:00",
+  "metrics": {
+    "evaluated_queries": 100,
+    "successful_queries": 100,
+    "parser_success_rate": 1.0,
+    "mean_semantic_calls_per_question": 1.0,
+    "semantic_retry_questions": 0,
+    "mean_provider_attempts_per_question": 1.0,
+    "provider_retry_questions": 0,
+    "ticker_exact_set_accuracy": 0.99,
+    "ticker_gold_coverage": 0.99,
+    "ticker_overselection_questions": 1,
+    "year_exact_set_accuracy": 0.94,
+    "year_gold_coverage": 0.99,
+    "year_overselection_questions": 6,
+    "report_type_exact_set_accuracy": 0.96,
+    "report_type_gold_coverage": 0.96,
+    "report_type_overselection_questions": 4,
+    "report_confusion": {
+      "consolidated->consolidated": 62,
+      "other->consolidated": 1,
+      "other->separate": 1,
+      "separate->consolidated": 2,
+      "separate->separate": 34
+    },
+    "report_accuracy_by_class": {
+      "consolidated": {
+        "correct": 62,
+        "total": 62,
+        "accuracy": 1.0
+      },
+      "other": {
+        "correct": 0,
+        "total": 2,
+        "accuracy": 0.0
+      },
+      "separate": {
+        "correct": 34,
+        "total": 36,
+        "accuracy": 0.9444444444444444
+      }
+    },
+    "repair_changed_fields": {},
+    "retrieval_successful_queries": 100,
+    "retrieval_success_rate": 1.0,
+    "mean_retrieval_attempts_per_question": 1.0,
+    "retrieval_retry_questions": 0,
+    "retrieval_by_top_k": {
+      "5": {
+        "TABLES F2-MACRO": 0.1686822882186545,
+        "DOCS F2-MACRO": 0.8990538121163871,
+        "TABLES PRECISION": 0.10400000000000001,
+        "TABLES RECALL": 0.24457575757575756,
+        "TABLES MRR5": 0.22183333333333333,
+        "DOCS PRECISION": 0.9366666666666668,
+        "DOCS RECALL": 0.8944365079365079,
+        "DOCS MRR5": 0.9383333333333332
+      },
+      "10": {
+        "TABLES F2-MACRO": 0.16420684401617464,
+        "DOCS F2-MACRO": 0.941615770710198,
+        "TABLES PRECISION": 0.07600000000000001,
+        "TABLES RECALL": 0.3083030303030303,
+        "TABLES MRR5": 0.22183333333333333,
+        "DOCS PRECISION": 0.9431666666666666,
+        "DOCS RECALL": 0.9425714285714285,
+        "DOCS MRR5": 0.9433333333333332
+      },
+      "20": {
+        "TABLES F2-MACRO": 0.17014702617643795,
+        "DOCS F2-MACRO": 0.952041977630213,
+        "TABLES PRECISION": 0.059000000000000004,
+        "TABLES RECALL": 0.4727878787878788,
+        "TABLES MRR5": 0.22183333333333333,
+        "DOCS PRECISION": 0.9416666666666668,
+        "DOCS RECALL": 0.9569047619047619,
+        "DOCS MRR5": 0.9433333333333332
+      },
+      "50": {
+        "TABLES F2-MACRO": 0.14071887837052702,
+        "DOCS F2-MACRO": 0.956038961038961,
+        "TABLES PRECISION": 0.038032558139534885,
+        "TABLES RECALL": 0.7179487734487735,
+        "TABLES MRR5": 0.22183333333333333,
+        "DOCS PRECISION": 0.9425238095238094,
+        "DOCS RECALL": 0.9633333333333333,
+        "DOCS MRR5": 0.9433333333333332
+      }
+    }
+  }
+}

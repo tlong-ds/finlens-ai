@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 5,
+  "question": "Chi phí phạt của công ty mẹ SCR năm 2017 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:51:03+00:00",
+  "finished_at": "2026-08-22T13:51:12+00:00",
+  "duration_seconds": 8.973206053007743,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SCR"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SCR_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "SCR_financial_statements_2017_separate|1251"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SCR"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Chi phí phạt tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "matched_text": "SCR",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Chi phí phạt tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "SCR",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SCR"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "SCR_financial_statements_2017_separate_table_60",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 1,
+        "dense_score": 0.8458034,
+        "dense_rank": 1,
+        "bm25_score": 5.583757205119397,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_60",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1251
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "SCR_financial_statements_2017_separate_table_58",
+        "retrieval_score": 0.03200204813108039,
+        "retrieval_rank": 2,
+        "dense_score": 0.82629055,
+        "dense_rank": 2,
+        "bm25_score": 3.6371665635908474,
+        "bm25_rank": 3,
+        "rrf_score": 0.03200204813108039,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_58",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1230
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SCR_financial_statements_2017_separate_table_5",
+        "retrieval_score": 0.030834914611005692,
+        "retrieval_rank": 3,
+        "dense_score": 0.81421506,
+        "dense_rank": 8,
+        "bm25_score": 5.43345923094336,
+        "bm25_rank": 2,
+        "rrf_score": 0.030834914611005692,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_5",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 164
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SCR_financial_statements_2017_separate_table_33",
+        "retrieval_score": 0.03076923076923077,
+        "retrieval_rank": 4,
+        "dense_score": 0.8150428,
+        "dense_rank": 5,
+        "bm25_score": 3.4880010175528673,
+        "bm25_rank": 5,
+        "rrf_score": 0.03076923076923077,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_33",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 889
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "SCR_financial_statements_2017_separate_table_57",
+        "retrieval_score": 0.030330882352941176,
+        "retrieval_rank": 5,
+        "dense_score": 0.8207698,
+        "dense_rank": 4,
+        "bm25_score": 3.341280905166635,
+        "bm25_rank": 8,
+        "rrf_score": 0.030330882352941176,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_57",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1226
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SCR_financial_statements_2017_separate_table_70",
+        "retrieval_score": 0.029211087420042643,
+        "retrieval_rank": 6,
+        "dense_score": 0.814435,
+        "dense_rank": 7,
+        "bm25_score": 3.1532084086428123,
+        "bm25_rank": 10,
+        "rrf_score": 0.029211087420042643,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_70",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1325
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "SCR_financial_statements_2017_separate_table_61",
+        "retrieval_score": 0.028006267136701922,
+        "retrieval_rank": 7,
+        "dense_score": 0.80580443,
+        "dense_rank": 14,
+        "bm25_score": 3.3180003612095725,
+        "bm25_rank": 9,
+        "rrf_score": 0.028006267136701922,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_61",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1257
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "SCR_financial_statements_2017_separate_table_38",
+        "retrieval_score": 0.02719970792259949,
+        "retrieval_rank": 8,
+        "dense_score": 0.7971252,
+        "dense_rank": 23,
+        "bm25_score": 3.4261065569137656,
+        "bm25_rank": 6,
+        "rrf_score": 0.02719970792259949,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_38",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 958
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SCR_financial_statements_2017_separate_table_46",
+        "retrieval_score": 0.026742734890354787,
+        "retrieval_rank": 9,
+        "dense_score": 0.8091553,
+        "dense_rank": 11,
+        "bm25_score": 2.35977353877867,
+        "bm25_rank": 19,
+        "rrf_score": 0.026742734890354787,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_46",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1081
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "SCR_financial_statements_2017_separate_table_2",
+        "retrieval_score": 0.026742581090407176,
+        "retrieval_rank": 10,
+        "dense_score": 0.8240574,
+        "dense_rank": 3,
+        "bm25_score": 1.6728889991771316,
+        "bm25_rank": 32,
+        "rrf_score": 0.026742581090407176,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_2",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 113
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "SCR_financial_statements_2017_separate_table_35",
+        "retrieval_score": 0.02664576802507837,
+        "retrieval_rank": 11,
+        "dense_score": 0.81456095,
+        "dense_rank": 6,
+        "bm25_score": 1.916967450287948,
+        "bm25_rank": 27,
+        "rrf_score": 0.02664576802507837,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_35",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 912
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SCR_financial_statements_2017_separate_table_65",
+        "retrieval_score": 0.026279628993473032,
+        "retrieval_rank": 12,
+        "dense_score": 0.79725033,
+        "dense_rank": 22,
+        "bm25_score": 3.0277898321584855,
+        "bm25_rank": 11,
+        "rrf_score": 0.026279628993473032,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_65",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1305
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "SCR_financial_statements_2017_separate_table_69",
+        "retrieval_score": 0.0261986301369863,
+        "retrieval_rank": 13,
+        "dense_score": 0.7998202,
+        "dense_rank": 20,
+        "bm25_score": 2.9306511796369463,
+        "bm25_rank": 13,
+        "rrf_score": 0.0261986301369863,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_69",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1321
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SCR_financial_statements_2017_separate_table_72",
+        "retrieval_score": 0.025726010101010104,
+        "retrieval_rank": 14,
+        "dense_score": 0.7885477,
+        "dense_rank": 39,
+        "bm25_score": 3.5138438662588394,
+        "bm25_rank": 4,
+        "rrf_score": 0.025726010101010104,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_72",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SCR_financial_statements_2017_separate_table_66",
+        "retrieval_score": 0.025516795865633074,
+        "retrieval_rank": 15,
+        "dense_score": 0.79660827,
+        "dense_rank": 26,
+        "bm25_score": 3.0277898321584855,
+        "bm25_rank": 12,
+        "rrf_score": 0.025516795865633074,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_66",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1309
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "SCR_financial_statements_2017_separate_table_68",
+        "retrieval_score": 0.025478740668614087,
+        "retrieval_rank": 16,
+        "dense_score": 0.8006562,
+        "dense_rank": 19,
+        "bm25_score": 2.437990019609166,
+        "bm25_rank": 18,
+        "rrf_score": 0.025478740668614087,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_68",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1317
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "SCR_financial_statements_2017_separate_table_43",
+        "retrieval_score": 0.025353016688061617,
+        "retrieval_rank": 17,
+        "dense_score": 0.804299,
+        "dense_rank": 16,
+        "bm25_score": 2.133858140853381,
+        "bm25_rank": 22,
+        "rrf_score": 0.025353016688061617,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_43",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SCR_financial_statements_2017_separate_table_62",
+        "retrieval_score": 0.025278219395866455,
+        "retrieval_rank": 18,
+        "dense_score": 0.7966217,
+        "dense_rank": 25,
+        "bm25_score": 2.7374394239248185,
+        "bm25_rank": 14,
+        "rrf_score": 0.025278219395866455,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_62",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1274
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "SCR_financial_statements_2017_separate_table_4",
+        "retrieval_score": 0.02481203007518797,
+        "retrieval_rank": 19,
+        "dense_score": 0.8097254,
+        "dense_rank": 10,
+        "bm25_score": 1.4873041677449121,
+        "bm25_rank": 35,
+        "rrf_score": 0.02481203007518797,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_4",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 147
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "SCR_financial_statements_2017_separate_table_6",
+        "retrieval_score": 0.024614919963757174,
+        "retrieval_rank": 20,
+        "dense_score": 0.8013568,
+        "dense_rank": 17,
+        "bm25_score": 1.9602943527778687,
+        "bm25_rank": 26,
+        "rrf_score": 0.024614919963757174,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_6",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 181
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SCR_financial_statements_2017_separate_table_3",
+        "retrieval_score": 0.02439384979302188,
+        "retrieval_rank": 21,
+        "dense_score": 0.79577535,
+        "dense_rank": 29,
+        "bm25_score": 2.5070905465886644,
+        "bm25_rank": 16,
+        "rrf_score": 0.02439384979302188,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_3",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 130
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "SCR_financial_statements_2017_separate_table_49",
+        "retrieval_score": 0.023458810692853244,
+        "retrieval_rank": 22,
+        "dense_score": 0.8008235,
+        "dense_rank": 18,
+        "bm25_score": 1.509378712538568,
+        "bm25_rank": 34,
+        "rrf_score": 0.023458810692853244,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_49",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1116
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "SCR_financial_statements_2017_separate_table_26",
+        "retrieval_score": 0.02345679012345679,
+        "retrieval_rank": 23,
+        "dense_score": 0.7953976,
+        "dense_rank": 30,
+        "bm25_score": 2.1785225349535455,
+        "bm25_rank": 21,
+        "rrf_score": 0.02345679012345679,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_26",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 774
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SCR_financial_statements_2017_separate_table_63",
+        "retrieval_score": 0.022893772893772896,
+        "retrieval_rank": 24,
+        "dense_score": 0.7945686,
+        "dense_rank": 31,
+        "bm25_score": 2.0151251102431686,
+        "bm25_rank": 24,
+        "rrf_score": 0.022893772893772896,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_63",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1284
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "SCR_financial_statements_2017_separate_table_51",
+        "retrieval_score": 0.02285714285714286,
+        "retrieval_rank": 25,
+        "dense_score": 0.7858968,
+        "dense_rank": 45,
+        "bm25_score": 2.618578457777126,
+        "bm25_rank": 15,
+        "rrf_score": 0.02285714285714286,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_51",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1141
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "SCR_financial_statements_2017_separate_table_7",
+        "retrieval_score": 0.02116935483870968,
+        "retrieval_rank": 26,
+        "dense_score": 0.7931254,
+        "dense_rank": 36,
+        "bm25_score": 1.5928516130036166,
+        "bm25_rank": 33,
+        "rrf_score": 0.02116935483870968,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_7",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 200
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SCR_financial_statements_2017_separate_table_64",
+        "retrieval_score": 0.020669917320330716,
+        "retrieval_rank": 27,
+        "dense_score": 0.7855027,
+        "dense_rank": 46,
+        "bm25_score": 1.8442519774662385,
+        "bm25_rank": 29,
+        "rrf_score": 0.020669917320330716,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_64",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "SCR_financial_statements_2017_separate_table_42",
+        "retrieval_score": 0.020618556701030927,
+        "retrieval_rank": 28,
+        "dense_score": 0.78947675,
+        "dense_rank": 37,
+        "bm25_score": 1.2624783450505352,
+        "bm25_rank": 37,
+        "rrf_score": 0.020618556701030927,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_42",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "SCR_financial_statements_2017_separate_table_50",
+        "retrieval_score": 0.02028542303771662,
+        "retrieval_rank": 29,
+        "dense_score": 0.78397,
+        "dense_rank": 49,
+        "bm25_score": 1.8237464661789855,
+        "bm25_rank": 30,
+        "rrf_score": 0.02028542303771662,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_50",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SCR_financial_statements_2017_separate_table_71",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 30,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.3700757788628084,
+        "bm25_rank": 7,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_71",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1340
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "SCR_financial_statements_2017_separate_table_25",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 31,
+        "dense_score": 0.8126908,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_25",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 757
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "SCR_financial_statements_2017_separate_table_47",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 32,
+        "dense_score": 0.8076847,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_47",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1102
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SCR_financial_statements_2017_separate_table_44",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 33,
+        "dense_score": 0.80670595,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_44",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1046
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SCR_financial_statements_2017_separate_table_37",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 34,
+        "dense_score": 0.8050989,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_37",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 937
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "SCR_financial_statements_2017_separate_table_40",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 35,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.5070133788406985,
+        "bm25_rank": 17,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_40",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 968
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SCR_financial_statements_2017_separate_table_21",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 36,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.2262569637887792,
+        "bm25_rank": 20,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_21",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 724
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "SCR_financial_statements_2017_separate_table_59",
+        "retrieval_score": 0.012345679012345678,
+        "retrieval_rank": 37,
+        "dense_score": 0.7975875,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012345679012345678,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_59",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1247
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "SCR_financial_statements_2017_separate_table_73",
+        "retrieval_score": 0.012048192771084338,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.047933390840998,
+        "bm25_rank": 23,
+        "rrf_score": 0.012048192771084338,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_73",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1361
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SCR_financial_statements_2017_separate_table_45",
+        "retrieval_score": 0.011904761904761904,
+        "retrieval_rank": 39,
+        "dense_score": 0.79701173,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011904761904761904,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_45",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1052
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "SCR_financial_statements_2017_separate_table_20",
+        "retrieval_score": 0.011764705882352941,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.9960626100896004,
+        "bm25_rank": 25,
+        "rrf_score": 0.011764705882352941,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_20",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 703
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "SCR_financial_statements_2017_separate_table_41",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 41,
+        "dense_score": 0.7964492,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_41",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 981
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SCR_financial_statements_2017_separate_table_19",
+        "retrieval_score": 0.011363636363636364,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.8730336422805156,
+        "bm25_rank": 28,
+        "rrf_score": 0.011363636363636364,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_19",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 684
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "SCR_financial_statements_2017_separate_table_39",
+        "retrieval_score": 0.011363636363636364,
+        "retrieval_rank": 43,
+        "dense_score": 0.796366,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011363636363636364,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_39",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 964
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SCR_financial_statements_2017_separate_table_13",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.765154949284014,
+        "bm25_rank": 31,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_13",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 574
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SCR_financial_statements_2017_separate_table_12",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 45,
+        "dense_score": 0.7945088,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_12",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 566
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "SCR_financial_statements_2017_separate_table_29",
+        "retrieval_score": 0.010752688172043012,
+        "retrieval_rank": 46,
+        "dense_score": 0.7943783,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010752688172043012,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_29",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 824
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "SCR_financial_statements_2017_separate_table_54",
+        "retrieval_score": 0.010638297872340425,
+        "retrieval_rank": 47,
+        "dense_score": 0.79433835,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010638297872340425,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_54",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1201
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SCR_financial_statements_2017_separate_table_36",
+        "retrieval_score": 0.010526315789473684,
+        "retrieval_rank": 48,
+        "dense_score": 0.79420924,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010526315789473684,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_36",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 929
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "SCR_financial_statements_2017_separate_table_14",
+        "retrieval_score": 0.010416666666666666,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 1.319795863622368,
+        "bm25_rank": 36,
+        "rrf_score": 0.010416666666666666,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_14",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 583
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "SCR_financial_statements_2017_separate_table_11",
+        "retrieval_score": 0.01020408163265306,
+        "retrieval_rank": 50,
+        "dense_score": 0.7893255,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01020408163265306,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_11",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 556
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "SCR_financial_statements_2017_separate|1251",
+            "SCR_financial_statements_2017_separate|1230",
+            "SCR_financial_statements_2017_separate|164",
+            "SCR_financial_statements_2017_separate|889",
+            "SCR_financial_statements_2017_separate|1226"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "SCR_financial_statements_2017_separate|1251",
+            "SCR_financial_statements_2017_separate|1230",
+            "SCR_financial_statements_2017_separate|164",
+            "SCR_financial_statements_2017_separate|889",
+            "SCR_financial_statements_2017_separate|1226",
+            "SCR_financial_statements_2017_separate|1325",
+            "SCR_financial_statements_2017_separate|1257",
+            "SCR_financial_statements_2017_separate|958",
+            "SCR_financial_statements_2017_separate|1081",
+            "SCR_financial_statements_2017_separate|113"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "SCR_financial_statements_2017_separate|1251",
+            "SCR_financial_statements_2017_separate|1230",
+            "SCR_financial_statements_2017_separate|164",
+            "SCR_financial_statements_2017_separate|889",
+            "SCR_financial_statements_2017_separate|1226",
+            "SCR_financial_statements_2017_separate|1325",
+            "SCR_financial_statements_2017_separate|1257",
+            "SCR_financial_statements_2017_separate|958",
+            "SCR_financial_statements_2017_separate|1081",
+            "SCR_financial_statements_2017_separate|113",
+            "SCR_financial_statements_2017_separate|912",
+            "SCR_financial_statements_2017_separate|1305",
+            "SCR_financial_statements_2017_separate|1321",
+            "SCR_financial_statements_2017_separate|1344",
+            "SCR_financial_statements_2017_separate|1309",
+            "SCR_financial_statements_2017_separate|1317",
+            "SCR_financial_statements_2017_separate|1027",
+            "SCR_financial_statements_2017_separate|1274",
+            "SCR_financial_statements_2017_separate|147",
+            "SCR_financial_statements_2017_separate|181"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "SCR_financial_statements_2017_separate|1251",
+            "SCR_financial_statements_2017_separate|1230",
+            "SCR_financial_statements_2017_separate|164",
+            "SCR_financial_statements_2017_separate|889",
+            "SCR_financial_statements_2017_separate|1226",
+            "SCR_financial_statements_2017_separate|1325",
+            "SCR_financial_statements_2017_separate|1257",
+            "SCR_financial_statements_2017_separate|958",
+            "SCR_financial_statements_2017_separate|1081",
+            "SCR_financial_statements_2017_separate|113",
+            "SCR_financial_statements_2017_separate|912",
+            "SCR_financial_statements_2017_separate|1305",
+            "SCR_financial_statements_2017_separate|1321",
+            "SCR_financial_statements_2017_separate|1344",
+            "SCR_financial_statements_2017_separate|1309",
+            "SCR_financial_statements_2017_separate|1317",
+            "SCR_financial_statements_2017_separate|1027",
+            "SCR_financial_statements_2017_separate|1274",
+            "SCR_financial_statements_2017_separate|147",
+            "SCR_financial_statements_2017_separate|181",
+            "SCR_financial_statements_2017_separate|130",
+            "SCR_financial_statements_2017_separate|1116",
+            "SCR_financial_statements_2017_separate|774",
+            "SCR_financial_statements_2017_separate|1284",
+            "SCR_financial_statements_2017_separate|1141",
+            "SCR_financial_statements_2017_separate|200",
+            "SCR_financial_statements_2017_separate|1301",
+            "SCR_financial_statements_2017_separate|1000",
+            "SCR_financial_statements_2017_separate|1135",
+            "SCR_financial_statements_2017_separate|1340",
+            "SCR_financial_statements_2017_separate|757",
+            "SCR_financial_statements_2017_separate|1102",
+            "SCR_financial_statements_2017_separate|1046",
+            "SCR_financial_statements_2017_separate|937",
+            "SCR_financial_statements_2017_separate|968",
+            "SCR_financial_statements_2017_separate|724",
+            "SCR_financial_statements_2017_separate|1247",
+            "SCR_financial_statements_2017_separate|1361",
+            "SCR_financial_statements_2017_separate|1052",
+            "SCR_financial_statements_2017_separate|703",
+            "SCR_financial_statements_2017_separate|981",
+            "SCR_financial_statements_2017_separate|684",
+            "SCR_financial_statements_2017_separate|964",
+            "SCR_financial_statements_2017_separate|574",
+            "SCR_financial_statements_2017_separate|566",
+            "SCR_financial_statements_2017_separate|824",
+            "SCR_financial_statements_2017_separate|1201",
+            "SCR_financial_statements_2017_separate|929",
+            "SCR_financial_statements_2017_separate|583",
+            "SCR_financial_statements_2017_separate|556"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

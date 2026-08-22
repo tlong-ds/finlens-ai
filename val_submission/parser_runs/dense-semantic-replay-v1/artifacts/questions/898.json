@@ -1,0 +1,1132 @@
+{
+  "schema_version": 1,
+  "id": 898,
+  "question": "Tổng số dư phải trả ngắn hạn khác các bên liên quan cuối năm 2024 của công ty mẹ Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng (DIG), CTCP Vincom Retail (VRE) và CTCP Phát triển Bất động sản Phát Đạt (PDR) là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:38:57+00:00",
+  "finished_at": "2026-08-22T13:38:59+00:00",
+  "duration_seconds": 1.5762558769929456,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DIG",
+      "VRE",
+      "PDR"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DIG_financial_statements_2024_separate",
+      "VRE_financial_statements_2024_separate",
+      "PDR_financial_statements_2024_separate"
+    ],
+    "relevant_tables": [
+      "DIG_financial_statements_2024_separate|1573",
+      "VRE_financial_statements_2024_separate|888",
+      "PDR_financial_statements_2024_separate|1116"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DIG",
+      "PDR",
+      "VRE"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tổng số dư phải trả ngắn hạn khác các bên liên quan cuối Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng , CTCP Vincom Retail và CTCP Phát triển Bất động sản Phát Đạt triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DIG",
+        "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+        "matched_text": "DIG",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PDR",
+        "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+        "matched_text": "PDR",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "VRE",
+        "company_name": "CTCP Vincom Retail",
+        "matched_text": "VRE",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "VPI",
+        "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+        "matched_text": "Phát triển Bất động sản Phát",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c05",
+        "ticker": "HPX",
+        "company_name": "CTCP Đầu tư Hải Phát",
+        "matched_text": "Đầu tư Phát",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c03",
+            "c02"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        "separate"
+      ],
+      "extra": [
+        "consolidated"
+      ]
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Tổng số dư phải trả ngắn hạn khác các bên liên quan cuối Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng , CTCP Vincom Retail và CTCP Phát triển Bất động sản Phát Đạt triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DIG",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DIG"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "PDR",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": true,
+        "effective_filters": {
+          "ticker": [
+            "PDR"
+          ],
+          "year": [
+            2024
+          ]
+        }
+      },
+      {
+        "ticker": "VRE",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VRE"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_75",
+        "retrieval_score": 0.8779716,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_75",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1770
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "PDR_financial_statements_2024_separate_table_14",
+        "retrieval_score": 0.86421597,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_14",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 869
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_56",
+        "retrieval_score": 0.8754166,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_56",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_74",
+        "retrieval_score": 0.864624,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_74",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1749
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "PDR_financial_statements_2024_separate_table_62",
+        "retrieval_score": 0.86235017,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_62",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1493
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_55",
+        "retrieval_score": 0.86915016,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_55",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1286
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_31",
+        "retrieval_score": 0.85976607,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_31",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1274
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "PDR_financial_statements_2024_separate_table_75",
+        "retrieval_score": 0.86014736,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_75",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1704
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_53",
+        "retrieval_score": 0.8647555,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_53",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1269
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.8596468,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_32",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1290
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "PDR_financial_statements_2024_separate_table_8",
+        "retrieval_score": 0.8575025,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_8",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 242
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_2",
+        "retrieval_score": 0.8592057,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_2",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 208
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.85808504,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_6",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 350
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "PDR_financial_statements_2024_separate_table_5",
+        "retrieval_score": 0.8571286,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_5",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 184
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_24",
+        "retrieval_score": 0.8573672,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_24",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 942
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_21",
+        "retrieval_score": 0.85796314,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_21",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1175
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "PDR_financial_statements_2024_separate_table_7",
+        "retrieval_score": 0.85566634,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_7",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 214
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_54",
+        "retrieval_score": 0.856848,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_54",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1282
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_18",
+        "retrieval_score": 0.8542992,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_18",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1137
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "PDR_financial_statements_2024_separate_table_32",
+        "retrieval_score": 0.8552623,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_32",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1116
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.8564967,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_7",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 338
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_29",
+        "retrieval_score": 0.85365945,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_29",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1266
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "PDR_financial_statements_2024_separate_table_37",
+        "retrieval_score": 0.85199296,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_37",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1209
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_30",
+        "retrieval_score": 0.8557955,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_30",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 986
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_70",
+        "retrieval_score": 0.85247946,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_70",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1720
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "PDR_financial_statements_2024_separate_table_11",
+        "retrieval_score": 0.8509763,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_11",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 821
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.85496306,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_4",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_37",
+        "retrieval_score": 0.8509781,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_37",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1334
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "PDR_financial_statements_2024_separate_table_60",
+        "retrieval_score": 0.84793776,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_60",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1459
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.8535874,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_40",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1129
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_40",
+        "retrieval_score": 0.8495465,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_40",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1361
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "PDR_financial_statements_2024_separate_table_12",
+        "retrieval_score": 0.8473147,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_12",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 825
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.8527557,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_6",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 311
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_17",
+        "retrieval_score": 0.8489031,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_17",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1122
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "PDR_financial_statements_2024_separate_table_66",
+        "retrieval_score": 0.84492874,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_66",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1552
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_41",
+        "retrieval_score": 0.85220945,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_41",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1133
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_148",
+        "retrieval_score": 0.84850943,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_148",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3662
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "PDR_financial_statements_2024_separate_table_29",
+        "retrieval_score": 0.8442484,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_29",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1082
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_18",
+        "retrieval_score": 0.84876287,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_18",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 857
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_19",
+        "retrieval_score": 0.8482693,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_19",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1147
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "PDR_financial_statements_2024_separate_table_43",
+        "retrieval_score": 0.84363204,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_43",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1289
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_9",
+        "retrieval_score": 0.84719855,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_9",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 437
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.84770006,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_11",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 496
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "PDR_financial_statements_2024_separate_table_45",
+        "retrieval_score": 0.84359795,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_45",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1297
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_52",
+        "retrieval_score": 0.84712577,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_52",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1252
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_7",
+        "retrieval_score": 0.84755504,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_7",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 371
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "PDR_financial_statements_2024_separate_table_38",
+        "retrieval_score": 0.84035647,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_38",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1225
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VRE_financial_statements_2024_consolidated_table_14",
+        "retrieval_score": 0.84588104,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_consolidated_table_14",
+          "doc_id": "VRE_financial_statements_2024_consolidated",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 828
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DIG_financial_statements_2024_consolidated_table_4",
+        "retrieval_score": 0.84456444,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2024_consolidated_table_4",
+          "doc_id": "DIG_financial_statements_2024_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 316
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "PDR_financial_statements_2024_separate_table_70",
+        "retrieval_score": 0.8400544,
+        "metadata": {
+          "table_id": "PDR_financial_statements_2024_separate_table_70",
+          "doc_id": "PDR_financial_statements_2024_separate",
+          "ticker": "PDR",
+          "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1596
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2024_consolidated",
+            "PDR_financial_statements_2024_separate",
+            "VRE_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2024_consolidated|1770",
+            "PDR_financial_statements_2024_separate|869",
+            "VRE_financial_statements_2024_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1749",
+            "PDR_financial_statements_2024_separate|1493"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f2": 0.3333333333333333,
+          "mrr5": 0.5
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2024_consolidated",
+            "PDR_financial_statements_2024_separate",
+            "VRE_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2024_consolidated|1770",
+            "PDR_financial_statements_2024_separate|869",
+            "VRE_financial_statements_2024_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1749",
+            "PDR_financial_statements_2024_separate|1493",
+            "VRE_financial_statements_2024_consolidated|1286",
+            "DIG_financial_statements_2024_consolidated|1274",
+            "PDR_financial_statements_2024_separate|1704",
+            "VRE_financial_statements_2024_consolidated|1269",
+            "DIG_financial_statements_2024_consolidated|1290"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f2": 0.3333333333333333,
+          "mrr5": 0.5
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2024_consolidated",
+            "PDR_financial_statements_2024_separate",
+            "VRE_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2024_consolidated|1770",
+            "PDR_financial_statements_2024_separate|869",
+            "VRE_financial_statements_2024_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1749",
+            "PDR_financial_statements_2024_separate|1493",
+            "VRE_financial_statements_2024_consolidated|1286",
+            "DIG_financial_statements_2024_consolidated|1274",
+            "PDR_financial_statements_2024_separate|1704",
+            "VRE_financial_statements_2024_consolidated|1269",
+            "DIG_financial_statements_2024_consolidated|1290",
+            "PDR_financial_statements_2024_separate|242",
+            "VRE_financial_statements_2024_consolidated|208",
+            "DIG_financial_statements_2024_consolidated|350",
+            "PDR_financial_statements_2024_separate|184",
+            "VRE_financial_statements_2024_consolidated|942",
+            "DIG_financial_statements_2024_consolidated|1175",
+            "PDR_financial_statements_2024_separate|214",
+            "VRE_financial_statements_2024_consolidated|1282",
+            "DIG_financial_statements_2024_consolidated|1137",
+            "PDR_financial_statements_2024_separate|1116"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 0.3333333333333333,
+          "f2": 0.15625,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f2": 0.3333333333333333,
+          "mrr5": 0.5
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2024_consolidated",
+            "PDR_financial_statements_2024_separate",
+            "VRE_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2024_consolidated|1770",
+            "PDR_financial_statements_2024_separate|869",
+            "VRE_financial_statements_2024_consolidated|1297",
+            "DIG_financial_statements_2024_consolidated|1749",
+            "PDR_financial_statements_2024_separate|1493",
+            "VRE_financial_statements_2024_consolidated|1286",
+            "DIG_financial_statements_2024_consolidated|1274",
+            "PDR_financial_statements_2024_separate|1704",
+            "VRE_financial_statements_2024_consolidated|1269",
+            "DIG_financial_statements_2024_consolidated|1290",
+            "PDR_financial_statements_2024_separate|242",
+            "VRE_financial_statements_2024_consolidated|208",
+            "DIG_financial_statements_2024_consolidated|350",
+            "PDR_financial_statements_2024_separate|184",
+            "VRE_financial_statements_2024_consolidated|942",
+            "DIG_financial_statements_2024_consolidated|1175",
+            "PDR_financial_statements_2024_separate|214",
+            "VRE_financial_statements_2024_consolidated|1282",
+            "DIG_financial_statements_2024_consolidated|1137",
+            "PDR_financial_statements_2024_separate|1116",
+            "VRE_financial_statements_2024_consolidated|338",
+            "DIG_financial_statements_2024_consolidated|1266",
+            "PDR_financial_statements_2024_separate|1209",
+            "VRE_financial_statements_2024_consolidated|986",
+            "DIG_financial_statements_2024_consolidated|1720",
+            "PDR_financial_statements_2024_separate|821",
+            "VRE_financial_statements_2024_consolidated|252",
+            "DIG_financial_statements_2024_consolidated|1334",
+            "PDR_financial_statements_2024_separate|1459",
+            "VRE_financial_statements_2024_consolidated|1129",
+            "DIG_financial_statements_2024_consolidated|1361",
+            "PDR_financial_statements_2024_separate|825",
+            "VRE_financial_statements_2024_consolidated|311",
+            "DIG_financial_statements_2024_consolidated|1122",
+            "PDR_financial_statements_2024_separate|1552",
+            "VRE_financial_statements_2024_consolidated|1133",
+            "DIG_financial_statements_2024_consolidated|3662",
+            "PDR_financial_statements_2024_separate|1082",
+            "VRE_financial_statements_2024_consolidated|857",
+            "DIG_financial_statements_2024_consolidated|1147",
+            "PDR_financial_statements_2024_separate|1289",
+            "VRE_financial_statements_2024_consolidated|437",
+            "DIG_financial_statements_2024_consolidated|496",
+            "PDR_financial_statements_2024_separate|1297",
+            "VRE_financial_statements_2024_consolidated|1252",
+            "DIG_financial_statements_2024_consolidated|371",
+            "PDR_financial_statements_2024_separate|1225",
+            "VRE_financial_statements_2024_consolidated|828",
+            "DIG_financial_statements_2024_consolidated|316",
+            "PDR_financial_statements_2024_separate|1596"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 0.3333333333333333,
+          "f2": 0.08064516129032258,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f2": 0.3333333333333333,
+          "mrr5": 0.5
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

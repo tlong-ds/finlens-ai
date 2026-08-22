@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 711,
+  "question": "Tỷ trọng doanh thu bán hàng cho các bên liên quan của công ty mẹ Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP năm 2017 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T13:39:25+00:00",
+  "finished_at": "2026-08-22T13:39:26+00:00",
+  "duration_seconds": 0.4246649859996978,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DPM"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DPM_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "DPM_financial_statements_2017_separate|1112"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DPM"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tỷ trọng doanh thu bán hàng cho các bên liên quan phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tỷ trọng doanh thu bán hàng cho các bên liên quan của công ty mẹ Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP năm 2017 là bao nhiêu phần trăm?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DPM",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DPM"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DPM_financial_statements_2017_separate_table_16",
+        "retrieval_score": 0.8744235,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_16",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 772
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DPM_financial_statements_2017_separate_table_10",
+        "retrieval_score": 0.84855914,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_10",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 467
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DPM_financial_statements_2017_separate_table_7",
+        "retrieval_score": 0.84662026,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_7",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 292
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DPM_financial_statements_2017_separate_table_41",
+        "retrieval_score": 0.83991075,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_41",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1112
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DPM_financial_statements_2017_separate_table_49",
+        "retrieval_score": 0.83220583,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_49",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1227
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DPM_financial_statements_2017_separate_table_17",
+        "retrieval_score": 0.83132917,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_17",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 778
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DPM_financial_statements_2017_separate_table_50",
+        "retrieval_score": 0.8305361,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_50",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1244
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DPM_financial_statements_2017_separate_table_20",
+        "retrieval_score": 0.82314515,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_20",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 801
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "DPM_financial_statements_2017_separate_table_51",
+        "retrieval_score": 0.82040477,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_51",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1255
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DPM_financial_statements_2017_separate_table_15",
+        "retrieval_score": 0.81852496,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_15",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 757
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DPM_financial_statements_2017_separate_table_18",
+        "retrieval_score": 0.81813735,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_18",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 793
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "DPM_financial_statements_2017_separate_table_46",
+        "retrieval_score": 0.8139914,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_46",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1155
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DPM_financial_statements_2017_separate_table_42",
+        "retrieval_score": 0.8110614,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_42",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1116
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DPM_financial_statements_2017_separate_table_19",
+        "retrieval_score": 0.81071955,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_19",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 797
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DPM_financial_statements_2017_separate_table_47",
+        "retrieval_score": 0.8096762,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_47",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1159
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DPM_financial_statements_2017_separate_table_44",
+        "retrieval_score": 0.807243,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_44",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1136
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DPM_financial_statements_2017_separate_table_21",
+        "retrieval_score": 0.806164,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_21",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 886
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DPM_financial_statements_2017_separate_table_22",
+        "retrieval_score": 0.8039588,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_22",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 907
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DPM_financial_statements_2017_separate_table_39",
+        "retrieval_score": 0.8038764,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_39",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1083
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DPM_financial_statements_2017_separate_table_31",
+        "retrieval_score": 0.7983576,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_31",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 999
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DPM_financial_statements_2017_separate_table_32",
+        "retrieval_score": 0.7964261,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_32",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1014
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DPM_financial_statements_2017_separate_table_24",
+        "retrieval_score": 0.79543316,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_24",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 924
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DPM_financial_statements_2017_separate_table_35",
+        "retrieval_score": 0.7953081,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_35",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1037
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "DPM_financial_statements_2017_separate_table_48",
+        "retrieval_score": 0.79372627,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_48",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1171
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DPM_financial_statements_2017_separate_table_13",
+        "retrieval_score": 0.7932089,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_13",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 734
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DPM_financial_statements_2017_separate_table_37",
+        "retrieval_score": 0.7903255,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_37",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1058
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DPM_financial_statements_2017_separate_table_30",
+        "retrieval_score": 0.7882821,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_30",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 993
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DPM_financial_statements_2017_separate_table_14",
+        "retrieval_score": 0.7853867,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_14",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 742
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DPM_financial_statements_2017_separate_table_33",
+        "retrieval_score": 0.7847333,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_33",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1018
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DPM_financial_statements_2017_separate_table_29",
+        "retrieval_score": 0.78289765,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_29",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 989
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DPM_financial_statements_2017_separate_table_40",
+        "retrieval_score": 0.78230697,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_40",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1091
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DPM_financial_statements_2017_separate_table_38",
+        "retrieval_score": 0.78196824,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_38",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1075
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "DPM_financial_statements_2017_separate_table_43",
+        "retrieval_score": 0.7814488,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_43",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1132
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DPM_financial_statements_2017_separate_table_6",
+        "retrieval_score": 0.780445,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_6",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 258
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DPM_financial_statements_2017_separate_table_11",
+        "retrieval_score": 0.7799431,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_11",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 584
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DPM_financial_statements_2017_separate_table_5",
+        "retrieval_score": 0.77960217,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_5",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 226
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DPM_financial_statements_2017_separate_table_45",
+        "retrieval_score": 0.7784933,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_45",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1140
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DPM_financial_statements_2017_separate_table_25",
+        "retrieval_score": 0.77776104,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_25",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 939
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DPM_financial_statements_2017_separate_table_2",
+        "retrieval_score": 0.77729833,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_2",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 52
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DPM_financial_statements_2017_separate_table_23",
+        "retrieval_score": 0.7755378,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_23",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 911
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DPM_financial_statements_2017_separate_table_4",
+        "retrieval_score": 0.774785,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_4",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 199
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DPM_financial_statements_2017_separate_table_3",
+        "retrieval_score": 0.7724351,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_3",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 56
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DPM_financial_statements_2017_separate_table_27",
+        "retrieval_score": 0.7716205,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_27",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 964
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DPM_financial_statements_2017_separate_table_8",
+        "retrieval_score": 0.77029526,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_8",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 330
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DPM_financial_statements_2017_separate_table_36",
+        "retrieval_score": 0.7697443,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_36",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1047
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DPM_financial_statements_2017_separate_table_34",
+        "retrieval_score": 0.7665093,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_34",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DPM_financial_statements_2017_separate_table_26",
+        "retrieval_score": 0.7657408,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_26",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 945
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "DPM_financial_statements_2017_separate_table_12",
+        "retrieval_score": 0.76422864,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_12",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 623
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DPM_financial_statements_2017_separate_table_9",
+        "retrieval_score": 0.7625628,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_9",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 364
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DPM_financial_statements_2017_separate_table_28",
+        "retrieval_score": 0.76248956,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2017_separate_table_28",
+          "doc_id": "DPM_financial_statements_2017_separate",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 974
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DPM_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "DPM_financial_statements_2017_separate|772",
+            "DPM_financial_statements_2017_separate|467",
+            "DPM_financial_statements_2017_separate|292",
+            "DPM_financial_statements_2017_separate|1112",
+            "DPM_financial_statements_2017_separate|1227"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DPM_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "DPM_financial_statements_2017_separate|772",
+            "DPM_financial_statements_2017_separate|467",
+            "DPM_financial_statements_2017_separate|292",
+            "DPM_financial_statements_2017_separate|1112",
+            "DPM_financial_statements_2017_separate|1227",
+            "DPM_financial_statements_2017_separate|778",
+            "DPM_financial_statements_2017_separate|1244",
+            "DPM_financial_statements_2017_separate|801",
+            "DPM_financial_statements_2017_separate|1255",
+            "DPM_financial_statements_2017_separate|757"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DPM_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "DPM_financial_statements_2017_separate|772",
+            "DPM_financial_statements_2017_separate|467",
+            "DPM_financial_statements_2017_separate|292",
+            "DPM_financial_statements_2017_separate|1112",
+            "DPM_financial_statements_2017_separate|1227",
+            "DPM_financial_statements_2017_separate|778",
+            "DPM_financial_statements_2017_separate|1244",
+            "DPM_financial_statements_2017_separate|801",
+            "DPM_financial_statements_2017_separate|1255",
+            "DPM_financial_statements_2017_separate|757",
+            "DPM_financial_statements_2017_separate|793",
+            "DPM_financial_statements_2017_separate|1155",
+            "DPM_financial_statements_2017_separate|1116",
+            "DPM_financial_statements_2017_separate|797",
+            "DPM_financial_statements_2017_separate|1159",
+            "DPM_financial_statements_2017_separate|1136",
+            "DPM_financial_statements_2017_separate|886",
+            "DPM_financial_statements_2017_separate|907",
+            "DPM_financial_statements_2017_separate|1083",
+            "DPM_financial_statements_2017_separate|999"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DPM_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "DPM_financial_statements_2017_separate|772",
+            "DPM_financial_statements_2017_separate|467",
+            "DPM_financial_statements_2017_separate|292",
+            "DPM_financial_statements_2017_separate|1112",
+            "DPM_financial_statements_2017_separate|1227",
+            "DPM_financial_statements_2017_separate|778",
+            "DPM_financial_statements_2017_separate|1244",
+            "DPM_financial_statements_2017_separate|801",
+            "DPM_financial_statements_2017_separate|1255",
+            "DPM_financial_statements_2017_separate|757",
+            "DPM_financial_statements_2017_separate|793",
+            "DPM_financial_statements_2017_separate|1155",
+            "DPM_financial_statements_2017_separate|1116",
+            "DPM_financial_statements_2017_separate|797",
+            "DPM_financial_statements_2017_separate|1159",
+            "DPM_financial_statements_2017_separate|1136",
+            "DPM_financial_statements_2017_separate|886",
+            "DPM_financial_statements_2017_separate|907",
+            "DPM_financial_statements_2017_separate|1083",
+            "DPM_financial_statements_2017_separate|999",
+            "DPM_financial_statements_2017_separate|1014",
+            "DPM_financial_statements_2017_separate|924",
+            "DPM_financial_statements_2017_separate|1037",
+            "DPM_financial_statements_2017_separate|1171",
+            "DPM_financial_statements_2017_separate|734",
+            "DPM_financial_statements_2017_separate|1058",
+            "DPM_financial_statements_2017_separate|993",
+            "DPM_financial_statements_2017_separate|742",
+            "DPM_financial_statements_2017_separate|1018",
+            "DPM_financial_statements_2017_separate|989",
+            "DPM_financial_statements_2017_separate|1091",
+            "DPM_financial_statements_2017_separate|1075",
+            "DPM_financial_statements_2017_separate|1132",
+            "DPM_financial_statements_2017_separate|258",
+            "DPM_financial_statements_2017_separate|584",
+            "DPM_financial_statements_2017_separate|226",
+            "DPM_financial_statements_2017_separate|1140",
+            "DPM_financial_statements_2017_separate|939",
+            "DPM_financial_statements_2017_separate|52",
+            "DPM_financial_statements_2017_separate|911",
+            "DPM_financial_statements_2017_separate|199",
+            "DPM_financial_statements_2017_separate|56",
+            "DPM_financial_statements_2017_separate|964",
+            "DPM_financial_statements_2017_separate|330",
+            "DPM_financial_statements_2017_separate|1047",
+            "DPM_financial_statements_2017_separate|1033",
+            "DPM_financial_statements_2017_separate|945",
+            "DPM_financial_statements_2017_separate|623",
+            "DPM_financial_statements_2017_separate|364",
+            "DPM_financial_statements_2017_separate|974"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.25
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

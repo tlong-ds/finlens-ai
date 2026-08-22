@@ -1,0 +1,1091 @@
+{
+  "schema_version": 1,
+  "id": 739,
+  "question": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:39:26+00:00",
+  "finished_at": "2026-08-22T13:39:27+00:00",
+  "duration_seconds": 1.214232127997093,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "IJC",
+      "SCR"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "IJC_financial_statements_2017_separate",
+      "SCR_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "IJC_financial_statements_2017_separate|1263",
+      "SCR_financial_statements_2017_separate|1046"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "IJC",
+      "SCR"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Quy mô nợ trái phiếu thường đến ngày 31/12/ trừ đi quy mô nợ trái phiếu thường đến ngày 31/12/ tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "matched_text": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "matched_text": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "SGB",
+        "company_name": "Ngân hàng TMCP Sài Gòn Công Thương",
+        "matched_text": "Sài Gòn Thương",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "IJC",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "IJC"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "SCR",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SCR"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "IJC_financial_statements_2017_separate_table_65",
+        "retrieval_score": 0.8651752,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_65",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1563
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "SCR_financial_statements_2017_separate_table_36",
+        "retrieval_score": 0.871287,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_36",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 929
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "IJC_financial_statements_2017_separate_table_52",
+        "retrieval_score": 0.8527456,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_52",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SCR_financial_statements_2017_separate_table_72",
+        "retrieval_score": 0.8620734,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_72",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "IJC_financial_statements_2017_separate_table_66",
+        "retrieval_score": 0.8492284,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_66",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1578
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SCR_financial_statements_2017_separate_table_64",
+        "retrieval_score": 0.85844404,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_64",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "IJC_financial_statements_2017_separate_table_15",
+        "retrieval_score": 0.845402,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_15",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 934
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "SCR_financial_statements_2017_separate_table_21",
+        "retrieval_score": 0.8559816,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_21",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 724
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "IJC_financial_statements_2017_separate_table_31",
+        "retrieval_score": 0.84206545,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_31",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1100
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "SCR_financial_statements_2017_separate_table_20",
+        "retrieval_score": 0.8546553,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_20",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 703
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "IJC_financial_statements_2017_separate_table_64",
+        "retrieval_score": 0.8414736,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_64",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1548
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SCR_financial_statements_2017_separate_table_40",
+        "retrieval_score": 0.85126257,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_40",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 968
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "IJC_financial_statements_2017_separate_table_33",
+        "retrieval_score": 0.84008133,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_33",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1123
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SCR_financial_statements_2017_separate_table_71",
+        "retrieval_score": 0.84761083,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_71",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1340
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "IJC_financial_statements_2017_separate_table_42",
+        "retrieval_score": 0.8397658,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_42",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1263
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "SCR_financial_statements_2017_separate_table_13",
+        "retrieval_score": 0.8465237,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_13",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 574
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "IJC_financial_statements_2017_separate_table_38",
+        "retrieval_score": 0.8391003,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_38",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1203
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SCR_financial_statements_2017_separate_table_59",
+        "retrieval_score": 0.8428407,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_59",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1247
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "IJC_financial_statements_2017_separate_table_19",
+        "retrieval_score": 0.8387177,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_19",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 965
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "SCR_financial_statements_2017_separate_table_47",
+        "retrieval_score": 0.83618,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_47",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1102
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "IJC_financial_statements_2017_separate_table_40",
+        "retrieval_score": 0.83852625,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_40",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1236
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "SCR_financial_statements_2017_separate_table_22",
+        "retrieval_score": 0.8358377,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_22",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 728
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "IJC_financial_statements_2017_separate_table_18",
+        "retrieval_score": 0.83846277,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_18",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 961
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SCR_financial_statements_2017_separate_table_24",
+        "retrieval_score": 0.83523273,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_24",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 751
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "IJC_financial_statements_2017_separate_table_7",
+        "retrieval_score": 0.8362652,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_7",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 378
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "SCR_financial_statements_2017_separate_table_73",
+        "retrieval_score": 0.831148,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_73",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1361
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "IJC_financial_statements_2017_separate_table_17",
+        "retrieval_score": 0.83612204,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_17",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 946
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "SCR_financial_statements_2017_separate_table_58",
+        "retrieval_score": 0.830182,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_58",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1230
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "IJC_financial_statements_2017_separate_table_59",
+        "retrieval_score": 0.8329188,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_59",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1481
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SCR_financial_statements_2017_separate_table_46",
+        "retrieval_score": 0.8284396,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_46",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1081
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "IJC_financial_statements_2017_separate_table_61",
+        "retrieval_score": 0.8325634,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_61",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1489
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "SCR_financial_statements_2017_separate_table_68",
+        "retrieval_score": 0.82791895,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_68",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1317
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "IJC_financial_statements_2017_separate_table_60",
+        "retrieval_score": 0.8322976,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_60",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1485
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SCR_financial_statements_2017_separate_table_25",
+        "retrieval_score": 0.827263,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_25",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 757
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "IJC_financial_statements_2017_separate_table_48",
+        "retrieval_score": 0.8317033,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_48",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1367
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SCR_financial_statements_2017_separate_table_56",
+        "retrieval_score": 0.82661295,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_56",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1222
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "IJC_financial_statements_2017_separate_table_14",
+        "retrieval_score": 0.83127046,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_14",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 912
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "SCR_financial_statements_2017_separate_table_30",
+        "retrieval_score": 0.8265885,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_30",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 843
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "IJC_financial_statements_2017_separate_table_54",
+        "retrieval_score": 0.8266187,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_54",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1445
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "SCR_financial_statements_2017_separate_table_5",
+        "retrieval_score": 0.826584,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_5",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 164
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "IJC_financial_statements_2017_separate_table_39",
+        "retrieval_score": 0.8259541,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_39",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1222
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SCR_financial_statements_2017_separate_table_42",
+        "retrieval_score": 0.82556194,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_42",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1000
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "IJC_financial_statements_2017_separate_table_16",
+        "retrieval_score": 0.82594436,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_16",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 940
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SCR_financial_statements_2017_separate_table_28",
+        "retrieval_score": 0.8252671,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_28",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 803
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "IJC_financial_statements_2017_separate_table_8",
+        "retrieval_score": 0.8249251,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_8",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 404
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "SCR_financial_statements_2017_separate_table_35",
+        "retrieval_score": 0.824279,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_35",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 912
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "IJC_financial_statements_2017_separate_table_26",
+        "retrieval_score": 0.8234558,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_26",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1038
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SCR_financial_statements_2017_separate_table_1",
+        "retrieval_score": 0.823618,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_1",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 14
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "IJC_financial_statements_2017_separate_table_35",
+        "retrieval_score": 0.8220838,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2017_separate_table_35",
+          "doc_id": "IJC_financial_statements_2017_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1144
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "SCR_financial_statements_2017_separate_table_7",
+        "retrieval_score": 0.8235725,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2017_separate_table_7",
+          "doc_id": "SCR_financial_statements_2017_separate",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 200
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2017_separate",
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2017_separate|1563",
+            "SCR_financial_statements_2017_separate|929",
+            "IJC_financial_statements_2017_separate|1421",
+            "SCR_financial_statements_2017_separate|1344",
+            "IJC_financial_statements_2017_separate|1578"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2017_separate",
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2017_separate|1563",
+            "SCR_financial_statements_2017_separate|929",
+            "IJC_financial_statements_2017_separate|1421",
+            "SCR_financial_statements_2017_separate|1344",
+            "IJC_financial_statements_2017_separate|1578",
+            "SCR_financial_statements_2017_separate|1301",
+            "IJC_financial_statements_2017_separate|934",
+            "SCR_financial_statements_2017_separate|724",
+            "IJC_financial_statements_2017_separate|1100",
+            "SCR_financial_statements_2017_separate|703"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2017_separate",
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2017_separate|1563",
+            "SCR_financial_statements_2017_separate|929",
+            "IJC_financial_statements_2017_separate|1421",
+            "SCR_financial_statements_2017_separate|1344",
+            "IJC_financial_statements_2017_separate|1578",
+            "SCR_financial_statements_2017_separate|1301",
+            "IJC_financial_statements_2017_separate|934",
+            "SCR_financial_statements_2017_separate|724",
+            "IJC_financial_statements_2017_separate|1100",
+            "SCR_financial_statements_2017_separate|703",
+            "IJC_financial_statements_2017_separate|1548",
+            "SCR_financial_statements_2017_separate|968",
+            "IJC_financial_statements_2017_separate|1123",
+            "SCR_financial_statements_2017_separate|1340",
+            "IJC_financial_statements_2017_separate|1263",
+            "SCR_financial_statements_2017_separate|574",
+            "IJC_financial_statements_2017_separate|1203",
+            "SCR_financial_statements_2017_separate|1247",
+            "IJC_financial_statements_2017_separate|965",
+            "SCR_financial_statements_2017_separate|1102"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 0.5,
+          "f2": 0.17857142857142858,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2017_separate",
+            "SCR_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2017_separate|1563",
+            "SCR_financial_statements_2017_separate|929",
+            "IJC_financial_statements_2017_separate|1421",
+            "SCR_financial_statements_2017_separate|1344",
+            "IJC_financial_statements_2017_separate|1578",
+            "SCR_financial_statements_2017_separate|1301",
+            "IJC_financial_statements_2017_separate|934",
+            "SCR_financial_statements_2017_separate|724",
+            "IJC_financial_statements_2017_separate|1100",
+            "SCR_financial_statements_2017_separate|703",
+            "IJC_financial_statements_2017_separate|1548",
+            "SCR_financial_statements_2017_separate|968",
+            "IJC_financial_statements_2017_separate|1123",
+            "SCR_financial_statements_2017_separate|1340",
+            "IJC_financial_statements_2017_separate|1263",
+            "SCR_financial_statements_2017_separate|574",
+            "IJC_financial_statements_2017_separate|1203",
+            "SCR_financial_statements_2017_separate|1247",
+            "IJC_financial_statements_2017_separate|965",
+            "SCR_financial_statements_2017_separate|1102",
+            "IJC_financial_statements_2017_separate|1236",
+            "SCR_financial_statements_2017_separate|728",
+            "IJC_financial_statements_2017_separate|961",
+            "SCR_financial_statements_2017_separate|751",
+            "IJC_financial_statements_2017_separate|378",
+            "SCR_financial_statements_2017_separate|1361",
+            "IJC_financial_statements_2017_separate|946",
+            "SCR_financial_statements_2017_separate|1230",
+            "IJC_financial_statements_2017_separate|1481",
+            "SCR_financial_statements_2017_separate|1081",
+            "IJC_financial_statements_2017_separate|1489",
+            "SCR_financial_statements_2017_separate|1317",
+            "IJC_financial_statements_2017_separate|1485",
+            "SCR_financial_statements_2017_separate|757",
+            "IJC_financial_statements_2017_separate|1367",
+            "SCR_financial_statements_2017_separate|1222",
+            "IJC_financial_statements_2017_separate|912",
+            "SCR_financial_statements_2017_separate|843",
+            "IJC_financial_statements_2017_separate|1445",
+            "SCR_financial_statements_2017_separate|164",
+            "IJC_financial_statements_2017_separate|1222",
+            "SCR_financial_statements_2017_separate|1000",
+            "IJC_financial_statements_2017_separate|940",
+            "SCR_financial_statements_2017_separate|803",
+            "IJC_financial_statements_2017_separate|404",
+            "SCR_financial_statements_2017_separate|912",
+            "IJC_financial_statements_2017_separate|1038",
+            "SCR_financial_statements_2017_separate|14",
+            "IJC_financial_statements_2017_separate|1144",
+            "SCR_financial_statements_2017_separate|200"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 0.5,
+          "f2": 0.08620689655172414,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

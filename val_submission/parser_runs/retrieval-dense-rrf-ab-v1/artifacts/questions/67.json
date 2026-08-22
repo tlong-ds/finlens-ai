@@ -1,0 +1,1360 @@
+{
+  "schema_version": 1,
+  "id": 67,
+  "question": "Tổng giá vốn hàng bán và dịch vụ cung cấp của công ty mẹ CTCP Phát triển Bất động sản Văn Phú (VPI) năm 2025 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:50:45+00:00",
+  "finished_at": "2026-08-22T13:50:45+00:00",
+  "duration_seconds": 0.2533371720055584,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VPI"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VPI_financial_statements_2025_separate"
+    ],
+    "relevant_tables": [
+      "VPI_financial_statements_2025_separate|1839"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VPI"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tổng giá vốn hàng bán và dịch vụ cung cấp CTCP Phát triển Bất động sản Văn Phú tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VPI",
+        "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+        "matched_text": "VPI",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PDR",
+        "company_name": "CTCP Phát triển Bất động sản Phát Đạt",
+        "matched_text": "Phát triển Bất động sản",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Tổng giá vốn hàng bán và dịch vụ cung cấp CTCP Phát triển Bất động sản Văn Phú tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VPI",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VPI"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VPI_financial_statements_2025_separate_table_59",
+        "retrieval_score": 0.8678138,
+        "retrieval_rank": 1,
+        "dense_score": 0.8678138,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_59",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1839
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VPI_financial_statements_2025_separate_table_9",
+        "retrieval_score": 0.8619475,
+        "retrieval_rank": 2,
+        "dense_score": 0.8619475,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_9",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 435
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VPI_financial_statements_2025_separate_table_68",
+        "retrieval_score": 0.8542219,
+        "retrieval_rank": 3,
+        "dense_score": 0.8542219,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_68",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1969
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VPI_financial_statements_2025_separate_table_12",
+        "retrieval_score": 0.85320824,
+        "retrieval_rank": 4,
+        "dense_score": 0.85320824,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_12",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 542
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VPI_financial_statements_2025_separate_table_57",
+        "retrieval_score": 0.851814,
+        "retrieval_rank": 5,
+        "dense_score": 0.851814,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_57",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1831
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VPI_financial_statements_2025_separate_table_69",
+        "retrieval_score": 0.84985036,
+        "retrieval_rank": 6,
+        "dense_score": 0.84985036,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_69",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1990
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VPI_financial_statements_2025_separate_table_13",
+        "retrieval_score": 0.84832644,
+        "retrieval_rank": 7,
+        "dense_score": 0.84832644,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_13",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 546
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VPI_financial_statements_2025_separate_table_35",
+        "retrieval_score": 0.84660167,
+        "retrieval_rank": 8,
+        "dense_score": 0.84660167,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_35",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1488
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VPI_financial_statements_2025_separate_table_34",
+        "retrieval_score": 0.8462788,
+        "retrieval_rank": 9,
+        "dense_score": 0.8462788,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_34",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1430
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VPI_financial_statements_2025_separate_table_61",
+        "retrieval_score": 0.84426785,
+        "retrieval_rank": 10,
+        "dense_score": 0.84426785,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_61",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1864
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VPI_financial_statements_2025_separate_table_31",
+        "retrieval_score": 0.8441606,
+        "retrieval_rank": 11,
+        "dense_score": 0.8441606,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_31",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1405
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VPI_financial_statements_2025_separate_table_27",
+        "retrieval_score": 0.843573,
+        "retrieval_rank": 12,
+        "dense_score": 0.843573,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_27",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1325
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VPI_financial_statements_2025_separate_table_75",
+        "retrieval_score": 0.8425928,
+        "retrieval_rank": 13,
+        "dense_score": 0.8425928,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_75",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2135
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VPI_financial_statements_2025_separate_table_62",
+        "retrieval_score": 0.8420081,
+        "retrieval_rank": 14,
+        "dense_score": 0.8420081,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_62",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1868
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VPI_financial_statements_2025_separate_table_24",
+        "retrieval_score": 0.8417438,
+        "retrieval_rank": 15,
+        "dense_score": 0.8417438,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_24",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1296
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VPI_financial_statements_2025_separate_table_47",
+        "retrieval_score": 0.8371896,
+        "retrieval_rank": 16,
+        "dense_score": 0.8371896,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_47",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1665
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VPI_financial_statements_2025_separate_table_60",
+        "retrieval_score": 0.8366761,
+        "retrieval_rank": 17,
+        "dense_score": 0.8366761,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_60",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1860
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VPI_financial_statements_2025_separate_table_19",
+        "retrieval_score": 0.8358847,
+        "retrieval_rank": 18,
+        "dense_score": 0.8358847,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_19",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1218
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VPI_financial_statements_2025_separate_table_67",
+        "retrieval_score": 0.8347354,
+        "retrieval_rank": 19,
+        "dense_score": 0.8347354,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_67",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1959
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VPI_financial_statements_2025_separate_table_73",
+        "retrieval_score": 0.83374256,
+        "retrieval_rank": 20,
+        "dense_score": 0.83374256,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_73",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2101
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VPI_financial_statements_2025_separate_table_28",
+        "retrieval_score": 0.831902,
+        "retrieval_rank": 21,
+        "dense_score": 0.831902,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_28",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1343
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VPI_financial_statements_2025_separate_table_42",
+        "retrieval_score": 0.8318344,
+        "retrieval_rank": 22,
+        "dense_score": 0.8318344,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_42",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1600
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VPI_financial_statements_2025_separate_table_36",
+        "retrieval_score": 0.8308599,
+        "retrieval_rank": 23,
+        "dense_score": 0.8308599,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_36",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1509
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VPI_financial_statements_2025_separate_table_63",
+        "retrieval_score": 0.8302576,
+        "retrieval_rank": 24,
+        "dense_score": 0.8302576,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_63",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1892
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VPI_financial_statements_2025_separate_table_77",
+        "retrieval_score": 0.829712,
+        "retrieval_rank": 25,
+        "dense_score": 0.829712,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_77",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2198
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VPI_financial_statements_2025_separate_table_71",
+        "retrieval_score": 0.8284819,
+        "retrieval_rank": 26,
+        "dense_score": 0.8284819,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_71",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2048
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VPI_financial_statements_2025_separate_table_41",
+        "retrieval_score": 0.8266947,
+        "retrieval_rank": 27,
+        "dense_score": 0.8266947,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_41",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1581
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VPI_financial_statements_2025_separate_table_25",
+        "retrieval_score": 0.8266633,
+        "retrieval_rank": 28,
+        "dense_score": 0.8266633,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_25",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1300
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VPI_financial_statements_2025_separate_table_23",
+        "retrieval_score": 0.8262798,
+        "retrieval_rank": 29,
+        "dense_score": 0.8262798,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_23",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1274
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VPI_financial_statements_2025_separate_table_18",
+        "retrieval_score": 0.8262732,
+        "retrieval_rank": 30,
+        "dense_score": 0.8262732,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_18",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1214
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VPI_financial_statements_2025_separate_table_33",
+        "retrieval_score": 0.82620126,
+        "retrieval_rank": 31,
+        "dense_score": 0.82620126,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_33",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1426
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VPI_financial_statements_2025_separate_table_51",
+        "retrieval_score": 0.826067,
+        "retrieval_rank": 32,
+        "dense_score": 0.826067,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_51",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1748
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VPI_financial_statements_2025_separate_table_66",
+        "retrieval_score": 0.8254329,
+        "retrieval_rank": 33,
+        "dense_score": 0.8254329,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_66",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 1938
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VPI_financial_statements_2025_separate_table_72",
+        "retrieval_score": 0.8245947,
+        "retrieval_rank": 34,
+        "dense_score": 0.8245947,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_72",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2071
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VPI_financial_statements_2025_separate_table_21",
+        "retrieval_score": 0.8237747,
+        "retrieval_rank": 35,
+        "dense_score": 0.8237747,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_21",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1245
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VPI_financial_statements_2025_separate_table_37",
+        "retrieval_score": 0.8234947,
+        "retrieval_rank": 36,
+        "dense_score": 0.8234947,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_37",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1544
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VPI_financial_statements_2025_separate_table_14",
+        "retrieval_score": 0.8233817,
+        "retrieval_rank": 37,
+        "dense_score": 0.8233817,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_14",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 764
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VPI_financial_statements_2025_separate_table_70",
+        "retrieval_score": 0.8233774,
+        "retrieval_rank": 38,
+        "dense_score": 0.8233774,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_70",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2016
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VPI_financial_statements_2025_separate_table_20",
+        "retrieval_score": 0.8230932,
+        "retrieval_rank": 39,
+        "dense_score": 0.8230932,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_20",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1237
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VPI_financial_statements_2025_separate_table_65",
+        "retrieval_score": 0.8220767,
+        "retrieval_rank": 40,
+        "dense_score": 0.8220767,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_65",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1906
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VPI_financial_statements_2025_separate_table_39",
+        "retrieval_score": 0.8206819,
+        "retrieval_rank": 41,
+        "dense_score": 0.8206819,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_39",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1554
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VPI_financial_statements_2025_separate_table_16",
+        "retrieval_score": 0.8204893,
+        "retrieval_rank": 42,
+        "dense_score": 0.8204893,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_16",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1187
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VPI_financial_statements_2025_separate_table_26",
+        "retrieval_score": 0.8199306,
+        "retrieval_rank": 43,
+        "dense_score": 0.8199306,
+        "dense_rank": 43,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_26",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1304
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VPI_financial_statements_2025_separate_table_64",
+        "retrieval_score": 0.81972957,
+        "retrieval_rank": 44,
+        "dense_score": 0.81972957,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_64",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1902
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VPI_financial_statements_2025_separate_table_32",
+        "retrieval_score": 0.818509,
+        "retrieval_rank": 45,
+        "dense_score": 0.818509,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_32",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1409
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VPI_financial_statements_2025_separate_table_50",
+        "retrieval_score": 0.8176227,
+        "retrieval_rank": 46,
+        "dense_score": 0.8176227,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_50",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1731
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VPI_financial_statements_2025_separate_table_8",
+        "retrieval_score": 0.81714803,
+        "retrieval_rank": 47,
+        "dense_score": 0.81714803,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_8",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 401
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VPI_financial_statements_2025_separate_table_44",
+        "retrieval_score": 0.8170019,
+        "retrieval_rank": 48,
+        "dense_score": 0.8170019,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_44",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1655
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VPI_financial_statements_2025_separate_table_38",
+        "retrieval_score": 0.8158972,
+        "retrieval_rank": 49,
+        "dense_score": 0.8158972,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_38",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1550
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VPI_financial_statements_2025_separate_table_58",
+        "retrieval_score": 0.81458044,
+        "retrieval_rank": 50,
+        "dense_score": 0.81458044,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "VPI_financial_statements_2025_separate_table_58",
+          "doc_id": "VPI_financial_statements_2025_separate",
+          "ticker": "VPI",
+          "company_name": "CTCP Phát triển Bất động sản Văn Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1835
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VPI_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VPI_financial_statements_2025_separate|1839",
+            "VPI_financial_statements_2025_separate|435",
+            "VPI_financial_statements_2025_separate|1969",
+            "VPI_financial_statements_2025_separate|542",
+            "VPI_financial_statements_2025_separate|1831"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VPI_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VPI_financial_statements_2025_separate|1839",
+            "VPI_financial_statements_2025_separate|435",
+            "VPI_financial_statements_2025_separate|1969",
+            "VPI_financial_statements_2025_separate|542",
+            "VPI_financial_statements_2025_separate|1831",
+            "VPI_financial_statements_2025_separate|1990",
+            "VPI_financial_statements_2025_separate|546",
+            "VPI_financial_statements_2025_separate|1488",
+            "VPI_financial_statements_2025_separate|1430",
+            "VPI_financial_statements_2025_separate|1864"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VPI_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VPI_financial_statements_2025_separate|1839",
+            "VPI_financial_statements_2025_separate|435",
+            "VPI_financial_statements_2025_separate|1969",
+            "VPI_financial_statements_2025_separate|542",
+            "VPI_financial_statements_2025_separate|1831",
+            "VPI_financial_statements_2025_separate|1990",
+            "VPI_financial_statements_2025_separate|546",
+            "VPI_financial_statements_2025_separate|1488",
+            "VPI_financial_statements_2025_separate|1430",
+            "VPI_financial_statements_2025_separate|1864",
+            "VPI_financial_statements_2025_separate|1405",
+            "VPI_financial_statements_2025_separate|1325",
+            "VPI_financial_statements_2025_separate|2135",
+            "VPI_financial_statements_2025_separate|1868",
+            "VPI_financial_statements_2025_separate|1296",
+            "VPI_financial_statements_2025_separate|1665",
+            "VPI_financial_statements_2025_separate|1860",
+            "VPI_financial_statements_2025_separate|1218",
+            "VPI_financial_statements_2025_separate|1959",
+            "VPI_financial_statements_2025_separate|2101"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VPI_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VPI_financial_statements_2025_separate|1839",
+            "VPI_financial_statements_2025_separate|435",
+            "VPI_financial_statements_2025_separate|1969",
+            "VPI_financial_statements_2025_separate|542",
+            "VPI_financial_statements_2025_separate|1831",
+            "VPI_financial_statements_2025_separate|1990",
+            "VPI_financial_statements_2025_separate|546",
+            "VPI_financial_statements_2025_separate|1488",
+            "VPI_financial_statements_2025_separate|1430",
+            "VPI_financial_statements_2025_separate|1864",
+            "VPI_financial_statements_2025_separate|1405",
+            "VPI_financial_statements_2025_separate|1325",
+            "VPI_financial_statements_2025_separate|2135",
+            "VPI_financial_statements_2025_separate|1868",
+            "VPI_financial_statements_2025_separate|1296",
+            "VPI_financial_statements_2025_separate|1665",
+            "VPI_financial_statements_2025_separate|1860",
+            "VPI_financial_statements_2025_separate|1218",
+            "VPI_financial_statements_2025_separate|1959",
+            "VPI_financial_statements_2025_separate|2101",
+            "VPI_financial_statements_2025_separate|1343",
+            "VPI_financial_statements_2025_separate|1600",
+            "VPI_financial_statements_2025_separate|1509",
+            "VPI_financial_statements_2025_separate|1892",
+            "VPI_financial_statements_2025_separate|2198",
+            "VPI_financial_statements_2025_separate|2048",
+            "VPI_financial_statements_2025_separate|1581",
+            "VPI_financial_statements_2025_separate|1300",
+            "VPI_financial_statements_2025_separate|1274",
+            "VPI_financial_statements_2025_separate|1214",
+            "VPI_financial_statements_2025_separate|1426",
+            "VPI_financial_statements_2025_separate|1748",
+            "VPI_financial_statements_2025_separate|1938",
+            "VPI_financial_statements_2025_separate|2071",
+            "VPI_financial_statements_2025_separate|1245",
+            "VPI_financial_statements_2025_separate|1544",
+            "VPI_financial_statements_2025_separate|764",
+            "VPI_financial_statements_2025_separate|2016",
+            "VPI_financial_statements_2025_separate|1237",
+            "VPI_financial_statements_2025_separate|1906",
+            "VPI_financial_statements_2025_separate|1554",
+            "VPI_financial_statements_2025_separate|1187",
+            "VPI_financial_statements_2025_separate|1304",
+            "VPI_financial_statements_2025_separate|1902",
+            "VPI_financial_statements_2025_separate|1409",
+            "VPI_financial_statements_2025_separate|1731",
+            "VPI_financial_statements_2025_separate|401",
+            "VPI_financial_statements_2025_separate|1655",
+            "VPI_financial_statements_2025_separate|1550",
+            "VPI_financial_statements_2025_separate|1835"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

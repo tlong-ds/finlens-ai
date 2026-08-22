@@ -182,6 +182,7 @@ def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
             if not table_id or table_id in seen_table_ids:
                 continue
             seen_table_ids.add(table_id)
+            candidate.pop("retrieval_rank", None)
             candidate["dense_rank"] = len(candidates) + 1
             candidates.append(candidate)
             if len(candidates) == RETRIEVAL_TOP_K:

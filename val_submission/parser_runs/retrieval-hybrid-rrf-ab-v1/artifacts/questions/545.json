@@ -1,0 +1,1424 @@
+{
+  "schema_version": 1,
+  "id": 545,
+  "question": "Năm 2017, trong ba công ty BSR, PLX và PVT có lợi nhuận thuần từ hoạt động kinh doanh dương, công ty có tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên lợi nhuận thuần từ hoạt động kinh doanh thấp nhất có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần là bao nhiêu %?",
+  "started_at": "2026-08-22T13:51:18+00:00",
+  "finished_at": "2026-08-22T13:51:19+00:00",
+  "duration_seconds": 1.3051181839982746,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "BSR",
+      "PLX",
+      "PVT"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "BSR_financial_statements_2017_consolidated",
+      "PLX_financial_statements_2017_consolidated",
+      "PVT_financial_statements_2017_consolidated"
+    ],
+    "relevant_tables": [
+      "BSR_financial_statements_2017_consolidated|296",
+      "BSR_financial_statements_2017_consolidated|326",
+      "PLX_financial_statements_2017_consolidated|247",
+      "PLX_financial_statements_2017_consolidated|300",
+      "PVT_financial_statements_2017_consolidated|285",
+      "PVT_financial_statements_2017_consolidated|326"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "BSR",
+      "PLX",
+      "PVT"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "trong ba công ty , và có lợi nhuận thuần từ hoạt động kinh doanh dương, công ty có tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên lợi nhuận thuần từ hoạt động kinh doanh thấp nhất có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần %",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "BSR",
+        "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+        "matched_text": "BSR",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PLX",
+        "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+        "matched_text": "PLX",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "PVT",
+        "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+        "matched_text": "PVT",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "trong ba công ty , và có lợi nhuận thuần từ hoạt động kinh doanh dương, công ty có tỷ lệ lưu chuyển tiền thuần từ hoạt động kinh doanh trên lợi nhuận thuần từ hoạt động kinh doanh thấp nhất có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần %",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "BSR",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "BSR"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "PLX",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "PLX"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "PVT",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "PVT"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_4",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 1,
+        "dense_score": 0.87539965,
+        "dense_rank": 1,
+        "bm25_score": 24.31277673005575,
+        "bm25_rank": 2,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_4",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_5",
+        "retrieval_score": 0.03131881575727918,
+        "retrieval_rank": 2,
+        "dense_score": 0.87074226,
+        "dense_rank": 1,
+        "bm25_score": 22.23130010496868,
+        "bm25_rank": 7,
+        "rrf_score": 0.03131881575727918,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_5",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 247
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 3,
+        "dense_score": 0.8771459,
+        "dense_rank": 1,
+        "bm25_score": 24.524307730164292,
+        "bm25_rank": 2,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_6",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 285
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_31",
+        "retrieval_score": 0.03149801587301587,
+        "retrieval_rank": 4,
+        "dense_score": 0.8597533,
+        "dense_rank": 4,
+        "bm25_score": 21.767601547220075,
+        "bm25_rank": 3,
+        "rrf_score": 0.03149801587301587,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_31",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1067
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.03128054740957967,
+        "retrieval_rank": 5,
+        "dense_score": 0.8700369,
+        "dense_rank": 2,
+        "bm25_score": 22.950458283116106,
+        "bm25_rank": 6,
+        "rrf_score": 0.03128054740957967,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_6",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 266
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_42",
+        "retrieval_score": 0.03149801587301587,
+        "retrieval_rank": 6,
+        "dense_score": 0.86661494,
+        "dense_rank": 3,
+        "bm25_score": 21.882762617082367,
+        "bm25_rank": 4,
+        "rrf_score": 0.03149801587301587,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_42",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 999
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_32",
+        "retrieval_score": 0.031009615384615385,
+        "retrieval_rank": 7,
+        "dense_score": 0.8503342,
+        "dense_rank": 5,
+        "bm25_score": 21.767601547220075,
+        "bm25_rank": 4,
+        "rrf_score": 0.031009615384615385,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_32",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1081
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_11",
+        "retrieval_score": 0.030798389007344232,
+        "retrieval_rank": 8,
+        "dense_score": 0.85066485,
+        "dense_rank": 7,
+        "bm25_score": 24.87993099795298,
+        "bm25_rank": 3,
+        "rrf_score": 0.030798389007344232,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_11",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 908
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_43",
+        "retrieval_score": 0.03125763125763126,
+        "retrieval_rank": 9,
+        "dense_score": 0.8545946,
+        "dense_rank": 5,
+        "bm25_score": 21.98787843866592,
+        "bm25_rank": 3,
+        "rrf_score": 0.03125763125763126,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_43",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1001
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.030679156908665108,
+        "retrieval_rank": 10,
+        "dense_score": 0.83736694,
+        "dense_rank": 10,
+        "bm25_score": 30.409913745081706,
+        "bm25_rank": 1,
+        "rrf_score": 0.030679156908665108,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_6",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 353
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_13",
+        "retrieval_score": 0.030776515151515152,
+        "retrieval_rank": 11,
+        "dense_score": 0.8517857,
+        "dense_rank": 6,
+        "bm25_score": 24.626517828944856,
+        "bm25_rank": 4,
+        "rrf_score": 0.030776515151515152,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_13",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 946
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_5",
+        "retrieval_score": 0.031054405392392875,
+        "retrieval_rank": 12,
+        "dense_score": 0.87039924,
+        "dense_rank": 2,
+        "bm25_score": 17.1248086938616,
+        "bm25_rank": 7,
+        "rrf_score": 0.031054405392392875,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_5",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 246
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_3",
+        "retrieval_score": 0.03021353930031804,
+        "retrieval_rank": 13,
+        "dense_score": 0.8665359,
+        "dense_rank": 2,
+        "bm25_score": 9.881712837033634,
+        "bm25_rank": 11,
+        "rrf_score": 0.03021353930031804,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_3",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 267
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_4",
+        "retrieval_score": 0.030090497737556562,
+        "retrieval_rank": 14,
+        "dense_score": 0.8546233,
+        "dense_rank": 5,
+        "bm25_score": 16.310049763496558,
+        "bm25_rank": 8,
+        "rrf_score": 0.030090497737556562,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_4",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 227
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_22",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 15,
+        "dense_score": 0.8462609,
+        "dense_rank": 7,
+        "bm25_score": 16.190137203806515,
+        "bm25_rank": 8,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_22",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 796
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_5",
+        "retrieval_score": 0.02946912242686891,
+        "retrieval_rank": 16,
+        "dense_score": 0.8342234,
+        "dense_rank": 11,
+        "bm25_score": 15.880675045426552,
+        "bm25_rank": 5,
+        "rrf_score": 0.02946912242686891,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_5",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 326
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_7",
+        "retrieval_score": 0.030017921146953404,
+        "retrieval_rank": 17,
+        "dense_score": 0.84052664,
+        "dense_rank": 12,
+        "bm25_score": 24.90562708229892,
+        "bm25_rank": 2,
+        "rrf_score": 0.030017921146953404,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_7",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 300
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_8",
+        "retrieval_score": 0.029551337359792925,
+        "retrieval_rank": 18,
+        "dense_score": 0.83181554,
+        "dense_rank": 16,
+        "bm25_score": 28.899237724454974,
+        "bm25_rank": 1,
+        "rrf_score": 0.029551337359792925,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_8",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 355
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_11",
+        "retrieval_score": 0.028438886647841874,
+        "retrieval_rank": 19,
+        "dense_score": 0.8282613,
+        "dense_rank": 14,
+        "bm25_score": 11.102201414291837,
+        "bm25_rank": 7,
+        "rrf_score": 0.028438886647841874,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_11",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 800
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_8",
+        "retrieval_score": 0.029877369007803793,
+        "retrieval_rank": 20,
+        "dense_score": 0.8459261,
+        "dense_rank": 9,
+        "bm25_score": 24.350730938110214,
+        "bm25_rank": 5,
+        "rrf_score": 0.029877369007803793,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_8",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 319
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_51",
+        "retrieval_score": 0.029236022193768675,
+        "retrieval_rank": 21,
+        "dense_score": 0.8472122,
+        "dense_rank": 6,
+        "bm25_score": 13.455315890678905,
+        "bm25_rank": 11,
+        "rrf_score": 0.029236022193768675,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_51",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1061
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_47",
+        "retrieval_score": 0.027222222222222224,
+        "retrieval_rank": 22,
+        "dense_score": 0.82591665,
+        "dense_rank": 15,
+        "bm25_score": 9.796054641229725,
+        "bm25_rank": 12,
+        "rrf_score": 0.027222222222222224,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_47",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_3",
+        "retrieval_score": 0.028958333333333336,
+        "retrieval_rank": 23,
+        "dense_score": 0.8549835,
+        "dense_rank": 4,
+        "bm25_score": 8.456264533607659,
+        "bm25_rank": 15,
+        "rrf_score": 0.028958333333333336,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_3",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 210
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_7",
+        "retrieval_score": 0.028665028665028666,
+        "retrieval_rank": 24,
+        "dense_score": 0.8365745,
+        "dense_rank": 14,
+        "bm25_score": 17.44895739344601,
+        "bm25_rank": 6,
+        "rrf_score": 0.028665028665028666,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_7",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 326
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_48",
+        "retrieval_score": 0.02632034632034632,
+        "retrieval_rank": 25,
+        "dense_score": 0.8222354,
+        "dense_rank": 17,
+        "bm25_score": 8.447520034279053,
+        "bm25_rank": 15,
+        "rrf_score": 0.02632034632034632,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_48",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_2",
+        "retrieval_score": 0.02886002886002886,
+        "retrieval_rank": 26,
+        "dense_score": 0.86683655,
+        "dense_rank": 3,
+        "bm25_score": 7.130750279526106,
+        "bm25_rank": 17,
+        "rrf_score": 0.02886002886002886,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_2",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 193
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_20",
+        "retrieval_score": 0.028404512489927477,
+        "retrieval_rank": 27,
+        "dense_score": 0.8457544,
+        "dense_rank": 8,
+        "bm25_score": 11.554260965022292,
+        "bm25_rank": 13,
+        "rrf_score": 0.028404512489927477,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_20",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 772
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_49",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 28,
+        "dense_score": 0.8625999,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_49",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 1379
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_1",
+        "retrieval_score": 0.02786377708978328,
+        "retrieval_rank": 29,
+        "dense_score": 0.84941095,
+        "dense_rank": 8,
+        "bm25_score": 8.378756006240717,
+        "bm25_rank": 16,
+        "rrf_score": 0.02786377708978328,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_1",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 176
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_4",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 30,
+        "dense_score": 0.8625464,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_4",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 218
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_2",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 31,
+        "dense_score": 0.84994686,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_2",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 238
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_51",
+        "retrieval_score": 0.027242401779095628,
+        "retrieval_rank": 32,
+        "dense_score": 0.8347263,
+        "dense_rank": 16,
+        "bm25_score": 13.872441542328131,
+        "bm25_rank": 11,
+        "rrf_score": 0.027242401779095628,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_51",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1574
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_10",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 33,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 19.124452263863567,
+        "bm25_rank": 5,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_10",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 436
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_37",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 34,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 15.252150830219065,
+        "bm25_rank": 6,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_37",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1127
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_53",
+        "retrieval_score": 0.02668564312399929,
+        "retrieval_rank": 35,
+        "dense_score": 0.834057,
+        "dense_rank": 17,
+        "bm25_score": 9.397281248962848,
+        "bm25_rank": 13,
+        "rrf_score": 0.02668564312399929,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_53",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1594
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_47",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 36,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 15.813645797654766,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_47",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_34",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 37,
+        "dense_score": 0.8475257,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_34",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1102
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_9",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 28.84404769438915,
+        "bm25_rank": 1,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_9",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 340
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_56",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 39,
+        "dense_score": 0.8431746,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_56",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1115
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_40",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 40,
+        "dense_score": 0.84465456,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_40",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1150
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_46",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 41,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 14.178458520806311,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_46",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1526
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_57",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 42,
+        "dense_score": 0.8431746,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_57",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1119
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_46",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.914131667034168,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_46",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1219
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_41",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 13.973826915247052,
+        "bm25_rank": 10,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_41",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1443
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_58",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 45,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 13.61377079726197,
+        "bm25_rank": 10,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_58",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_28",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 46,
+        "dense_score": 0.84330344,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_28",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1002
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_55",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 47,
+        "dense_score": 0.8431746,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_55",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1623
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "PVT_financial_statements_2017_consolidated_table_3",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 48,
+        "dense_score": 0.84242415,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "PVT_financial_statements_2017_consolidated_table_3",
+          "doc_id": "PVT_financial_statements_2017_consolidated",
+          "ticker": "PVT",
+          "company_name": "Tổng Công ty cổ phần Vận tải Dầu khí",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 195
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "BSR_financial_statements_2017_consolidated_table_44",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.858101952715774,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "BSR_financial_statements_2017_consolidated_table_44",
+          "doc_id": "BSR_financial_statements_2017_consolidated",
+          "ticker": "BSR",
+          "company_name": "CTCP - Tổng Công ty Lọc hóa dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1189
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "PLX_financial_statements_2017_consolidated_table_52",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 50,
+        "dense_score": 0.8431746,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "PLX_financial_statements_2017_consolidated_table_52",
+          "doc_id": "PLX_financial_statements_2017_consolidated",
+          "ticker": "PLX",
+          "company_name": "Tập đoàn Xăng Dầu Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2017,
+          "start_line": 1578
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2017_consolidated",
+            "PLX_financial_statements_2017_consolidated",
+            "PVT_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "BSR_financial_statements_2017_consolidated|296",
+            "PLX_financial_statements_2017_consolidated|247",
+            "PVT_financial_statements_2017_consolidated|285",
+            "BSR_financial_statements_2017_consolidated|1067",
+            "PLX_financial_statements_2017_consolidated|266"
+          ]
+        },
+        "tables": {
+          "precision": 0.6,
+          "recall": 0.5,
+          "f2": 0.5172413793103449,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2017_consolidated",
+            "PLX_financial_statements_2017_consolidated",
+            "PVT_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "BSR_financial_statements_2017_consolidated|296",
+            "PLX_financial_statements_2017_consolidated|247",
+            "PVT_financial_statements_2017_consolidated|285",
+            "BSR_financial_statements_2017_consolidated|1067",
+            "PLX_financial_statements_2017_consolidated|266",
+            "PVT_financial_statements_2017_consolidated|999",
+            "BSR_financial_statements_2017_consolidated|1081",
+            "PLX_financial_statements_2017_consolidated|908",
+            "PVT_financial_statements_2017_consolidated|1001",
+            "BSR_financial_statements_2017_consolidated|353"
+          ]
+        },
+        "tables": {
+          "precision": 0.3,
+          "recall": 0.5,
+          "f2": 0.4411764705882353,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2017_consolidated",
+            "PLX_financial_statements_2017_consolidated",
+            "PVT_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "BSR_financial_statements_2017_consolidated|296",
+            "PLX_financial_statements_2017_consolidated|247",
+            "PVT_financial_statements_2017_consolidated|285",
+            "BSR_financial_statements_2017_consolidated|1067",
+            "PLX_financial_statements_2017_consolidated|266",
+            "PVT_financial_statements_2017_consolidated|999",
+            "BSR_financial_statements_2017_consolidated|1081",
+            "PLX_financial_statements_2017_consolidated|908",
+            "PVT_financial_statements_2017_consolidated|1001",
+            "BSR_financial_statements_2017_consolidated|353",
+            "PLX_financial_statements_2017_consolidated|946",
+            "PVT_financial_statements_2017_consolidated|246",
+            "BSR_financial_statements_2017_consolidated|267",
+            "PLX_financial_statements_2017_consolidated|227",
+            "PVT_financial_statements_2017_consolidated|796",
+            "BSR_financial_statements_2017_consolidated|326",
+            "PLX_financial_statements_2017_consolidated|300",
+            "PVT_financial_statements_2017_consolidated|355",
+            "BSR_financial_statements_2017_consolidated|800",
+            "PLX_financial_statements_2017_consolidated|319"
+          ]
+        },
+        "tables": {
+          "precision": 0.25,
+          "recall": 0.8333333333333334,
+          "f2": 0.5681818181818181,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "BSR_financial_statements_2017_consolidated",
+            "PLX_financial_statements_2017_consolidated",
+            "PVT_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "BSR_financial_statements_2017_consolidated|296",
+            "PLX_financial_statements_2017_consolidated|247",
+            "PVT_financial_statements_2017_consolidated|285",
+            "BSR_financial_statements_2017_consolidated|1067",
+            "PLX_financial_statements_2017_consolidated|266",
+            "PVT_financial_statements_2017_consolidated|999",
+            "BSR_financial_statements_2017_consolidated|1081",
+            "PLX_financial_statements_2017_consolidated|908",
+            "PVT_financial_statements_2017_consolidated|1001",
+            "BSR_financial_statements_2017_consolidated|353",
+            "PLX_financial_statements_2017_consolidated|946",
+            "PVT_financial_statements_2017_consolidated|246",
+            "BSR_financial_statements_2017_consolidated|267",
+            "PLX_financial_statements_2017_consolidated|227",
+            "PVT_financial_statements_2017_consolidated|796",
+            "BSR_financial_statements_2017_consolidated|326",
+            "PLX_financial_statements_2017_consolidated|300",
+            "PVT_financial_statements_2017_consolidated|355",
+            "BSR_financial_statements_2017_consolidated|800",
+            "PLX_financial_statements_2017_consolidated|319",
+            "PVT_financial_statements_2017_consolidated|1061",
+            "BSR_financial_statements_2017_consolidated|1223",
+            "PLX_financial_statements_2017_consolidated|210",
+            "PVT_financial_statements_2017_consolidated|326",
+            "BSR_financial_statements_2017_consolidated|1235",
+            "PLX_financial_statements_2017_consolidated|193",
+            "PVT_financial_statements_2017_consolidated|772",
+            "BSR_financial_statements_2017_consolidated|1379",
+            "PLX_financial_statements_2017_consolidated|176",
+            "PVT_financial_statements_2017_consolidated|218",
+            "BSR_financial_statements_2017_consolidated|238",
+            "PLX_financial_statements_2017_consolidated|1574",
+            "PVT_financial_statements_2017_consolidated|436",
+            "BSR_financial_statements_2017_consolidated|1127",
+            "PLX_financial_statements_2017_consolidated|1594",
+            "PVT_financial_statements_2017_consolidated|1033",
+            "BSR_financial_statements_2017_consolidated|1102",
+            "PLX_financial_statements_2017_consolidated|340",
+            "PVT_financial_statements_2017_consolidated|1115",
+            "BSR_financial_statements_2017_consolidated|1150",
+            "PLX_financial_statements_2017_consolidated|1526",
+            "PVT_financial_statements_2017_consolidated|1119",
+            "BSR_financial_statements_2017_consolidated|1219",
+            "PLX_financial_statements_2017_consolidated|1443",
+            "PVT_financial_statements_2017_consolidated|1135",
+            "BSR_financial_statements_2017_consolidated|1002",
+            "PLX_financial_statements_2017_consolidated|1623",
+            "PVT_financial_statements_2017_consolidated|195",
+            "BSR_financial_statements_2017_consolidated|1189",
+            "PLX_financial_statements_2017_consolidated|1578"
+          ]
+        },
+        "tables": {
+          "precision": 0.12,
+          "recall": 1.0,
+          "f2": 0.4054054054054054,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

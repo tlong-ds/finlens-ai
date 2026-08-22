@@ -1,0 +1,1421 @@
+{
+  "schema_version": 1,
+  "id": 915,
+  "question": "Năm 2016, tổng chi phí tài chính của MPC công ty mẹ, SAB công ty mẹ và HAG công ty mẹ là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:51:25+00:00",
+  "finished_at": "2026-08-22T13:51:27+00:00",
+  "duration_seconds": 1.1556187150126789,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MPC",
+      "SAB",
+      "HAG"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MPC_financial_statements_2016_separate",
+      "SAB_financial_statements_2016_separate",
+      "HAG_financial_statements_2016_separate"
+    ],
+    "relevant_tables": [
+      "MPC_financial_statements_2016_separate|194",
+      "SAB_financial_statements_2016_separate|301",
+      "HAG_financial_statements_2016_separate|1331"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HAG",
+      "MPC",
+      "SAB"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "tổng chi phí tài chính , và tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HAG",
+        "company_name": "CTCP Hoàng Anh Gia Lai",
+        "matched_text": "HAG",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "MPC",
+        "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+        "matched_text": "MPC",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "SAB",
+        "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "matched_text": "SAB",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02",
+            "c03",
+            "c01"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "tổng chi phí tài chính , và tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "HAG",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HAG"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "MPC",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MPC"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "SAB",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SAB"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "HAG_financial_statements_2016_separate_table_50",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 1,
+        "dense_score": 0.8876042,
+        "dense_rank": 1,
+        "bm25_score": 3.7498920960102717,
+        "bm25_rank": 2,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_50",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1346
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "MPC_financial_statements_2016_separate_table_50",
+        "retrieval_score": 0.031754032258064516,
+        "retrieval_rank": 2,
+        "dense_score": 0.87242,
+        "dense_rank": 4,
+        "bm25_score": 3.6504338582030726,
+        "bm25_rank": 2,
+        "rrf_score": 0.031754032258064516,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_50",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1122
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SAB_financial_statements_2016_separate_table_53",
+        "retrieval_score": 0.03128054740957967,
+        "retrieval_rank": 3,
+        "dense_score": 0.87520516,
+        "dense_rank": 2,
+        "bm25_score": 3.653927114699669,
+        "bm25_rank": 6,
+        "rrf_score": 0.03128054740957967,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_53",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HAG_financial_statements_2016_separate_table_53",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 4,
+        "dense_score": 0.87562275,
+        "dense_rank": 2,
+        "bm25_score": 5.010833232218447,
+        "bm25_rank": 1,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_53",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1381
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "MPC_financial_statements_2016_separate_table_47",
+        "retrieval_score": 0.031544957774465976,
+        "retrieval_rank": 5,
+        "dense_score": 0.8986616,
+        "dense_rank": 1,
+        "bm25_score": 3.4558241057381904,
+        "bm25_rank": 6,
+        "rrf_score": 0.031544957774465976,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_47",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1095
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SAB_financial_statements_2016_separate_table_8",
+        "retrieval_score": 0.030798389007344232,
+        "retrieval_rank": 6,
+        "dense_score": 0.8725635,
+        "dense_rank": 3,
+        "bm25_score": 3.6044329868169362,
+        "bm25_rank": 7,
+        "rrf_score": 0.030798389007344232,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_8",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 301
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "HAG_financial_statements_2016_separate_table_4",
+        "retrieval_score": 0.031746031746031744,
+        "retrieval_rank": 7,
+        "dense_score": 0.8695886,
+        "dense_rank": 3,
+        "bm25_score": 3.616835884602063,
+        "bm25_rank": 3,
+        "rrf_score": 0.031746031746031744,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_4",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 281
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "MPC_financial_statements_2016_separate_table_5",
+        "retrieval_score": 0.03125763125763126,
+        "retrieval_rank": 8,
+        "dense_score": 0.8662496,
+        "dense_rank": 5,
+        "bm25_score": 3.628883519421879,
+        "bm25_rank": 3,
+        "rrf_score": 0.03125763125763126,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_5",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 194
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SAB_financial_statements_2016_separate_table_75",
+        "retrieval_score": 0.030776515151515152,
+        "retrieval_rank": 9,
+        "dense_score": 0.864252,
+        "dense_rank": 6,
+        "bm25_score": 3.878017922734675,
+        "bm25_rank": 4,
+        "rrf_score": 0.030776515151515152,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_75",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 1613
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HAG_financial_statements_2016_separate_table_2",
+        "retrieval_score": 0.030776515151515152,
+        "retrieval_rank": 10,
+        "dense_score": 0.8652649,
+        "dense_rank": 4,
+        "bm25_score": 3.3426337268653765,
+        "bm25_rank": 6,
+        "rrf_score": 0.030776515151515152,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_2",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 236
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "MPC_financial_statements_2016_separate_table_48",
+        "retrieval_score": 0.029726775956284153,
+        "retrieval_rank": 11,
+        "dense_score": 0.8556474,
+        "dense_rank": 15,
+        "bm25_score": 3.692268392194961,
+        "bm25_rank": 1,
+        "rrf_score": 0.029726775956284153,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_48",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1099
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SAB_financial_statements_2016_separate_table_51",
+        "retrieval_score": 0.030309988518943745,
+        "retrieval_rank": 12,
+        "dense_score": 0.86405385,
+        "dense_rank": 7,
+        "bm25_score": 3.7757804713738747,
+        "bm25_rank": 5,
+        "rrf_score": 0.030309988518943745,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_51",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1204
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "HAG_financial_statements_2016_separate_table_54",
+        "retrieval_score": 0.030309988518943745,
+        "retrieval_rank": 13,
+        "dense_score": 0.8650781,
+        "dense_rank": 5,
+        "bm25_score": 3.307735260619446,
+        "bm25_rank": 7,
+        "rrf_score": 0.030309988518943745,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_54",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 1387
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "MPC_financial_statements_2016_separate_table_51",
+        "retrieval_score": 0.029211087420042643,
+        "retrieval_rank": 14,
+        "dense_score": 0.8641831,
+        "dense_rank": 7,
+        "bm25_score": 2.8395540041383303,
+        "bm25_rank": 10,
+        "rrf_score": 0.029211087420042643,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_51",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1141
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SAB_financial_statements_2016_separate_table_55",
+        "retrieval_score": 0.03009207275993712,
+        "retrieval_rank": 15,
+        "dense_score": 0.8574461,
+        "dense_rank": 13,
+        "bm25_score": 6.502892650057217,
+        "bm25_rank": 1,
+        "rrf_score": 0.03009207275993712,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_55",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1248
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HAG_financial_statements_2016_separate_table_33",
+        "retrieval_score": 0.02967032967032967,
+        "retrieval_rank": 16,
+        "dense_score": 0.8582993,
+        "dense_rank": 10,
+        "bm25_score": 3.3659066306200396,
+        "bm25_rank": 5,
+        "rrf_score": 0.02967032967032967,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_33",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1057
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "MPC_financial_statements_2016_separate_table_2",
+        "retrieval_score": 0.029030910609857977,
+        "retrieval_rank": 17,
+        "dense_score": 0.8735865,
+        "dense_rank": 3,
+        "bm25_score": 1.8302431342354886,
+        "bm25_rank": 16,
+        "rrf_score": 0.029030910609857977,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_2",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 123
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SAB_financial_statements_2016_separate_table_54",
+        "retrieval_score": 0.028985507246376812,
+        "retrieval_rank": 18,
+        "dense_score": 0.8620267,
+        "dense_rank": 9,
+        "bm25_score": 3.488003644641612,
+        "bm25_rank": 9,
+        "rrf_score": 0.028985507246376812,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_54",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1244
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "HAG_financial_statements_2016_separate_table_52",
+        "retrieval_score": 0.029513888888888888,
+        "retrieval_rank": 19,
+        "dense_score": 0.85397446,
+        "dense_rank": 12,
+        "bm25_score": 3.397201315112861,
+        "bm25_rank": 4,
+        "rrf_score": 0.029513888888888888,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_52",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1360
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "MPC_financial_statements_2016_separate_table_52",
+        "retrieval_score": 0.028381642512077296,
+        "retrieval_rank": 20,
+        "dense_score": 0.8600847,
+        "dense_rank": 12,
+        "bm25_score": 2.856164330156548,
+        "bm25_rank": 9,
+        "rrf_score": 0.028381642512077296,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_52",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1145
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SAB_financial_statements_2016_separate_table_52",
+        "retrieval_score": 0.028370221327967807,
+        "retrieval_rank": 21,
+        "dense_score": 0.8615955,
+        "dense_rank": 10,
+        "bm25_score": 3.24746848308912,
+        "bm25_rank": 11,
+        "rrf_score": 0.028370221327967807,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_52",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1219
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HAG_financial_statements_2016_separate_table_49",
+        "retrieval_score": 0.028790389395194696,
+        "retrieval_rank": 22,
+        "dense_score": 0.85615087,
+        "dense_rank": 11,
+        "bm25_score": 3.2033869838871913,
+        "bm25_rank": 8,
+        "rrf_score": 0.028790389395194696,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_49",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1331
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "MPC_financial_statements_2016_separate_table_3",
+        "retrieval_score": 0.028371628371628373,
+        "retrieval_rank": 23,
+        "dense_score": 0.852928,
+        "dense_rank": 17,
+        "bm25_score": 3.514451355082968,
+        "bm25_rank": 5,
+        "rrf_score": 0.028371628371628373,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_3",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 140
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SAB_financial_statements_2016_separate_table_6",
+        "retrieval_score": 0.02786377708978328,
+        "retrieval_rank": 24,
+        "dense_score": 0.85544825,
+        "dense_rank": 16,
+        "bm25_score": 3.531622531742124,
+        "bm25_rank": 8,
+        "rrf_score": 0.02786377708978328,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_6",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 257
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "HAG_financial_statements_2016_separate_table_3",
+        "retrieval_score": 0.028258706467661692,
+        "retrieval_rank": 25,
+        "dense_score": 0.8614422,
+        "dense_rank": 7,
+        "bm25_score": 2.1354086375117114,
+        "bm25_rank": 15,
+        "rrf_score": 0.028258706467661692,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_3",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 251
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "MPC_financial_statements_2016_separate_table_7",
+        "retrieval_score": 0.027479766610201392,
+        "retrieval_rank": 26,
+        "dense_score": 0.86229867,
+        "dense_rank": 9,
+        "bm25_score": 1.6250983689577527,
+        "bm25_rank": 17,
+        "rrf_score": 0.027479766610201392,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_7",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 248
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SAB_financial_statements_2016_separate_table_40",
+        "retrieval_score": 0.027799227799227798,
+        "retrieval_rank": 27,
+        "dense_score": 0.8557093,
+        "dense_rank": 14,
+        "bm25_score": 3.455823364729572,
+        "bm25_rank": 10,
+        "rrf_score": 0.027799227799227798,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_40",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1092
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HAG_financial_statements_2016_separate_table_51",
+        "retrieval_score": 0.027650648360030512,
+        "retrieval_rank": 28,
+        "dense_score": 0.8438954,
+        "dense_rank": 16,
+        "bm25_score": 3.203386465426706,
+        "bm25_rank": 9,
+        "rrf_score": 0.027650648360030512,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_51",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1350
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "MPC_financial_statements_2016_separate_table_31",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 29,
+        "dense_score": 0.8878002,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_31",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 867
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SAB_financial_statements_2016_separate_table_50",
+        "retrieval_score": 0.027598020555767037,
+        "retrieval_rank": 30,
+        "dense_score": 0.85950416,
+        "dense_rank": 11,
+        "bm25_score": 2.9739483906438897,
+        "bm25_rank": 14,
+        "rrf_score": 0.027598020555767037,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_50",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1200
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "HAG_financial_statements_2016_separate_table_5",
+        "retrieval_score": 0.027479766610201392,
+        "retrieval_rank": 31,
+        "dense_score": 0.8585298,
+        "dense_rank": 9,
+        "bm25_score": 1.5750414974914775,
+        "bm25_rank": 17,
+        "rrf_score": 0.027479766610201392,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_5",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 304
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "MPC_financial_statements_2016_separate_table_49",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 32,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.624924591733382,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_49",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SAB_financial_statements_2016_separate_table_5",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 33,
+        "dense_score": 0.8769815,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_5",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 240
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HAG_financial_statements_2016_separate_table_44",
+        "retrieval_score": 0.027222222222222224,
+        "retrieval_rank": 34,
+        "dense_score": 0.84451675,
+        "dense_rank": 15,
+        "bm25_score": 2.6052966831152418,
+        "bm25_rank": 12,
+        "rrf_score": 0.027222222222222224,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_44",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1283
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "MPC_financial_statements_2016_separate_table_32",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 35,
+        "dense_score": 0.8657437,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_32",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 888
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SAB_financial_statements_2016_separate_table_27",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 36,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 4.87851216443351,
+        "bm25_rank": 2,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_27",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 904
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "HAG_financial_statements_2016_separate_table_19",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 37,
+        "dense_score": 0.8633989,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_19",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 899
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "MPC_financial_statements_2016_separate_table_26",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.1641333784221386,
+        "bm25_rank": 7,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_26",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 807
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SAB_financial_statements_2016_separate_table_24",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 4.52803959515757,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_24",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 862
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HAG_financial_statements_2016_separate_table_32",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 40,
+        "dense_score": 0.8588792,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_32",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1042
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "MPC_financial_statements_2016_separate_table_27",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 41,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.0177897338914983,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_27",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 811
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SAB_financial_statements_2016_separate_table_10",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 42,
+        "dense_score": 0.8667742,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_10",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 345
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "HAG_financial_statements_2016_separate_table_29",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.9999918659691813,
+        "bm25_rank": 10,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_29",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1030
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "MPC_financial_statements_2016_separate_table_8",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 44,
+        "dense_score": 0.86304253,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_8",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 252
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SAB_financial_statements_2016_separate_table_48",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 45,
+        "dense_score": 0.8650773,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_48",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1181
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HAG_financial_statements_2016_separate_table_23",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 46,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.6836632690157507,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_23",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 952
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "MPC_financial_statements_2016_separate_table_6",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 47,
+        "dense_score": 0.86116064,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_6",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 229
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SAB_financial_statements_2016_separate_table_9",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 48,
+        "dense_score": 0.86269397,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2016_separate_table_9",
+          "doc_id": "SAB_financial_statements_2016_separate",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 330
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "HAG_financial_statements_2016_separate_table_25",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.188965673044841,
+        "bm25_rank": 13,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2016_separate_table_25",
+          "doc_id": "HAG_financial_statements_2016_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 975
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "MPC_financial_statements_2016_separate_table_19",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 50,
+        "dense_score": 0.861094,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "MPC_financial_statements_2016_separate_table_19",
+          "doc_id": "MPC_financial_statements_2016_separate",
+          "ticker": "MPC",
+          "company_name": "CTCP Tập đoàn Thủy sản Minh Phú",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 706
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2016_separate",
+            "MPC_financial_statements_2016_separate",
+            "SAB_financial_statements_2016_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2016_separate|1346",
+            "MPC_financial_statements_2016_separate|1122",
+            "SAB_financial_statements_2016_separate|1223",
+            "HAG_financial_statements_2016_separate|1381",
+            "MPC_financial_statements_2016_separate|1095"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2016_separate",
+            "MPC_financial_statements_2016_separate",
+            "SAB_financial_statements_2016_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2016_separate|1346",
+            "MPC_financial_statements_2016_separate|1122",
+            "SAB_financial_statements_2016_separate|1223",
+            "HAG_financial_statements_2016_separate|1381",
+            "MPC_financial_statements_2016_separate|1095",
+            "SAB_financial_statements_2016_separate|301",
+            "HAG_financial_statements_2016_separate|281",
+            "MPC_financial_statements_2016_separate|194",
+            "SAB_financial_statements_2016_separate|1613",
+            "HAG_financial_statements_2016_separate|236"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.6666666666666666,
+          "f2": 0.4545454545454545,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2016_separate",
+            "MPC_financial_statements_2016_separate",
+            "SAB_financial_statements_2016_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2016_separate|1346",
+            "MPC_financial_statements_2016_separate|1122",
+            "SAB_financial_statements_2016_separate|1223",
+            "HAG_financial_statements_2016_separate|1381",
+            "MPC_financial_statements_2016_separate|1095",
+            "SAB_financial_statements_2016_separate|301",
+            "HAG_financial_statements_2016_separate|281",
+            "MPC_financial_statements_2016_separate|194",
+            "SAB_financial_statements_2016_separate|1613",
+            "HAG_financial_statements_2016_separate|236",
+            "MPC_financial_statements_2016_separate|1099",
+            "SAB_financial_statements_2016_separate|1204",
+            "HAG_financial_statements_2016_separate|1387",
+            "MPC_financial_statements_2016_separate|1141",
+            "SAB_financial_statements_2016_separate|1248",
+            "HAG_financial_statements_2016_separate|1057",
+            "MPC_financial_statements_2016_separate|123",
+            "SAB_financial_statements_2016_separate|1244",
+            "HAG_financial_statements_2016_separate|1360",
+            "MPC_financial_statements_2016_separate|1145"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.6666666666666666,
+          "f2": 0.3125,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2016_separate",
+            "MPC_financial_statements_2016_separate",
+            "SAB_financial_statements_2016_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2016_separate|1346",
+            "MPC_financial_statements_2016_separate|1122",
+            "SAB_financial_statements_2016_separate|1223",
+            "HAG_financial_statements_2016_separate|1381",
+            "MPC_financial_statements_2016_separate|1095",
+            "SAB_financial_statements_2016_separate|301",
+            "HAG_financial_statements_2016_separate|281",
+            "MPC_financial_statements_2016_separate|194",
+            "SAB_financial_statements_2016_separate|1613",
+            "HAG_financial_statements_2016_separate|236",
+            "MPC_financial_statements_2016_separate|1099",
+            "SAB_financial_statements_2016_separate|1204",
+            "HAG_financial_statements_2016_separate|1387",
+            "MPC_financial_statements_2016_separate|1141",
+            "SAB_financial_statements_2016_separate|1248",
+            "HAG_financial_statements_2016_separate|1057",
+            "MPC_financial_statements_2016_separate|123",
+            "SAB_financial_statements_2016_separate|1244",
+            "HAG_financial_statements_2016_separate|1360",
+            "MPC_financial_statements_2016_separate|1145",
+            "SAB_financial_statements_2016_separate|1219",
+            "HAG_financial_statements_2016_separate|1331",
+            "MPC_financial_statements_2016_separate|140",
+            "SAB_financial_statements_2016_separate|257",
+            "HAG_financial_statements_2016_separate|251",
+            "MPC_financial_statements_2016_separate|248",
+            "SAB_financial_statements_2016_separate|1092",
+            "HAG_financial_statements_2016_separate|1350",
+            "MPC_financial_statements_2016_separate|867",
+            "SAB_financial_statements_2016_separate|1200",
+            "HAG_financial_statements_2016_separate|304",
+            "MPC_financial_statements_2016_separate|1118",
+            "SAB_financial_statements_2016_separate|240",
+            "HAG_financial_statements_2016_separate|1283",
+            "MPC_financial_statements_2016_separate|888",
+            "SAB_financial_statements_2016_separate|904",
+            "HAG_financial_statements_2016_separate|899",
+            "MPC_financial_statements_2016_separate|807",
+            "SAB_financial_statements_2016_separate|862",
+            "HAG_financial_statements_2016_separate|1042",
+            "MPC_financial_statements_2016_separate|811",
+            "SAB_financial_statements_2016_separate|345",
+            "HAG_financial_statements_2016_separate|1030",
+            "MPC_financial_statements_2016_separate|252",
+            "SAB_financial_statements_2016_separate|1181",
+            "HAG_financial_statements_2016_separate|952",
+            "MPC_financial_statements_2016_separate|229",
+            "SAB_financial_statements_2016_separate|330",
+            "HAG_financial_statements_2016_separate|975",
+            "MPC_financial_statements_2016_separate|706"
+          ]
+        },
+        "tables": {
+          "precision": 0.06,
+          "recall": 1.0,
+          "f2": 0.24193548387096772,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

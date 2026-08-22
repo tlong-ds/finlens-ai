@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "id": 123,
+  "question": "Tổng cộng vốn chủ sở hữu của SSI cuối năm 2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:50:45+00:00",
+  "finished_at": "2026-08-22T13:50:46+00:00",
+  "duration_seconds": 0.2701652409887174,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SSI"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SSI_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "SSI_financial_statements_2016_consolidated|434"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SSI"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tổng cộng vốn chủ sở hữu cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "matched_text": "SSI",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Tổng cộng vốn chủ sở hữu cuối tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "SSI",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SSI"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_71",
+        "retrieval_score": 0.843783,
+        "retrieval_rank": 1,
+        "dense_score": 0.843783,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_71",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1844
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_8",
+        "retrieval_score": 0.8324098,
+        "retrieval_rank": 2,
+        "dense_score": 0.8324098,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_8",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 257
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_106",
+        "retrieval_score": 0.8311929,
+        "retrieval_rank": 3,
+        "dense_score": 0.8311929,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_106",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2416
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_42",
+        "retrieval_score": 0.82789093,
+        "retrieval_rank": 4,
+        "dense_score": 0.82789093,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_42",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1524
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_40",
+        "retrieval_score": 0.82534647,
+        "retrieval_rank": 5,
+        "dense_score": 0.82534647,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_40",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1503
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_14",
+        "retrieval_score": 0.82452226,
+        "retrieval_rank": 6,
+        "dense_score": 0.82452226,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_14",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 365
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_55",
+        "retrieval_score": 0.8235661,
+        "retrieval_rank": 7,
+        "dense_score": 0.8235661,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_55",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1692
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_95",
+        "retrieval_score": 0.8228433,
+        "retrieval_rank": 8,
+        "dense_score": 0.8228433,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_95",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 2113
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_7",
+        "retrieval_score": 0.82246697,
+        "retrieval_rank": 9,
+        "dense_score": 0.82246697,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_7",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 242
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_76",
+        "retrieval_score": 0.82198775,
+        "retrieval_rank": 10,
+        "dense_score": 0.82198775,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_76",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1877
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_103",
+        "retrieval_score": 0.8207438,
+        "retrieval_rank": 11,
+        "dense_score": 0.8207438,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_103",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2247
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.819453,
+        "retrieval_rank": 12,
+        "dense_score": 0.819453,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_36",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1453
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_68",
+        "retrieval_score": 0.8160209,
+        "retrieval_rank": 13,
+        "dense_score": 0.8160209,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_68",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1817
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_5",
+        "retrieval_score": 0.8153144,
+        "retrieval_rank": 14,
+        "dense_score": 0.8153144,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_5",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 212
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_38",
+        "retrieval_score": 0.81419927,
+        "retrieval_rank": 15,
+        "dense_score": 0.81419927,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_38",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1482
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_74",
+        "retrieval_score": 0.81372154,
+        "retrieval_rank": 16,
+        "dense_score": 0.81372154,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_74",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1869
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_70",
+        "retrieval_score": 0.8122828,
+        "retrieval_rank": 17,
+        "dense_score": 0.8122828,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_70",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1840
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_18",
+        "retrieval_score": 0.81224424,
+        "retrieval_rank": 18,
+        "dense_score": 0.81224424,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_18",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 434
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_67",
+        "retrieval_score": 0.8105121,
+        "retrieval_rank": 19,
+        "dense_score": 0.8105121,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_67",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1813
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_4",
+        "retrieval_score": 0.8104951,
+        "retrieval_rank": 20,
+        "dense_score": 0.8104951,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_4",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 199
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_61",
+        "retrieval_score": 0.8099433,
+        "retrieval_rank": 21,
+        "dense_score": 0.8099433,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_61",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1763
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_47",
+        "retrieval_score": 0.80927694,
+        "retrieval_rank": 22,
+        "dense_score": 0.80927694,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_47",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1591
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.8082598,
+        "retrieval_rank": 23,
+        "dense_score": 0.8082598,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_30",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1367
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_105",
+        "retrieval_score": 0.80815303,
+        "retrieval_rank": 24,
+        "dense_score": 0.80815303,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_105",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2379
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_12",
+        "retrieval_score": 0.80799466,
+        "retrieval_rank": 25,
+        "dense_score": 0.80799466,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_12",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 326
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_57",
+        "retrieval_score": 0.80762416,
+        "retrieval_rank": 26,
+        "dense_score": 0.80762416,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_57",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1713
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_17",
+        "retrieval_score": 0.80697477,
+        "retrieval_rank": 27,
+        "dense_score": 0.80697477,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_17",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 408
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_60",
+        "retrieval_score": 0.80692613,
+        "retrieval_rank": 28,
+        "dense_score": 0.80692613,
+        "dense_rank": 28,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_60",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1759
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_64",
+        "retrieval_score": 0.80631053,
+        "retrieval_rank": 29,
+        "dense_score": 0.80631053,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_64",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_93",
+        "retrieval_score": 0.8059824,
+        "retrieval_rank": 30,
+        "dense_score": 0.8059824,
+        "dense_rank": 30,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_93",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2101
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_50",
+        "retrieval_score": 0.8047769,
+        "retrieval_rank": 31,
+        "dense_score": 0.8047769,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_50",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1633
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_107",
+        "retrieval_score": 0.80332005,
+        "retrieval_rank": 32,
+        "dense_score": 0.80332005,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_107",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2437
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_108",
+        "retrieval_score": 0.8030514,
+        "retrieval_rank": 33,
+        "dense_score": 0.8030514,
+        "dense_rank": 33,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_108",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 2460
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_85",
+        "retrieval_score": 0.8027624,
+        "retrieval_rank": 34,
+        "dense_score": 0.8027624,
+        "dense_rank": 34,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_85",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1982
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_26",
+        "retrieval_score": 0.80249524,
+        "retrieval_rank": 35,
+        "dense_score": 0.80249524,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_26",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1263
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_72",
+        "retrieval_score": 0.8017114,
+        "retrieval_rank": 36,
+        "dense_score": 0.8017114,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_72",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1848
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_104",
+        "retrieval_score": 0.8015508,
+        "retrieval_rank": 37,
+        "dense_score": 0.8015508,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_104",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 2352
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_89",
+        "retrieval_score": 0.80120885,
+        "retrieval_rank": 38,
+        "dense_score": 0.80120885,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_89",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 2042
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_63",
+        "retrieval_score": 0.79987884,
+        "retrieval_rank": 39,
+        "dense_score": 0.79987884,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_63",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1784
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_16",
+        "retrieval_score": 0.798462,
+        "retrieval_rank": 40,
+        "dense_score": 0.798462,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_16",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 393
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_15",
+        "retrieval_score": 0.79810166,
+        "retrieval_rank": 41,
+        "dense_score": 0.79810166,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_15",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 378
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_20",
+        "retrieval_score": 0.7979203,
+        "retrieval_rank": 42,
+        "dense_score": 0.7979203,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_20",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 535
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_56",
+        "retrieval_score": 0.7976002,
+        "retrieval_rank": 43,
+        "dense_score": 0.7976002,
+        "dense_rank": 43,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_56",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1696
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_75",
+        "retrieval_score": 0.7975882,
+        "retrieval_rank": 44,
+        "dense_score": 0.7975882,
+        "dense_rank": 44,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_75",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1873
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_94",
+        "retrieval_score": 0.7975491,
+        "retrieval_rank": 45,
+        "dense_score": 0.7975491,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_94",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2016,
+          "start_line": 2107
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_101",
+        "retrieval_score": 0.79536045,
+        "retrieval_rank": 46,
+        "dense_score": 0.79536045,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_101",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 2214
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_29",
+        "retrieval_score": 0.7944595,
+        "retrieval_rank": 47,
+        "dense_score": 0.7944595,
+        "dense_rank": 47,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_29",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_82",
+        "retrieval_score": 0.79443544,
+        "retrieval_rank": 48,
+        "dense_score": 0.79443544,
+        "dense_rank": 48,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_82",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1957
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.7938016,
+        "retrieval_rank": 49,
+        "dense_score": 0.7938016,
+        "dense_rank": 49,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_6",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 227
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "SSI_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.79218286,
+        "retrieval_rank": 50,
+        "dense_score": 0.79218286,
+        "dense_rank": 50,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "SSI_financial_statements_2016_consolidated_table_46",
+          "doc_id": "SSI_financial_statements_2016_consolidated",
+          "ticker": "SSI",
+          "company_name": "CTCP Chứng khoán SSI",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1568
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "SSI_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "SSI_financial_statements_2016_consolidated|1844",
+            "SSI_financial_statements_2016_consolidated|257",
+            "SSI_financial_statements_2016_consolidated|2416",
+            "SSI_financial_statements_2016_consolidated|1524",
+            "SSI_financial_statements_2016_consolidated|1503"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "SSI_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "SSI_financial_statements_2016_consolidated|1844",
+            "SSI_financial_statements_2016_consolidated|257",
+            "SSI_financial_statements_2016_consolidated|2416",
+            "SSI_financial_statements_2016_consolidated|1524",
+            "SSI_financial_statements_2016_consolidated|1503",
+            "SSI_financial_statements_2016_consolidated|365",
+            "SSI_financial_statements_2016_consolidated|1692",
+            "SSI_financial_statements_2016_consolidated|2113",
+            "SSI_financial_statements_2016_consolidated|242",
+            "SSI_financial_statements_2016_consolidated|1877"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "SSI_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "SSI_financial_statements_2016_consolidated|1844",
+            "SSI_financial_statements_2016_consolidated|257",
+            "SSI_financial_statements_2016_consolidated|2416",
+            "SSI_financial_statements_2016_consolidated|1524",
+            "SSI_financial_statements_2016_consolidated|1503",
+            "SSI_financial_statements_2016_consolidated|365",
+            "SSI_financial_statements_2016_consolidated|1692",
+            "SSI_financial_statements_2016_consolidated|2113",
+            "SSI_financial_statements_2016_consolidated|242",
+            "SSI_financial_statements_2016_consolidated|1877",
+            "SSI_financial_statements_2016_consolidated|2247",
+            "SSI_financial_statements_2016_consolidated|1453",
+            "SSI_financial_statements_2016_consolidated|1817",
+            "SSI_financial_statements_2016_consolidated|212",
+            "SSI_financial_statements_2016_consolidated|1482",
+            "SSI_financial_statements_2016_consolidated|1869",
+            "SSI_financial_statements_2016_consolidated|1840",
+            "SSI_financial_statements_2016_consolidated|434",
+            "SSI_financial_statements_2016_consolidated|1813",
+            "SSI_financial_statements_2016_consolidated|199"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "SSI_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "SSI_financial_statements_2016_consolidated|1844",
+            "SSI_financial_statements_2016_consolidated|257",
+            "SSI_financial_statements_2016_consolidated|2416",
+            "SSI_financial_statements_2016_consolidated|1524",
+            "SSI_financial_statements_2016_consolidated|1503",
+            "SSI_financial_statements_2016_consolidated|365",
+            "SSI_financial_statements_2016_consolidated|1692",
+            "SSI_financial_statements_2016_consolidated|2113",
+            "SSI_financial_statements_2016_consolidated|242",
+            "SSI_financial_statements_2016_consolidated|1877",
+            "SSI_financial_statements_2016_consolidated|2247",
+            "SSI_financial_statements_2016_consolidated|1453",
+            "SSI_financial_statements_2016_consolidated|1817",
+            "SSI_financial_statements_2016_consolidated|212",
+            "SSI_financial_statements_2016_consolidated|1482",
+            "SSI_financial_statements_2016_consolidated|1869",
+            "SSI_financial_statements_2016_consolidated|1840",
+            "SSI_financial_statements_2016_consolidated|434",
+            "SSI_financial_statements_2016_consolidated|1813",
+            "SSI_financial_statements_2016_consolidated|199",
+            "SSI_financial_statements_2016_consolidated|1763",
+            "SSI_financial_statements_2016_consolidated|1591",
+            "SSI_financial_statements_2016_consolidated|1367",
+            "SSI_financial_statements_2016_consolidated|2379",
+            "SSI_financial_statements_2016_consolidated|326",
+            "SSI_financial_statements_2016_consolidated|1713",
+            "SSI_financial_statements_2016_consolidated|408",
+            "SSI_financial_statements_2016_consolidated|1759",
+            "SSI_financial_statements_2016_consolidated|1788",
+            "SSI_financial_statements_2016_consolidated|2101",
+            "SSI_financial_statements_2016_consolidated|1633",
+            "SSI_financial_statements_2016_consolidated|2437",
+            "SSI_financial_statements_2016_consolidated|2460",
+            "SSI_financial_statements_2016_consolidated|1982",
+            "SSI_financial_statements_2016_consolidated|1263",
+            "SSI_financial_statements_2016_consolidated|1848",
+            "SSI_financial_statements_2016_consolidated|2352",
+            "SSI_financial_statements_2016_consolidated|2042",
+            "SSI_financial_statements_2016_consolidated|1784",
+            "SSI_financial_statements_2016_consolidated|393",
+            "SSI_financial_statements_2016_consolidated|378",
+            "SSI_financial_statements_2016_consolidated|535",
+            "SSI_financial_statements_2016_consolidated|1696",
+            "SSI_financial_statements_2016_consolidated|1873",
+            "SSI_financial_statements_2016_consolidated|2107",
+            "SSI_financial_statements_2016_consolidated|2214",
+            "SSI_financial_statements_2016_consolidated|1344",
+            "SSI_financial_statements_2016_consolidated|1957",
+            "SSI_financial_statements_2016_consolidated|227",
+            "SSI_financial_statements_2016_consolidated|1568"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

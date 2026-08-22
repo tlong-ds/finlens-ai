@@ -1,0 +1,1394 @@
+{
+  "schema_version": 1,
+  "id": 810,
+  "question": "Chênh lệch giữa chi phí lãi tiền gửi năm 2025 của công ty mẹ Ngân hàng TMCP Ngoại thương Việt Nam và chi phí lãi tiền gửi của công ty mẹ Ngân hàng TMCP Việt Nam Thịnh Vượng là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:51:23+00:00",
+  "finished_at": "2026-08-22T13:51:24+00:00",
+  "duration_seconds": 0.7083629690023372,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VCB",
+      "VPB"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VCB_financial_statements_2025_separate",
+      "VPB_financial_statements_2025_separate"
+    ],
+    "relevant_tables": [
+      "VCB_financial_statements_2025_separate|1780",
+      "VPB_financial_statements_2025_separate|1967"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VCB",
+      "VPB"
+    ],
+    "year": [
+      2025
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Chênh lệch giữa chi phí lãi tiền gửi và chi phí lãi tiền gửi triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VCB",
+        "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+        "matched_text": "Ngân hàng TMCP Ngoại thương Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VPB",
+        "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+        "matched_text": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "CTG",
+        "company_name": "Ngân hàng TMCP Công Thương Việt Nam",
+        "matched_text": "thương Việt Nam",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Chênh lệch giữa chi phí lãi tiền gửi và chi phí lãi tiền gửi triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VCB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VCB"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "VPB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VPB"
+          ],
+          "year": [
+            2025
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VCB_financial_statements_2025_separate_table_73",
+        "retrieval_score": 0.03125763125763126,
+        "retrieval_rank": 1,
+        "dense_score": 0.8492205,
+        "dense_rank": 3,
+        "bm25_score": 10.683056194574142,
+        "bm25_rank": 5,
+        "rrf_score": 0.03125763125763126,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_73",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1780
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VPB_financial_statements_2025_separate_table_8",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 2,
+        "dense_score": 0.85693955,
+        "dense_rank": 2,
+        "bm25_score": 12.361295920613586,
+        "bm25_rank": 1,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_8",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2025,
+          "start_line": 435
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VCB_financial_statements_2025_separate_table_11",
+        "retrieval_score": 0.030621785881252923,
+        "retrieval_rank": 3,
+        "dense_score": 0.8516523,
+        "dense_rank": 2,
+        "bm25_score": 7.388635038143184,
+        "bm25_rank": 9,
+        "rrf_score": 0.030621785881252923,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_11",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 203
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VPB_financial_statements_2025_separate_table_105",
+        "retrieval_score": 0.0315136476426799,
+        "retrieval_rank": 4,
+        "dense_score": 0.84285635,
+        "dense_rank": 5,
+        "bm25_score": 10.794407661781356,
+        "bm25_rank": 2,
+        "rrf_score": 0.0315136476426799,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_105",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 2454
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VCB_financial_statements_2025_separate_table_75",
+        "retrieval_score": 0.03021353930031804,
+        "retrieval_rank": 5,
+        "dense_score": 0.83934426,
+        "dense_rank": 11,
+        "bm25_score": 11.750392914046,
+        "bm25_rank": 2,
+        "rrf_score": 0.03021353930031804,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_75",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1803
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VPB_financial_statements_2025_separate_table_70",
+        "retrieval_score": 0.030679156908665108,
+        "retrieval_rank": 6,
+        "dense_score": 0.86444914,
+        "dense_rank": 1,
+        "bm25_score": 8.185657453783039,
+        "bm25_rank": 10,
+        "rrf_score": 0.030679156908665108,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_70",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1869
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VCB_financial_statements_2025_separate_table_17",
+        "retrieval_score": 0.030117753623188408,
+        "retrieval_rank": 7,
+        "dense_score": 0.84406453,
+        "dense_rank": 9,
+        "bm25_score": 11.050764046856855,
+        "bm25_rank": 4,
+        "rrf_score": 0.030117753623188408,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_17",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2025,
+          "start_line": 340
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VPB_financial_statements_2025_separate_table_38",
+        "retrieval_score": 0.029957522915269395,
+        "retrieval_rank": 8,
+        "dense_score": 0.8343045,
+        "dense_rank": 11,
+        "bm25_score": 10.654744441581064,
+        "bm25_rank": 3,
+        "rrf_score": 0.029957522915269395,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_38",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1496
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VCB_financial_statements_2025_separate_table_12",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 9,
+        "dense_score": 0.845898,
+        "dense_rank": 8,
+        "bm25_score": 9.153889497125931,
+        "bm25_rank": 7,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_12",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 220
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VPB_financial_statements_2025_separate_table_54",
+        "retrieval_score": 0.02976190476190476,
+        "retrieval_rank": 10,
+        "dense_score": 0.85609436,
+        "dense_rank": 3,
+        "bm25_score": 7.1845657569645685,
+        "bm25_rank": 12,
+        "rrf_score": 0.02976190476190476,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_54",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1703
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VCB_financial_statements_2025_separate_table_87",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 11,
+        "dense_score": 0.8466654,
+        "dense_rank": 7,
+        "bm25_score": 8.606293704773481,
+        "bm25_rank": 8,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_87",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1979
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VPB_financial_statements_2025_separate_table_78",
+        "retrieval_score": 0.029273504273504274,
+        "retrieval_rank": 12,
+        "dense_score": 0.83323777,
+        "dense_rank": 12,
+        "bm25_score": 9.435612366035736,
+        "bm25_rank": 5,
+        "rrf_score": 0.029273504273504274,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_78",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1967
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VCB_financial_statements_2025_separate_table_72",
+        "retrieval_score": 0.0293236301369863,
+        "retrieval_rank": 13,
+        "dense_score": 0.8478576,
+        "dense_rank": 4,
+        "bm25_score": 6.340924526538947,
+        "bm25_rank": 13,
+        "rrf_score": 0.0293236301369863,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_72",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1761
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VPB_financial_statements_2025_separate_table_109",
+        "retrieval_score": 0.028370221327967807,
+        "retrieval_rank": 14,
+        "dense_score": 0.8354247,
+        "dense_rank": 10,
+        "bm25_score": 7.886955457409709,
+        "bm25_rank": 11,
+        "rrf_score": 0.028370221327967807,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_109",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 2600
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VCB_financial_statements_2025_separate_table_59",
+        "retrieval_score": 0.029206349206349208,
+        "retrieval_rank": 15,
+        "dense_score": 0.8346629,
+        "dense_rank": 15,
+        "bm25_score": 11.463136512254298,
+        "bm25_rank": 3,
+        "rrf_score": 0.029206349206349208,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_59",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1613
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VPB_financial_statements_2025_separate_table_5",
+        "retrieval_score": 0.028309409888357256,
+        "retrieval_rank": 16,
+        "dense_score": 0.840935,
+        "dense_rank": 6,
+        "bm25_score": 6.168669110341871,
+        "bm25_rank": 16,
+        "rrf_score": 0.028309409888357256,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_5",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 318
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VCB_financial_statements_2025_separate_table_83",
+        "retrieval_score": 0.0287391216352965,
+        "retrieval_rank": 17,
+        "dense_score": 0.8202408,
+        "dense_rank": 21,
+        "bm25_score": 13.279257304546977,
+        "bm25_rank": 1,
+        "rrf_score": 0.0287391216352965,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_83",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1882
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VPB_financial_statements_2025_separate_table_104",
+        "retrieval_score": 0.028258706467661692,
+        "retrieval_rank": 18,
+        "dense_score": 0.84078866,
+        "dense_rank": 7,
+        "bm25_score": 6.261263134461237,
+        "bm25_rank": 15,
+        "rrf_score": 0.028258706467661692,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_104",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 2378
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VCB_financial_statements_2025_separate_table_67",
+        "retrieval_score": 0.02857142857142857,
+        "retrieval_rank": 19,
+        "dense_score": 0.8429642,
+        "dense_rank": 10,
+        "bm25_score": 7.3131276857905725,
+        "bm25_rank": 10,
+        "rrf_score": 0.02857142857142857,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_67",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1690
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VPB_financial_statements_2025_separate_table_96",
+        "retrieval_score": 0.027972027972027972,
+        "retrieval_rank": 20,
+        "dense_score": 0.81961864,
+        "dense_rank": 18,
+        "bm25_score": 9.07990608595687,
+        "bm25_rank": 6,
+        "rrf_score": 0.027972027972027972,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_96",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2163
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VCB_financial_statements_2025_separate_table_62",
+        "retrieval_score": 0.027809742999616416,
+        "retrieval_rank": 21,
+        "dense_score": 0.8470998,
+        "dense_rank": 6,
+        "bm25_score": 5.858042929130077,
+        "bm25_rank": 19,
+        "rrf_score": 0.027809742999616416,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_62",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1640
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VPB_financial_statements_2025_separate_table_97",
+        "retrieval_score": 0.02797067901234568,
+        "retrieval_rank": 22,
+        "dense_score": 0.8185329,
+        "dense_rank": 21,
+        "bm25_score": 10.02637207791911,
+        "bm25_rank": 4,
+        "rrf_score": 0.02797067901234568,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_97",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2182
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VCB_financial_statements_2025_separate_table_95",
+        "retrieval_score": 0.027346637102734665,
+        "retrieval_rank": 23,
+        "dense_score": 0.8192377,
+        "dense_rank": 22,
+        "bm25_score": 9.598681301166648,
+        "bm25_rank": 6,
+        "rrf_score": 0.027346637102734665,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_95",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2213
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VPB_financial_statements_2025_separate_table_99",
+        "retrieval_score": 0.027479766610201392,
+        "retrieval_rank": 24,
+        "dense_score": 0.82003284,
+        "dense_rank": 17,
+        "bm25_score": 8.617524691077165,
+        "bm25_rank": 9,
+        "rrf_score": 0.027479766610201392,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_99",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2226
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VCB_financial_statements_2025_separate_table_88",
+        "retrieval_score": 0.025937081659973226,
+        "retrieval_rank": 25,
+        "dense_score": 0.81698763,
+        "dense_rank": 23,
+        "bm25_score": 7.181534422024868,
+        "bm25_rank": 12,
+        "rrf_score": 0.025937081659973226,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_88",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2004
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VPB_financial_statements_2025_separate_table_7",
+        "retrieval_score": 0.026540946394272742,
+        "retrieval_rank": 26,
+        "dense_score": 0.8383972,
+        "dense_rank": 9,
+        "bm25_score": 5.5056155412513395,
+        "bm25_rank": 23,
+        "rrf_score": 0.026540946394272742,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_7",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 376
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VCB_financial_statements_2025_separate_table_63",
+        "retrieval_score": 0.025278219395866455,
+        "retrieval_rank": 27,
+        "dense_score": 0.8119699,
+        "dense_rank": 25,
+        "bm25_score": 6.044468308550595,
+        "bm25_rank": 14,
+        "rrf_score": 0.025278219395866455,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_63",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1659
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VPB_financial_statements_2025_separate_table_25",
+        "retrieval_score": 0.02523809523809524,
+        "retrieval_rank": 28,
+        "dense_score": 0.8266636,
+        "dense_rank": 15,
+        "bm25_score": 5.469320441964199,
+        "bm25_rank": 24,
+        "rrf_score": 0.02523809523809524,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_25",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1352
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VCB_financial_statements_2025_separate_table_92",
+        "retrieval_score": 0.02506265664160401,
+        "retrieval_rank": 29,
+        "dense_score": 0.83101785,
+        "dense_rank": 16,
+        "bm25_score": 5.3301735847921945,
+        "bm25_rank": 24,
+        "rrf_score": 0.02506265664160401,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_92",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2079
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VPB_financial_statements_2025_separate_table_23",
+        "retrieval_score": 0.025,
+        "retrieval_rank": 30,
+        "dense_score": 0.8191389,
+        "dense_rank": 20,
+        "bm25_score": 5.686118240499532,
+        "bm25_rank": 20,
+        "rrf_score": 0.025,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_23",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1344
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VCB_financial_statements_2025_separate_table_30",
+        "retrieval_score": 0.025,
+        "retrieval_rank": 31,
+        "dense_score": 0.82129055,
+        "dense_rank": 20,
+        "bm25_score": 5.783228686319931,
+        "bm25_rank": 20,
+        "rrf_score": 0.025,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_30",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1279
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VPB_financial_statements_2025_separate_table_60",
+        "retrieval_score": 0.02485334979932078,
+        "retrieval_rank": 32,
+        "dense_score": 0.8194783,
+        "dense_rank": 19,
+        "bm25_score": 5.622441851515058,
+        "bm25_rank": 22,
+        "rrf_score": 0.02485334979932078,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_60",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1761
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VCB_financial_statements_2025_separate_table_78",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 33,
+        "dense_score": 0.8563518,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_78",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1830
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VPB_financial_statements_2025_separate_table_22",
+        "retrieval_score": 0.02411038489469862,
+        "retrieval_rank": 34,
+        "dense_score": 0.80963504,
+        "dense_rank": 25,
+        "bm25_score": 5.626699962449296,
+        "bm25_rank": 21,
+        "rrf_score": 0.02411038489469862,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_22",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1323
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VCB_financial_statements_2025_separate_table_14",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 35,
+        "dense_score": 0.8478257,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_14",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 247
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VPB_financial_statements_2025_separate_table_31",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 36,
+        "dense_score": 0.85375273,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_31",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1406
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VCB_financial_statements_2025_separate_table_98",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 37,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.311643138398324,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_98",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2302
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VPB_financial_statements_2025_separate_table_74",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.86475140306355,
+        "bm25_rank": 7,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_74",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1908
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VCB_financial_statements_2025_separate_table_76",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 39,
+        "dense_score": 0.8385266,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_76",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1807
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VPB_financial_statements_2025_separate_table_93",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 40,
+        "dense_score": 0.83909667,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_93",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2128
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VCB_financial_statements_2025_separate_table_74",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 41,
+        "dense_score": 0.8376244,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_74",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1784
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VPB_financial_statements_2025_separate_table_98",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.845200974711947,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_98",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2203
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VCB_financial_statements_2025_separate_table_15",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 43,
+        "dense_score": 0.8362565,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_15",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2025,
+          "start_line": 287
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VPB_financial_statements_2025_separate_table_100",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.989264426257029,
+        "bm25_rank": 13,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_100",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2247
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VCB_financial_statements_2025_separate_table_66",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 45,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.0281756624003435,
+        "bm25_rank": 15,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_66",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1686
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VPB_financial_statements_2025_separate_table_63",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 46,
+        "dense_score": 0.83001435,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_63",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1790
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VCB_financial_statements_2025_separate_table_89",
+        "retrieval_score": 0.013157894736842105,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.02514839959365,
+        "bm25_rank": 16,
+        "rrf_score": 0.013157894736842105,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_89",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 2021
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VPB_financial_statements_2025_separate_table_6",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 48,
+        "dense_score": 0.82706,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_6",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2025,
+          "start_line": 337
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VCB_financial_statements_2025_separate_table_77",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 49,
+        "dense_score": 0.8278852,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "VCB_financial_statements_2025_separate_table_77",
+          "doc_id": "VCB_financial_statements_2025_separate",
+          "ticker": "VCB",
+          "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1811
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VPB_financial_statements_2025_separate_table_69",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.677770541146253,
+        "bm25_rank": 14,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "VPB_financial_statements_2025_separate_table_69",
+          "doc_id": "VPB_financial_statements_2025_separate",
+          "ticker": "VPB",
+          "company_name": "Ngân hàng TMCP Việt Nam Thịnh Vượng",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1850
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2025_separate",
+            "VPB_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VCB_financial_statements_2025_separate|1780",
+            "VPB_financial_statements_2025_separate|435",
+            "VCB_financial_statements_2025_separate|203",
+            "VPB_financial_statements_2025_separate|2454",
+            "VCB_financial_statements_2025_separate|1803"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f2": 0.3846153846153846,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2025_separate",
+            "VPB_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VCB_financial_statements_2025_separate|1780",
+            "VPB_financial_statements_2025_separate|435",
+            "VCB_financial_statements_2025_separate|203",
+            "VPB_financial_statements_2025_separate|2454",
+            "VCB_financial_statements_2025_separate|1803",
+            "VPB_financial_statements_2025_separate|1869",
+            "VCB_financial_statements_2025_separate|340",
+            "VPB_financial_statements_2025_separate|1496",
+            "VCB_financial_statements_2025_separate|220",
+            "VPB_financial_statements_2025_separate|1703"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f2": 0.2777777777777778,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2025_separate",
+            "VPB_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VCB_financial_statements_2025_separate|1780",
+            "VPB_financial_statements_2025_separate|435",
+            "VCB_financial_statements_2025_separate|203",
+            "VPB_financial_statements_2025_separate|2454",
+            "VCB_financial_statements_2025_separate|1803",
+            "VPB_financial_statements_2025_separate|1869",
+            "VCB_financial_statements_2025_separate|340",
+            "VPB_financial_statements_2025_separate|1496",
+            "VCB_financial_statements_2025_separate|220",
+            "VPB_financial_statements_2025_separate|1703",
+            "VCB_financial_statements_2025_separate|1979",
+            "VPB_financial_statements_2025_separate|1967",
+            "VCB_financial_statements_2025_separate|1761",
+            "VPB_financial_statements_2025_separate|2600",
+            "VCB_financial_statements_2025_separate|1613",
+            "VPB_financial_statements_2025_separate|318",
+            "VCB_financial_statements_2025_separate|1882",
+            "VPB_financial_statements_2025_separate|2378",
+            "VCB_financial_statements_2025_separate|1690",
+            "VPB_financial_statements_2025_separate|2163"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VCB_financial_statements_2025_separate",
+            "VPB_financial_statements_2025_separate"
+          ],
+          "tables": [
+            "VCB_financial_statements_2025_separate|1780",
+            "VPB_financial_statements_2025_separate|435",
+            "VCB_financial_statements_2025_separate|203",
+            "VPB_financial_statements_2025_separate|2454",
+            "VCB_financial_statements_2025_separate|1803",
+            "VPB_financial_statements_2025_separate|1869",
+            "VCB_financial_statements_2025_separate|340",
+            "VPB_financial_statements_2025_separate|1496",
+            "VCB_financial_statements_2025_separate|220",
+            "VPB_financial_statements_2025_separate|1703",
+            "VCB_financial_statements_2025_separate|1979",
+            "VPB_financial_statements_2025_separate|1967",
+            "VCB_financial_statements_2025_separate|1761",
+            "VPB_financial_statements_2025_separate|2600",
+            "VCB_financial_statements_2025_separate|1613",
+            "VPB_financial_statements_2025_separate|318",
+            "VCB_financial_statements_2025_separate|1882",
+            "VPB_financial_statements_2025_separate|2378",
+            "VCB_financial_statements_2025_separate|1690",
+            "VPB_financial_statements_2025_separate|2163",
+            "VCB_financial_statements_2025_separate|1640",
+            "VPB_financial_statements_2025_separate|2182",
+            "VCB_financial_statements_2025_separate|2213",
+            "VPB_financial_statements_2025_separate|2226",
+            "VCB_financial_statements_2025_separate|2004",
+            "VPB_financial_statements_2025_separate|376",
+            "VCB_financial_statements_2025_separate|1659",
+            "VPB_financial_statements_2025_separate|1352",
+            "VCB_financial_statements_2025_separate|2079",
+            "VPB_financial_statements_2025_separate|1344",
+            "VCB_financial_statements_2025_separate|1279",
+            "VPB_financial_statements_2025_separate|1761",
+            "VCB_financial_statements_2025_separate|1830",
+            "VPB_financial_statements_2025_separate|1323",
+            "VCB_financial_statements_2025_separate|247",
+            "VPB_financial_statements_2025_separate|1406",
+            "VCB_financial_statements_2025_separate|2302",
+            "VPB_financial_statements_2025_separate|1908",
+            "VCB_financial_statements_2025_separate|1807",
+            "VPB_financial_statements_2025_separate|2128",
+            "VCB_financial_statements_2025_separate|1784",
+            "VPB_financial_statements_2025_separate|2203",
+            "VCB_financial_statements_2025_separate|287",
+            "VPB_financial_statements_2025_separate|2247",
+            "VCB_financial_statements_2025_separate|1686",
+            "VPB_financial_statements_2025_separate|1790",
+            "VCB_financial_statements_2025_separate|2021",
+            "VPB_financial_statements_2025_separate|337",
+            "VCB_financial_statements_2025_separate|1811",
+            "VPB_financial_statements_2025_separate|1850"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

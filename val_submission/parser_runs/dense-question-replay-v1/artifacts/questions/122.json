@@ -1,0 +1,1055 @@
+{
+  "schema_version": 1,
+  "id": 122,
+  "question": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-22T13:39:19+00:00",
+  "finished_at": "2026-08-22T13:39:20+00:00",
+  "duration_seconds": 0.305041640996933,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HHV_financial_statements_2022_consolidated"
+    ],
+    "relevant_tables": [
+      "HHV_financial_statements_2022_consolidated|1521"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Số dư phải thu khách hàng ngắn hạn đến ngày 01/01/ trăm tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "matched_text": "HHV",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        2022
+      ],
+      "extra": [
+        2021
+      ]
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "HHV",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HHV"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_37",
+        "retrieval_score": 0.8540056,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_37",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2008
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_63",
+        "retrieval_score": 0.8498747,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_63",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 2464
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_27",
+        "retrieval_score": 0.848543,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_27",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1755
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_25",
+        "retrieval_score": 0.8446276,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_25",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1700
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_45",
+        "retrieval_score": 0.8391201,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_45",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2209
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_51",
+        "retrieval_score": 0.836774,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_51",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2320
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_35",
+        "retrieval_score": 0.834915,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_35",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1981
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.83422846,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_10",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 443
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_64",
+        "retrieval_score": 0.8334155,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_64",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2470
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_78",
+        "retrieval_score": 0.8330324,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_78",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2973
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_47",
+        "retrieval_score": 0.8316678,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_47",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2266
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_12",
+        "retrieval_score": 0.83005273,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_12",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 506
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_11",
+        "retrieval_score": 0.82991606,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_11",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 476
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_20",
+        "retrieval_score": 0.8288156,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_20",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1599
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_75",
+        "retrieval_score": 0.8279699,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_75",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2883
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.82683164,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_7",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 354
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_50",
+        "retrieval_score": 0.8266018,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_50",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2314
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_69",
+        "retrieval_score": 0.8259806,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_69",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2588
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_56",
+        "retrieval_score": 0.82477075,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_56",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2377
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_38",
+        "retrieval_score": 0.8246967,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_38",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2040
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_40",
+        "retrieval_score": 0.8241737,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_40",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2126
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_22",
+        "retrieval_score": 0.8240526,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_22",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1636
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_8",
+        "retrieval_score": 0.8239353,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_8",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 379
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_79",
+        "retrieval_score": 0.82364947,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_79",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 3000
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_66",
+        "retrieval_score": 0.82354677,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_66",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2536
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.8233486,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_6",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 331
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_30",
+        "retrieval_score": 0.8231054,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_30",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1811
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_29",
+        "retrieval_score": 0.8203021,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_29",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1786
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_80",
+        "retrieval_score": 0.8187567,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_80",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 3028
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_44",
+        "retrieval_score": 0.8179447,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_44",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2205
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_76",
+        "retrieval_score": 0.81719804,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_76",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2908
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_41",
+        "retrieval_score": 0.81640327,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_41",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2149
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_49",
+        "retrieval_score": 0.81596136,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_49",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2278
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_46",
+        "retrieval_score": 0.81555617,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_46",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2238
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_77",
+        "retrieval_score": 0.815188,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_77",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2939
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_55",
+        "retrieval_score": 0.81478196,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_55",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2373
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_57",
+        "retrieval_score": 0.81274796,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_57",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2381
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_59",
+        "retrieval_score": 0.81263536,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_59",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2408
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_52",
+        "retrieval_score": 0.8125661,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_52",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2340
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_39",
+        "retrieval_score": 0.8115701,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_39",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2066
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_9",
+        "retrieval_score": 0.8114027,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_9",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 410
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_71",
+        "retrieval_score": 0.81046665,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_71",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2673
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_36",
+        "retrieval_score": 0.8097478,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_36",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1983
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_58",
+        "retrieval_score": 0.8094844,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_58",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2385
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_26",
+        "retrieval_score": 0.8076629,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_26",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1725
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_60",
+        "retrieval_score": 0.80566764,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_60",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2412
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_21",
+        "retrieval_score": 0.80482244,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_21",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1609
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_62",
+        "retrieval_score": 0.8040949,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_62",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 2422
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_48",
+        "retrieval_score": 0.8035021,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_48",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2272
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "HHV_financial_statements_2021_consolidated_table_72",
+        "retrieval_score": 0.80280733,
+        "metadata": {
+          "table_id": "HHV_financial_statements_2021_consolidated_table_72",
+          "doc_id": "HHV_financial_statements_2021_consolidated",
+          "ticker": "HHV",
+          "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 2796
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "HHV_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "HHV_financial_statements_2021_consolidated|2008",
+            "HHV_financial_statements_2021_consolidated|2464",
+            "HHV_financial_statements_2021_consolidated|1755",
+            "HHV_financial_statements_2021_consolidated|1700",
+            "HHV_financial_statements_2021_consolidated|2209"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "HHV_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "HHV_financial_statements_2021_consolidated|2008",
+            "HHV_financial_statements_2021_consolidated|2464",
+            "HHV_financial_statements_2021_consolidated|1755",
+            "HHV_financial_statements_2021_consolidated|1700",
+            "HHV_financial_statements_2021_consolidated|2209",
+            "HHV_financial_statements_2021_consolidated|2320",
+            "HHV_financial_statements_2021_consolidated|1981",
+            "HHV_financial_statements_2021_consolidated|443",
+            "HHV_financial_statements_2021_consolidated|2470",
+            "HHV_financial_statements_2021_consolidated|2973"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "HHV_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "HHV_financial_statements_2021_consolidated|2008",
+            "HHV_financial_statements_2021_consolidated|2464",
+            "HHV_financial_statements_2021_consolidated|1755",
+            "HHV_financial_statements_2021_consolidated|1700",
+            "HHV_financial_statements_2021_consolidated|2209",
+            "HHV_financial_statements_2021_consolidated|2320",
+            "HHV_financial_statements_2021_consolidated|1981",
+            "HHV_financial_statements_2021_consolidated|443",
+            "HHV_financial_statements_2021_consolidated|2470",
+            "HHV_financial_statements_2021_consolidated|2973",
+            "HHV_financial_statements_2021_consolidated|2266",
+            "HHV_financial_statements_2021_consolidated|506",
+            "HHV_financial_statements_2021_consolidated|476",
+            "HHV_financial_statements_2021_consolidated|1599",
+            "HHV_financial_statements_2021_consolidated|2883",
+            "HHV_financial_statements_2021_consolidated|354",
+            "HHV_financial_statements_2021_consolidated|2314",
+            "HHV_financial_statements_2021_consolidated|2588",
+            "HHV_financial_statements_2021_consolidated|2377",
+            "HHV_financial_statements_2021_consolidated|2040"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "HHV_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "HHV_financial_statements_2021_consolidated|2008",
+            "HHV_financial_statements_2021_consolidated|2464",
+            "HHV_financial_statements_2021_consolidated|1755",
+            "HHV_financial_statements_2021_consolidated|1700",
+            "HHV_financial_statements_2021_consolidated|2209",
+            "HHV_financial_statements_2021_consolidated|2320",
+            "HHV_financial_statements_2021_consolidated|1981",
+            "HHV_financial_statements_2021_consolidated|443",
+            "HHV_financial_statements_2021_consolidated|2470",
+            "HHV_financial_statements_2021_consolidated|2973",
+            "HHV_financial_statements_2021_consolidated|2266",
+            "HHV_financial_statements_2021_consolidated|506",
+            "HHV_financial_statements_2021_consolidated|476",
+            "HHV_financial_statements_2021_consolidated|1599",
+            "HHV_financial_statements_2021_consolidated|2883",
+            "HHV_financial_statements_2021_consolidated|354",
+            "HHV_financial_statements_2021_consolidated|2314",
+            "HHV_financial_statements_2021_consolidated|2588",
+            "HHV_financial_statements_2021_consolidated|2377",
+            "HHV_financial_statements_2021_consolidated|2040",
+            "HHV_financial_statements_2021_consolidated|2126",
+            "HHV_financial_statements_2021_consolidated|1636",
+            "HHV_financial_statements_2021_consolidated|379",
+            "HHV_financial_statements_2021_consolidated|3000",
+            "HHV_financial_statements_2021_consolidated|2536",
+            "HHV_financial_statements_2021_consolidated|331",
+            "HHV_financial_statements_2021_consolidated|1811",
+            "HHV_financial_statements_2021_consolidated|1786",
+            "HHV_financial_statements_2021_consolidated|3028",
+            "HHV_financial_statements_2021_consolidated|2205",
+            "HHV_financial_statements_2021_consolidated|2908",
+            "HHV_financial_statements_2021_consolidated|2149",
+            "HHV_financial_statements_2021_consolidated|2278",
+            "HHV_financial_statements_2021_consolidated|2238",
+            "HHV_financial_statements_2021_consolidated|2939",
+            "HHV_financial_statements_2021_consolidated|2373",
+            "HHV_financial_statements_2021_consolidated|2381",
+            "HHV_financial_statements_2021_consolidated|2408",
+            "HHV_financial_statements_2021_consolidated|2340",
+            "HHV_financial_statements_2021_consolidated|2066",
+            "HHV_financial_statements_2021_consolidated|410",
+            "HHV_financial_statements_2021_consolidated|2673",
+            "HHV_financial_statements_2021_consolidated|1983",
+            "HHV_financial_statements_2021_consolidated|2385",
+            "HHV_financial_statements_2021_consolidated|1725",
+            "HHV_financial_statements_2021_consolidated|2412",
+            "HHV_financial_statements_2021_consolidated|1609",
+            "HHV_financial_statements_2021_consolidated|2422",
+            "HHV_financial_statements_2021_consolidated|2272",
+            "HHV_financial_statements_2021_consolidated|2796"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

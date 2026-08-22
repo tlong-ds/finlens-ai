@@ -1,0 +1,1364 @@
+{
+  "schema_version": 1,
+  "id": 24,
+  "question": "Vay dài hạn với Công ty Cổ phần Hoàng Anh Gia Lai của công ty mẹ CTCP Nông nghiệp Quốc tế Hoàng Anh Gia Lai (HNG) cuối năm 2017 là bao nhiêu nghìn đồng?",
+  "started_at": "2026-08-22T13:51:12+00:00",
+  "finished_at": "2026-08-22T13:51:13+00:00",
+  "duration_seconds": 1.033832581990282,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HNG"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HNG_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "HNG_financial_statements_2017_separate|987"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HAG"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Vay dài hạn với Nông nghiệp Quốc tế (HNG) cuối nghìn đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HNG",
+        "company_name": "CTCP Nông nghiệp Quốc tế Hoàng Anh Gia Lai",
+        "matched_text": "HNG",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "HAG",
+        "company_name": "CTCP Hoàng Anh Gia Lai",
+        "matched_text": "Hoàng Anh Gia Lai",
+        "match_type": "normalized_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        "HNG"
+      ],
+      "extra": [
+        "HAG"
+      ]
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Vay dài hạn với Nông nghiệp Quốc tế (HNG) cuối nghìn đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "HAG",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HAG"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "HAG_financial_statements_2017_separate_table_12",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 1,
+        "dense_score": 0.8511036,
+        "dense_rank": 1,
+        "bm25_score": 28.05489964094864,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_12",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 359
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "HAG_financial_statements_2017_separate_table_34",
+        "retrieval_score": 0.031754032258064516,
+        "retrieval_rank": 2,
+        "dense_score": 0.81420785,
+        "dense_rank": 4,
+        "bm25_score": 20.218632286157483,
+        "bm25_rank": 2,
+        "rrf_score": 0.031754032258064516,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_34",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "HAG_financial_statements_2017_separate_table_70",
+        "retrieval_score": 0.03036576949620428,
+        "retrieval_rank": 3,
+        "dense_score": 0.8038082,
+        "dense_rank": 9,
+        "bm25_score": 14.921617769980072,
+        "bm25_rank": 3,
+        "rrf_score": 0.03036576949620428,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_70",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1530
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "HAG_financial_statements_2017_separate_table_50",
+        "retrieval_score": 0.02946236559139785,
+        "retrieval_rank": 4,
+        "dense_score": 0.83535534,
+        "dense_rank": 2,
+        "bm25_score": 6.850614127922462,
+        "bm25_rank": 15,
+        "rrf_score": 0.02946236559139785,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_50",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1273
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "HAG_financial_statements_2017_separate_table_62",
+        "retrieval_score": 0.02900988017658188,
+        "retrieval_rank": 5,
+        "dense_score": 0.8025204,
+        "dense_rank": 11,
+        "bm25_score": 12.044978466077225,
+        "bm25_rank": 7,
+        "rrf_score": 0.02900988017658188,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_62",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HAG_financial_statements_2017_separate_table_76",
+        "retrieval_score": 0.028958333333333336,
+        "retrieval_rank": 6,
+        "dense_score": 0.7968452,
+        "dense_rank": 15,
+        "bm25_score": 13.531949613130418,
+        "bm25_rank": 4,
+        "rrf_score": 0.028958333333333336,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_76",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1619
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "HAG_financial_statements_2017_separate_table_13",
+        "retrieval_score": 0.028814262023217248,
+        "retrieval_rank": 7,
+        "dense_score": 0.8053194,
+        "dense_rank": 7,
+        "bm25_score": 8.724540428951322,
+        "bm25_rank": 12,
+        "rrf_score": 0.028814262023217248,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_13",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 374
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "HAG_financial_statements_2017_separate_table_75",
+        "retrieval_score": 0.028790389395194696,
+        "retrieval_rank": 8,
+        "dense_score": 0.8051542,
+        "dense_rank": 8,
+        "bm25_score": 9.034332687522026,
+        "bm25_rank": 11,
+        "rrf_score": 0.028790389395194696,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_75",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1600
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "HAG_financial_statements_2017_separate_table_24",
+        "retrieval_score": 0.028381642512077296,
+        "retrieval_rank": 9,
+        "dense_score": 0.79947317,
+        "dense_rank": 12,
+        "bm25_score": 11.958098237065995,
+        "bm25_rank": 9,
+        "rrf_score": 0.028381642512077296,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_24",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 927
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "HAG_financial_statements_2017_separate_table_81",
+        "retrieval_score": 0.027884615384615386,
+        "retrieval_rank": 10,
+        "dense_score": 0.7953772,
+        "dense_rank": 20,
+        "bm25_score": 12.640003091729708,
+        "bm25_rank": 5,
+        "rrf_score": 0.027884615384615386,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_81",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1669
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "HAG_financial_statements_2017_separate_table_73",
+        "retrieval_score": 0.02661064425770308,
+        "retrieval_rank": 11,
+        "dense_score": 0.79228336,
+        "dense_rank": 24,
+        "bm25_score": 11.974450437123984,
+        "bm25_rank": 8,
+        "rrf_score": 0.02661064425770308,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_73",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1575
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HAG_financial_statements_2017_separate_table_43",
+        "retrieval_score": 0.026144907723855092,
+        "retrieval_rank": 12,
+        "dense_score": 0.7962745,
+        "dense_rank": 16,
+        "bm25_score": 6.6684496105466,
+        "bm25_rank": 17,
+        "rrf_score": 0.026144907723855092,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_43",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1121
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "HAG_financial_statements_2017_separate_table_78",
+        "retrieval_score": 0.02552166934189406,
+        "retrieval_rank": 13,
+        "dense_score": 0.78679466,
+        "dense_rank": 29,
+        "bm25_score": 11.459617987230214,
+        "bm25_rank": 10,
+        "rrf_score": 0.02552166934189406,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_78",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1642
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "HAG_financial_statements_2017_separate_table_41",
+        "retrieval_score": 0.02528560548362529,
+        "retrieval_rank": 14,
+        "dense_score": 0.8100696,
+        "dense_rank": 5,
+        "bm25_score": 2.381408794954238,
+        "bm25_rank": 41,
+        "rrf_score": 0.02528560548362529,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_41",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1094
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "HAG_financial_statements_2017_separate_table_80",
+        "retrieval_score": 0.025278219395866455,
+        "retrieval_rank": 15,
+        "dense_score": 0.79754514,
+        "dense_rank": 14,
+        "bm25_score": 5.071305582517816,
+        "bm25_rank": 25,
+        "rrf_score": 0.025278219395866455,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_80",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1650
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "HAG_financial_statements_2017_separate_table_22",
+        "retrieval_score": 0.024963924963924963,
+        "retrieval_rank": 16,
+        "dense_score": 0.81588644,
+        "dense_rank": 3,
+        "bm25_score": 1.415859757288757,
+        "bm25_rank": 50,
+        "rrf_score": 0.024963924963924963,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_22",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 908
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "HAG_financial_statements_2017_separate_table_83",
+        "retrieval_score": 0.024922600619195046,
+        "retrieval_rank": 17,
+        "dense_score": 0.7900646,
+        "dense_rank": 25,
+        "bm25_score": 6.685071265841439,
+        "bm25_rank": 16,
+        "rrf_score": 0.024922600619195046,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_83",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1694
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HAG_financial_statements_2017_separate_table_67",
+        "retrieval_score": 0.024325827078120657,
+        "retrieval_rank": 18,
+        "dense_score": 0.7760824,
+        "dense_rank": 49,
+        "bm25_score": 12.305538685032843,
+        "bm25_rank": 6,
+        "rrf_score": 0.024325827078120657,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_67",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1488
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "HAG_financial_statements_2017_separate_table_27",
+        "retrieval_score": 0.02431476569407604,
+        "retrieval_rank": 19,
+        "dense_score": 0.7959116,
+        "dense_rank": 18,
+        "bm25_score": 5.008628555479966,
+        "bm25_rank": 27,
+        "rrf_score": 0.02431476569407604,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_27",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 952
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "HAG_financial_statements_2017_separate_table_47",
+        "retrieval_score": 0.024152480721664482,
+        "retrieval_rank": 20,
+        "dense_score": 0.78699344,
+        "dense_rank": 27,
+        "bm25_score": 5.942238288231159,
+        "bm25_rank": 19,
+        "rrf_score": 0.024152480721664482,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_47",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1208
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "HAG_financial_statements_2017_separate_table_45",
+        "retrieval_score": 0.023709315375982042,
+        "retrieval_rank": 21,
+        "dense_score": 0.78682554,
+        "dense_rank": 28,
+        "bm25_score": 5.664582947887534,
+        "bm25_rank": 21,
+        "rrf_score": 0.023709315375982042,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_45",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1171
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "HAG_financial_statements_2017_separate_table_63",
+        "retrieval_score": 0.023709315375982042,
+        "retrieval_rank": 22,
+        "dense_score": 0.7950737,
+        "dense_rank": 21,
+        "bm25_score": 4.883261168608442,
+        "bm25_rank": 28,
+        "rrf_score": 0.023709315375982042,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_63",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1440
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "HAG_financial_statements_2017_separate_table_64",
+        "retrieval_score": 0.022893772893772896,
+        "retrieval_rank": 23,
+        "dense_score": 0.78562164,
+        "dense_rank": 31,
+        "bm25_score": 5.4387512229178085,
+        "bm25_rank": 24,
+        "rrf_score": 0.022893772893772896,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_64",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1459
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HAG_financial_statements_2017_separate_table_37",
+        "retrieval_score": 0.02233280737953635,
+        "retrieval_rank": 24,
+        "dense_score": 0.79625756,
+        "dense_rank": 17,
+        "bm25_score": 1.4781962331533218,
+        "bm25_rank": 47,
+        "rrf_score": 0.02233280737953635,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_37",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1056
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "HAG_financial_statements_2017_separate_table_71",
+        "retrieval_score": 0.0221001221001221,
+        "retrieval_rank": 25,
+        "dense_score": 0.7858175,
+        "dense_rank": 30,
+        "bm25_score": 4.1893580559698265,
+        "bm25_rank": 31,
+        "rrf_score": 0.0221001221001221,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_71",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1548
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "HAG_financial_statements_2017_separate_table_4",
+        "retrieval_score": 0.02185211433971179,
+        "retrieval_rank": 26,
+        "dense_score": 0.7789562,
+        "dense_rank": 42,
+        "bm25_score": 5.605257916565423,
+        "bm25_rank": 23,
+        "rrf_score": 0.02185211433971179,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_4",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 222
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "HAG_financial_statements_2017_separate_table_84",
+        "retrieval_score": 0.021749408983451537,
+        "retrieval_rank": 27,
+        "dense_score": 0.783812,
+        "dense_rank": 34,
+        "bm25_score": 4.693422265798843,
+        "bm25_rank": 30,
+        "rrf_score": 0.021749408983451537,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_84",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1715
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "HAG_financial_statements_2017_separate_table_23",
+        "retrieval_score": 0.021629084215370457,
+        "retrieval_rank": 28,
+        "dense_score": 0.79373544,
+        "dense_rank": 22,
+        "bm25_score": 1.5703824917535723,
+        "bm25_rank": 46,
+        "rrf_score": 0.021629084215370457,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_23",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 912
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "HAG_financial_statements_2017_separate_table_53",
+        "retrieval_score": 0.021622253389434316,
+        "retrieval_rank": 29,
+        "dense_score": 0.7841962,
+        "dense_rank": 33,
+        "bm25_score": 4.18047660552898,
+        "bm25_rank": 32,
+        "rrf_score": 0.021622253389434316,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_53",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1314
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HAG_financial_statements_2017_separate_table_33",
+        "retrieval_score": 0.0207597645799893,
+        "retrieval_rank": 30,
+        "dense_score": 0.77840626,
+        "dense_rank": 45,
+        "bm25_score": 4.846815373690062,
+        "bm25_rank": 29,
+        "rrf_score": 0.0207597645799893,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_33",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1017
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "HAG_financial_statements_2017_separate_table_35",
+        "retrieval_score": 0.020618556701030927,
+        "retrieval_rank": 31,
+        "dense_score": 0.78211397,
+        "dense_rank": 37,
+        "bm25_score": 2.705004296110573,
+        "bm25_rank": 37,
+        "rrf_score": 0.020618556701030927,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_35",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1048
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "HAG_financial_statements_2017_separate_table_57",
+        "retrieval_score": 0.020141700404858298,
+        "retrieval_rank": 32,
+        "dense_score": 0.77858883,
+        "dense_rank": 44,
+        "bm25_score": 3.1246849328733703,
+        "bm25_rank": 35,
+        "rrf_score": 0.020141700404858298,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_57",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1357
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "HAG_financial_statements_2017_separate_table_68",
+        "retrieval_score": 0.01925925925925926,
+        "retrieval_rank": 33,
+        "dense_score": 0.7768285,
+        "dense_rank": 48,
+        "bm25_score": 2.4794989066661586,
+        "bm25_rank": 40,
+        "rrf_score": 0.01925925925925926,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_68",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1507
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "HAG_financial_statements_2017_separate_table_10",
+        "retrieval_score": 0.019174311926605507,
+        "retrieval_rank": 34,
+        "dense_score": 0.7803011,
+        "dense_rank": 40,
+        "bm25_score": 1.4568163386949287,
+        "bm25_rank": 49,
+        "rrf_score": 0.019174311926605507,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_10",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 351
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "HAG_financial_statements_2017_separate_table_16",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 35,
+        "dense_score": 0.80619234,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_16",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 397
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HAG_financial_statements_2017_separate_table_20",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 36,
+        "dense_score": 0.8032032,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_20",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 597
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "HAG_financial_statements_2017_separate_table_11",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 37,
+        "dense_score": 0.7976253,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_11",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 355
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "HAG_financial_statements_2017_separate_table_6",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.130186642106379,
+        "bm25_rank": 13,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_6",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 262
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "HAG_financial_statements_2017_separate_table_42",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.549473031290275,
+        "bm25_rank": 14,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_42",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1100
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "HAG_financial_statements_2017_separate_table_49",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 6.311883127234929,
+        "bm25_rank": 18,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_49",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1244
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "HAG_financial_statements_2017_separate_table_55",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 41,
+        "dense_score": 0.79584754,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_55",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1338
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HAG_financial_statements_2017_separate_table_54",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.733795289412129,
+        "bm25_rank": 20,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_54",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1332
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "HAG_financial_statements_2017_separate_table_40",
+        "retrieval_score": 0.012195121951219513,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.613905966416972,
+        "bm25_rank": 22,
+        "rrf_score": 0.012195121951219513,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_40",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1079
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "HAG_financial_statements_2017_separate_table_28",
+        "retrieval_score": 0.012048192771084338,
+        "retrieval_rank": 44,
+        "dense_score": 0.7936748,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012048192771084338,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_28",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 958
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "HAG_financial_statements_2017_separate_table_36",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 45,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.03201144454374,
+        "bm25_rank": 26,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_36",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1052
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "HAG_financial_statements_2017_separate_table_82",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 46,
+        "dense_score": 0.78802824,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_82",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1688
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "HAG_financial_statements_2017_separate_table_87",
+        "retrieval_score": 0.010869565217391304,
+        "retrieval_rank": 47,
+        "dense_score": 0.7848209,
+        "dense_rank": 32,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010869565217391304,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_87",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1750
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HAG_financial_statements_2017_separate_table_7",
+        "retrieval_score": 0.010752688172043012,
+        "retrieval_rank": 48,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.5055131808891296,
+        "bm25_rank": 33,
+        "rrf_score": 0.010752688172043012,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_7",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 289
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "HAG_financial_statements_2017_separate_table_5",
+        "retrieval_score": 0.010638297872340425,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.1413566026009896,
+        "bm25_rank": 34,
+        "rrf_score": 0.010638297872340425,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_5",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2017,
+          "start_line": 238
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "HAG_financial_statements_2017_separate_table_38",
+        "retrieval_score": 0.010526315789473684,
+        "retrieval_rank": 50,
+        "dense_score": 0.7832942,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010526315789473684,
+        "metadata": {
+          "table_id": "HAG_financial_statements_2017_separate_table_38",
+          "doc_id": "HAG_financial_statements_2017_separate",
+          "ticker": "HAG",
+          "company_name": "CTCP Hoàng Anh Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1071
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2017_separate|359",
+            "HAG_financial_statements_2017_separate|1033",
+            "HAG_financial_statements_2017_separate|1530",
+            "HAG_financial_statements_2017_separate|1273",
+            "HAG_financial_statements_2017_separate|1421"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2017_separate|359",
+            "HAG_financial_statements_2017_separate|1033",
+            "HAG_financial_statements_2017_separate|1530",
+            "HAG_financial_statements_2017_separate|1273",
+            "HAG_financial_statements_2017_separate|1421",
+            "HAG_financial_statements_2017_separate|1619",
+            "HAG_financial_statements_2017_separate|374",
+            "HAG_financial_statements_2017_separate|1600",
+            "HAG_financial_statements_2017_separate|927",
+            "HAG_financial_statements_2017_separate|1669"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2017_separate|359",
+            "HAG_financial_statements_2017_separate|1033",
+            "HAG_financial_statements_2017_separate|1530",
+            "HAG_financial_statements_2017_separate|1273",
+            "HAG_financial_statements_2017_separate|1421",
+            "HAG_financial_statements_2017_separate|1619",
+            "HAG_financial_statements_2017_separate|374",
+            "HAG_financial_statements_2017_separate|1600",
+            "HAG_financial_statements_2017_separate|927",
+            "HAG_financial_statements_2017_separate|1669",
+            "HAG_financial_statements_2017_separate|1575",
+            "HAG_financial_statements_2017_separate|1121",
+            "HAG_financial_statements_2017_separate|1642",
+            "HAG_financial_statements_2017_separate|1094",
+            "HAG_financial_statements_2017_separate|1650",
+            "HAG_financial_statements_2017_separate|908",
+            "HAG_financial_statements_2017_separate|1694",
+            "HAG_financial_statements_2017_separate|1488",
+            "HAG_financial_statements_2017_separate|952",
+            "HAG_financial_statements_2017_separate|1208"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "HAG_financial_statements_2017_separate"
+          ],
+          "tables": [
+            "HAG_financial_statements_2017_separate|359",
+            "HAG_financial_statements_2017_separate|1033",
+            "HAG_financial_statements_2017_separate|1530",
+            "HAG_financial_statements_2017_separate|1273",
+            "HAG_financial_statements_2017_separate|1421",
+            "HAG_financial_statements_2017_separate|1619",
+            "HAG_financial_statements_2017_separate|374",
+            "HAG_financial_statements_2017_separate|1600",
+            "HAG_financial_statements_2017_separate|927",
+            "HAG_financial_statements_2017_separate|1669",
+            "HAG_financial_statements_2017_separate|1575",
+            "HAG_financial_statements_2017_separate|1121",
+            "HAG_financial_statements_2017_separate|1642",
+            "HAG_financial_statements_2017_separate|1094",
+            "HAG_financial_statements_2017_separate|1650",
+            "HAG_financial_statements_2017_separate|908",
+            "HAG_financial_statements_2017_separate|1694",
+            "HAG_financial_statements_2017_separate|1488",
+            "HAG_financial_statements_2017_separate|952",
+            "HAG_financial_statements_2017_separate|1208",
+            "HAG_financial_statements_2017_separate|1171",
+            "HAG_financial_statements_2017_separate|1440",
+            "HAG_financial_statements_2017_separate|1459",
+            "HAG_financial_statements_2017_separate|1056",
+            "HAG_financial_statements_2017_separate|1548",
+            "HAG_financial_statements_2017_separate|222",
+            "HAG_financial_statements_2017_separate|1715",
+            "HAG_financial_statements_2017_separate|912",
+            "HAG_financial_statements_2017_separate|1314",
+            "HAG_financial_statements_2017_separate|1017",
+            "HAG_financial_statements_2017_separate|1048",
+            "HAG_financial_statements_2017_separate|1357",
+            "HAG_financial_statements_2017_separate|1507",
+            "HAG_financial_statements_2017_separate|351",
+            "HAG_financial_statements_2017_separate|397",
+            "HAG_financial_statements_2017_separate|597",
+            "HAG_financial_statements_2017_separate|355",
+            "HAG_financial_statements_2017_separate|262",
+            "HAG_financial_statements_2017_separate|1100",
+            "HAG_financial_statements_2017_separate|1244",
+            "HAG_financial_statements_2017_separate|1338",
+            "HAG_financial_statements_2017_separate|1332",
+            "HAG_financial_statements_2017_separate|1079",
+            "HAG_financial_statements_2017_separate|958",
+            "HAG_financial_statements_2017_separate|1052",
+            "HAG_financial_statements_2017_separate|1688",
+            "HAG_financial_statements_2017_separate|1750",
+            "HAG_financial_statements_2017_separate|289",
+            "HAG_financial_statements_2017_separate|238",
+            "HAG_financial_statements_2017_separate|1071"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

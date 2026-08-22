@@ -1,0 +1,6077 @@
+{
+  "schema_version": 1,
+  "id": 739,
+  "question": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T15:04:36+00:00",
+  "finished_at": "2026-08-22T15:04:50+00:00",
+  "duration_seconds": 13.942275806999533,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-03/artifacts/questions/739.json",
+  "golden": {
+    "id": 739,
+    "question": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+    "relevant_docs": [
+      "IJC_financial_statements_2017_separate",
+      "SCR_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "IJC_financial_statements_2017_separate|1263",
+      "SCR_financial_statements_2017_separate|1046"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_44",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_44",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1332
+      },
+      "retrieval_score": 0.8597986,
+      "dense_rank": 1
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_49",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_49",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1116
+      },
+      "retrieval_score": 0.8638214,
+      "dense_rank": 2
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_45",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_45",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1336
+      },
+      "retrieval_score": 0.8445869,
+      "dense_rank": 3
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_44",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_44",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1046
+      },
+      "retrieval_score": 0.85898185,
+      "dense_rank": 4
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_11",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_11",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 458
+      },
+      "retrieval_score": 0.84258133,
+      "dense_rank": 5
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_47",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_47",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1102
+      },
+      "retrieval_score": 0.85740167,
+      "dense_rank": 6
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_49",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_49",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1373
+      },
+      "retrieval_score": 0.8402034,
+      "dense_rank": 7
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_51",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_51",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1141
+      },
+      "retrieval_score": 0.8563763,
+      "dense_rank": 8
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_41",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_41",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1259
+      },
+      "retrieval_score": 0.83884656,
+      "dense_rank": 9
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_41",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_41",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 981
+      },
+      "retrieval_score": 0.8481687,
+      "dense_rank": 10
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_63",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_63",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1520
+      },
+      "retrieval_score": 0.8375016,
+      "dense_rank": 11
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_12",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_12",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 566
+      },
+      "retrieval_score": 0.8403887,
+      "dense_rank": 12
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_13",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_13",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 904
+      },
+      "retrieval_score": 0.83319545,
+      "dense_rank": 13
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_48",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_48",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1108
+      },
+      "retrieval_score": 0.8395912,
+      "dense_rank": 14
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_56",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_56",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1453
+      },
+      "retrieval_score": 0.832179,
+      "dense_rank": 15
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_17",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_17",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 661
+      },
+      "retrieval_score": 0.8340348,
+      "dense_rank": 16
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_42",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_42",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1263
+      },
+      "retrieval_score": 0.8285491,
+      "dense_rank": 17
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_23",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_23",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 747
+      },
+      "retrieval_score": 0.83317775,
+      "dense_rank": 18
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_7",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_7",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2017,
+        "start_line": 378
+      },
+      "retrieval_score": 0.82759315,
+      "dense_rank": 19
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_7",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_7",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 200
+      },
+      "retrieval_score": 0.8317368,
+      "dense_rank": 20
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_57",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_57",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1457
+      },
+      "retrieval_score": 0.82726777,
+      "dense_rank": 21
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_45",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_45",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1052
+      },
+      "retrieval_score": 0.83039725,
+      "dense_rank": 22
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_9",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_9",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 437
+      },
+      "retrieval_score": 0.8270504,
+      "dense_rank": 23
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_4",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_4",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 147
+      },
+      "retrieval_score": 0.83001554,
+      "dense_rank": 24
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_47",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_47",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1363
+      },
+      "retrieval_score": 0.82609385,
+      "dense_rank": 25
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_8",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_8",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 204
+      },
+      "retrieval_score": 0.8280264,
+      "dense_rank": 26
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_53",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_53",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1441
+      },
+      "retrieval_score": 0.8259974,
+      "dense_rank": 27
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_2",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_2",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 113
+      },
+      "retrieval_score": 0.8239605,
+      "dense_rank": 28
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_26",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_26",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1038
+      },
+      "retrieval_score": 0.8255915,
+      "dense_rank": 29
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_42",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_42",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1000
+      },
+      "retrieval_score": 0.8217371,
+      "dense_rank": 30
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_10",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_10",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 441
+      },
+      "retrieval_score": 0.8254668,
+      "dense_rank": 31
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_50",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_50",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1135
+      },
+      "retrieval_score": 0.8216183,
+      "dense_rank": 32
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_20",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_20",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 971
+      },
+      "retrieval_score": 0.82441497,
+      "dense_rank": 33
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_15",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_15",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 591
+      },
+      "retrieval_score": 0.82111883,
+      "dense_rank": 34
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_40",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_40",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1236
+      },
+      "retrieval_score": 0.8241967,
+      "dense_rank": 35
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_29",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_29",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 824
+      },
+      "retrieval_score": 0.8205977,
+      "dense_rank": 36
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_70",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_70",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1694
+      },
+      "retrieval_score": 0.82382464,
+      "dense_rank": 37
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_34",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_34",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 893
+      },
+      "retrieval_score": 0.8198104,
+      "dense_rank": 38
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_6",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_6",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 363
+      },
+      "retrieval_score": 0.82188386,
+      "dense_rank": 39
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_70",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_70",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1325
+      },
+      "retrieval_score": 0.8196806,
+      "dense_rank": 40
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_21",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_21",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 984
+      },
+      "retrieval_score": 0.821529,
+      "dense_rank": 41
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_6",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_6",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 181
+      },
+      "retrieval_score": 0.8196482,
+      "dense_rank": 42
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_51",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_51",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1415
+      },
+      "retrieval_score": 0.82030445,
+      "dense_rank": 43
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_11",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_11",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 556
+      },
+      "retrieval_score": 0.81927776,
+      "dense_rank": 44
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_25",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_25",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1019
+      },
+      "retrieval_score": 0.81935024,
+      "dense_rank": 45
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_56",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_56",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1222
+      },
+      "retrieval_score": 0.8181215,
+      "dense_rank": 46
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_4",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_4",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 333
+      },
+      "retrieval_score": 0.8179561,
+      "dense_rank": 47
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_18",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_18",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 665
+      },
+      "retrieval_score": 0.8159111,
+      "dense_rank": 48
+    },
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_39",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_39",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1222
+      },
+      "retrieval_score": 0.8171885,
+      "dense_rank": 49
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_57",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_57",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1226
+      },
+      "retrieval_score": 0.81517804,
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "year": 2017,
+        "report_type": "separate"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "year": 2017,
+        "report_type": "separate"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_44",
+        "table_ref": "IJC_financial_statements_2017_separate|1332",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_49",
+        "table_ref": "SCR_financial_statements_2017_separate|1116",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_45",
+        "table_ref": "IJC_financial_statements_2017_separate|1336",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_44",
+        "table_ref": "SCR_financial_statements_2017_separate|1046",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_15",
+        "table_ref": "SCR_financial_statements_2017_separate|591",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c06": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_51",
+        "table_ref": "SCR_financial_statements_2017_separate|1141",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_11",
+        "table_ref": "IJC_financial_statements_2017_separate|458",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 5
+      },
+      "c08": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_7",
+        "table_ref": "SCR_financial_statements_2017_separate|200",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 20
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_13",
+        "table_ref": "IJC_financial_statements_2017_separate|904",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 13
+      },
+      "c10": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_4",
+        "table_ref": "SCR_financial_statements_2017_separate|147",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 24
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_7",
+        "table_ref": "IJC_financial_statements_2017_separate|378",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 19
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_49",
+        "table_ref": "IJC_financial_statements_2017_separate|1373",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c13": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_47",
+        "table_ref": "SCR_financial_statements_2017_separate|1102",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_41",
+        "table_ref": "IJC_financial_statements_2017_separate|1259",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c15": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_41",
+        "table_ref": "SCR_financial_statements_2017_separate|981",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_63",
+        "table_ref": "IJC_financial_statements_2017_separate|1520",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c17": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_12",
+        "table_ref": "SCR_financial_statements_2017_separate|566",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_56",
+        "table_ref": "IJC_financial_statements_2017_separate|1453",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c19": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_48",
+        "table_ref": "SCR_financial_statements_2017_separate|1108",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_42",
+        "table_ref": "IJC_financial_statements_2017_separate|1263",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c21": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_17",
+        "table_ref": "SCR_financial_statements_2017_separate|661",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_57",
+        "table_ref": "IJC_financial_statements_2017_separate|1457",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c23": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_23",
+        "table_ref": "SCR_financial_statements_2017_separate|747",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_9",
+        "table_ref": "IJC_financial_statements_2017_separate|437",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 23
+      },
+      "c25": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_45",
+        "table_ref": "SCR_financial_statements_2017_separate|1052",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_47",
+        "table_ref": "IJC_financial_statements_2017_separate|1363",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c27": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_8",
+        "table_ref": "SCR_financial_statements_2017_separate|204",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 26
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_53",
+        "table_ref": "IJC_financial_statements_2017_separate|1441",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c29": {
+        "bucket_key": "b02",
+        "table_id": "SCR_financial_statements_2017_separate_table_2",
+        "table_ref": "SCR_financial_statements_2017_separate|113",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 28
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "IJC_financial_statements_2017_separate_table_26",
+        "table_ref": "IJC_financial_statements_2017_separate|1038",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      }
+    },
+    "shortlist_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm_vụ": "Đề cử các bảng có khả năng hỗ trợ ít nhất một toán hạng để final arbiter xem xét.",
+        "câu_hỏi": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+        "số_lượng_tối_đa": 8,
+        "candidates": [
+          {
+            "candidate_key": "c01",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 1,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường",
+                    "overlap_tokens": 3
+                  },
+                  {
+                    "row": 6,
+                    "label": "Trái phiếu thường",
+                    "overlap_tokens": 3
+                  }
+                ],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Tổng nợ",
+                "Từ 1 năm trở xuống",
+                "Trên 1 năm đến 5 năm",
+                "Trên 5 năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay dài hạn ngân hàng"
+                },
+                {
+                  "row": 3,
+                  "label": "Trái phiếu thường"
+                },
+                {
+                  "row": 4,
+                  "label": "Cộng"
+                },
+                {
+                  "row": 5,
+                  "label": "Vay dài hạn ngân hàng"
+                },
+                {
+                  "row": 6,
+                  "label": "Trái phiếu thường"
+                },
+                {
+                  "row": 7,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay dài hạn ngân hàng",
+                    "409500000000.0",
+                    "189750000000.0",
+                    "219750000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trái phiếu thường",
+                    "1000000000000.0",
+                    "",
+                    "1000000000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cộng",
+                    "1409500000000.0",
+                    "189750000000.0",
+                    "1219750000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Vay dài hạn ngân hàng",
+                    "539250000000.0",
+                    "184750000000.0",
+                    "354500000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Trái phiếu thường",
+                    "1000000000000.0",
+                    "",
+                    "1000000000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Cộng",
+                    "1539250000000.0",
+                    "184750000000.0",
+                    "1354500000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c07",
+            "bucket_key": "b01",
+            "table_type": "cash_flow",
+            "dense_rank": 5,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "code": "31",
+                    "label": "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "code": "32",
+                    "label": "Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 12,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Lưu chuyển tiền từ hoạt động tài chính"
+                },
+                {
+                  "row": 3,
+                  "code": "31",
+                  "label": "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+                },
+                {
+                  "row": 4,
+                  "code": "32",
+                  "label": "Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
+                },
+                {
+                  "row": 5,
+                  "code": "33",
+                  "label": "Tiền thu từ đi vay"
+                },
+                {
+                  "row": 6,
+                  "code": "34",
+                  "label": "Tiền trả nợ gốc vay"
+                },
+                {
+                  "row": 7,
+                  "code": "35",
+                  "label": "Tiền trả nợ gốc thuê tài chính"
+                },
+                {
+                  "row": 8,
+                  "code": "36",
+                  "label": "Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
+                },
+                {
+                  "row": 9,
+                  "code": "40",
+                  "label": "Lưu chuyển tiền thuần từ hoạt động tài chính"
+                },
+                {
+                  "row": 10,
+                  "code": "50",
+                  "label": "Lưu chuyển tiền thuần trong năm"
+                },
+                {
+                  "row": 11,
+                  "code": "60",
+                  "label": "Tiền và tương đương tiền đầu năm"
+                },
+                {
+                  "row": 12,
+                  "code": "61",
+                  "label": "Ảnh hưởng của thay đổi tỷ giá hồi đoái quy đổi ngoại tệ"
+                },
+                {
+                  "row": 13,
+                  "code": "70",
+                  "label": "Tiền và tương đương tiền cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "",
+                    "III. Lưu chuyển tiền từ hoạt động tài chính",
+                    "Lưu chuyển tiền từ hoạt động tài chính",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "31",
+                    "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+                    "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "32",
+                    "2. Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",
+                    "Tiền trả lại vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",
+                    "V.22",
+                    "-1370972020000.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "33",
+                    "3. Tiền thu từ đi vay",
+                    "Tiền thu từ đi vay",
+                    "V.20",
+                    "612296237103.0",
+                    "432176897263.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "34",
+                    "4. Tiền trả nợ gốc vay",
+                    "Tiền trả nợ gốc vay",
+                    "V.20",
+                    "-595253748248.0",
+                    "-486419374506.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c11",
+            "bucket_key": "b01",
+            "table_type": "income_statement",
+            "dense_rank": 19,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 22,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "400",
+                  "label": "D - VỐN CHỦ SỞ HỮU"
+                },
+                {
+                  "row": 5,
+                  "code": "411a",
+                  "label": "-"
+                },
+                {
+                  "row": 6,
+                  "code": "411b",
+                  "label": "-"
+                },
+                {
+                  "row": 17,
+                  "code": "421a",
+                  "label": "-"
+                },
+                {
+                  "row": 18,
+                  "code": "421b",
+                  "label": "-"
+                },
+                {
+                  "row": 23,
+                  "code": "440",
+                  "label": "TỔNG CỘNG NGUỐN VỐN"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "400",
+                    "D - VỐN CHỦ SỞ HỮU",
+                    "D - VỐN CHỦ SỞ HỮU",
+                    "",
+                    "1646552458520.0",
+                    "2960182841116.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "410",
+                    "I.",
+                    "",
+                    "",
+                    "1646552458520.0",
+                    "2960182841116.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "411",
+                    "1.",
+                    "",
+                    "V.22",
+                    "1370973230000.0",
+                    "2741945250000.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "411a",
+                    "-",
+                    "-",
+                    "",
+                    "1370973230000.0",
+                    "2741945250000.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c14",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 9,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Số đầu năm",
+                "Số tiền vay phát sinh trong năm",
+                "Kết chuyên từ vay và nợ dài hạn",
+                "Số tiền vay đã trả trong năm",
+                "Số cuối năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay ngắn hạn ngân hàng"
+                },
+                {
+                  "row": 3,
+                  "label": "Vay dài hạn đến hạn trả"
+                },
+                {
+                  "row": 4,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay ngắn hạn ngân hàng",
+                    "266594641092.0",
+                    "557296237103.0",
+                    "",
+                    "-410503748248.0",
+                    "413387129947.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Vay dài hạn đến hạn trả",
+                    "184750000000.0",
+                    "",
+                    "189750000000.0",
+                    "-184750000000.0",
+                    "189750000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cộng",
+                    "451344641092.0",
+                    "557296237103.0",
+                    "189750000000.0",
+                    "-595253748248.0",
+                    "603137129947.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c18",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 15,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "Doanh thu hoạt động tài chính"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm nay",
+                "Năm trước",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Lãi tiền gửi có kỳ hạn"
+                },
+                {
+                  "row": 3,
+                  "label": "Lãi tiền gửi không kỳ hạn"
+                },
+                {
+                  "row": 4,
+                  "label": "Cổ tức, lợi nhuận được chia"
+                },
+                {
+                  "row": 5,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Lãi tiền gửi có kỳ hạn",
+                    "1483390340.0",
+                    "2262694070.0",
+                    "4",
+                    "Doanh thu hoạt động tài chính"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Lãi tiền gửi không kỳ hạn",
+                    "199535538.0",
+                    "212689588.0",
+                    "4",
+                    "Doanh thu hoạt động tài chính"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cổ tức, lợi nhuận được chia",
+                    "12977315259.0",
+                    "8099374292.0",
+                    "4",
+                    "Doanh thu hoạt động tài chính"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Cộng",
+                    "14660241137.0",
+                    "10574757950.0",
+                    "4",
+                    "Doanh thu hoạt động tài chính"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c22",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 21,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "Chi phí tài chính"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm nay",
+                "Năm trước",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí lãi vay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chiết khấu thanh toán cho người mua"
+                },
+                {
+                  "row": 4,
+                  "label": "Tiền lãi cổ tức trả chậm"
+                },
+                {
+                  "row": 5,
+                  "label": "Lỗ chênh lệch tỷ giá phát sinh"
+                },
+                {
+                  "row": 6,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí lãi vay",
+                    "73422955361.0",
+                    "77628899984.0",
+                    "5",
+                    "Chi phí tài chính"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chiết khấu thanh toán cho người mua",
+                    "2233694300.0",
+                    "",
+                    "5",
+                    "Chi phí tài chính"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Tiền lãi cổ tức trả chậm",
+                    "43154298909.0",
+                    "38565040278.0",
+                    "5",
+                    "Chi phí tài chính"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Lỗ chênh lệch tỷ giá phát sinh",
+                    "2188857.0",
+                    "",
+                    "5",
+                    "Chi phí tài chính"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Cộng",
+                    "118813137427.0",
+                    "116193940262.0",
+                    "5",
+                    "Chi phí tài chính"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c26",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 25,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "Vốn chủ sở hữu"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Vốn đầu tư của chủ sở hữu",
+                "Thặng dư vốn cổ phần",
+                "Quỹ đầu tư phát triển",
+                "Lợi nhuận sau thuế chưa phân phối",
+                "Cộng",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 11,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư đầu năm trước"
+                },
+                {
+                  "row": 3,
+                  "label": "Lợi nhuận trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Trích lập các quỹ"
+                },
+                {
+                  "row": 5,
+                  "label": "Chia cổ tức"
+                },
+                {
+                  "row": 6,
+                  "label": "Số dư cuối năm trước"
+                },
+                {
+                  "row": 7,
+                  "label": "Số dư đầu năm nay"
+                },
+                {
+                  "row": 8,
+                  "label": "Giảm vốn điều lệ"
+                },
+                {
+                  "row": 9,
+                  "label": "Lợi nhuận trong năm"
+                },
+                {
+                  "row": 10,
+                  "label": "Trích lập các quỹ"
+                },
+                {
+                  "row": 11,
+                  "label": "Chia cổ tức"
+                },
+                {
+                  "row": 12,
+                  "label": "Số dư cuối năm nay"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số dư đầu năm trước",
+                    "2741945250000.0",
+                    "10420226000.0",
+                    "81606382163.0",
+                    "119424960363.0",
+                    "2953396818526.0",
+                    "22",
+                    "Vốn chủ sở hữu"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Lợi nhuận trong năm",
+                    "",
+                    "",
+                    "",
+                    "119902265925.0",
+                    "119902265925.0",
+                    "22",
+                    "Vốn chủ sở hữu"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Trích lập các quỹ",
+                    "",
+                    "",
+                    "",
+                    "-3438433335.0",
+                    "-3438433335.0",
+                    "22",
+                    "Vốn chủ sở hữu"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chia cổ tức",
+                    "",
+                    "",
+                    "",
+                    "-109677810000.0",
+                    "-109677810000.0",
+                    "22",
+                    "Vốn chủ sở hữu"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c30",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 29,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Nguyên giá",
+                "Hao mòn lũy kế",
+                "Giá trị còn lại",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số đầu năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Mua trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Đầu tư XDCB hoàn thành"
+                },
+                {
+                  "row": 5,
+                  "label": "Khẩu hao trong năm"
+                },
+                {
+                  "row": 6,
+                  "label": "Số cuối năm"
+                },
+                {
+                  "row": 7,
+                  "label": "Đã khấu hao hết nhưng vẫn còn sử dụng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số đầu năm",
+                    "4836480685.0",
+                    "3216139849.0",
+                    "1620340836.0",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Mua trong năm",
+                    "1672800000.0",
+                    "",
+                    "",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Đầu tư XDCB hoàn thành",
+                    "2160306695.0",
+                    "",
+                    "",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Khẩu hao trong năm",
+                    "",
+                    "649571770.0",
+                    "",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Số cuối năm",
+                    "8669587380.0",
+                    "3865711619.0",
+                    "4803875761.0",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Đã khấu hao hết nhưng vẫn còn sử dụng",
+                    "1850394021.0",
+                    "",
+                    "",
+                    "9",
+                    "Tài sản cố định vô hình Nguyên giá Hao mòn lũy kế Giá trị còn lại Số đầu năm 4.836.480.685 3.216.139.849 1.620.340.836"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c04",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 4,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường (**)",
+                    "overlap_tokens": 3
+                  }
+                ],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "31/12/2017VND",
+                "1/1/2017VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay dài hạn (*)"
+                },
+                {
+                  "row": 3,
+                  "label": "Trái phiếu thường (**)"
+                },
+                {
+                  "row": 4,
+                  "label": "Nợ thuê tài chính dài hạn (***)"
+                },
+                {
+                  "row": 6,
+                  "label": "Hoàn trả trong vòng 12 tháng"
+                },
+                {
+                  "row": 7,
+                  "label": "Hoàn trả sau 12 tháng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay dài hạn (*)",
+                    "354604118563.0",
+                    "427423867652.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trái phiếu thường (**)",
+                    "396121428571.0",
+                    "194800000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Nợ thuê tài chính dài hạn (***)",
+                    "371293706.0",
+                    "633383378.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "751096840840.0",
+                    "622857251030.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Hoàn trả trong vòng 12 tháng",
+                    "-217307963918.0",
+                    "-209317535583.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Hoàn trả sau 12 tháng",
+                    "533788876922.0",
+                    "413539715447.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c06",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 8,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 4,
+                    "label": "Phát hành cổ phiếu thường ngày 31 tháng 8 năm 2017 (**)",
+                    "overlap_tokens": 5
+                  },
+                  {
+                    "row": 3,
+                    "label": "Phát hành cổ phiếu thường ngày 2 tháng 2 năm 2017 (*)",
+                    "overlap_tokens": 4
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2017",
+                "value_2",
+                "2016",
+                "value_4",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư đầu năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Phát hành cổ phiếu thường ngày 2 tháng 2 năm 2017 (*)"
+                },
+                {
+                  "row": 4,
+                  "label": "Phát hành cổ phiếu thường ngày 31 tháng 8 năm 2017 (**)"
+                },
+                {
+                  "row": 5,
+                  "label": "Số dư cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số dư đầu năm",
+                    "217067945.0",
+                    "2170679450000.0",
+                    "217067945.0",
+                    "2170679450000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Phát hành cổ phiếu thường ngày 2 tháng 2 năm 2017 (*)",
+                    "10851486.0",
+                    "108514860000.0",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Phát hành cổ phiếu thường ngày 31 tháng 8 năm 2017 (**)",
+                    "15951804.0",
+                    "159518040000.0",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Số dư cuối năm",
+                    "243871235.0",
+                    "2438712350000.0",
+                    "217067945.0",
+                    "2170679450000.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c10",
+            "bucket_key": "b02",
+            "table_type": "balance_sheet",
+            "dense_rank": 24,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 21,
+                    "code": "418",
+                    "label": "Quỹ đầu tư và phát triển",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 25,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "NGUỒN VỐN"
+                },
+                {
+                  "row": 3,
+                  "code": "300",
+                  "label": "NỘ PHẢI TRẢ"
+                },
+                {
+                  "row": 4,
+                  "code": "310",
+                  "label": "Nợ ngắn hạn"
+                },
+                {
+                  "row": 5,
+                  "code": "311",
+                  "label": "Phải trả người bán ngắn hạn"
+                },
+                {
+                  "row": 6,
+                  "code": "312",
+                  "label": "Người mua trả tiền trước ngắn hạn"
+                },
+                {
+                  "row": 7,
+                  "code": "313",
+                  "label": "Thuế phải nộp Nhà nước"
+                },
+                {
+                  "row": 8,
+                  "code": "314",
+                  "label": "Phải trả người lao động"
+                },
+                {
+                  "row": 9,
+                  "code": "315",
+                  "label": "Chi phí phải trả"
+                },
+                {
+                  "row": 10,
+                  "code": "319",
+                  "label": "Phải trả ngắn hạn khác"
+                },
+                {
+                  "row": 11,
+                  "code": "320",
+                  "label": "Vay và nợ thuê tài chính ngắn hạn"
+                },
+                {
+                  "row": 12,
+                  "code": "322",
+                  "label": "Quỹ khen thưởng, phúc lợi"
+                },
+                {
+                  "row": 13,
+                  "code": "330",
+                  "label": "Nợ dài hạn"
+                },
+                {
+                  "row": 14,
+                  "code": "337",
+                  "label": "Phải trả dài hạn khác"
+                },
+                {
+                  "row": 15,
+                  "code": "338",
+                  "label": "Vay và nợ thuê tài chính dài hạn"
+                },
+                {
+                  "row": 16,
+                  "code": "400",
+                  "label": "VỐN CHỦ SỞ HỮU"
+                },
+                {
+                  "row": 17,
+                  "code": "410",
+                  "label": "Vốn chủ sở hữu"
+                },
+                {
+                  "row": 18,
+                  "code": "411",
+                  "label": "Vốn cổ phần"
+                },
+                {
+                  "row": 19,
+                  "code": "412",
+                  "label": "Thặng dư vốn cổ phần"
+                },
+                {
+                  "row": 20,
+                  "code": "415",
+                  "label": "Cổ phiếu quỹ"
+                },
+                {
+                  "row": 21,
+                  "code": "418",
+                  "label": "Quỹ đầu tư và phát triển"
+                },
+                {
+                  "row": 22,
+                  "code": "420",
+                  "label": "Quỹ khác thuộc vốn chủ sở hữu"
+                },
+                {
+                  "row": 23,
+                  "code": "421",
+                  "label": "Lợi nhuận sau thuế chưa phân phối"
+                },
+                {
+                  "row": 24,
+                  "code": "421a",
+                  "label": "- Lợi nhuận sau thuế chưa phân phối đến cuối năm trước"
+                },
+                {
+                  "row": 25,
+                  "code": "421b",
+                  "label": "- Lợi nhuận sau thuế chưa phân phối năm nay"
+                },
+                {
+                  "row": 26,
+                  "code": "440",
+                  "label": "TỔNG NGUỒN VỐN"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 3,
+                  "cells": [
+                    "300",
+                    "NỘ PHẢI TRẢ (300 = 310 + 330)",
+                    "NỘ PHẢI TRẢ",
+                    "",
+                    "4673361957643.0",
+                    "3209131090577.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "310",
+                    "Nợ ngắn hạn",
+                    "Nợ ngắn hạn",
+                    "",
+                    "4125876034325.0",
+                    "2739977209170.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "311",
+                    "Phải trả người bán ngắn hạn",
+                    "Phải trả người bán ngắn hạn",
+                    "17",
+                    "388228617564.0",
+                    "86822861526.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "319",
+                    "Phải trả ngắn hạn khác",
+                    "Phải trả ngắn hạn khác",
+                    "20",
+                    "120221057649.0",
+                    "201930582021.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 11,
+                  "cells": [
+                    "320",
+                    "Vay và nợ thuê tài chính ngắn hạn",
+                    "Vay và nợ thuê tài chính ngắn hạn",
+                    "21(a)",
+                    "1319505660135.0",
+                    "607879617527.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 12,
+                  "cells": [
+                    "322",
+                    "Quỹ khen thưởng, phúc lợi",
+                    "Quỹ khen thưởng, phúc lợi",
+                    "22",
+                    "5276783293.0",
+                    "10270550267.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 20,
+                  "cells": [
+                    "415",
+                    "Cổ phiếu quỹ",
+                    "Cổ phiếu quỹ",
+                    "24",
+                    "-11890000.0",
+                    "-11890000.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 21,
+                  "cells": [
+                    "418",
+                    "Quỹ đầu tư và phát triển",
+                    "Quỹ đầu tư và phát triển",
+                    "25",
+                    "106127077647.0",
+                    "97168783844.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 22,
+                  "cells": [
+                    "420",
+                    "Quỹ khác thuộc vốn chủ sở hữu",
+                    "Quỹ khác thuộc vốn chủ sở hữu",
+                    "25",
+                    "24890292522.0",
+                    "20411145621.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c15",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 10,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Trải phiếu thường ngắn hạn (**)",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Nợ gốc thuê tài chính đến hạn trảtrong vòng 12 tháng",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "1/1/2017",
+                "value_2",
+                "Biến động trong năm",
+                "value_4",
+                "31/12/2017",
+                "value_6",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay ngắn hạn (*)"
+                },
+                {
+                  "row": 3,
+                  "label": "Trải phiếu thường ngắn hạn (**)"
+                },
+                {
+                  "row": 4,
+                  "label": "Vay dài hạn đến hạn trả"
+                },
+                {
+                  "row": 5,
+                  "label": "Nợ gốc thuê tài chính đến hạn trảtrong vòng 12 tháng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay ngắn hạn (*)",
+                    "398562081944.0",
+                    "398562081944.0",
+                    "2271132928638.0",
+                    "-1867497314365.0",
+                    "802197696217.0",
+                    "802197696217.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trải phiếu thường ngắn hạn (**)",
+                    "",
+                    "",
+                    "300000000000.0",
+                    "",
+                    "300000000000.0",
+                    "300000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Vay dài hạn đến hạn trả",
+                    "209055445911.0",
+                    "209055445911.0",
+                    "199814480795.0",
+                    "-191824052464.0",
+                    "217045874242.0",
+                    "217045874242.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Nợ gốc thuê tài chính đến hạn trảtrong vòng 12 tháng",
+                    "262089672.0",
+                    "262089672.0",
+                    "262089676.0",
+                    "-262089672.0",
+                    "262089676.0",
+                    "262089676.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "",
+                    "607879617527.0",
+                    "607879617527.0",
+                    "2771209499109.0",
+                    "-2059583456501.0",
+                    "1319505660135.0",
+                    "1319505660135.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c19",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 14,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2017VND",
+                "2016VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư đầu năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Trích lập từ lợi nhuận chưa phân phối trong năm(Thuyết minh số 23)"
+                },
+                {
+                  "row": 4,
+                  "label": "Sử dụng trong năm"
+                },
+                {
+                  "row": 5,
+                  "label": "Số dư cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số dư đầu năm",
+                    "10270550267.0",
+                    "14731963142.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trích lập từ lợi nhuận chưa phân phối trong năm(Thuyết minh số 23)",
+                    "4479146902.0",
+                    "6152459442.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Sử dụng trong năm",
+                    "-9472913876.0",
+                    "-10613872317.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Số dư cuối năm",
+                    "5276783293.0",
+                    "10270550267.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c23",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 18,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "31/12/2017VND",
+                "1/1/2017VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Khoản ứng trước để nhận lại các căn hộ hoặc quyền sử dụng đất (*)"
+                },
+                {
+                  "row": 3,
+                  "label": "Ký quỹ dài hạn (**)"
+                },
+                {
+                  "row": 4,
+                  "label": "Phải thu khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Khoản ứng trước để nhận lại các căn hộ hoặc quyền sử dụng đất (*)",
+                    "178158369228.0",
+                    "177587552258.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Ký quỹ dài hạn (**)",
+                    "52476927660.0",
+                    "42000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Phải thu khác",
+                    "791031439.0",
+                    "2984976000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "231426328327.0",
+                    "222572528258.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c27",
+            "bucket_key": "b02",
+            "table_type": "cash_flow",
+            "dense_rank": 26,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "33",
+                  "label": "Thu từ vay ngắn hạn và dài hạn"
+                },
+                {
+                  "row": 3,
+                  "code": "34",
+                  "label": "Tiền trả nợ gốc vay"
+                },
+                {
+                  "row": 4,
+                  "code": "35",
+                  "label": "Tiền trả nợ gốc thuê tài chính"
+                },
+                {
+                  "row": 5,
+                  "code": "40",
+                  "label": "Lưu chuyển tiền thuần từ các hoạt động tài chính"
+                },
+                {
+                  "row": 6,
+                  "code": "50",
+                  "label": "Lưu chuyển tiền thuần trong năm\\( \\)"
+                },
+                {
+                  "row": 7,
+                  "code": "60",
+                  "label": "Tiền và các khoản tương đương tiền đầu năm"
+                },
+                {
+                  "row": 8,
+                  "code": "70",
+                  "label": "Tiền và các khoản tương đương tiền cuối năm \\( \\)"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "33",
+                    "Thu từ vay ngắn hạn và dài hạn",
+                    "Thu từ vay ngắn hạn và dài hạn",
+                    "",
+                    "2968999745695.0",
+                    "2597735787223.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "34",
+                    "Tiền trả nợ gốc vay",
+                    "Tiền trả nợ gốc vay",
+                    "",
+                    "-2137030705856.0",
+                    "-2093689181476.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "35",
+                    "Tiền trả nợ gốc thuê tài chính",
+                    "Tiền trả nợ gốc thuê tài chính",
+                    "",
+                    "-262089672.0",
+                    "-262089672.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "40",
+                    "Lưu chuyển tiền thuần từ các hoạt động tài chính",
+                    "Lưu chuyển tiền thuần từ các hoạt động tài chính",
+                    "",
+                    "831706950167.0",
+                    "503784516075.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "50",
+                    "Lưu chuyển tiền thuần trong năm\\( (50 = 20 + 30 + 40) \\)",
+                    "Lưu chuyển tiền thuần trong năm\\( \\)",
+                    "",
+                    "-383604934931.0",
+                    "315812738724.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "60",
+                    "Tiền và các khoản tương đương tiền đầu năm",
+                    "Tiền và các khoản tương đương tiền đầu năm",
+                    "",
+                    "438573747736.0",
+                    "122761009012.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "70",
+                    "Tiền và các khoản tương đương tiền cuối năm \\( (70 = 50 + 60) \\)",
+                    "Tiền và các khoản tương đương tiền cuối năm \\( \\)",
+                    "",
+                    "54968812805.0",
+                    "438573747736.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm_vụ": "Đề cử các bảng có khả năng hỗ trợ ít nhất một toán hạng để final arbiter xem xét.",
+        "câu_hỏi": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+        "số_lượng_tối_đa": 8,
+        "candidates": [
+          {
+            "candidate_key": "c03",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 3,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường",
+                    "overlap_tokens": 3
+                  }
+                ],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Số đầu năm",
+                "Số tiền vay phát sinh trong năm",
+                "Kết chuyển sang vay và nợ ngắn hạn",
+                "Số cuối năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay dài hạn ngân hàng"
+                },
+                {
+                  "row": 3,
+                  "label": "Trái phiếu thường"
+                },
+                {
+                  "row": 4,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay dài hạn ngân hàng",
+                    "354500000000.0",
+                    "55000000000.0",
+                    "-189750000000.0",
+                    "219750000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trái phiếu thường",
+                    "1000000000000.0",
+                    "",
+                    "",
+                    "1000000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cộng",
+                    "1354500000000.0",
+                    "55000000000.0",
+                    "-189750000000.0",
+                    "1219750000000.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c09",
+            "bucket_key": "b01",
+            "table_type": "balance_sheet",
+            "dense_rank": 13,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Tiền mặt"
+                },
+                {
+                  "row": 3,
+                  "label": "Tiền gửi ngân hàng không kỳ hạn"
+                },
+                {
+                  "row": 4,
+                  "label": "Các khoản tương đương tiền(*)"
+                },
+                {
+                  "row": 5,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "",
+                    "Tiền mặt",
+                    "Tiền mặt",
+                    "",
+                    "4787227679.0",
+                    "10788991739.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "",
+                    "Tiền gửi ngân hàng không kỳ hạn",
+                    "Tiền gửi ngân hàng không kỳ hạn",
+                    "",
+                    "22141520658.0",
+                    "32818429025.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "",
+                    "Các khoản tương đương tiền(*)",
+                    "Các khoản tương đương tiền(*)",
+                    "",
+                    "11500000000.0",
+                    "385488191.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "Cộng",
+                    "Cộng",
+                    "",
+                    "38428748337.0",
+                    "43992908955.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c12",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 7,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 2,
+                    "label": "Số lượng cổ phiếu đăng ký phát hành",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Số cuối năm",
+                "Số đầu năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số lượng cổ phiếu đăng ký phát hành"
+                },
+                {
+                  "row": 3,
+                  "label": "Số lượng cổ phiếu đã bán ra công chúng"
+                },
+                {
+                  "row": 4,
+                  "label": "- Cổ phiếu phổ thông"
+                },
+                {
+                  "row": 5,
+                  "label": "Số lượng cổ phiếu đang lưu hành"
+                },
+                {
+                  "row": 6,
+                  "label": "- Cổ phiếu phổ thông"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số lượng cổ phiếu đăng ký phát hành",
+                    "137097323.0",
+                    "274194525.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Số lượng cổ phiếu đã bán ra công chúng",
+                    "137097323.0",
+                    "274194525.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "- Cổ phiếu phổ thông",
+                    "137097323.0",
+                    "274194525.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Số lượng cổ phiếu đang lưu hành",
+                    "137097323.0",
+                    "274194525.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "- Cổ phiếu phổ thông",
+                    "137097323.0",
+                    "274194525.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c16",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 11,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "Tài sản cho thuê hoạt động"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Số cuối năm",
+                "Số đầu năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Từ 1 năm trở xuống"
+                },
+                {
+                  "row": 3,
+                  "label": "Trên 1 năm đến 5 năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Từ 1 năm trở xuống",
+                    "9420000000.0",
+                    "9420000000.0",
+                    "1",
+                    "Tài sản cho thuê hoạt động"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trên 1 năm đến 5 năm",
+                    "5530000000.0",
+                    "14950000000.0",
+                    "1",
+                    "Tài sản cho thuê hoạt động"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cộng",
+                    "14950000000.0",
+                    "24370000000.0",
+                    "1",
+                    "Tài sản cho thuê hoạt động"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c20",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 17,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 8,
+                    "label": "Trái phiếu thường dài hạn\\( ^{(vi)} \\)",
+                    "overlap_tokens": 3
+                  },
+                  {
+                    "row": 4,
+                    "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Số cuối năm",
+                "Số đầu năm",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 8,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay dài hạn ngân hàng"
+                },
+                {
+                  "row": 3,
+                  "label": "Ngân hàng TMCP Đông Nam Á - Chi nhánh Bình Dương\\( ^{(i)} \\)"
+                },
+                {
+                  "row": 4,
+                  "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)"
+                },
+                {
+                  "row": 5,
+                  "label": "Ngân hàng TMCP Ngoại thương Việt Nam - Chi nhánh Bình Dương\\( ^{(iii)} \\)"
+                },
+                {
+                  "row": 6,
+                  "label": "Ngân hàng TMCP Việt Á - Chi nhánh Bình Dương\\( ^{(iv)} \\)"
+                },
+                {
+                  "row": 7,
+                  "label": "Ngân hàng TMCP Bản Việt - Chi nhánh Bình Dương\\( ^{(v)} \\)"
+                },
+                {
+                  "row": 8,
+                  "label": "Trái phiếu thường dài hạn\\( ^{(vi)} \\)"
+                },
+                {
+                  "row": 9,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vay dài hạn ngân hàng",
+                    "219750000000.0",
+                    "354500000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Ngân hàng TMCP Đông Nam Á - Chi nhánh Bình Dương\\( ^{(i)} \\)",
+                    "",
+                    "37250000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)",
+                    "45000000000.0",
+                    "75000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Ngân hàng TMCP Ngoại thương Việt Nam - Chi nhánh Bình Dương\\( ^{(iii)} \\)",
+                    "",
+                    "9000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Ngân hàng TMCP Việt Á - Chi nhánh Bình Dương\\( ^{(iv)} \\)",
+                    "97750000000.0",
+                    "173250000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Ngân hàng TMCP Bản Việt - Chi nhánh Bình Dương\\( ^{(v)} \\)",
+                    "77000000000.0",
+                    "60000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "Trái phiếu thường dài hạn\\( ^{(vi)} \\)",
+                    "1000000000000.0",
+                    "1000000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 9,
+                  "cells": [
+                    "Cộng",
+                    "1219750000000.0",
+                    "1354500000000.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c24",
+            "bucket_key": "b01",
+            "table_type": "cash_flow",
+            "dense_rank": 23,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 20,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Lưu chuyển tiền từ hoạt động kinh doanh"
+                },
+                {
+                  "row": 5,
+                  "code": "02",
+                  "label": "-"
+                },
+                {
+                  "row": 6,
+                  "code": "03",
+                  "label": "-"
+                },
+                {
+                  "row": 7,
+                  "code": "04",
+                  "label": "-"
+                },
+                {
+                  "row": 8,
+                  "code": "05",
+                  "label": "-"
+                },
+                {
+                  "row": 9,
+                  "code": "06",
+                  "label": "-"
+                },
+                {
+                  "row": 10,
+                  "code": "07",
+                  "label": "-"
+                },
+                {
+                  "row": 12,
+                  "code": "09",
+                  "label": "-"
+                },
+                {
+                  "row": 13,
+                  "code": "10",
+                  "label": "-"
+                },
+                {
+                  "row": 14,
+                  "code": "11",
+                  "label": "-"
+                },
+                {
+                  "row": 15,
+                  "code": "12",
+                  "label": "-"
+                },
+                {
+                  "row": 16,
+                  "code": "13",
+                  "label": "-"
+                },
+                {
+                  "row": 17,
+                  "code": "14",
+                  "label": "-"
+                },
+                {
+                  "row": 18,
+                  "code": "15",
+                  "label": "-"
+                },
+                {
+                  "row": 19,
+                  "code": "16",
+                  "label": "-"
+                },
+                {
+                  "row": 20,
+                  "code": "17",
+                  "label": "-"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "",
+                    "1. Lưu chuyển tiền từ hoạt động kinh doanh",
+                    "Lưu chuyển tiền từ hoạt động kinh doanh",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "01",
+                    "1.",
+                    "",
+                    "",
+                    "202832070674.0",
+                    "148118615625.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "",
+                    "2.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "02",
+                    "-",
+                    "-",
+                    "V.8;V.9;V.10",
+                    "37754138453.0",
+                    "36058964622.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c28",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 27,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": [
+                  "Các khoản giảm trừ doanh thu Năm nay Năm trước Hàng bán bị trả lại 44.403.994.502 66.002.139.868"
+                ]
+              },
+              "table_titles": [
+                "Các khoản giảm trừ doanh thu Năm nay Năm trước Hàng bán bị trả lại 44.403.994.502 66.002.139.868"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm nay",
+                "Năm trước",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Hàng bán bị trả lại"
+                },
+                {
+                  "row": 3,
+                  "label": "Giảm giá hàng bán"
+                },
+                {
+                  "row": 4,
+                  "label": "Cộng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Hàng bán bị trả lại",
+                    "44403994502.0",
+                    "66002139868.0",
+                    "2",
+                    "Các khoản giảm trừ doanh thu Năm nay Năm trước Hàng bán bị trả lại 44.403.994.502 66.002.139.868"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Giảm giá hàng bán",
+                    "",
+                    "180326731.0",
+                    "2",
+                    "Các khoản giảm trừ doanh thu Năm nay Năm trước Hàng bán bị trả lại 44.403.994.502 66.002.139.868"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cộng",
+                    "44403994502.0",
+                    "66182466599.0",
+                    "2",
+                    "Các khoản giảm trừ doanh thu Năm nay Năm trước Hàng bán bị trả lại 44.403.994.502 66.002.139.868"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c02",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 2,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 12,
+                    "label": "Số dư tại ngày 31 tháng 12 năm 2017",
+                    "overlap_tokens": 3
+                  },
+                  {
+                    "row": 11,
+                    "label": "Phát hành cổ phiếu thưởng (Thuyết minh 24)",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Vốn cổ phần VND",
+                "Thặng dư vốn cổ phần VND",
+                "Cổ phiếu quỹ VND",
+                "Quỹ đầu tư và phát triển VND",
+                "Quỹ khác thuộc vốn chủ sở hữu VND",
+                "Lợi nhuận chưa phân phối VND",
+                "Tổng vốn chủ sở hữu VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 11,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư tại ngày 1 tháng 1 năm 2016"
+                },
+                {
+                  "row": 3,
+                  "label": "Lợi nhuận thuần trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Phân bổ vào các quỹ"
+                },
+                {
+                  "row": 5,
+                  "label": "Phân bổ vào quỹ khen thưởng và phúc lợi"
+                },
+                {
+                  "row": 6,
+                  "label": "Điều chính"
+                },
+                {
+                  "row": 7,
+                  "label": "Số dư tại ngày 1 tháng 1 năm 2017"
+                },
+                {
+                  "row": 8,
+                  "label": "Lợi nhuận thuần trong năm"
+                },
+                {
+                  "row": 9,
+                  "label": "Phân bổ vào các quỹ"
+                },
+                {
+                  "row": 10,
+                  "label": "Phân bổ vào quỹ khen thưởng và phúc lợi"
+                },
+                {
+                  "row": 11,
+                  "label": "Phát hành cổ phiếu thưởng (Thuyết minh 24)"
+                },
+                {
+                  "row": 12,
+                  "label": "Số dư tại ngày 31 tháng 12 năm 2017"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 6,
+                  "cells": [
+                    "Điều chính",
+                    "",
+                    "-50000000.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "-50000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Số dư tại ngày 1 tháng 1 năm 2017",
+                    "2170691340000.0",
+                    "441956044101.0",
+                    "-11890000.0",
+                    "97168783844.0",
+                    "20411145621.0",
+                    "443077701611.0",
+                    "3173293125177.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "Lợi nhuận thuần trong năm",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "200233967432.0",
+                    "200233967432.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "Phân bổ vào quỹ khen thưởng và phúc lợi",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "-4479146902.0",
+                    "-4479146902.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 11,
+                  "cells": [
+                    "Phát hành cổ phiếu thưởng (Thuyết minh 24)",
+                    "268032900000.0",
+                    "-108514860000.0",
+                    "",
+                    "",
+                    "",
+                    "-159518040000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 12,
+                  "cells": [
+                    "Số dư tại ngày 31 tháng 12 năm 2017",
+                    "2438724240000.0",
+                    "333441184101.0",
+                    "-11890000.0",
+                    "106127077647.0",
+                    "24890292522.0",
+                    "465877041437.0",
+                    "3369047945707.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c05",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 34,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 2,
+                    "label": "Đầu tư góp vốn vào:▪ Công ty con• Công ty TNHH MTV Kinh doanh Dịch vụ Địa ốc Sài gòn Thương Tín• Công ty Cổ phần Năng lượng Thương Tín (a)• Công ty Cổ phần Đầu ",
+                    "overlap_tokens": 6
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Địa chỉ",
+                "Số lượng",
+                "% lợi ích kinh tế",
+                "% quyền biểu quyết",
+                "Giá gốc VND",
+                "Dự phòng giảm giá giá trị đầu tư VND",
+                "Giá trị hợp lý VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Đầu tư góp vốn vào:▪ Công ty con• Công ty TNHH MTV Kinh doanh Dịch vụ Địa ốc Sài gòn Thương Tín• Công ty Cổ phần Năng lượng Thương Tín (a)• Công ty Cổ phần Đầu "
+                },
+                {
+                  "row": 3,
+                  "label": "1.810.494"
+                },
+                {
+                  "row": 4,
+                  "label": "21.352.500"
+                },
+                {
+                  "row": 5,
+                  "label": "27.305.397"
+                },
+                {
+                  "row": 6,
+                  "label": "-"
+                },
+                {
+                  "row": 7,
+                  "label": "3.413.809"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Đầu tư góp vốn vào:▪ Công ty con• Công ty TNHH MTV Kinh doanh Dịch vụ Địa ốc Sài gòn Thương Tín• Công ty Cổ phần Năng lượng Thương Tín (a)• Công ty Cổ phần Đầu ",
+                    "",
+                    "",
+                    "100.0",
+                    "100.0",
+                    "70000000000.0",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "1.810.494",
+                    "52.0",
+                    "52.0",
+                    "18104940000.0",
+                    "-3247997061.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "21.352.500",
+                    "94.9",
+                    "94.9",
+                    "219163852083.0",
+                    "-103098340489.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "27.305.397",
+                    "92.2",
+                    "92.2",
+                    "300003974000.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "-",
+                    "100.0",
+                    "100.0",
+                    "1000000000.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "3.413.809",
+                    "54.98",
+                    "54.98",
+                    "81894538740.0",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "690167304823.0",
+                    "-106346337550.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c08",
+            "bucket_key": "b02",
+            "table_type": "cash_flow",
+            "dense_rank": 20,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 11,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TỪ"
+                },
+                {
+                  "row": 3,
+                  "code": "21",
+                  "label": "Tiền chi mua sắm, xây dựng tài sản cố định, bắt động sản đầu tư và tài sản dài hạn khác"
+                },
+                {
+                  "row": 4,
+                  "code": "22",
+                  "label": "Tiền thu từ thanh lý tài sản cố định và bắt động sản đầu tư"
+                },
+                {
+                  "row": 5,
+                  "code": "23",
+                  "label": "Tiền chi cho tiền gửi có kỳ hạn tại ngân hàng"
+                },
+                {
+                  "row": 6,
+                  "code": "23",
+                  "label": "Tiền chi cho vay các đơn vị khác"
+                },
+                {
+                  "row": 7,
+                  "code": "24",
+                  "label": "Tiền thu hồi tiền gửi có kỳ hạn tại ngân hàng"
+                },
+                {
+                  "row": 8,
+                  "code": "24",
+                  "label": "Tiền thu hồi từ cho vay các đơn vị khác"
+                },
+                {
+                  "row": 9,
+                  "code": "25",
+                  "label": "Tiền chi đầu tư góp vốn vào các đơn vị khác"
+                },
+                {
+                  "row": 10,
+                  "code": "26",
+                  "label": "Tiền thu hồi từ thanh lý các khoản đầu tư vào các đơn vị khác"
+                },
+                {
+                  "row": 11,
+                  "code": "27",
+                  "label": "Tiền thu lãi cho vay và cổ tức"
+                },
+                {
+                  "row": 12,
+                  "code": "30",
+                  "label": "Lưu chuyển tiền thuần từ các hoạt động đầu tư"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "",
+                    "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TỪ",
+                    "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TỪ",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "21",
+                    "Tiền chi mua sắm, xây dựng tài sản cố định, bắt động sản đầu tư và tài sản dài hạn khác",
+                    "Tiền chi mua sắm, xây dựng tài sản cố định, bắt động sản đầu tư và tài sản dài hạn khác",
+                    "",
+                    "-99125153264.0",
+                    "-13181100156.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "22",
+                    "Tiền thu từ thanh lý tài sản cố định và bắt động sản đầu tư",
+                    "Tiền thu từ thanh lý tài sản cố định và bắt động sản đầu tư",
+                    "",
+                    "40876363636.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "23",
+                    "Tiền chi cho tiền gửi có kỳ hạn tại ngân hàng",
+                    "Tiền chi cho tiền gửi có kỳ hạn tại ngân hàng",
+                    "",
+                    "-252409051403.0",
+                    "-59944569854.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c13",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 6,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "31/12/2017",
+                "value_2",
+                "value_3",
+                "1/1/2017",
+                "value_5",
+                "value_6",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Trong vòng 1 năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Trong vòng 2 đến 5 năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Trong vòng 1 năm",
+                    "270961235.0",
+                    "8871559.0",
+                    "262089676.0",
+                    "279832784.0",
+                    "17743112.0",
+                    "262089672.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trong vòng 2 đến 5 năm",
+                    "153172269.0",
+                    "43968239.0",
+                    "109204030.0",
+                    "459230177.0",
+                    "87936471.0",
+                    "371293706.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "",
+                    "424133504.0",
+                    "52839798.0",
+                    "371293706.0",
+                    "739062961.0",
+                    "105679583.0",
+                    "633383378.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c17",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 12,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "31/12/2017",
+                "value_2",
+                "1/1/2017",
+                "value_4",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Đầu tư nắm giữ đến ngày đáo hạn – ngắn hạn▪ Tiền gửi có kỳ hạn tại ngân hàng có thời gian đáo hạn từ 3 tháng đến 1 năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Số dư đầu năm"
+                },
+                {
+                  "row": 5,
+                  "label": "Tăng trong năm"
+                },
+                {
+                  "row": 6,
+                  "label": "Thu hồi trong năm"
+                },
+                {
+                  "row": 7,
+                  "label": "Số dư cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Đầu tư nắm giữ đến ngày đáo hạn – ngắn hạn▪ Tiền gửi có kỳ hạn tại ngân hàng có thời gian đáo hạn từ 3 tháng đến 1 năm",
+                    "157484229897.0",
+                    "",
+                    "80437267108.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "",
+                    "",
+                    "",
+                    "2017.0",
+                    "2016.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Số dư đầu năm",
+                    "",
+                    "",
+                    "80437267108.0",
+                    "53129213049.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Tăng trong năm",
+                    "",
+                    "",
+                    "255745124498.0",
+                    "59944569854.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Thu hồi trong năm",
+                    "",
+                    "",
+                    "-178698161709.0",
+                    "-32636515795.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Số dư cuối năm",
+                    "",
+                    "",
+                    "157484229897.0",
+                    "80437267108.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c21",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 16,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2017VND",
+                "2016VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư đầu năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Tăng trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Cổ tức đã nhận liên quan tới giai đoạn trước đầu tư"
+                },
+                {
+                  "row": 5,
+                  "label": "Thanh lý"
+                },
+                {
+                  "row": 6,
+                  "label": "Số dư cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số dư đầu năm",
+                    "1066750080240.0",
+                    "1008716984270.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Tăng trong năm",
+                    "690383472088.0",
+                    "247159445791.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Cổ tức đã nhận liên quan tới giai đoạn trước đầu tư",
+                    "-6063750000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Thanh lý",
+                    "-65485408096.0",
+                    "-189126349821.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Số dư cuối năm",
+                    "1685584394232.0",
+                    "1066750080240.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c25",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 22,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Loại tiền",
+                "Lãi suất năm",
+                "Năm đáo hạn",
+                "31/12/2017 VND",
+                "1/1/2017 VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 9,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vay từ các cá nhân (i)"
+                },
+                {
+                  "row": 3,
+                  "label": "- Khoản vay 1 (ii)"
+                },
+                {
+                  "row": 4,
+                  "label": "- Khoản vay 2 (iii)"
+                },
+                {
+                  "row": 5,
+                  "label": "- Khoản vay 3 (iv)"
+                },
+                {
+                  "row": 6,
+                  "label": "Ngân hàng Thương mạiCổ phần Á Châu (v)"
+                },
+                {
+                  "row": 7,
+                  "label": "Ngân hàng Thương mạiCổ phần Tiến Phong (vi)"
+                },
+                {
+                  "row": 9,
+                  "label": "Hoản trả trong vòng 12 tháng"
+                },
+                {
+                  "row": 10,
+                  "label": "Hoản trả sau 12 tháng"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 5,
+                  "cells": [
+                    "- Khoản vay 3 (iv)",
+                    "",
+                    "",
+                    "2018.0",
+                    "17014100000.0",
+                    "51042340000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Ngân hàng Thương mạiCổ phần Á Châu (v)",
+                    "",
+                    "8.7",
+                    "2024.0",
+                    "59950000000.0",
+                    "59950000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Ngân hàng Thương mạiCổ phần Tiến Phong (vi)",
+                    "",
+                    "7.5",
+                    "2021.0",
+                    "3329423209.0",
+                    "2211241363.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "354604118563.0",
+                    "427423867652.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 9,
+                  "cells": [
+                    "Hoản trả trong vòng 12 tháng",
+                    "",
+                    "",
+                    "",
+                    "-217045874242.0",
+                    "-209055445911.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "Hoản trả sau 12 tháng",
+                    "",
+                    "",
+                    "",
+                    "137558244321.0",
+                    "218368421741.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c29",
+            "bucket_key": "b02",
+            "table_type": "balance_sheet",
+            "dense_rank": 28,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "exact_phrase_titles": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 34,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "TÀI SẢN"
+                },
+                {
+                  "row": 3,
+                  "code": "100",
+                  "label": "Tài sản ngắn hạn"
+                },
+                {
+                  "row": 4,
+                  "code": "110",
+                  "label": "Tiền và các khoản tương đương tiền"
+                },
+                {
+                  "row": 5,
+                  "code": "111",
+                  "label": "Tiền"
+                },
+                {
+                  "row": 6,
+                  "code": "112",
+                  "label": "Các khoản tương đương tiền"
+                },
+                {
+                  "row": 7,
+                  "code": "120",
+                  "label": "Các khoản đầu tư tài chính ngắn hạn"
+                },
+                {
+                  "row": 8,
+                  "code": "123",
+                  "label": "Đầu tư nằm giữ đến ngày đáo hạn"
+                },
+                {
+                  "row": 9,
+                  "code": "130",
+                  "label": "Các khoản phải thu ngắn hạn"
+                },
+                {
+                  "row": 10,
+                  "code": "131",
+                  "label": "Phải thu ngắn hạn của khách hàng"
+                },
+                {
+                  "row": 11,
+                  "code": "132",
+                  "label": "Trá trước cho người bán ngắn hạn"
+                },
+                {
+                  "row": 12,
+                  "code": "135",
+                  "label": "Phải thu về cho vay ngắn hạn"
+                },
+                {
+                  "row": 13,
+                  "code": "136",
+                  "label": "Phải thu ngắn hạn khác"
+                },
+                {
+                  "row": 14,
+                  "code": "137",
+                  "label": "Dự phòng phải thu khó đòi"
+                },
+                {
+                  "row": 15,
+                  "code": "140",
+                  "label": "Hàng tồn kho"
+                },
+                {
+                  "row": 16,
+                  "code": "141",
+                  "label": "Hàng tồn kho"
+                },
+                {
+                  "row": 17,
+                  "code": "150",
+                  "label": "Tài sản ngắn hạn khác"
+                },
+                {
+                  "row": 18,
+                  "code": "151",
+                  "label": "Chi phí trả trước ngắn hạn"
+                },
+                {
+                  "row": 19,
+                  "code": "152",
+                  "label": "Thuế giá trị gia tăng được khấu trừ"
+                },
+                {
+                  "row": 20,
+                  "code": "153",
+                  "label": "Thuế phải thu Nhà nước"
+                },
+                {
+                  "row": 21,
+                  "code": "200",
+                  "label": "Tài sản dài hạn"
+                },
+                {
+                  "row": 22,
+                  "code": "210",
+                  "label": "Các khoản phải thu dài hạn"
+                },
+                {
+                  "row": 23,
+                  "code": "212",
+                  "label": "Trá trước cho người bán dài hạn"
+                },
+                {
+                  "row": 24,
+                  "code": "215",
+                  "label": "Phải thu về cho vay dài hạn"
+                },
+                {
+                  "row": 25,
+                  "code": "216",
+                  "label": "Phải thu dài hạn khác"
+                },
+                {
+                  "row": 26,
+                  "code": "220",
+                  "label": "Tài sản cố định"
+                },
+                {
+                  "row": 27,
+                  "code": "221",
+                  "label": "Tài sản cố định hữu hình"
+                },
+                {
+                  "row": 28,
+                  "code": "222",
+                  "label": "Nguyên giá"
+                },
+                {
+                  "row": 29,
+                  "code": "223",
+                  "label": "Giá trị hao mòn lũy kế"
+                },
+                {
+                  "row": 30,
+                  "code": "224",
+                  "label": "Tài sản cố định hữu hình thuê tài chính"
+                },
+                {
+                  "row": 31,
+                  "code": "225",
+                  "label": "Nguyên giá"
+                },
+                {
+                  "row": 32,
+                  "code": "226",
+                  "label": "Giá trị hao mòn lũy kế"
+                },
+                {
+                  "row": 33,
+                  "code": "227",
+                  "label": "Tài sản cố định vô hình"
+                },
+                {
+                  "row": 34,
+                  "code": "228",
+                  "label": "Nguyên giá"
+                },
+                {
+                  "row": 35,
+                  "code": "229",
+                  "label": "Giá trị hao mòn lũy kế"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "",
+                    "TÀI SẢN",
+                    "TÀI SẢN",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "100",
+                    "Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150)",
+                    "Tài sản ngắn hạn",
+                    "",
+                    "5957070714281.0",
+                    "4980131637730.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "110",
+                    "Tiền và các khoản tương đương tiền",
+                    "Tiền và các khoản tương đương tiền",
+                    "4",
+                    "54968812805.0",
+                    "438573747736.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 18,
+                  "cells": [
+                    "151",
+                    "Chi phí trả trước ngắn hạn",
+                    "Chi phí trả trước ngắn hạn",
+                    "16(a)",
+                    "10946637468.0",
+                    "375732996.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 19,
+                  "cells": [
+                    "152",
+                    "Thuế giá trị gia tăng được khấu trừ",
+                    "Thuế giá trị gia tăng được khấu trừ",
+                    "",
+                    "493637087.0",
+                    "984517175.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 20,
+                  "cells": [
+                    "153",
+                    "Thuế phải thu Nhà nước",
+                    "Thuế phải thu Nhà nước",
+                    "18(b)",
+                    "21686253179.0",
+                    "10271427635.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c07",
+          "c11",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c04",
+          "c06",
+          "c10",
+          "c15",
+          "c19",
+          "c23",
+          "c27"
+        ],
+        "response": {
+          "ranked_candidate_keys": [
+            "c01",
+            "c04"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c04"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c03",
+          "c09",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c02",
+          "c05",
+          "c08",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29"
+        ],
+        "response": {
+          "ranked_candidate_keys": [
+            "c03",
+            "c20"
+          ]
+        },
+        "nominated_keys": [
+          "c03",
+          "c20"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c03",
+      "c04",
+      "c20"
+    ],
+    "lexical_finalist_keys": [
+      "c01",
+      "c03",
+      "c04"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c03",
+      "c04",
+      "c20"
+    ],
+    "final_prompt": {
+      "nhiệm_vụ": "Quyết định required buckets, phân rã concepts và chọn exact evidence tables.",
+      "câu_hỏi": "Quy mô nợ trái phiếu thường của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật đến ngày 31/12/2017 trừ đi quy mô nợ trái phiếu thường của công ty mẹ CTCP Địa ốc Sài Gòn Thương Tín đến ngày 31/12/2017 là bao nhiêu tỷ đồng?",
+      "giới_hạn_cứng": 4,
+      "available_buckets": [
+        {
+          "bucket_key": "b01",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "year": 2017,
+          "report_type": "separate"
+        },
+        {
+          "bucket_key": "b02",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "year": 2017,
+          "report_type": "separate"
+        }
+      ],
+      "coverage_locked_bucket_keys": [],
+      "candidate_buckets": [
+        {
+          "bucket_key": "b01",
+          "ticker": "IJC",
+          "year": 2017,
+          "report_type": "separate",
+          "candidates": [
+            {
+              "candidate_key": "c01",
+              "bucket_key": "b01",
+              "table_type": "note_table",
+              "dense_rank": 1,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [
+                    {
+                      "row": 3,
+                      "label": "Trái phiếu thường",
+                      "overlap_tokens": 3
+                    },
+                    {
+                      "row": 6,
+                      "label": "Trái phiếu thường",
+                      "overlap_tokens": 3
+                    }
+                  ],
+                  "exact_phrase_titles": [],
+                  "strong_overlap_rows": [],
+                  "table_titles": []
+                },
+                "table_titles": [],
+                "columns": [
+                  "row_label_raw",
+                  "Tổng nợ",
+                  "Từ 1 năm trở xuống",
+                  "Trên 1 năm đến 5 năm",
+                  "Trên 5 năm",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 6,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Vay dài hạn ngân hàng"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Cộng"
+                  },
+                  {
+                    "row": 5,
+                    "label": "Vay dài hạn ngân hàng"
+                  },
+                  {
+                    "row": 6,
+                    "label": "Trái phiếu thường"
+                  },
+                  {
+                    "row": 7,
+                    "label": "Cộng"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Vay dài hạn ngân hàng",
+                      "409500000000.0",
+                      "189750000000.0",
+                      "219750000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Trái phiếu thường",
+                      "1000000000000.0",
+                      "",
+                      "1000000000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Cộng",
+                      "1409500000000.0",
+                      "189750000000.0",
+                      "1219750000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 5,
+                    "cells": [
+                      "Vay dài hạn ngân hàng",
+                      "539250000000.0",
+                      "184750000000.0",
+                      "354500000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 6,
+                    "cells": [
+                      "Trái phiếu thường",
+                      "1000000000000.0",
+                      "",
+                      "1000000000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 7,
+                    "cells": [
+                      "Cộng",
+                      "1539250000000.0",
+                      "184750000000.0",
+                      "1354500000000.0",
+                      "",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "candidate_key": "c03",
+              "bucket_key": "b01",
+              "table_type": "note_table",
+              "dense_rank": 3,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [
+                    {
+                      "row": 3,
+                      "label": "Trái phiếu thường",
+                      "overlap_tokens": 3
+                    }
+                  ],
+                  "exact_phrase_titles": [],
+                  "strong_overlap_rows": [],
+                  "table_titles": []
+                },
+                "table_titles": [],
+                "columns": [
+                  "row_label_raw",
+                  "Số đầu năm",
+                  "Số tiền vay phát sinh trong năm",
+                  "Kết chuyển sang vay và nợ ngắn hạn",
+                  "Số cuối năm",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 3,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Vay dài hạn ngân hàng"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Cộng"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Vay dài hạn ngân hàng",
+                      "354500000000.0",
+                      "55000000000.0",
+                      "-189750000000.0",
+                      "219750000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Trái phiếu thường",
+                      "1000000000000.0",
+                      "",
+                      "",
+                      "1000000000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Cộng",
+                      "1354500000000.0",
+                      "55000000000.0",
+                      "-189750000000.0",
+                      "1219750000000.0",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "candidate_key": "c20",
+              "bucket_key": "b01",
+              "table_type": "note_table",
+              "dense_rank": 17,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [],
+                  "exact_phrase_titles": [],
+                  "strong_overlap_rows": [
+                    {
+                      "row": 8,
+                      "label": "Trái phiếu thường dài hạn\\( ^{(vi)} \\)",
+                      "overlap_tokens": 3
+                    },
+                    {
+                      "row": 4,
+                      "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)",
+                      "overlap_tokens": 2
+                    }
+                  ],
+                  "table_titles": []
+                },
+                "table_titles": [],
+                "columns": [
+                  "row_label_raw",
+                  "Số cuối năm",
+                  "Số đầu năm",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 8,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Vay dài hạn ngân hàng"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Ngân hàng TMCP Đông Nam Á - Chi nhánh Bình Dương\\( ^{(i)} \\)"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)"
+                  },
+                  {
+                    "row": 5,
+                    "label": "Ngân hàng TMCP Ngoại thương Việt Nam - Chi nhánh Bình Dương\\( ^{(iii)} \\)"
+                  },
+                  {
+                    "row": 6,
+                    "label": "Ngân hàng TMCP Việt Á - Chi nhánh Bình Dương\\( ^{(iv)} \\)"
+                  },
+                  {
+                    "row": 7,
+                    "label": "Ngân hàng TMCP Bản Việt - Chi nhánh Bình Dương\\( ^{(v)} \\)"
+                  },
+                  {
+                    "row": 8,
+                    "label": "Trái phiếu thường dài hạn\\( ^{(vi)} \\)"
+                  },
+                  {
+                    "row": 9,
+                    "label": "Cộng"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Vay dài hạn ngân hàng",
+                      "219750000000.0",
+                      "354500000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Ngân hàng TMCP Đông Nam Á - Chi nhánh Bình Dương\\( ^{(i)} \\)",
+                      "",
+                      "37250000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam - Chi nhánh Bình Dương\\( ^{(ii)} \\)",
+                      "45000000000.0",
+                      "75000000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 5,
+                    "cells": [
+                      "Ngân hàng TMCP Ngoại thương Việt Nam - Chi nhánh Bình Dương\\( ^{(iii)} \\)",
+                      "",
+                      "9000000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 6,
+                    "cells": [
+                      "Ngân hàng TMCP Việt Á - Chi nhánh Bình Dương\\( ^{(iv)} \\)",
+                      "97750000000.0",
+                      "173250000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 7,
+                    "cells": [
+                      "Ngân hàng TMCP Bản Việt - Chi nhánh Bình Dương\\( ^{(v)} \\)",
+                      "77000000000.0",
+                      "60000000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 8,
+                    "cells": [
+                      "Trái phiếu thường dài hạn\\( ^{(vi)} \\)",
+                      "1000000000000.0",
+                      "1000000000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 9,
+                    "cells": [
+                      "Cộng",
+                      "1219750000000.0",
+                      "1354500000000.0",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "bucket_key": "b02",
+          "ticker": "SCR",
+          "year": 2017,
+          "report_type": "separate",
+          "candidates": [
+            {
+              "candidate_key": "c04",
+              "bucket_key": "b02",
+              "table_type": "note_table",
+              "dense_rank": 4,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [
+                    {
+                      "row": 3,
+                      "label": "Trái phiếu thường (**)",
+                      "overlap_tokens": 3
+                    }
+                  ],
+                  "exact_phrase_titles": [],
+                  "strong_overlap_rows": [],
+                  "table_titles": []
+                },
+                "table_titles": [],
+                "columns": [
+                  "row_label_raw",
+                  "31/12/2017VND",
+                  "1/1/2017VND",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 6,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Vay dài hạn (*)"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Trái phiếu thường (**)"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Nợ thuê tài chính dài hạn (***)"
+                  },
+                  {
+                    "row": 6,
+                    "label": "Hoàn trả trong vòng 12 tháng"
+                  },
+                  {
+                    "row": 7,
+                    "label": "Hoàn trả sau 12 tháng"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Vay dài hạn (*)",
+                      "354604118563.0",
+                      "427423867652.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Trái phiếu thường (**)",
+                      "396121428571.0",
+                      "194800000000.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Nợ thuê tài chính dài hạn (***)",
+                      "371293706.0",
+                      "633383378.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 5,
+                    "cells": [
+                      "",
+                      "751096840840.0",
+                      "622857251030.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 6,
+                    "cells": [
+                      "Hoàn trả trong vòng 12 tháng",
+                      "-217307963918.0",
+                      "-209317535583.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 7,
+                    "cells": [
+                      "Hoàn trả sau 12 tháng",
+                      "533788876922.0",
+                      "413539715447.0",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "required_bucket_keys": [
+        "b01",
+        "b02"
+      ],
+      "bucket_requirements": [
+        {
+          "bucket_key": "b01",
+          "concepts": [
+            {
+              "concept_key": "b01_k01",
+              "description": "Trái phiếu thường",
+              "role": "numerator"
+            }
+          ]
+        },
+        {
+          "bucket_key": "b02",
+          "concepts": [
+            {
+              "concept_key": "b02_k01",
+              "description": "Trái phiếu thường",
+              "role": "numerator"
+            }
+          ]
+        }
+      ],
+      "ranked_selections": [
+        {
+          "candidate_key": "c01",
+          "covered_concept_keys": [
+            "b01_k01"
+          ]
+        },
+        {
+          "candidate_key": "c04",
+          "covered_concept_keys": [
+            "b02_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Trái phiếu thường",
+            "role": "numerator"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Trái phiếu thường",
+            "role": "numerator"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c04"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01",
+      "c04"
+    ],
+    "output_cap": 4
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "IJC_financial_statements_2017_separate_table_44",
+      "metadata": {
+        "table_id": "IJC_financial_statements_2017_separate_table_44",
+        "doc_id": "IJC_financial_statements_2017_separate",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1332
+      },
+      "retrieval_score": 0.8597986,
+      "dense_rank": 1,
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Tổng nợ",
+          "Từ 1 năm trở xuống",
+          "Trên 1 năm đến 5 năm",
+          "Trên 5 năm",
+          "note_number",
+          "note_title"
+        ],
+        "row_count": 6,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vay dài hạn ngân hàng"
+          },
+          {
+            "row": 3,
+            "label": "Trái phiếu thường"
+          },
+          {
+            "row": 4,
+            "label": "Cộng"
+          },
+          {
+            "row": 5,
+            "label": "Vay dài hạn ngân hàng"
+          },
+          {
+            "row": 6,
+            "label": "Trái phiếu thường"
+          },
+          {
+            "row": 7,
+            "label": "Cộng"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "cells": [
+              "Vay dài hạn ngân hàng",
+              "409500000000.0",
+              "189750000000.0",
+              "219750000000.0",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              "Trái phiếu thường",
+              "1000000000000.0",
+              "",
+              "1000000000000.0",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              "Cộng",
+              "1409500000000.0",
+              "189750000000.0",
+              "1219750000000.0",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 5,
+            "cells": [
+              "Vay dài hạn ngân hàng",
+              "539250000000.0",
+              "184750000000.0",
+              "354500000000.0",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 6,
+            "cells": [
+              "Trái phiếu thường",
+              "1000000000000.0",
+              "",
+              "1000000000000.0",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 7,
+            "cells": [
+              "Cộng",
+              "1539250000000.0",
+              "184750000000.0",
+              "1354500000000.0",
+              "",
+              "",
+              ""
+            ]
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "SCR_financial_statements_2017_separate_table_44",
+      "metadata": {
+        "table_id": "SCR_financial_statements_2017_separate_table_44",
+        "doc_id": "SCR_financial_statements_2017_separate",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1046
+      },
+      "retrieval_score": 0.85898185,
+      "dense_rank": 4,
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2017VND",
+          "1/1/2017VND",
+          "note_number",
+          "note_title"
+        ],
+        "row_count": 6,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vay dài hạn (*)"
+          },
+          {
+            "row": 3,
+            "label": "Trái phiếu thường (**)"
+          },
+          {
+            "row": 4,
+            "label": "Nợ thuê tài chính dài hạn (***)"
+          },
+          {
+            "row": 6,
+            "label": "Hoàn trả trong vòng 12 tháng"
+          },
+          {
+            "row": 7,
+            "label": "Hoàn trả sau 12 tháng"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "cells": [
+              "Vay dài hạn (*)",
+              "354604118563.0",
+              "427423867652.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              "Trái phiếu thường (**)",
+              "396121428571.0",
+              "194800000000.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              "Nợ thuê tài chính dài hạn (***)",
+              "371293706.0",
+              "633383378.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 5,
+            "cells": [
+              "",
+              "751096840840.0",
+              "622857251030.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 6,
+            "cells": [
+              "Hoàn trả trong vòng 12 tháng",
+              "-217307963918.0",
+              "-209317535583.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 7,
+            "cells": [
+              "Hoàn trả sau 12 tháng",
+              "533788876922.0",
+              "413539715447.0",
+              "",
+              ""
+            ]
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "SCR_financial_statements_2017_separate|1116",
+        "IJC_financial_statements_2017_separate|1336",
+        "SCR_financial_statements_2017_separate|1046",
+        "IJC_financial_statements_2017_separate|458",
+        "SCR_financial_statements_2017_separate|1102",
+        "IJC_financial_statements_2017_separate|1373",
+        "SCR_financial_statements_2017_separate|1141",
+        "IJC_financial_statements_2017_separate|1259",
+        "SCR_financial_statements_2017_separate|981",
+        "IJC_financial_statements_2017_separate|1520",
+        "SCR_financial_statements_2017_separate|566",
+        "IJC_financial_statements_2017_separate|904",
+        "SCR_financial_statements_2017_separate|1108",
+        "IJC_financial_statements_2017_separate|1453",
+        "SCR_financial_statements_2017_separate|661",
+        "IJC_financial_statements_2017_separate|1263",
+        "SCR_financial_statements_2017_separate|747",
+        "IJC_financial_statements_2017_separate|378",
+        "SCR_financial_statements_2017_separate|200",
+        "IJC_financial_statements_2017_separate|1457",
+        "SCR_financial_statements_2017_separate|1052",
+        "IJC_financial_statements_2017_separate|437",
+        "SCR_financial_statements_2017_separate|147",
+        "IJC_financial_statements_2017_separate|1363",
+        "SCR_financial_statements_2017_separate|204",
+        "IJC_financial_statements_2017_separate|1441",
+        "SCR_financial_statements_2017_separate|113",
+        "IJC_financial_statements_2017_separate|1038",
+        "SCR_financial_statements_2017_separate|1000",
+        "IJC_financial_statements_2017_separate|441",
+        "SCR_financial_statements_2017_separate|1135",
+        "IJC_financial_statements_2017_separate|971",
+        "SCR_financial_statements_2017_separate|591",
+        "IJC_financial_statements_2017_separate|1236",
+        "SCR_financial_statements_2017_separate|824",
+        "IJC_financial_statements_2017_separate|1694",
+        "SCR_financial_statements_2017_separate|893",
+        "IJC_financial_statements_2017_separate|363",
+        "SCR_financial_statements_2017_separate|1325",
+        "IJC_financial_statements_2017_separate|984",
+        "SCR_financial_statements_2017_separate|181",
+        "IJC_financial_statements_2017_separate|1415",
+        "SCR_financial_statements_2017_separate|556",
+        "IJC_financial_statements_2017_separate|1019",
+        "SCR_financial_statements_2017_separate|1222",
+        "IJC_financial_statements_2017_separate|333",
+        "SCR_financial_statements_2017_separate|665",
+        "IJC_financial_statements_2017_separate|1222",
+        "SCR_financial_statements_2017_separate|1226"
+      ]
+    },
+    "shortlist": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "SCR_financial_statements_2017_separate|1116",
+        "IJC_financial_statements_2017_separate|1336",
+        "SCR_financial_statements_2017_separate|1046",
+        "SCR_financial_statements_2017_separate|591",
+        "SCR_financial_statements_2017_separate|1141",
+        "IJC_financial_statements_2017_separate|458",
+        "SCR_financial_statements_2017_separate|200",
+        "IJC_financial_statements_2017_separate|904",
+        "SCR_financial_statements_2017_separate|147",
+        "IJC_financial_statements_2017_separate|378",
+        "IJC_financial_statements_2017_separate|1373",
+        "SCR_financial_statements_2017_separate|1102",
+        "IJC_financial_statements_2017_separate|1259",
+        "SCR_financial_statements_2017_separate|981",
+        "IJC_financial_statements_2017_separate|1520",
+        "SCR_financial_statements_2017_separate|566",
+        "IJC_financial_statements_2017_separate|1453",
+        "SCR_financial_statements_2017_separate|1108",
+        "IJC_financial_statements_2017_separate|1263",
+        "SCR_financial_statements_2017_separate|661",
+        "IJC_financial_statements_2017_separate|1457",
+        "SCR_financial_statements_2017_separate|747",
+        "IJC_financial_statements_2017_separate|437",
+        "SCR_financial_statements_2017_separate|1052",
+        "IJC_financial_statements_2017_separate|1363",
+        "SCR_financial_statements_2017_separate|204",
+        "IJC_financial_statements_2017_separate|1441",
+        "SCR_financial_statements_2017_separate|113",
+        "IJC_financial_statements_2017_separate|1038"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "IJC_financial_statements_2017_separate|1336",
+        "SCR_financial_statements_2017_separate|1046",
+        "IJC_financial_statements_2017_separate|1263"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "IJC_financial_statements_2017_separate|1336",
+        "SCR_financial_statements_2017_separate|1046",
+        "IJC_financial_statements_2017_separate|1263"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "SCR_financial_statements_2017_separate|1046"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "IJC_financial_statements_2017_separate",
+        "SCR_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "IJC_financial_statements_2017_separate|1332",
+        "SCR_financial_statements_2017_separate|1046"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.04,
+        "recall": 1.0,
+        "f2": 0.1724137931034483,
+        "mrr5": 0.25
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "shortlist": {
+      "tables": {
+        "precision": 0.06666666666666667,
+        "recall": 1.0,
+        "f2": 0.2631578947368421,
+        "mrr5": 0.25
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f2": 0.5,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f2": 0.5,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "IJC_financial_statements_2017_separate|1263",
+      "stage_presence": {
+        "retriever": true,
+        "shortlist": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": false,
+        "reranker": false
+      },
+      "terminal": "final_llm"
+    },
+    {
+      "table_ref": "SCR_financial_statements_2017_separate|1046",
+      "stage_presence": {
+        "retriever": true,
+        "shortlist": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

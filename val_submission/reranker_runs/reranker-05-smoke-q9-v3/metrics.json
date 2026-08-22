@@ -1,0 +1,121 @@
+{
+  "run_id": "reranker-05-smoke-q9-v3",
+  "updated_at": "2026-08-22T14:54:25+00:00",
+  "source_run": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-03",
+  "selected_queries": 1,
+  "evaluated_queries": 1,
+  "failed_queries": 0,
+  "stage_metrics": {
+    "retriever": {
+      "TABLES F2-MACRO": 0.09259259259259259,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.02,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 0.0,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    },
+    "shortlist": {
+      "TABLES F2-MACRO": 0.14705882352941177,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.03333333333333333,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 0.5,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    },
+    "scout_union": {
+      "TABLES F2-MACRO": 0.5555555555555556,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.2,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 1.0,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    },
+    "finalists": {
+      "TABLES F2-MACRO": 0.5555555555555556,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.2,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 1.0,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    },
+    "final_llm": {
+      "TABLES F2-MACRO": 0.8333333333333334,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.5,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 1.0,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    },
+    "reranker": {
+      "TABLES F2-MACRO": 0.8333333333333334,
+      "DOCS F2-MACRO": 1.0,
+      "TABLES PRECISION": 0.5,
+      "TABLES RECALL": 1.0,
+      "TABLES MRR5": 1.0,
+      "DOCS PRECISION": 1.0,
+      "DOCS RECALL": 1.0,
+      "DOCS MRR5": 1.0
+    }
+  },
+  "slice_metrics": {
+    "single_gold_table": {
+      "queries": 1,
+      "reranker": {
+        "TABLES F2-MACRO": 0.8333333333333334,
+        "DOCS F2-MACRO": 1.0,
+        "TABLES PRECISION": 0.5,
+        "TABLES RECALL": 1.0,
+        "TABLES MRR5": 1.0,
+        "DOCS PRECISION": 1.0,
+        "DOCS RECALL": 1.0,
+        "DOCS MRR5": 1.0
+      }
+    },
+    "one_table_per_document": {
+      "queries": 0,
+      "reranker": {
+        "TABLES F2-MACRO": 0.0,
+        "DOCS F2-MACRO": 0.0,
+        "TABLES PRECISION": 0.0,
+        "TABLES RECALL": 0.0,
+        "TABLES MRR5": 0.0,
+        "DOCS PRECISION": 0.0,
+        "DOCS RECALL": 0.0,
+        "DOCS MRR5": 0.0
+      }
+    },
+    "multi_table_per_document": {
+      "queries": 0,
+      "reranker": {
+        "TABLES F2-MACRO": 0.0,
+        "DOCS F2-MACRO": 0.0,
+        "TABLES PRECISION": 0.0,
+        "TABLES RECALL": 0.0,
+        "TABLES MRR5": 0.0,
+        "DOCS PRECISION": 0.0,
+        "DOCS RECALL": 0.0,
+        "DOCS MRR5": 0.0
+      }
+    }
+  },
+  "diagnostics": {
+    "gold_table_terminal_counts": {
+      "selected": 1
+    },
+    "gold_table_absent_by_stage": {},
+    "required_bucket_gold_recall": 1.0,
+    "required_bucket_precision": 1.0,
+    "coverage_completion_sources": {},
+    "uncovered_concept_count": 0
+  }
+}

@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 243,
+  "question": "Trả trước của các bên liên quan cuối năm 2021 của công ty mẹ CTCP Phát triển Hạ tầng Kỹ thuật (IJC) là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:38:49+00:00",
+  "finished_at": "2026-08-22T13:38:49+00:00",
+  "duration_seconds": 0.2993951959942933,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "IJC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "IJC_financial_statements_2021_separate"
+    ],
+    "relevant_tables": [
+      "IJC_financial_statements_2021_separate|1318"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "IJC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Trả trước các bên liên quan cuối CTCP Phát triển Hạ tầng Kỹ thuật triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "matched_text": "IJC",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Trả trước các bên liên quan cuối CTCP Phát triển Hạ tầng Kỹ thuật triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "IJC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "IJC"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "IJC_financial_statements_2021_separate_table_54",
+        "retrieval_score": 0.856898,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_54",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1652
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "IJC_financial_statements_2021_separate_table_68",
+        "retrieval_score": 0.856571,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_68",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1850
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "IJC_financial_statements_2021_separate_table_66",
+        "retrieval_score": 0.83991003,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_66",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "IJC_financial_statements_2021_separate_table_49",
+        "retrieval_score": 0.8372439,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_49",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1561
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "IJC_financial_statements_2021_separate_table_17",
+        "retrieval_score": 0.8325359,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_17",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1103
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "IJC_financial_statements_2021_separate_table_19",
+        "retrieval_score": 0.83198667,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_19",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1130
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "IJC_financial_statements_2021_separate_table_33",
+        "retrieval_score": 0.83122957,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_33",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1306
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "IJC_financial_statements_2021_separate_table_32",
+        "retrieval_score": 0.83109665,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_32",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1283
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "IJC_financial_statements_2021_separate_table_16",
+        "retrieval_score": 0.8257785,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_16",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1099
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "IJC_financial_statements_2021_separate_table_15",
+        "retrieval_score": 0.82166743,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_15",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1095
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "IJC_financial_statements_2021_separate_table_40",
+        "retrieval_score": 0.8209164,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_40",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "IJC_financial_statements_2021_separate_table_39",
+        "retrieval_score": 0.82061756,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_39",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "IJC_financial_statements_2021_separate_table_67",
+        "retrieval_score": 0.81158745,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_67",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1827
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "IJC_financial_statements_2021_separate_table_30",
+        "retrieval_score": 0.81140876,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_30",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1240
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "IJC_financial_statements_2021_separate_table_23",
+        "retrieval_score": 0.8084995,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_23",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1186
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "IJC_financial_statements_2021_separate_table_12",
+        "retrieval_score": 0.80691344,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_12",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 550
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "IJC_financial_statements_2021_separate_table_60",
+        "retrieval_score": 0.7991651,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_60",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1702
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "IJC_financial_statements_2021_separate_table_34",
+        "retrieval_score": 0.7979985,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_34",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1318
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "IJC_financial_statements_2021_separate_table_41",
+        "retrieval_score": 0.7954567,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_41",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1435
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "IJC_financial_statements_2021_separate_table_62",
+        "retrieval_score": 0.7941207,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_62",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1727
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "IJC_financial_statements_2021_separate_table_47",
+        "retrieval_score": 0.79374,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_47",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1536
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "IJC_financial_statements_2021_separate_table_7",
+        "retrieval_score": 0.7936792,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_7",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 382
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "IJC_financial_statements_2021_separate_table_22",
+        "retrieval_score": 0.7922561,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_22",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1167
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "IJC_financial_statements_2021_separate_table_29",
+        "retrieval_score": 0.79108375,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_29",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1236
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "IJC_financial_statements_2021_separate_table_11",
+        "retrieval_score": 0.7906432,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_11",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 484
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "IJC_financial_statements_2021_separate_table_69",
+        "retrieval_score": 0.78989387,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_69",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1946
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "IJC_financial_statements_2021_separate_table_70",
+        "retrieval_score": 0.78989387,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_70",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1961
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "IJC_financial_statements_2021_separate_table_18",
+        "retrieval_score": 0.78957504,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_18",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1126
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "IJC_financial_statements_2021_separate_table_43",
+        "retrieval_score": 0.78931147,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_43",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1472
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "IJC_financial_statements_2021_separate_table_13",
+        "retrieval_score": 0.7891508,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_13",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 713
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "IJC_financial_statements_2021_separate_table_61",
+        "retrieval_score": 0.78751767,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_61",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1723
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "IJC_financial_statements_2021_separate_table_24",
+        "retrieval_score": 0.78723735,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_24",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1190
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "IJC_financial_statements_2021_separate_table_25",
+        "retrieval_score": 0.78576076,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_25",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1194
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "IJC_financial_statements_2021_separate_table_31",
+        "retrieval_score": 0.78571004,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_31",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1277
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "IJC_financial_statements_2021_separate_table_46",
+        "retrieval_score": 0.7855854,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_46",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1528
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "IJC_financial_statements_2021_separate_table_9",
+        "retrieval_score": 0.784993,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_9",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 428
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "IJC_financial_statements_2021_separate_table_53",
+        "retrieval_score": 0.7849517,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_53",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1646
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "IJC_financial_statements_2021_separate_table_28",
+        "retrieval_score": 0.78471303,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_28",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1232
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "IJC_financial_statements_2021_separate_table_59",
+        "retrieval_score": 0.78323925,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_59",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1698
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "IJC_financial_statements_2021_separate_table_56",
+        "retrieval_score": 0.7821079,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_56",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1686
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "IJC_financial_statements_2021_separate_table_21",
+        "retrieval_score": 0.7804104,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_21",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1155
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "IJC_financial_statements_2021_separate_table_51",
+        "retrieval_score": 0.7800738,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_51",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1592
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "IJC_financial_statements_2021_separate_table_64",
+        "retrieval_score": 0.779244,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_64",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1743
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "IJC_financial_statements_2021_separate_table_63",
+        "retrieval_score": 0.7784846,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_63",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1735
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "IJC_financial_statements_2021_separate_table_35",
+        "retrieval_score": 0.7782064,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_35",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1322
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "IJC_financial_statements_2021_separate_table_4",
+        "retrieval_score": 0.77809507,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_4",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 196
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "IJC_financial_statements_2021_separate_table_55",
+        "retrieval_score": 0.77807164,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_55",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1660
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "IJC_financial_statements_2021_separate_table_36",
+        "retrieval_score": 0.7744315,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_36",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1341
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "IJC_financial_statements_2021_separate_table_8",
+        "retrieval_score": 0.7735324,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_8",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 399
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "IJC_financial_statements_2021_separate_table_37",
+        "retrieval_score": 0.77267516,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2021_separate_table_37",
+          "doc_id": "IJC_financial_statements_2021_separate",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1347
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2021_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2021_separate|1652",
+            "IJC_financial_statements_2021_separate|1850",
+            "IJC_financial_statements_2021_separate|1788",
+            "IJC_financial_statements_2021_separate|1561",
+            "IJC_financial_statements_2021_separate|1103"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2021_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2021_separate|1652",
+            "IJC_financial_statements_2021_separate|1850",
+            "IJC_financial_statements_2021_separate|1788",
+            "IJC_financial_statements_2021_separate|1561",
+            "IJC_financial_statements_2021_separate|1103",
+            "IJC_financial_statements_2021_separate|1130",
+            "IJC_financial_statements_2021_separate|1306",
+            "IJC_financial_statements_2021_separate|1283",
+            "IJC_financial_statements_2021_separate|1099",
+            "IJC_financial_statements_2021_separate|1095"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2021_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2021_separate|1652",
+            "IJC_financial_statements_2021_separate|1850",
+            "IJC_financial_statements_2021_separate|1788",
+            "IJC_financial_statements_2021_separate|1561",
+            "IJC_financial_statements_2021_separate|1103",
+            "IJC_financial_statements_2021_separate|1130",
+            "IJC_financial_statements_2021_separate|1306",
+            "IJC_financial_statements_2021_separate|1283",
+            "IJC_financial_statements_2021_separate|1099",
+            "IJC_financial_statements_2021_separate|1095",
+            "IJC_financial_statements_2021_separate|1421",
+            "IJC_financial_statements_2021_separate|1394",
+            "IJC_financial_statements_2021_separate|1827",
+            "IJC_financial_statements_2021_separate|1240",
+            "IJC_financial_statements_2021_separate|1186",
+            "IJC_financial_statements_2021_separate|550",
+            "IJC_financial_statements_2021_separate|1702",
+            "IJC_financial_statements_2021_separate|1318",
+            "IJC_financial_statements_2021_separate|1435",
+            "IJC_financial_statements_2021_separate|1727"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "IJC_financial_statements_2021_separate"
+          ],
+          "tables": [
+            "IJC_financial_statements_2021_separate|1652",
+            "IJC_financial_statements_2021_separate|1850",
+            "IJC_financial_statements_2021_separate|1788",
+            "IJC_financial_statements_2021_separate|1561",
+            "IJC_financial_statements_2021_separate|1103",
+            "IJC_financial_statements_2021_separate|1130",
+            "IJC_financial_statements_2021_separate|1306",
+            "IJC_financial_statements_2021_separate|1283",
+            "IJC_financial_statements_2021_separate|1099",
+            "IJC_financial_statements_2021_separate|1095",
+            "IJC_financial_statements_2021_separate|1421",
+            "IJC_financial_statements_2021_separate|1394",
+            "IJC_financial_statements_2021_separate|1827",
+            "IJC_financial_statements_2021_separate|1240",
+            "IJC_financial_statements_2021_separate|1186",
+            "IJC_financial_statements_2021_separate|550",
+            "IJC_financial_statements_2021_separate|1702",
+            "IJC_financial_statements_2021_separate|1318",
+            "IJC_financial_statements_2021_separate|1435",
+            "IJC_financial_statements_2021_separate|1727",
+            "IJC_financial_statements_2021_separate|1536",
+            "IJC_financial_statements_2021_separate|382",
+            "IJC_financial_statements_2021_separate|1167",
+            "IJC_financial_statements_2021_separate|1236",
+            "IJC_financial_statements_2021_separate|484",
+            "IJC_financial_statements_2021_separate|1946",
+            "IJC_financial_statements_2021_separate|1961",
+            "IJC_financial_statements_2021_separate|1126",
+            "IJC_financial_statements_2021_separate|1472",
+            "IJC_financial_statements_2021_separate|713",
+            "IJC_financial_statements_2021_separate|1723",
+            "IJC_financial_statements_2021_separate|1190",
+            "IJC_financial_statements_2021_separate|1194",
+            "IJC_financial_statements_2021_separate|1277",
+            "IJC_financial_statements_2021_separate|1528",
+            "IJC_financial_statements_2021_separate|428",
+            "IJC_financial_statements_2021_separate|1646",
+            "IJC_financial_statements_2021_separate|1232",
+            "IJC_financial_statements_2021_separate|1698",
+            "IJC_financial_statements_2021_separate|1686",
+            "IJC_financial_statements_2021_separate|1155",
+            "IJC_financial_statements_2021_separate|1592",
+            "IJC_financial_statements_2021_separate|1743",
+            "IJC_financial_statements_2021_separate|1735",
+            "IJC_financial_statements_2021_separate|1322",
+            "IJC_financial_statements_2021_separate|196",
+            "IJC_financial_statements_2021_separate|1660",
+            "IJC_financial_statements_2021_separate|1341",
+            "IJC_financial_statements_2021_separate|399",
+            "IJC_financial_statements_2021_separate|1347"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

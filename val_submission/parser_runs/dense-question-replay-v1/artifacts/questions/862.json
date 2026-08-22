@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "id": 862,
+  "question": "Tổng chi phí tài chính của CTCP Địa ốc Sài Gòn Thương Tín, Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng, CTCP Bluemarq Group, Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP và CTCP Phát triển Hạ tầng Kỹ thuật trong năm 2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:39:29+00:00",
+  "finished_at": "2026-08-22T13:39:31+00:00",
+  "duration_seconds": 2.0029777839954477,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SCR",
+      "DIG",
+      "DXG",
+      "KBC",
+      "IJC"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SCR_financial_statements_2016_consolidated",
+      "DIG_financial_statements_2016_consolidated",
+      "DXG_financial_statements_2016_consolidated",
+      "KBC_financial_statements_2016_consolidated",
+      "IJC_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "SCR_financial_statements_2016_consolidated|164",
+      "DIG_financial_statements_2016_consolidated|378",
+      "DXG_financial_statements_2016_consolidated|303",
+      "KBC_financial_statements_2016_consolidated|276",
+      "IJC_financial_statements_2016_consolidated|360"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DIG",
+      "KBC",
+      "IJC",
+      "SCR",
+      "DXG"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tổng chi phí tài chính , , , và trong tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DIG",
+        "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+        "matched_text": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "matched_text": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "IJC",
+        "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "matched_text": "CTCP Phát triển Hạ tầng Kỹ thuật",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "SCR",
+        "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "matched_text": "CTCP Địa ốc Sài Gòn Thương Tín",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c05",
+        "ticker": "DXG",
+        "company_name": "CTCP Bluemarq Group",
+        "matched_text": "CTCP Bluemarq Group",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c06",
+        "ticker": "SGB",
+        "company_name": "Ngân hàng TMCP Sài Gòn Công Thương",
+        "matched_text": "Sài Gòn Thương",
+        "match_type": "fuzzy_company_name"
+      },
+      {
+        "candidate_key": "c07",
+        "ticker": "HPX",
+        "company_name": "CTCP Đầu tư Hải Phát",
+        "matched_text": "Đầu tư Phát",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c04",
+            "c01",
+            "c05",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tổng chi phí tài chính của CTCP Địa ốc Sài Gòn Thương Tín, Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng, CTCP Bluemarq Group, Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP và CTCP Phát triển Hạ tầng Kỹ thuật trong năm 2016 là bao nhiêu tỷ đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DIG",
+        "requested_top_n": 10,
+        "candidate_count": 10,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DIG"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "KBC",
+        "requested_top_n": 10,
+        "candidate_count": 10,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "KBC"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "IJC",
+        "requested_top_n": 10,
+        "candidate_count": 10,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "IJC"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "SCR",
+        "requested_top_n": 10,
+        "candidate_count": 10,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SCR"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "DXG",
+        "requested_top_n": 10,
+        "candidate_count": 10,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DXG"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.8681301,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_30",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1359
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_11",
+        "retrieval_score": 0.866141,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_11",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 351
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_70",
+        "retrieval_score": 0.86624974,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_70",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1791
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_11",
+        "retrieval_score": 0.8607473,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_11",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 298
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_1",
+        "retrieval_score": 0.85121983,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_1",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 27
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_37",
+        "retrieval_score": 0.8566942,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_37",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1457
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_33",
+        "retrieval_score": 0.8596039,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_33",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1162
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_72",
+        "retrieval_score": 0.8490056,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_72",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1825
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_72",
+        "retrieval_score": 0.84276456,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_72",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1524
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_13",
+        "retrieval_score": 0.8497446,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_13",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 398
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_70",
+        "retrieval_score": 0.8551779,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_70",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1972
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_25",
+        "retrieval_score": 0.8583916,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_25",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1010
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_20",
+        "retrieval_score": 0.84696907,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_20",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1124
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_70",
+        "retrieval_score": 0.84092766,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_70",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1504
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_35",
+        "retrieval_score": 0.84825623,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_35",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 954
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_19",
+        "retrieval_score": 0.8548206,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_19",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_13",
+        "retrieval_score": 0.8570311,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_13",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 492
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_56",
+        "retrieval_score": 0.8467572,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_56",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1656
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_26",
+        "retrieval_score": 0.83718914,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_26",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 904
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_27",
+        "retrieval_score": 0.84749067,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_27",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 895
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_12",
+        "retrieval_score": 0.85040754,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_12",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 503
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.8533212,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_46",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1351
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.8453974,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_30",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1242
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_23",
+        "retrieval_score": 0.8360471,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_23",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 847
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_79",
+        "retrieval_score": 0.846968,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_79",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1439
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_13",
+        "retrieval_score": 0.8453936,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_13",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 518
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_57",
+        "retrieval_score": 0.8446379,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_57",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1530
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_69",
+        "retrieval_score": 0.8449432,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_69",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1785
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.832767,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_36",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1020
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_45",
+        "retrieval_score": 0.8445581,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_45",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1058
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_18",
+        "retrieval_score": 0.84042186,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_18",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1231
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_27",
+        "retrieval_score": 0.8432548,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_27",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1039
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_63",
+        "retrieval_score": 0.84462,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_63",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1699
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_71",
+        "retrieval_score": 0.8321928,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_71",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1520
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_12",
+        "retrieval_score": 0.8385742,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_12",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 382
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_60",
+        "retrieval_score": 0.83465827,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_60",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1853
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_21",
+        "retrieval_score": 0.8425032,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_21",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 899
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_55",
+        "retrieval_score": 0.8440606,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_55",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1639
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_47",
+        "retrieval_score": 0.8321595,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_47",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1188
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.83702826,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_46",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1085
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_59",
+        "retrieval_score": 0.8337281,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_59",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1849
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_22",
+        "retrieval_score": 0.84107816,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_22",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 931
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_65",
+        "retrieval_score": 0.8387384,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_65",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1707
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_24",
+        "retrieval_score": 0.83146477,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_24",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 858
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_28",
+        "retrieval_score": 0.8363006,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_28",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 899
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DIG_financial_statements_2016_consolidated_table_71",
+        "retrieval_score": 0.8330494,
+        "metadata": {
+          "table_id": "DIG_financial_statements_2016_consolidated_table_71",
+          "doc_id": "DIG_financial_statements_2016_consolidated",
+          "ticker": "DIG",
+          "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1984
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "KBC_financial_statements_2016_consolidated_table_29",
+        "retrieval_score": 0.8406329,
+        "metadata": {
+          "table_id": "KBC_financial_statements_2016_consolidated_table_29",
+          "doc_id": "KBC_financial_statements_2016_consolidated",
+          "ticker": "KBC",
+          "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "IJC_financial_statements_2016_consolidated_table_67",
+        "retrieval_score": 0.83707607,
+        "metadata": {
+          "table_id": "IJC_financial_statements_2016_consolidated_table_67",
+          "doc_id": "IJC_financial_statements_2016_consolidated",
+          "ticker": "IJC",
+          "company_name": "CTCP Phát triển Hạ tầng Kỹ thuật",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1734
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "SCR_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.8308694,
+        "metadata": {
+          "table_id": "SCR_financial_statements_2016_consolidated_table_46",
+          "doc_id": "SCR_financial_statements_2016_consolidated",
+          "ticker": "SCR",
+          "company_name": "CTCP Địa ốc Sài Gòn Thương Tín",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1184
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DXG_financial_statements_2016_consolidated_table_81",
+        "retrieval_score": 0.83557,
+        "metadata": {
+          "table_id": "DXG_financial_statements_2016_consolidated_table_81",
+          "doc_id": "DXG_financial_statements_2016_consolidated",
+          "ticker": "DXG",
+          "company_name": "CTCP Bluemarq Group",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1458
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "IJC_financial_statements_2016_consolidated",
+            "SCR_financial_statements_2016_consolidated",
+            "DXG_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2016_consolidated|1359",
+            "KBC_financial_statements_2016_consolidated|351",
+            "IJC_financial_statements_2016_consolidated|1791",
+            "SCR_financial_statements_2016_consolidated|298",
+            "DXG_financial_statements_2016_consolidated|27"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "IJC_financial_statements_2016_consolidated",
+            "SCR_financial_statements_2016_consolidated",
+            "DXG_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2016_consolidated|1359",
+            "KBC_financial_statements_2016_consolidated|351",
+            "IJC_financial_statements_2016_consolidated|1791",
+            "SCR_financial_statements_2016_consolidated|298",
+            "DXG_financial_statements_2016_consolidated|27",
+            "DIG_financial_statements_2016_consolidated|1457",
+            "KBC_financial_statements_2016_consolidated|1162",
+            "IJC_financial_statements_2016_consolidated|1825",
+            "SCR_financial_statements_2016_consolidated|1524",
+            "DXG_financial_statements_2016_consolidated|398"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "IJC_financial_statements_2016_consolidated",
+            "SCR_financial_statements_2016_consolidated",
+            "DXG_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2016_consolidated|1359",
+            "KBC_financial_statements_2016_consolidated|351",
+            "IJC_financial_statements_2016_consolidated|1791",
+            "SCR_financial_statements_2016_consolidated|298",
+            "DXG_financial_statements_2016_consolidated|27",
+            "DIG_financial_statements_2016_consolidated|1457",
+            "KBC_financial_statements_2016_consolidated|1162",
+            "IJC_financial_statements_2016_consolidated|1825",
+            "SCR_financial_statements_2016_consolidated|1524",
+            "DXG_financial_statements_2016_consolidated|398",
+            "DIG_financial_statements_2016_consolidated|1972",
+            "KBC_financial_statements_2016_consolidated|1010",
+            "IJC_financial_statements_2016_consolidated|1124",
+            "SCR_financial_statements_2016_consolidated|1504",
+            "DXG_financial_statements_2016_consolidated|954",
+            "DIG_financial_statements_2016_consolidated|1249",
+            "KBC_financial_statements_2016_consolidated|492",
+            "IJC_financial_statements_2016_consolidated|1656",
+            "SCR_financial_statements_2016_consolidated|904",
+            "DXG_financial_statements_2016_consolidated|895"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DIG_financial_statements_2016_consolidated",
+            "KBC_financial_statements_2016_consolidated",
+            "IJC_financial_statements_2016_consolidated",
+            "SCR_financial_statements_2016_consolidated",
+            "DXG_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "DIG_financial_statements_2016_consolidated|1359",
+            "KBC_financial_statements_2016_consolidated|351",
+            "IJC_financial_statements_2016_consolidated|1791",
+            "SCR_financial_statements_2016_consolidated|298",
+            "DXG_financial_statements_2016_consolidated|27",
+            "DIG_financial_statements_2016_consolidated|1457",
+            "KBC_financial_statements_2016_consolidated|1162",
+            "IJC_financial_statements_2016_consolidated|1825",
+            "SCR_financial_statements_2016_consolidated|1524",
+            "DXG_financial_statements_2016_consolidated|398",
+            "DIG_financial_statements_2016_consolidated|1972",
+            "KBC_financial_statements_2016_consolidated|1010",
+            "IJC_financial_statements_2016_consolidated|1124",
+            "SCR_financial_statements_2016_consolidated|1504",
+            "DXG_financial_statements_2016_consolidated|954",
+            "DIG_financial_statements_2016_consolidated|1249",
+            "KBC_financial_statements_2016_consolidated|492",
+            "IJC_financial_statements_2016_consolidated|1656",
+            "SCR_financial_statements_2016_consolidated|904",
+            "DXG_financial_statements_2016_consolidated|895",
+            "DIG_financial_statements_2016_consolidated|503",
+            "KBC_financial_statements_2016_consolidated|1351",
+            "IJC_financial_statements_2016_consolidated|1242",
+            "SCR_financial_statements_2016_consolidated|847",
+            "DXG_financial_statements_2016_consolidated|1439",
+            "DIG_financial_statements_2016_consolidated|518",
+            "KBC_financial_statements_2016_consolidated|1530",
+            "IJC_financial_statements_2016_consolidated|1785",
+            "SCR_financial_statements_2016_consolidated|1020",
+            "DXG_financial_statements_2016_consolidated|1058",
+            "DIG_financial_statements_2016_consolidated|1231",
+            "KBC_financial_statements_2016_consolidated|1039",
+            "IJC_financial_statements_2016_consolidated|1699",
+            "SCR_financial_statements_2016_consolidated|1520",
+            "DXG_financial_statements_2016_consolidated|382",
+            "DIG_financial_statements_2016_consolidated|1853",
+            "KBC_financial_statements_2016_consolidated|899",
+            "IJC_financial_statements_2016_consolidated|1639",
+            "SCR_financial_statements_2016_consolidated|1188",
+            "DXG_financial_statements_2016_consolidated|1085",
+            "DIG_financial_statements_2016_consolidated|1849",
+            "KBC_financial_statements_2016_consolidated|931",
+            "IJC_financial_statements_2016_consolidated|1707",
+            "SCR_financial_statements_2016_consolidated|858",
+            "DXG_financial_statements_2016_consolidated|899",
+            "DIG_financial_statements_2016_consolidated|1984",
+            "KBC_financial_statements_2016_consolidated|1118",
+            "IJC_financial_statements_2016_consolidated|1734",
+            "SCR_financial_statements_2016_consolidated|1184",
+            "DXG_financial_statements_2016_consolidated|1458"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

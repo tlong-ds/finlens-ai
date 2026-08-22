@@ -1,0 +1,1058 @@
+{
+  "schema_version": 1,
+  "id": 130,
+  "question": "Tổng doanh thu thuần năm 2024 của CTCP Tập đoàn Dabaco Việt Nam là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T13:38:48+00:00",
+  "finished_at": "2026-08-22T13:38:49+00:00",
+  "duration_seconds": 0.32969747799506877,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DBC_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "DBC_financial_statements_2024_consolidated|1627"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tổng doanh thu thuần nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DBC",
+        "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+        "matched_text": "CTCP Tập đoàn Dabaco Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "semantic",
+    "query_text": "Tổng doanh thu thuần nghìn tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DBC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DBC"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_23",
+        "retrieval_score": 0.82365805,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_23",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1042
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_13",
+        "retrieval_score": 0.8228887,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_13",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 491
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_12",
+        "retrieval_score": 0.82286114,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_12",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 472
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_64",
+        "retrieval_score": 0.82215935,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_64",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1647
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_14",
+        "retrieval_score": 0.82167864,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_14",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 510
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_47",
+        "retrieval_score": 0.8210452,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_47",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1392
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_55",
+        "retrieval_score": 0.8173366,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_55",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1481
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_116",
+        "retrieval_score": 0.81558925,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_116",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3041
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_127",
+        "retrieval_score": 0.8151365,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_127",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3205
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_20",
+        "retrieval_score": 0.81506264,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_20",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1011
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_8",
+        "retrieval_score": 0.8142587,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_8",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 358
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_119",
+        "retrieval_score": 0.81355,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_119",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3089
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_53",
+        "retrieval_score": 0.8132692,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_53",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1442
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_112",
+        "retrieval_score": 0.8126537,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_112",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3014
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_22",
+        "retrieval_score": 0.8120134,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_22",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1021
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_120",
+        "retrieval_score": 0.8119546,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_120",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3093
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_59",
+        "retrieval_score": 0.81161416,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_59",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1570
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_113",
+        "retrieval_score": 0.81098807,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_113",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3029
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_42",
+        "retrieval_score": 0.8105232,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_42",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1333
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_77",
+        "retrieval_score": 0.8089962,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_77",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2127
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_115",
+        "retrieval_score": 0.8086275,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_115",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3037
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_29",
+        "retrieval_score": 0.80713433,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_29",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1135
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_30",
+        "retrieval_score": 0.8070247,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_30",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1151
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_32",
+        "retrieval_score": 0.8067778,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_32",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1174
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_54",
+        "retrieval_score": 0.80665123,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_54",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1477
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_34",
+        "retrieval_score": 0.80661315,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_34",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1199
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_52",
+        "retrieval_score": 0.8060363,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_52",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_58",
+        "retrieval_score": 0.8059737,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_58",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1547
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_51",
+        "retrieval_score": 0.80590254,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_51",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_118",
+        "retrieval_score": 0.8058579,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_118",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3058
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.805465,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_11",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 453
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_117",
+        "retrieval_score": 0.80525213,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_117",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 3054
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_101",
+        "retrieval_score": 0.8049534,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_101",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2842
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_61",
+        "retrieval_score": 0.80479926,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_61",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1580
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_45",
+        "retrieval_score": 0.8042296,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_45",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1376
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_57",
+        "retrieval_score": 0.80421716,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_57",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1541
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_97",
+        "retrieval_score": 0.8038505,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_97",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2813
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_28",
+        "retrieval_score": 0.8038337,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_28",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1114
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_19",
+        "retrieval_score": 0.8034998,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_19",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 988
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_49",
+        "retrieval_score": 0.80331504,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_49",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1413
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_26",
+        "retrieval_score": 0.8032393,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_26",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1085
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_48",
+        "retrieval_score": 0.8021091,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_48",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1409
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_63",
+        "retrieval_score": 0.8011167,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_63",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 1627
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_36",
+        "retrieval_score": 0.80010676,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_36",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1207
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_74",
+        "retrieval_score": 0.79947144,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_74",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2035
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_31",
+        "retrieval_score": 0.7988146,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_31",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1168
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_44",
+        "retrieval_score": 0.79875946,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_44",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1353
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_21",
+        "retrieval_score": 0.7982138,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_21",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1015
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_70",
+        "retrieval_score": 0.7980695,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_70",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1837
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DBC_financial_statements_2024_consolidated_table_87",
+        "retrieval_score": 0.797654,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2024_consolidated_table_87",
+          "doc_id": "DBC_financial_statements_2024_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 2663
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2024_consolidated|1042",
+            "DBC_financial_statements_2024_consolidated|491",
+            "DBC_financial_statements_2024_consolidated|472",
+            "DBC_financial_statements_2024_consolidated|1647",
+            "DBC_financial_statements_2024_consolidated|510"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2024_consolidated|1042",
+            "DBC_financial_statements_2024_consolidated|491",
+            "DBC_financial_statements_2024_consolidated|472",
+            "DBC_financial_statements_2024_consolidated|1647",
+            "DBC_financial_statements_2024_consolidated|510",
+            "DBC_financial_statements_2024_consolidated|1392",
+            "DBC_financial_statements_2024_consolidated|1481",
+            "DBC_financial_statements_2024_consolidated|3041",
+            "DBC_financial_statements_2024_consolidated|3205",
+            "DBC_financial_statements_2024_consolidated|1011"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2024_consolidated|1042",
+            "DBC_financial_statements_2024_consolidated|491",
+            "DBC_financial_statements_2024_consolidated|472",
+            "DBC_financial_statements_2024_consolidated|1647",
+            "DBC_financial_statements_2024_consolidated|510",
+            "DBC_financial_statements_2024_consolidated|1392",
+            "DBC_financial_statements_2024_consolidated|1481",
+            "DBC_financial_statements_2024_consolidated|3041",
+            "DBC_financial_statements_2024_consolidated|3205",
+            "DBC_financial_statements_2024_consolidated|1011",
+            "DBC_financial_statements_2024_consolidated|358",
+            "DBC_financial_statements_2024_consolidated|3089",
+            "DBC_financial_statements_2024_consolidated|1442",
+            "DBC_financial_statements_2024_consolidated|3014",
+            "DBC_financial_statements_2024_consolidated|1021",
+            "DBC_financial_statements_2024_consolidated|3093",
+            "DBC_financial_statements_2024_consolidated|1570",
+            "DBC_financial_statements_2024_consolidated|3029",
+            "DBC_financial_statements_2024_consolidated|1333",
+            "DBC_financial_statements_2024_consolidated|2127"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2024_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2024_consolidated|1042",
+            "DBC_financial_statements_2024_consolidated|491",
+            "DBC_financial_statements_2024_consolidated|472",
+            "DBC_financial_statements_2024_consolidated|1647",
+            "DBC_financial_statements_2024_consolidated|510",
+            "DBC_financial_statements_2024_consolidated|1392",
+            "DBC_financial_statements_2024_consolidated|1481",
+            "DBC_financial_statements_2024_consolidated|3041",
+            "DBC_financial_statements_2024_consolidated|3205",
+            "DBC_financial_statements_2024_consolidated|1011",
+            "DBC_financial_statements_2024_consolidated|358",
+            "DBC_financial_statements_2024_consolidated|3089",
+            "DBC_financial_statements_2024_consolidated|1442",
+            "DBC_financial_statements_2024_consolidated|3014",
+            "DBC_financial_statements_2024_consolidated|1021",
+            "DBC_financial_statements_2024_consolidated|3093",
+            "DBC_financial_statements_2024_consolidated|1570",
+            "DBC_financial_statements_2024_consolidated|3029",
+            "DBC_financial_statements_2024_consolidated|1333",
+            "DBC_financial_statements_2024_consolidated|2127",
+            "DBC_financial_statements_2024_consolidated|3037",
+            "DBC_financial_statements_2024_consolidated|1135",
+            "DBC_financial_statements_2024_consolidated|1151",
+            "DBC_financial_statements_2024_consolidated|1174",
+            "DBC_financial_statements_2024_consolidated|1477",
+            "DBC_financial_statements_2024_consolidated|1199",
+            "DBC_financial_statements_2024_consolidated|1438",
+            "DBC_financial_statements_2024_consolidated|1547",
+            "DBC_financial_statements_2024_consolidated|1421",
+            "DBC_financial_statements_2024_consolidated|3058",
+            "DBC_financial_statements_2024_consolidated|453",
+            "DBC_financial_statements_2024_consolidated|3054",
+            "DBC_financial_statements_2024_consolidated|2842",
+            "DBC_financial_statements_2024_consolidated|1580",
+            "DBC_financial_statements_2024_consolidated|1376",
+            "DBC_financial_statements_2024_consolidated|1541",
+            "DBC_financial_statements_2024_consolidated|2813",
+            "DBC_financial_statements_2024_consolidated|1114",
+            "DBC_financial_statements_2024_consolidated|988",
+            "DBC_financial_statements_2024_consolidated|1413",
+            "DBC_financial_statements_2024_consolidated|1085",
+            "DBC_financial_statements_2024_consolidated|1409",
+            "DBC_financial_statements_2024_consolidated|1627",
+            "DBC_financial_statements_2024_consolidated|1207",
+            "DBC_financial_statements_2024_consolidated|2035",
+            "DBC_financial_statements_2024_consolidated|1168",
+            "DBC_financial_statements_2024_consolidated|1353",
+            "DBC_financial_statements_2024_consolidated|1015",
+            "DBC_financial_statements_2024_consolidated|1837",
+            "DBC_financial_statements_2024_consolidated|2663"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,6208 @@
+{
+  "schema_version": 1,
+  "id": 621,
+  "question": "Chênh lệch chi phí nhiên liệu của công ty mẹ CTCP Hàng không Vietjet giữa năm 2024 và năm 2021 là mấy nghìn tỷ đồng?",
+  "started_at": "2026-08-22T14:14:31+00:00",
+  "finished_at": "2026-08-22T14:14:41+00:00",
+  "duration_seconds": 9.979679320007563,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-03/artifacts/questions/621.json",
+  "golden": {
+    "id": 621,
+    "question": "Chênh lệch chi phí nhiên liệu của công ty mẹ CTCP Hàng không Vietjet giữa năm 2024 và năm 2021 là mấy nghìn tỷ đồng?",
+    "relevant_docs": [
+      "VJC_financial_statements_2024_separate",
+      "VJC_financial_statements_2021_separate"
+    ],
+    "relevant_tables": [
+      "VJC_financial_statements_2024_separate|1719",
+      "VJC_financial_statements_2021_separate|1384"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_64",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_64",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1719
+      },
+      "retrieval_score": 0.863626,
+      "dense_rank": 1
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_74",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_74",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1532
+      },
+      "retrieval_score": 0.82855463,
+      "dense_rank": 2
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_56",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_56",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1384
+      },
+      "retrieval_score": 0.82473826,
+      "dense_rank": 3
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_57",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_57",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1662
+      },
+      "retrieval_score": 0.8238693,
+      "dense_rank": 4
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_4",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_4",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 159
+      },
+      "retrieval_score": 0.81852305,
+      "dense_rank": 5
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_73",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_73",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1528
+      },
+      "retrieval_score": 0.81763536,
+      "dense_rank": 6
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_84",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_84",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1600
+      },
+      "retrieval_score": 0.81646276,
+      "dense_rank": 7
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_68",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_68",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1857
+      },
+      "retrieval_score": 0.8153423,
+      "dense_rank": 8
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_61",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_61",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1696
+      },
+      "retrieval_score": 0.81394553,
+      "dense_rank": 9
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_35",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_35",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1333
+      },
+      "retrieval_score": 0.811162,
+      "dense_rank": 10
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_6",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_6",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2024,
+        "start_line": 275
+      },
+      "retrieval_score": 0.81097186,
+      "dense_rank": 11
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_70",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_70",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1893
+      },
+      "retrieval_score": 0.8093978,
+      "dense_rank": 12
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_71",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_71",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1910
+      },
+      "retrieval_score": 0.8089284,
+      "dense_rank": 13
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_25",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_25",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1227
+      },
+      "retrieval_score": 0.80788696,
+      "dense_rank": 14
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_26",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_26",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1064
+      },
+      "retrieval_score": 0.8078237,
+      "dense_rank": 15
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_60",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_60",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1683
+      },
+      "retrieval_score": 0.80756766,
+      "dense_rank": 16
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_67",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_67",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1840
+      },
+      "retrieval_score": 0.8073509,
+      "dense_rank": 17
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_30",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_30",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1282
+      },
+      "retrieval_score": 0.80520433,
+      "dense_rank": 18
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_48",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_48",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1310
+      },
+      "retrieval_score": 0.8050852,
+      "dense_rank": 19
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_59",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_59",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1679
+      },
+      "retrieval_score": 0.8040389,
+      "dense_rank": 20
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_37",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_37",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1350
+      },
+      "retrieval_score": 0.80338573,
+      "dense_rank": 21
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_66",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_66",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1823
+      },
+      "retrieval_score": 0.8027107,
+      "dense_rank": 22
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_26",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_26",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1242
+      },
+      "retrieval_score": 0.8004123,
+      "dense_rank": 23
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_47",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_47",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1549
+      },
+      "retrieval_score": 0.79918605,
+      "dense_rank": 24
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_50",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_50",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1329
+      },
+      "retrieval_score": 0.7984453,
+      "dense_rank": 25
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_31",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_31",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1116
+      },
+      "retrieval_score": 0.7984366,
+      "dense_rank": 26
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_5",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_5",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2024,
+        "start_line": 260
+      },
+      "retrieval_score": 0.79800767,
+      "dense_rank": 27
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_19",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_19",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1130
+      },
+      "retrieval_score": 0.79754883,
+      "dense_rank": 28
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_27",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_27",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1068
+      },
+      "retrieval_score": 0.7970244,
+      "dense_rank": 29
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_24",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_24",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1030
+      },
+      "retrieval_score": 0.7969846,
+      "dense_rank": 30
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_3",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_3",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 145
+      },
+      "retrieval_score": 0.7964923,
+      "dense_rank": 31
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_51",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_51",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1342
+      },
+      "retrieval_score": 0.7963507,
+      "dense_rank": 32
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_25",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_25",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1049
+      },
+      "retrieval_score": 0.7961029,
+      "dense_rank": 33
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_33",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_33",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1124
+      },
+      "retrieval_score": 0.7960753,
+      "dense_rank": 34
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_30",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_30",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1105
+      },
+      "retrieval_score": 0.7960566,
+      "dense_rank": 35
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_46",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_46",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1541
+      },
+      "retrieval_score": 0.79532564,
+      "dense_rank": 36
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_23",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_23",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1021
+      },
+      "retrieval_score": 0.79523724,
+      "dense_rank": 37
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_5",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_5",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 174
+      },
+      "retrieval_score": 0.7948655,
+      "dense_rank": 38
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_71",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_71",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1518
+      },
+      "retrieval_score": 0.79480493,
+      "dense_rank": 39
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_28",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_28",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1272
+      },
+      "retrieval_score": 0.79479766,
+      "dense_rank": 40
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_28",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_28",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1079
+      },
+      "retrieval_score": 0.7939593,
+      "dense_rank": 41
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_67",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_67",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1489
+      },
+      "retrieval_score": 0.79395515,
+      "dense_rank": 42
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_65",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_65",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1481
+      },
+      "retrieval_score": 0.79395515,
+      "dense_rank": 43
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_53",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_53",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1622
+      },
+      "retrieval_score": 0.7933,
+      "dense_rank": 44
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_8",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_8",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2021,
+        "start_line": 236
+      },
+      "retrieval_score": 0.7932329,
+      "dense_rank": 45
+    },
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_63",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_63",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1704
+      },
+      "retrieval_score": 0.79322803,
+      "dense_rank": 46
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_86",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_86",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1625
+      },
+      "retrieval_score": 0.7929419,
+      "dense_rank": 47
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_22",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_22",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1006
+      },
+      "retrieval_score": 0.7925047,
+      "dense_rank": 48
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_14",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_14",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 918
+      },
+      "retrieval_score": 0.7924774,
+      "dense_rank": 49
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_85",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_85",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1615
+      },
+      "retrieval_score": 0.792431,
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "year": 2024,
+        "report_type": "separate"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "year": 2021,
+        "report_type": "separate"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_64",
+        "table_ref": "VJC_financial_statements_2024_separate|1719",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_74",
+        "table_ref": "VJC_financial_statements_2021_separate|1532",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_56",
+        "table_ref": "VJC_financial_statements_2021_separate|1384",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_26",
+        "table_ref": "VJC_financial_statements_2021_separate|1064",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_60",
+        "table_ref": "VJC_financial_statements_2024_separate|1683",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_57",
+        "table_ref": "VJC_financial_statements_2024_separate|1662",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_6",
+        "table_ref": "VJC_financial_statements_2024_separate|275",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 11
+      },
+      "c08": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_4",
+        "table_ref": "VJC_financial_statements_2021_separate|159",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 5
+      },
+      "c09": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_8",
+        "table_ref": "VJC_financial_statements_2021_separate|236",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 45
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_68",
+        "table_ref": "VJC_financial_statements_2024_separate|1857",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c11": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_73",
+        "table_ref": "VJC_financial_statements_2021_separate|1528",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_61",
+        "table_ref": "VJC_financial_statements_2024_separate|1696",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c13": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_84",
+        "table_ref": "VJC_financial_statements_2021_separate|1600",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_35",
+        "table_ref": "VJC_financial_statements_2024_separate|1333",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c15": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_48",
+        "table_ref": "VJC_financial_statements_2021_separate|1310",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_70",
+        "table_ref": "VJC_financial_statements_2024_separate|1893",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c17": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_50",
+        "table_ref": "VJC_financial_statements_2021_separate|1329",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_71",
+        "table_ref": "VJC_financial_statements_2024_separate|1910",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c19": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_31",
+        "table_ref": "VJC_financial_statements_2021_separate|1116",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_25",
+        "table_ref": "VJC_financial_statements_2024_separate|1227",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c21": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_27",
+        "table_ref": "VJC_financial_statements_2021_separate|1068",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_67",
+        "table_ref": "VJC_financial_statements_2024_separate|1840",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c23": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_24",
+        "table_ref": "VJC_financial_statements_2021_separate|1030",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_30",
+        "table_ref": "VJC_financial_statements_2024_separate|1282",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c25": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_3",
+        "table_ref": "VJC_financial_statements_2021_separate|145",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 31
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_59",
+        "table_ref": "VJC_financial_statements_2024_separate|1679",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c27": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_51",
+        "table_ref": "VJC_financial_statements_2021_separate|1342",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_37",
+        "table_ref": "VJC_financial_statements_2024_separate|1350",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c29": {
+        "bucket_key": "b02",
+        "table_id": "VJC_financial_statements_2021_separate_table_25",
+        "table_ref": "VJC_financial_statements_2021_separate|1049",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2024_separate_table_66",
+        "table_ref": "VJC_financial_statements_2024_separate|1823",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      }
+    },
+    "shortlist_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm_vụ": "Đề cử các bảng có khả năng hỗ trợ ít nhất một toán hạng để final arbiter xem xét.",
+        "câu_hỏi": "Chênh lệch chi phí nhiên liệu của công ty mẹ CTCP Hàng không Vietjet giữa năm 2024 và năm 2021 là mấy nghìn tỷ đồng?",
+        "số_lượng_tối_đa": 8,
+        "candidates": [
+          {
+            "candidate_key": "c01",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 1,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 2,
+                    "label": "Chi phí nhiên liệu",
+                    "overlap_tokens": 4
+                  }
+                ],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí thuê",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí nhân viên",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí khấu hao TSCD",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 7,
+                    "label": "Chi phí dịch vụ mua ngoài và chi phí khác",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí nhiên liệu"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí thuê"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí nhân viên"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí khấu hao TSCD"
+                },
+                {
+                  "row": 6,
+                  "label": "Dự phòng nợ phải thu khó đòi"
+                },
+                {
+                  "row": 7,
+                  "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí nhiên liệu",
+                    "23858693067798.0",
+                    "21242888445391.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí thuê",
+                    "12298187559168.0",
+                    "11309389228537.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí nhân viên",
+                    "5244715314606.0",
+                    "4738908749138.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí khấu hao TSCD",
+                    "604181815575.0",
+                    "407519822055.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Dự phòng nợ phải thu khó đòi",
+                    "78778440000.0",
+                    "",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Chi phí dịch vụ mua ngoài và chi phí khác",
+                    "18571244237889.0",
+                    "14467296693632.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "60655800435036.0",
+                    "52166002938753.0",
+                    "35",
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c06",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 4,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 7,
+                    "label": "Chi phí dịch vụ vận chuyển hàng hoá",
+                    "overlap_tokens": 3
+                  },
+                  {
+                    "row": 3,
+                    "label": "Chi phí khối kỹ thuật",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí khối khai thác bay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí khối dịch vụ và khai thác mặt đất",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 6,
+                    "label": "Chi phí khối an toàn, an ninh và đảm bảo chất lượng bay",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                ]
+              },
+              "table_titles": [
+                "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 9,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí khối khai thác bay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí khối kỹ thuật"
+                },
+                {
+                  "row": 4,
+                  "label": "Giá vốn từ chuyển quyền sở hữu tàu bay và động cơ"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí khối dịch vụ và khai thác mặt đất"
+                },
+                {
+                  "row": 6,
+                  "label": "Chi phí khối an toàn, an ninh và đảm bảo chất lượng bay"
+                },
+                {
+                  "row": 7,
+                  "label": "Chi phí dịch vụ vận chuyển hàng hoá"
+                },
+                {
+                  "row": 8,
+                  "label": "Giá vốn từ bán vật tư kỹ thuật"
+                },
+                {
+                  "row": 9,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí khối khai thác bay",
+                    "42012336587323.0",
+                    "36915375607586.0",
+                    "28",
+                    "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí khối kỹ thuật",
+                    "7871727977678.0",
+                    "6477531877691.0",
+                    "28",
+                    "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Giá vốn từ chuyển quyền sở hữu tàu bay và động cơ",
+                    "7627350605960.0",
+                    "1829872744535.0",
+                    "28",
+                    "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí khối dịch vụ và khai thác mặt đất",
+                    "5776126778945.0",
+                    "4498748072090.0",
+                    "28",
+                    "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Chi phí khối an toàn, an ninh và đảm bảo chất lượng bay",
+                    "526291278544.0",
+                    "473919763238.0",
+                    "28",
+                    "GIÁ VỐN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c10",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 8,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "1 BÊN LIÊN QUAN (TIẾP)"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 21,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Công ty Cổ phần Phục vụ Mặt đất Sài Gòn"
+                },
+                {
+                  "row": 3,
+                  "label": "7.652.055.000"
+                },
+                {
+                  "row": 4,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 5,
+                  "label": "Công ty TNHH Victoria Academy"
+                },
+                {
+                  "row": 6,
+                  "label": "1.007.328.200.000"
+                },
+                {
+                  "row": 7,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 8,
+                  "label": "-"
+                },
+                {
+                  "row": 9,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd."
+                },
+                {
+                  "row": 10,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 11,
+                  "label": "427.715.377.371"
+                },
+                {
+                  "row": 12,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 13,
+                  "label": "Công ty Cổ phần Bắt động sản Dragon Village"
+                },
+                {
+                  "row": 14,
+                  "label": "-"
+                },
+                {
+                  "row": 15,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 16,
+                  "label": "1.146.291.475.201"
+                },
+                {
+                  "row": 17,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 18,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 19,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd"
+                },
+                {
+                  "row": 20,
+                  "label": "Công ty Cổ phần Nhà ga Quốc tế Cam Ranh"
+                },
+                {
+                  "row": 21,
+                  "label": "Đối tượng khác"
+                },
+                {
+                  "row": 22,
+                  "label": "993.555.555.953"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 3,
+                  "cells": [
+                    "7.652.055.000",
+                    "7652055000.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Vietjet Air IVB No.I Limited",
+                    "628828200000.0",
+                    "1209264000000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Công ty TNHH Victoria Academy",
+                    "378500000000.0",
+                    "608400000000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "1.007.328.200.000",
+                    "1817664000000.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Vietjet Air IVB No.I Limited",
+                    "",
+                    "613600000000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "-",
+                    "613600000000.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 9,
+                  "cells": [
+                    "Thai Vietjet Air Joint Stock Co., Ltd.",
+                    "419137724739.0",
+                    "302113830681.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh",
+                    "8577652632.0",
+                    "5408904110.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c14",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 10,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí lãi vay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí công cụ kỹ thuật, chi phí liên quan đến tàu bay và khai thác bay",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí công cụ kỹ thuật, chi phí liên quan đến tàu bay và khai thác bay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí lãi vay"
+                },
+                {
+                  "row": 4,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí công cụ kỹ thuật, chi phí liên quan đến tàu bay và khai thác bay",
+                    "1755410528775.0",
+                    "995616357198.0",
+                    "19",
+                    "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí lãi vay",
+                    "409021643487.0",
+                    "400206698175.0",
+                    "19",
+                    "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Khác",
+                    "243981912975.0",
+                    "473313880275.0",
+                    "19",
+                    "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "2408414085237.0",
+                    "1869136935648.0",
+                    "19",
+                    "CHI PHÍ PHẢI TRẢ NGẮN HẠN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c18",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 13,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "1 BÊN LIÊN QUAN (TIÉP)"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 19,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 3,
+                  "label": "Công ty TNHH Victoria Academy"
+                },
+                {
+                  "row": 4,
+                  "label": "Công ty TNHH Capital One Financial Consultant Corp"
+                },
+                {
+                  "row": 6,
+                  "label": "Ban Điều hành (**)"
+                },
+                {
+                  "row": 7,
+                  "label": "Ban Quản lý cấp cao (**)"
+                },
+                {
+                  "row": 9,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 10,
+                  "label": "Khác"
+                },
+                {
+                  "row": 12,
+                  "label": "Công ty cổ phần Vietjet Air Cargo"
+                },
+                {
+                  "row": 13,
+                  "label": "Vietjet Air Ireland No. 1 Limited"
+                },
+                {
+                  "row": 14,
+                  "label": "AAA Golden Aircraft Star No.5 Limited"
+                },
+                {
+                  "row": 16,
+                  "label": "Công ty Cổ phần Phục vụ Mặt đất Sài Gòn"
+                },
+                {
+                  "row": 17,
+                  "label": "Công ty Cổ phần Nhà ga Quốc tế Cam Ranh"
+                },
+                {
+                  "row": 18,
+                  "label": "Công ty TNHH Bảo hiểm HD"
+                },
+                {
+                  "row": 19,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh",
+                    "2881297882859.0",
+                    "3300425512901.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Công ty TNHH Victoria Academy",
+                    "90000000000.0",
+                    "45000000000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 11,
+                  "cells": [
+                    "",
+                    "269239966561.0",
+                    "405333580319.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 12,
+                  "cells": [
+                    "Công ty cổ phần Vietjet Air Cargo",
+                    "5000000000.0",
+                    "5450000000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 13,
+                  "cells": [
+                    "Vietjet Air Ireland No. 1 Limited",
+                    "574329646863.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 14,
+                  "cells": [
+                    "AAA Golden Aircraft Star No.5 Limited",
+                    "201855068402.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c22",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 17,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "1 BÊN LIÊN QUAN (TIẾP)"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 21,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Công ty Cổ phần Phục vụ Mặt đất Sài Gòn"
+                },
+                {
+                  "row": 3,
+                  "label": "Công ty TNHH Bảo hiểm HD"
+                },
+                {
+                  "row": 4,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 5,
+                  "label": "Đối tượng khác"
+                },
+                {
+                  "row": 7,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 8,
+                  "label": "Khác"
+                },
+                {
+                  "row": 10,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 11,
+                  "label": "Khác"
+                },
+                {
+                  "row": 13,
+                  "label": "Gửi tiền"
+                },
+                {
+                  "row": 14,
+                  "label": "Thu hồi tiền gửi"
+                },
+                {
+                  "row": 15,
+                  "label": "Công ty TNHH Victoria Academy"
+                },
+                {
+                  "row": 17,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 18,
+                  "label": "Công ty TNHH Victoria Academy"
+                },
+                {
+                  "row": 19,
+                  "label": "Công ty TNHH Capital One Financial Consultant Corp"
+                },
+                {
+                  "row": 21,
+                  "label": "Công ty Cổ phần Tập đoàn Sovico"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 3,
+                  "cells": [
+                    "Công ty TNHH Bảo hiểm HD",
+                    "171389981200.0",
+                    "173326580717.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Vietjet Air IVB No.I Limited",
+                    "522884723303.0",
+                    "115122729000.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Đối tượng khác",
+                    "322728055499.0",
+                    "66299418471.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "",
+                    "1407071362206.0",
+                    "738556108338.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh",
+                    "18622079067078.0",
+                    "14379372547496.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "Khác",
+                    "90000000000.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 9,
+                  "cells": [
+                    "",
+                    "18712079067078.0",
+                    "14379372547496.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh",
+                    "19041206697120.0",
+                    "14087057612572.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                },
+                {
+                  "row": 11,
+                  "cells": [
+                    "Khác",
+                    "20000000000.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIẾP)"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c26",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 20,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 4,
+                    "label": "Chi phí phát hành trái phiếu",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ TÀI CHÍNH"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ TÀI CHÍNH"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Lãi tiền vay và lãi nợ thuê tài chính"
+                },
+                {
+                  "row": 3,
+                  "label": "Lãi trả chậm"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí phát hành trái phiếu"
+                },
+                {
+                  "row": 5,
+                  "label": "(Hoàn nhập) chỉ phí tài chính đầu tư tàu bay"
+                },
+                {
+                  "row": 6,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Lãi tiền vay và lãi nợ thuê tài chính",
+                    "3113326005568.0",
+                    "1916506531262.0",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Lãi trả chậm",
+                    "576487058059.0",
+                    "224214058813.0",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí phát hành trái phiếu",
+                    "98626989407.0",
+                    "33747664602.0",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "(Hoàn nhập) chỉ phí tài chính đầu tư tàu bay",
+                    "-825568768014.0",
+                    "",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Khác",
+                    "83301555872.0",
+                    "31826413901.0",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "",
+                    "3435122944453.0",
+                    "2221085747638.0",
+                    "30",
+                    "CHI PHÍ TÀI CHÍNH"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c30",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 22,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "1 BÊN LIÊN QUAN (TIÉP)"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 25,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Vietjet Air Ireland No.1 Limited"
+                },
+                {
+                  "row": 3,
+                  "label": "AAA Golden Aircraft Star No.5 Limited"
+                },
+                {
+                  "row": 4,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd."
+                },
+                {
+                  "row": 6,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 7,
+                  "label": "Công ty Cổ phần Swift 247"
+                },
+                {
+                  "row": 9,
+                  "label": "Công ty Cổ phần Swift 247"
+                },
+                {
+                  "row": 11,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 12,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 14,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 16,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd."
+                },
+                {
+                  "row": 17,
+                  "label": "Công ty TNHH Bảo hiểm HD"
+                },
+                {
+                  "row": 18,
+                  "label": "Công ty TNHH Victoria Academy"
+                },
+                {
+                  "row": 19,
+                  "label": "Khác"
+                },
+                {
+                  "row": 21,
+                  "label": "Apricot Aircraft Assets Limited"
+                },
+                {
+                  "row": 22,
+                  "label": "AAA Golden Aircraft Star No.5 Limited"
+                },
+                {
+                  "row": 23,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 24,
+                  "label": "Apricot Holding Limited"
+                },
+                {
+                  "row": 25,
+                  "label": "Công ty TNHH Victoria Academy"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Vietjet Air Ireland No.1 Limited",
+                    "1322069428802.0",
+                    "1252194664743.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "AAA Golden Aircraft Star No.5 Limited",
+                    "485003850778.0",
+                    "408421143112.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Thai Vietjet Air Joint Stock Co., Ltd.",
+                    "",
+                    "48186762126.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "1807073279580.0",
+                    "1708802569981.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Vietjet Air IVB No.I Limited",
+                    "",
+                    "1871539183750.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Công ty Cổ phần Swift 247",
+                    "1985944429362.0",
+                    "1293077597363.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c03",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 3,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 2,
+                    "label": "Chi phí nhiên liệu",
+                    "overlap_tokens": 4
+                  }
+                ],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí nhân viên",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí khấu hao TSCĐ",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí dịch vụ mua ngoài và chi phí khác",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí nhiên liệu"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí nhân viên"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí khấu hao TSCĐ"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí nhiên liệu",
+                    "3059363382827.0",
+                    "5545642037649.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí nhân viên",
+                    "1578304136579.0",
+                    "2785929193089.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí khấu hao TSCĐ",
+                    "91115455446.0",
+                    "141250384397.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí dịch vụ mua ngoài và chi phí khác",
+                    "7423852160120.0",
+                    "9864042399431.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "",
+                    "12152635134972.0",
+                    "18336864014566.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c08",
+            "bucket_key": "b02",
+            "table_type": "balance_sheet",
+            "dense_rank": 5,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 22,
+                    "code": "261",
+                    "label": "Chi phí trả trước dài hạn",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 14,
+                    "code": "242",
+                    "label": "Chi phí xây dựng cơ bản dở dang",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 22,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "2021VND",
+                  "label": "2020VND"
+                },
+                {
+                  "row": 3,
+                  "code": "200",
+                  "label": "TÀI SẢN DÀI HẠN"
+                },
+                {
+                  "row": 4,
+                  "code": "210",
+                  "label": "Các khoản phải thu dài hạn"
+                },
+                {
+                  "row": 5,
+                  "code": "216",
+                  "label": "Phải thu dài hạn khác"
+                },
+                {
+                  "row": 6,
+                  "code": "220",
+                  "label": "Tài sản cố định"
+                },
+                {
+                  "row": 7,
+                  "code": "221",
+                  "label": "Tài sản cố định hữu hình"
+                },
+                {
+                  "row": 8,
+                  "code": "222",
+                  "label": "Nguyên giá"
+                },
+                {
+                  "row": 9,
+                  "code": "223",
+                  "label": "Giá trị khấu hao lũy kế"
+                },
+                {
+                  "row": 10,
+                  "code": "227",
+                  "label": "Tài sản cố định vô hình"
+                },
+                {
+                  "row": 11,
+                  "code": "228",
+                  "label": "Nguyên giá"
+                },
+                {
+                  "row": 12,
+                  "code": "229",
+                  "label": "Giá trị khấu hao lũy kế"
+                },
+                {
+                  "row": 13,
+                  "code": "240",
+                  "label": "Tài sản dở dang dài hạn"
+                },
+                {
+                  "row": 14,
+                  "code": "242",
+                  "label": "Chi phí xây dựng cơ bản dở dang"
+                },
+                {
+                  "row": 15,
+                  "code": "250",
+                  "label": "Đầu tư tài chính dài hạn"
+                },
+                {
+                  "row": 16,
+                  "code": "251",
+                  "label": "Đầu tư vào công ty con"
+                },
+                {
+                  "row": 17,
+                  "code": "252",
+                  "label": "Đầu tư vào công ty liên kết"
+                },
+                {
+                  "row": 18,
+                  "code": "253",
+                  "label": "Đầu tư góp vốn vào đơn vị khác"
+                },
+                {
+                  "row": 19,
+                  "code": "254",
+                  "label": "Dự phòng đầu tư tài chính dài hạn"
+                },
+                {
+                  "row": 20,
+                  "code": "255",
+                  "label": "Đầu tư nằm giữ đến ngày đáo hạn"
+                },
+                {
+                  "row": 21,
+                  "code": "260",
+                  "label": "Tài sản dài hạn khác"
+                },
+                {
+                  "row": 22,
+                  "code": "261",
+                  "label": "Chi phí trả trước dài hạn"
+                },
+                {
+                  "row": 23,
+                  "code": "270",
+                  "label": "TỔNG TÀI SẢN"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "2021VND",
+                    "2020VND",
+                    "2020VND",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "200",
+                    "TÀI SẢN DÀI HẠN",
+                    "TÀI SẢN DÀI HẠN",
+                    "",
+                    "23918136563432.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 13,
+                  "cells": [
+                    "240",
+                    "Tài sản dở dang dài hạn",
+                    "Tài sản dở dang dài hạn",
+                    "",
+                    "353832538752.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 14,
+                  "cells": [
+                    "242",
+                    "Chi phí xây dựng cơ bản dở dang",
+                    "Chi phí xây dựng cơ bản dở dang",
+                    "12",
+                    "353832538752.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 15,
+                  "cells": [
+                    "250",
+                    "Đầu tư tài chính dài hạn",
+                    "Đầu tư tài chính dài hạn",
+                    "",
+                    "230917024400.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 21,
+                  "cells": [
+                    "260",
+                    "Tài sản dài hạn khác",
+                    "Tài sản dài hạn khác",
+                    "",
+                    "6085219961667.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 22,
+                  "cells": [
+                    "261",
+                    "Chi phí trả trước dài hạn",
+                    "Chi phí trả trước dài hạn",
+                    "10(b)",
+                    "6085219961667.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 23,
+                  "cells": [
+                    "270",
+                    "TỔNG TÀI SẢN",
+                    "TỔNG TÀI SẢN",
+                    "",
+                    "45941668440606.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c11",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 6,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_index",
+                "row_label_raw",
+                "note_number",
+                "note_title",
+                "value_1_raw",
+                "value_2_raw"
+              ],
+              "row_count": 1,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Cổ đông lớn"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "0",
+                    "Cổ đông lớn",
+                    "",
+                    "",
+                    "-",
+                    "21.504.159.376"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c15",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 19,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021",
+                "2020",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 14,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "USD"
+                },
+                {
+                  "row": 3,
+                  "label": "SGD"
+                },
+                {
+                  "row": 4,
+                  "label": "MYR"
+                },
+                {
+                  "row": 5,
+                  "label": "KRW"
+                },
+                {
+                  "row": 6,
+                  "label": "JPY"
+                },
+                {
+                  "row": 7,
+                  "label": "EUR"
+                },
+                {
+                  "row": 8,
+                  "label": "TWD"
+                },
+                {
+                  "row": 9,
+                  "label": "HKD"
+                },
+                {
+                  "row": 10,
+                  "label": "GBP"
+                },
+                {
+                  "row": 11,
+                  "label": "IDR"
+                },
+                {
+                  "row": 12,
+                  "label": "THB"
+                },
+                {
+                  "row": 13,
+                  "label": "CNY"
+                },
+                {
+                  "row": 14,
+                  "label": "INR"
+                },
+                {
+                  "row": 15,
+                  "label": "MMK"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "USD",
+                    "6489725.0",
+                    "10586270.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "SGD",
+                    "1054978.0",
+                    "852821.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "MYR",
+                    "1135970.0",
+                    "1135970.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "KRW",
+                    "183813624.0",
+                    "229894064.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c19",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 26,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí lãi vay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí bảo trì",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí liên quan đến tàu bay",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 5,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí liên quan đến tàu bay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí lãi vay"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí bảo trì"
+                },
+                {
+                  "row": 5,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí liên quan đến tàu bay",
+                    "533958452256.0",
+                    "551730986548.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí lãi vay",
+                    "296216239953.0",
+                    "57690338836.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí bảo trì",
+                    "32857063597.0",
+                    "156345907814.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Khác",
+                    "46994379009.0",
+                    "86171207159.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "",
+                    "910026134815.0",
+                    "851938440357.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c23",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 30,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "value_1",
+                "value_2",
+                "value_3",
+                "value_4",
+                "value_5",
+                "value_6",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 11,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 3,
+                  "label": "Mua trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Xây dựng cơ bản mới hoàn thành (Thuyết minh 12)"
+                },
+                {
+                  "row": 5,
+                  "label": "Xóa số"
+                },
+                {
+                  "row": 6,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                },
+                {
+                  "row": 7,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 8,
+                  "label": "Khẩu hao trong năm"
+                },
+                {
+                  "row": 9,
+                  "label": "Xóa số"
+                },
+                {
+                  "row": 10,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                },
+                {
+                  "row": 11,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 12,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Tại ngày 1 tháng 1 năm 2021",
+                    "896813994227.0",
+                    "",
+                    "102504743597.0",
+                    "67293981762.0",
+                    "56002812978.0",
+                    "1122615532564.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Mua trong năm",
+                    "",
+                    "",
+                    "",
+                    "3029396300.0",
+                    "695819800.0",
+                    "3725216100.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Xóa số",
+                    "",
+                    "",
+                    "-985409342.0",
+                    "",
+                    "-3031098391.0",
+                    "-4016507733.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Tại ngày 31 tháng 12 năm 2021",
+                    "896813994227.0",
+                    "387463400057.0",
+                    "101519334255.0",
+                    "70323378062.0",
+                    "53667534387.0",
+                    "1509787640988.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Tại ngày 1 tháng 1 năm 2021",
+                    "204945749364.0",
+                    "",
+                    "27821530936.0",
+                    "19754157459.0",
+                    "21609437953.0",
+                    "274130875712.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "Khẩu hao trong năm",
+                    "44877940212.0",
+                    "18172790992.0",
+                    "15601287929.0",
+                    "7435632895.0",
+                    "4102482212.0",
+                    "90190134240.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c27",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 32,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 4,
+                    "label": "Lãi chênh lệch tỷ giá hối đoái đã thực hiện",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Thu nhập từ chuyển nhượng cổ phần (*)"
+                },
+                {
+                  "row": 3,
+                  "label": "Lãi tiền gửi, tiền cho vay"
+                },
+                {
+                  "row": 4,
+                  "label": "Lãi chênh lệch tỷ giá hối đoái đã thực hiện"
+                },
+                {
+                  "row": 5,
+                  "label": "Cổ tức được chia (Thuyết minh 37(a)(viii))"
+                },
+                {
+                  "row": 6,
+                  "label": "Thu nhập từ bán quyền mua cổ phiếu Khác"
+                },
+                {
+                  "row": 7,
+                  "label": "8.874.416.420"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Thu nhập từ chuyển nhượng cổ phần (*)",
+                    "3584000000000.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Lãi tiền gửi, tiền cho vay",
+                    "255936815013.0",
+                    "344586105535.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Lãi chênh lệch tỷ giá hối đoái đã thực hiện",
+                    "152696267438.0",
+                    "85151510748.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Cổ tức được chia (Thuyết minh 37(a)(viii))",
+                    "4591233000.0",
+                    "33837497103.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Thu nhập từ bán quyền mua cổ phiếu Khác",
+                    "",
+                    "500000000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "8.874.416.420",
+                    "10144304697.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "4006098731871.0",
+                    "973719418083.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm_vụ": "Đề cử các bảng có khả năng hỗ trợ ít nhất một toán hạng để final arbiter xem xét.",
+        "câu_hỏi": "Chênh lệch chi phí nhiên liệu của công ty mẹ CTCP Hàng không Vietjet giữa năm 2024 và năm 2021 là mấy nghìn tỷ đồng?",
+        "số_lượng_tối_đa": 8,
+        "candidates": [
+          {
+            "candidate_key": "c05",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 16,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 5,
+                    "label": "Chi phí nhân công",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí hoa hồng",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 6,
+                    "label": "Chi phí khấu hao",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí quảng cáo và tiếp thị",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 3,
+                    "label": "Chi phí dịch vụ mua ngoài",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ BÁN HÀNG"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ BÁN HÀNG"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí quảng cáo và tiếp thị"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí dịch vụ mua ngoài"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí hoa hồng"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí nhân công"
+                },
+                {
+                  "row": 6,
+                  "label": "Chi phí khấu hao"
+                },
+                {
+                  "row": 7,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí quảng cáo và tiếp thị",
+                    "1168547368969.0",
+                    "702576522854.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí dịch vụ mua ngoài",
+                    "933464158461.0",
+                    "878120666461.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí hoa hồng",
+                    "378097685486.0",
+                    "369680186168.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí nhân công",
+                    "169642425790.0",
+                    "147982115998.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Chi phí khấu hao",
+                    "967247313.0",
+                    "913019536.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Khác",
+                    "39320583288.0",
+                    "27673856140.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "2690039469307.0",
+                    "2126946367157.0",
+                    "31",
+                    "CHI PHÍ BÁN HÀNG"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c07",
+            "bucket_key": "b01",
+            "table_type": "balance_sheet",
+            "dense_rank": 11,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 25,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "200",
+                  "label": "TÀI SẢN DÀI HẠN"
+                },
+                {
+                  "row": 3,
+                  "code": "210",
+                  "label": "Các khoản phải thu dài hạn"
+                },
+                {
+                  "row": 4,
+                  "code": "215",
+                  "label": "Phải thu về cho vay dài hạn"
+                },
+                {
+                  "row": 5,
+                  "code": "216",
+                  "label": "Phải thu dài hạn khác"
+                },
+                {
+                  "row": 6,
+                  "code": "220",
+                  "label": "Tài sản cố định"
+                },
+                {
+                  "row": 7,
+                  "code": "221",
+                  "label": "Tài sản cố định hữu hình"
+                },
+                {
+                  "row": 8,
+                  "code": "222",
+                  "label": "- Nguyên giá"
+                },
+                {
+                  "row": 9,
+                  "code": "223",
+                  "label": "- Giá trị hao mòn lũy kế"
+                },
+                {
+                  "row": 10,
+                  "code": "224",
+                  "label": "Tài sản cố định thuê tài chính"
+                },
+                {
+                  "row": 11,
+                  "code": "225",
+                  "label": "- Nguyên giá"
+                },
+                {
+                  "row": 12,
+                  "code": "226",
+                  "label": "- Giá trị hao mòn lũy kế"
+                },
+                {
+                  "row": 13,
+                  "code": "227",
+                  "label": "Tài sản cố định vô hình"
+                },
+                {
+                  "row": 14,
+                  "code": "228",
+                  "label": "- Nguyên giá"
+                },
+                {
+                  "row": 15,
+                  "code": "229",
+                  "label": "- Giá trị hao mòn lũy kế"
+                },
+                {
+                  "row": 16,
+                  "code": "240",
+                  "label": "Tài sản dở dang dài hạn"
+                },
+                {
+                  "row": 17,
+                  "code": "242",
+                  "label": "Chỉ phí xây dựng cơ bản dở dang"
+                },
+                {
+                  "row": 18,
+                  "code": "250",
+                  "label": "Đầu tư tài chính dài hạn"
+                },
+                {
+                  "row": 19,
+                  "code": "251",
+                  "label": "Đầu tư vào công ty con"
+                },
+                {
+                  "row": 20,
+                  "code": "252",
+                  "label": "Đầu tư vào công ty liên doanh, liên kết"
+                },
+                {
+                  "row": 21,
+                  "code": "253",
+                  "label": "Đầu tư góp vốn vào các đơn vị khác"
+                },
+                {
+                  "row": 22,
+                  "code": "254",
+                  "label": "Dự phòng đầu tư tài chính dài hạn"
+                },
+                {
+                  "row": 23,
+                  "code": "260",
+                  "label": "Tài sản dài hạn khác"
+                },
+                {
+                  "row": 24,
+                  "code": "261",
+                  "label": "Chỉ phí trả trước dài hạn"
+                },
+                {
+                  "row": 25,
+                  "code": "262",
+                  "label": "Tài sản thuế thu nhập hoãn lại"
+                },
+                {
+                  "row": 26,
+                  "code": "270",
+                  "label": "TỔNG TÀI SẢN"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "200",
+                    "TÀI SẢN DÀI HẠN",
+                    "TÀI SẢN DÀI HẠN",
+                    "",
+                    "49644425376889.0",
+                    "37244094435294.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "210",
+                    "Các khoản phải thu dài hạn",
+                    "Các khoản phải thu dài hạn",
+                    "",
+                    "24043176835237.0",
+                    "17425468743158.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 16,
+                  "cells": [
+                    "240",
+                    "Tài sản dở dang dài hạn",
+                    "Tài sản dở dang dài hạn",
+                    "15",
+                    "1463280934198.0",
+                    "298407984014.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 17,
+                  "cells": [
+                    "242",
+                    "Chỉ phí xây dựng cơ bản dở dang",
+                    "Chỉ phí xây dựng cơ bản dở dang",
+                    "",
+                    "1463280934198.0",
+                    "298407984014.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 18,
+                  "cells": [
+                    "250",
+                    "Đầu tư tài chính dài hạn",
+                    "Đầu tư tài chính dài hạn",
+                    "5",
+                    "230917024400.0",
+                    "230917024400.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 23,
+                  "cells": [
+                    "260",
+                    "Tài sản dài hạn khác",
+                    "Tài sản dài hạn khác",
+                    "",
+                    "9784692781149.0",
+                    "9149484381627.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 24,
+                  "cells": [
+                    "261",
+                    "Chỉ phí trả trước dài hạn",
+                    "Chỉ phí trả trước dài hạn",
+                    "11",
+                    "9784692781149.0",
+                    "9052934537222.0",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 25,
+                  "cells": [
+                    "262",
+                    "Tài sản thuế thu nhập hoãn lại",
+                    "Tài sản thuế thu nhập hoãn lại",
+                    "24",
+                    "",
+                    "96549844405.0",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c12",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 9,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí nhân công",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí thuê",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 6,
+                    "label": "Chi phí khấu hao",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí dịch vụ mua ngoài",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí dự phòng phải thu khó đòi",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+              ],
+              "columns": [
+                "row_label_raw",
+                "Năm 2024VND",
+                "Năm 2023VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 7,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí dịch vụ mua ngoài"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí nhân công"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí dự phòng phải thu khó đòi"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí thuê"
+                },
+                {
+                  "row": 6,
+                  "label": "Chi phí khấu hao"
+                },
+                {
+                  "row": 7,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí dịch vụ mua ngoài",
+                    "688544150370.0",
+                    "663709160099.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí nhân công",
+                    "201928901048.0",
+                    "211603897241.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí dự phòng phải thu khó đòi",
+                    "78778440000.0",
+                    "",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí thuê",
+                    "48506679927.0",
+                    "63484142462.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Chi phí khấu hao",
+                    "3916899971.0",
+                    "2993322930.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Khác",
+                    "186149874910.0",
+                    "119240602370.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "",
+                    "1207824946226.0",
+                    "1061031125102.0",
+                    "32",
+                    "CHI PHÍ QUẢN LÝ DOANH NGHIỆP Năm 2024VND Năm 2023VND Chi phí dịch vụ mua ngoài 688.544.150.370 663.709.160.099"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c16",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 12,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [
+                "1 BÊN LIÊN QUAN (TIÉP)"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 30,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh"
+                },
+                {
+                  "row": 3,
+                  "label": "3.108.102.849.775"
+                },
+                {
+                  "row": 4,
+                  "label": "Vietjet Air Ireland No. 1 Limited"
+                },
+                {
+                  "row": 5,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 6,
+                  "label": "AAA Golden Aircraft Star No.5 Limited"
+                },
+                {
+                  "row": 7,
+                  "label": "Khác"
+                },
+                {
+                  "row": 8,
+                  "label": "9.491.063.744.315"
+                },
+                {
+                  "row": 9,
+                  "label": "Công ty cổ phần Vietjet Air Cargo"
+                },
+                {
+                  "row": 10,
+                  "label": "Khác"
+                },
+                {
+                  "row": 11,
+                  "label": "175.255.194.320"
+                },
+                {
+                  "row": 12,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 13,
+                  "label": "Khác"
+                },
+                {
+                  "row": 14,
+                  "label": "233.403.207.210"
+                },
+                {
+                  "row": 15,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd. (*)"
+                },
+                {
+                  "row": 16,
+                  "label": "Vietjet Air IVB No.I Limited"
+                },
+                {
+                  "row": 17,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 18,
+                  "label": "Khác"
+                },
+                {
+                  "row": 19,
+                  "label": "2.242.496.969.953"
+                },
+                {
+                  "row": 20,
+                  "label": "Angelica Holding Limited"
+                },
+                {
+                  "row": 21,
+                  "label": "Apricot Aircraft Company (Ireland)"
+                },
+                {
+                  "row": 22,
+                  "label": "AAA Golden Aircraft Star No.5 Limited"
+                },
+                {
+                  "row": 23,
+                  "label": "Thai Vietjet Air Joint Stock Co., Ltd. (*)"
+                },
+                {
+                  "row": 24,
+                  "label": "Khác"
+                },
+                {
+                  "row": 25,
+                  "label": "4.823.279.530.229"
+                },
+                {
+                  "row": 26,
+                  "label": "AAA Golden Aircraft Star No.1 Limited"
+                },
+                {
+                  "row": 27,
+                  "label": "AAA Golden Aircraft Star No.2 Limited"
+                },
+                {
+                  "row": 28,
+                  "label": "Công ty TNHH Bảo hiểm HD"
+                },
+                {
+                  "row": 29,
+                  "label": "Công ty Cổ phần Nhà ga Quốc tế Cam Ranh"
+                },
+                {
+                  "row": 30,
+                  "label": "Khác"
+                },
+                {
+                  "row": 31,
+                  "label": "693.566.077.022"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Ngân hàng TMCP Phát triển TP. Hồ Chí Minh",
+                    "3108102849775.0",
+                    "2946989630208.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "3.108.102.849.775",
+                    "2946989630208.0",
+                    "",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Vietjet Air Ireland No. 1 Limited",
+                    "5499413535682.0",
+                    "4988238041351.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Vietjet Air IVB No.I Limited",
+                    "2954571676863.0",
+                    "2317474212149.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "AAA Golden Aircraft Star No.5 Limited",
+                    "946188593339.0",
+                    "788305424933.0",
+                    "38",
+                    "1 BÊN LIÊN QUAN (TIÉP)"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c20",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 14,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 7,
+                    "label": "Chi phí bảo dưỡng tàu bay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 10,
+                    "label": "Chi phí hoàn trả tàu bay thuê",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 8,
+                    "label": "Chi phí thuê tàu bay hoãn lại",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 11,
+                    "label": "Chi phí kiểm tra, sửa chữa tàu bay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 12,
+                    "label": "Chi phí trả trước chờ phân bổ khác",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ TRẢ TRƯỚC"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ TRẢ TRƯỚC"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 12,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Ngắn hạn"
+                },
+                {
+                  "row": 3,
+                  "label": "Công cụ, dụng cụ"
+                },
+                {
+                  "row": 4,
+                  "label": "Phí bản quyền phần mềm"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí trả trước chờ phân bổ khác"
+                },
+                {
+                  "row": 6,
+                  "label": "Dải hạn"
+                },
+                {
+                  "row": 7,
+                  "label": "Chi phí bảo dưỡng tàu bay"
+                },
+                {
+                  "row": 8,
+                  "label": "Chi phí thuê tàu bay hoãn lại"
+                },
+                {
+                  "row": 9,
+                  "label": "Phụ tùng, công cụ, dụng cụ"
+                },
+                {
+                  "row": 10,
+                  "label": "Chi phí hoàn trả tàu bay thuê"
+                },
+                {
+                  "row": 11,
+                  "label": "Chi phí kiểm tra, sửa chữa tàu bay"
+                },
+                {
+                  "row": 12,
+                  "label": "Chi phí trả trước chờ phân bổ khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Ngắn hạn",
+                    "199973081166.0",
+                    "138358270048.0",
+                    "11",
+                    "CHI PHÍ TRẢ TRƯỚC"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Công cụ, dụng cụ",
+                    "114424082292.0",
+                    "100470111960.0",
+                    "11",
+                    "CHI PHÍ TRẢ TRƯỚC"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Phí bản quyền phần mềm",
+                    "33921569165.0",
+                    "21819620173.0",
+                    "11",
+                    "CHI PHÍ TRẢ TRƯỚC"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí trả trước chờ phân bổ khác",
+                    "51627429709.0",
+                    "16068537915.0",
+                    "11",
+                    "CHI PHÍ TRẢ TRƯỚC"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c24",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 18,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Chi phí mua tàu bay và động cơ tàu bay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí kiểm tra và sửa chữa lớn tàu bay",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": [
+                  "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+                ]
+              },
+              "table_titles": [
+                "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí kiểm tra và sửa chữa lớn tàu bay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí mua tàu bay và động cơ tàu bay"
+                },
+                {
+                  "row": 4,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí kiểm tra và sửa chữa lớn tàu bay",
+                    "1344160329710.0",
+                    "172175563569.0",
+                    "15",
+                    "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí mua tàu bay và động cơ tàu bay",
+                    "89039172388.0",
+                    "107615963091.0",
+                    "15",
+                    "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Khác",
+                    "30081432100.0",
+                    "18616457354.0",
+                    "15",
+                    "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "",
+                    "1463280934198.0",
+                    "298407984014.0",
+                    "15",
+                    "CHI PHÍ XÂY DỤNG CƠ BẢN ĐỒ DANG"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c28",
+            "bucket_key": "b01",
+            "table_type": "note_table",
+            "dense_rank": 21,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 3,
+                    "label": "Lệ phí sân bay thu hộ phải trả Cảng hàng không",
+                    "overlap_tokens": 3
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [
+                "PHẢI TRẢ KHÁC 31/12/2024VND 01/01/2024VND Ngắn hạn 3.814.617.129.838 3.919.992.255.753"
+              ],
+              "columns": [
+                "row_label_raw",
+                "31/12/2024VND",
+                "01/01/2024VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 10,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Ngắn hạn"
+                },
+                {
+                  "row": 3,
+                  "label": "Lệ phí sân bay thu hộ phải trả Cảng hàng không"
+                },
+                {
+                  "row": 4,
+                  "label": "Lệ phí sân bay thu hộ từ hành khách"
+                },
+                {
+                  "row": 5,
+                  "label": "Phải trả về thanh toán L/C trả chậm"
+                },
+                {
+                  "row": 6,
+                  "label": "Khác"
+                },
+                {
+                  "row": 7,
+                  "label": "Dài hạn"
+                },
+                {
+                  "row": 8,
+                  "label": "Nhận ký quỹ, ký cược"
+                },
+                {
+                  "row": 9,
+                  "label": "Khác"
+                },
+                {
+                  "row": 11,
+                  "label": "Phải trả là các bên liên quan"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Ngắn hạn",
+                    "3814617129838.0",
+                    "3919992255753.0",
+                    "21",
+                    "PHẢI TRẢ KHÁC 31/12/2024VND 01/01/2024VND Ngắn hạn 3.814.617.129.838 3.919.992.255.753"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Lệ phí sân bay thu hộ phải trả Cảng hàng không",
+                    "2118088367717.0",
+                    "2357369919640.0",
+                    "21",
+                    "PHẢI TRẢ KHÁC 31/12/2024VND 01/01/2024VND Ngắn hạn 3.814.617.129.838 3.919.992.255.753"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Lệ phí sân bay thu hộ từ hành khách",
+                    "839736855126.0",
+                    "1057481042821.0",
+                    "21",
+                    "PHẢI TRẢ KHÁC 31/12/2024VND 01/01/2024VND Ngắn hạn 3.814.617.129.838 3.919.992.255.753"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Phải trả về thanh toán L/C trả chậm",
+                    "501516825140.0",
+                    "",
+                    "21",
+                    "PHẢI TRẢ KHÁC 31/12/2024VND 01/01/2024VND Ngắn hạn 3.814.617.129.838 3.919.992.255.753"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c02",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 2,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "8.378.243.913",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 2,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Bên liên quan khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Bên liên quan khác",
+                    "24246902255.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "",
+                    "32625146168.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c04",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 15,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [
+                  {
+                    "row": 4,
+                    "label": "Hàng không",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "strong_overlap_rows": [
+                  {
+                    "row": 2,
+                    "label": "Chi phí tàu bay có liên quan và các bộ phận",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 4,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí tàu bay có liên quan và các bộ phận"
+                },
+                {
+                  "row": 3,
+                  "label": "Trung tâm Đào tao và Nghiên cứu Kỹ thuật"
+                },
+                {
+                  "row": 4,
+                  "label": "Hàng không"
+                },
+                {
+                  "row": 5,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí tàu bay có liên quan và các bộ phận",
+                    "123229560504.0",
+                    "130931026091.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Trung tâm Đào tao và Nghiên cứu Kỹ thuật",
+                    "225385696812.0",
+                    "561430982449.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Hàng không",
+                    "5217281436.0",
+                    "1410527366.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Khác",
+                    "353832538752.0",
+                    "693772535906.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c09",
+            "bucket_key": "b02",
+            "table_type": "cash_flow",
+            "dense_rank": 45,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 10,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "2021VND",
+                  "label": "2020VND"
+                },
+                {
+                  "row": 4,
+                  "code": "31",
+                  "label": "Tiền thu bán cổ phiếu quỹ"
+                },
+                {
+                  "row": 5,
+                  "code": "33",
+                  "label": "Tiền thu đi vay"
+                },
+                {
+                  "row": 6,
+                  "code": "34",
+                  "label": "Tiền chi trả nợ gốc vay"
+                },
+                {
+                  "row": 7,
+                  "code": "40",
+                  "label": "Lưu chuyển thuần từ hoạt động tài chính"
+                },
+                {
+                  "row": 8,
+                  "code": "50",
+                  "label": "Lưu chuyển tiền và tương đương tiền thuần trong năm"
+                },
+                {
+                  "row": 9,
+                  "code": "60",
+                  "label": "Tiền và tương đương tiền đầu năm"
+                },
+                {
+                  "row": 10,
+                  "code": "61",
+                  "label": "Ảnh hưởng của thay đổi tỷ giá hối đoai quy đổi ngoại tệ"
+                },
+                {
+                  "row": 11,
+                  "code": "70",
+                  "label": "Tiền và tương đương tiền cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "2021VND",
+                    "2020VND",
+                    "2020VND",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNGTẢI CHÍNH",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "31",
+                    "Tiền thu bán cổ phiếu quỹ",
+                    "Tiền thu bán cổ phiếu quỹ",
+                    "",
+                    "2348654987714.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "33",
+                    "Tiền thu đi vay",
+                    "Tiền thu đi vay",
+                    "",
+                    "17361032360990.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "34",
+                    "Tiền chi trả nợ gốc vay",
+                    "Tiền chi trả nợ gốc vay",
+                    "",
+                    "-13316544337918.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "40",
+                    "Lưu chuyển thuần từ hoạt động tài chính",
+                    "Lưu chuyển thuần từ hoạt động tài chính",
+                    "",
+                    "6393143010786.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c13",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 7,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "69.869.108.860",
+                "68.941.671.872",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 3,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Công ty con (vii)"
+                },
+                {
+                  "row": 3,
+                  "label": "Bên liên quan khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Công ty con (vii)",
+                    "4196805985344.0",
+                    "4408078064449.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Bên liên quan khác",
+                    "19556164384.0",
+                    "735557000000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "",
+                    "4286231258588.0",
+                    "5212576736321.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c17",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 25,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 6,
+                    "label": "Chi phí dịch vụ vận chuyển hàng hóa",
+                    "overlap_tokens": 3
+                  },
+                  {
+                    "row": 3,
+                    "label": "Chi phí khối kỹ thuật",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 2,
+                    "label": "Chi phí khối khai thác bay",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí khối dịch vụ và khai thác mặt đất",
+                    "overlap_tokens": 2
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí khối an toàn, an ninh và đảmbảo chất lượng bay",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 8,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Chi phí khối khai thác bay"
+                },
+                {
+                  "row": 3,
+                  "label": "Chi phí khối kỹ thuật"
+                },
+                {
+                  "row": 4,
+                  "label": "Chi phí khối dịch vụ và khai thác mặt đất"
+                },
+                {
+                  "row": 5,
+                  "label": "Chi phí khối an toàn, an ninh và đảmbảo chất lượng bay"
+                },
+                {
+                  "row": 6,
+                  "label": "Chi phí dịch vụ vận chuyển hàng hóa"
+                },
+                {
+                  "row": 7,
+                  "label": "Giảm dự phòng phải trả trong năm (*)"
+                },
+                {
+                  "row": 8,
+                  "label": "Khác"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Chi phí khối khai thác bay",
+                    "8889677791066.0",
+                    "14811581212419.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Chi phí khối kỹ thuật",
+                    "1309828401380.0",
+                    "1948532113824.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chi phí khối dịch vụ và khai thác mặt đất",
+                    "461687833029.0",
+                    "1191515678112.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chi phí khối an toàn, an ninh và đảmbảo chất lượng bay",
+                    "39833540936.0",
+                    "47971024392.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Chi phí dịch vụ vận chuyển hàng hóa",
+                    "42930020601.0",
+                    "63496784092.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Giảm dự phòng phải trả trong năm (*)",
+                    "",
+                    "-1445196940370.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 8,
+                  "cells": [
+                    "Khác",
+                    "405255027510.0",
+                    "516587200044.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 9,
+                  "cells": [
+                    "",
+                    "11149212614522.0",
+                    "17134487072513.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c21",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 29,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 5,
+                    "label": "Chuyển sang chi phí trả trước dài hạn(Thuyết minh 10(b))",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "2021VND",
+                "2020VND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 6,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Số dư đầu năm"
+                },
+                {
+                  "row": 3,
+                  "label": "Mua sắm"
+                },
+                {
+                  "row": 4,
+                  "label": "Chuyển sang TSCĐ (Thuyết minh 11(a))"
+                },
+                {
+                  "row": 5,
+                  "label": "Chuyển sang chi phí trả trước dài hạn(Thuyết minh 10(b))"
+                },
+                {
+                  "row": 6,
+                  "label": "Điều chỉnh khác"
+                },
+                {
+                  "row": 7,
+                  "label": "Số dư cuối năm"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Số dư đầu năm",
+                    "693772535906.0",
+                    "1258338717091.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Mua sắm",
+                    "171457329639.0",
+                    "293743925297.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Chuyển sang TSCĐ (Thuyết minh 11(a))",
+                    "-387463400057.0",
+                    "-778062904128.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Chuyển sang chi phí trả trước dài hạn(Thuyết minh 10(b))",
+                    "-34015903655.0",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Điều chỉnh khác",
+                    "-89918023081.0",
+                    "-80247202354.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Số dư cuối năm",
+                    "353832538752.0",
+                    "693772535906.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c25",
+            "bucket_key": "b02",
+            "table_type": "balance_sheet",
+            "dense_rank": 31,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [
+                  {
+                    "row": 17,
+                    "code": "151",
+                    "label": "Chi phí trả trước ngắn hạn",
+                    "overlap_tokens": 2
+                  }
+                ],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "item_code",
+                "item_label_raw",
+                "item_label_norm",
+                "note_ref",
+                "period_current",
+                "period_prior",
+                "unit",
+                "entity_type"
+              ],
+              "row_count": 18,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "code": "100",
+                  "label": "TÀI SẢN NGÂN HẠN"
+                },
+                {
+                  "row": 3,
+                  "code": "110",
+                  "label": "Tiền và các khoản tương đương tiền"
+                },
+                {
+                  "row": 4,
+                  "code": "111",
+                  "label": "Tiền"
+                },
+                {
+                  "row": 5,
+                  "code": "112",
+                  "label": "Các khoản tương đương tiền"
+                },
+                {
+                  "row": 6,
+                  "code": "120",
+                  "label": "Đầu tư tài chính ngắn hạn"
+                },
+                {
+                  "row": 7,
+                  "code": "121",
+                  "label": "Chứng khoán kinh doanh"
+                },
+                {
+                  "row": 8,
+                  "code": "122",
+                  "label": "Dự phòng giảm giá chứng khoán kinh doanh"
+                },
+                {
+                  "row": 9,
+                  "code": "130",
+                  "label": "Các khoản phải thu ngắn hạn"
+                },
+                {
+                  "row": 10,
+                  "code": "131",
+                  "label": "Phải thu ngắn hạn của khách hàng"
+                },
+                {
+                  "row": 11,
+                  "code": "132",
+                  "label": "Trả trước cho người bán ngắn hạn"
+                },
+                {
+                  "row": 12,
+                  "code": "135",
+                  "label": "Phải thu về cho vay ngắn hạn"
+                },
+                {
+                  "row": 13,
+                  "code": "136",
+                  "label": "Phải thu ngắn hạn khác"
+                },
+                {
+                  "row": 14,
+                  "code": "140",
+                  "label": "Hàng tồn kho"
+                },
+                {
+                  "row": 15,
+                  "code": "141",
+                  "label": "Hàng tồn kho"
+                },
+                {
+                  "row": 16,
+                  "code": "150",
+                  "label": "Tài sản ngắn hạn khác"
+                },
+                {
+                  "row": 17,
+                  "code": "151",
+                  "label": "Chi phí trả trước ngắn hạn"
+                },
+                {
+                  "row": 18,
+                  "code": "152",
+                  "label": "Thuế Giá trị Gia tảng (\"GTGT\") được khấu trừ"
+                },
+                {
+                  "row": 19,
+                  "code": "153",
+                  "label": "Thuế và các khoản khác phải thu Nhà nước"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 9,
+                  "cells": [
+                    "130",
+                    "Các khoản phải thu ngắn hạn",
+                    "Các khoản phải thu ngắn hạn",
+                    "",
+                    "18453855667885.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 10,
+                  "cells": [
+                    "131",
+                    "Phải thu ngắn hạn của khách hàng",
+                    "Phải thu ngắn hạn của khách hàng",
+                    "5",
+                    "6796741549961.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 11,
+                  "cells": [
+                    "132",
+                    "Trả trước cho người bán ngắn hạn",
+                    "Trả trước cho người bán ngắn hạn",
+                    "6",
+                    "100126970605.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 13,
+                  "cells": [
+                    "136",
+                    "Phải thu ngắn hạn khác",
+                    "Phải thu ngắn hạn khác",
+                    "8(a)",
+                    "10899987147319.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 14,
+                  "cells": [
+                    "140",
+                    "Hàng tồn kho",
+                    "Hàng tồn kho",
+                    "",
+                    "811247030655.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 15,
+                  "cells": [
+                    "141",
+                    "Hàng tồn kho",
+                    "Hàng tồn kho",
+                    "9",
+                    "811247030655.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 16,
+                  "cells": [
+                    "150",
+                    "Tài sản ngắn hạn khác",
+                    "Tài sản ngắn hạn khác",
+                    "",
+                    "57397521356.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 17,
+                  "cells": [
+                    "151",
+                    "Chi phí trả trước ngắn hạn",
+                    "Chi phí trả trước ngắn hạn",
+                    "10(a)",
+                    "16306514272.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                },
+                {
+                  "row": 18,
+                  "cells": [
+                    "152",
+                    "Thuế Giá trị Gia tảng (\"GTGT\") được khấu trừ",
+                    "Thuế Giá trị Gia tảng (\"GTGT\") được khấu trừ",
+                    "15(a)",
+                    "41091007084.0",
+                    "",
+                    "VND",
+                    "DN"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "candidate_key": "c29",
+            "bucket_key": "b02",
+            "table_type": "note_table",
+            "dense_rank": 33,
+            "context": {
+              "match_summary": {
+                "exact_phrase_rows": [],
+                "strong_overlap_rows": [],
+                "table_titles": []
+              },
+              "table_titles": [],
+              "columns": [
+                "row_label_raw",
+                "Phần mềmVND",
+                "note_number",
+                "note_title"
+              ],
+              "row_count": 10,
+              "row_catalog": [
+                {
+                  "row": 2,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 3,
+                  "label": "Mua trong năm"
+                },
+                {
+                  "row": 4,
+                  "label": "Xóa số"
+                },
+                {
+                  "row": 5,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                },
+                {
+                  "row": 6,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 7,
+                  "label": "Khấu hao trong năm"
+                },
+                {
+                  "row": 8,
+                  "label": "Xóa số"
+                },
+                {
+                  "row": 9,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                },
+                {
+                  "row": 10,
+                  "label": "Tại ngày 1 tháng 1 năm 2021"
+                },
+                {
+                  "row": 11,
+                  "label": "Tại ngày 31 tháng 12 năm 2021"
+                }
+              ],
+              "detailed_rows": [
+                {
+                  "row": 2,
+                  "cells": [
+                    "Tại ngày 1 tháng 1 năm 2021",
+                    "29907717155.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 3,
+                  "cells": [
+                    "Mua trong năm",
+                    "959235000.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 4,
+                  "cells": [
+                    "Xóa số",
+                    "-21283135.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 5,
+                  "cells": [
+                    "Tại ngày 31 tháng 12 năm 2021",
+                    "30845669020.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 6,
+                  "cells": [
+                    "Tại ngày 1 tháng 1 năm 2021",
+                    "28875220855.0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "row": 7,
+                  "cells": [
+                    "Khấu hao trong năm",
+                    "925321206.0",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c03",
+          "c08",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27"
+        ],
+        "response": {
+          "ranked_candidate_keys": [
+            "c01",
+            "c03"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c03"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c05",
+          "c07",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c02",
+          "c04",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29"
+        ],
+        "response": {
+          "ranked_candidate_keys": []
+        },
+        "nominated_keys": [],
+        "error": "LLM không trả candidate_key hợp lệ"
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c03"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c03"
+    ],
+    "final_prompt": {
+      "nhiệm_vụ": "Quyết định required buckets, phân rã concepts và chọn exact evidence tables.",
+      "câu_hỏi": "Chênh lệch chi phí nhiên liệu của công ty mẹ CTCP Hàng không Vietjet giữa năm 2024 và năm 2021 là mấy nghìn tỷ đồng?",
+      "giới_hạn_cứng": 2,
+      "available_buckets": [
+        {
+          "bucket_key": "b01",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "year": 2024,
+          "report_type": "separate"
+        },
+        {
+          "bucket_key": "b02",
+          "ticker": "VJC",
+          "company_name": "CTCP Hàng không Vietjet",
+          "year": 2021,
+          "report_type": "separate"
+        }
+      ],
+      "candidate_buckets": [
+        {
+          "bucket_key": "b01",
+          "ticker": "VJC",
+          "year": 2024,
+          "report_type": "separate",
+          "candidates": [
+            {
+              "candidate_key": "c01",
+              "bucket_key": "b01",
+              "table_type": "note_table",
+              "dense_rank": 1,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [
+                    {
+                      "row": 2,
+                      "label": "Chi phí nhiên liệu",
+                      "overlap_tokens": 4
+                    }
+                  ],
+                  "strong_overlap_rows": [
+                    {
+                      "row": 3,
+                      "label": "Chi phí thuê",
+                      "overlap_tokens": 2
+                    },
+                    {
+                      "row": 4,
+                      "label": "Chi phí nhân viên",
+                      "overlap_tokens": 2
+                    },
+                    {
+                      "row": 5,
+                      "label": "Chi phí khấu hao TSCD",
+                      "overlap_tokens": 2
+                    },
+                    {
+                      "row": 7,
+                      "label": "Chi phí dịch vụ mua ngoài và chi phí khác",
+                      "overlap_tokens": 2
+                    }
+                  ],
+                  "table_titles": [
+                    "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                  ]
+                },
+                "table_titles": [
+                  "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                ],
+                "columns": [
+                  "row_label_raw",
+                  "Năm 2024VND",
+                  "Năm 2023VND",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 7,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Chi phí nhiên liệu"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Chi phí thuê"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí nhân viên"
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí khấu hao TSCD"
+                  },
+                  {
+                    "row": 6,
+                    "label": "Dự phòng nợ phải thu khó đòi"
+                  },
+                  {
+                    "row": 7,
+                    "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Chi phí nhiên liệu",
+                      "23858693067798.0",
+                      "21242888445391.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Chi phí thuê",
+                      "12298187559168.0",
+                      "11309389228537.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Chi phí nhân viên",
+                      "5244715314606.0",
+                      "4738908749138.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 5,
+                    "cells": [
+                      "Chi phí khấu hao TSCD",
+                      "604181815575.0",
+                      "407519822055.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 6,
+                    "cells": [
+                      "Dự phòng nợ phải thu khó đòi",
+                      "78778440000.0",
+                      "",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 7,
+                    "cells": [
+                      "Chi phí dịch vụ mua ngoài và chi phí khác",
+                      "18571244237889.0",
+                      "14467296693632.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  },
+                  {
+                    "row": 8,
+                    "cells": [
+                      "",
+                      "60655800435036.0",
+                      "52166002938753.0",
+                      "35",
+                      "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "bucket_key": "b02",
+          "ticker": "VJC",
+          "year": 2021,
+          "report_type": "separate",
+          "candidates": [
+            {
+              "candidate_key": "c03",
+              "bucket_key": "b02",
+              "table_type": "note_table",
+              "dense_rank": 3,
+              "context": {
+                "match_summary": {
+                  "exact_phrase_rows": [
+                    {
+                      "row": 2,
+                      "label": "Chi phí nhiên liệu",
+                      "overlap_tokens": 4
+                    }
+                  ],
+                  "strong_overlap_rows": [
+                    {
+                      "row": 3,
+                      "label": "Chi phí nhân viên",
+                      "overlap_tokens": 2
+                    },
+                    {
+                      "row": 4,
+                      "label": "Chi phí khấu hao TSCĐ",
+                      "overlap_tokens": 2
+                    },
+                    {
+                      "row": 5,
+                      "label": "Chi phí dịch vụ mua ngoài và chi phí khác",
+                      "overlap_tokens": 2
+                    }
+                  ],
+                  "table_titles": []
+                },
+                "table_titles": [],
+                "columns": [
+                  "row_label_raw",
+                  "2021VND",
+                  "2020VND",
+                  "note_number",
+                  "note_title"
+                ],
+                "row_count": 5,
+                "row_catalog": [
+                  {
+                    "row": 2,
+                    "label": "Chi phí nhiên liệu"
+                  },
+                  {
+                    "row": 3,
+                    "label": "Chi phí nhân viên"
+                  },
+                  {
+                    "row": 4,
+                    "label": "Chi phí khấu hao TSCĐ"
+                  },
+                  {
+                    "row": 5,
+                    "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+                  }
+                ],
+                "detailed_rows": [
+                  {
+                    "row": 2,
+                    "cells": [
+                      "Chi phí nhiên liệu",
+                      "3059363382827.0",
+                      "5545642037649.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 3,
+                    "cells": [
+                      "Chi phí nhân viên",
+                      "1578304136579.0",
+                      "2785929193089.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 4,
+                    "cells": [
+                      "Chi phí khấu hao TSCĐ",
+                      "91115455446.0",
+                      "141250384397.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 5,
+                    "cells": [
+                      "Chi phí dịch vụ mua ngoài và chi phí khác",
+                      "7423852160120.0",
+                      "9864042399431.0",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "row": 6,
+                    "cells": [
+                      "",
+                      "12152635134972.0",
+                      "18336864014566.0",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "required_bucket_keys": [
+        "b01",
+        "b02"
+      ],
+      "bucket_requirements": [
+        {
+          "bucket_key": "b01",
+          "concepts": [
+            {
+              "concept_key": "b01_k01",
+              "description": "Chi phí nhiên liệu",
+              "role": "direct"
+            }
+          ]
+        },
+        {
+          "bucket_key": "b02",
+          "concepts": [
+            {
+              "concept_key": "b02_k01",
+              "description": "Chi phí nhiên liệu",
+              "role": "direct"
+            }
+          ]
+        }
+      ],
+      "ranked_selections": [
+        {
+          "candidate_key": "c01",
+          "covered_concept_keys": [
+            "b01_k01"
+          ]
+        },
+        {
+          "candidate_key": "c03",
+          "covered_concept_keys": [
+            "b02_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "required_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Chi phí nhiên liệu",
+            "role": "direct"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Chi phí nhiên liệu",
+            "role": "direct"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c03"
+    ],
+    "coverage_completion": {},
+    "selected_keys": [
+      "c01",
+      "c03"
+    ],
+    "output_cap": 2
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "VJC_financial_statements_2024_separate_table_64",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2024_separate_table_64",
+        "doc_id": "VJC_financial_statements_2024_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2024,
+        "start_line": 1719
+      },
+      "retrieval_score": 0.863626,
+      "dense_rank": 1,
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Năm 2024VND",
+          "Năm 2023VND",
+          "note_number",
+          "note_title"
+        ],
+        "row_count": 7,
+        "table_titles": [
+          "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Chi phí nhiên liệu"
+          },
+          {
+            "row": 3,
+            "label": "Chi phí thuê"
+          },
+          {
+            "row": 4,
+            "label": "Chi phí nhân viên"
+          },
+          {
+            "row": 5,
+            "label": "Chi phí khấu hao TSCD"
+          },
+          {
+            "row": 6,
+            "label": "Dự phòng nợ phải thu khó đòi"
+          },
+          {
+            "row": 7,
+            "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "cells": [
+              "Chi phí nhiên liệu",
+              "23858693067798.0",
+              "21242888445391.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              "Chi phí thuê",
+              "12298187559168.0",
+              "11309389228537.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              "Chi phí nhân viên",
+              "5244715314606.0",
+              "4738908749138.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 5,
+            "cells": [
+              "Chi phí khấu hao TSCD",
+              "604181815575.0",
+              "407519822055.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 6,
+            "cells": [
+              "Dự phòng nợ phải thu khó đòi",
+              "78778440000.0",
+              "",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 7,
+            "cells": [
+              "Chi phí dịch vụ mua ngoài và chi phí khác",
+              "18571244237889.0",
+              "14467296693632.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          },
+          {
+            "row": 8,
+            "cells": [
+              "",
+              "60655800435036.0",
+              "52166002938753.0",
+              "35",
+              "CHI PHÍ SẢN XUẤT KINH DOANH THEO YẾU TỐ Năm 2024VND Năm 2023VND Chi phí nhiên liệu 23.858.693.067.798 21.242.888.445.391"
+            ]
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "VJC_financial_statements_2021_separate_table_56",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2021_separate_table_56",
+        "doc_id": "VJC_financial_statements_2021_separate",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1384
+      },
+      "retrieval_score": 0.82473826,
+      "dense_rank": 3,
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "2021VND",
+          "2020VND",
+          "note_number",
+          "note_title"
+        ],
+        "row_count": 5,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Chi phí nhiên liệu"
+          },
+          {
+            "row": 3,
+            "label": "Chi phí nhân viên"
+          },
+          {
+            "row": 4,
+            "label": "Chi phí khấu hao TSCĐ"
+          },
+          {
+            "row": 5,
+            "label": "Chi phí dịch vụ mua ngoài và chi phí khác"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "cells": [
+              "Chi phí nhiên liệu",
+              "3059363382827.0",
+              "5545642037649.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 3,
+            "cells": [
+              "Chi phí nhân viên",
+              "1578304136579.0",
+              "2785929193089.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 4,
+            "cells": [
+              "Chi phí khấu hao TSCĐ",
+              "91115455446.0",
+              "141250384397.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 5,
+            "cells": [
+              "Chi phí dịch vụ mua ngoài và chi phí khác",
+              "7423852160120.0",
+              "9864042399431.0",
+              "",
+              ""
+            ]
+          },
+          {
+            "row": 6,
+            "cells": [
+              "",
+              "12152635134972.0",
+              "18336864014566.0",
+              "",
+              ""
+            ]
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1532",
+        "VJC_financial_statements_2021_separate|1384",
+        "VJC_financial_statements_2024_separate|1662",
+        "VJC_financial_statements_2021_separate|159",
+        "VJC_financial_statements_2021_separate|1528",
+        "VJC_financial_statements_2021_separate|1600",
+        "VJC_financial_statements_2024_separate|1857",
+        "VJC_financial_statements_2024_separate|1696",
+        "VJC_financial_statements_2024_separate|1333",
+        "VJC_financial_statements_2024_separate|275",
+        "VJC_financial_statements_2024_separate|1893",
+        "VJC_financial_statements_2024_separate|1910",
+        "VJC_financial_statements_2024_separate|1227",
+        "VJC_financial_statements_2021_separate|1064",
+        "VJC_financial_statements_2024_separate|1683",
+        "VJC_financial_statements_2024_separate|1840",
+        "VJC_financial_statements_2024_separate|1282",
+        "VJC_financial_statements_2021_separate|1310",
+        "VJC_financial_statements_2024_separate|1679",
+        "VJC_financial_statements_2024_separate|1350",
+        "VJC_financial_statements_2024_separate|1823",
+        "VJC_financial_statements_2024_separate|1242",
+        "VJC_financial_statements_2024_separate|1549",
+        "VJC_financial_statements_2021_separate|1329",
+        "VJC_financial_statements_2021_separate|1116",
+        "VJC_financial_statements_2024_separate|260",
+        "VJC_financial_statements_2024_separate|1130",
+        "VJC_financial_statements_2021_separate|1068",
+        "VJC_financial_statements_2021_separate|1030",
+        "VJC_financial_statements_2021_separate|145",
+        "VJC_financial_statements_2021_separate|1342",
+        "VJC_financial_statements_2021_separate|1049",
+        "VJC_financial_statements_2021_separate|1124",
+        "VJC_financial_statements_2021_separate|1105",
+        "VJC_financial_statements_2024_separate|1541",
+        "VJC_financial_statements_2021_separate|1021",
+        "VJC_financial_statements_2021_separate|174",
+        "VJC_financial_statements_2021_separate|1518",
+        "VJC_financial_statements_2024_separate|1272",
+        "VJC_financial_statements_2021_separate|1079",
+        "VJC_financial_statements_2021_separate|1489",
+        "VJC_financial_statements_2021_separate|1481",
+        "VJC_financial_statements_2024_separate|1622",
+        "VJC_financial_statements_2021_separate|236",
+        "VJC_financial_statements_2024_separate|1704",
+        "VJC_financial_statements_2021_separate|1625",
+        "VJC_financial_statements_2021_separate|1006",
+        "VJC_financial_statements_2021_separate|918",
+        "VJC_financial_statements_2021_separate|1615"
+      ]
+    },
+    "shortlist": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1532",
+        "VJC_financial_statements_2021_separate|1384",
+        "VJC_financial_statements_2021_separate|1064",
+        "VJC_financial_statements_2024_separate|1683",
+        "VJC_financial_statements_2024_separate|1662",
+        "VJC_financial_statements_2024_separate|275",
+        "VJC_financial_statements_2021_separate|159",
+        "VJC_financial_statements_2021_separate|236",
+        "VJC_financial_statements_2024_separate|1857",
+        "VJC_financial_statements_2021_separate|1528",
+        "VJC_financial_statements_2024_separate|1696",
+        "VJC_financial_statements_2021_separate|1600",
+        "VJC_financial_statements_2024_separate|1333",
+        "VJC_financial_statements_2021_separate|1310",
+        "VJC_financial_statements_2024_separate|1893",
+        "VJC_financial_statements_2021_separate|1329",
+        "VJC_financial_statements_2024_separate|1910",
+        "VJC_financial_statements_2021_separate|1116",
+        "VJC_financial_statements_2024_separate|1227",
+        "VJC_financial_statements_2021_separate|1068",
+        "VJC_financial_statements_2024_separate|1840",
+        "VJC_financial_statements_2021_separate|1030",
+        "VJC_financial_statements_2024_separate|1282",
+        "VJC_financial_statements_2021_separate|145",
+        "VJC_financial_statements_2024_separate|1679",
+        "VJC_financial_statements_2021_separate|1342",
+        "VJC_financial_statements_2024_separate|1350",
+        "VJC_financial_statements_2021_separate|1049",
+        "VJC_financial_statements_2024_separate|1823"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1384"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1384"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1384"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "VJC_financial_statements_2024_separate",
+        "VJC_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "VJC_financial_statements_2024_separate|1719",
+        "VJC_financial_statements_2021_separate|1384"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.04,
+        "recall": 1.0,
+        "f2": 0.1724137931034483,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "shortlist": {
+      "tables": {
+        "precision": 0.06666666666666667,
+        "recall": 1.0,
+        "f2": 0.2631578947368421,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "VJC_financial_statements_2024_separate|1719",
+      "stage_presence": {
+        "retriever": true,
+        "shortlist": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "VJC_financial_statements_2021_separate|1384",
+      "stage_presence": {
+        "retriever": true,
+        "shortlist": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

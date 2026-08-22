@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "id": 91,
+  "question": "Nguyên giá bất động sản đầu tư của công ty mẹ CTCP Vincom Retail (VRE) vào cuối năm 2024 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:39:19+00:00",
+  "finished_at": "2026-08-22T13:39:19+00:00",
+  "duration_seconds": 0.4005469599942444,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VRE"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VRE_financial_statements_2024_separate"
+    ],
+    "relevant_tables": [
+      "VRE_financial_statements_2024_separate|822"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VRE"
+    ],
+    "year": [
+      2024
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Nguyên giá bất động sản đầu tư CTCP Vincom Retail vào cuối triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VRE",
+        "company_name": "CTCP Vincom Retail",
+        "matched_text": "VRE",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Nguyên giá bất động sản đầu tư của công ty mẹ CTCP Vincom Retail (VRE) vào cuối năm 2024 là bao nhiêu triệu đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "VRE",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "VRE"
+          ],
+          "year": [
+            2024
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "VRE_financial_statements_2024_separate_table_12",
+        "retrieval_score": 0.8865459,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_12",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 756
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "VRE_financial_statements_2024_separate_table_13",
+        "retrieval_score": 0.8725399,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_13",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 764
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "VRE_financial_statements_2024_separate_table_44",
+        "retrieval_score": 0.8713459,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_44",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1077
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "VRE_financial_statements_2024_separate_table_45",
+        "retrieval_score": 0.86529297,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_45",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1089
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "VRE_financial_statements_2024_separate_table_8",
+        "retrieval_score": 0.86343503,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_8",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 418
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "VRE_financial_statements_2024_separate_table_34",
+        "retrieval_score": 0.8464492,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_34",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 973
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "VRE_financial_statements_2024_separate_table_46",
+        "retrieval_score": 0.84566885,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_46",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1093
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "VRE_financial_statements_2024_separate_table_47",
+        "retrieval_score": 0.84489954,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_47",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1106
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "VRE_financial_statements_2024_separate_table_43",
+        "retrieval_score": 0.8373083,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_43",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "VRE_financial_statements_2024_separate_table_39",
+        "retrieval_score": 0.8192557,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_39",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1001
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "VRE_financial_statements_2024_separate_table_30",
+        "retrieval_score": 0.81835735,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_30",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 935
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "VRE_financial_statements_2024_separate_table_14",
+        "retrieval_score": 0.8173552,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_14",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 778
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "VRE_financial_statements_2024_separate_table_33",
+        "retrieval_score": 0.81384957,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_33",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 961
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "VRE_financial_statements_2024_separate_table_5",
+        "retrieval_score": 0.8134036,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_5",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 285
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "VRE_financial_statements_2024_separate_table_28",
+        "retrieval_score": 0.81325364,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_28",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 903
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "VRE_financial_statements_2024_separate_table_6",
+        "retrieval_score": 0.80706644,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_6",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 321
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "VRE_financial_statements_2024_separate_table_29",
+        "retrieval_score": 0.8064468,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_29",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 919
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "VRE_financial_statements_2024_separate_table_38",
+        "retrieval_score": 0.8039862,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_38",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 997
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "VRE_financial_statements_2024_separate_table_27",
+        "retrieval_score": 0.7999824,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_27",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 888
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "VRE_financial_statements_2024_separate_table_17",
+        "retrieval_score": 0.7999754,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_17",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 802
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "VRE_financial_statements_2024_separate_table_40",
+        "retrieval_score": 0.7991365,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_40",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1005
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "VRE_financial_statements_2024_separate_table_37",
+        "retrieval_score": 0.79828733,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_37",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 985
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "VRE_financial_statements_2024_separate_table_21",
+        "retrieval_score": 0.7973281,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_21",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 842
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "VRE_financial_statements_2024_separate_table_10",
+        "retrieval_score": 0.7951125,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_10",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 740
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "VRE_financial_statements_2024_separate_table_41",
+        "retrieval_score": 0.7935021,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_41",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1021
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "VRE_financial_statements_2024_separate_table_24",
+        "retrieval_score": 0.7918799,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_24",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 868
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "VRE_financial_statements_2024_separate_table_9",
+        "retrieval_score": 0.79172224,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_9",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 530
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "VRE_financial_statements_2024_separate_table_19",
+        "retrieval_score": 0.79079086,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_19",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 822
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "VRE_financial_statements_2024_separate_table_20",
+        "retrieval_score": 0.79052234,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_20",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 830
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "VRE_financial_statements_2024_separate_table_11",
+        "retrieval_score": 0.7902359,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_11",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 744
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "VRE_financial_statements_2024_separate_table_35",
+        "retrieval_score": 0.78987694,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_35",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 977
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "VRE_financial_statements_2024_separate_table_25",
+        "retrieval_score": 0.78895247,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_25",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 872
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "VRE_financial_statements_2024_separate_table_26",
+        "retrieval_score": 0.78798807,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_26",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 876
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "VRE_financial_statements_2024_separate_table_36",
+        "retrieval_score": 0.7873193,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_36",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 981
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "VRE_financial_statements_2024_separate_table_42",
+        "retrieval_score": 0.78721297,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_42",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "VRE_financial_statements_2024_separate_table_16",
+        "retrieval_score": 0.78509766,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_16",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 786
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "VRE_financial_statements_2024_separate_table_18",
+        "retrieval_score": 0.78007174,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_18",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 808
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "VRE_financial_statements_2024_separate_table_4",
+        "retrieval_score": 0.7792765,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_4",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 259
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "VRE_financial_statements_2024_separate_table_48",
+        "retrieval_score": 0.7787147,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_48",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1118
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "VRE_financial_statements_2024_separate_table_15",
+        "retrieval_score": 0.77807385,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_15",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 782
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "VRE_financial_statements_2024_separate_table_49",
+        "retrieval_score": 0.7777985,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_49",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1124
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "VRE_financial_statements_2024_separate_table_22",
+        "retrieval_score": 0.77603126,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_22",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 850
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "VRE_financial_statements_2024_separate_table_1",
+        "retrieval_score": 0.7759153,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_1",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 56
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "VRE_financial_statements_2024_separate_table_7",
+        "retrieval_score": 0.77309877,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_7",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2024,
+          "start_line": 342
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "VRE_financial_statements_2024_separate_table_23",
+        "retrieval_score": 0.77176905,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_23",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 854
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "VRE_financial_statements_2024_separate_table_2",
+        "retrieval_score": 0.7693232,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_2",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 211
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "VRE_financial_statements_2024_separate_table_50",
+        "retrieval_score": 0.7670468,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_50",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 1182
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "VRE_financial_statements_2024_separate_table_31",
+        "retrieval_score": 0.76632357,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_31",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 945
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "VRE_financial_statements_2024_separate_table_3",
+        "retrieval_score": 0.76617235,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_3",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 236
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "VRE_financial_statements_2024_separate_table_32",
+        "retrieval_score": 0.7256445,
+        "metadata": {
+          "table_id": "VRE_financial_statements_2024_separate_table_32",
+          "doc_id": "VRE_financial_statements_2024_separate",
+          "ticker": "VRE",
+          "company_name": "CTCP Vincom Retail",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2024,
+          "start_line": 951
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "VRE_financial_statements_2024_separate"
+          ],
+          "tables": [
+            "VRE_financial_statements_2024_separate|756",
+            "VRE_financial_statements_2024_separate|764",
+            "VRE_financial_statements_2024_separate|1077",
+            "VRE_financial_statements_2024_separate|1089",
+            "VRE_financial_statements_2024_separate|418"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "VRE_financial_statements_2024_separate"
+          ],
+          "tables": [
+            "VRE_financial_statements_2024_separate|756",
+            "VRE_financial_statements_2024_separate|764",
+            "VRE_financial_statements_2024_separate|1077",
+            "VRE_financial_statements_2024_separate|1089",
+            "VRE_financial_statements_2024_separate|418",
+            "VRE_financial_statements_2024_separate|973",
+            "VRE_financial_statements_2024_separate|1093",
+            "VRE_financial_statements_2024_separate|1106",
+            "VRE_financial_statements_2024_separate|1059",
+            "VRE_financial_statements_2024_separate|1001"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "VRE_financial_statements_2024_separate"
+          ],
+          "tables": [
+            "VRE_financial_statements_2024_separate|756",
+            "VRE_financial_statements_2024_separate|764",
+            "VRE_financial_statements_2024_separate|1077",
+            "VRE_financial_statements_2024_separate|1089",
+            "VRE_financial_statements_2024_separate|418",
+            "VRE_financial_statements_2024_separate|973",
+            "VRE_financial_statements_2024_separate|1093",
+            "VRE_financial_statements_2024_separate|1106",
+            "VRE_financial_statements_2024_separate|1059",
+            "VRE_financial_statements_2024_separate|1001",
+            "VRE_financial_statements_2024_separate|935",
+            "VRE_financial_statements_2024_separate|778",
+            "VRE_financial_statements_2024_separate|961",
+            "VRE_financial_statements_2024_separate|285",
+            "VRE_financial_statements_2024_separate|903",
+            "VRE_financial_statements_2024_separate|321",
+            "VRE_financial_statements_2024_separate|919",
+            "VRE_financial_statements_2024_separate|997",
+            "VRE_financial_statements_2024_separate|888",
+            "VRE_financial_statements_2024_separate|802"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "VRE_financial_statements_2024_separate"
+          ],
+          "tables": [
+            "VRE_financial_statements_2024_separate|756",
+            "VRE_financial_statements_2024_separate|764",
+            "VRE_financial_statements_2024_separate|1077",
+            "VRE_financial_statements_2024_separate|1089",
+            "VRE_financial_statements_2024_separate|418",
+            "VRE_financial_statements_2024_separate|973",
+            "VRE_financial_statements_2024_separate|1093",
+            "VRE_financial_statements_2024_separate|1106",
+            "VRE_financial_statements_2024_separate|1059",
+            "VRE_financial_statements_2024_separate|1001",
+            "VRE_financial_statements_2024_separate|935",
+            "VRE_financial_statements_2024_separate|778",
+            "VRE_financial_statements_2024_separate|961",
+            "VRE_financial_statements_2024_separate|285",
+            "VRE_financial_statements_2024_separate|903",
+            "VRE_financial_statements_2024_separate|321",
+            "VRE_financial_statements_2024_separate|919",
+            "VRE_financial_statements_2024_separate|997",
+            "VRE_financial_statements_2024_separate|888",
+            "VRE_financial_statements_2024_separate|802",
+            "VRE_financial_statements_2024_separate|1005",
+            "VRE_financial_statements_2024_separate|985",
+            "VRE_financial_statements_2024_separate|842",
+            "VRE_financial_statements_2024_separate|740",
+            "VRE_financial_statements_2024_separate|1021",
+            "VRE_financial_statements_2024_separate|868",
+            "VRE_financial_statements_2024_separate|530",
+            "VRE_financial_statements_2024_separate|822",
+            "VRE_financial_statements_2024_separate|830",
+            "VRE_financial_statements_2024_separate|744",
+            "VRE_financial_statements_2024_separate|977",
+            "VRE_financial_statements_2024_separate|872",
+            "VRE_financial_statements_2024_separate|876",
+            "VRE_financial_statements_2024_separate|981",
+            "VRE_financial_statements_2024_separate|1027",
+            "VRE_financial_statements_2024_separate|786",
+            "VRE_financial_statements_2024_separate|808",
+            "VRE_financial_statements_2024_separate|259",
+            "VRE_financial_statements_2024_separate|1118",
+            "VRE_financial_statements_2024_separate|782",
+            "VRE_financial_statements_2024_separate|1124",
+            "VRE_financial_statements_2024_separate|850",
+            "VRE_financial_statements_2024_separate|56",
+            "VRE_financial_statements_2024_separate|342",
+            "VRE_financial_statements_2024_separate|854",
+            "VRE_financial_statements_2024_separate|211",
+            "VRE_financial_statements_2024_separate|1182",
+            "VRE_financial_statements_2024_separate|945",
+            "VRE_financial_statements_2024_separate|236",
+            "VRE_financial_statements_2024_separate|951"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

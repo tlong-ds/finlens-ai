@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "id": 849,
+  "question": "Tỷ trọng chi phí khấu hao và phân bổ trong tổng chi phí sản xuất và kinh doanh theo yếu tố của Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn đạt mức cao nhất trong các năm 2018, 2020, 2024 và 2025 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T13:39:29+00:00",
+  "finished_at": "2026-08-22T13:39:29+00:00",
+  "duration_seconds": 0.34508036699844524,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2018,
+      2020,
+      2024,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SAB_financial_statements_2018_consolidated",
+      "SAB_financial_statements_2020_consolidated",
+      "SAB_financial_statements_2024_consolidated",
+      "SAB_financial_statements_2025_consolidated"
+    ],
+    "relevant_tables": [
+      "SAB_financial_statements_2018_consolidated|1436",
+      "SAB_financial_statements_2020_consolidated|1559",
+      "SAB_financial_statements_2024_consolidated|1653",
+      "SAB_financial_statements_2025_consolidated|1852"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2018,
+      2020,
+      2024,
+      2025
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tỷ trọng chi phí khấu hao và phân bổ trong tổng chi phí sản xuất và kinh doanh theo yếu tố đạt mức cao nhất trong các , , và phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SAB",
+        "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "matched_text": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2018,
+            2020,
+            2024,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tỷ trọng chi phí khấu hao và phân bổ trong tổng chi phí sản xuất và kinh doanh theo yếu tố của Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn đạt mức cao nhất trong các năm 2018, 2020, 2024 và 2025 là bao nhiêu phần trăm?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "SAB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "SAB"
+          ],
+          "year": [
+            2018,
+            2020,
+            2024,
+            2025
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_79",
+        "retrieval_score": 0.8785709,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_79",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1766
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_74",
+        "retrieval_score": 0.8783292,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_74",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1394
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_85",
+        "retrieval_score": 0.8780061,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_85",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1501
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_86",
+        "retrieval_score": 0.8768391,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_86",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1512
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_72",
+        "retrieval_score": 0.87611663,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_72",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1513
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_13",
+        "retrieval_score": 0.8733895,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_13",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 449
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_81",
+        "retrieval_score": 0.87179327,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_81",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1957
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_67",
+        "retrieval_score": 0.87170386,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_67",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1607
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_78",
+        "retrieval_score": 0.8715294,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_78",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1753
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_66",
+        "retrieval_score": 0.8706472,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_66",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1603
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_71",
+        "retrieval_score": 0.8706472,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_71",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1509
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_11",
+        "retrieval_score": 0.86981523,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_11",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 302
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_68",
+        "retrieval_score": 0.86970776,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_68",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_23",
+        "retrieval_score": 0.868605,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_23",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1032
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_82",
+        "retrieval_score": 0.8685982,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_82",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1651
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_11",
+        "retrieval_score": 0.8674143,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_11",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 417
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_11",
+        "retrieval_score": 0.8658509,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_11",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 419
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_12",
+        "retrieval_score": 0.86570895,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_12",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 433
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_24",
+        "retrieval_score": 0.8654226,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_24",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1158
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_16",
+        "retrieval_score": 0.86436087,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_16",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 346
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_75",
+        "retrieval_score": 0.8635212,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_75",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1852
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_73",
+        "retrieval_score": 0.86313134,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_73",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1390
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_12",
+        "retrieval_score": 0.86299145,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_12",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 316
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_22",
+        "retrieval_score": 0.86283785,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_22",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1026
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_22",
+        "retrieval_score": 0.8627534,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_22",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 809
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_15",
+        "retrieval_score": 0.8612511,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_15",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 335
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_82",
+        "retrieval_score": 0.86104757,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_82",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1972
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_72",
+        "retrieval_score": 0.8605809,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_72",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1653
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_79",
+        "retrieval_score": 0.8598347,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_79",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1436
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_18",
+        "retrieval_score": 0.8596696,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_18",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 372
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_17",
+        "retrieval_score": 0.8595048,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_17",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 361
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_27",
+        "retrieval_score": 0.8588945,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_27",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 879
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_18",
+        "retrieval_score": 0.85853606,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_18",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 838
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_87",
+        "retrieval_score": 0.85827106,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_87",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1523
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_77",
+        "retrieval_score": 0.85788596,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_77",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1559
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_10",
+        "retrieval_score": 0.85763705,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_10",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 405
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_13",
+        "retrieval_score": 0.857312,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_13",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 330
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_24",
+        "retrieval_score": 0.85715026,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_24",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 920
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_42",
+        "retrieval_score": 0.8563013,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_42",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1287
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_12",
+        "retrieval_score": 0.85624915,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_12",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 432
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_52",
+        "retrieval_score": 0.8562309,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_52",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1554
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_26",
+        "retrieval_score": 0.8558765,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_26",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 943
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_50",
+        "retrieval_score": 0.8555742,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_50",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2024,
+          "start_line": 1387
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_24",
+        "retrieval_score": 0.8542551,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_24",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 839
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_52",
+        "retrieval_score": 0.8523689,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_52",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1143
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "SAB_financial_statements_2024_consolidated_table_6",
+        "retrieval_score": 0.85165656,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2024_consolidated_table_6",
+          "doc_id": "SAB_financial_statements_2024_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2024,
+          "start_line": 261
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "SAB_financial_statements_2018_consolidated_table_10",
+        "retrieval_score": 0.85161406,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2018_consolidated_table_10",
+          "doc_id": "SAB_financial_statements_2018_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2018,
+          "start_line": 218
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_6",
+        "retrieval_score": 0.8515638,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_6",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2020,
+          "start_line": 176
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "SAB_financial_statements_2020_consolidated_table_49",
+        "retrieval_score": 0.85131425,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2020_consolidated_table_49",
+          "doc_id": "SAB_financial_statements_2020_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2020,
+          "start_line": 1213
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "SAB_financial_statements_2025_consolidated_table_47",
+        "retrieval_score": 0.85113484,
+        "metadata": {
+          "table_id": "SAB_financial_statements_2025_consolidated_table_47",
+          "doc_id": "SAB_financial_statements_2025_consolidated",
+          "ticker": "SAB",
+          "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2025,
+          "start_line": 1482
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "SAB_financial_statements_2024_consolidated",
+            "SAB_financial_statements_2018_consolidated",
+            "SAB_financial_statements_2020_consolidated"
+          ],
+          "tables": [
+            "SAB_financial_statements_2024_consolidated|1766",
+            "SAB_financial_statements_2018_consolidated|1394",
+            "SAB_financial_statements_2018_consolidated|1501",
+            "SAB_financial_statements_2018_consolidated|1512",
+            "SAB_financial_statements_2020_consolidated|1513"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f2": 0.7894736842105263,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "SAB_financial_statements_2024_consolidated",
+            "SAB_financial_statements_2018_consolidated",
+            "SAB_financial_statements_2020_consolidated",
+            "SAB_financial_statements_2025_consolidated"
+          ],
+          "tables": [
+            "SAB_financial_statements_2024_consolidated|1766",
+            "SAB_financial_statements_2018_consolidated|1394",
+            "SAB_financial_statements_2018_consolidated|1501",
+            "SAB_financial_statements_2018_consolidated|1512",
+            "SAB_financial_statements_2020_consolidated|1513",
+            "SAB_financial_statements_2025_consolidated|449",
+            "SAB_financial_statements_2025_consolidated|1957",
+            "SAB_financial_statements_2024_consolidated|1607",
+            "SAB_financial_statements_2024_consolidated|1753",
+            "SAB_financial_statements_2024_consolidated|1603"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "SAB_financial_statements_2024_consolidated",
+            "SAB_financial_statements_2018_consolidated",
+            "SAB_financial_statements_2020_consolidated",
+            "SAB_financial_statements_2025_consolidated"
+          ],
+          "tables": [
+            "SAB_financial_statements_2024_consolidated|1766",
+            "SAB_financial_statements_2018_consolidated|1394",
+            "SAB_financial_statements_2018_consolidated|1501",
+            "SAB_financial_statements_2018_consolidated|1512",
+            "SAB_financial_statements_2020_consolidated|1513",
+            "SAB_financial_statements_2025_consolidated|449",
+            "SAB_financial_statements_2025_consolidated|1957",
+            "SAB_financial_statements_2024_consolidated|1607",
+            "SAB_financial_statements_2024_consolidated|1753",
+            "SAB_financial_statements_2024_consolidated|1603",
+            "SAB_financial_statements_2020_consolidated|1509",
+            "SAB_financial_statements_2020_consolidated|302",
+            "SAB_financial_statements_2025_consolidated|1788",
+            "SAB_financial_statements_2024_consolidated|1032",
+            "SAB_financial_statements_2020_consolidated|1651",
+            "SAB_financial_statements_2025_consolidated|417",
+            "SAB_financial_statements_2024_consolidated|419",
+            "SAB_financial_statements_2025_consolidated|433",
+            "SAB_financial_statements_2025_consolidated|1158",
+            "SAB_financial_statements_2018_consolidated|346"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "SAB_financial_statements_2024_consolidated",
+            "SAB_financial_statements_2018_consolidated",
+            "SAB_financial_statements_2020_consolidated",
+            "SAB_financial_statements_2025_consolidated"
+          ],
+          "tables": [
+            "SAB_financial_statements_2024_consolidated|1766",
+            "SAB_financial_statements_2018_consolidated|1394",
+            "SAB_financial_statements_2018_consolidated|1501",
+            "SAB_financial_statements_2018_consolidated|1512",
+            "SAB_financial_statements_2020_consolidated|1513",
+            "SAB_financial_statements_2025_consolidated|449",
+            "SAB_financial_statements_2025_consolidated|1957",
+            "SAB_financial_statements_2024_consolidated|1607",
+            "SAB_financial_statements_2024_consolidated|1753",
+            "SAB_financial_statements_2024_consolidated|1603",
+            "SAB_financial_statements_2020_consolidated|1509",
+            "SAB_financial_statements_2020_consolidated|302",
+            "SAB_financial_statements_2025_consolidated|1788",
+            "SAB_financial_statements_2024_consolidated|1032",
+            "SAB_financial_statements_2020_consolidated|1651",
+            "SAB_financial_statements_2025_consolidated|417",
+            "SAB_financial_statements_2024_consolidated|419",
+            "SAB_financial_statements_2025_consolidated|433",
+            "SAB_financial_statements_2025_consolidated|1158",
+            "SAB_financial_statements_2018_consolidated|346",
+            "SAB_financial_statements_2025_consolidated|1852",
+            "SAB_financial_statements_2018_consolidated|1390",
+            "SAB_financial_statements_2020_consolidated|316",
+            "SAB_financial_statements_2024_consolidated|1026",
+            "SAB_financial_statements_2018_consolidated|809",
+            "SAB_financial_statements_2018_consolidated|335",
+            "SAB_financial_statements_2025_consolidated|1972",
+            "SAB_financial_statements_2024_consolidated|1653",
+            "SAB_financial_statements_2018_consolidated|1436",
+            "SAB_financial_statements_2018_consolidated|372",
+            "SAB_financial_statements_2018_consolidated|361",
+            "SAB_financial_statements_2018_consolidated|879",
+            "SAB_financial_statements_2020_consolidated|838",
+            "SAB_financial_statements_2018_consolidated|1523",
+            "SAB_financial_statements_2020_consolidated|1559",
+            "SAB_financial_statements_2024_consolidated|405",
+            "SAB_financial_statements_2020_consolidated|330",
+            "SAB_financial_statements_2020_consolidated|920",
+            "SAB_financial_statements_2024_consolidated|1287",
+            "SAB_financial_statements_2024_consolidated|432",
+            "SAB_financial_statements_2025_consolidated|1554",
+            "SAB_financial_statements_2020_consolidated|943",
+            "SAB_financial_statements_2024_consolidated|1387",
+            "SAB_financial_statements_2018_consolidated|839",
+            "SAB_financial_statements_2018_consolidated|1143",
+            "SAB_financial_statements_2024_consolidated|261",
+            "SAB_financial_statements_2018_consolidated|218",
+            "SAB_financial_statements_2020_consolidated|176",
+            "SAB_financial_statements_2020_consolidated|1213",
+            "SAB_financial_statements_2025_consolidated|1482"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 1.0,
+          "f2": 0.30303030303030304,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "id": 471,
+  "question": "Năm 2016, trong bốn mã cổ phiếu AAA, DCM, DPM và GVR, tổng doanh thu thuần của các công ty có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần lớn hơn 10% là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T13:39:22+00:00",
+  "finished_at": "2026-08-22T13:39:23+00:00",
+  "duration_seconds": 1.1775514740002109,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "AAA",
+      "DCM",
+      "DPM",
+      "GVR"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "AAA_financial_statements_2016_consolidated",
+      "DCM_financial_statements_2016_consolidated",
+      "DPM_financial_statements_2016_consolidated",
+      "GVR_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "AAA_financial_statements_2016_consolidated|281",
+      "DCM_financial_statements_2016_consolidated|398",
+      "DPM_financial_statements_2016_consolidated|248",
+      "GVR_financial_statements_2016_consolidated|296"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "AAA",
+      "DCM",
+      "DPM",
+      "GVR"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "trong bốn mã cổ phiếu , , và , tổng doanh thu thuần các công ty có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần lớn hơn 10% nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "AAA",
+        "company_name": "CTCP Nhựa An Phát Xanh",
+        "matched_text": "AAA",
+        "match_type": "explicit_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "DCM",
+        "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+        "matched_text": "DCM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "DPM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "GVR",
+        "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+        "matched_text": "GVR",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03",
+            "c04"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Năm 2016, trong bốn mã cổ phiếu AAA, DCM, DPM và GVR, tổng doanh thu thuần của các công ty có tỷ lệ lợi nhuận sau thuế trên doanh thu thuần lớn hơn 10% là bao nhiêu nghìn tỷ đồng?",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "AAA",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "AAA"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "DCM",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DCM"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "DPM",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DPM"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "GVR",
+        "requested_top_n": 13,
+        "candidate_count": 13,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GVR"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.884791,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_30",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1438
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_7",
+        "retrieval_score": 0.8795495,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_7",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 398
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.8782749,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_6",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 248
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_9",
+        "retrieval_score": 0.87450236,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_9",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 296
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_35",
+        "retrieval_score": 0.8821907,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_35",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1483
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_44",
+        "retrieval_score": 0.867937,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_44",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 1161
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_49",
+        "retrieval_score": 0.86861074,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_49",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 1031
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_67",
+        "retrieval_score": 0.8656692,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_67",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1753
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_4",
+        "retrieval_score": 0.87678856,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_4",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 281
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_1",
+        "retrieval_score": 0.8662349,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_1",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 107
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_42",
+        "retrieval_score": 0.8586054,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_42",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 983
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_57",
+        "retrieval_score": 0.85707307,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_57",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 1672
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_32",
+        "retrieval_score": 0.8575368,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_32",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1446
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.86336935,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_36",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1089
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_19",
+        "retrieval_score": 0.8542171,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_19",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 739
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_61",
+        "retrieval_score": 0.85287523,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_61",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1725
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_37",
+        "retrieval_score": 0.85722727,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_37",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2016,
+          "start_line": 1518
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_33",
+        "retrieval_score": 0.8606184,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_33",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1063
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_43",
+        "retrieval_score": 0.8533702,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_43",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 998
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_13",
+        "retrieval_score": 0.8508166,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_13",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 444
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_34",
+        "retrieval_score": 0.8549565,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_34",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1479
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_37",
+        "retrieval_score": 0.85117126,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_37",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1093
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_48",
+        "retrieval_score": 0.8466039,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_48",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_8",
+        "retrieval_score": 0.84460115,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_8",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 261
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.851381,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_36",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1512
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_18",
+        "retrieval_score": 0.8508005,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_18",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 847
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_15",
+        "retrieval_score": 0.84639937,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_15",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 695
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_63",
+        "retrieval_score": 0.8445096,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_63",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1733
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_27",
+        "retrieval_score": 0.8503396,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_27",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1356
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_31",
+        "retrieval_score": 0.8453719,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_31",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_36",
+        "retrieval_score": 0.84572613,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_36",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 906
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_64",
+        "retrieval_score": 0.8435656,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_64",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1735
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_23",
+        "retrieval_score": 0.8427049,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_23",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1059
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_28",
+        "retrieval_score": 0.83894014,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_28",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 965
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_14",
+        "retrieval_score": 0.8449607,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_14",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 676
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_60",
+        "retrieval_score": 0.84082735,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_60",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1708
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_31",
+        "retrieval_score": 0.8386862,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_31",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1442
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_41",
+        "retrieval_score": 0.836298,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_41",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1117
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_51",
+        "retrieval_score": 0.84480965,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_51",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1093
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_47",
+        "retrieval_score": 0.8395828,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_47",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1545
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_41",
+        "retrieval_score": 0.83711636,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_41",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1604
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_6",
+        "retrieval_score": 0.8345419,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_6",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2016,
+          "start_line": 371
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_52",
+        "retrieval_score": 0.84465694,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_52",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1110
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_46",
+        "retrieval_score": 0.83889663,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_46",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1528
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_12",
+        "retrieval_score": 0.8345007,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_12",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 829
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_30",
+        "retrieval_score": 0.8342298,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_30",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DPM_financial_statements_2016_consolidated_table_41",
+        "retrieval_score": 0.84451276,
+        "metadata": {
+          "table_id": "DPM_financial_statements_2016_consolidated_table_41",
+          "doc_id": "DPM_financial_statements_2016_consolidated",
+          "ticker": "DPM",
+          "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 979
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "GVR_financial_statements_2016_consolidated_table_19",
+        "retrieval_score": 0.8370676,
+        "metadata": {
+          "table_id": "GVR_financial_statements_2016_consolidated_table_19",
+          "doc_id": "GVR_financial_statements_2016_consolidated",
+          "ticker": "GVR",
+          "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 521
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "AAA_financial_statements_2016_consolidated_table_33",
+        "retrieval_score": 0.8336557,
+        "metadata": {
+          "table_id": "AAA_financial_statements_2016_consolidated_table_33",
+          "doc_id": "AAA_financial_statements_2016_consolidated",
+          "ticker": "AAA",
+          "company_name": "CTCP Nhựa An Phát Xanh",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 1475
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DCM_financial_statements_2016_consolidated_table_24",
+        "retrieval_score": 0.8325996,
+        "metadata": {
+          "table_id": "DCM_financial_statements_2016_consolidated_table_24",
+          "doc_id": "DCM_financial_statements_2016_consolidated",
+          "ticker": "DCM",
+          "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2016,
+          "start_line": 911
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "AAA_financial_statements_2016_consolidated",
+            "DCM_financial_statements_2016_consolidated",
+            "DPM_financial_statements_2016_consolidated",
+            "GVR_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "AAA_financial_statements_2016_consolidated|1438",
+            "DCM_financial_statements_2016_consolidated|398",
+            "DPM_financial_statements_2016_consolidated|248",
+            "GVR_financial_statements_2016_consolidated|296",
+            "AAA_financial_statements_2016_consolidated|1483"
+          ]
+        },
+        "tables": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f2": 0.7142857142857143,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "AAA_financial_statements_2016_consolidated",
+            "DCM_financial_statements_2016_consolidated",
+            "DPM_financial_statements_2016_consolidated",
+            "GVR_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "AAA_financial_statements_2016_consolidated|1438",
+            "DCM_financial_statements_2016_consolidated|398",
+            "DPM_financial_statements_2016_consolidated|248",
+            "GVR_financial_statements_2016_consolidated|296",
+            "AAA_financial_statements_2016_consolidated|1483",
+            "DCM_financial_statements_2016_consolidated|1161",
+            "DPM_financial_statements_2016_consolidated|1031",
+            "GVR_financial_statements_2016_consolidated|1753",
+            "AAA_financial_statements_2016_consolidated|281",
+            "DCM_financial_statements_2016_consolidated|107"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f2": 0.7692307692307692,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "AAA_financial_statements_2016_consolidated",
+            "DCM_financial_statements_2016_consolidated",
+            "DPM_financial_statements_2016_consolidated",
+            "GVR_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "AAA_financial_statements_2016_consolidated|1438",
+            "DCM_financial_statements_2016_consolidated|398",
+            "DPM_financial_statements_2016_consolidated|248",
+            "GVR_financial_statements_2016_consolidated|296",
+            "AAA_financial_statements_2016_consolidated|1483",
+            "DCM_financial_statements_2016_consolidated|1161",
+            "DPM_financial_statements_2016_consolidated|1031",
+            "GVR_financial_statements_2016_consolidated|1753",
+            "AAA_financial_statements_2016_consolidated|281",
+            "DCM_financial_statements_2016_consolidated|107",
+            "DPM_financial_statements_2016_consolidated|983",
+            "GVR_financial_statements_2016_consolidated|1672",
+            "AAA_financial_statements_2016_consolidated|1446",
+            "DCM_financial_statements_2016_consolidated|1089",
+            "DPM_financial_statements_2016_consolidated|739",
+            "GVR_financial_statements_2016_consolidated|1725",
+            "AAA_financial_statements_2016_consolidated|1518",
+            "DCM_financial_statements_2016_consolidated|1063",
+            "DPM_financial_statements_2016_consolidated|998",
+            "GVR_financial_statements_2016_consolidated|444"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "AAA_financial_statements_2016_consolidated",
+            "DCM_financial_statements_2016_consolidated",
+            "DPM_financial_statements_2016_consolidated",
+            "GVR_financial_statements_2016_consolidated"
+          ],
+          "tables": [
+            "AAA_financial_statements_2016_consolidated|1438",
+            "DCM_financial_statements_2016_consolidated|398",
+            "DPM_financial_statements_2016_consolidated|248",
+            "GVR_financial_statements_2016_consolidated|296",
+            "AAA_financial_statements_2016_consolidated|1483",
+            "DCM_financial_statements_2016_consolidated|1161",
+            "DPM_financial_statements_2016_consolidated|1031",
+            "GVR_financial_statements_2016_consolidated|1753",
+            "AAA_financial_statements_2016_consolidated|281",
+            "DCM_financial_statements_2016_consolidated|107",
+            "DPM_financial_statements_2016_consolidated|983",
+            "GVR_financial_statements_2016_consolidated|1672",
+            "AAA_financial_statements_2016_consolidated|1446",
+            "DCM_financial_statements_2016_consolidated|1089",
+            "DPM_financial_statements_2016_consolidated|739",
+            "GVR_financial_statements_2016_consolidated|1725",
+            "AAA_financial_statements_2016_consolidated|1518",
+            "DCM_financial_statements_2016_consolidated|1063",
+            "DPM_financial_statements_2016_consolidated|998",
+            "GVR_financial_statements_2016_consolidated|444",
+            "AAA_financial_statements_2016_consolidated|1479",
+            "DCM_financial_statements_2016_consolidated|1093",
+            "DPM_financial_statements_2016_consolidated|1027",
+            "GVR_financial_statements_2016_consolidated|261",
+            "AAA_financial_statements_2016_consolidated|1512",
+            "DCM_financial_statements_2016_consolidated|847",
+            "DPM_financial_statements_2016_consolidated|695",
+            "GVR_financial_statements_2016_consolidated|1733",
+            "AAA_financial_statements_2016_consolidated|1356",
+            "DCM_financial_statements_2016_consolidated|1033",
+            "DPM_financial_statements_2016_consolidated|906",
+            "GVR_financial_statements_2016_consolidated|1735",
+            "AAA_financial_statements_2016_consolidated|1059",
+            "DCM_financial_statements_2016_consolidated|965",
+            "DPM_financial_statements_2016_consolidated|676",
+            "GVR_financial_statements_2016_consolidated|1708",
+            "AAA_financial_statements_2016_consolidated|1442",
+            "DCM_financial_statements_2016_consolidated|1117",
+            "DPM_financial_statements_2016_consolidated|1093",
+            "GVR_financial_statements_2016_consolidated|1545",
+            "AAA_financial_statements_2016_consolidated|1604",
+            "DCM_financial_statements_2016_consolidated|371",
+            "DPM_financial_statements_2016_consolidated|1110",
+            "GVR_financial_statements_2016_consolidated|1528",
+            "AAA_financial_statements_2016_consolidated|829",
+            "DCM_financial_statements_2016_consolidated|1027",
+            "DPM_financial_statements_2016_consolidated|979",
+            "GVR_financial_statements_2016_consolidated|521",
+            "AAA_financial_statements_2016_consolidated|1475",
+            "DCM_financial_statements_2016_consolidated|911"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 1.0,
+          "f2": 0.30303030303030304,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

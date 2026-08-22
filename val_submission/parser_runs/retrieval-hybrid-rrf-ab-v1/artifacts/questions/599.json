@@ -1,0 +1,1364 @@
+{
+  "schema_version": 1,
+  "id": 599,
+  "question": "Chi phí khác (không bao gồm phạt do vi phạm hành chính, chi phí token card và phí chuyển tiền của NDT) của FTS trong năm 2022 lớn hơn năm 2023 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:51:20+00:00",
+  "finished_at": "2026-08-22T13:51:21+00:00",
+  "duration_seconds": 1.0714514359860914,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "FTS"
+    ],
+    "year": [
+      2022,
+      2023
+    ],
+    "report_type": [
+      "other"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "FTS_financial_statements_2022",
+      "FTS_financial_statements_2023"
+    ],
+    "relevant_tables": [
+      "FTS_financial_statements_2022|1550",
+      "FTS_financial_statements_2023|1440"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "FTS"
+    ],
+    "year": [
+      2022,
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Chi phí khác (không bao gồm phạt do vi phạm hành chính, chi phí token card và phí chuyển tiền NDT) trong lớn hơn triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "FTS",
+        "company_name": "CTCP Chứng khoán FPT",
+        "matched_text": "FTS",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2022,
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        "other"
+      ],
+      "extra": [
+        "consolidated"
+      ]
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Chi phí khác (không bao gồm phạt do vi phạm hành chính, chi phí token card và phí chuyển tiền NDT) trong lớn hơn triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "FTS",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": true,
+        "effective_filters": {
+          "ticker": [
+            "FTS"
+          ],
+          "year": [
+            2022,
+            2023
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "FTS_financial_statements_2022_table_60",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 1,
+        "dense_score": 0.8852382,
+        "dense_rank": 2,
+        "bm25_score": 65.31161494922102,
+        "bm25_rank": 1,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_60",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1550
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "FTS_financial_statements_2023_table_50",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 2,
+        "dense_score": 0.8852382,
+        "dense_rank": 1,
+        "bm25_score": 65.31161494922102,
+        "bm25_rank": 2,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_50",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1440
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "FTS_financial_statements_2022_table_59",
+        "retrieval_score": 0.03149801587301587,
+        "retrieval_rank": 3,
+        "dense_score": 0.8551997,
+        "dense_rank": 4,
+        "bm25_score": 44.74583202843415,
+        "bm25_rank": 3,
+        "rrf_score": 0.03149801587301587,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_59",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1546
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "FTS_financial_statements_2023_table_49",
+        "retrieval_score": 0.03149801587301587,
+        "retrieval_rank": 4,
+        "dense_score": 0.8551997,
+        "dense_rank": 3,
+        "bm25_score": 44.74583202843415,
+        "bm25_rank": 4,
+        "rrf_score": 0.03149801587301587,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_49",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1436
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "FTS_financial_statements_2023_table_14",
+        "retrieval_score": 0.029877369007803793,
+        "retrieval_rank": 5,
+        "dense_score": 0.83194584,
+        "dense_rank": 9,
+        "bm25_score": 13.25154009406422,
+        "bm25_rank": 5,
+        "rrf_score": 0.029877369007803793,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_14",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 456
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "FTS_financial_statements_2022_table_11",
+        "retrieval_score": 0.029857397504456328,
+        "retrieval_rank": 6,
+        "dense_score": 0.83214474,
+        "dense_rank": 8,
+        "bm25_score": 13.231627804016444,
+        "bm25_rank": 6,
+        "rrf_score": 0.029857397504456328,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_11",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 514
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "FTS_financial_statements_2023_table_15",
+        "retrieval_score": 0.02964426877470356,
+        "retrieval_rank": 7,
+        "dense_score": 0.8339283,
+        "dense_rank": 6,
+        "bm25_score": 11.103144158733196,
+        "bm25_rank": 9,
+        "rrf_score": 0.02964426877470356,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_15",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 473
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "FTS_financial_statements_2022_table_12",
+        "retrieval_score": 0.029631255487269532,
+        "retrieval_rank": 8,
+        "dense_score": 0.8339283,
+        "dense_rank": 7,
+        "bm25_score": 11.103144158733196,
+        "bm25_rank": 8,
+        "rrf_score": 0.029631255487269532,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_12",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 542
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "FTS_financial_statements_2022_table_57",
+        "retrieval_score": 0.027443609022556388,
+        "retrieval_rank": 9,
+        "dense_score": 0.8300678,
+        "dense_rank": 10,
+        "bm25_score": 9.247704823913523,
+        "bm25_rank": 16,
+        "rrf_score": 0.027443609022556388,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_57",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1520
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "FTS_financial_statements_2022_table_13",
+        "retrieval_score": 0.025849212924606464,
+        "retrieval_rank": 10,
+        "dense_score": 0.8128282,
+        "dense_rank": 25,
+        "bm25_score": 10.078526297621263,
+        "bm25_rank": 11,
+        "rrf_score": 0.025849212924606464,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_13",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 553
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "FTS_financial_statements_2023_table_16",
+        "retrieval_score": 0.02519288301054952,
+        "retrieval_rank": 11,
+        "dense_score": 0.8104757,
+        "dense_rank": 27,
+        "bm25_score": 9.864898964666507,
+        "bm25_rank": 13,
+        "rrf_score": 0.02519288301054952,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_16",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 484
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "FTS_financial_statements_2023_table_30",
+        "retrieval_score": 0.024827586206896554,
+        "retrieval_rank": 12,
+        "dense_score": 0.82361877,
+        "dense_rank": 15,
+        "bm25_score": 6.34900001300221,
+        "bm25_rank": 27,
+        "rrf_score": 0.024827586206896554,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_30",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1214
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "FTS_financial_statements_2022_table_65",
+        "retrieval_score": 0.024624624624624628,
+        "retrieval_rank": 13,
+        "dense_score": 0.8094976,
+        "dense_rank": 30,
+        "bm25_score": 9.689056801541902,
+        "bm25_rank": 14,
+        "rrf_score": 0.024624624624624628,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_65",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1600
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "FTS_financial_statements_2022_table_40",
+        "retrieval_score": 0.02455892731122089,
+        "retrieval_rank": 14,
+        "dense_score": 0.8389043,
+        "dense_rank": 5,
+        "bm25_score": 4.358501568007648,
+        "bm25_rank": 49,
+        "rrf_score": 0.02455892731122089,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_40",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1390
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "FTS_financial_statements_2022_table_16",
+        "retrieval_score": 0.024540757749712976,
+        "retrieval_rank": 15,
+        "dense_score": 0.8001573,
+        "dense_rank": 44,
+        "bm25_score": 12.478107859924243,
+        "bm25_rank": 7,
+        "rrf_score": 0.024540757749712976,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_16",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 606
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "FTS_financial_statements_2023_table_35",
+        "retrieval_score": 0.02415181138585394,
+        "retrieval_rank": 16,
+        "dense_score": 0.8245624,
+        "dense_rank": 14,
+        "bm25_score": 5.26320814010239,
+        "bm25_rank": 34,
+        "rrf_score": 0.02415181138585394,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_35",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1247
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "FTS_financial_statements_2023_table_7",
+        "retrieval_score": 0.02402745995423341,
+        "retrieval_rank": 17,
+        "dense_score": 0.8225986,
+        "dense_rank": 16,
+        "bm25_score": 5.33284619519207,
+        "bm25_rank": 32,
+        "rrf_score": 0.02402745995423341,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_7",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 328
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "FTS_financial_statements_2022_table_5",
+        "retrieval_score": 0.023985497141263423,
+        "retrieval_rank": 18,
+        "dense_score": 0.82969517,
+        "dense_rank": 11,
+        "bm25_score": 4.603355453302326,
+        "bm25_rank": 41,
+        "rrf_score": 0.023985497141263423,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_5",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 368
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "FTS_financial_statements_2022_table_4",
+        "retrieval_score": 0.023976023976023976,
+        "retrieval_rank": 19,
+        "dense_score": 0.8225986,
+        "dense_rank": 17,
+        "bm25_score": 5.33284619519207,
+        "bm25_rank": 31,
+        "rrf_score": 0.023976023976023976,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_4",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 353
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "FTS_financial_statements_2023_table_8",
+        "retrieval_score": 0.02388888888888889,
+        "retrieval_rank": 20,
+        "dense_score": 0.828359,
+        "dense_rank": 12,
+        "bm25_score": 4.786537584935073,
+        "bm25_rank": 40,
+        "rrf_score": 0.02388888888888889,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_8",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 343
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "FTS_financial_statements_2022_table_26",
+        "retrieval_score": 0.023809523809523808,
+        "retrieval_rank": 21,
+        "dense_score": 0.7997476,
+        "dense_rank": 45,
+        "bm25_score": 10.085646110664818,
+        "bm25_rank": 10,
+        "rrf_score": 0.023809523809523808,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_26",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1191
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "FTS_financial_statements_2022_table_24",
+        "retrieval_score": 0.02340736800106397,
+        "retrieval_rank": 22,
+        "dense_score": 0.8276696,
+        "dense_rank": 13,
+        "bm25_score": 4.553368853745847,
+        "bm25_rank": 43,
+        "rrf_score": 0.02340736800106397,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_24",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1176
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "FTS_financial_statements_2023_table_12",
+        "retrieval_score": 0.023403679653679656,
+        "retrieval_rank": 23,
+        "dense_score": 0.8065803,
+        "dense_rank": 36,
+        "bm25_score": 9.140261509714035,
+        "bm25_rank": 17,
+        "rrf_score": 0.023403679653679656,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_12",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 414
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "FTS_financial_statements_2022_table_61",
+        "retrieval_score": 0.023284147827264113,
+        "retrieval_rank": 24,
+        "dense_score": 0.81010973,
+        "dense_rank": 29,
+        "bm25_score": 7.261814972233838,
+        "bm25_rank": 23,
+        "rrf_score": 0.023284147827264113,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_61",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1554
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "FTS_financial_statements_2023_table_51",
+        "retrieval_score": 0.023268398268398268,
+        "retrieval_rank": 25,
+        "dense_score": 0.81010973,
+        "dense_rank": 28,
+        "bm25_score": 7.261814972233838,
+        "bm25_rank": 24,
+        "rrf_score": 0.023268398268398268,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_51",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1444
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "FTS_financial_statements_2023_table_27",
+        "retrieval_score": 0.023148148148148147,
+        "retrieval_rank": 26,
+        "dense_score": 0.7977518,
+        "dense_rank": 48,
+        "bm25_score": 10.03972372777672,
+        "bm25_rank": 12,
+        "rrf_score": 0.023148148148148147,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_27",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1143
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "FTS_financial_statements_2022_table_6",
+        "retrieval_score": 0.022403003754693368,
+        "retrieval_rank": 27,
+        "dense_score": 0.8078697,
+        "dense_rank": 34,
+        "bm25_score": 6.545921221580661,
+        "bm25_rank": 25,
+        "rrf_score": 0.022403003754693368,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_6",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 388
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "FTS_financial_statements_2023_table_9",
+        "retrieval_score": 0.022380595148787197,
+        "retrieval_rank": 28,
+        "dense_score": 0.8078697,
+        "dense_rank": 33,
+        "bm25_score": 6.545921221580661,
+        "bm25_rank": 26,
+        "rrf_score": 0.022380595148787197,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_9",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 354
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "FTS_financial_statements_2023_table_10",
+        "retrieval_score": 0.022149202872094438,
+        "retrieval_rank": 29,
+        "dense_score": 0.8149862,
+        "dense_rank": 23,
+        "bm25_score": 5.089735446165881,
+        "bm25_rank": 39,
+        "rrf_score": 0.022149202872094438,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_10",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 365
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "FTS_financial_statements_2022_table_7",
+        "retrieval_score": 0.022108843537414963,
+        "retrieval_rank": 30,
+        "dense_score": 0.8149862,
+        "dense_rank": 24,
+        "bm25_score": 5.089735446165881,
+        "bm25_rank": 38,
+        "rrf_score": 0.022108843537414963,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_7",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 406
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "FTS_financial_statements_2022_table_8",
+        "retrieval_score": 0.021691473404869044,
+        "retrieval_rank": 31,
+        "dense_score": 0.7984973,
+        "dense_rank": 47,
+        "bm25_score": 7.616482572850515,
+        "bm25_rank": 21,
+        "rrf_score": 0.021691473404869044,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_8",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 438
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "FTS_financial_statements_2022_table_17",
+        "retrieval_score": 0.020545073375262055,
+        "retrieval_rank": 32,
+        "dense_score": 0.79854906,
+        "dense_rank": 46,
+        "bm25_score": 5.51711546481419,
+        "bm25_rank": 30,
+        "rrf_score": 0.020545073375262055,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_17",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 616
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "FTS_financial_statements_2023_table_48",
+        "retrieval_score": 0.020141700404858298,
+        "retrieval_rank": 33,
+        "dense_score": 0.8071629,
+        "dense_rank": 35,
+        "bm25_score": 4.53095104447658,
+        "bm25_rank": 44,
+        "rrf_score": 0.020141700404858298,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_48",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1432
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "FTS_financial_statements_2022_table_56",
+        "retrieval_score": 0.019927000098648517,
+        "retrieval_rank": 34,
+        "dense_score": 0.7970559,
+        "dense_rank": 49,
+        "bm25_score": 5.300418188229339,
+        "bm25_rank": 33,
+        "rrf_score": 0.019927000098648517,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_56",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1516
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "FTS_financial_statements_2022_table_58",
+        "retrieval_score": 0.019727891156462583,
+        "retrieval_rank": 35,
+        "dense_score": 0.8054948,
+        "dense_rank": 38,
+        "bm25_score": 4.525477336832395,
+        "bm25_rank": 45,
+        "rrf_score": 0.019727891156462583,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_58",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1542
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "FTS_financial_statements_2023_table_36",
+        "retrieval_score": 0.01889483065953654,
+        "retrieval_rank": 36,
+        "dense_score": 0.8004971,
+        "dense_rank": 42,
+        "bm25_score": 3.7255096485212276,
+        "bm25_rank": 50,
+        "rrf_score": 0.01889483065953654,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_36",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1258
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "FTS_financial_statements_2022_table_15",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 37,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.364426279990596,
+        "bm25_rank": 15,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_15",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 602
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "FTS_financial_statements_2023_table_26",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 38,
+        "dense_score": 0.8190718,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_26",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1134
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "FTS_financial_statements_2023_table_33",
+        "retrieval_score": 0.01282051282051282,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.464624344223736,
+        "bm25_rank": 18,
+        "rrf_score": 0.01282051282051282,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_33",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1236
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "FTS_financial_statements_2022_table_39",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.093188878419202,
+        "bm25_rank": 19,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_39",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1381
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "FTS_financial_statements_2023_table_47",
+        "retrieval_score": 0.012658227848101266,
+        "retrieval_rank": 41,
+        "dense_score": 0.8186878,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012658227848101266,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_47",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1421
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "FTS_financial_statements_2022_table_25",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 42,
+        "dense_score": 0.81713915,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_25",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1182
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "FTS_financial_statements_2023_table_55",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.670455181475255,
+        "bm25_rank": 20,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_55",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1479
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "FTS_financial_statements_2023_table_45",
+        "retrieval_score": 0.012345679012345678,
+        "retrieval_rank": 44,
+        "dense_score": 0.8169257,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012345679012345678,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_45",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1413
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "FTS_financial_statements_2022_table_55",
+        "retrieval_score": 0.012195121951219513,
+        "retrieval_rank": 45,
+        "dense_score": 0.8166674,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012195121951219513,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_55",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1512
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "FTS_financial_statements_2023_table_11",
+        "retrieval_score": 0.012195121951219513,
+        "retrieval_rank": 46,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.616482572850515,
+        "bm25_rank": 22,
+        "rrf_score": 0.012195121951219513,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_11",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 390
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "FTS_financial_statements_2023_table_25",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 47,
+        "dense_score": 0.8121753,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_25",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1128
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "FTS_financial_statements_2023_table_31",
+        "retrieval_score": 0.011363636363636364,
+        "retrieval_rank": 48,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.693700093007916,
+        "bm25_rank": 28,
+        "rrf_score": 0.011363636363636364,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_31",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1223
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "FTS_financial_statements_2023_table_46",
+        "retrieval_score": 0.011235955056179775,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.566132424109602,
+        "bm25_rank": 29,
+        "rrf_score": 0.011235955056179775,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2023_table_46",
+          "doc_id": "FTS_financial_statements_2023",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1417
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "FTS_financial_statements_2022_table_44",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 50,
+        "dense_score": 0.808254,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "FTS_financial_statements_2022_table_44",
+          "doc_id": "FTS_financial_statements_2022",
+          "ticker": "FTS",
+          "company_name": "CTCP Chứng khoán FPT",
+          "report_type": "other",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1436
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "FTS_financial_statements_2022",
+            "FTS_financial_statements_2023"
+          ],
+          "tables": [
+            "FTS_financial_statements_2022|1550",
+            "FTS_financial_statements_2023|1440",
+            "FTS_financial_statements_2022|1546",
+            "FTS_financial_statements_2023|1436",
+            "FTS_financial_statements_2023|456"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f2": 0.7692307692307692,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "FTS_financial_statements_2022",
+            "FTS_financial_statements_2023"
+          ],
+          "tables": [
+            "FTS_financial_statements_2022|1550",
+            "FTS_financial_statements_2023|1440",
+            "FTS_financial_statements_2022|1546",
+            "FTS_financial_statements_2023|1436",
+            "FTS_financial_statements_2023|456",
+            "FTS_financial_statements_2022|514",
+            "FTS_financial_statements_2023|473",
+            "FTS_financial_statements_2022|542",
+            "FTS_financial_statements_2022|1520",
+            "FTS_financial_statements_2022|553"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "FTS_financial_statements_2022",
+            "FTS_financial_statements_2023"
+          ],
+          "tables": [
+            "FTS_financial_statements_2022|1550",
+            "FTS_financial_statements_2023|1440",
+            "FTS_financial_statements_2022|1546",
+            "FTS_financial_statements_2023|1436",
+            "FTS_financial_statements_2023|456",
+            "FTS_financial_statements_2022|514",
+            "FTS_financial_statements_2023|473",
+            "FTS_financial_statements_2022|542",
+            "FTS_financial_statements_2022|1520",
+            "FTS_financial_statements_2022|553",
+            "FTS_financial_statements_2023|484",
+            "FTS_financial_statements_2023|1214",
+            "FTS_financial_statements_2022|1600",
+            "FTS_financial_statements_2022|1390",
+            "FTS_financial_statements_2022|606",
+            "FTS_financial_statements_2023|1247",
+            "FTS_financial_statements_2023|328",
+            "FTS_financial_statements_2022|368",
+            "FTS_financial_statements_2022|353",
+            "FTS_financial_statements_2023|343"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "FTS_financial_statements_2022",
+            "FTS_financial_statements_2023"
+          ],
+          "tables": [
+            "FTS_financial_statements_2022|1550",
+            "FTS_financial_statements_2023|1440",
+            "FTS_financial_statements_2022|1546",
+            "FTS_financial_statements_2023|1436",
+            "FTS_financial_statements_2023|456",
+            "FTS_financial_statements_2022|514",
+            "FTS_financial_statements_2023|473",
+            "FTS_financial_statements_2022|542",
+            "FTS_financial_statements_2022|1520",
+            "FTS_financial_statements_2022|553",
+            "FTS_financial_statements_2023|484",
+            "FTS_financial_statements_2023|1214",
+            "FTS_financial_statements_2022|1600",
+            "FTS_financial_statements_2022|1390",
+            "FTS_financial_statements_2022|606",
+            "FTS_financial_statements_2023|1247",
+            "FTS_financial_statements_2023|328",
+            "FTS_financial_statements_2022|368",
+            "FTS_financial_statements_2022|353",
+            "FTS_financial_statements_2023|343",
+            "FTS_financial_statements_2022|1191",
+            "FTS_financial_statements_2022|1176",
+            "FTS_financial_statements_2023|414",
+            "FTS_financial_statements_2022|1554",
+            "FTS_financial_statements_2023|1444",
+            "FTS_financial_statements_2023|1143",
+            "FTS_financial_statements_2022|388",
+            "FTS_financial_statements_2023|354",
+            "FTS_financial_statements_2023|365",
+            "FTS_financial_statements_2022|406",
+            "FTS_financial_statements_2022|438",
+            "FTS_financial_statements_2022|616",
+            "FTS_financial_statements_2023|1432",
+            "FTS_financial_statements_2022|1516",
+            "FTS_financial_statements_2022|1542",
+            "FTS_financial_statements_2023|1258",
+            "FTS_financial_statements_2022|602",
+            "FTS_financial_statements_2023|1134",
+            "FTS_financial_statements_2023|1236",
+            "FTS_financial_statements_2022|1381",
+            "FTS_financial_statements_2023|1421",
+            "FTS_financial_statements_2022|1182",
+            "FTS_financial_statements_2023|1479",
+            "FTS_financial_statements_2023|1413",
+            "FTS_financial_statements_2022|1512",
+            "FTS_financial_statements_2023|390",
+            "FTS_financial_statements_2023|1128",
+            "FTS_financial_statements_2023|1223",
+            "FTS_financial_statements_2023|1417",
+            "FTS_financial_statements_2022|1436"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

@@ -1,0 +1,1360 @@
+{
+  "schema_version": 1,
+  "id": 94,
+  "question": "Lợi nhuận thuần sau thuế của CTCP Tập đoàn Dabaco Việt Nam năm 2021 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-22T13:51:13+00:00",
+  "finished_at": "2026-08-22T13:51:13+00:00",
+  "duration_seconds": 0.3094423779984936,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DBC_financial_statements_2021_consolidated"
+    ],
+    "relevant_tables": [
+      "DBC_financial_statements_2021_consolidated|1583"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DBC"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Lợi nhuận thuần sau thuế trăm tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DBC",
+        "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+        "matched_text": "CTCP Tập đoàn Dabaco Việt Nam",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "PC1",
+        "company_name": "CTCP Tập Đoàn PC1",
+        "matched_text": "CTCP Tập đoàn",
+        "match_type": "fuzzy_company_name"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Lợi nhuận thuần sau thuế trăm tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DBC",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DBC"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_62",
+        "retrieval_score": 0.03125763125763126,
+        "retrieval_rank": 1,
+        "dense_score": 0.85081166,
+        "dense_rank": 3,
+        "bm25_score": 12.416003748483536,
+        "bm25_rank": 5,
+        "rrf_score": 0.03125763125763126,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_62",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 1537
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_56",
+        "retrieval_score": 0.031099324975891997,
+        "retrieval_rank": 2,
+        "dense_score": 0.85904104,
+        "dense_rank": 1,
+        "bm25_score": 7.944732924887125,
+        "bm25_rank": 8,
+        "rrf_score": 0.031099324975891997,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_56",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1457
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_28",
+        "retrieval_score": 0.031054405392392875,
+        "retrieval_rank": 3,
+        "dense_score": 0.85411954,
+        "dense_rank": 2,
+        "bm25_score": 9.049930478386772,
+        "bm25_rank": 7,
+        "rrf_score": 0.031054405392392875,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_28",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1085
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_7",
+        "retrieval_score": 0.029051670471052088,
+        "retrieval_rank": 4,
+        "dense_score": 0.82542723,
+        "dense_rank": 19,
+        "bm25_score": 15.298740530363581,
+        "bm25_rank": 1,
+        "rrf_score": 0.029051670471052088,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_7",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 284
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_63",
+        "retrieval_score": 0.02821869488536155,
+        "retrieval_rank": 5,
+        "dense_score": 0.82333696,
+        "dense_rank": 21,
+        "bm25_score": 13.719350470602201,
+        "bm25_rank": 3,
+        "rrf_score": 0.02821869488536155,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_63",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1583
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_46",
+        "retrieval_score": 0.028169014084507043,
+        "retrieval_rank": 6,
+        "dense_score": 0.82955205,
+        "dense_rank": 11,
+        "bm25_score": 5.299020306373587,
+        "bm25_rank": 11,
+        "rrf_score": 0.028169014084507043,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_46",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1343
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_38",
+        "retrieval_score": 0.027972027972027972,
+        "retrieval_rank": 7,
+        "dense_score": 0.8399646,
+        "dense_rank": 6,
+        "bm25_score": 2.6262101476164577,
+        "bm25_rank": 18,
+        "rrf_score": 0.027972027972027972,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_38",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_41",
+        "retrieval_score": 0.027912386121341344,
+        "retrieval_rank": 8,
+        "dense_score": 0.8378073,
+        "dense_rank": 7,
+        "bm25_score": 2.6779894506553057,
+        "bm25_rank": 17,
+        "rrf_score": 0.027912386121341344,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_41",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1263
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_40",
+        "retrieval_score": 0.02786377708978328,
+        "retrieval_rank": 9,
+        "dense_score": 0.8378073,
+        "dense_rank": 8,
+        "bm25_score": 2.6779894506553057,
+        "bm25_rank": 16,
+        "rrf_score": 0.02786377708978328,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_40",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1259
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_64",
+        "retrieval_score": 0.027820121951219513,
+        "retrieval_rank": 10,
+        "dense_score": 0.8226477,
+        "dense_rank": 22,
+        "bm25_score": 13.19044438799704,
+        "bm25_rank": 4,
+        "rrf_score": 0.027820121951219513,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_64",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1605
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_32",
+        "retrieval_score": 0.02761904761904762,
+        "retrieval_rank": 11,
+        "dense_score": 0.8318861,
+        "dense_rank": 10,
+        "bm25_score": 2.7319939407667726,
+        "bm25_rank": 15,
+        "rrf_score": 0.02761904761904762,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_32",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1125
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_9",
+        "retrieval_score": 0.027313266443701224,
+        "retrieval_rank": 12,
+        "dense_score": 0.82552445,
+        "dense_rank": 18,
+        "bm25_score": 6.1626925612985355,
+        "bm25_rank": 9,
+        "rrf_score": 0.027313266443701224,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_9",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 340
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_8",
+        "retrieval_score": 0.02719970792259949,
+        "retrieval_rank": 13,
+        "dense_score": 0.8210182,
+        "dense_rank": 23,
+        "bm25_score": 9.896261298007314,
+        "bm25_rank": 6,
+        "rrf_score": 0.02719970792259949,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_8",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2021,
+          "start_line": 311
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_10",
+        "retrieval_score": 0.026767330130404943,
+        "retrieval_rank": 14,
+        "dense_score": 0.80636156,
+        "dense_rank": 34,
+        "bm25_score": 13.858421158185912,
+        "bm25_rank": 2,
+        "rrf_score": 0.026767330130404943,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_10",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2021,
+          "start_line": 355
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_55",
+        "retrieval_score": 0.026356857985087564,
+        "retrieval_rank": 15,
+        "dense_score": 0.8285655,
+        "dense_rank": 13,
+        "bm25_score": 2.5022563693765165,
+        "bm25_rank": 19,
+        "rrf_score": 0.026356857985087564,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_55",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1453
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_6",
+        "retrieval_score": 0.02625745950554135,
+        "retrieval_rank": 16,
+        "dense_score": 0.83745426,
+        "dense_rank": 9,
+        "bm25_score": 2.065128115744575,
+        "bm25_rank": 25,
+        "rrf_score": 0.02625745950554135,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_6",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2021,
+          "start_line": 269
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_45",
+        "retrieval_score": 0.025396825396825397,
+        "retrieval_rank": 17,
+        "dense_score": 0.81406736,
+        "dense_rank": 30,
+        "bm25_score": 5.6998798771320125,
+        "bm25_rank": 10,
+        "rrf_score": 0.025396825396825397,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_45",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1339
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_44",
+        "retrieval_score": 0.024758454106280192,
+        "retrieval_rank": 18,
+        "dense_score": 0.81041205,
+        "dense_rank": 32,
+        "bm25_score": 4.990888869222982,
+        "bm25_rank": 12,
+        "rrf_score": 0.024758454106280192,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_44",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1314
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_48",
+        "retrieval_score": 0.02381289865343728,
+        "retrieval_rank": 19,
+        "dense_score": 0.8189603,
+        "dense_rank": 25,
+        "bm25_score": 2.2349709787554204,
+        "bm25_rank": 23,
+        "rrf_score": 0.02381289865343728,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_48",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1368
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_34",
+        "retrieval_score": 0.023268398268398268,
+        "retrieval_rank": 20,
+        "dense_score": 0.8161821,
+        "dense_rank": 28,
+        "bm25_score": 2.2000024649449412,
+        "bm25_rank": 24,
+        "rrf_score": 0.023268398268398268,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_34",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1144
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_43",
+        "retrieval_score": 0.023222251377591183,
+        "retrieval_rank": 21,
+        "dense_score": 0.8003272,
+        "dense_rank": 43,
+        "bm25_score": 2.9526644822328687,
+        "bm25_rank": 14,
+        "rrf_score": 0.023222251377591183,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_43",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1298
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_42",
+        "retrieval_score": 0.022947810123262524,
+        "retrieval_rank": 22,
+        "dense_score": 0.809615,
+        "dense_rank": 33,
+        "bm25_score": 2.2824549368438847,
+        "bm25_rank": 22,
+        "rrf_score": 0.022947810123262524,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_42",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1284
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_23",
+        "retrieval_score": 0.021109637488947834,
+        "retrieval_rank": 23,
+        "dense_score": 0.7998366,
+        "dense_rank": 44,
+        "bm25_score": 1.2504122044623178,
+        "bm25_rank": 27,
+        "rrf_score": 0.021109637488947834,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_23",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1002
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_25",
+        "retrieval_score": 0.020718816067653276,
+        "retrieval_rank": 24,
+        "dense_score": 0.7934184,
+        "dense_rank": 50,
+        "bm25_score": 1.989852227481994,
+        "bm25_rank": 26,
+        "rrf_score": 0.020718816067653276,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_25",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1027
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_19",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 25,
+        "dense_score": 0.84556377,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_19",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 959
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_21",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 26,
+        "dense_score": 0.8416318,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_21",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 969
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_33",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 27,
+        "dense_score": 0.8287432,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_33",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1129
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_4",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 28,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 3.703960184843047,
+        "bm25_rank": 13,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_4",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 131
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_49",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 29,
+        "dense_score": 0.82775664,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_49",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1372
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_18",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 30,
+        "dense_score": 0.8269181,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_18",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 940
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_30",
+        "retrieval_score": 0.013157894736842105,
+        "retrieval_rank": 31,
+        "dense_score": 0.82559323,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013157894736842105,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_30",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1104
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_29",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 32,
+        "dense_score": 0.8255387,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_29",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1089
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_26",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 33,
+        "dense_score": 0.8238845,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_26",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1052
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_36",
+        "retrieval_score": 0.0125,
+        "retrieval_rank": 34,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.342977894621102,
+        "bm25_rank": 20,
+        "rrf_score": 0.0125,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_36",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1177
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_24",
+        "retrieval_score": 0.012345679012345678,
+        "retrieval_rank": 35,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 2.2963272882433845,
+        "bm25_rank": 21,
+        "rrf_score": 0.012345679012345678,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_24",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1021
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_54",
+        "retrieval_score": 0.011904761904761904,
+        "retrieval_rank": 36,
+        "dense_score": 0.8204333,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011904761904761904,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_54",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1420
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_20",
+        "retrieval_score": 0.011627906976744186,
+        "retrieval_rank": 37,
+        "dense_score": 0.81868124,
+        "dense_rank": 26,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011627906976744186,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_20",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 963
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_31",
+        "retrieval_score": 0.011494252873563218,
+        "retrieval_rank": 38,
+        "dense_score": 0.81824684,
+        "dense_rank": 27,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011494252873563218,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_31",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1108
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_52",
+        "retrieval_score": 0.011235955056179775,
+        "retrieval_rank": 39,
+        "dense_score": 0.8157144,
+        "dense_rank": 29,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.011235955056179775,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_52",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1397
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_53",
+        "retrieval_score": 0.01098901098901099,
+        "retrieval_rank": 40,
+        "dense_score": 0.81355274,
+        "dense_rank": 31,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01098901098901099,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_53",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1401
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_13",
+        "retrieval_score": 0.010526315789473684,
+        "retrieval_rank": 41,
+        "dense_score": 0.8062349,
+        "dense_rank": 35,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010526315789473684,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_13",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 433
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_39",
+        "retrieval_score": 0.010416666666666666,
+        "retrieval_rank": 42,
+        "dense_score": 0.80601645,
+        "dense_rank": 36,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010416666666666666,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_39",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1253
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_14",
+        "retrieval_score": 0.010309278350515464,
+        "retrieval_rank": 43,
+        "dense_score": 0.805814,
+        "dense_rank": 37,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010309278350515464,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_14",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 452
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_59",
+        "retrieval_score": 0.01020408163265306,
+        "retrieval_rank": 44,
+        "dense_score": 0.80565006,
+        "dense_rank": 38,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01020408163265306,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_59",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1508
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_37",
+        "retrieval_score": 0.010101010101010102,
+        "retrieval_rank": 45,
+        "dense_score": 0.8043961,
+        "dense_rank": 39,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.010101010101010102,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_37",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1216
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_50",
+        "retrieval_score": 0.01,
+        "retrieval_rank": 46,
+        "dense_score": 0.8041344,
+        "dense_rank": 40,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_50",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1376
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_51",
+        "retrieval_score": 0.009900990099009901,
+        "retrieval_rank": 47,
+        "dense_score": 0.80270714,
+        "dense_rank": 41,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009900990099009901,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_51",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1393
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_15",
+        "retrieval_score": 0.00980392156862745,
+        "retrieval_rank": 48,
+        "dense_score": 0.80207586,
+        "dense_rank": 42,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.00980392156862745,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_15",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 471
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_17",
+        "retrieval_score": 0.009523809523809525,
+        "retrieval_rank": 49,
+        "dense_score": 0.7998218,
+        "dense_rank": 45,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009523809523809525,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_17",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 934
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "DBC_financial_statements_2021_consolidated_table_58",
+        "retrieval_score": 0.009433962264150943,
+        "retrieval_rank": 50,
+        "dense_score": 0.79851556,
+        "dense_rank": 46,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.009433962264150943,
+        "metadata": {
+          "table_id": "DBC_financial_statements_2021_consolidated_table_58",
+          "doc_id": "DBC_financial_statements_2021_consolidated",
+          "ticker": "DBC",
+          "company_name": "CTCP Tập đoàn Dabaco Việt Nam",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2021,
+          "start_line": 1498
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2021_consolidated|1537",
+            "DBC_financial_statements_2021_consolidated|1457",
+            "DBC_financial_statements_2021_consolidated|1085",
+            "DBC_financial_statements_2021_consolidated|284",
+            "DBC_financial_statements_2021_consolidated|1583"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.2
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2021_consolidated|1537",
+            "DBC_financial_statements_2021_consolidated|1457",
+            "DBC_financial_statements_2021_consolidated|1085",
+            "DBC_financial_statements_2021_consolidated|284",
+            "DBC_financial_statements_2021_consolidated|1583",
+            "DBC_financial_statements_2021_consolidated|1343",
+            "DBC_financial_statements_2021_consolidated|1249",
+            "DBC_financial_statements_2021_consolidated|1263",
+            "DBC_financial_statements_2021_consolidated|1259",
+            "DBC_financial_statements_2021_consolidated|1605"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.2
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2021_consolidated|1537",
+            "DBC_financial_statements_2021_consolidated|1457",
+            "DBC_financial_statements_2021_consolidated|1085",
+            "DBC_financial_statements_2021_consolidated|284",
+            "DBC_financial_statements_2021_consolidated|1583",
+            "DBC_financial_statements_2021_consolidated|1343",
+            "DBC_financial_statements_2021_consolidated|1249",
+            "DBC_financial_statements_2021_consolidated|1263",
+            "DBC_financial_statements_2021_consolidated|1259",
+            "DBC_financial_statements_2021_consolidated|1605",
+            "DBC_financial_statements_2021_consolidated|1125",
+            "DBC_financial_statements_2021_consolidated|340",
+            "DBC_financial_statements_2021_consolidated|311",
+            "DBC_financial_statements_2021_consolidated|355",
+            "DBC_financial_statements_2021_consolidated|1453",
+            "DBC_financial_statements_2021_consolidated|269",
+            "DBC_financial_statements_2021_consolidated|1339",
+            "DBC_financial_statements_2021_consolidated|1314",
+            "DBC_financial_statements_2021_consolidated|1368",
+            "DBC_financial_statements_2021_consolidated|1144"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 1.0,
+          "f2": 0.20833333333333334,
+          "mrr5": 0.2
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DBC_financial_statements_2021_consolidated"
+          ],
+          "tables": [
+            "DBC_financial_statements_2021_consolidated|1537",
+            "DBC_financial_statements_2021_consolidated|1457",
+            "DBC_financial_statements_2021_consolidated|1085",
+            "DBC_financial_statements_2021_consolidated|284",
+            "DBC_financial_statements_2021_consolidated|1583",
+            "DBC_financial_statements_2021_consolidated|1343",
+            "DBC_financial_statements_2021_consolidated|1249",
+            "DBC_financial_statements_2021_consolidated|1263",
+            "DBC_financial_statements_2021_consolidated|1259",
+            "DBC_financial_statements_2021_consolidated|1605",
+            "DBC_financial_statements_2021_consolidated|1125",
+            "DBC_financial_statements_2021_consolidated|340",
+            "DBC_financial_statements_2021_consolidated|311",
+            "DBC_financial_statements_2021_consolidated|355",
+            "DBC_financial_statements_2021_consolidated|1453",
+            "DBC_financial_statements_2021_consolidated|269",
+            "DBC_financial_statements_2021_consolidated|1339",
+            "DBC_financial_statements_2021_consolidated|1314",
+            "DBC_financial_statements_2021_consolidated|1368",
+            "DBC_financial_statements_2021_consolidated|1144",
+            "DBC_financial_statements_2021_consolidated|1298",
+            "DBC_financial_statements_2021_consolidated|1284",
+            "DBC_financial_statements_2021_consolidated|1002",
+            "DBC_financial_statements_2021_consolidated|1027",
+            "DBC_financial_statements_2021_consolidated|959",
+            "DBC_financial_statements_2021_consolidated|969",
+            "DBC_financial_statements_2021_consolidated|1129",
+            "DBC_financial_statements_2021_consolidated|131",
+            "DBC_financial_statements_2021_consolidated|1372",
+            "DBC_financial_statements_2021_consolidated|940",
+            "DBC_financial_statements_2021_consolidated|1104",
+            "DBC_financial_statements_2021_consolidated|1089",
+            "DBC_financial_statements_2021_consolidated|1052",
+            "DBC_financial_statements_2021_consolidated|1177",
+            "DBC_financial_statements_2021_consolidated|1021",
+            "DBC_financial_statements_2021_consolidated|1420",
+            "DBC_financial_statements_2021_consolidated|963",
+            "DBC_financial_statements_2021_consolidated|1108",
+            "DBC_financial_statements_2021_consolidated|1397",
+            "DBC_financial_statements_2021_consolidated|1401",
+            "DBC_financial_statements_2021_consolidated|433",
+            "DBC_financial_statements_2021_consolidated|1253",
+            "DBC_financial_statements_2021_consolidated|452",
+            "DBC_financial_statements_2021_consolidated|1508",
+            "DBC_financial_statements_2021_consolidated|1216",
+            "DBC_financial_statements_2021_consolidated|1376",
+            "DBC_financial_statements_2021_consolidated|1393",
+            "DBC_financial_statements_2021_consolidated|471",
+            "DBC_financial_statements_2021_consolidated|934",
+            "DBC_financial_statements_2021_consolidated|1498"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 1.0,
+          "f2": 0.09259259259259259,
+          "mrr5": 0.2
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

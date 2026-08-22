@@ -163,8 +163,13 @@ class ParserValsetTests(unittest.TestCase):
 
     def test_balanced_retrieval_interleaves_ticker_buckets(self) -> None:
         def side_effect(
-            *, query_text: str, filters: dict[str, object], top_n: int
+            *,
+            query_text: str,
+            filters: dict[str, object],
+            top_n: int,
+            mode: str,
         ) -> list[dict[str, object]]:
+            self.assertEqual(mode, "hybrid")
             ticker = str(filters["ticker"][0])
             return [
                 candidate(f"{ticker}-doc", 10, 1),
@@ -180,6 +185,7 @@ class ParserValsetTests(unittest.TestCase):
                     "report_type": ["consolidated"],
                 },
                 top_n=4,
+                retrieval_mode="hybrid",
             )
 
         self.assertEqual(mocked.call_count, 2)
@@ -188,7 +194,9 @@ class ParserValsetTests(unittest.TestCase):
             [item["metadata"]["doc_id"] for item in candidates],
             ["AAA-doc", "BBB-doc", "AAA-doc", "BBB-doc"],
         )
-        self.assertEqual([item["dense_rank"] for item in candidates], [1, 2, 3, 4])
+        self.assertEqual(
+            [item["retrieval_rank"] for item in candidates], [1, 2, 3, 4]
+        )
 
     def test_parser_artifact_includes_retrieval_metrics(self) -> None:
         record = {
@@ -222,7 +230,44 @@ class ParserValsetTests(unittest.TestCase):
             artifact["retrieval"]["metrics_by_top_k"]["1"]["tables"]["recall"],
             1.0,
         )
-        retrieve_mock.assert_called_once_with("query", parsed["filters"], top_n=5)
+        retrieve_mock.assert_called_once_with(
+            "query", parsed["filters"], top_n=5, retrieval_mode="dense"
+        )
+
+    def test_original_question_can_replace_semantic_query_for_retrieval(self) -> None:
+        record = {
+            "id": 1,
+            "question": "Original financial question",
+            "relevant_docs": ["VJC_financial_statements_2018_separate"],
+            "relevant_tables": ["VJC_financial_statements_2018_separate|10"],
+        }
+        source = parser_artifact(1)
+        source["question"] = record["question"]
+        source["semantic_query"] = "short semantic query"
+        retrieved = [candidate("VJC_financial_statements_2018_separate", 10, 1)]
+        with (
+            patch("run_parser_valset.parse_query_with_diagnostics") as parse_mock,
+            patch(
+                "run_parser_valset._retrieve_balanced",
+                return_value=(retrieved, [{"ticker": "VJC"}]),
+            ) as retrieve_mock,
+        ):
+            artifact = run_parser_valset._parse_with_transient_retry(
+                record,
+                [1],
+                retrieval_query_source="question",
+                parser_source=source,
+            )
+
+        parse_mock.assert_not_called()
+        retrieve_mock.assert_called_once_with(
+            record["question"],
+            source["filters"],
+            top_n=1,
+            retrieval_mode="dense",
+        )
+        self.assertEqual(artifact["retrieval"]["query_source"], "question")
+        self.assertEqual(artifact["retrieval"]["query_text"], record["question"])
 
     def test_aggregate_retrieval_counts_failed_question_as_empty(self) -> None:
         first = parser_artifact(1)

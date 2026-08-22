@@ -1,0 +1,1391 @@
+{
+  "schema_version": 1,
+  "id": 770,
+  "question": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T13:50:52+00:00",
+  "finished_at": "2026-08-22T13:50:52+00:00",
+  "duration_seconds": 0.5538305109948851,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GAS",
+      "POW"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "GAS_financial_statements_2023_separate",
+      "POW_financial_statements_2023_separate"
+    ],
+    "relevant_tables": [
+      "GAS_financial_statements_2023_separate|567",
+      "POW_financial_statements_2023_separate|358"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "GAS",
+      "POW"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Hiệu số vốn chủ sở hữu và tính đến ngày 31/12/ tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "matched_text": "Tổng Công ty Khí Việt Nam - CTCP",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "matched_text": "Điện lực Dầu khí Việt Nam",
+        "match_type": "normalized_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        "separate"
+      ],
+      "extra": [
+        "consolidated"
+      ]
+    }
+  },
+  "retrieval": {
+    "mode": "dense",
+    "query_source": "semantic",
+    "query_text": "Hiệu số vốn chủ sở hữu và tính đến ngày 31/12/ tỷ đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "GAS",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GAS"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "POW",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "dense",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "POW"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_47",
+        "retrieval_score": 0.8767973,
+        "retrieval_rank": 1,
+        "dense_score": 0.8767973,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_47",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1439
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "POW_financial_statements_2023_consolidated_table_11",
+        "retrieval_score": 0.86337876,
+        "retrieval_rank": 2,
+        "dense_score": 0.86337876,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_11",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 866
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_41",
+        "retrieval_score": 0.8637764,
+        "retrieval_rank": 3,
+        "dense_score": 0.8637764,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_41",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1360
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "POW_financial_statements_2023_consolidated_table_49",
+        "retrieval_score": 0.86158067,
+        "retrieval_rank": 4,
+        "dense_score": 0.86158067,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_49",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1343
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_46",
+        "retrieval_score": 0.85849184,
+        "retrieval_rank": 5,
+        "dense_score": 0.85849184,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_46",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1420
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "POW_financial_statements_2023_consolidated_table_47",
+        "retrieval_score": 0.8612423,
+        "retrieval_rank": 6,
+        "dense_score": 0.8612423,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_47",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1324
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_25",
+        "retrieval_score": 0.8518054,
+        "retrieval_rank": 7,
+        "dense_score": 0.8518054,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_25",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1172
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "POW_financial_statements_2023_consolidated_table_14",
+        "retrieval_score": 0.8610992,
+        "retrieval_rank": 8,
+        "dense_score": 0.8610992,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_14",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 902
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_42",
+        "retrieval_score": 0.85089576,
+        "retrieval_rank": 9,
+        "dense_score": 0.85089576,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_42",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1377
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "POW_financial_statements_2023_consolidated_table_18",
+        "retrieval_score": 0.8603086,
+        "retrieval_rank": 10,
+        "dense_score": 0.8603086,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_18",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 962
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_38",
+        "retrieval_score": 0.8471339,
+        "retrieval_rank": 11,
+        "dense_score": 0.8471339,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_38",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1320
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "POW_financial_statements_2023_consolidated_table_40",
+        "retrieval_score": 0.8597727,
+        "retrieval_rank": 12,
+        "dense_score": 0.8597727,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_40",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1249
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_73",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 13,
+        "dense_score": 0.8461542,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_73",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1957
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "POW_financial_statements_2023_consolidated_table_57",
+        "retrieval_score": 0.8585258,
+        "retrieval_rank": 14,
+        "dense_score": 0.8585258,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_57",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1469
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_90",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 15,
+        "dense_score": 0.8461542,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_90",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 2018
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "POW_financial_statements_2023_consolidated_table_29",
+        "retrieval_score": 0.8545562,
+        "retrieval_rank": 16,
+        "dense_score": 0.8545562,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_29",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1117
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_28",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 17,
+        "dense_score": 0.8461542,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_28",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1199
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "POW_financial_statements_2023_consolidated_table_42",
+        "retrieval_score": 0.85366344,
+        "retrieval_rank": 18,
+        "dense_score": 0.85366344,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_42",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1272
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_64",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 19,
+        "dense_score": 0.8461542,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_64",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1881
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "POW_financial_statements_2023_consolidated_table_27",
+        "retrieval_score": 0.8533917,
+        "retrieval_rank": 20,
+        "dense_score": 0.8533917,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_27",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1091
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_67",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 21,
+        "dense_score": 0.8461542,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_67",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1916
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "POW_financial_statements_2023_consolidated_table_17",
+        "retrieval_score": 0.8531374,
+        "retrieval_rank": 22,
+        "dense_score": 0.8531374,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_17",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 938
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_62",
+        "retrieval_score": 0.8461542,
+        "retrieval_rank": 23,
+        "dense_score": 0.8461542,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_62",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1733
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "POW_financial_statements_2023_consolidated_table_19",
+        "retrieval_score": 0.8511199,
+        "retrieval_rank": 24,
+        "dense_score": 0.8511199,
+        "dense_rank": 12,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_19",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 979
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_101",
+        "retrieval_score": 0.84470165,
+        "retrieval_rank": 25,
+        "dense_score": 0.84470165,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_101",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 2107
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "POW_financial_statements_2023_consolidated_table_48",
+        "retrieval_score": 0.8497939,
+        "retrieval_rank": 26,
+        "dense_score": 0.8497939,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_48",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1328
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_39",
+        "retrieval_score": 0.84351695,
+        "retrieval_rank": 27,
+        "dense_score": 0.84351695,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_39",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1345
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "POW_financial_statements_2023_consolidated_table_15",
+        "retrieval_score": 0.849183,
+        "retrieval_rank": 28,
+        "dense_score": 0.849183,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_15",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 919
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_7",
+        "retrieval_score": 0.84336674,
+        "retrieval_rank": 29,
+        "dense_score": 0.84336674,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_7",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 415
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "POW_financial_statements_2023_consolidated_table_33",
+        "retrieval_score": 0.84917855,
+        "retrieval_rank": 30,
+        "dense_score": 0.84917855,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_33",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1182
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_100",
+        "retrieval_score": 0.84129405,
+        "retrieval_rank": 31,
+        "dense_score": 0.84129405,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_100",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 2103
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "POW_financial_statements_2023_consolidated_table_52",
+        "retrieval_score": 0.8466349,
+        "retrieval_rank": 32,
+        "dense_score": 0.8466349,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_52",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1368
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_44",
+        "retrieval_score": 0.8400263,
+        "retrieval_rank": 33,
+        "dense_score": 0.8400263,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_44",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1412
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "POW_financial_statements_2023_consolidated_table_32",
+        "retrieval_score": 0.8465917,
+        "retrieval_rank": 34,
+        "dense_score": 0.8465917,
+        "dense_rank": 17,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_32",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1169
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_51",
+        "retrieval_score": 0.8385673,
+        "retrieval_rank": 35,
+        "dense_score": 0.8385673,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_51",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1547
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "POW_financial_statements_2023_consolidated_table_45",
+        "retrieval_score": 0.84552014,
+        "retrieval_rank": 36,
+        "dense_score": 0.84552014,
+        "dense_rank": 18,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_45",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1309
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_11",
+        "retrieval_score": 0.8381255,
+        "retrieval_rank": 37,
+        "dense_score": 0.8381255,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_11",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 983
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "POW_financial_statements_2023_consolidated_table_23",
+        "retrieval_score": 0.84304655,
+        "retrieval_rank": 38,
+        "dense_score": 0.84304655,
+        "dense_rank": 19,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_23",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1049
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_37",
+        "retrieval_score": 0.83733374,
+        "retrieval_rank": 39,
+        "dense_score": 0.83733374,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_37",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1301
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "POW_financial_statements_2023_consolidated_table_22",
+        "retrieval_score": 0.8421013,
+        "retrieval_rank": 40,
+        "dense_score": 0.8421013,
+        "dense_rank": 20,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_22",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1032
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_33",
+        "retrieval_score": 0.83592194,
+        "retrieval_rank": 41,
+        "dense_score": 0.83592194,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_33",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1236
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "POW_financial_statements_2023_consolidated_table_37",
+        "retrieval_score": 0.84139085,
+        "retrieval_rank": 42,
+        "dense_score": 0.84139085,
+        "dense_rank": 21,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_37",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1209
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_18",
+        "retrieval_score": 0.83473593,
+        "retrieval_rank": 43,
+        "dense_score": 0.83473593,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_18",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1079
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "POW_financial_statements_2023_consolidated_table_58",
+        "retrieval_score": 0.8408272,
+        "retrieval_rank": 44,
+        "dense_score": 0.8408272,
+        "dense_rank": 22,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_58",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1478
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_14",
+        "retrieval_score": 0.834375,
+        "retrieval_rank": 45,
+        "dense_score": 0.834375,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_14",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1033
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "POW_financial_statements_2023_consolidated_table_34",
+        "retrieval_score": 0.83995646,
+        "retrieval_rank": 46,
+        "dense_score": 0.83995646,
+        "dense_rank": 23,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_34",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1197
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_12",
+        "retrieval_score": 0.834375,
+        "retrieval_rank": 47,
+        "dense_score": 0.834375,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_12",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1004
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "POW_financial_statements_2023_consolidated_table_46",
+        "retrieval_score": 0.8397585,
+        "retrieval_rank": 48,
+        "dense_score": 0.8397585,
+        "dense_rank": 24,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_46",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1320
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "GAS_financial_statements_2023_consolidated_table_49",
+        "retrieval_score": 0.83411455,
+        "retrieval_rank": 49,
+        "dense_score": 0.83411455,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "GAS_financial_statements_2023_consolidated_table_49",
+          "doc_id": "GAS_financial_statements_2023_consolidated",
+          "ticker": "GAS",
+          "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1510
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "POW_financial_statements_2023_consolidated_table_30",
+        "retrieval_score": 0.838663,
+        "retrieval_rank": 50,
+        "dense_score": 0.838663,
+        "dense_rank": 25,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": null,
+        "metadata": {
+          "table_id": "POW_financial_statements_2023_consolidated_table_30",
+          "doc_id": "POW_financial_statements_2023_consolidated",
+          "ticker": "POW",
+          "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1148
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2023_consolidated",
+            "POW_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2023_consolidated|1439",
+            "POW_financial_statements_2023_consolidated|866",
+            "GAS_financial_statements_2023_consolidated|1360",
+            "POW_financial_statements_2023_consolidated|1343",
+            "GAS_financial_statements_2023_consolidated|1420"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2023_consolidated",
+            "POW_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2023_consolidated|1439",
+            "POW_financial_statements_2023_consolidated|866",
+            "GAS_financial_statements_2023_consolidated|1360",
+            "POW_financial_statements_2023_consolidated|1343",
+            "GAS_financial_statements_2023_consolidated|1420",
+            "POW_financial_statements_2023_consolidated|1324",
+            "GAS_financial_statements_2023_consolidated|1172",
+            "POW_financial_statements_2023_consolidated|902",
+            "GAS_financial_statements_2023_consolidated|1377",
+            "POW_financial_statements_2023_consolidated|962"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2023_consolidated",
+            "POW_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2023_consolidated|1439",
+            "POW_financial_statements_2023_consolidated|866",
+            "GAS_financial_statements_2023_consolidated|1360",
+            "POW_financial_statements_2023_consolidated|1343",
+            "GAS_financial_statements_2023_consolidated|1420",
+            "POW_financial_statements_2023_consolidated|1324",
+            "GAS_financial_statements_2023_consolidated|1172",
+            "POW_financial_statements_2023_consolidated|902",
+            "GAS_financial_statements_2023_consolidated|1377",
+            "POW_financial_statements_2023_consolidated|962",
+            "GAS_financial_statements_2023_consolidated|1320",
+            "POW_financial_statements_2023_consolidated|1249",
+            "GAS_financial_statements_2023_consolidated|1957",
+            "POW_financial_statements_2023_consolidated|1469",
+            "GAS_financial_statements_2023_consolidated|2018",
+            "POW_financial_statements_2023_consolidated|1117",
+            "GAS_financial_statements_2023_consolidated|1199",
+            "POW_financial_statements_2023_consolidated|1272",
+            "GAS_financial_statements_2023_consolidated|1881",
+            "POW_financial_statements_2023_consolidated|1091"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "GAS_financial_statements_2023_consolidated",
+            "POW_financial_statements_2023_consolidated"
+          ],
+          "tables": [
+            "GAS_financial_statements_2023_consolidated|1439",
+            "POW_financial_statements_2023_consolidated|866",
+            "GAS_financial_statements_2023_consolidated|1360",
+            "POW_financial_statements_2023_consolidated|1343",
+            "GAS_financial_statements_2023_consolidated|1420",
+            "POW_financial_statements_2023_consolidated|1324",
+            "GAS_financial_statements_2023_consolidated|1172",
+            "POW_financial_statements_2023_consolidated|902",
+            "GAS_financial_statements_2023_consolidated|1377",
+            "POW_financial_statements_2023_consolidated|962",
+            "GAS_financial_statements_2023_consolidated|1320",
+            "POW_financial_statements_2023_consolidated|1249",
+            "GAS_financial_statements_2023_consolidated|1957",
+            "POW_financial_statements_2023_consolidated|1469",
+            "GAS_financial_statements_2023_consolidated|2018",
+            "POW_financial_statements_2023_consolidated|1117",
+            "GAS_financial_statements_2023_consolidated|1199",
+            "POW_financial_statements_2023_consolidated|1272",
+            "GAS_financial_statements_2023_consolidated|1881",
+            "POW_financial_statements_2023_consolidated|1091",
+            "GAS_financial_statements_2023_consolidated|1916",
+            "POW_financial_statements_2023_consolidated|938",
+            "GAS_financial_statements_2023_consolidated|1733",
+            "POW_financial_statements_2023_consolidated|979",
+            "GAS_financial_statements_2023_consolidated|2107",
+            "POW_financial_statements_2023_consolidated|1328",
+            "GAS_financial_statements_2023_consolidated|1345",
+            "POW_financial_statements_2023_consolidated|919",
+            "GAS_financial_statements_2023_consolidated|415",
+            "POW_financial_statements_2023_consolidated|1182",
+            "GAS_financial_statements_2023_consolidated|2103",
+            "POW_financial_statements_2023_consolidated|1368",
+            "GAS_financial_statements_2023_consolidated|1412",
+            "POW_financial_statements_2023_consolidated|1169",
+            "GAS_financial_statements_2023_consolidated|1547",
+            "POW_financial_statements_2023_consolidated|1309",
+            "GAS_financial_statements_2023_consolidated|983",
+            "POW_financial_statements_2023_consolidated|1049",
+            "GAS_financial_statements_2023_consolidated|1301",
+            "POW_financial_statements_2023_consolidated|1032",
+            "GAS_financial_statements_2023_consolidated|1236",
+            "POW_financial_statements_2023_consolidated|1209",
+            "GAS_financial_statements_2023_consolidated|1079",
+            "POW_financial_statements_2023_consolidated|1478",
+            "GAS_financial_statements_2023_consolidated|1033",
+            "POW_financial_statements_2023_consolidated|1197",
+            "GAS_financial_statements_2023_consolidated|1004",
+            "POW_financial_statements_2023_consolidated|1320",
+            "GAS_financial_statements_2023_consolidated|1510",
+            "POW_financial_statements_2023_consolidated|1148"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

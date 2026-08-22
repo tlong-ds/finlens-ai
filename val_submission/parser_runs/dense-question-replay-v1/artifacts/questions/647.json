@@ -1,0 +1,1070 @@
+{
+  "schema_version": 1,
+  "id": 647,
+  "question": "Tính phần trăm tốc độ tăng trưởng số dư dự phòng rủi ro cho vay khách hàng của ACB từ năm 2017 đến năm 2019.",
+  "started_at": "2026-08-22T13:39:24+00:00",
+  "finished_at": "2026-08-22T13:39:25+00:00",
+  "duration_seconds": 0.3990765390044544,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "ACB"
+    ],
+    "year": [
+      2017,
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "ACB_financial_statements_2017_consolidated",
+      "ACB_financial_statements_2019_consolidated"
+    ],
+    "relevant_tables": [
+      "ACB_financial_statements_2017_consolidated|1722",
+      "ACB_financial_statements_2019_consolidated|1905"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "ACB"
+    ],
+    "year": [
+      2017,
+      2018,
+      2019
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Tính phần trăm tốc độ tăng trưởng số dư dự phòng rủi ro cho vay khách hàng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "ACB",
+        "company_name": "Ngân hàng TMCP Á Châu",
+        "matched_text": "ACB",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017,
+            2018,
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": false,
+      "coverage": true,
+      "missing": [],
+      "extra": [
+        2018
+      ]
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "query_source": "question",
+    "query_text": "Tính phần trăm tốc độ tăng trưởng số dư dự phòng rủi ro cho vay khách hàng của ACB từ năm 2017 đến năm 2019.",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "ACB",
+        "requested_top_n": 50,
+        "candidate_count": 50,
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "ACB"
+          ],
+          "year": [
+            2017,
+            2018,
+            2019
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_34",
+        "retrieval_score": 0.8570462,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_34",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1754
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_35",
+        "retrieval_score": 0.85680085,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_35",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1905
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_40",
+        "retrieval_score": 0.8545453,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_40",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1722
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_26",
+        "retrieval_score": 0.85354394,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_26",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1771
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_29",
+        "retrieval_score": 0.8484043,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_29",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1607
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_25",
+        "retrieval_score": 0.8477025,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_25",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1690
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_45",
+        "retrieval_score": 0.84350246,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_45",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1826
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_36",
+        "retrieval_score": 0.8429841,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_36",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1804
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_75",
+        "retrieval_score": 0.84246397,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_75",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2641
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_77",
+        "retrieval_score": 0.84246397,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_77",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2238
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_82",
+        "retrieval_score": 0.84097666,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_82",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2196
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_6",
+        "retrieval_score": 0.84038234,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_6",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2017,
+          "start_line": 258
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_92",
+        "retrieval_score": 0.8371578,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_92",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2577
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_60",
+        "retrieval_score": 0.8362813,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_60",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1974
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_51",
+        "retrieval_score": 0.8336424,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_51",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2160
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_37",
+        "retrieval_score": 0.83298355,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_37",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1957
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_24",
+        "retrieval_score": 0.8327899,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_24",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1671
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_68",
+        "retrieval_score": 0.8312348,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_68",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2067
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_28",
+        "retrieval_score": 0.8292298,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_28",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1588
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_89",
+        "retrieval_score": 0.82804406,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_89",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2905
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_97",
+        "retrieval_score": 0.82735306,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_97",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2456
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_74",
+        "retrieval_score": 0.82608473,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_74",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2129
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_69",
+        "retrieval_score": 0.82598245,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_69",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2169
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_25",
+        "retrieval_score": 0.8256722,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_25",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1765
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_63",
+        "retrieval_score": 0.82536167,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_63",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2097
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_9",
+        "retrieval_score": 0.8245475,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_9",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 471
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_92",
+        "retrieval_score": 0.82437664,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_92",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2988
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_9",
+        "retrieval_score": 0.8236769,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_9",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 357
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_9",
+        "retrieval_score": 0.8236769,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_9",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 365
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_64",
+        "retrieval_score": 0.8236043,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_64",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2478
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_30",
+        "retrieval_score": 0.82340246,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_30",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1725
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_31",
+        "retrieval_score": 0.82340246,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_31",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1870
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_50",
+        "retrieval_score": 0.8230014,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_50",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1876
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_94",
+        "retrieval_score": 0.82291555,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_94",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2324
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_89",
+        "retrieval_score": 0.82291555,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_89",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2399
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_74",
+        "retrieval_score": 0.822657,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_74",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2637
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_76",
+        "retrieval_score": 0.8224261,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_76",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2232
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_42",
+        "retrieval_score": 0.822345,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_42",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 2026
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_97",
+        "retrieval_score": 0.8218173,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_97",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 3117
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_98",
+        "retrieval_score": 0.8218173,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_98",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 3135
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_36",
+        "retrieval_score": 0.82164717,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_36",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1693
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_99",
+        "retrieval_score": 0.82126045,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_99",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2718
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_104",
+        "retrieval_score": 0.82126045,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_104",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2597
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_97",
+        "retrieval_score": 0.82126045,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_97",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2702
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_73",
+        "retrieval_score": 0.8211713,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_73",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2125
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_68",
+        "retrieval_score": 0.8210157,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_68",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 2165
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "ACB_financial_statements_2019_consolidated_table_29",
+        "retrieval_score": 0.8207709,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2019_consolidated_table_29",
+          "doc_id": "ACB_financial_statements_2019_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2019,
+          "start_line": 1818
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_41",
+        "retrieval_score": 0.8198774,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_41",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 1741
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "ACB_financial_statements_2017_consolidated_table_103",
+        "retrieval_score": 0.8194273,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2017_consolidated_table_103",
+          "doc_id": "ACB_financial_statements_2017_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2017,
+          "start_line": 2577
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "ACB_financial_statements_2018_consolidated_table_47",
+        "retrieval_score": 0.8192448,
+        "metadata": {
+          "table_id": "ACB_financial_statements_2018_consolidated_table_47",
+          "doc_id": "ACB_financial_statements_2018_consolidated",
+          "ticker": "ACB",
+          "company_name": "Ngân hàng TMCP Á Châu",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2018,
+          "start_line": 1921
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "ACB_financial_statements_2018_consolidated",
+            "ACB_financial_statements_2019_consolidated",
+            "ACB_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "ACB_financial_statements_2018_consolidated|1754",
+            "ACB_financial_statements_2019_consolidated|1905",
+            "ACB_financial_statements_2017_consolidated|1722",
+            "ACB_financial_statements_2019_consolidated|1771",
+            "ACB_financial_statements_2017_consolidated|1607"
+          ]
+        },
+        "tables": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f2": 0.7692307692307692,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 0.5
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "ACB_financial_statements_2018_consolidated",
+            "ACB_financial_statements_2019_consolidated",
+            "ACB_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "ACB_financial_statements_2018_consolidated|1754",
+            "ACB_financial_statements_2019_consolidated|1905",
+            "ACB_financial_statements_2017_consolidated|1722",
+            "ACB_financial_statements_2019_consolidated|1771",
+            "ACB_financial_statements_2017_consolidated|1607",
+            "ACB_financial_statements_2018_consolidated|1690",
+            "ACB_financial_statements_2017_consolidated|1826",
+            "ACB_financial_statements_2018_consolidated|1804",
+            "ACB_financial_statements_2019_consolidated|2641",
+            "ACB_financial_statements_2018_consolidated|2238"
+          ]
+        },
+        "tables": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f2": 0.5555555555555556,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 0.5
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "ACB_financial_statements_2018_consolidated",
+            "ACB_financial_statements_2019_consolidated",
+            "ACB_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "ACB_financial_statements_2018_consolidated|1754",
+            "ACB_financial_statements_2019_consolidated|1905",
+            "ACB_financial_statements_2017_consolidated|1722",
+            "ACB_financial_statements_2019_consolidated|1771",
+            "ACB_financial_statements_2017_consolidated|1607",
+            "ACB_financial_statements_2018_consolidated|1690",
+            "ACB_financial_statements_2017_consolidated|1826",
+            "ACB_financial_statements_2018_consolidated|1804",
+            "ACB_financial_statements_2019_consolidated|2641",
+            "ACB_financial_statements_2018_consolidated|2238",
+            "ACB_financial_statements_2017_consolidated|2196",
+            "ACB_financial_statements_2017_consolidated|258",
+            "ACB_financial_statements_2018_consolidated|2577",
+            "ACB_financial_statements_2017_consolidated|1974",
+            "ACB_financial_statements_2019_consolidated|2160",
+            "ACB_financial_statements_2019_consolidated|1957",
+            "ACB_financial_statements_2018_consolidated|1671",
+            "ACB_financial_statements_2017_consolidated|2067",
+            "ACB_financial_statements_2017_consolidated|1588",
+            "ACB_financial_statements_2019_consolidated|2905"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f2": 0.35714285714285715,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 0.5
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "ACB_financial_statements_2018_consolidated",
+            "ACB_financial_statements_2019_consolidated",
+            "ACB_financial_statements_2017_consolidated"
+          ],
+          "tables": [
+            "ACB_financial_statements_2018_consolidated|1754",
+            "ACB_financial_statements_2019_consolidated|1905",
+            "ACB_financial_statements_2017_consolidated|1722",
+            "ACB_financial_statements_2019_consolidated|1771",
+            "ACB_financial_statements_2017_consolidated|1607",
+            "ACB_financial_statements_2018_consolidated|1690",
+            "ACB_financial_statements_2017_consolidated|1826",
+            "ACB_financial_statements_2018_consolidated|1804",
+            "ACB_financial_statements_2019_consolidated|2641",
+            "ACB_financial_statements_2018_consolidated|2238",
+            "ACB_financial_statements_2017_consolidated|2196",
+            "ACB_financial_statements_2017_consolidated|258",
+            "ACB_financial_statements_2018_consolidated|2577",
+            "ACB_financial_statements_2017_consolidated|1974",
+            "ACB_financial_statements_2019_consolidated|2160",
+            "ACB_financial_statements_2019_consolidated|1957",
+            "ACB_financial_statements_2018_consolidated|1671",
+            "ACB_financial_statements_2017_consolidated|2067",
+            "ACB_financial_statements_2017_consolidated|1588",
+            "ACB_financial_statements_2019_consolidated|2905",
+            "ACB_financial_statements_2017_consolidated|2456",
+            "ACB_financial_statements_2017_consolidated|2129",
+            "ACB_financial_statements_2018_consolidated|2169",
+            "ACB_financial_statements_2019_consolidated|1765",
+            "ACB_financial_statements_2018_consolidated|2097",
+            "ACB_financial_statements_2019_consolidated|471",
+            "ACB_financial_statements_2019_consolidated|2988",
+            "ACB_financial_statements_2017_consolidated|357",
+            "ACB_financial_statements_2018_consolidated|365",
+            "ACB_financial_statements_2019_consolidated|2478",
+            "ACB_financial_statements_2018_consolidated|1725",
+            "ACB_financial_statements_2019_consolidated|1870",
+            "ACB_financial_statements_2017_consolidated|1876",
+            "ACB_financial_statements_2017_consolidated|2324",
+            "ACB_financial_statements_2018_consolidated|2399",
+            "ACB_financial_statements_2019_consolidated|2637",
+            "ACB_financial_statements_2018_consolidated|2232",
+            "ACB_financial_statements_2019_consolidated|2026",
+            "ACB_financial_statements_2019_consolidated|3117",
+            "ACB_financial_statements_2019_consolidated|3135",
+            "ACB_financial_statements_2017_consolidated|1693",
+            "ACB_financial_statements_2018_consolidated|2718",
+            "ACB_financial_statements_2017_consolidated|2597",
+            "ACB_financial_statements_2018_consolidated|2702",
+            "ACB_financial_statements_2017_consolidated|2125",
+            "ACB_financial_statements_2018_consolidated|2165",
+            "ACB_financial_statements_2019_consolidated|1818",
+            "ACB_financial_statements_2017_consolidated|1741",
+            "ACB_financial_statements_2017_consolidated|2577",
+            "ACB_financial_statements_2018_consolidated|1921"
+          ]
+        },
+        "tables": {
+          "precision": 0.04,
+          "recall": 1.0,
+          "f2": 0.1724137931034483,
+          "mrr5": 0.5
+        },
+        "docs": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f2": 0.9090909090909091,
+          "mrr5": 0.5
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

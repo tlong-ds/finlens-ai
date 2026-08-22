@@ -1,0 +1,1422 @@
+{
+  "schema_version": 1,
+  "id": 935,
+  "question": "Giá trị trung bình tỷ lệ trích lập Quỹ khen thưởng, phúc lợi so với Lợi nhuận thuần của HDG, GEG và DNH tại đơn vị công ty mẹ trong năm 2023 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T13:51:26+00:00",
+  "finished_at": "2026-08-22T13:51:28+00:00",
+  "duration_seconds": 1.4309437170013553,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HDG",
+      "GEG",
+      "DNH"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HDG_financial_statements_2023_separate",
+      "GEG_financial_statements_2023_separate",
+      "DNH_financial_statements_2023_separate"
+    ],
+    "relevant_tables": [
+      "HDG_financial_statements_2023_separate|1316",
+      "HDG_financial_statements_2023_separate|1322",
+      "GEG_financial_statements_2023_separate|1246",
+      "DNH_financial_statements_2023_separate|870"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DNH",
+      "GEG",
+      "HDG"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Giá trị trung bình tỷ lệ trích lập Quỹ khen thưởng, phúc lợi so với Lợi nhuận thuần , và tại đơn vị trong phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DNH",
+        "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+        "matched_text": "DNH",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "GEG",
+        "company_name": "CTCP Điện Gia Lai",
+        "matched_text": "GEG",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "HDG",
+        "company_name": "CTCP Tập đoàn Hà Đô",
+        "matched_text": "HDG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Giá trị trung bình tỷ lệ trích lập Quỹ khen thưởng, phúc lợi so với Lợi nhuận thuần , và tại đơn vị trong phần trăm",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "DNH",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "DNH"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "GEG",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "GEG"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      },
+      {
+        "ticker": "HDG",
+        "requested_top_n": 17,
+        "candidate_count": 17,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "HDG"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "separate"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "DNH_financial_statements_2023_separate_table_31",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 1,
+        "dense_score": 0.83158696,
+        "dense_rank": 1,
+        "bm25_score": 25.275770146482632,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_31",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 870
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "GEG_financial_statements_2023_separate_table_41",
+        "retrieval_score": 0.03278688524590164,
+        "retrieval_rank": 2,
+        "dense_score": 0.843517,
+        "dense_rank": 1,
+        "bm25_score": 27.614519041947393,
+        "bm25_rank": 1,
+        "rrf_score": 0.03278688524590164,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_41",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1246
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "HDG_financial_statements_2023_separate_table_40",
+        "retrieval_score": 0.03252247488101534,
+        "retrieval_rank": 3,
+        "dense_score": 0.8455414,
+        "dense_rank": 1,
+        "bm25_score": 21.91479701404499,
+        "bm25_rank": 2,
+        "rrf_score": 0.03252247488101534,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_40",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 1322
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "DNH_financial_statements_2023_separate_table_7",
+        "retrieval_score": 0.03076923076923077,
+        "retrieval_rank": 4,
+        "dense_score": 0.81792706,
+        "dense_rank": 5,
+        "bm25_score": 11.551803174256523,
+        "bm25_rank": 5,
+        "rrf_score": 0.03076923076923077,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_7",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 343
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "GEG_financial_statements_2023_separate_table_2",
+        "retrieval_score": 0.031746031746031744,
+        "retrieval_rank": 5,
+        "dense_score": 0.82726264,
+        "dense_rank": 3,
+        "bm25_score": 14.665928036697302,
+        "bm25_rank": 3,
+        "rrf_score": 0.031746031746031744,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_2",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 315
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "HDG_financial_statements_2023_separate_table_33",
+        "retrieval_score": 0.030309988518943745,
+        "retrieval_rank": 6,
+        "dense_score": 0.8232306,
+        "dense_rank": 7,
+        "bm25_score": 13.574505347260901,
+        "bm25_rank": 5,
+        "rrf_score": 0.030309988518943745,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_33",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1199
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "DNH_financial_statements_2023_separate_table_46",
+        "retrieval_score": 0.03055037313432836,
+        "retrieval_rank": 7,
+        "dense_score": 0.8162409,
+        "dense_rank": 7,
+        "bm25_score": 11.996802660469207,
+        "bm25_rank": 4,
+        "rrf_score": 0.03055037313432836,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_46",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1043
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "GEG_financial_statements_2023_separate_table_50",
+        "retrieval_score": 0.030621785881252923,
+        "retrieval_rank": 8,
+        "dense_score": 0.8164658,
+        "dense_rank": 9,
+        "bm25_score": 14.703601079626031,
+        "bm25_rank": 2,
+        "rrf_score": 0.030621785881252923,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_50",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1357
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "HDG_financial_statements_2023_separate_table_69",
+        "retrieval_score": 0.029957522915269395,
+        "retrieval_rank": 9,
+        "dense_score": 0.8358745,
+        "dense_rank": 3,
+        "bm25_score": 11.237797664622683,
+        "bm25_rank": 11,
+        "rrf_score": 0.029957522915269395,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_69",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 1816
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "DNH_financial_statements_2023_separate_table_6",
+        "retrieval_score": 0.03036576949620428,
+        "retrieval_rank": 10,
+        "dense_score": 0.82743526,
+        "dense_rank": 3,
+        "bm25_score": 9.383486957833044,
+        "bm25_rank": 9,
+        "rrf_score": 0.03036576949620428,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_6",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 295
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "GEG_financial_statements_2023_separate_table_3",
+        "retrieval_score": 0.028790389395194696,
+        "retrieval_rank": 11,
+        "dense_score": 0.81808233,
+        "dense_rank": 8,
+        "bm25_score": 8.672272579671615,
+        "bm25_rank": 11,
+        "rrf_score": 0.028790389395194696,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_3",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "income_statement",
+          "year": 2023,
+          "start_line": 339
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "HDG_financial_statements_2023_separate_table_45",
+        "retrieval_score": 0.029418126757516764,
+        "retrieval_rank": 12,
+        "dense_score": 0.8209587,
+        "dense_rank": 9,
+        "bm25_score": 11.709116284524871,
+        "bm25_rank": 7,
+        "rrf_score": 0.029418126757516764,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_45",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1399
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "DNH_financial_statements_2023_separate_table_12",
+        "retrieval_score": 0.030017921146953404,
+        "retrieval_rank": 13,
+        "dense_score": 0.81138754,
+        "dense_rank": 12,
+        "bm25_score": 16.61763060381476,
+        "bm25_rank": 2,
+        "rrf_score": 0.030017921146953404,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_12",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 676
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "GEG_financial_statements_2023_separate_table_57",
+        "retrieval_score": 0.027984344422700584,
+        "retrieval_rank": 14,
+        "dense_score": 0.8163136,
+        "dense_rank": 10,
+        "bm25_score": 7.805190063410197,
+        "bm25_rank": 13,
+        "rrf_score": 0.027984344422700584,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_57",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1562
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "HDG_financial_statements_2023_separate_table_70",
+        "retrieval_score": 0.029273504273504274,
+        "retrieval_rank": 15,
+        "dense_score": 0.8262209,
+        "dense_rank": 5,
+        "bm25_score": 11.196986640843493,
+        "bm25_rank": 12,
+        "rrf_score": 0.029273504273504274,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_70",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 1832
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "DNH_financial_statements_2023_separate_table_5",
+        "retrieval_score": 0.029236022193768675,
+        "retrieval_rank": 16,
+        "dense_score": 0.8178311,
+        "dense_rank": 6,
+        "bm25_score": 9.076137042969837,
+        "bm25_rank": 11,
+        "rrf_score": 0.029236022193768675,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_5",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 260
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "GEG_financial_statements_2023_separate_table_51",
+        "retrieval_score": 0.027402402402402402,
+        "retrieval_rank": 17,
+        "dense_score": 0.8093622,
+        "dense_rank": 14,
+        "bm25_score": 8.063597074755213,
+        "bm25_rank": 12,
+        "rrf_score": 0.027402402402402402,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_51",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1462
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "HDG_financial_statements_2023_separate_table_10",
+        "retrieval_score": 0.02632034632034632,
+        "retrieval_rank": 18,
+        "dense_score": 0.8146932,
+        "dense_rank": 15,
+        "bm25_score": 10.6777093991894,
+        "bm25_rank": 17,
+        "rrf_score": 0.02632034632034632,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_10",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "cash_flow",
+          "year": 2023,
+          "start_line": 329
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "DNH_financial_statements_2023_separate_table_4",
+        "retrieval_score": 0.028991596638655463,
+        "retrieval_rank": 19,
+        "dense_score": 0.8158239,
+        "dense_rank": 8,
+        "bm25_score": 9.193671959724808,
+        "bm25_rank": 10,
+        "rrf_score": 0.028991596638655463,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_4",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 235
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "GEG_financial_statements_2023_separate_table_38",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 20,
+        "dense_score": 0.8277985,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_38",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1197
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "HDG_financial_statements_2023_separate_table_39",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 21,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 30.609622896357028,
+        "bm25_rank": 1,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_39",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1316
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "DNH_financial_statements_2023_separate_table_28",
+        "retrieval_score": 0.028404512489927477,
+        "retrieval_rank": 22,
+        "dense_score": 0.8111494,
+        "dense_rank": 13,
+        "bm25_score": 9.535674668146354,
+        "bm25_rank": 8,
+        "rrf_score": 0.028404512489927477,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_28",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 840
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "GEG_financial_statements_2023_separate_table_44",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 23,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.807295167562742,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_44",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1281
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "HDG_financial_statements_2023_separate_table_8",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 24,
+        "dense_score": 0.84373415,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_8",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "balance_sheet",
+          "year": 2023,
+          "start_line": 270
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "DNH_financial_statements_2023_separate_table_16",
+        "retrieval_score": 0.02819138376017471,
+        "retrieval_rank": 25,
+        "dense_score": 0.8133911,
+        "dense_rank": 9,
+        "bm25_score": 9.009414626031758,
+        "bm25_rank": 13,
+        "rrf_score": 0.02819138376017471,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_16",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 716
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "GEG_financial_statements_2023_separate_table_62",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 26,
+        "dense_score": 0.82430464,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_62",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1615
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "HDG_financial_statements_2023_separate_table_44",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 27,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 16.70062811755172,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_44",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1393
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "DNH_financial_statements_2023_separate_table_30",
+        "retrieval_score": 0.02684684684684685,
+        "retrieval_rank": 28,
+        "dense_score": 0.8097896,
+        "dense_rank": 14,
+        "bm25_score": 8.385440507918203,
+        "bm25_rank": 15,
+        "rrf_score": 0.02684684684684685,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_30",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 857
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "GEG_financial_statements_2023_separate_table_40",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 29,
+        "dense_score": 0.82223856,
+        "dense_rank": 5,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_40",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1235
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "HDG_financial_statements_2023_separate_table_37",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 30,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 16.58622699715458,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_37",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1241
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "DNH_financial_statements_2023_separate_table_32",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 31,
+        "dense_score": 0.8298387,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_32",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 901
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "GEG_financial_statements_2023_separate_table_5",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 32,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.376934959645121,
+        "bm25_rank": 5,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_5",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 454
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "HDG_financial_statements_2023_separate_table_38",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 33,
+        "dense_score": 0.82629824,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_38",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1259
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "DNH_financial_statements_2023_separate_table_8",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 34,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 15.951586715048643,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_8",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 415
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "GEG_financial_statements_2023_separate_table_26",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 35,
+        "dense_score": 0.8218638,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_26",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1042
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "HDG_financial_statements_2023_separate_table_42",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 36,
+        "dense_score": 0.8235564,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_42",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1368
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "DNH_financial_statements_2023_separate_table_25",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 37,
+        "dense_score": 0.8251126,
+        "dense_rank": 4,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_25",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 815
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "GEG_financial_statements_2023_separate_table_45",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.841343133792334,
+        "bm25_rank": 6,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_45",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1292
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "HDG_financial_statements_2023_separate_table_54",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 12.2373877378193,
+        "bm25_rank": 6,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_54",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1524
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "DNH_financial_statements_2023_separate_table_42",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 40,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.790169138437246,
+        "bm25_rank": 6,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_42",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 992
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "GEG_financial_statements_2023_separate_table_39",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 41,
+        "dense_score": 0.8198371,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_39",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1203
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "HDG_financial_statements_2023_separate_table_51",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 42,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.57651924726218,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_51",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1451
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "DNH_financial_statements_2023_separate_table_13",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.145893349341058,
+        "bm25_rank": 7,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_13",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 693
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "GEG_financial_statements_2023_separate_table_6",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.802219237061605,
+        "bm25_rank": 7,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_6",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 465
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "HDG_financial_statements_2023_separate_table_56",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 45,
+        "dense_score": 0.82212895,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_56",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1564
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "DNH_financial_statements_2023_separate_table_35",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 46,
+        "dense_score": 0.81319505,
+        "dense_rank": 10,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_35",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 934
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "GEG_financial_statements_2023_separate_table_23",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.415628039662394,
+        "bm25_rank": 8,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_23",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1006
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "HDG_financial_statements_2023_separate_table_26",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 48,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 11.563769113720728,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "HDG_financial_statements_2023_separate_table_26",
+          "doc_id": "HDG_financial_statements_2023_separate",
+          "ticker": "HDG",
+          "company_name": "CTCP Tập đoàn Hà Đô",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1084
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "DNH_financial_statements_2023_separate_table_11",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 49,
+        "dense_score": 0.81158394,
+        "dense_rank": 11,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "DNH_financial_statements_2023_separate_table_11",
+          "doc_id": "DNH_financial_statements_2023_separate",
+          "ticker": "DNH",
+          "company_name": "CTCP Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 670
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "GEG_financial_statements_2023_separate_table_25",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.077152768858141,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "GEG_financial_statements_2023_separate_table_25",
+          "doc_id": "GEG_financial_statements_2023_separate",
+          "ticker": "GEG",
+          "company_name": "CTCP Điện Gia Lai",
+          "report_type": "separate",
+          "table_type": "note_table",
+          "year": 2023,
+          "start_line": 1031
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "DNH_financial_statements_2023_separate",
+            "GEG_financial_statements_2023_separate",
+            "HDG_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "DNH_financial_statements_2023_separate|870",
+            "GEG_financial_statements_2023_separate|1246",
+            "HDG_financial_statements_2023_separate|1322",
+            "DNH_financial_statements_2023_separate|343",
+            "GEG_financial_statements_2023_separate|315"
+          ]
+        },
+        "tables": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f2": 0.7142857142857143,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "DNH_financial_statements_2023_separate",
+            "GEG_financial_statements_2023_separate",
+            "HDG_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "DNH_financial_statements_2023_separate|870",
+            "GEG_financial_statements_2023_separate|1246",
+            "HDG_financial_statements_2023_separate|1322",
+            "DNH_financial_statements_2023_separate|343",
+            "GEG_financial_statements_2023_separate|315",
+            "HDG_financial_statements_2023_separate|1199",
+            "DNH_financial_statements_2023_separate|1043",
+            "GEG_financial_statements_2023_separate|1357",
+            "HDG_financial_statements_2023_separate|1816",
+            "DNH_financial_statements_2023_separate|295"
+          ]
+        },
+        "tables": {
+          "precision": 0.3,
+          "recall": 0.75,
+          "f2": 0.576923076923077,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "DNH_financial_statements_2023_separate",
+            "GEG_financial_statements_2023_separate",
+            "HDG_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "DNH_financial_statements_2023_separate|870",
+            "GEG_financial_statements_2023_separate|1246",
+            "HDG_financial_statements_2023_separate|1322",
+            "DNH_financial_statements_2023_separate|343",
+            "GEG_financial_statements_2023_separate|315",
+            "HDG_financial_statements_2023_separate|1199",
+            "DNH_financial_statements_2023_separate|1043",
+            "GEG_financial_statements_2023_separate|1357",
+            "HDG_financial_statements_2023_separate|1816",
+            "DNH_financial_statements_2023_separate|295",
+            "GEG_financial_statements_2023_separate|339",
+            "HDG_financial_statements_2023_separate|1399",
+            "DNH_financial_statements_2023_separate|676",
+            "GEG_financial_statements_2023_separate|1562",
+            "HDG_financial_statements_2023_separate|1832",
+            "DNH_financial_statements_2023_separate|260",
+            "GEG_financial_statements_2023_separate|1462",
+            "HDG_financial_statements_2023_separate|329",
+            "DNH_financial_statements_2023_separate|235",
+            "GEG_financial_statements_2023_separate|1197"
+          ]
+        },
+        "tables": {
+          "precision": 0.15,
+          "recall": 0.75,
+          "f2": 0.41666666666666663,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "DNH_financial_statements_2023_separate",
+            "GEG_financial_statements_2023_separate",
+            "HDG_financial_statements_2023_separate"
+          ],
+          "tables": [
+            "DNH_financial_statements_2023_separate|870",
+            "GEG_financial_statements_2023_separate|1246",
+            "HDG_financial_statements_2023_separate|1322",
+            "DNH_financial_statements_2023_separate|343",
+            "GEG_financial_statements_2023_separate|315",
+            "HDG_financial_statements_2023_separate|1199",
+            "DNH_financial_statements_2023_separate|1043",
+            "GEG_financial_statements_2023_separate|1357",
+            "HDG_financial_statements_2023_separate|1816",
+            "DNH_financial_statements_2023_separate|295",
+            "GEG_financial_statements_2023_separate|339",
+            "HDG_financial_statements_2023_separate|1399",
+            "DNH_financial_statements_2023_separate|676",
+            "GEG_financial_statements_2023_separate|1562",
+            "HDG_financial_statements_2023_separate|1832",
+            "DNH_financial_statements_2023_separate|260",
+            "GEG_financial_statements_2023_separate|1462",
+            "HDG_financial_statements_2023_separate|329",
+            "DNH_financial_statements_2023_separate|235",
+            "GEG_financial_statements_2023_separate|1197",
+            "HDG_financial_statements_2023_separate|1316",
+            "DNH_financial_statements_2023_separate|840",
+            "GEG_financial_statements_2023_separate|1281",
+            "HDG_financial_statements_2023_separate|270",
+            "DNH_financial_statements_2023_separate|716",
+            "GEG_financial_statements_2023_separate|1615",
+            "HDG_financial_statements_2023_separate|1393",
+            "DNH_financial_statements_2023_separate|857",
+            "GEG_financial_statements_2023_separate|1235",
+            "HDG_financial_statements_2023_separate|1241",
+            "DNH_financial_statements_2023_separate|901",
+            "GEG_financial_statements_2023_separate|454",
+            "HDG_financial_statements_2023_separate|1259",
+            "DNH_financial_statements_2023_separate|415",
+            "GEG_financial_statements_2023_separate|1042",
+            "HDG_financial_statements_2023_separate|1368",
+            "DNH_financial_statements_2023_separate|815",
+            "GEG_financial_statements_2023_separate|1292",
+            "HDG_financial_statements_2023_separate|1524",
+            "DNH_financial_statements_2023_separate|992",
+            "GEG_financial_statements_2023_separate|1203",
+            "HDG_financial_statements_2023_separate|1451",
+            "DNH_financial_statements_2023_separate|693",
+            "GEG_financial_statements_2023_separate|465",
+            "HDG_financial_statements_2023_separate|1564",
+            "DNH_financial_statements_2023_separate|934",
+            "GEG_financial_statements_2023_separate|1006",
+            "HDG_financial_statements_2023_separate|1084",
+            "DNH_financial_statements_2023_separate|670",
+            "GEG_financial_statements_2023_separate|1031"
+          ]
+        },
+        "tables": {
+          "precision": 0.08,
+          "recall": 1.0,
+          "f2": 0.30303030303030304,
+          "mrr5": 1.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}

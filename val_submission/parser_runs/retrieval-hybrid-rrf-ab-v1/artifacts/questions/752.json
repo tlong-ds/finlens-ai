@@ -1,0 +1,1387 @@
+{
+  "schema_version": 1,
+  "id": 752,
+  "question": "Chênh lệch lãi thuần từ hoạt động dịch vụ giữa Ngân hàng TMCP An Bình và Ngân hàng TMCP Quân đội năm 2022 là bao nhiêu triệu đồng?",
+  "started_at": "2026-08-22T13:51:22+00:00",
+  "finished_at": "2026-08-22T13:51:23+00:00",
+  "duration_seconds": 0.8186623699875781,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "ABB",
+      "MBB"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "ABB_financial_statements_2022_consolidated",
+      "MBB_financial_statements_2022_consolidated"
+    ],
+    "relevant_tables": [
+      "ABB_financial_statements_2022_consolidated|296",
+      "MBB_financial_statements_2022_consolidated|410"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MBB",
+      "ABB"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Chênh lệch lãi thuần từ hoạt động dịch vụ giữa và triệu đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MBB",
+        "company_name": "Ngân hàng TMCP Quân đội",
+        "matched_text": "Ngân hàng TMCP Quân đội",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "ABB",
+        "company_name": "Ngân hàng TMCP An Bình",
+        "matched_text": "Ngân hàng TMCP An Bình",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c02",
+            "c01"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "mode": "hybrid",
+    "query_source": "semantic",
+    "query_text": "Chênh lệch lãi thuần từ hoạt động dịch vụ giữa và triệu đồng",
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [
+      {
+        "ticker": "MBB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "MBB"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      },
+      {
+        "ticker": "ABB",
+        "requested_top_n": 25,
+        "candidate_count": 25,
+        "retrieval_mode": "hybrid",
+        "relaxed_report_type": false,
+        "effective_filters": {
+          "ticker": [
+            "ABB"
+          ],
+          "year": [
+            2022
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        }
+      }
+    ],
+    "candidates": [
+      {
+        "rank": 1,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_78",
+        "retrieval_score": 0.03028233151183971,
+        "retrieval_rank": 1,
+        "dense_score": 0.80999964,
+        "dense_rank": 12,
+        "bm25_score": 15.423537844851719,
+        "bm25_rank": 1,
+        "rrf_score": 0.03028233151183971,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_78",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2089
+        }
+      },
+      {
+        "rank": 2,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_88",
+        "retrieval_score": 0.030886196246139225,
+        "retrieval_rank": 2,
+        "dense_score": 0.8289135,
+        "dense_rank": 1,
+        "bm25_score": 6.592096940331459,
+        "bm25_rank": 9,
+        "rrf_score": 0.030886196246139225,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_88",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 1951
+        }
+      },
+      {
+        "rank": 3,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_77",
+        "retrieval_score": 0.029910714285714284,
+        "retrieval_rank": 3,
+        "dense_score": 0.81289625,
+        "dense_rank": 10,
+        "bm25_score": 10.190947871461743,
+        "bm25_rank": 4,
+        "rrf_score": 0.029910714285714284,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_77",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2085
+        }
+      },
+      {
+        "rank": 4,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_115",
+        "retrieval_score": 0.030330882352941176,
+        "retrieval_rank": 4,
+        "dense_score": 0.82613045,
+        "dense_rank": 4,
+        "bm25_score": 7.114853995627349,
+        "bm25_rank": 8,
+        "rrf_score": 0.030330882352941176,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_115",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 2433
+        }
+      },
+      {
+        "rank": 5,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_107",
+        "retrieval_score": 0.029827662395050816,
+        "retrieval_rank": 5,
+        "dense_score": 0.805446,
+        "dense_rank": 13,
+        "bm25_score": 13.993070615476139,
+        "bm25_rank": 2,
+        "rrf_score": 0.029827662395050816,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_107",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2580
+        }
+      },
+      {
+        "rank": 6,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_91",
+        "retrieval_score": 0.03028233151183971,
+        "retrieval_rank": 6,
+        "dense_score": 0.8051153,
+        "dense_rank": 12,
+        "bm25_score": 15.884060413852927,
+        "bm25_rank": 1,
+        "rrf_score": 0.03028233151183971,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_91",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1978
+        }
+      },
+      {
+        "rank": 7,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_8",
+        "retrieval_score": 0.02946912242686891,
+        "retrieval_rank": 7,
+        "dense_score": 0.82078123,
+        "dense_rank": 5,
+        "bm25_score": 8.309165934879172,
+        "bm25_rank": 11,
+        "rrf_score": 0.02946912242686891,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_8",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "income_statement",
+          "year": 2022,
+          "start_line": 410
+        }
+      },
+      {
+        "rank": 8,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_63",
+        "retrieval_score": 0.02964426877470356,
+        "retrieval_rank": 8,
+        "dense_score": 0.817513,
+        "dense_rank": 9,
+        "bm25_score": 7.858236177246779,
+        "bm25_rank": 6,
+        "rrf_score": 0.02964426877470356,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_63",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1655
+        }
+      },
+      {
+        "rank": 9,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_56",
+        "retrieval_score": 0.0293236301369863,
+        "retrieval_rank": 9,
+        "dense_score": 0.8246591,
+        "dense_rank": 4,
+        "bm25_score": 8.017343045516332,
+        "bm25_rank": 13,
+        "rrf_score": 0.0293236301369863,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_56",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1875
+        }
+      },
+      {
+        "rank": 10,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_117",
+        "retrieval_score": 0.029273504273504274,
+        "retrieval_rank": 10,
+        "dense_score": 0.82274896,
+        "dense_rank": 5,
+        "bm25_score": 5.660845680539863,
+        "bm25_rank": 12,
+        "rrf_score": 0.029273504273504274,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_117",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 2531
+        }
+      },
+      {
+        "rank": 11,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_35",
+        "retrieval_score": 0.0288981288981289,
+        "retrieval_rank": 11,
+        "dense_score": 0.8032783,
+        "dense_rank": 14,
+        "bm25_score": 9.58247058962517,
+        "bm25_rank": 5,
+        "rrf_score": 0.0288981288981289,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_35",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1651
+        }
+      },
+      {
+        "rank": 12,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_64",
+        "retrieval_score": 0.029206349206349208,
+        "retrieval_rank": 12,
+        "dense_score": 0.82617223,
+        "dense_rank": 3,
+        "bm25_score": 5.31145709027215,
+        "bm25_rank": 15,
+        "rrf_score": 0.029206349206349208,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_64",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1686
+        }
+      },
+      {
+        "rank": 13,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_87",
+        "retrieval_score": 0.027583600982429624,
+        "retrieval_rank": 13,
+        "dense_score": 0.7962211,
+        "dense_rank": 19,
+        "bm25_score": 9.16908527789299,
+        "bm25_rank": 7,
+        "rrf_score": 0.027583600982429624,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_87",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2191
+        }
+      },
+      {
+        "rank": 14,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_96",
+        "retrieval_score": 0.029116045245077504,
+        "retrieval_rank": 14,
+        "dense_score": 0.8009249,
+        "dense_rank": 17,
+        "bm25_score": 11.27535690218959,
+        "bm25_rank": 2,
+        "rrf_score": 0.029116045245077504,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_96",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2019
+        }
+      },
+      {
+        "rank": 15,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_70",
+        "retrieval_score": 0.027271052146674038,
+        "retrieval_rank": 15,
+        "dense_score": 0.8177437,
+        "dense_rank": 7,
+        "bm25_score": 5.937531329121989,
+        "bm25_rank": 21,
+        "rrf_score": 0.027271052146674038,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_70",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1997
+        }
+      },
+      {
+        "rank": 16,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_89",
+        "retrieval_score": 0.02900988017658188,
+        "retrieval_rank": 16,
+        "dense_score": 0.80630946,
+        "dense_rank": 11,
+        "bm25_score": 7.119994773223883,
+        "bm25_rank": 7,
+        "rrf_score": 0.02900988017658188,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_89",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1970
+        }
+      },
+      {
+        "rank": 17,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_99",
+        "retrieval_score": 0.027071520029266508,
+        "retrieval_rank": 17,
+        "dense_score": 0.8105606,
+        "dense_rank": 11,
+        "bm25_score": 6.9108549804573745,
+        "bm25_rank": 17,
+        "rrf_score": 0.027071520029266508,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_99",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2340
+        }
+      },
+      {
+        "rank": 18,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_80",
+        "retrieval_score": 0.028309409888357256,
+        "retrieval_rank": 18,
+        "dense_score": 0.8213428,
+        "dense_rank": 6,
+        "bm25_score": 5.250975867078106,
+        "bm25_rank": 16,
+        "rrf_score": 0.028309409888357256,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_80",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1848
+        }
+      },
+      {
+        "rank": 19,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_101",
+        "retrieval_score": 0.02690100430416069,
+        "retrieval_rank": 19,
+        "dense_score": 0.7957857,
+        "dense_rank": 22,
+        "bm25_score": 9.034470348085943,
+        "bm25_rank": 8,
+        "rrf_score": 0.02690100430416069,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_101",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2380
+        }
+      },
+      {
+        "rank": 20,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_38",
+        "retrieval_score": 0.02821869488536155,
+        "retrieval_rank": 20,
+        "dense_score": 0.7975502,
+        "dense_rank": 21,
+        "bm25_score": 9.616462765048032,
+        "bm25_rank": 3,
+        "rrf_score": 0.02821869488536155,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_38",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1387
+        }
+      },
+      {
+        "rank": 21,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_34",
+        "retrieval_score": 0.026470588235294117,
+        "retrieval_rank": 21,
+        "dense_score": 0.81605387,
+        "dense_rank": 8,
+        "bm25_score": 4.081055444109018,
+        "bm25_rank": 25,
+        "rrf_score": 0.026470588235294117,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_34",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1647
+        }
+      },
+      {
+        "rank": 22,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_90",
+        "retrieval_score": 0.027984344422700584,
+        "retrieval_rank": 22,
+        "dense_score": 0.8089209,
+        "dense_rank": 10,
+        "bm25_score": 5.568803388012855,
+        "bm25_rank": 13,
+        "rrf_score": 0.027984344422700584,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_90",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1974
+        }
+      },
+      {
+        "rank": 23,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_5",
+        "retrieval_score": 0.01639344262295082,
+        "retrieval_rank": 23,
+        "dense_score": 0.8409327,
+        "dense_rank": 1,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.01639344262295082,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_5",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 344
+        }
+      },
+      {
+        "rank": 24,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_103",
+        "retrieval_score": 0.02694394213381555,
+        "retrieval_rank": 24,
+        "dense_score": 0.8003137,
+        "dense_rank": 19,
+        "bm25_score": 6.223062663651628,
+        "bm25_rank": 10,
+        "rrf_score": 0.02694394213381555,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_103",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2116
+        }
+      },
+      {
+        "rank": 25,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_105",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 25,
+        "dense_score": 0.83223087,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_105",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 2555
+        }
+      },
+      {
+        "rank": 26,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_15",
+        "retrieval_score": 0.02484567901234568,
+        "retrieval_rank": 26,
+        "dense_score": 0.7978646,
+        "dense_rank": 20,
+        "bm25_score": 4.216734346069388,
+        "bm25_rank": 21,
+        "rrf_score": 0.02484567901234568,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_15",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 677
+        }
+      },
+      {
+        "rank": 27,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_38",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 27,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 10.203762836347334,
+        "bm25_rank": 3,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_38",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1674
+        }
+      },
+      {
+        "rank": 28,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_66",
+        "retrieval_score": 0.016129032258064516,
+        "retrieval_rank": 28,
+        "dense_score": 0.8262465,
+        "dense_rank": 2,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.016129032258064516,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_66",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1709
+        }
+      },
+      {
+        "rank": 29,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.015873015873015872,
+        "retrieval_rank": 29,
+        "dense_score": 0.83094376,
+        "dense_rank": 3,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015873015873015872,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_9",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 446
+        }
+      },
+      {
+        "rank": 30,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_92",
+        "retrieval_score": 0.015625,
+        "retrieval_rank": 30,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.203901828664463,
+        "bm25_rank": 4,
+        "rrf_score": 0.015625,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_92",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1992
+        }
+      },
+      {
+        "rank": 31,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_79",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 31,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 9.496195083906203,
+        "bm25_rank": 6,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_79",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2104
+        }
+      },
+      {
+        "rank": 32,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_10",
+        "retrieval_score": 0.015384615384615385,
+        "retrieval_rank": 32,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.64992354930721,
+        "bm25_rank": 5,
+        "rrf_score": 0.015384615384615385,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_10",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 342
+        }
+      },
+      {
+        "rank": 33,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_97",
+        "retrieval_score": 0.015151515151515152,
+        "retrieval_rank": 33,
+        "dense_score": 0.81995815,
+        "dense_rank": 6,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.015151515151515152,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_97",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2313
+        }
+      },
+      {
+        "rank": 34,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_7",
+        "retrieval_score": 0.014925373134328358,
+        "retrieval_rank": 34,
+        "dense_score": 0.82080925,
+        "dense_rank": 7,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014925373134328358,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_7",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 256
+        }
+      },
+      {
+        "rank": 35,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_61",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 35,
+        "dense_score": 0.8145216,
+        "dense_rank": 9,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_61",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1912
+        }
+      },
+      {
+        "rank": 36,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_116",
+        "retrieval_score": 0.014705882352941176,
+        "retrieval_rank": 36,
+        "dense_score": 0.817967,
+        "dense_rank": 8,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.014705882352941176,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_116",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "balance_sheet",
+          "year": 2022,
+          "start_line": 2477
+        }
+      },
+      {
+        "rank": 37,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_82",
+        "retrieval_score": 0.014492753623188406,
+        "retrieval_rank": 37,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.767420349506384,
+        "bm25_rank": 9,
+        "rrf_score": 0.014492753623188406,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_82",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2116
+        }
+      },
+      {
+        "rank": 38,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_93",
+        "retrieval_score": 0.014084507042253521,
+        "retrieval_rank": 38,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.859249250337642,
+        "bm25_rank": 11,
+        "rrf_score": 0.014084507042253521,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_93",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1996
+        }
+      },
+      {
+        "rank": 39,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_52",
+        "retrieval_score": 0.014285714285714285,
+        "retrieval_rank": 39,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.333306474157197,
+        "bm25_rank": 10,
+        "rrf_score": 0.014285714285714285,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_52",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1827
+        }
+      },
+      {
+        "rank": 40,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_113",
+        "retrieval_score": 0.0136986301369863,
+        "retrieval_rank": 40,
+        "dense_score": 0.80475515,
+        "dense_rank": 13,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.0136986301369863,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_113",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2352
+        }
+      },
+      {
+        "rank": 41,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_51",
+        "retrieval_score": 0.013888888888888888,
+        "retrieval_rank": 41,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 8.033432196405435,
+        "bm25_rank": 12,
+        "rrf_score": 0.013888888888888888,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_51",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1823
+        }
+      },
+      {
+        "rank": 42,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_9",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 42,
+        "dense_score": 0.8045686,
+        "dense_rank": 14,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_9",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "cash_flow",
+          "year": 2022,
+          "start_line": 331
+        }
+      },
+      {
+        "rank": 43,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_50",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 43,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.99905063460467,
+        "bm25_rank": 14,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_50",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1806
+        }
+      },
+      {
+        "rank": 44,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_94",
+        "retrieval_score": 0.013513513513513514,
+        "retrieval_rank": 44,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.4830423973380285,
+        "bm25_rank": 14,
+        "rrf_score": 0.013513513513513514,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_94",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2000
+        }
+      },
+      {
+        "rank": 45,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_33",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 45,
+        "dense_score": 0.8008219,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_33",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1628
+        }
+      },
+      {
+        "rank": 46,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_81",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 46,
+        "dense_score": 0.80448216,
+        "dense_rank": 15,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_81",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1852
+        }
+      },
+      {
+        "rank": 47,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_49",
+        "retrieval_score": 0.013333333333333334,
+        "retrieval_rank": 47,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.964962111742901,
+        "bm25_rank": 15,
+        "rrf_score": 0.013333333333333334,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_49",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1788
+        }
+      },
+      {
+        "rank": 48,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_35",
+        "retrieval_score": 0.013157894736842105,
+        "retrieval_rank": 48,
+        "dense_score": 0.80316186,
+        "dense_rank": 16,
+        "bm25_score": null,
+        "bm25_rank": null,
+        "rrf_score": 0.013157894736842105,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_35",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1358
+        }
+      },
+      {
+        "rank": 49,
+        "table_id": "MBB_financial_statements_2022_consolidated_table_37",
+        "retrieval_score": 0.013157894736842105,
+        "retrieval_rank": 49,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 7.3472184324359535,
+        "bm25_rank": 16,
+        "rrf_score": 0.013157894736842105,
+        "metadata": {
+          "table_id": "MBB_financial_statements_2022_consolidated_table_37",
+          "doc_id": "MBB_financial_statements_2022_consolidated",
+          "ticker": "MBB",
+          "company_name": "Ngân hàng TMCP Quân đội",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 1670
+        }
+      },
+      {
+        "rank": 50,
+        "table_id": "ABB_financial_statements_2022_consolidated_table_110",
+        "retrieval_score": 0.012987012987012988,
+        "retrieval_rank": 50,
+        "dense_score": null,
+        "dense_rank": null,
+        "bm25_score": 5.221273331024493,
+        "bm25_rank": 17,
+        "rrf_score": 0.012987012987012988,
+        "metadata": {
+          "table_id": "ABB_financial_statements_2022_consolidated_table_110",
+          "doc_id": "ABB_financial_statements_2022_consolidated",
+          "ticker": "ABB",
+          "company_name": "Ngân hàng TMCP An Bình",
+          "report_type": "consolidated",
+          "table_type": "note_table",
+          "year": 2022,
+          "start_line": 2220
+        }
+      }
+    ],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 5,
+        "rankings": {
+          "docs": [
+            "MBB_financial_statements_2022_consolidated",
+            "ABB_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MBB_financial_statements_2022_consolidated|2089",
+            "ABB_financial_statements_2022_consolidated|1951",
+            "MBB_financial_statements_2022_consolidated|2085",
+            "ABB_financial_statements_2022_consolidated|2433",
+            "MBB_financial_statements_2022_consolidated|2580"
+          ]
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "10": {
+        "candidate_count": 10,
+        "rankings": {
+          "docs": [
+            "MBB_financial_statements_2022_consolidated",
+            "ABB_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MBB_financial_statements_2022_consolidated|2089",
+            "ABB_financial_statements_2022_consolidated|1951",
+            "MBB_financial_statements_2022_consolidated|2085",
+            "ABB_financial_statements_2022_consolidated|2433",
+            "MBB_financial_statements_2022_consolidated|2580",
+            "ABB_financial_statements_2022_consolidated|1978",
+            "MBB_financial_statements_2022_consolidated|410",
+            "ABB_financial_statements_2022_consolidated|1655",
+            "MBB_financial_statements_2022_consolidated|1875",
+            "ABB_financial_statements_2022_consolidated|2531"
+          ]
+        },
+        "tables": {
+          "precision": 0.1,
+          "recall": 0.5,
+          "f2": 0.2777777777777778,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "20": {
+        "candidate_count": 20,
+        "rankings": {
+          "docs": [
+            "MBB_financial_statements_2022_consolidated",
+            "ABB_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MBB_financial_statements_2022_consolidated|2089",
+            "ABB_financial_statements_2022_consolidated|1951",
+            "MBB_financial_statements_2022_consolidated|2085",
+            "ABB_financial_statements_2022_consolidated|2433",
+            "MBB_financial_statements_2022_consolidated|2580",
+            "ABB_financial_statements_2022_consolidated|1978",
+            "MBB_financial_statements_2022_consolidated|410",
+            "ABB_financial_statements_2022_consolidated|1655",
+            "MBB_financial_statements_2022_consolidated|1875",
+            "ABB_financial_statements_2022_consolidated|2531",
+            "MBB_financial_statements_2022_consolidated|1651",
+            "ABB_financial_statements_2022_consolidated|1686",
+            "MBB_financial_statements_2022_consolidated|2191",
+            "ABB_financial_statements_2022_consolidated|2019",
+            "MBB_financial_statements_2022_consolidated|1997",
+            "ABB_financial_statements_2022_consolidated|1970",
+            "MBB_financial_statements_2022_consolidated|2340",
+            "ABB_financial_statements_2022_consolidated|1848",
+            "MBB_financial_statements_2022_consolidated|2380",
+            "ABB_financial_statements_2022_consolidated|1387"
+          ]
+        },
+        "tables": {
+          "precision": 0.05,
+          "recall": 0.5,
+          "f2": 0.17857142857142858,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      },
+      "50": {
+        "candidate_count": 50,
+        "rankings": {
+          "docs": [
+            "MBB_financial_statements_2022_consolidated",
+            "ABB_financial_statements_2022_consolidated"
+          ],
+          "tables": [
+            "MBB_financial_statements_2022_consolidated|2089",
+            "ABB_financial_statements_2022_consolidated|1951",
+            "MBB_financial_statements_2022_consolidated|2085",
+            "ABB_financial_statements_2022_consolidated|2433",
+            "MBB_financial_statements_2022_consolidated|2580",
+            "ABB_financial_statements_2022_consolidated|1978",
+            "MBB_financial_statements_2022_consolidated|410",
+            "ABB_financial_statements_2022_consolidated|1655",
+            "MBB_financial_statements_2022_consolidated|1875",
+            "ABB_financial_statements_2022_consolidated|2531",
+            "MBB_financial_statements_2022_consolidated|1651",
+            "ABB_financial_statements_2022_consolidated|1686",
+            "MBB_financial_statements_2022_consolidated|2191",
+            "ABB_financial_statements_2022_consolidated|2019",
+            "MBB_financial_statements_2022_consolidated|1997",
+            "ABB_financial_statements_2022_consolidated|1970",
+            "MBB_financial_statements_2022_consolidated|2340",
+            "ABB_financial_statements_2022_consolidated|1848",
+            "MBB_financial_statements_2022_consolidated|2380",
+            "ABB_financial_statements_2022_consolidated|1387",
+            "MBB_financial_statements_2022_consolidated|1647",
+            "ABB_financial_statements_2022_consolidated|1974",
+            "MBB_financial_statements_2022_consolidated|344",
+            "ABB_financial_statements_2022_consolidated|2116",
+            "MBB_financial_statements_2022_consolidated|2555",
+            "ABB_financial_statements_2022_consolidated|677",
+            "MBB_financial_statements_2022_consolidated|1674",
+            "ABB_financial_statements_2022_consolidated|1709",
+            "MBB_financial_statements_2022_consolidated|446",
+            "ABB_financial_statements_2022_consolidated|1992",
+            "MBB_financial_statements_2022_consolidated|2104",
+            "ABB_financial_statements_2022_consolidated|342",
+            "MBB_financial_statements_2022_consolidated|2313",
+            "ABB_financial_statements_2022_consolidated|256",
+            "MBB_financial_statements_2022_consolidated|1912",
+            "ABB_financial_statements_2022_consolidated|2477",
+            "MBB_financial_statements_2022_consolidated|2116",
+            "ABB_financial_statements_2022_consolidated|1996",
+            "MBB_financial_statements_2022_consolidated|1827",
+            "ABB_financial_statements_2022_consolidated|2352",
+            "MBB_financial_statements_2022_consolidated|1823",
+            "ABB_financial_statements_2022_consolidated|331",
+            "MBB_financial_statements_2022_consolidated|1806",
+            "ABB_financial_statements_2022_consolidated|2000",
+            "MBB_financial_statements_2022_consolidated|1628",
+            "ABB_financial_statements_2022_consolidated|1852",
+            "MBB_financial_statements_2022_consolidated|1788",
+            "ABB_financial_statements_2022_consolidated|1358",
+            "MBB_financial_statements_2022_consolidated|1670",
+            "ABB_financial_statements_2022_consolidated|2220"
+          ]
+        },
+        "tables": {
+          "precision": 0.02,
+          "recall": 0.5,
+          "f2": 0.08620689655172414,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f2": 1.0,
+          "mrr5": 1.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": null,
+  "error": null
+}
