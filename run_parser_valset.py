@@ -1,7 +1,7 @@
-"""Evaluate only FinLens query parsing on the labelled validation set.
+"""Evaluate FinLens query parsing and dense retrieval on the validation set.
 
-This runner never calls Qdrant, embeddings, reranking, code generation, or the
-sandbox.  It writes isolated parser artifacts under
+This runner stops after Qdrant dense retrieval.  It never calls reranking, code
+generation, or the sandbox.  It writes isolated parser/retrieval artifacts under
 ``val_submission/parser_runs/<run-id>/``.
 """
 
@@ -28,6 +28,12 @@ from dotenv import load_dotenv
 
 from src.llm import LLMTransientError
 from src.parser import parse_query_with_diagnostics
+from src.retrieval import (
+    RETRIEVAL_TOP_K,
+    NoMatchingCandidatesError,
+    TransientRetrievalError,
+    retrieve,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +42,8 @@ DEFAULT_GOLDEN_PATH = PROJECT_ROOT / "golden_100.json"
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "val_submission" / "parser_runs"
 SCHEMA_VERSION = 1
 _PROVIDER_ATTEMPTS = 3
+_RETRIEVAL_ATTEMPTS = 3
+DEFAULT_TOP_KS = (5, 10, 20, RETRIEVAL_TOP_K)
 _DOC_ID_PATTERN = re.compile(
     r"^(?P<ticker>.+)_financial_statements_(?P<year>\d{4})"
     r"(?:_(?P<report_type>consolidated|separate|aggregated))?$"
@@ -116,6 +124,7 @@ def load_golden(path: Path) -> list[dict[str, Any]]:
         question_id = item.get("id")
         question = item.get("question")
         relevant_docs = item.get("relevant_docs")
+        relevant_tables = item.get("relevant_tables")
         if (
             isinstance(question_id, bool)
             or not isinstance(question_id, int)
@@ -128,12 +137,17 @@ def load_golden(path: Path) -> list[dict[str, Any]]:
             isinstance(doc_id, str) and doc_id for doc_id in relevant_docs
         ):
             raise ValueError(f"Golden id={question_id} has invalid relevant_docs")
+        if not isinstance(relevant_tables, list) or not all(
+            isinstance(table_ref, str) and table_ref for table_ref in relevant_tables
+        ):
+            raise ValueError(f"Golden id={question_id} has invalid relevant_tables")
         seen.add(question_id)
         records.append(
             {
                 "id": question_id,
                 "question": question,
                 "relevant_docs": list(dict.fromkeys(relevant_docs)),
+                "relevant_tables": list(dict.fromkeys(relevant_tables)),
             }
         )
     return records
@@ -180,6 +194,78 @@ def score_parser_output(
     }
 
 
+def _ordered_unique(values: Sequence[str]) -> list[str]:
+    return list(dict.fromkeys(str(value) for value in values))
+
+
+def _score_ranked(
+    predicted: Sequence[str], relevant: Sequence[str]
+) -> dict[str, float]:
+    """Score one ranking with the same formulas used by ``run_valset.py``."""
+    predicted_unique = _ordered_unique(predicted)
+    relevant_set = set(relevant)
+    correct = len(set(predicted_unique) & relevant_set)
+    precision = correct / len(predicted_unique) if predicted_unique else 0.0
+    recall = correct / len(relevant_set) if relevant_set else 1.0
+    denominator = 4.0 * precision + recall
+    f2 = (5.0 * precision * recall / denominator) if denominator else 0.0
+    reciprocal_rank = 0.0
+    for rank, item in enumerate(predicted_unique[:5], start=1):
+        if item in relevant_set:
+            reciprocal_rank = 1.0 / rank
+            break
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f2": f2,
+        "mrr5": reciprocal_rank,
+    }
+
+
+def _rankings_from_candidates(
+    candidates: Sequence[Mapping[str, Any]], top_k: int
+) -> dict[str, list[str]]:
+    docs: list[str] = []
+    tables: list[str] = []
+    for candidate in candidates[:top_k]:
+        metadata = candidate.get("metadata")
+        if not isinstance(metadata, Mapping):
+            continue
+        doc_id = metadata.get("doc_id")
+        start_line = metadata.get("start_line")
+        if not isinstance(doc_id, str) or not doc_id:
+            continue
+        docs.append(doc_id)
+        if isinstance(start_line, int) and not isinstance(start_line, bool):
+            tables.append(f"{doc_id}|{start_line}")
+    return {
+        "docs": _ordered_unique(docs),
+        "tables": _ordered_unique(tables),
+    }
+
+
+def score_retrieval_output(
+    golden: Mapping[str, Any],
+    candidates: Sequence[Mapping[str, Any]],
+    top_ks: Sequence[int],
+) -> dict[str, dict[str, Any]]:
+    """Score every requested prefix of one dense-retrieval ranking."""
+    scored: dict[str, dict[str, Any]] = {}
+    for top_k in top_ks:
+        rankings = _rankings_from_candidates(candidates, top_k)
+        scored[str(top_k)] = {
+            "candidate_count": min(top_k, len(candidates)),
+            "rankings": rankings,
+            "tables": _score_ranked(
+                rankings["tables"], list(golden["relevant_tables"])
+            ),
+            "docs": _score_ranked(
+                rankings["docs"], list(golden["relevant_docs"])
+            ),
+        }
+    return scored
+
+
 def _changed_repair_fields(diagnostics: Mapping[str, Any]) -> list[str]:
     attempts = diagnostics.get("attempts", [])
     if not isinstance(attempts, list) or len(attempts) < 2:
@@ -197,7 +283,15 @@ def _changed_repair_fields(diagnostics: Mapping[str, Any]) -> list[str]:
 
 def aggregate_parser_metrics(artifacts: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     count = len(artifacts)
-    succeeded = [artifact for artifact in artifacts if artifact.get("error") is None]
+    succeeded = [
+        artifact
+        for artifact in artifacts
+        if (
+            artifact.get("parser_error") is None
+            if "parser_error" in artifact
+            else artifact.get("error") is None
+        )
+    ]
     semantic_calls = [
         int(artifact.get("diagnostics", {}).get("semantic_attempts", 0))
         for artifact in artifacts
@@ -260,7 +354,161 @@ def aggregate_parser_metrics(artifacts: Sequence[Mapping[str, Any]]) -> dict[str
     return aggregate
 
 
-def _parse_with_transient_retry(record: Mapping[str, Any]) -> dict[str, Any]:
+def aggregate_retrieval_health(
+    artifacts: Sequence[Mapping[str, Any]],
+) -> dict[str, float | int]:
+    """Summarize whether dense retrieval ran successfully and needed retries."""
+    count = len(artifacts)
+    attempts = [int(artifact.get("retrieval_attempts", 0)) for artifact in artifacts]
+    succeeded = sum(
+        isinstance(artifact.get("retrieval"), Mapping)
+        and artifact.get("parser_error") is None
+        and artifact.get("retrieval_error") is None
+        for artifact in artifacts
+    )
+    return {
+        "retrieval_successful_queries": succeeded,
+        "retrieval_success_rate": succeeded / count if count else 0.0,
+        "mean_retrieval_attempts_per_question": (
+            sum(attempts) / count if count else 0.0
+        ),
+        "retrieval_retry_questions": sum(attempt > 1 for attempt in attempts),
+    }
+
+
+def aggregate_retrieval_metrics(
+    artifacts: Sequence[Mapping[str, Any]], top_ks: Sequence[int]
+) -> dict[str, dict[str, float]]:
+    """Macro-average retrieval rankings, counting failed retrievals as empty."""
+    aggregate: dict[str, dict[str, float]] = {}
+    for top_k in top_ks:
+        per_question: list[Mapping[str, Any]] = []
+        for artifact in artifacts:
+            retrieval = artifact.get("retrieval")
+            scored = (
+                retrieval.get("metrics_by_top_k", {}).get(str(top_k))
+                if isinstance(retrieval, Mapping)
+                else None
+            )
+            if isinstance(scored, Mapping):
+                per_question.append(scored)
+                continue
+            golden = artifact.get("golden_retrieval") or {
+                "relevant_docs": [],
+                "relevant_tables": [],
+            }
+            per_question.append(
+                score_retrieval_output(golden, [], [top_k])[str(top_k)]
+            )
+
+        count = len(per_question)
+
+        def mean(scope: str, metric: str) -> float:
+            if not count:
+                return 0.0
+            return sum(
+                float(item[scope][metric]) for item in per_question
+            ) / count
+
+        aggregate[str(top_k)] = {
+            "TABLES F2-MACRO": mean("tables", "f2"),
+            "DOCS F2-MACRO": mean("docs", "f2"),
+            "TABLES PRECISION": mean("tables", "precision"),
+            "TABLES RECALL": mean("tables", "recall"),
+            "TABLES MRR5": mean("tables", "mrr5"),
+            "DOCS PRECISION": mean("docs", "precision"),
+            "DOCS RECALL": mean("docs", "recall"),
+            "DOCS MRR5": mean("docs", "mrr5"),
+        }
+    return aggregate
+
+
+def _retrieve_balanced(
+    query_text: str,
+    filters: Mapping[str, Sequence[str | int]],
+    *,
+    top_n: int,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Mirror the graph's per-ticker balanced dense retrieval."""
+    raw_tickers = filters.get("ticker", [])
+    if not isinstance(raw_tickers, list) or not raw_tickers or not all(
+        isinstance(ticker, str) and ticker for ticker in raw_tickers
+    ):
+        raise ValueError("Filter ticker must be a non-empty string array")
+    tickers = list(dict.fromkeys(raw_tickers))
+    quota = (top_n + len(tickers) - 1) // len(tickers)
+    bucket_results: list[list[dict[str, Any]]] = []
+    bucket_diagnostics: list[dict[str, Any]] = []
+
+    for ticker in tickers:
+        bucket_filters = {**filters, "ticker": [ticker]}
+        effective_filters = dict(bucket_filters)
+        relaxed_report_type = False
+        try:
+            bucket = retrieve(
+                query_text=query_text,
+                filters=bucket_filters,
+                top_n=quota,
+            )
+        except NoMatchingCandidatesError:
+            if not bucket_filters.get("report_type"):
+                raise
+            effective_filters.pop("report_type", None)
+            relaxed_report_type = True
+            bucket = retrieve(
+                query_text=query_text,
+                filters=effective_filters,
+                top_n=quota,
+            )
+        bucket_results.append(bucket)
+        bucket_diagnostics.append(
+            {
+                "ticker": ticker,
+                "requested_top_n": quota,
+                "candidate_count": len(bucket),
+                "relaxed_report_type": relaxed_report_type,
+                "effective_filters": effective_filters,
+            }
+        )
+
+    candidates: list[dict[str, Any]] = []
+    seen_table_ids: set[str] = set()
+    max_bucket_size = max((len(bucket) for bucket in bucket_results), default=0)
+    for bucket_rank in range(max_bucket_size):
+        for bucket in bucket_results:
+            if bucket_rank >= len(bucket):
+                continue
+            candidate = dict(bucket[bucket_rank])
+            table_id = str(candidate.get("table_id") or "")
+            if not table_id or table_id in seen_table_ids:
+                continue
+            seen_table_ids.add(table_id)
+            candidate["dense_rank"] = len(candidates) + 1
+            candidates.append(candidate)
+            if len(candidates) == top_n:
+                break
+        if len(candidates) == top_n:
+            break
+    return candidates, bucket_diagnostics
+
+
+def _compact_candidates(
+    candidates: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
+    return [
+        {
+            "rank": index,
+            "table_id": candidate.get("table_id"),
+            "retrieval_score": candidate.get("retrieval_score"),
+            "metadata": dict(candidate.get("metadata") or {}),
+        }
+        for index, candidate in enumerate(candidates, start=1)
+    ]
+
+
+def _parse_with_transient_retry(
+    record: Mapping[str, Any], top_ks: Sequence[int]
+) -> dict[str, Any]:
     question_id = int(record["id"])
     started_at = _utc_now()
     started_clock = time.monotonic()
@@ -268,7 +516,7 @@ def _parse_with_transient_retry(record: Mapping[str, Any]) -> dict[str, Any]:
     diagnostics: dict[str, Any] = {}
     filters: dict[str, list[str | int]] | None = None
     semantic_query: str | None = None
-    error: dict[str, str] | None = None
+    parser_error: dict[str, str] | None = None
     for provider_attempt in range(1, _PROVIDER_ATTEMPTS + 1):
         provider_attempts = provider_attempt
         try:
@@ -281,17 +529,66 @@ def _parse_with_transient_retry(record: Mapping[str, Any]) -> dict[str, Any]:
             break
         except LLMTransientError as exc:
             if provider_attempt == _PROVIDER_ATTEMPTS:
-                error = {"type": type(exc).__name__, "message": str(exc)}
+                parser_error = {
+                    "stage": "parser",
+                    "type": type(exc).__name__,
+                    "message": str(exc),
+                }
                 break
             time.sleep(0.5 * (2 ** (provider_attempt - 1)))
         except Exception as exc:
             possible_diagnostics = getattr(exc, "diagnostics", {})
             if isinstance(possible_diagnostics, Mapping):
                 diagnostics = dict(possible_diagnostics)
-            error = {"type": type(exc).__name__, "message": str(exc)}
+            parser_error = {
+                "stage": "parser",
+                "type": type(exc).__name__,
+                "message": str(exc),
+            }
             break
 
     expected = derive_golden_filters(record)
+    golden_retrieval = {
+        "relevant_docs": list(record["relevant_docs"]),
+        "relevant_tables": list(record["relevant_tables"]),
+    }
+    candidates: list[dict[str, Any]] = []
+    bucket_diagnostics: list[dict[str, Any]] = []
+    retrieval_attempts = 0
+    retrieval_error: dict[str, str] | None = None
+    if parser_error is None and filters is not None and semantic_query is not None:
+        for retrieval_attempt in range(1, _RETRIEVAL_ATTEMPTS + 1):
+            retrieval_attempts = retrieval_attempt
+            try:
+                candidates, bucket_diagnostics = _retrieve_balanced(
+                    semantic_query,
+                    filters,
+                    top_n=max(top_ks),
+                )
+                break
+            except TransientRetrievalError as exc:
+                if retrieval_attempt == _RETRIEVAL_ATTEMPTS:
+                    retrieval_error = {
+                        "stage": "retrieval",
+                        "type": type(exc).__name__,
+                        "message": str(exc),
+                    }
+                    break
+                time.sleep(0.5 * (2 ** (retrieval_attempt - 1)))
+            except Exception as exc:
+                retrieval_error = {
+                    "stage": "retrieval",
+                    "type": type(exc).__name__,
+                    "message": str(exc),
+                }
+                break
+
+    retrieval_metrics = score_retrieval_output(
+        golden_retrieval,
+        candidates,
+        top_ks,
+    )
+    error = parser_error or retrieval_error
     return {
         "schema_version": SCHEMA_VERSION,
         "id": question_id,
@@ -300,12 +597,23 @@ def _parse_with_transient_retry(record: Mapping[str, Any]) -> dict[str, Any]:
         "finished_at": _utc_now(),
         "duration_seconds": time.monotonic() - started_clock,
         "provider_attempts": provider_attempts,
+        "retrieval_attempts": retrieval_attempts,
         "expected_filters": expected,
+        "golden_retrieval": golden_retrieval,
         "filters": filters,
         "semantic_query": semantic_query,
         "diagnostics": diagnostics,
         "repair_changed_fields": _changed_repair_fields(diagnostics),
         "metrics": score_parser_output(expected, filters),
+        "retrieval": {
+            "requested_top_ks": list(top_ks),
+            "max_top_k": max(top_ks),
+            "bucket_diagnostics": bucket_diagnostics,
+            "candidates": _compact_candidates(candidates),
+            "metrics_by_top_k": retrieval_metrics,
+        },
+        "parser_error": parser_error,
+        "retrieval_error": retrieval_error,
         "error": error,
     }
 
@@ -336,11 +644,19 @@ def _select_records(
     return selected
 
 
-def _write_summary(run_dir: Path, run_id: str, artifacts: Sequence[Mapping[str, Any]]) -> None:
+def _write_summary(
+    run_dir: Path,
+    run_id: str,
+    artifacts: Sequence[Mapping[str, Any]],
+    top_ks: Sequence[int],
+) -> dict[str, Any]:
     metrics = aggregate_parser_metrics(artifacts)
+    metrics.update(aggregate_retrieval_health(artifacts))
+    metrics["retrieval_by_top_k"] = aggregate_retrieval_metrics(artifacts, top_ks)
+    payload = {"run_id": run_id, "updated_at": _utc_now(), "metrics": metrics}
     _atomic_json(
         run_dir / "metrics.json",
-        {"run_id": run_id, "updated_at": _utc_now(), "metrics": metrics},
+        payload,
     )
     details = [
         {
@@ -351,10 +667,15 @@ def _write_summary(run_dir: Path, run_id: str, artifacts: Sequence[Mapping[str, 
                 "semantic_attempts", 0
             ),
             "repair_changed_fields": artifact.get("repair_changed_fields", []),
+            "retrieval_attempts": artifact.get("retrieval_attempts", 0),
+            "retrieval_by_top_k": artifact.get("retrieval", {}).get(
+                "metrics_by_top_k", {}
+            ),
         }
         for artifact in sorted(artifacts, key=lambda item: int(item["id"]))
     ]
     _atomic_jsonl(run_dir / "metrics_per_question.jsonl", details)
+    return payload
 
 
 def _run(args: argparse.Namespace) -> int:
@@ -372,6 +693,10 @@ def _run(args: argparse.Namespace) -> int:
         "selected_question_ids": [int(record["id"]) for record in selected],
         "llm_model": os.getenv("LLM_MODEL"),
         "llm_temperature": os.getenv("LLM_TEMPERATURE", "0"),
+        "qdrant_collection": os.getenv("QDRANT_COLLECTION"),
+        "embedding_model": os.getenv("EMBEDDING_MODEL"),
+        "embedding_revision": os.getenv("EMBEDDING_REVISION"),
+        "retrieval_top_ks": list(args.top_ks),
         "concurrency": args.concurrency,
     }
     if run_dir.exists() and not args.resume:
@@ -388,6 +713,10 @@ def _run(args: argparse.Namespace) -> int:
             "selected_question_ids",
             "llm_model",
             "llm_temperature",
+            "qdrant_collection",
+            "embedding_model",
+            "embedding_revision",
+            "retrieval_top_ks",
         ):
             if status.get("config", {}).get(field) != config[field]:
                 raise ValueError(f"Resumed parser run changed immutable config: {field}")
@@ -431,7 +760,7 @@ def _run(args: argparse.Namespace) -> int:
         )
         with ThreadPoolExecutor(max_workers=args.concurrency) as executor:
             futures = {
-                executor.submit(_parse_with_transient_retry, record): record
+                executor.submit(_parse_with_transient_retry, record, args.top_ks): record
                 for record in pending
             }
             for future in as_completed(futures):
@@ -449,13 +778,18 @@ def _run(args: argparse.Namespace) -> int:
                     "artifact": f"artifacts/questions/{question_id}.json",
                 }
                 _atomic_json(status_path, status)
-                _write_summary(run_dir, run_id, list(artifacts_by_id.values()))
+                _write_summary(
+                    run_dir,
+                    run_id,
+                    list(artifacts_by_id.values()),
+                    args.top_ks,
+                )
                 print(("OK  " if succeeded else "FAIL") + f" id={question_id}")
 
         artifacts = [artifacts_by_id[int(record["id"])] for record in selected]
-        metrics = aggregate_parser_metrics(artifacts)
-        _write_summary(run_dir, run_id, artifacts)
-        failures = len(selected) - int(metrics["successful_queries"])
+        metrics_payload = _write_summary(run_dir, run_id, artifacts, args.top_ks)
+        metrics = metrics_payload["metrics"]
+        failures = sum(artifact.get("error") is not None for artifact in artifacts)
         status["state"] = "completed_with_failures" if failures else "completed"
         status["finished_at"] = _utc_now()
         status["counts"] = {
@@ -471,14 +805,31 @@ def _run(args: argparse.Namespace) -> int:
         file_handler.close()
 
 
+def _parse_top_ks(value: str) -> tuple[int, ...]:
+    try:
+        parsed = [int(part.strip()) for part in value.split(",") if part.strip()]
+    except ValueError as exc:
+        raise ValueError("--top-k must be a comma-separated list of integers") from exc
+    if not parsed or any(top_k < 1 for top_k in parsed):
+        raise ValueError("--top-k values must be positive integers")
+    return tuple(sorted(set(parsed)))
+
+
 def _build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Evaluate only FinLens query parsing")
+    parser = argparse.ArgumentParser(
+        description="Evaluate FinLens query parsing and dense retrieval"
+    )
     parser.add_argument("--golden", type=Path, default=DEFAULT_GOLDEN_PATH)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--run-id")
     parser.add_argument("--ids", help="optional comma-separated validation ids")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--concurrency", type=int, default=4)
+    parser.add_argument(
+        "--top-k",
+        default=",".join(map(str, DEFAULT_TOP_KS)),
+        help="comma-separated retrieval cutoffs (default: 5,10,20,50)",
+    )
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--verbose", action="store_true")
     return parser
@@ -492,6 +843,10 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--concurrency must be at least 1")
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be at least 1")
+    try:
+        args.top_ks = _parse_top_ks(args.top_k)
+    except ValueError as exc:
+        parser.error(str(exc))
     logging.basicConfig(
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
