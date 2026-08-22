@@ -100,12 +100,9 @@ TypedDict, threaded through these nodes (`src/nodes.py`):
 
 ```
 match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables -> generate_code
-                                                                                        |  ^
-                                                                                        v  |
-                                                                                  validate_code
-                                                                                        |
-                                                                                        v
-                                                                                  execute_code -> END
+                                                                                         |  ^
+                                                                                         v  |
+                                                                                   execute_code -> END
 ```
 
 - `match_question_node` resolves free text to exactly one canonical question record from
@@ -124,12 +121,11 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.
-- `generate_code_node` / `validate_code_node` / `execute_code_node` form a bounded retry loop
-  using `langgraph.types.Command` for explicit routing: the generator LLM proposes pandas code
-  + `evidence_variables` (which DataFrame aliases were actually used), a second LLM pass
-  validates it without executing it, and only validated code reaches the sandbox. Any failure
-  at any stage (bad LLM JSON, unknown alias, validator rejection, sandbox error, non-numeric
-  result) sets `feedback` and routes back to `generate_code` via
+- `generate_code_node` / `execute_code_node` form a bounded retry loop using
+  `langgraph.types.Command` for explicit routing: the generator LLM proposes pandas code +
+  `evidence_variables` (which DataFrame aliases were actually used), then the sandbox executes
+  it. Any failure (bad LLM JSON, unknown alias, sandbox error, non-numeric result) sets
+  `feedback` and routes back to `generate_code` via
   `src/helper.py:retry_or_exhausted` — until `attempt >= max_attempts`, at which point the loop
   routes to `execute_code`/raises instead of looping forever. Fresh code is generated on every
   retry (feedback is fed back into the prompt); nothing is cached across attempts.
@@ -137,8 +133,8 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   and evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from
   `evidence_variables`, so every accepted answer carries traceable provenance.
 
-Transient failures are handled at the graph level, not inside nodes: `parse_query`,
-`generate_code`, and `validate_code` are wrapped with a `RetryPolicy` retrying
+Transient failures are handled at the graph level, not inside nodes: `parse_query` and
+`generate_code` are wrapped with a `RetryPolicy` retrying
 `LLMTransientError` (`src/llm.py`), and `retrieve_tables` retries `TransientRetrievalError`
 (`src/retrieval.py`) — both up to 3 attempts with backoff, and neither consumes a semantic
 `attempt` from `max_attempts`.

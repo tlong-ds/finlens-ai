@@ -60,20 +60,6 @@ def generator_feedback(response: Mapping[str, Any]) -> str | None:
     return None
 
 
-def validator_feedback(response: Mapping[str, Any]) -> str | None:
-    """Return actionable feedback for a rejected validator response."""
-    required_keys = {"valid", "feedback"}
-    if set(response) != required_keys:
-        return "Response validator phải có đúng valid và feedback."
-    if not isinstance(response["valid"], bool):
-        return "Trường valid của validator phải là boolean."
-    if not isinstance(response["feedback"], str):
-        return "Trường feedback của validator phải là chuỗi."
-    if not response["valid"]:
-        return response["feedback"].strip() or "Validator đã từ chối đoạn mã."
-    return None
-
-
 def numeric_result(value: Any) -> tuple[float | None, str | None]:
     """Convert a finite numeric sandbox result to float or return feedback."""
     if isinstance(value, bool) or not isinstance(value, Number):

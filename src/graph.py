@@ -18,7 +18,6 @@ from src.nodes import (
     parse_query_node,
     rerank_tables_node,
     retrieve_tables_node,
-    validate_code_node,
 )
 from src.retrieval import TransientRetrievalError
 
@@ -70,7 +69,6 @@ _add_node("retrieve_tables", retrieve_tables_node, _QDRANT_RETRY_POLICY)
 _add_node("rerank_tables", rerank_tables_node, _LLM_RETRY_POLICY)
 _add_node("load_tables", load_tables_node)
 _add_node("generate_code", generate_code_node, _LLM_RETRY_POLICY)
-_add_node("validate_code", validate_code_node, _LLM_RETRY_POLICY)
 _add_node("execute_code", execute_code_node)
 
 builder.add_edge(START, "match_question")

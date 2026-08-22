@@ -1,4 +1,4 @@
-"""LangGraph nodes for retrieval and validated pandas answer execution."""
+"""LangGraph nodes for retrieval and pandas answer execution."""
 
 from __future__ import annotations
 
@@ -22,16 +22,13 @@ from src.helper import (
     numeric_result,
     ordered_unique,
     retry_or_exhausted,
-    validator_feedback,
 )
 from src.llm import LLMResponseError, generate_structured
 from src.prompt import (
     GENERATOR_SYSTEM_PROMPT,
     PARSE_SYSTEM_PROMPT,
-    VALIDATOR_SYSTEM_PROMPT,
     build_generator_prompt,
     build_parse_prompt,
-    build_validator_prompt,
 )
 from src.retrieval import NoMatchingCandidatesError, rerank, retrieve
 from src.routing import (
@@ -60,7 +57,6 @@ def _unsupported_dataframe_attribute_feedback(
     try:
         tree = ast.parse(code)
     except SyntaxError:
-        # The normal code validator provides the more useful syntax feedback.
         return None
 
     dataframe_names = set(aliases)
@@ -244,7 +240,7 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 def generate_code_node(
     state: Mapping[str, Any],
-) -> Command[Literal["validate_code", "generate_code", "execute_code"]]:
+) -> Command[Literal["generate_code", "execute_code"]]:
     """Generate one pandas candidate and increment the attempt counter."""
     attempt = int(state.get("attempt", 0)) + 1
     update: dict[str, Any] = {
@@ -298,37 +294,7 @@ def generate_code_node(
             "evidence_variables": evidence_variables,
         }
     )
-    return Command(update=update, goto="validate_code")
-
-
-def validate_code_node(
-    state: Mapping[str, Any],
-) -> Command[Literal["execute_code", "generate_code"]]:
-    """Ask the LLM to validate the generated pandas without executing it."""
-    validator_prompt = build_validator_prompt(
-        question=str(state.get("question") or ""),
-        available_aliases=list(state.get("dataframes") or {}),
-        dataframe_description=str(state.get("dataframe_description") or ""),
-        pandas_query=str(state.get("pandas_query") or ""),
-        evidence_variables=list(state.get("evidence_variables") or []),
-    )
-    try:
-        validation = generate_structured(
-            validator_prompt,
-            system_prompt=VALIDATOR_SYSTEM_PROMPT,
-        )
-    except LLMResponseError as error:
-        return retry_or_exhausted(
-            state,
-            {
-                "feedback": f"Validator call failed: {concise_error(error)}",
-            },
-        )
-
-    feedback = validator_feedback(validation)
-    if feedback:
-        return retry_or_exhausted(state, {"feedback": feedback})
-    return Command(update={"feedback": ""}, goto="execute_code")
+    return Command(update=update, goto="execute_code")
 
 
 def execute_code_node(

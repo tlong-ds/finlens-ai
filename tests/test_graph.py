@@ -165,12 +165,9 @@ class GraphTests(unittest.TestCase):
                 if system_prompt and "bộ định tuyến" in system_prompt:
                     return {
                         "ticker": ["VJC"],
-                        "company_name": ["CTCP Hàng không Vietjet"],
                         "year": [2018],
                         "report_type": ["separate"],
                     }
-                if system_prompt and "bộ kiểm định" in system_prompt:
-                    return {"valid": True, "feedback": ""}
                 return {
                     "pandas_query": "result = float(df_1.loc[0, '2018'])",
                     "evidence_variables": ["df_1"],

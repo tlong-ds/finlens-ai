@@ -179,8 +179,6 @@ class TraceTests(unittest.TestCase):
                     "year": [2018],
                     "report_type": ["separate"],
                 }
-            if system_prompt and "bộ kiểm định" in system_prompt:
-                return {"valid": True, "feedback": ""}
             return {
                 "pandas_query": "result = float(df_1.loc[0, '2018'])",
                 "evidence_variables": ["df_1"],
@@ -212,7 +210,6 @@ class TraceTests(unittest.TestCase):
                 "rerank_tables",
                 "load_tables",
                 "generate_code",
-                "validate_code",
                 "execute_code",
             ],
         )
