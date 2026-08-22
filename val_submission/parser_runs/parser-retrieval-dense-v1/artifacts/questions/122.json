@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "id": 122,
+  "question": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-22T12:05:10+00:00",
+  "finished_at": "2026-08-22T12:05:12+00:00",
+  "duration_seconds": 2.8962490009871544,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2022
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "HHV_financial_statements_2022_consolidated"
+    ],
+    "relevant_tables": [
+      "HHV_financial_statements_2022_consolidated|1521"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "HHV"
+    ],
+    "year": [
+      2021
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Số dư phải thu khách hàng ngắn hạn đến ngày 01/01/ trăm tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "matched_text": "HHV",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": false,
+      "coverage": false,
+      "missing": [
+        2022
+      ],
+      "extra": [
+        2021
+      ]
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

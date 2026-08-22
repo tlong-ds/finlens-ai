@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "id": 363,
+  "question": "Trong giai đoạn 2016-2020, vào năm KBC có tỷ số D/E cao nhất, hệ số khả năng thanh toán lãi vay là bao nhiêu lần?",
+  "started_at": "2026-08-22T12:05:16+00:00",
+  "finished_at": "2026-08-22T12:05:18+00:00",
+  "duration_seconds": 1.4886564949993044,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "KBC_financial_statements_2016_consolidated",
+      "KBC_financial_statements_2017_consolidated",
+      "KBC_financial_statements_2018_consolidated",
+      "KBC_financial_statements_2019_consolidated",
+      "KBC_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "KBC_financial_statements_2016_consolidated|243",
+      "KBC_financial_statements_2016_consolidated|258",
+      "KBC_financial_statements_2017_consolidated|255",
+      "KBC_financial_statements_2017_consolidated|270",
+      "KBC_financial_statements_2018_consolidated|252",
+      "KBC_financial_statements_2018_consolidated|269",
+      "KBC_financial_statements_2019_consolidated|232",
+      "KBC_financial_statements_2019_consolidated|247",
+      "KBC_financial_statements_2020_consolidated|248",
+      "KBC_financial_statements_2020_consolidated|265",
+      "KBC_financial_statements_2020_consolidated|296"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "KBC"
+    ],
+    "year": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , vào có tỷ số D/E cao nhất, hệ số khả năng thanh toán lãi vay lần",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "matched_text": "KBC",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016,
+            2017,
+            2018,
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

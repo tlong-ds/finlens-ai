@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "id": 801,
+  "question": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T12:05:44+00:00",
+  "finished_at": "2026-08-22T12:05:45+00:00",
+  "duration_seconds": 1.6880423199909274,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "VJC",
+      "VSC"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "VJC_financial_statements_2016_consolidated",
+      "VSC_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "VJC_financial_statements_2016_consolidated|198",
+      "VSC_financial_statements_2016_consolidated|166"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "VJC",
+      "VSC"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa và đến ngày 31/12/ tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "matched_text": "CTCP Hàng không Vietjet",
+        "match_type": "exact_alias"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "matched_text": "CTCP Container Việt Nam",
+        "match_type": "exact_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

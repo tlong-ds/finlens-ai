@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "id": 13,
+  "question": "Tiền và các khoản tương đương tiền của công ty mẹ Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn (SAB) vào cuối năm 2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-22T12:05:04+00:00",
+  "finished_at": "2026-08-22T12:05:06+00:00",
+  "duration_seconds": 1.3287555190036073,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SAB_financial_statements_2016_separate"
+    ],
+    "relevant_tables": [
+      "SAB_financial_statements_2016_separate|240"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SAB"
+    ],
+    "year": [
+      2016
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Tiền và các khoản tương đương tiền Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn vào cuối tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SAB",
+        "company_name": "Tổng Công ty cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+        "matched_text": "SAB",
+        "match_type": "explicit_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2016
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

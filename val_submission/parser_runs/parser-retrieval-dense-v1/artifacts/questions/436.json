@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "id": 436,
+  "question": "Trong năm 2023, xét nhóm doanh nghiệp gồm Điện lực Gelex, Tập đoàn Gelex, Đầu tư Hạ tầng Giao thông Đèo Cả, SAM Holdings, Tổng Công ty Sông Đà và Viglacera có biên lợi nhuận hoạt động dương; giả định sản lượng và các chi phí ngoài giá vốn không đổi, nếu giá vốn tăng 5%, mức tăng giá bán lớn nhất cần thiết để giữ nguyên biên lợi nhuận hoạt động là bao nhiêu phần trăm?",
+  "started_at": "2026-08-22T12:05:21+00:00",
+  "finished_at": "2026-08-22T12:05:23+00:00",
+  "duration_seconds": 2.0732035390101373,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "GEE",
+      "GEX",
+      "HHV",
+      "SAM",
+      "SJG",
+      "VGC"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "GEE_financial_statements_2023_consolidated",
+      "GEX_financial_statements_2023_consolidated",
+      "HHV_financial_statements_2023_consolidated",
+      "SAM_financial_statements_2023_consolidated",
+      "SJG_financial_statements_2023_consolidated",
+      "VGC_financial_statements_2023_consolidated"
+    ],
+    "relevant_tables": [
+      "GEE_financial_statements_2023_consolidated|459",
+      "GEX_financial_statements_2023_consolidated|455",
+      "HHV_financial_statements_2023_consolidated|468",
+      "SAM_financial_statements_2023_consolidated|230",
+      "SJG_financial_statements_2023_consolidated|534",
+      "VGC_financial_statements_2023_consolidated|381"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SAM",
+      "HHV",
+      "GEE",
+      "VGC",
+      "SJG",
+      "GEX"
+    ],
+    "year": [
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong , xét nhóm doanh nghiệp gồm , , , Holdings, và có biên lợi nhuận hoạt động dương; giả định sản lượng và các chi phí ngoài giá vốn không đổi, nếu giá vốn tăng 5%, mức tăng giá bán lớn nhất cần thiết để giữ nguyên biên lợi nhuận hoạt động phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SAM",
+        "company_name": "CTCP SAM Holdings",
+        "matched_text": "SAM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "matched_text": "Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "matched_text": "Điện lực Gelex",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c04",
+        "ticker": "VGC",
+        "company_name": "Tổng Công ty Viglacera - CTCP",
+        "matched_text": "Viglacera",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c05",
+        "ticker": "SJG",
+        "company_name": "Tổng Công ty Sông Đà - CTCP",
+        "matched_text": "Sông Đà",
+        "match_type": "normalized_alias"
+      },
+      {
+        "candidate_key": "c06",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "matched_text": "Gelex",
+        "match_type": "normalized_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03",
+            "c04",
+            "c05",
+            "c06"
+          ],
+          "year": [
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

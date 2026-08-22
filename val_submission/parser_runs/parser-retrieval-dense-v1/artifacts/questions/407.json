@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "id": 407,
+  "question": "Xét Công ty Cổ phần Đầu tư Thế Giới Di Động, trong các năm thuộc giai đoạn 2021–2023 có lợi nhuận sau thuế dương, hãy xác định năm có hệ số chuyển đổi lợi nhuận (CFO/LNST) thấp nhất; từ đó cho biết hệ số thanh toán hiện hành tại thời điểm cuối năm kế tiếp là bao nhiêu lần?",
+  "started_at": "2026-08-22T12:05:20+00:00",
+  "finished_at": "2026-08-22T12:05:21+00:00",
+  "duration_seconds": 1.1484605410078075,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MWG_financial_statements_2021_consolidated",
+      "MWG_financial_statements_2022_consolidated",
+      "MWG_financial_statements_2023_consolidated"
+    ],
+    "relevant_tables": [
+      "MWG_financial_statements_2021_consolidated|222",
+      "MWG_financial_statements_2021_consolidated|251",
+      "MWG_financial_statements_2022_consolidated|193",
+      "MWG_financial_statements_2022_consolidated|210",
+      "MWG_financial_statements_2022_consolidated|227",
+      "MWG_financial_statements_2022_consolidated|256",
+      "MWG_financial_statements_2023_consolidated|231",
+      "MWG_financial_statements_2023_consolidated|262"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MWG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Xét , trong các thuộc giai đoạn có lợi nhuận sau thuế dương, hãy xác định có hệ số chuyển đổi lợi nhuận (CFO/LNST) thấp nhất; từ đó cho biết hệ số thanh toán hiện hành tại thời điểm cuối kế tiếp lần",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MWG",
+        "company_name": "CTCP Đầu tư Thế giới Di động",
+        "matched_text": "Đầu tư Thế Giới Di Động",
+        "match_type": "normalized_alias"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

@@ -9,6 +9,18 @@ from unittest.mock import patch
 import run_parser_valset
 
 
+def candidate(doc_id: str, start_line: int, rank: int) -> dict[str, object]:
+    return {
+        "table_id": f"{doc_id}_table_{rank}",
+        "retrieval_score": 1.0 / rank,
+        "dense_rank": rank,
+        "metadata": {
+            "doc_id": doc_id,
+            "start_line": start_line,
+        },
+    }
+
+
 def parser_artifact(
     question_id: int,
     *,
@@ -45,11 +57,38 @@ def parser_artifact(
         "duration_seconds": 1.0,
         "provider_attempts": 1,
         "expected_filters": expected,
+        "golden_retrieval": {
+            "relevant_docs": ["VJC_financial_statements_2018_separate"],
+            "relevant_tables": [
+                "VJC_financial_statements_2018_separate|10"
+            ],
+        },
         "filters": filters,
         "semantic_query": "query",
         "diagnostics": diagnostics,
         "repair_changed_fields": [],
         "metrics": run_parser_valset.score_parser_output(expected, filters),
+        "retrieval_attempts": 1,
+        "retrieval": {
+            "requested_top_ks": [1],
+            "max_top_k": 1,
+            "bucket_diagnostics": [],
+            "candidates": [],
+            "metrics_by_top_k": run_parser_valset.score_retrieval_output(
+                {
+                    "relevant_docs": [
+                        "VJC_financial_statements_2018_separate"
+                    ],
+                    "relevant_tables": [
+                        "VJC_financial_statements_2018_separate|10"
+                    ],
+                },
+                [],
+                [1],
+            ),
+        },
+        "parser_error": None,
+        "retrieval_error": None,
         "error": None,
     }
 
@@ -102,6 +141,114 @@ class ParserValsetTests(unittest.TestCase):
         )
         self.assertNotIn("table_type_emission_rate", metrics)
 
+    def test_scores_retrieval_prefixes_with_run_valset_formulas(self) -> None:
+        golden = {
+            "relevant_docs": ["doc-1", "doc-2"],
+            "relevant_tables": ["doc-1|10", "doc-2|20"],
+        }
+        candidates = [
+            candidate("wrong", 1, 1),
+            candidate("doc-1", 10, 2),
+            candidate("doc-2", 20, 3),
+        ]
+        scored = run_parser_valset.score_retrieval_output(
+            golden, candidates, [1, 2, 3]
+        )
+
+        self.assertEqual(scored["1"]["tables"]["recall"], 0.0)
+        self.assertAlmostEqual(scored["2"]["tables"]["precision"], 0.5)
+        self.assertAlmostEqual(scored["2"]["tables"]["recall"], 0.5)
+        self.assertAlmostEqual(scored["2"]["tables"]["mrr5"], 0.5)
+        self.assertAlmostEqual(scored["3"]["tables"]["f2"], 10 / 11)
+
+    def test_balanced_retrieval_interleaves_ticker_buckets(self) -> None:
+        def side_effect(
+            *, query_text: str, filters: dict[str, object], top_n: int
+        ) -> list[dict[str, object]]:
+            ticker = str(filters["ticker"][0])
+            return [
+                candidate(f"{ticker}-doc", 10, 1),
+                candidate(f"{ticker}-doc", 20, 2),
+            ][:top_n]
+
+        with patch("run_parser_valset.retrieve", side_effect=side_effect) as mocked:
+            candidates, buckets = run_parser_valset._retrieve_balanced(
+                "query",
+                {
+                    "ticker": ["AAA", "BBB"],
+                    "year": [2024],
+                    "report_type": ["consolidated"],
+                },
+                top_n=4,
+            )
+
+        self.assertEqual(mocked.call_count, 2)
+        self.assertEqual([bucket["requested_top_n"] for bucket in buckets], [2, 2])
+        self.assertEqual(
+            [item["metadata"]["doc_id"] for item in candidates],
+            ["AAA-doc", "BBB-doc", "AAA-doc", "BBB-doc"],
+        )
+        self.assertEqual([item["dense_rank"] for item in candidates], [1, 2, 3, 4])
+
+    def test_parser_artifact_includes_retrieval_metrics(self) -> None:
+        record = {
+            "id": 1,
+            "question": "Question",
+            "relevant_docs": ["VJC_financial_statements_2018_separate"],
+            "relevant_tables": ["VJC_financial_statements_2018_separate|10"],
+        }
+        parsed = {
+            "filters": {
+                "ticker": ["VJC"],
+                "year": [2018],
+                "report_type": ["separate"],
+            },
+            "semantic_query": "query",
+            "diagnostics": {"semantic_attempts": 1, "attempts": []},
+        }
+        retrieved = [candidate("VJC_financial_statements_2018_separate", 10, 1)]
+        with (
+            patch("run_parser_valset.parse_query_with_diagnostics", return_value=parsed),
+            patch(
+                "run_parser_valset._retrieve_balanced",
+                return_value=(retrieved, [{"ticker": "VJC"}]),
+            ) as retrieve_mock,
+        ):
+            artifact = run_parser_valset._parse_with_transient_retry(record, [1, 5])
+
+        self.assertIsNone(artifact["error"])
+        self.assertEqual(artifact["retrieval_attempts"], 1)
+        self.assertEqual(
+            artifact["retrieval"]["metrics_by_top_k"]["1"]["tables"]["recall"],
+            1.0,
+        )
+        retrieve_mock.assert_called_once_with("query", parsed["filters"], top_n=5)
+
+    def test_aggregate_retrieval_counts_failed_question_as_empty(self) -> None:
+        first = parser_artifact(1)
+        golden = first["golden_retrieval"]
+        retrieved = [candidate("VJC_financial_statements_2018_separate", 10, 1)]
+        first["retrieval"]["metrics_by_top_k"] = (
+            run_parser_valset.score_retrieval_output(golden, retrieved, [1])
+        )
+        second = parser_artifact(2)
+        second["error"] = {"stage": "retrieval", "message": "failed"}
+        second["retrieval_error"] = second["error"]
+
+        metrics = run_parser_valset.aggregate_retrieval_metrics([first, second], [1])
+        health = run_parser_valset.aggregate_retrieval_health([first, second])
+        parser_metrics = run_parser_valset.aggregate_parser_metrics([first, second])
+
+        self.assertEqual(metrics["1"]["TABLES RECALL"], 0.5)
+        self.assertEqual(metrics["1"]["DOCS RECALL"], 0.5)
+        self.assertEqual(health["retrieval_success_rate"], 0.5)
+        self.assertEqual(parser_metrics["parser_success_rate"], 1.0)
+
+    def test_parses_sorted_unique_top_k_values(self) -> None:
+        self.assertEqual(run_parser_valset._parse_top_ks("20,5,10,5"), (5, 10, 20))
+        with self.assertRaisesRegex(ValueError, "positive"):
+            run_parser_valset._parse_top_ks("0,5")
+
     def test_runner_writes_parser_artifacts_and_resume_skips_success(self) -> None:
         golden = [
             {
@@ -135,6 +282,10 @@ class ParserValsetTests(unittest.TestCase):
             self.assertEqual(exit_code, 0)
             parse_mock.assert_called_once()
             self.assertTrue((output_root / "test" / "metrics.json").is_file())
+            metrics = json.loads(
+                (output_root / "test" / "metrics.json").read_text(encoding="utf-8")
+            )
+            self.assertIn("retrieval_by_top_k", metrics["metrics"])
             self.assertTrue(
                 (output_root / "test" / "artifacts" / "questions" / "1.json").is_file()
             )

@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "id": 225,
+  "question": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+  "started_at": "2026-08-22T12:05:13+00:00",
+  "finished_at": "2026-08-22T12:05:15+00:00",
+  "duration_seconds": 1.5126275650109164,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "SSI"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "SSI_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "SSI_financial_statements_2017_separate|1619"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "SSI"
+    ],
+    "year": [
+      2017
+    ],
+    "report_type": [
+      "separate"
+    ]
+  },
+  "semantic_query": "Số lượng cổ phiếu đang lưu hành CTCP Chứng khoán đến ngày 31 tháng 12 cổ phiếu",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "matched_text": "SSI",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "FTS",
+        "company_name": "CTCP Chứng khoán FPT",
+        "matched_text": "Chứng khoán",
+        "match_type": "collision"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "MBS",
+        "company_name": "CTCP Chứng khoán MB",
+        "matched_text": "Chứng khoán",
+        "match_type": "collision"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017
+          ],
+          "report_type": [
+            "separate"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

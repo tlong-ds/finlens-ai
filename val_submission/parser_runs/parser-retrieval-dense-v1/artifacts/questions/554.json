@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "id": 554,
+  "question": "Trong nhóm DCM, DPM và PRT, xét các công ty có doanh thu thuần năm 2020 cao hơn năm 2019, mức tăng trung bình của tỷ lệ lợi nhuận gộp trên doanh thu thuần từ năm 2019 đến năm 2020 là bao nhiêu điểm phần trăm?",
+  "started_at": "2026-08-22T12:05:27+00:00",
+  "finished_at": "2026-08-22T12:05:29+00:00",
+  "duration_seconds": 2.2803526669886196,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DCM",
+      "DPM",
+      "PRT"
+    ],
+    "year": [
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DCM_financial_statements_2019_consolidated",
+      "DCM_financial_statements_2020_consolidated",
+      "DPM_financial_statements_2019_consolidated",
+      "DPM_financial_statements_2020_consolidated",
+      "PRT_financial_statements_2019_consolidated",
+      "PRT_financial_statements_2020_consolidated"
+    ],
+    "relevant_tables": [
+      "DCM_financial_statements_2019_consolidated|391",
+      "DCM_financial_statements_2020_consolidated|470",
+      "DPM_financial_statements_2019_consolidated|337",
+      "DPM_financial_statements_2020_consolidated|351",
+      "PRT_financial_statements_2019_consolidated|303",
+      "PRT_financial_statements_2020_consolidated|251"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DCM",
+      "DPM",
+      "PRT"
+    ],
+    "year": [
+      2019,
+      2020
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong nhóm , và , xét các công ty có doanh thu thuần cao hơn , mức tăng trung bình tỷ lệ lợi nhuận gộp trên doanh thu thuần từ điểm phần trăm",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DCM",
+        "company_name": "CTCP - Tổng công ty Phân bón Dầu khí Cà Mau",
+        "matched_text": "DCM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c02",
+        "ticker": "DPM",
+        "company_name": "Tổng công ty Phân bón và Hóa chất Dầu khí - CTCP",
+        "matched_text": "DPM",
+        "match_type": "exact_ticker"
+      },
+      {
+        "candidate_key": "c03",
+        "ticker": "PRT",
+        "company_name": "Tổng Công ty Sản xuất - Xuất nhập khẩu Bình Dương - CTCP",
+        "matched_text": "PRT",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01",
+            "c02",
+            "c03"
+          ],
+          "year": [
+            2019,
+            2020
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

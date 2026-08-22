@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "id": 440,
+  "question": "Trong giai đoạn 2021–2024 của DIG, năm mà có tỷ lệ nợ phải trả trên vốn chủ sở hữu cao nhất, lợi nhuận trước lãi vay và thuế trong năm đó gấp bao nhiêu lần chi phí lãi vay?",
+  "started_at": "2026-08-22T12:05:22+00:00",
+  "finished_at": "2026-08-22T12:05:24+00:00",
+  "duration_seconds": 1.5360589070041897,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "DIG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "DIG_financial_statements_2021_consolidated",
+      "DIG_financial_statements_2022_consolidated",
+      "DIG_financial_statements_2023_consolidated",
+      "DIG_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "DIG_financial_statements_2021_consolidated|322",
+      "DIG_financial_statements_2022_consolidated|241",
+      "DIG_financial_statements_2023_consolidated|351",
+      "DIG_financial_statements_2024_consolidated|350",
+      "DIG_financial_statements_2024_consolidated|371"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "DIG"
+    ],
+    "year": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong giai đoạn , mà có tỷ lệ nợ phải trả trên vốn chủ sở hữu cao nhất, lợi nhuận trước lãi vay và thuế trong đó gấp lần chi phí lãi vay",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "DIG",
+        "company_name": "Tổng Công ty cổ phần Đầu tư Phát triển Xây dựng",
+        "matched_text": "DIG",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}

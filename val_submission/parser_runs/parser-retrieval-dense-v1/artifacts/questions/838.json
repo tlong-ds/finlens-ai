@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "id": 838,
+  "question": "Trong các mốc cuối năm 2017, 2018, 2020, 2021 và 2024, MSN có số dư Đầu tư tài chính dài hạn cao nhất là bao nhiêu nghìn tỷ đồng?",
+  "started_at": "2026-08-22T12:05:51+00:00",
+  "finished_at": "2026-08-22T12:05:52+00:00",
+  "duration_seconds": 1.2307483100012178,
+  "provider_attempts": 1,
+  "retrieval_attempts": 1,
+  "expected_filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "golden_retrieval": {
+    "relevant_docs": [
+      "MSN_financial_statements_2017_consolidated",
+      "MSN_financial_statements_2018_consolidated",
+      "MSN_financial_statements_2020_consolidated",
+      "MSN_financial_statements_2021_consolidated",
+      "MSN_financial_statements_2024_consolidated"
+    ],
+    "relevant_tables": [
+      "MSN_financial_statements_2017_consolidated|133",
+      "MSN_financial_statements_2018_consolidated|189",
+      "MSN_financial_statements_2020_consolidated|152",
+      "MSN_financial_statements_2021_consolidated|233",
+      "MSN_financial_statements_2024_consolidated|179"
+    ]
+  },
+  "filters": {
+    "ticker": [
+      "MSN"
+    ],
+    "year": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2024
+    ],
+    "report_type": [
+      "consolidated"
+    ]
+  },
+  "semantic_query": "Trong các mốc cuối , , , và , có số dư Đầu tư tài chính dài hạn cao nhất nghìn tỷ đồng",
+  "diagnostics": {
+    "ticker_candidates": [
+      {
+        "candidate_key": "c01",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "matched_text": "MSN",
+        "match_type": "exact_ticker"
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "raw_filters": {
+          "ticker": [
+            "c01"
+          ],
+          "year": [
+            2017,
+            2018,
+            2020,
+            2021,
+            2024
+          ],
+          "report_type": [
+            "consolidated"
+          ]
+        },
+        "validation_error": null
+      }
+    ],
+    "semantic_attempts": 1
+  },
+  "repair_changed_fields": [],
+  "metrics": {
+    "ticker": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "year": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    },
+    "report_type": {
+      "exact": true,
+      "coverage": true,
+      "missing": [],
+      "extra": []
+    }
+  },
+  "retrieval": {
+    "requested_top_ks": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "max_top_k": 50,
+    "bucket_diagnostics": [],
+    "candidates": [],
+    "metrics_by_top_k": {
+      "5": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "10": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "20": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      },
+      "50": {
+        "candidate_count": 0,
+        "rankings": {
+          "docs": [],
+          "tables": []
+        },
+        "tables": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        },
+        "docs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f2": 0.0,
+          "mrr5": 0.0
+        }
+      }
+    }
+  },
+  "parser_error": null,
+  "retrieval_error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  },
+  "error": {
+    "stage": "retrieval",
+    "type": "RetrievalError",
+    "message": "Query embedding failed"
+  }
+}
