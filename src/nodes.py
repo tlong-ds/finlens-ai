@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import ast
-import json
 import logging
 from collections.abc import Mapping
 from pathlib import Path
@@ -25,12 +24,22 @@ from src.helper import (
 )
 from src.llm import LLMResponseError, generate_structured
 from src.parser import parse_query_with_diagnostics
-from src.prompt import GENERATOR_SYSTEM_PROMPT, build_generator_prompt
 from src.retrieval import (
     RETRIEVAL_TOP_K,
     NoMatchingCandidatesError,
     rerank,
     retrieve,
+)
+from src.planning import (
+    build_planning_inventory,
+    generated_alias_feedback,
+    hydrate_planned_rows,
+)
+from src.prompt import (
+    GENERATOR_SYSTEM_PROMPT,
+    PLANNER_SYSTEM_PROMPT,
+    build_generator_prompt,
+    build_planner_prompt,
 )
 from src.routing import QueryRoutingError
 
@@ -212,11 +221,11 @@ def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Load retrieved CSV tables and describe them for pandas generation."""
+    """Load every reranked CSV table for planning and sandbox execution."""
     dataframes: dict[str, pd.DataFrame] = {}
-    evidence_sources: dict[str, dict[str, str]] = {}
+    evidence_sources: dict[str, dict[str, Any]] = {}
     alias_metadata: dict[str, dict[str, Any]] = {}
-    descriptions: list[str] = []
+    rerank_contexts: dict[str, dict[str, Any]] = {}
 
     for index, candidate in enumerate(state.get("retrieved_tables", []), start=1):
         alias = f"df_{index}"
@@ -233,6 +242,12 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
         dataframe = pd.read_csv(csv_file)
 
         dataframes[alias] = dataframe
+        raw_rerank_context = candidate.get("rerank_context")
+        rerank_contexts[alias] = (
+            dict(raw_rerank_context)
+            if isinstance(raw_rerank_context, Mapping)
+            else {}
+        )
         evidence_sources[alias] = {
             "csv_path": csv_path,
             "doc_id": doc_id,
@@ -248,27 +263,47 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
             "report_type": metadata["report_type"],
             "table_type": metadata["table_type"],
         }
-        schema = {
-            "alias": alias,
-            "metadata": metadata,
-            "columns": [
-                {"name": str(column), "dtype": str(dataframe[column].dtype)}
-                for column in dataframe.columns
-            ],
-            "sample_rows": json.loads(
-                dataframe.head(8).to_json(orient="records", force_ascii=False)
-            ),
-        }
-        descriptions.append(json.dumps(schema, ensure_ascii=False, default=str))
-
     if not dataframes:
         raise RuntimeError("Retrieval returned no tables")
     return {
         "dataframes": dataframes,
         "evidence_sources": evidence_sources,
         "alias_metadata": alias_metadata,
-        "dataframe_description": "\n".join(descriptions),
+        "rerank_contexts": rerank_contexts,
     }
+
+
+def plan_generation_context_node(
+    state: Mapping[str, Any],
+) -> Command[Literal["generate_code"]]:
+    """Plan how to answer the user question from reranker-selected table context."""
+    dataframes = state.get("dataframes") or {}
+    alias_metadata = state.get("alias_metadata") or {}
+    inventory = build_planning_inventory(
+        dataframes,
+        alias_metadata,
+        state.get("rerank_contexts") or {},
+    )
+    generation_plan = generate_structured(
+        build_planner_prompt(str(state.get("question") or ""), inventory),
+        system_prompt=PLANNER_SYSTEM_PROMPT,
+    )
+    selected_rows = hydrate_planned_rows(generation_plan, dataframes, inventory)
+    return Command(
+        update={
+            "planning_inventory": inventory,
+            "generation_plan": generation_plan,
+            "planned_context": {
+                "inventory": inventory,
+                "alias_metadata": dict(alias_metadata),
+                "selected_rows": selected_rows,
+            },
+            "feedback": "",
+            "pandas_query": "",
+            "evidence_variables": [],
+        },
+        goto="generate_code",
+    )
 
 
 def generate_code_node(
@@ -283,8 +318,8 @@ def generate_code_node(
     }
     generator_prompt = build_generator_prompt(
         question=str(state.get("question") or ""),
-        dataframe_description=str(state.get("dataframe_description") or ""),
-        alias_metadata=state.get("alias_metadata") or {},
+        generation_plan=state.get("generation_plan") or {},
+        planned_context=state.get("planned_context") or {},
         feedback=str(state.get("feedback") or ""),
     )
     try:
@@ -302,14 +337,21 @@ def generate_code_node(
         return retry_or_exhausted(state, update, attempt=attempt)
 
     evidence_variables = generated["evidence_variables"]
-    evidence_sources = state.get("evidence_sources") or {}
+    allowed_aliases = set(state.get("evidence_sources") or [])
     unknown_aliases = [
-        alias for alias in evidence_variables if alias not in evidence_sources
+        alias for alias in evidence_variables if alias not in allowed_aliases
     ]
     if unknown_aliases:
         update["feedback"] = "Unknown evidence variables: " + ", ".join(
             unknown_aliases
         )
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    alias_feedback = generated_alias_feedback(
+        generated["pandas_query"], evidence_variables, allowed_aliases
+    )
+    if alias_feedback:
+        update["feedback"] = alias_feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
     attribute_feedback = _unsupported_dataframe_attribute_feedback(
