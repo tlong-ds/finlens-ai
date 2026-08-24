@@ -114,7 +114,7 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
     if not isinstance(question, str) or not question.strip():
         raise ValueError("question must not be empty")
 
-    max_attempts = state.get("max_attempts", 5)
+    max_attempts = state.get("max_attempts", 3)
     if isinstance(max_attempts, bool) or not isinstance(max_attempts, int):
         raise TypeError("max_attempts must be an integer")
     if not 1 <= max_attempts <= 5:
@@ -459,7 +459,7 @@ def execute_code_node(
     """Execute approved code and build the final answer for numeric success."""
     feedback = state.get("feedback") or ""
     attempt = int(state.get("attempt", 0))
-    max_attempts = int(state.get("max_attempts", 5))
+    max_attempts = int(state.get("max_attempts", 3))
     if feedback and attempt >= max_attempts:
         raise RuntimeError(
             "Unable to produce a valid numeric result after "

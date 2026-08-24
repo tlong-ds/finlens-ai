@@ -656,7 +656,7 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Resume an existing --run-id instead of creating a fresh run",
     )
-    parser.add_argument("--max-attempts", type=int, default=5)
+    parser.add_argument("--max-attempts", type=int, default=3)
     parser.add_argument("--verbose", action="store_true")
     commands = parser.add_subparsers(dest="command", required=True)
 

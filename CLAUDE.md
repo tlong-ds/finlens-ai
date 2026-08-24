@@ -66,7 +66,7 @@ Invoking the retrieval+answer graph directly:
 ```python
 from src.graph import graph
 
-result = graph.invoke({"question": query_text, "max_attempts": 5})
+result = graph.invoke({"question": query_text, "max_attempts": 3})
 answer = result["answer_record"]
 ```
 

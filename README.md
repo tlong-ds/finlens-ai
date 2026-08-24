@@ -84,11 +84,11 @@ but runtime query filters use `ticker`, `year`, `report_type`, and `table_type` 
 ```python
 from src.graph import graph
 
-result = graph.invoke({"question": query_text, "max_attempts": 5})
+result = graph.invoke({"question": query_text, "max_attempts": 3})
 answer = result["answer_record"]
 ```
 
-`max_attempts` defaults to `5` and accepts values from `1` through `5`. The final
+`max_attempts` defaults to `3` and accepts values from `1` through `5`. The final
 `answer_record` contains the numeric answer, evidence paths, relevant documents and
 tables, and the accepted pandas query. Transient LLM and Qdrant failures are retried
 up to three times with backoff without consuming a semantic generation attempt.

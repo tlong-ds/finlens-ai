@@ -1031,7 +1031,7 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="resume an existing --run-id and retry only unfinished/failed questions",
     )
-    parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=5)
+    parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=3)
     parser.add_argument("--answer-rtol", type=float, default=DEFAULT_ANSWER_RTOL)
     parser.add_argument("--answer-atol", type=float, default=DEFAULT_ANSWER_ATOL)
     parser.add_argument("--verbose", action="store_true")
