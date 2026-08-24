@@ -1,265 +1,137 @@
-"""Local BM25 retrieval over the same manifest used to build Qdrant."""
+"""Runtime BM25 ranking over ``index_text`` payloads stored in Qdrant."""
 
 from __future__ import annotations
 
-import json
 import logging
 import math
 import os
 import re
-import sqlite3
-import tempfile
-import threading
+import unicodedata
+from collections import Counter
 from collections.abc import Mapping, Sequence
-from contextlib import closing
-from pathlib import Path
-from typing import Any
+from typing import Any, cast
+
+from qdrant_client import models
 
 from src.contracts import FILTER_FIELDS, validate_qdrant_payload
+from src.qdrant import get_collection_name, get_qdrant_client
 
 
 logger = logging.getLogger(__name__)
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_MANIFEST_PATH = (
-    PROJECT_ROOT / "intermediate" / "qdrant_manifest_granite_97m_r2_v1.jsonl"
-)
-DEFAULT_INDEX_PATH = PROJECT_ROOT / ".cache" / "bm25_manifest_v1.sqlite3"
-BM25_SCHEMA_VERSION = 1
+BM25_K1_DEFAULT = 1.2
+BM25_B_DEFAULT = 0.75
+QDRANT_SCROLL_BATCH_DEFAULT = 512
+QDRANT_BM25_MAX_DOCUMENTS_DEFAULT = 20_000
 
-_INDEX_LOCK = threading.Lock()
-_READY_INDEXES: set[tuple[str, int, int, str]] = set()
 _STOP_WORDS = frozenset(
     {
         "bao",
-        "bằng",
-        "các",
+        "bang",
+        "cac",
         "cho",
-        "có",
-        "công",
-        "của",
-        "cuối",
-        "đến",
-        "đồng",
-        "giữa",
-        "là",
-        "năm",
-        "ngày",
-        "nhiêu",
-        "số",
+        "co",
+        "cong",
+        "cua",
+        "cuoi",
+        "den",
+        "dong",
+        "giua",
+        "la",
+        "nam",
+        "ngay",
+        "nhieu",
         "so",
         "theo",
         "trong",
-        "triệu",
-        "tỷ",
-        "vào",
-        "và",
+        "trieu",
+        "ty",
+        "vao",
+        "va",
     }
 )
 
 
 class BM25IndexError(RuntimeError):
-    """Raised when the local lexical index cannot be built or queried."""
+    """Raised when Qdrant payloads cannot be collected or ranked safely."""
 
 
-def get_manifest_path() -> Path:
-    raw = os.getenv("QDRANT_MANIFEST_PATH")
-    path = Path(raw) if raw else DEFAULT_MANIFEST_PATH
-    if not path.is_absolute():
-        path = PROJECT_ROOT / path
-    return path.resolve()
-
-
-def get_index_path() -> Path:
-    raw = os.getenv("BM25_INDEX_PATH")
-    path = Path(raw) if raw else DEFAULT_INDEX_PATH
-    if not path.is_absolute():
-        path = PROJECT_ROOT / path
-    return path.resolve()
-
-
-def _index_identity(manifest_path: Path, index_path: Path) -> tuple[str, int, int, str]:
-    stat = manifest_path.stat()
-    return str(manifest_path), stat.st_size, stat.st_mtime_ns, str(index_path)
-
-
-def _is_current(index_path: Path, identity: tuple[str, int, int, str]) -> bool:
-    if not index_path.is_file():
-        return False
+def _positive_float_env(name: str, default: float) -> float:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
     try:
-        with closing(sqlite3.connect(index_path)) as connection:
-            row = connection.execute(
-                "SELECT schema_version, manifest_path, manifest_size, manifest_mtime_ns "
-                "FROM bm25_metadata LIMIT 1"
-            ).fetchone()
-    except sqlite3.Error:
-        return False
-    return row == (BM25_SCHEMA_VERSION, identity[0], identity[1], identity[2])
+        value = float(raw)
+    except ValueError as exc:
+        raise BM25IndexError(f"{name} must be numeric") from exc
+    if not math.isfinite(value) or value <= 0:
+        raise BM25IndexError(f"{name} must be positive and finite")
+    return value
 
 
-def _build_index(
-    manifest_path: Path,
-    index_path: Path,
-    identity: tuple[str, int, int, str],
-) -> None:
-    index_path.parent.mkdir(parents=True, exist_ok=True)
-    descriptor, temporary_name = tempfile.mkstemp(
-        dir=index_path.parent,
-        prefix=".bm25-",
-        suffix=".sqlite3",
-    )
-    os.close(descriptor)
-    temporary_path = Path(temporary_name)
-    point_count = 0
+def _bounded_float_env(name: str, default: float, low: float, high: float) -> float:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
     try:
-        with closing(sqlite3.connect(temporary_path)) as connection:
-            connection.execute("PRAGMA journal_mode=OFF")
-            connection.execute("PRAGMA synchronous=OFF")
-            connection.execute("PRAGMA temp_store=MEMORY")
-            connection.execute("PRAGMA cache_size=-65536")
-            connection.execute(
-                "CREATE TABLE bm25_metadata ("
-                "schema_version INTEGER NOT NULL, "
-                "manifest_path TEXT NOT NULL, "
-                "manifest_size INTEGER NOT NULL, "
-                "manifest_mtime_ns INTEGER NOT NULL, "
-                "point_count INTEGER NOT NULL)"
-            )
-            connection.execute(
-                "CREATE VIRTUAL TABLE documents USING fts5("
-                "table_id UNINDEXED, doc_id UNINDEXED, ticker UNINDEXED, "
-                "company_name UNINDEXED, year UNINDEXED, "
-                "report_type UNINDEXED, table_type UNINDEXED, "
-                "start_line UNINDEXED, index_text, "
-                "tokenize='unicode61 remove_diacritics 2')"
-            )
-            batch: list[tuple[Any, ...]] = []
-            with manifest_path.open(encoding="utf-8") as handle:
-                for line_number, line in enumerate(handle, start=1):
-                    if not line.strip():
-                        continue
-                    record = json.loads(line)
-                    if record.get("record_type") == "header":
-                        continue
-                    if record.get("record_type") != "point":
-                        raise ValueError(
-                            f"Unknown manifest record type at line {line_number}"
-                        )
-                    payload = validate_qdrant_payload(record["payload"])
-                    if record.get("table_id") != payload["table_id"]:
-                        raise ValueError(
-                            f"Manifest table_id mismatch at line {line_number}"
-                        )
-                    index_text = record.get("index_text")
-                    if not isinstance(index_text, str) or not index_text.strip():
-                        raise ValueError(
-                            f"Empty manifest index_text at line {line_number}"
-                        )
-                    batch.append(
-                        (
-                            payload["table_id"],
-                            payload["doc_id"],
-                            payload["ticker"],
-                            payload["company_name"],
-                            payload["year"],
-                            payload["report_type"],
-                            payload["table_type"],
-                            payload["start_line"],
-                            index_text,
-                        )
-                    )
-                    if len(batch) >= 1_000:
-                        connection.executemany(
-                            "INSERT INTO documents VALUES (?,?,?,?,?,?,?,?,?)",
-                            batch,
-                        )
-                        point_count += len(batch)
-                        batch.clear()
-                if batch:
-                    connection.executemany(
-                        "INSERT INTO documents VALUES (?,?,?,?,?,?,?,?,?)",
-                        batch,
-                    )
-                    point_count += len(batch)
-            if point_count < 1:
-                raise ValueError("Manifest contains no point records")
-            connection.execute(
-                "INSERT INTO bm25_metadata VALUES (?,?,?,?,?)",
-                (
-                    BM25_SCHEMA_VERSION,
-                    identity[0],
-                    identity[1],
-                    identity[2],
-                    point_count,
-                ),
-            )
-            connection.execute("INSERT INTO documents(documents) VALUES ('optimize')")
-            connection.commit()
-        os.replace(temporary_path, index_path)
-    except (
-        OSError,
-        UnicodeError,
-        json.JSONDecodeError,
-        KeyError,
-        ValueError,
-        sqlite3.Error,
-    ) as exc:
-        raise BM25IndexError(f"Cannot build BM25 index from {manifest_path}") from exc
-    finally:
-        temporary_path.unlink(missing_ok=True)
-    logger.info("Built BM25 index with %d documents at %s", point_count, index_path)
+        value = float(raw)
+    except ValueError as exc:
+        raise BM25IndexError(f"{name} must be numeric") from exc
+    if not math.isfinite(value) or not low <= value <= high:
+        raise BM25IndexError(f"{name} must be between {low} and {high}")
+    return value
 
 
-def ensure_index(
-    manifest_path: Path | None = None,
-    index_path: Path | None = None,
-) -> Path:
-    """Build the SQLite FTS5 index once and return its validated path."""
-    manifest = (manifest_path or get_manifest_path()).resolve()
-    index = (index_path or get_index_path()).resolve()
-    if not manifest.is_file():
-        raise BM25IndexError(f"BM25 manifest does not exist: {manifest}")
+def _positive_int_env(name: str, default: int) -> int:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
     try:
-        identity = _index_identity(manifest, index)
-    except OSError as exc:
-        raise BM25IndexError(f"Cannot stat BM25 manifest: {manifest}") from exc
-    if identity in _READY_INDEXES and _is_current(index, identity):
-        return index
-    with _INDEX_LOCK:
-        if not _is_current(index, identity):
-            _build_index(manifest, index, identity)
-        _READY_INDEXES.add(identity)
-    return index
+        value = int(raw)
+    except ValueError as exc:
+        raise BM25IndexError(f"{name} must be an integer") from exc
+    if value < 1:
+        raise BM25IndexError(f"{name} must be positive")
+    return value
+
+
+def _fold_token(value: str) -> str:
+    decomposed = unicodedata.normalize("NFD", value.casefold())
+    return "".join(
+        character
+        for character in decomposed
+        if unicodedata.category(character) != "Mn"
+    ).replace("đ", "d")
+
+
+def _tokens(text: str) -> list[str]:
+    tokens = [
+        _fold_token(token)
+        for token in re.findall(r"\w+", text, flags=re.UNICODE)
+        if len(token) > 1
+    ]
+    filtered = [token for token in tokens if token not in _STOP_WORDS]
+    return filtered or tokens
 
 
 def _query_tokens(query_text: str) -> list[str]:
-    raw = list(
-        dict.fromkeys(
-            token
-            for token in re.findall(r"\w+", query_text.casefold(), flags=re.UNICODE)
-            if len(token) > 1
-        )
-    )
-    filtered = [token for token in raw if token not in _STOP_WORDS]
-    return filtered or raw
-
-
-def _match_expression(query_text: str) -> str:
-    tokens = _query_tokens(query_text)
+    tokens = list(dict.fromkeys(_tokens(query_text)))
     if not tokens:
         raise BM25IndexError("BM25 query must contain at least one token")
-    return " OR ".join(f'"{token.replace(chr(34), chr(34) * 2)}"' for token in tokens)
+    return tokens
 
 
-def _filter_clauses(
+def _build_qdrant_filter(
     filters: Mapping[str, Sequence[str | int]] | None,
-) -> tuple[list[str], list[str | int]]:
+) -> models.Filter | None:
     raw_filters = filters or {}
     unknown = set(raw_filters) - set(FILTER_FIELDS)
     if unknown:
-        raise ValueError("Unsupported BM25 filters: " + ", ".join(sorted(unknown)))
-    clauses: list[str] = []
-    parameters: list[str | int] = []
+        raise ValueError(
+            "Unsupported BM25 filters: " + ", ".join(sorted(unknown))
+        )
+
+    conditions: list[Any] = []
     for field in FILTER_FIELDS:
         raw_values = raw_filters.get(field, [])
         if isinstance(raw_values, (str, bytes)):
@@ -273,11 +145,132 @@ def _filter_clauses(
                 for value in values
             ):
                 raise TypeError("Filter year must contain only integers")
-        elif any(not isinstance(value, str) for value in values):
-            raise TypeError(f"Filter {field} must contain only strings")
-        clauses.append(f"{field} IN ({','.join('?' for _ in values)})")
-        parameters.extend(values)
-    return clauses, parameters
+            match = models.MatchAny(any=cast(list[int], values))
+        else:
+            if any(not isinstance(value, str) for value in values):
+                raise TypeError(f"Filter {field} must contain only strings")
+            match = models.MatchAny(any=cast(list[str], values))
+        conditions.append(models.FieldCondition(key=field, match=match))
+    return models.Filter(must=conditions) if conditions else None
+
+
+def _scroll_payloads(
+    filters: Mapping[str, Sequence[str | int]] | None,
+    *,
+    client: Any,
+    collection_name: str,
+) -> list[dict[str, Any]]:
+    batch_size = _positive_int_env(
+        "QDRANT_BM25_SCROLL_BATCH", QDRANT_SCROLL_BATCH_DEFAULT
+    )
+    maximum = _positive_int_env(
+        "QDRANT_BM25_MAX_DOCUMENTS", QDRANT_BM25_MAX_DOCUMENTS_DEFAULT
+    )
+    query_filter = _build_qdrant_filter(filters)
+    payloads: list[dict[str, Any]] = []
+    offset: Any = None
+
+    try:
+        while True:
+            points, offset = client.scroll(
+                collection_name=collection_name,
+                scroll_filter=query_filter,
+                limit=batch_size,
+                offset=offset,
+                with_payload=True,
+                with_vectors=False,
+            )
+            for point in points:
+                try:
+                    payload = validate_qdrant_payload(dict(point.payload or {}))
+                except (TypeError, ValueError) as exc:
+                    raise BM25IndexError(
+                        f"Qdrant BM25 point {point.id} has invalid payload"
+                    ) from exc
+                payloads.append(payload)
+                if len(payloads) > maximum:
+                    raise BM25IndexError(
+                        "Qdrant BM25 candidate scope exceeds "
+                        f"QDRANT_BM25_MAX_DOCUMENTS={maximum}; add stricter filters"
+                    )
+            if offset is None:
+                break
+    except BM25IndexError:
+        raise
+    except Exception as exc:
+        raise BM25IndexError("Cannot read BM25 payloads from Qdrant") from exc
+
+    return payloads
+
+
+def _score_payloads(
+    query_text: str,
+    payloads: Sequence[Mapping[str, Any]],
+    *,
+    top_n: int,
+) -> list[dict[str, Any]]:
+    query_tokens = _query_tokens(query_text)
+    query_counts = Counter(query_tokens)
+    document_terms: list[Counter[str]] = []
+    document_lengths: list[int] = []
+    document_frequency: Counter[str] = Counter()
+
+    for payload in payloads:
+        tokens = _tokens(str(payload["index_text"]))
+        counts = Counter(tokens)
+        document_terms.append(counts)
+        document_lengths.append(len(tokens))
+        document_frequency.update(token for token in query_counts if counts[token])
+
+    document_count = len(payloads)
+    if document_count == 0:
+        return []
+    average_length = sum(document_lengths) / document_count
+    if average_length <= 0:
+        return []
+
+    k1 = _positive_float_env("BM25_K1", BM25_K1_DEFAULT)
+    b = _bounded_float_env("BM25_B", BM25_B_DEFAULT, 0.0, 1.0)
+    scored: list[tuple[float, str, dict[str, Any]]] = []
+
+    for payload, counts, document_length in zip(
+        payloads, document_terms, document_lengths, strict=True
+    ):
+        score = 0.0
+        length_normalization = k1 * (
+            1.0 - b + b * document_length / average_length
+        )
+        for token, query_frequency in query_counts.items():
+            term_frequency = counts[token]
+            if term_frequency == 0:
+                continue
+            frequency = document_frequency[token]
+            inverse_document_frequency = math.log(
+                1.0 + (document_count - frequency + 0.5) / (frequency + 0.5)
+            )
+            score += (
+                inverse_document_frequency
+                * term_frequency
+                * (k1 + 1.0)
+                / (term_frequency + length_normalization)
+                * query_frequency
+            )
+        if score > 0 and math.isfinite(score):
+            normalized_payload = dict(payload)
+            scored.append(
+                (score, str(normalized_payload["table_id"]), normalized_payload)
+            )
+
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    return [
+        {
+            "table_id": table_id,
+            "metadata": payload,
+            "bm25_score": score,
+            "bm25_rank": rank,
+        }
+        for rank, (score, table_id, payload) in enumerate(scored[:top_n], start=1)
+    ]
 
 
 def search_bm25(
@@ -285,57 +278,23 @@ def search_bm25(
     filters: Mapping[str, Sequence[str | int]] | None = None,
     *,
     top_n: int,
-    manifest_path: Path | None = None,
-    index_path: Path | None = None,
+    client: Any | None = None,
+    collection_name: str | None = None,
 ) -> list[dict[str, Any]]:
-    """Return metadata-filtered BM25 candidates ordered by lexical rank."""
+    """Rank filtered Qdrant ``index_text`` payloads with BM25 at query time."""
     if top_n < 1:
         raise ValueError("top_n must be at least 1")
-    expression = _match_expression(query_text)
-    clauses, filter_parameters = _filter_clauses(filters)
-    sql = (
-        "SELECT table_id, doc_id, ticker, company_name, year, report_type, "
-        "table_type, start_line, index_text, bm25(documents) AS score "
-        "FROM documents WHERE documents MATCH ?"
+    resolved_client = client or get_qdrant_client()
+    resolved_collection = collection_name or get_collection_name()
+    payloads = _scroll_payloads(
+        filters,
+        client=resolved_client,
+        collection_name=resolved_collection,
     )
-    if clauses:
-        sql += " AND " + " AND ".join(clauses)
-    sql += " ORDER BY score, table_id LIMIT ?"
-    parameters: list[str | int] = [expression, *filter_parameters, top_n]
-    database = ensure_index(manifest_path, index_path)
-    try:
-        with closing(sqlite3.connect(database)) as connection:
-            connection.execute("PRAGMA query_only=ON")
-            connection.execute("PRAGMA busy_timeout=30000")
-            rows = connection.execute(sql, parameters).fetchall()
-    except sqlite3.Error as exc:
-        raise BM25IndexError("BM25 search failed") from exc
-
-    candidates: list[dict[str, Any]] = []
-    for rank, row in enumerate(rows, start=1):
-        raw_score = float(row[9])
-        if not math.isfinite(raw_score):
-            raise BM25IndexError("BM25 returned a non-finite score")
-        payload = validate_qdrant_payload(
-            {
-                "table_id": row[0],
-                "doc_id": row[1],
-                "ticker": row[2],
-                "company_name": row[3],
-                "year": int(row[4]),
-                "report_type": row[5],
-                "table_type": row[6],
-                "start_line": int(row[7]),
-                "index_text": row[8],
-            }
-        )
-        candidates.append(
-            {
-                "table_id": payload["table_id"],
-                "metadata": payload,
-                "bm25_score": -raw_score,
-                "bm25_rank": rank,
-            }
-        )
-    logger.info("Retrieved %d BM25 table candidates", len(candidates))
+    candidates = _score_payloads(query_text, payloads, top_n=top_n)
+    logger.info(
+        "Retrieved %d BM25 candidates from %d Qdrant payloads",
+        len(candidates),
+        len(payloads),
+    )
     return candidates

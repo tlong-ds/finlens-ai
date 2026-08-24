@@ -46,19 +46,22 @@ export E2B_API_KEY=e2b_***
 
 Chạy `prepare.py` và `data_indexing.py` trước để collection Qdrant và các file
 `data/{table_id}.csv` được sinh từ cùng một phiên dữ liệu. Collection phải dùng
-named vector `dense` 384 chiều. Qdrant payload có đúng tám trường: `table_id`, `doc_id`,
-`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`. Sau dense
-retrieval, graph resolve `data/{table_id}.csv` an toàn và dựng rerank context có giới hạn
-trực tiếp từ header/các dòng liên quan trong CSV. Manifest chỉ là artifact indexing offline,
-không được đọc trong runtime graph.
+named vector `dense` 384 chiều. Qdrant payload có đúng chín trường: `table_id`, `doc_id`,
+`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`, `index_text`.
+Ở chế độ `hybrid`, nhánh lexical scroll các payload trong đúng metadata filter và tính BM25
+trực tiếp trên `index_text`; nhánh dense vẫn tìm trên named vector `dense`, sau đó hai nhánh
+được hợp nhất bằng RRF. Graph resolve `data/{table_id}.csv` an toàn và dựng rerank context có
+giới hạn trực tiếp từ header/các dòng liên quan trong CSV. Manifest chỉ là artifact indexing
+offline, không được đọc trong runtime graph.
 
 Configure the embedding provider, Qdrant collection, and OpenAI-compatible LLM endpoint,
 then invoke the compiled graph with an exact canonical
 ViFinQA question:
 
 ```dotenv
-QDRANT_COLLECTION=finlens_tables_metadata_granite_97m_multilingual_r2_v1
+QDRANT_COLLECTION=finlens_tables_metadata_granite_97m_multilingual_r2_v2
 QDRANT_ALIAS=finlens_tables_current
+RETRIEVAL_MODE=hybrid
 EMBEDDING_MODEL=ibm-granite/granite-embedding-97m-multilingual-r2
 EMBEDDING_REVISION=835ad14087e140460703cf0fae09f97d469d65c2
 EMBEDDING_DEVICE=auto

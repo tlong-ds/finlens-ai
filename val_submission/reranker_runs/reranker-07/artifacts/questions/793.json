@@ -1,0 +1,4348 @@
+{
+  "schema_version": 2,
+  "id": 793,
+  "question": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+  "started_at": "2026-08-23T09:39:38+00:00",
+  "finished_at": "2026-08-23T09:39:55+00:00",
+  "duration_seconds": 17.516940229001193,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/793.json",
+  "golden": {
+    "id": 793,
+    "question": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+    "relevant_docs": [
+      "GEE_financial_statements_2025_consolidated",
+      "GEX_financial_statements_2025_consolidated"
+    ],
+    "relevant_tables": [
+      "GEE_financial_statements_2025_consolidated|1606",
+      "GEX_financial_statements_2025_consolidated|2217"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_55",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_55",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1606
+      },
+      "rrf_score": 0.03278688524590164,
+      "dense_rank": 1,
+      "dense_score": 0.8933258,
+      "bm25_rank": 1,
+      "bm25_score": 29.817225694721053,
+      "retrieval_score": 0.03278688524590164,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_65",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_65",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2217
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 2,
+      "dense_score": 0.88427997,
+      "bm25_rank": 2,
+      "bm25_score": 25.711363789769567,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_10",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_10",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2025,
+        "start_line": 556
+      },
+      "rrf_score": 0.031054405392392875,
+      "dense_rank": 3,
+      "dense_score": 0.85330665,
+      "bm25_rank": 7,
+      "bm25_score": 9.79088269335951,
+      "retrieval_score": 0.031054405392392875,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_76",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_76",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2304
+      },
+      "rrf_score": 0.032266458495966696,
+      "dense_rank": 4,
+      "dense_score": 0.8564756,
+      "bm25_rank": 1,
+      "bm25_score": 25.786005063352608,
+      "retrieval_score": 0.032266458495966696,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_66",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_66",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1702
+      },
+      "rrf_score": 0.031054405392392875,
+      "dense_rank": 5,
+      "dense_score": 0.8419438,
+      "bm25_rank": 2,
+      "bm25_score": 23.457928461691406,
+      "retrieval_score": 0.031054405392392875,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_5",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_5",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2025,
+        "start_line": 523
+      },
+      "rrf_score": 0.03128054740957967,
+      "dense_rank": 6,
+      "dense_score": 0.8645251,
+      "bm25_rank": 6,
+      "bm25_score": 11.964248920348126,
+      "retrieval_score": 0.03128054740957967,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_9",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_9",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2025,
+        "start_line": 531
+      },
+      "rrf_score": 0.029910714285714284,
+      "dense_rank": 7,
+      "dense_score": 0.83624864,
+      "bm25_rank": 4,
+      "bm25_score": 10.882825256725123,
+      "retrieval_score": 0.029910714285714284,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_75",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_75",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2300
+      },
+      "rrf_score": 0.031024531024531024,
+      "dense_rank": 8,
+      "dense_score": 0.8471765,
+      "bm25_rank": 3,
+      "bm25_score": 20.225552221292414,
+      "retrieval_score": 0.031024531024531024,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_65",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_65",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1685
+      },
+      "rrf_score": 0.029030910609857977,
+      "dense_rank": 9,
+      "dense_score": 0.8292606,
+      "bm25_rank": 3,
+      "bm25_score": 19.6645500840508,
+      "retrieval_score": 0.029030910609857977,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_77",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_77",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2325
+      },
+      "rrf_score": 0.03055037313432836,
+      "dense_rank": 10,
+      "dense_score": 0.8471545,
+      "bm25_rank": 4,
+      "bm25_score": 19.322118341326664,
+      "retrieval_score": 0.03055037313432836,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_56",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_56",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1625
+      },
+      "rrf_score": 0.028373015873015873,
+      "dense_rank": 11,
+      "dense_score": 0.8457986,
+      "bm25_rank": 20,
+      "bm25_score": 4.381663521882549,
+      "retrieval_score": 0.028373015873015873,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_57",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_57",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2080
+      },
+      "rrf_score": 0.02946912242686891,
+      "dense_rank": 12,
+      "dense_score": 0.8417234,
+      "bm25_rank": 5,
+      "bm25_score": 14.82260887376951,
+      "retrieval_score": 0.02946912242686891,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_7",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_7",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2025,
+        "start_line": 456
+      },
+      "rrf_score": 0.028006267136701922,
+      "dense_rank": 13,
+      "dense_score": 0.8305968,
+      "bm25_rank": 9,
+      "bm25_score": 7.885682066447487,
+      "retrieval_score": 0.028006267136701922,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_7",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_7",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2025,
+        "start_line": 598
+      },
+      "rrf_score": 0.027745885954841176,
+      "dense_rank": 14,
+      "dense_score": 0.83624864,
+      "bm25_rank": 7,
+      "bm25_score": 10.882825256725123,
+      "retrieval_score": 0.027745885954841176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_1",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_1",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2025,
+        "start_line": 117
+      },
+      "rrf_score": 0.027884615384615386,
+      "dense_rank": 15,
+      "dense_score": 0.82665,
+      "bm25_rank": 5,
+      "bm25_score": 10.555279442126073,
+      "retrieval_score": 0.027884615384615386,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_64",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_64",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2184
+      },
+      "rrf_score": 0.026875901875901876,
+      "dense_rank": 16,
+      "dense_score": 0.8403216,
+      "bm25_rank": 17,
+      "bm25_score": 6.7765318100052525,
+      "retrieval_score": 0.026875901875901876,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_36",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_36",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1357
+      },
+      "rrf_score": 0.02690100430416069,
+      "dense_rank": 17,
+      "dense_score": 0.82646453,
+      "bm25_rank": 8,
+      "bm25_score": 9.049109952906768,
+      "retrieval_score": 0.02690100430416069,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_71",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_71",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2271
+      },
+      "rrf_score": 0.026540946394272742,
+      "dense_rank": 18,
+      "dense_score": 0.8316306,
+      "bm25_rank": 9,
+      "bm25_score": 9.056265271164042,
+      "retrieval_score": 0.026540946394272742,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_29",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_29",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1256
+      },
+      "rrf_score": 0.025849212924606464,
+      "dense_rank": 19,
+      "dense_score": 0.83603007,
+      "bm25_rank": 25,
+      "bm25_score": 3.20581980273013,
+      "retrieval_score": 0.025849212924606464,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_43",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_43",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1916
+      },
+      "rrf_score": 0.0264808362369338,
+      "dense_rank": 20,
+      "dense_score": 0.8335343,
+      "bm25_rank": 10,
+      "bm25_score": 8.428164771818672,
+      "retrieval_score": 0.0264808362369338,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_22",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_22",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1179
+      },
+      "rrf_score": 0.024725274725274724,
+      "dense_rank": 21,
+      "dense_score": 0.82680565,
+      "bm25_rank": 24,
+      "bm25_score": 3.339552350205048,
+      "retrieval_score": 0.024725274725274724,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_8",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_8",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2025,
+        "start_line": 627
+      },
+      "rrf_score": 0.025807525807525808,
+      "dense_rank": 22,
+      "dense_score": 0.837247,
+      "bm25_rank": 18,
+      "bm25_score": 6.56358348222712,
+      "retrieval_score": 0.025807525807525808,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_74",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_74",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1782
+      },
+      "rrf_score": 0.024422933730454205,
+      "dense_rank": 23,
+      "dense_score": 0.82414514,
+      "bm25_rank": 19,
+      "bm25_score": 4.557724958992864,
+      "retrieval_score": 0.024422933730454205,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_55",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_55",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2057
+      },
+      "rrf_score": 0.025098039215686277,
+      "dense_rank": 24,
+      "dense_score": 0.8388545,
+      "bm25_rank": 25,
+      "bm25_score": 4.4537740168346325,
+      "retrieval_score": 0.025098039215686277,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_54",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_54",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1577
+      },
+      "rrf_score": 0.015625,
+      "dense_rank": 25,
+      "dense_score": 0.84576297,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_53",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_53",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2022
+      },
+      "rrf_score": 0.015625,
+      "dense_rank": 26,
+      "dense_score": 0.8505888,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_70",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_70",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1740
+      },
+      "rrf_score": 0.015384615384615385,
+      "dense_rank": 27,
+      "dense_score": 0.8441574,
+      "retrieval_score": 0.015384615384615385,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_33",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_33",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1737
+      },
+      "rrf_score": 0.015384615384615385,
+      "dense_rank": 28,
+      "dense_score": 0.8496945,
+      "retrieval_score": 0.015384615384615385,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_67",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_67",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1710
+      },
+      "rrf_score": 0.015151515151515152,
+      "bm25_rank": 6,
+      "bm25_score": 9.865116914874596,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 29
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_1",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_1",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2025,
+        "start_line": 116
+      },
+      "rrf_score": 0.014705882352941176,
+      "bm25_rank": 8,
+      "bm25_score": 10.555279442126073,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 30
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_71",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_71",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1759
+      },
+      "rrf_score": 0.015151515151515152,
+      "dense_rank": 31,
+      "dense_score": 0.84281105,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_84",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_84",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2400
+      },
+      "rrf_score": 0.014705882352941176,
+      "dense_rank": 32,
+      "dense_score": 0.8459336,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_43",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_43",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1463
+      },
+      "rrf_score": 0.014705882352941176,
+      "dense_rank": 33,
+      "dense_score": 0.8364917,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_32",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_32",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1714
+      },
+      "rrf_score": 0.014492753623188406,
+      "dense_rank": 34,
+      "dense_score": 0.84532523,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_38",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_38",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1393
+      },
+      "rrf_score": 0.014492753623188406,
+      "dense_rank": 35,
+      "dense_score": 0.8364085,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_28",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_28",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1647
+      },
+      "rrf_score": 0.014285714285714285,
+      "dense_rank": 36,
+      "dense_score": 0.843554,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_73",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_73",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1767
+      },
+      "rrf_score": 0.014285714285714285,
+      "bm25_rank": 10,
+      "bm25_score": 7.023400449430065,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 37
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_70",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_70",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2254
+      },
+      "rrf_score": 0.014084507042253521,
+      "bm25_rank": 11,
+      "bm25_score": 8.407631752596794,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 38
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_6",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_6",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2025,
+        "start_line": 431
+      },
+      "rrf_score": 0.014084507042253521,
+      "bm25_rank": 11,
+      "bm25_score": 6.945530881355612,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_45",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_45",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1938
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 8.06479331217097,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_51",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_51",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1554
+      },
+      "rrf_score": 0.013888888888888888,
+      "dense_rank": 41,
+      "dense_score": 0.83483976,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_26",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_26",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1621
+      },
+      "rrf_score": 0.0136986301369863,
+      "bm25_rank": 13,
+      "bm25_score": 7.929557102465485,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 42
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_57",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_57",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1629
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 6.784438297618855,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_50",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_50",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1996
+      },
+      "rrf_score": 0.0136986301369863,
+      "dense_rank": 44,
+      "dense_score": 0.8396909,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_58",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_58",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1633
+      },
+      "rrf_score": 0.0136986301369863,
+      "dense_rank": 45,
+      "dense_score": 0.8328464,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_48",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_48",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1963
+      },
+      "rrf_score": 0.013513513513513514,
+      "dense_rank": 46,
+      "dense_score": 0.83931875,
+      "retrieval_score": 0.013513513513513514,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_61",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_61",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1656
+      },
+      "rrf_score": 0.0136986301369863,
+      "bm25_rank": 13,
+      "bm25_score": 6.581674442473606,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 47
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_61",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_61",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2146
+      },
+      "rrf_score": 0.013513513513513514,
+      "bm25_rank": 14,
+      "bm25_score": 7.794019065636622,
+      "retrieval_score": 0.013513513513513514,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 48
+    },
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_62",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_62",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1660
+      },
+      "rrf_score": 0.013513513513513514,
+      "bm25_rank": 14,
+      "bm25_score": 6.222477487805735,
+      "retrieval_score": 0.013513513513513514,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 49
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_24",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_24",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1599
+      },
+      "rrf_score": 0.013333333333333334,
+      "bm25_rank": 15,
+      "bm25_score": 7.424776184736038,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "year": 2025,
+        "report_type": "hợp nhất"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "year": 2025,
+        "report_type": "hợp nhất"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_55",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1606",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_65",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2217",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_10",
+        "table_ref": "GEE_financial_statements_2025_consolidated|556",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_76",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2304",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_66",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1702",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_5",
+        "table_ref": "GEX_financial_statements_2025_consolidated|523",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_9",
+        "table_ref": "GEE_financial_statements_2025_consolidated|531",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_75",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2300",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_65",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1685",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_77",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2325",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_56",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1625",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_57",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2080",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_7",
+        "table_ref": "GEE_financial_statements_2025_consolidated|456",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_7",
+        "table_ref": "GEX_financial_statements_2025_consolidated|598",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_1",
+        "table_ref": "GEE_financial_statements_2025_consolidated|117",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_64",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2184",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_36",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1357",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_71",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2271",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_29",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1256",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_43",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1916",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_22",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1179",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_8",
+        "table_ref": "GEX_financial_statements_2025_consolidated|627",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_74",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1782",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_55",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2057",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_54",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1577",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_53",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2022",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_70",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1740",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_33",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1737",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_67",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1710",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_1",
+        "table_ref": "GEX_financial_statements_2025_consolidated|116",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_71",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1759",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_84",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2400",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_43",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1463",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_32",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1714",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_38",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1393",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_28",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1647",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_73",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1767",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_70",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2254",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_6",
+        "table_ref": "GEE_financial_statements_2025_consolidated|431",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_45",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1938",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_51",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1554",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_26",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1621",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_57",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1629",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_50",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1996",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_58",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1633",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_48",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1963",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_61",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1656",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_61",
+        "table_ref": "GEX_financial_statements_2025_consolidated|2146",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "GEE_financial_statements_2025_consolidated_table_62",
+        "table_ref": "GEE_financial_statements_2025_consolidated|1660",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b02",
+        "table_id": "GEX_financial_statements_2025_consolidated_table_24",
+        "table_ref": "GEX_financial_statements_2025_consolidated|1599",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Cổ phiếu phổ thông",
+                "Cổ phiếu phổ thông"
+              ],
+              "dòng gần với câu hỏi": [
+                "Số lượng cổ phiếu đang lưu hành",
+                "Số lượng cổ phiếu phát hành trong năm",
+                "Số lượng cổ phiếu đã bán ra công chúng"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu đang lưu hành",
+                "Số lượng cổ phiếu phát hành trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu đang lưu hành",
+                "Số lượng cổ phiếu phát hành trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 38: LÃI CƠ BẢN TRÊN CỔ PHIẾU"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước(Trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp(VND)",
+                "Trích quỹ khen thưởng, phúc lợi (VND) (i)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp(VND)",
+                "Trích quỹ khen thưởng, phúc lợi (VND) (i)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh b: Đầu tư góp vốn vào đơn vị khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng TMCP Ngoại Thương Việt Nam (i)",
+                "Công ty Cổ phần Công nghệ cao (ii)",
+                "Công ty Cổ phần Hạ tầng GELEX (iii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng TMCP Ngoại Thương Việt Nam (i)",
+                "Công ty Cổ phần Công nghệ cao (ii)",
+                "Công ty Cổ phần Hạ tầng GELEX (iii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 29: VỐN CHỦ SỞ HỮU"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận trong năm",
+                "Cổ tức công bố",
+                "Trích quỹ khen thường, phúc lợi",
+                "Mua thêm lợi ích từ cổ đông không kiểm soát",
+                "Thoái vốn tại công ty con",
+                "Cổ tức công bố (ii)",
+                "Trích quỹ khen thường, phúc lợi (iii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm trước",
+                "Công ty con tăng vốn trong năm",
+                "Lợi nhuận trong năm",
+                "Cổ tức công bố",
+                "Trích quỹ khen thường, phúc lợi",
+                "Mua thêm lợi ích từ cổ đông không kiểm soát",
+                "Thoái vốn tại công ty con",
+                "Số dư cuối năm trước",
+                "Tăng vốn trong năm (i)",
+                "Cổ tức công bố (ii)",
+                "Trích quỹ khen thường, phúc lợi (iii)",
+                "Góp vốn thành lập công ty con",
+                "Chuyển công ty liên kết từ gián tiếp sang trực tiếp",
+                "Phân loại lại",
+                "Số dư cuối năm nay"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 25: VAY VÀ NỘ THU TÀI CHÍNH NGĂN HẠN Số đầu năm Trong năm Số cuối năm VNDGiá trị/Số có khả năngtrả nợ Giám do thoái vốn tạicông ty con Tăng VNDGiám VNDGiá trị/Số có khả năngtrả nợ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngắn hạn",
+                "Vay ngân hàng (i)",
+                "Vay bên liên quan",
+                "Nợ dài hạn đến hạn trả",
+                "Vay dài hạn đến hạn trả ngân hàng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngắn hạn",
+                "Vay ngân hàng (i)",
+                "Vay bên liên quan",
+                "Nợ dài hạn đến hạn trả",
+                "Vay dài hạn đến hạn trả ngân hàng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trong vòng một năm",
+                "Trong năm thứ hai",
+                "Từ năm thứ ba đến năm thứ năm",
+                "Sau năm năm",
+                "Trừ: số phải trả trong vòng 12 tháng",
+                "Số phải trả sau 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trong vòng một năm",
+                "Trong năm thứ hai",
+                "Từ năm thứ ba đến năm thứ năm",
+                "Sau năm năm",
+                "Trừ: số phải trả trong vòng 12 tháng",
+                "Số phải trả sau 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 35: CHI PHÍ TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lỗ chênh lệch tỷ giá"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay",
+                "Chi phí lãi mua hàng trả chậm và phí LC UPAS",
+                "Lỗ bán khoản đầu tư",
+                "Trích lập/(Hoàn nhập) giám giá chứng khoán kinh doanh và tổn thất đầu tư",
+                "Lỗ nghiệp vụ phòng ngừa rủi ro biến động giá nguyên vật liệu",
+                "Lỗ chênh lệch tỷ giá",
+                "Chi phí tài chính khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay",
+                "Chi phí lãi mua hàng trả chậm và phí LC UPAS",
+                "Lỗ bán khoản đầu tư",
+                "Trích lập/(Hoàn nhập) giám giá chứng khoán kinh doanh và tổn thất đầu tư",
+                "Lỗ nghiệp vụ phòng ngừa rủi ro biến động giá nguyên vật liệu",
+                "Lỗ chênh lệch tỷ giá",
+                "Chi phí tài chính khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 43: LÃI CO'BÁN TRÊN CỔ PHIẾU"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước (Trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND) (ii)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND) (ii)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ tức công bố bằng cổ phiếu (ii)",
+                "Chênh lệch tỷ giá phát sinh do chuyển đổi báo cáo công ty con"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Góp vốn thành lập công ty con",
+                "Mua thêm từ lợi ích cổ đông không kiểm soát",
+                "Thoái vốn tại công ty con",
+                "Thay đổi tỷ lệ sở hữu ở công ty con",
+                "Cổ tức công bố bằng cổ phiếu (ii)",
+                "Cổ tức công bố bằng tiền (ii)",
+                "Trích quỹ khen thưởng, phúc lợi và thủ lao Hội đồng Quản trị (i)",
+                "Chênh lệch tỷ giá phát sinh do chuyển đổi báo cáo công ty con",
+                "Giám khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm nay",
+                "Lợi nhuận trong năm",
+                "Tăng vốn ở công ty con",
+                "Mua công ty con",
+                "Góp vốn thành lập công ty con",
+                "Mua thêm từ lợi ích cổ đông không kiểm soát",
+                "Thoái vốn tại công ty con",
+                "Thay đổi tỷ lệ sở hữu ở công ty con",
+                "Cổ tức công bố bằng cổ phiếu (ii)",
+                "Cổ tức công bố bằng tiền (ii)",
+                "Trích quỹ đầu tư phát triển (i)",
+                "Trích quỹ khen thưởng, phúc lợi và thủ lao Hội đồng Quản trị (i)",
+                "Chênh lệch tỷ giá phát sinh do chuyển đổi báo cáo công ty con",
+                "Giám khác",
+                "Số dư cuối năm nay"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh b: Vay và nợ thuê tài chính dài hạn Số đầu năm Trong năm Số cuối năm VND VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trái phiếu phát hành (ii)"
+              ],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay và nợ thuê tài chính dài hạn (i)",
+                "Trái phiếu phát hành (ii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay và nợ thuê tài chính dài hạn (i)",
+                "Trái phiếu phát hành (ii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận",
+                "Công ty Cổ phần Chế tạo điện cơ HEM",
+                "Công ty TNHH Công nghiệp Titan Corporation 2 (Bắc Ninh)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận",
+                "Công ty Cổ phần Chế tạo điện cơ HEM",
+                "Công ty TNHH Công nghiệp Titan Corporation 2 (Bắc Ninh)",
+                "Công ty TNHH Công nghiệp Titan (Hưng Yên)",
+                "Công ty TNHH Công nghiệp Titan Corporation (Bắc Ninh) 1",
+                "Công ty TNHH Công Nghiệp Titan Corporation 3 (Bắc Ninh)",
+                "Công ty Cổ phần Gạch chịu lửa Cầu Đường",
+                "Công ty Cổ phần Đầu tư và Xuất nhập khẩu Viglacera",
+                "Công ty Cổ phần Thiết bị Nội ngoại thất Dầu khí (**)",
+                "Công ty TNHH S.A.S - CTAMAD",
+                "Công ty Cổ phần Viglacera Đông Trièreu",
+                "Công ty Cổ phần Vinafacade",
+                "Công ty TNHH S.A.S. - CTAMAD",
+                "Tổng Công ty Thiết bị điện Đông Anh - CTCP",
+                "Công ty Cổ phần Gạch ngói Từ Sơn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh b: Đầu tư vào đơn vị khác Số cuối năm Số đầu năm Giá gốc VND Dự phòng VND Giá trị hợp lý VND Giá gốc VND Dự phòng VND Giá trị hợp lý VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các đơn vị khác"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Genfarma",
+                "Công ty Cổ phần Viwaco",
+                "Công ty Cổ phần Đầu tư và Xây lắp Dầu khí Sài Gòn",
+                "Công ty Cổ phần Khách sạn Dầu khí Lam Kinh"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Genfarma",
+                "Công ty Cổ phần Viwaco",
+                "Công ty Cổ phần Đầu tư và Xây lắp Dầu khí Sài Gòn",
+                "Công ty Cổ phần Khách sạn Dầu khí Lam Kinh",
+                "Công ty Cổ phần Đầu tư và Xây lắp Dầu khí Kinh Bắc",
+                "Công ty Cổ phần Visaho",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Công ty Cổ phần Phát triển và Kinh doanh Nhà Vĩnh Phúc",
+                "Công ty Cổ phần Cầu Xây",
+                "Công ty Cổ phần Công nghệ cao",
+                "Các đơn vị khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 31: TÀI SẢN THUẾ THU NHẬP HOÃN LẠI VÀ THUẾ THU NHẬP HOÃN LẠI PHẢI TRẢ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chênh lệch do hợp nhất kinh doanh",
+                "Thuế thu nhập hoãn lại phải trả phát sinh từ các khoản chênh lệch tạm thời chịu thuế"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trích lập các khoản dự phòng",
+                "Lợi nhuận chưa thực hiện và các khoản khác",
+                "Tài sản thuế thu nhập hoãn lại",
+                "Chênh lệch do hợp nhất kinh doanh",
+                "Hoàn nhập các khoản dự phòng",
+                "Thuế thu nhập hoãn lại phải trả phát sinh từ các khoản chênh lệch tạm thời chịu thuế",
+                "Thuế thu nhập hoãn lại phải trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trích lập các khoản dự phòng",
+                "Lợi nhuận chưa thực hiện và các khoản khác",
+                "Tài sản thuế thu nhập hoãn lại",
+                "Chênh lệch do hợp nhất kinh doanh",
+                "Hoàn nhập các khoản dự phòng",
+                "Thuế thu nhập hoãn lại phải trả phát sinh từ các khoản chênh lệch tạm thời chịu thuế",
+                "Thuế thu nhập hoãn lại phải trả"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu và bán cổ phiếu quỹ (mã chỉ tiêu 31)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYẾN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu và bán cổ phiếu quỹ (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Cổ tức, lợi nhuận đã trả cho chủ sở hữu (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 40)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYẾN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu và bán cổ phiếu quỹ (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Cổ tức, lợi nhuận đã trả cho chủ sở hữu (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                "Ảnh hưởng của thay đối tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và tương đương tiền cuối năm (mã chỉ tiêu 70)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C",
+                "Các cổ đông khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C",
+                "Các cổ đông khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 12: HÀNG TỔN KHO Số cuối năm Số đầu năm Giá gốc VND Dự phòng Giá gốc VND Dự phòng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hàng mua đang di đường",
+                "Nguyên liệu, vật liệu",
+                "Công cụ, dụng cụ",
+                "Chi phí sản xuất kinh doanh dở dang",
+                "Thành phẩm",
+                "Hàng hoá",
+                "Hàng gửi bán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hàng mua đang di đường",
+                "Nguyên liệu, vật liệu",
+                "Công cụ, dụng cụ",
+                "Chi phí sản xuất kinh doanh dở dang",
+                "Thành phẩm",
+                "Hàng hoá",
+                "Hàng gửi bán"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu ngắn hạn của khách hàng",
+                "Công ty Cổ phần Kinh doanh Gạch ốp lát Viglacera",
+                "Tổng Công ty Thiết bị điện Đông Anh - CTCP",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Công ty Cổ phần GVI"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu ngắn hạn của khách hàng",
+                "Công ty Cổ phần Kinh doanh Gạch ốp lát Viglacera",
+                "Tổng Công ty Thiết bị điện Đông Anh - CTCP",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Công ty Cổ phần GVI",
+                "Công ty Cổ phần Thiết bị Công nghiệp GEIC",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận",
+                "Phải thu về cho vay ngắn hạn",
+                "Công ty TNHH Đầu tư GELEX",
+                "Công ty Cổ phần Hạ tầng GELEX",
+                "Phải thu về cho vay dài hạn",
+                "Phải thu khác ngắn hạn",
+                "Công ty TNHH S.A.S. - CTAMAD",
+                "Phải thu khác dài hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: PHẢI TRẢ NGƯỜI BÁN NGẮN HẠN Số cuối năm Số đầu năm Giá trị VND Số có khả năng trả nợ Giá trị VND Số có khả năng trả nợ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Intelligent Energy Tech Co., Ltd",
+                "Xian Qiyuan Mechanical & Electrical Equipment Co., Ltd",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "IXM S.A.",
+                "Trafigura Pte. Ltd",
+                "Các đối tượng khác",
+                "Trong đó: Phải trả người bán ngắn hạn là các bên liên quan (chi tiết tại Thuyết minh số 39)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Intelligent Energy Tech Co., Ltd",
+                "Xian Qiyuan Mechanical & Electrical Equipment Co., Ltd",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "IXM S.A.",
+                "Trafigura Pte. Ltd",
+                "Các đối tượng khác",
+                "Trong đó: Phải trả người bán ngắn hạn là các bên liên quan (chi tiết tại Thuyết minh số 39)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 30: CÁC KHOÀN MỤC NGOÀI BÀNG CÂN ĐỐI KẾ TOÁN HỢP NHẤT"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đô la Mỹ",
+                "Euro",
+                "Đô la Úc",
+                "Máy biến áp",
+                "Nợ phải thu khó đòi đã xử lý"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đô la Mỹ",
+                "Euro",
+                "Đô la Úc",
+                "Máy biến áp",
+                "Nợ phải thu khó đòi đã xử lý"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Cổ phiếu phổ thông",
+                "Cổ phiếu phổ thông"
+              ],
+              "dòng gần với câu hỏi": [
+                "Số lượng cổ phiếu dang lưu hành",
+                "Số lượng cổ phiếu đã bán ra công chúng"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu dang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu dang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "kỳ số liệu": [
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 39: CHI PHÍ TÀI CHÍNH Năm nay Năm trước VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lỗ chênh lệch tỷ giá",
+                "Chi phí bảo lãnh, phí tư vấn trái phiếu và chi phíphát hành trái phiếu"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi tiền vay",
+                "Chiết khấu thanh toán, phí LC và lãi mua hàng trảchậm",
+                "Lỗ kinh doanh chứng khoán",
+                "Lỗ chênh lệch tỷ giá",
+                "Lỗ nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Chi phí bảo lãnh, phí tư vấn trái phiếu và chi phíphát hành trái phiếu",
+                "Lỗ do đánh giá lại khoản đầu tư trước ngày mua khihợp nhất kinh doanh"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi tiền vay",
+                "Chiết khấu thanh toán, phí LC và lãi mua hàng trảchậm",
+                "Trích lập/(hoàn nhập) dự phòng giảm giá chứngkhoán kinh doanh và tổn thất đầu tư",
+                "Lỗ do bán khoản đầu tư",
+                "Lỗ kinh doanh chứng khoán",
+                "Lỗ chênh lệch tỷ giá",
+                "Lỗ nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Chi phí bảo lãnh, phí tư vấn trái phiếu và chi phíphát hành trái phiếu",
+                "Lỗ do đánh giá lại khoản đầu tư trước ngày mua khihợp nhất kinh doanh",
+                "Chi phí tài chính khác",
+                "Trong đó: Chi phí lãi vay các bên liên quan (chi tiếttại Thuyết minh số 44)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh a: Vay và nợ thuê tài chính ngắn hạn Số đầu năm Trong năm Số cuối năm Giá trị VND Tăng do hợp nhất kinh doanh Tăng Giảm VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngắn hạn",
+                "Vay ngắn hàng (i)",
+                "Vay đổi tượng khác",
+                "Nợ dài hạn đến hạn trả",
+                "Vay dài hạn và nợ thuê tài chính dài hạn đến hạn trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngắn hạn",
+                "Vay ngắn hàng (i)",
+                "Vay đổi tượng khác",
+                "Nợ dài hạn đến hạn trả",
+                "Vay dài hạn và nợ thuê tài chính dài hạn đến hạn trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: PHẢI THU VỀ CHO VAY Số cuối nămVND Số đầu nămVND a. Ngắn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Container Việt Nam (i)",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận (i) (iii)",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM (i)",
+                "Các đối tượng khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Container Việt Nam (i)",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận (i) (iii)",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM (i)",
+                "Các đối tượng khác",
+                "Trong đó: Phải thu về cho vay ngắn hạn từ các bên liên quan (Chi tiết tại Thuyết minh số 44)",
+                "Công ty TNHH Công nghiệp Titan Corporation 2 (Bắc Ninh)",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận (iii)",
+                "Công ty TNHH Công nghiệp Titan (Hưng Yên)",
+                "Công ty TNHH Công Nghiệp Titan Corporation 3 (Bắc Ninh)",
+                "Công ty TNHH Công nghiệp Titan Corporation (Bắc Ninh) 1",
+                "Công ty TNHH Công Nghiệp Titan (Quảng Ninh)",
+                "Trong đó: Phải thu về cho vay dài hạn từ các bên liên quan (Chi tiết tại Thuyết minh số 44)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Giá trị hợp lýxác định tại ngày mua"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền thu về từ công ty con",
+                "Tiền chỉ mua Công ty con",
+                "Lưu chuyển tiền thuần từ nghiệp vụ mua Công ty con"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền thu về từ công ty con",
+                "Tiền chỉ mua Công ty con",
+                "Lưu chuyển tiền thuần từ nghiệp vụ mua Công ty con"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Giá trị hợp lý xác định tại ngày mua"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giế trị hợp lý của khoản đầu tư nằm giữ trước ngày nằm quyền kiểm soát",
+                "Tiền thu về từ công ty con",
+                "Tiền chỉ mua Công ty con",
+                "Lưu chuyển tiền thuần từ nghiệp vụ mua Công ty con"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giế trị hợp lý của khoản đầu tư nằm giữ trước ngày nằm quyền kiểm soát",
+                "Tiền thu về từ công ty con",
+                "Tiền chỉ mua Công ty con",
+                "Lưu chuyển tiền thuần từ nghiệp vụ mua Công ty con"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+        "các bảng": [
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi (VND)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                "Trích quỹ khen thưởng phúc lợi (VND)",
+                "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 20)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số 21)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 22)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 23)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 24)",
+                "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 25)",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 27)",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Người mua trả tiền trước dài hạn (mã chỉ tiêu 332; tham chiếu Thuyết minh số 21)",
+                "Chi phí phải trả dài hạn (mã chỉ tiêu 333)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 26)",
+                "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số 28)",
+                "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 27)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 29)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "Quỹ khác thuộc vốn chủ sở hữu (mã chỉ tiêu 420)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "- Lợi nhuận sau thuế chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh a: Chứng khoán kinh doanh Số cuối năm Số đầu năm Giá gốc Giá trị hợp lý VNDDự phòng Giá gốc Giá trị hợp lý VNDDự phòng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu Công ty Cổ phần Chứng khoán VPBank"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu Công ty Cổ phần Chứng khoán VPBank"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu Công ty Cổ phần Chứng khoán VPBank"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 39: NGHIỆP VỤ VÀ SỐ DỰ VỚI CÁC BÊN LIÊN QUAN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH Điện gió Hướng Phùng",
+                "Công ty TNHH Năng lượng GELEX Quảng Trị",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận",
+                "Công ty TNHH Chế tạo Điện cơ HEM",
+                "Công ty Cổ phần Thiết bị Công nghiệp GEIC"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH Điện gió Hướng Phùng",
+                "Công ty TNHH Năng lượng GELEX Quảng Trị",
+                "Công ty TNHH Năng lượng GELEX Ninh Thuận",
+                "Công ty TNHH Chế tạo Điện cơ HEM",
+                "Công ty Cổ phần Thiết bị Công nghiệp GEIC"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thù lao",
+                "Ông Lê Bá Thọ",
+                "Ông Nguyễn Văn Tuấn",
+                "Ông Đỗ Duy Hưng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thù lao",
+                "Ông Lê Bá Thọ",
+                "Ông Nguyễn Văn Tuấn",
+                "Ông Đỗ Duy Hưng",
+                "Ông Đăng Phan Tường",
+                "Ông Nguyễn Đức Luyện",
+                "Ông Nguyễn Trọng Trung",
+                "Lương và các khoản thu nhập khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 31: DOANH THU BÁN HÀNG VÀ CUNG CẤP DỊCH VỤ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu bán thành phẩm",
+                "Doanh thu bán điện",
+                "Doanh thu bán hàng hóa",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+                "Doanh thu với các bên liên quan(Chỉ tiết tại Thuyết minh số 39)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu bán thành phẩm",
+                "Doanh thu bán điện",
+                "Doanh thu bán hàng hóa",
+                "Doanh thu cung cấp dịch vụ",
+                "Doanh thu khác",
+                "Chiết khấu thương mại",
+                "Hàng bán bị trả lại",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+                "Doanh thu với các bên liên quan(Chỉ tiết tại Thuyết minh số 39)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu phổ thông đang lưu hành trong năm"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu phổ thông đang lưu hành trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu phổ thông đang lưu hành trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1.",
+                "2."
+              ],
+              "mục lục chỉ tiêu": [
+                "1.",
+                "2."
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Góp vốn/Mua trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty cố phần Titan Hải Phòng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty cố phần Titan Hải Phòng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 11: PHẢI THU KHÁC Số cuối năm Số đầu năm VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu hợp đồng hợp tác kinh doanh (i)",
+                "Đặt cọc nhận chuyển nhượng Cổ phần",
+                "Phải thu về lãi tiền gửi, tiền cho vay",
+                "Ký cược, ký quỹ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu hợp đồng hợp tác kinh doanh (i)",
+                "Đặt cọc nhận chuyển nhượng Cổ phần",
+                "Phải thu về lãi tiền gửi, tiền cho vay",
+                "Ký cược, ký quỹ",
+                "Tạm ứng",
+                "Phải thu ngắn hạn khác",
+                "Trong đó: Phải thu ngắn hạn khác từ các bên liên quan(Chỉ tiết tại Thuyết minh số 44)",
+                "Tiền đền bù giải phóng mặt bằng (ii)",
+                "Phải thu từ hợp đồng hợp tác kinh doanh/chuyển nhượng",
+                "Phải thu dài hạn khác",
+                "Trong đó: Phải thu dài hạn từ khác các bên liên quan(Chỉ tiết tại Thuyết minh số 44)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh a: Chứng khoán kinh doanh Số cuối năm Số đầu năm Giá gốc Giá trị hợp lý VND Giá gốc Giá trị hợp lý VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu (ii)",
+                "- Cổ phiếu Khác",
+                "- Cổ phiếu Công ty Cổ phần Chứng khoán VPBank",
+                "- Cổ phiếu Ngân hàng TMCP Xuất nhập khẩu Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu (i)",
+                "Cổ phiếu (ii)",
+                "- Cổ phiếu Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "- Cổ phiếu Công ty Cổ phần Chứng khoán VPBank",
+                "- Cổ phiếu Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu (i)",
+                "Cổ phiếu (ii)",
+                "- Cổ phiếu Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "- Cổ phiếu Công ty Cổ phần Chứng khoán VPBank",
+                "- Cổ phiếu Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 25: CHI PHÍ PHẢI TRẢ Số cuối năm Số đầu năm VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí các dự án, công trình xây dựng",
+                "Chi phí lãi vay",
+                "Chi phí phải trả khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí các dự án, công trình xây dựng",
+                "Chi phí lãi vay",
+                "Chi phí phải trả khác"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+        "các bảng": [
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIỀN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế (mã chỉ tiêu 01)",
+                "Điều chỉnh cho các khoản:",
+                "02 (mã chỉ tiêu 354.012.034.978)",
+                "03 (mã chỉ tiêu (4.728.202.831))",
+                "04 (mã chỉ tiêu (5.573.462.388))",
+                "05 (mã chỉ tiêu (1.654.603.298.437))",
+                "06 (mã chỉ tiêu 230.634.956.227)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đối vốn lưu động (mã chỉ tiêu 08)",
+                "09 (mã chỉ tiêu (224.856.780.440))",
+                "10 (mã chỉ tiêu (1.876.716.189.843))",
+                "11 (mã chỉ tiêu (140.903.113.343))",
+                "12 (mã chỉ tiêu (67.495.007.341))",
+                "13 (mã chỉ tiêu (588.685.480.200))",
+                "14 (mã chỉ tiêu (245.959.337.328))",
+                "15 (mã chỉ tiêu (501.639.545.273))",
+                "16 (mã chỉ tiêu -)",
+                "17 (mã chỉ tiêu (7.512.743.002))",
+                "20 (mã chỉ tiêu (471.841.963.668))",
+                "LU'U CHUYÊN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Tiền chi mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                "30 (mã chỉ tiêu 630.675.113.049)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Biến động so với cùng kỳ năm trước Variances compared to the same previous period (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với cùng kỳ năm trướcVariance percentage compared to the same previous period (mã chỉ tiêu 4)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận sau thuế năm 2025Profit after tax for 2025 (mã chỉ tiêu 1)",
+                "Lợi nhuận sau thuế năm 2024Profit after tax for 2024 (mã chỉ tiêu 2)",
+                "Biến động so với cùng kỳ năm trước Variances compared to the same previous period (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với cùng kỳ năm trướcVariance percentage compared to the same previous period (mã chỉ tiêu 4)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận sau thuế năm 2025Profit after tax for 2025 (mã chỉ tiêu 1)",
+                "Lợi nhuận sau thuế năm 2024Profit after tax for 2024 (mã chỉ tiêu 2)",
+                "Biến động so với cùng kỳ năm trước Variances compared to the same previous period (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với cùng kỳ năm trướcVariance percentage compared to the same previous period (mã chỉ tiêu 4)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ông Nguyễn Trọng Trung",
+                "Các thành viên quản lý khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ông Nguyễn Trọng Trung",
+                "Các thành viên quản lý khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C"
+              ],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả người bán ngắn hạn",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Tổng Công ty Thiết bị diện Đông Anh - CTCP",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM",
+                "Công ty TNHH S.A.S. - CTAMAD",
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C",
+                "Công ty Cổ phần GVI"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả người bán ngắn hạn",
+                "Công ty Cổ phần Tập đoàn GELEX",
+                "Tổng Công ty Thiết bị diện Đông Anh - CTCP",
+                "Công ty Cổ phần Chế tạo Điện cơ HEM",
+                "Công ty TNHH S.A.S. - CTAMAD",
+                "Người mua trả tiền trước ngắn hạn",
+                "Công ty Cổ phần GVI",
+                "Phải trả ngắn hạn khác",
+                "Công ty Cổ phần Máy tính - Truyền thông - Điều khiển 3C",
+                "Vay ngắn hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn của khách hàng (mã chỉ tiêu 211)",
+                "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 18)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)",
+                "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số 6)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn của khách hàng (mã chỉ tiêu 211)",
+                "Phải thu về cho vay dài hạn (mã chỉ tiêu 215; tham chiếu Thuyết minh số 9)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 10)",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 14)",
+                "- Nguyên giá (mã chỉ tiêu 222)",
+                "- Giá trị hao mòn lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 15)",
+                "- Nguyên giá (mã chỉ tiêu 228)",
+                "- Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                "Bất động sản đầu tư (mã chỉ tiêu 230; tham chiếu Thuyết minh số 16)",
+                "- Nguyên giá (mã chỉ tiêu 231)",
+                "- Giá trị hao mòn lũy kế (mã chỉ tiêu 232)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 17)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 18)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)",
+                "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số 6)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 13)",
+                "Tài sản thuế thu nhập hoãn lại (mã chỉ tiêu 262; tham chiếu Thuyết minh số 28)",
+                "Lợi thế thường mại (mã chỉ tiêu 269; tham chiếu Thuyết minh số 19)",
+                "TỔNG CỘNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 34: DOANH THU HOẠT ĐỘNG TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lãi chênh lệch tỷ giá"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi bán các khoản đầu tư",
+                "Lãi tiền gửi, lãi cho vay",
+                "Lãi chênh lệch tỷ giá",
+                "Cổ tức, lợi nhuận được chia",
+                "Chiết khấu thanh toán, lãi bán hàng trả chậm",
+                "Lãi nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Doanh thu hoạt động tài chính khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi bán các khoản đầu tư",
+                "Lãi tiền gửi, lãi cho vay",
+                "Lãi chênh lệch tỷ giá",
+                "Cổ tức, lợi nhuận được chia",
+                "Chiết khấu thanh toán, lãi bán hàng trả chậm",
+                "Lãi nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Doanh thu hoạt động tài chính khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)"
+              ],
+              "mục lục chỉ tiêu": [
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "- Lợi nhuận sau thuế chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)",
+                "Nguồn kinh phí và quỹ khác (mã chỉ tiêu 430)",
+                "Nguồn kinh phí đã hình thành tài sản cổ định (mã chỉ tiêu 432)",
+                "TỔNG CỘNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế (mã chỉ tiêu 01)",
+                "Điều chỉnh cho các khoản:",
+                "02 (mã chỉ tiêu 3.238.078.243.384)",
+                "03 (mã chỉ tiêu (86.027.159.216))",
+                "04 (mã chỉ tiêu (15.231.605.245))",
+                "05 (mã chỉ tiêu (428.669.351.438))",
+                "06 (mã chỉ tiêu 1.216.892.288.525)",
+                "07 (mã chỉ tiêu (46.753.250.684))",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "09 (mã chỉ tiêu (1.143.215.363.133))",
+                "10 (mã chỉ tiêu (1.105.141.244.933))",
+                "11 (mã chỉ tiêu (421.886.287.665))",
+                "12 (mã chỉ tiêu (224.221.538.066))",
+                "13 (mã chỉ tiêu (2.878.005.812.127))",
+                "14 (mã chỉ tiêu (1.134.551.901.871))",
+                "15 (mã chỉ tiêu (943.148.381.695))",
+                "17 (mã chỉ tiêu (102.889.514.775))",
+                "20 (mã chỉ tiêu 546.219.639.046)",
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Tiền chi mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                "30 (mã chỉ tiêu (5.016.737.525.543))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 31)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc thuê tài chính (mã chỉ tiêu 35)",
+                "Cổ tức, lợi nhuận đã trả cho chủ sở hữu (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Tiền trả nợ gốc thuê tài chính (mã chỉ tiêu 35)",
+                "Cổ tức, lợi nhuận đã trả cho chủ sở hữu (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và tương đương tiền cuối năm (mã chỉ tiêu 70)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Biến động so với năm trước Variances compared to the last year (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với năm trước Variance percentage compared to the last year (mã chỉ tiêu 4)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận sau thuế năm 2025Profit after tax for 2025 (mã chỉ tiêu 1)",
+                "Lợi nhuận sau thuế năm 2024Profit after tax for 2024 (mã chỉ tiêu 2)",
+                "Biến động so với năm trước Variances compared to the last year (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với năm trước Variance percentage compared to the last year (mã chỉ tiêu 4)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận sau thuế năm 2025Profit after tax for 2025 (mã chỉ tiêu 1)",
+                "Lợi nhuận sau thuế năm 2024Profit after tax for 2024 (mã chỉ tiêu 2)",
+                "Biến động so với năm trước Variances compared to the last year (mã chỉ tiêu 3)",
+                "Tỷ lệ biến động so với năm trước Variance percentage compared to the last year (mã chỉ tiêu 4)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 38: DOANH THU HOẠT ĐỘNG TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lãi chênh lệch tỷ giá"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi tiền gửi, cho vay, đặt cọc",
+                "Lãi chênh lệch tỷ giá",
+                "Lãi do đánh giá lại khoản đầu tư trước ngày mua khí hợp nhất kinh doanh",
+                "Lãi nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Cổ tức, lợi nhuận được chia",
+                "Lãi bán các khoản đầu tư",
+                "Trong đó: Doanh thu hoạt động tài chính với các bên liên quan (chi tiết tại Thuyết minh số 44)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi kinh doanh chứng khoán",
+                "Lãi tiền gửi, cho vay, đặt cọc",
+                "Lãi chênh lệch tỷ giá",
+                "Lãi do đánh giá lại khoản đầu tư trước ngày mua khí hợp nhất kinh doanh",
+                "Chiết khấu thanh toán, lãi bán hàng trả chậm",
+                "Lãi nghiệp vụ phòng ngừa rủi ro biến động giá",
+                "Cổ tức, lợi nhuận được chia",
+                "Lãi bán các khoản đầu tư",
+                "Doanh thu hoạt động tài chính khác",
+                "Trong đó: Doanh thu hoạt động tài chính với các bên liên quan (chi tiết tại Thuyết minh số 44)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: NGU'ÔI MUA TRÀ TIỀN TRƯỚC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Người mua trả tiền trước liên quan bán, cho thuêbắt động sản, hạ tầng khu công nghiệp",
+                "Người mua trả tiền trước liên quan sản xuất kinhdoanh thiết bị điện",
+                "Sembcorp Solar Vietnam Pte.Ltd",
+                "Người mua trả tiền trước liên quan sản xuất và kinhdoanh vật liệu xây dựng",
+                "Người mua trả tiền trước khác",
+                "Sembcorp Solar Vietnam Pte. Ltd."
+              ],
+              "mục lục chỉ tiêu": [
+                "Người mua trả tiền trước liên quan bán, cho thuêbắt động sản, hạ tầng khu công nghiệp",
+                "Người mua trả tiền trước liên quan sản xuất kinhdoanh thiết bị điện",
+                "Sembcorp Solar Vietnam Pte.Ltd",
+                "Người mua trả tiền trước liên quan sản xuất và kinhdoanh vật liệu xây dựng",
+                "Người mua trả tiền trước khác",
+                "Sembcorp Solar Vietnam Pte. Ltd."
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c09",
+          "c17",
+          "c25",
+          "c33",
+          "c41",
+          "c49",
+          "c08",
+          "c16",
+          "c24",
+          "c32",
+          "c40",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c08"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c08"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c03",
+          "c11",
+          "c19",
+          "c27",
+          "c35",
+          "c43",
+          "c02",
+          "c10",
+          "c18",
+          "c26",
+          "c34",
+          "c42",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c05",
+          "c13",
+          "c21",
+          "c29",
+          "c37",
+          "c45",
+          "c04",
+          "c12",
+          "c20",
+          "c28",
+          "c36",
+          "c44"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c05",
+            "c13",
+            "c04"
+          ]
+        },
+        "nominated_keys": [
+          "c05",
+          "c13",
+          "c04"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c07",
+          "c15",
+          "c23",
+          "c31",
+          "c39",
+          "c47",
+          "c06",
+          "c14",
+          "c22",
+          "c30",
+          "c38",
+          "c46"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c39",
+            "c06"
+          ]
+        },
+        "nominated_keys": [
+          "c39",
+          "c06"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c05",
+      "c39",
+      "c06",
+      "c08",
+      "c13",
+      "c04"
+    ],
+    "lexical_finalist_keys": [
+      "c01",
+      "c02",
+      "c04",
+      "c05",
+      "c08",
+      "c09"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c05",
+      "c39",
+      "c06",
+      "c08",
+      "c13",
+      "c04",
+      "c09"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Cuối năm 2025, số lượng cổ phiếu phổ thông đang lưu hành của GEE chênh lệch bao nhiêu so với GEX (đơn vị triệu cổ phiếu)?",
+      "giới hạn số bảng": 9,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GEE",
+          "tên doanh nghiệp": "CTCP Điện lực Gelex",
+          "năm": 2025,
+          "loại báo cáo": "hợp nhất"
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "GEX",
+          "tên doanh nghiệp": "CTCP Tập đoàn GELEX",
+          "năm": 2025,
+          "loại báo cáo": "hợp nhất"
+        }
+      ],
+      "các báo cáo bắt buộc": [
+        "b01",
+        "b02"
+      ],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GEE",
+          "tên doanh nghiệp": "CTCP Điện lực Gelex",
+          "năm": 2025,
+          "loại báo cáo": "hợp nhất",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Cổ phiếu phổ thông",
+                  "Cổ phiếu phổ thông"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Số lượng cổ phiếu đang lưu hành",
+                  "Số lượng cổ phiếu phát hành trong năm",
+                  "Số lượng cổ phiếu đã bán ra công chúng"
+                ],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số lượng cổ phiếu đã bán ra công chúng",
+                  "Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu đang lưu hành",
+                  "Số lượng cổ phiếu phát hành trong năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số lượng cổ phiếu đã bán ra công chúng",
+                  "Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu đang lưu hành",
+                  "Số lượng cổ phiếu phát hành trong năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c05",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                  "Trích quỹ khen thưởng phúc lợi (VND)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                  "Trích quỹ khen thưởng phúc lợi (VND)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c39",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn của khách hàng (mã chỉ tiêu 211)",
+                  "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 18)",
+                  "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)",
+                  "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số 6)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn của khách hàng (mã chỉ tiêu 211)",
+                  "Phải thu về cho vay dài hạn (mã chỉ tiêu 215; tham chiếu Thuyết minh số 9)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 10)",
+                  "Tài sản cố định (mã chỉ tiêu 220)",
+                  "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 14)",
+                  "- Nguyên giá (mã chỉ tiêu 222)",
+                  "- Giá trị hao mòn lũy kế (mã chỉ tiêu 223)",
+                  "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 15)",
+                  "- Nguyên giá (mã chỉ tiêu 228)",
+                  "- Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                  "Bất động sản đầu tư (mã chỉ tiêu 230; tham chiếu Thuyết minh số 16)",
+                  "- Nguyên giá (mã chỉ tiêu 231)",
+                  "- Giá trị hao mòn lũy kế (mã chỉ tiêu 232)",
+                  "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                  "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 17)",
+                  "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                  "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 18)",
+                  "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 18)",
+                  "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số 6)",
+                  "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                  "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 13)",
+                  "Tài sản thuế thu nhập hoãn lại (mã chỉ tiêu 262; tham chiếu Thuyết minh số 28)",
+                  "Lợi thế thường mại (mã chỉ tiêu 269; tham chiếu Thuyết minh số 19)",
+                  "TỔNG CỘNG TÀI SẢN (mã chỉ tiêu 270)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                  "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                  "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 20)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số 21)",
+                  "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 22)",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 23)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 24)",
+                  "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 25)",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 27)",
+                  "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Người mua trả tiền trước dài hạn (mã chỉ tiêu 332; tham chiếu Thuyết minh số 21)",
+                  "Chi phí phải trả dài hạn (mã chỉ tiêu 333)",
+                  "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                  "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 26)",
+                  "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số 28)",
+                  "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 27)",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 29)",
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                  "Quỹ khác thuộc vốn chủ sở hữu (mã chỉ tiêu 420)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                  "- Lợi nhuận sau thuế chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                  "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                  "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c09",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GEE — CTCP Điện lực Gelex — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 38: LÃI CƠ BẢN TRÊN CỔ PHIẾU"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)"
+                ],
+                "kỳ số liệu": [
+                  "Năm nay",
+                  "Năm trước(Trình bày lại)"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp(VND)",
+                  "Trích quỹ khen thưởng, phúc lợi (VND) (i)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp(VND)",
+                  "Trích quỹ khen thưởng, phúc lợi (VND) (i)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếuphổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trongnăm (cổ phiếu)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "GEX",
+          "tên doanh nghiệp": "CTCP Tập đoàn GELEX",
+          "năm": 2025,
+          "loại báo cáo": "hợp nhất",
+          "các bảng": [
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Cổ phiếu phổ thông",
+                  "Cổ phiếu phổ thông"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Số lượng cổ phiếu dang lưu hành",
+                  "Số lượng cổ phiếu đã bán ra công chúng"
+                ],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số lượng cổ phiếu đã bán ra công chúng",
+                  "Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu dang lưu hành"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số lượng cổ phiếu đã bán ra công chúng",
+                  "Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu dang lưu hành"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c06",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                  "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                  "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410)",
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                  "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                  "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                  "- Lợi nhuận sau thuế chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                  "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                  "Lợi ích của cổ đông không kiểm soát (mã chỉ tiêu 429)",
+                  "Nguồn kinh phí và quỹ khác (mã chỉ tiêu 430)",
+                  "Nguồn kinh phí đã hình thành tài sản cổ định (mã chỉ tiêu 432)",
+                  "TỔNG CỘNG NGUỒN VỐN (mã chỉ tiêu 440)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 43: LÃI CO'BÁN TRÊN CỔ PHIẾU"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ],
+                "kỳ số liệu": [
+                  "Năm nay",
+                  "Năm trước (Trình bày lại)"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                  "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND) (ii)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận kế toán sau thuế thu nhập doanh nghiệp (VND)",
+                  "Trích quỹ khen thưởng phúc lợi và thù lao Hội đồng Quản trị (VND) (ii)",
+                  "Lợi nhuận phân bổ cho cổ đông sở hữu cổ phiếu phổ thông (VND)",
+                  "Cổ phiếu phổ thông đang lưu hành bình quân trong năm (cổ phiếu) (i)",
+                  "Lãi cơ bản trên cổ phiếu (VND/cổ phiếu)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "GEX — CTCP Tập đoàn GELEX — năm 2025 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu phổ thông đang lưu hành trong năm"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Cổ phiếu phổ thông đang lưu hành trong năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Cổ phiếu phổ thông đang lưu hành trong năm"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01",
+        "b02"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Số lượng cổ phiếu đang lưu hành",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b02_k01",
+              "nội dung": "Số lượng cổ phiếu dang lưu hành",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c01",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c02",
+          "đáp ứng chỉ tiêu": [
+            "b02_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "coverage_lock_reasons": [
+      "multi_ticker_aggregation_or_comparison"
+    ],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Số lượng cổ phiếu đang lưu hành",
+            "role": "trực tiếp"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Số lượng cổ phiếu dang lưu hành",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c02"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01",
+      "c02"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "GEE_financial_statements_2025_consolidated_table_55",
+      "metadata": {
+        "table_id": "GEE_financial_statements_2025_consolidated_table_55",
+        "doc_id": "GEE_financial_statements_2025_consolidated",
+        "ticker": "GEE",
+        "company_name": "CTCP Điện lực Gelex",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 1606
+      },
+      "rrf_score": 0.03278688524590164,
+      "dense_rank": 1,
+      "dense_score": 0.8933258,
+      "bm25_rank": 1,
+      "bm25_score": 29.817225694721053,
+      "retrieval_score": 0.03278688524590164,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Số cuối năm",
+          "Số đầu năm",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "Số cuối năm",
+          "Số đầu năm"
+        ],
+        "units": [],
+        "row_count": 5,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu đã bán ra công chúng"
+          },
+          {
+            "row": 3,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu đang lưu hành"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 6,
+            "label": "Số lượng cổ phiếu phát hành trong năm"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu đã bán ra công chúng"
+          },
+          {
+            "row": 3,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu đang lưu hành"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 6,
+            "label": "Số lượng cổ phiếu phát hành trong năm"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "GEX_financial_statements_2025_consolidated_table_65",
+      "metadata": {
+        "table_id": "GEX_financial_statements_2025_consolidated_table_65",
+        "doc_id": "GEX_financial_statements_2025_consolidated",
+        "ticker": "GEX",
+        "company_name": "CTCP Tập đoàn GELEX",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2025,
+        "start_line": 2217
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 2,
+      "dense_score": 0.88427997,
+      "bm25_rank": 2,
+      "bm25_score": 25.711363789769567,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Số cuối năm",
+          "Số đầu năm",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "Số cuối năm",
+          "Số đầu năm"
+        ],
+        "units": [],
+        "row_count": 4,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu đã bán ra công chúng"
+          },
+          {
+            "row": 3,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu dang lưu hành"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu phổ thông"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu đã bán ra công chúng"
+          },
+          {
+            "row": 3,
+            "label": "Cổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu dang lưu hành"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu phổ thông"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "GEE_financial_statements_2025_consolidated",
+        "GEX_financial_statements_2025_consolidated"
+      ],
+      "tables": [
+        "GEE_financial_statements_2025_consolidated|1606",
+        "GEX_financial_statements_2025_consolidated|2217",
+        "GEE_financial_statements_2025_consolidated|556",
+        "GEX_financial_statements_2025_consolidated|2304",
+        "GEE_financial_statements_2025_consolidated|1702",
+        "GEX_financial_statements_2025_consolidated|523",
+        "GEE_financial_statements_2025_consolidated|531",
+        "GEX_financial_statements_2025_consolidated|2300",
+        "GEE_financial_statements_2025_consolidated|1685",
+        "GEX_financial_statements_2025_consolidated|2325",
+        "GEE_financial_statements_2025_consolidated|1625",
+        "GEX_financial_statements_2025_consolidated|2080",
+        "GEE_financial_statements_2025_consolidated|456",
+        "GEX_financial_statements_2025_consolidated|598",
+        "GEE_financial_statements_2025_consolidated|117",
+        "GEX_financial_statements_2025_consolidated|2184",
+        "GEE_financial_statements_2025_consolidated|1357",
+        "GEX_financial_statements_2025_consolidated|2271",
+        "GEE_financial_statements_2025_consolidated|1256",
+        "GEX_financial_statements_2025_consolidated|1916",
+        "GEE_financial_statements_2025_consolidated|1179",
+        "GEX_financial_statements_2025_consolidated|627",
+        "GEE_financial_statements_2025_consolidated|1782",
+        "GEX_financial_statements_2025_consolidated|2057",
+        "GEE_financial_statements_2025_consolidated|1577",
+        "GEX_financial_statements_2025_consolidated|2022",
+        "GEE_financial_statements_2025_consolidated|1740",
+        "GEX_financial_statements_2025_consolidated|1737",
+        "GEE_financial_statements_2025_consolidated|1710",
+        "GEX_financial_statements_2025_consolidated|116",
+        "GEE_financial_statements_2025_consolidated|1759",
+        "GEX_financial_statements_2025_consolidated|2400",
+        "GEE_financial_statements_2025_consolidated|1463",
+        "GEX_financial_statements_2025_consolidated|1714",
+        "GEE_financial_statements_2025_consolidated|1393",
+        "GEX_financial_statements_2025_consolidated|1647",
+        "GEE_financial_statements_2025_consolidated|1767",
+        "GEX_financial_statements_2025_consolidated|2254",
+        "GEE_financial_statements_2025_consolidated|431",
+        "GEX_financial_statements_2025_consolidated|1938",
+        "GEE_financial_statements_2025_consolidated|1554",
+        "GEX_financial_statements_2025_consolidated|1621",
+        "GEE_financial_statements_2025_consolidated|1629",
+        "GEX_financial_statements_2025_consolidated|1996",
+        "GEE_financial_statements_2025_consolidated|1633",
+        "GEX_financial_statements_2025_consolidated|1963",
+        "GEE_financial_statements_2025_consolidated|1656",
+        "GEX_financial_statements_2025_consolidated|2146",
+        "GEE_financial_statements_2025_consolidated|1660",
+        "GEX_financial_statements_2025_consolidated|1599"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "GEE_financial_statements_2025_consolidated",
+        "GEX_financial_statements_2025_consolidated"
+      ],
+      "tables": [
+        "GEE_financial_statements_2025_consolidated|1606",
+        "GEX_financial_statements_2025_consolidated|2217",
+        "GEE_financial_statements_2025_consolidated|1702",
+        "GEE_financial_statements_2025_consolidated|431",
+        "GEX_financial_statements_2025_consolidated|523",
+        "GEX_financial_statements_2025_consolidated|2300",
+        "GEE_financial_statements_2025_consolidated|456",
+        "GEX_financial_statements_2025_consolidated|2304"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "GEE_financial_statements_2025_consolidated",
+        "GEX_financial_statements_2025_consolidated"
+      ],
+      "tables": [
+        "GEE_financial_statements_2025_consolidated|1606",
+        "GEX_financial_statements_2025_consolidated|2217",
+        "GEE_financial_statements_2025_consolidated|1702",
+        "GEE_financial_statements_2025_consolidated|431",
+        "GEX_financial_statements_2025_consolidated|523",
+        "GEX_financial_statements_2025_consolidated|2300",
+        "GEE_financial_statements_2025_consolidated|456",
+        "GEX_financial_statements_2025_consolidated|2304",
+        "GEE_financial_statements_2025_consolidated|1685"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "GEE_financial_statements_2025_consolidated",
+        "GEX_financial_statements_2025_consolidated"
+      ],
+      "tables": [
+        "GEE_financial_statements_2025_consolidated|1606",
+        "GEX_financial_statements_2025_consolidated|2217"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "GEE_financial_statements_2025_consolidated",
+        "GEX_financial_statements_2025_consolidated"
+      ],
+      "tables": [
+        "GEE_financial_statements_2025_consolidated|1606",
+        "GEX_financial_statements_2025_consolidated|2217"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.04,
+        "recall": 1.0,
+        "f2": 0.1724137931034483,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f2": 0.625,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.2222222222222222,
+        "recall": 1.0,
+        "f2": 0.5882352941176471,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "GEE_financial_statements_2025_consolidated|1606",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "GEX_financial_statements_2025_consolidated|2217",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

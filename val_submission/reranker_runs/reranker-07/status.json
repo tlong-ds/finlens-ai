@@ -1,0 +1,628 @@
+{
+  "schema_version": 2,
+  "run_id": "reranker-07",
+  "state": "completed_with_failures",
+  "created_at": "2026-08-23T09:26:26+00:00",
+  "finished_at": "2026-08-23T09:43:06+00:00",
+  "config": {
+    "golden_path": "/home/tuanta/Financial_AI/finlens-ai/golden_100.json",
+    "golden_sha256": "c9b80d776c3c8eb9a072d724a61c5c4fd8585d100f2accc8f602e3226d04eb0b",
+    "source_run": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06",
+    "selected_question_ids": [
+      1,
+      5,
+      7,
+      9,
+      13,
+      24,
+      46,
+      49,
+      60,
+      67,
+      73,
+      82,
+      91,
+      94,
+      96,
+      106,
+      113,
+      117,
+      122,
+      123,
+      130,
+      135,
+      146,
+      154,
+      174,
+      190,
+      196,
+      200,
+      225,
+      243,
+      252,
+      281,
+      318,
+      336,
+      347,
+      356,
+      363,
+      372,
+      381,
+      383,
+      393,
+      400,
+      407,
+      415,
+      425,
+      436,
+      440,
+      450,
+      471,
+      495,
+      514,
+      527,
+      541,
+      545,
+      551,
+      554,
+      559,
+      578,
+      587,
+      599,
+      610,
+      621,
+      630,
+      647,
+      655,
+      656,
+      666,
+      683,
+      684,
+      692,
+      711,
+      718,
+      735,
+      739,
+      742,
+      752,
+      764,
+      770,
+      793,
+      801,
+      810,
+      817,
+      822,
+      824,
+      831,
+      838,
+      844,
+      849,
+      862,
+      898,
+      900,
+      906,
+      915,
+      922,
+      935,
+      943,
+      951,
+      978,
+      1005,
+      1008
+    ],
+    "llm_model": "gpt-oss-20b",
+    "llm_temperature": "0.1",
+    "concurrency": 4
+  },
+  "questions": {
+    "1": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/1.json"
+    },
+    "5": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/5.json"
+    },
+    "7": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/7.json"
+    },
+    "9": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/9.json"
+    },
+    "13": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/13.json"
+    },
+    "24": {
+      "status": "failed",
+      "error": {
+        "type": "RerankerError",
+        "message": "Không dựng được rerank context từ CSV: HAG_financial_statements_2017_separate_table_7"
+      },
+      "artifact": "artifacts/questions/24.json"
+    },
+    "46": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/46.json"
+    },
+    "49": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/49.json"
+    },
+    "60": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/60.json"
+    },
+    "67": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/67.json"
+    },
+    "73": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/73.json"
+    },
+    "82": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/82.json"
+    },
+    "91": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/91.json"
+    },
+    "94": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/94.json"
+    },
+    "96": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/96.json"
+    },
+    "106": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/106.json"
+    },
+    "113": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/113.json"
+    },
+    "117": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/117.json"
+    },
+    "122": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/122.json"
+    },
+    "123": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/123.json"
+    },
+    "130": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/130.json"
+    },
+    "135": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/135.json"
+    },
+    "146": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/146.json"
+    },
+    "154": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/154.json"
+    },
+    "174": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/174.json"
+    },
+    "190": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/190.json"
+    },
+    "196": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/196.json"
+    },
+    "200": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/200.json"
+    },
+    "225": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/225.json"
+    },
+    "243": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/243.json"
+    },
+    "252": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/252.json"
+    },
+    "281": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/281.json"
+    },
+    "318": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/318.json"
+    },
+    "336": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/336.json"
+    },
+    "347": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/347.json"
+    },
+    "356": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/356.json"
+    },
+    "363": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/363.json"
+    },
+    "372": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/372.json"
+    },
+    "381": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/381.json"
+    },
+    "383": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/383.json"
+    },
+    "393": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/393.json"
+    },
+    "400": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/400.json"
+    },
+    "407": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/407.json"
+    },
+    "415": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/415.json"
+    },
+    "425": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/425.json"
+    },
+    "436": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/436.json"
+    },
+    "440": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/440.json"
+    },
+    "450": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/450.json"
+    },
+    "471": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/471.json"
+    },
+    "495": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/495.json"
+    },
+    "514": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/514.json"
+    },
+    "527": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/527.json"
+    },
+    "541": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/541.json"
+    },
+    "545": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/545.json"
+    },
+    "551": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/551.json"
+    },
+    "554": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/554.json"
+    },
+    "559": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/559.json"
+    },
+    "578": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/578.json"
+    },
+    "587": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/587.json"
+    },
+    "599": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/599.json"
+    },
+    "610": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/610.json"
+    },
+    "621": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/621.json"
+    },
+    "630": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/630.json"
+    },
+    "647": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/647.json"
+    },
+    "655": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/655.json"
+    },
+    "656": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/656.json"
+    },
+    "666": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/666.json"
+    },
+    "683": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/683.json"
+    },
+    "684": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/684.json"
+    },
+    "692": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/692.json"
+    },
+    "711": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/711.json"
+    },
+    "718": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/718.json"
+    },
+    "735": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/735.json"
+    },
+    "739": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/739.json"
+    },
+    "742": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/742.json"
+    },
+    "752": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/752.json"
+    },
+    "764": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/764.json"
+    },
+    "770": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/770.json"
+    },
+    "793": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/793.json"
+    },
+    "801": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/801.json"
+    },
+    "810": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/810.json"
+    },
+    "817": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/817.json"
+    },
+    "822": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/822.json"
+    },
+    "824": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/824.json"
+    },
+    "831": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/831.json"
+    },
+    "838": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/838.json"
+    },
+    "844": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/844.json"
+    },
+    "849": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/849.json"
+    },
+    "862": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/862.json"
+    },
+    "898": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/898.json"
+    },
+    "900": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/900.json"
+    },
+    "906": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/906.json"
+    },
+    "915": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/915.json"
+    },
+    "922": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/922.json"
+    },
+    "935": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/935.json"
+    },
+    "943": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/943.json"
+    },
+    "951": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/951.json"
+    },
+    "978": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/978.json"
+    },
+    "1005": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/1005.json"
+    },
+    "1008": {
+      "status": "succeeded",
+      "error": null,
+      "artifact": "artifacts/questions/1008.json"
+    }
+  },
+  "updated_at": "2026-08-23T09:43:06+00:00",
+  "counts": {
+    "selected": 100,
+    "succeeded": 99,
+    "failed": 1
+  }
+}

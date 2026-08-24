@@ -1,0 +1,4087 @@
+{
+  "schema_version": 2,
+  "id": 666,
+  "question": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+  "started_at": "2026-08-23T09:38:43+00:00",
+  "finished_at": "2026-08-23T09:39:02+00:00",
+  "duration_seconds": 19.165962715000205,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/666.json",
+  "golden": {
+    "id": 666,
+    "question": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+    "relevant_docs": [
+      "KBC_financial_statements_2015_separate"
+    ],
+    "relevant_tables": [
+      "KBC_financial_statements_2015_separate|268"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_43",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_43",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1332
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.86958575,
+      "bm25_rank": 1,
+      "bm25_score": 17.881948585973934,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_46",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_46",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1359
+      },
+      "rrf_score": 0.03055037313432836,
+      "dense_rank": 2,
+      "dense_score": 0.85776436,
+      "bm25_rank": 7,
+      "bm25_score": 8.882557227871853,
+      "retrieval_score": 0.03055037313432836,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_9",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_9",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2015,
+        "start_line": 299
+      },
+      "rrf_score": 0.03009207275993712,
+      "dense_rank": 3,
+      "dense_score": 0.87400854,
+      "bm25_rank": 13,
+      "bm25_score": 6.227042289225219,
+      "retrieval_score": 0.03009207275993712,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_18",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_18",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 882
+      },
+      "rrf_score": 0.029857397504456328,
+      "dense_rank": 4,
+      "dense_score": 0.8367029,
+      "bm25_rank": 6,
+      "bm25_score": 9.178832430572424,
+      "retrieval_score": 0.029857397504456328,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_58",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_58",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1573
+      },
+      "rrf_score": 0.02976190476190476,
+      "dense_rank": 5,
+      "dense_score": 0.83216655,
+      "bm25_rank": 3,
+      "bm25_score": 14.201354720651317,
+      "retrieval_score": 0.02976190476190476,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_54",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_54",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1485
+      },
+      "rrf_score": 0.028612012987012988,
+      "dense_rank": 6,
+      "dense_score": 0.82292426,
+      "bm25_rank": 4,
+      "bm25_score": 10.994741636152384,
+      "retrieval_score": 0.028612012987012988,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_6",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_6",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2015,
+        "start_line": 224
+      },
+      "rrf_score": 0.02857142857142857,
+      "dense_rank": 7,
+      "dense_score": 0.8327901,
+      "bm25_rank": 10,
+      "bm25_score": 6.499609298231867,
+      "retrieval_score": 0.02857142857142857,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_8",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_8",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2015,
+        "start_line": 268
+      },
+      "rrf_score": 0.027912386121341344,
+      "dense_rank": 8,
+      "dense_score": 0.8402595,
+      "bm25_rank": 17,
+      "bm25_score": 4.250463663991389,
+      "retrieval_score": 0.027912386121341344,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_44",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_44",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1340
+      },
+      "rrf_score": 0.027149321266968326,
+      "dense_rank": 9,
+      "dense_score": 0.8032499,
+      "bm25_rank": 5,
+      "bm25_score": 9.516203854503088,
+      "retrieval_score": 0.027149321266968326,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_10",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_10",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2015,
+        "start_line": 314
+      },
+      "rrf_score": 0.02649122807017544,
+      "dense_rank": 10,
+      "dense_score": 0.8281398,
+      "bm25_rank": 16,
+      "bm25_score": 5.360103464084599,
+      "retrieval_score": 0.02649122807017544,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_7",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_7",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2015,
+        "start_line": 239
+      },
+      "rrf_score": 0.026262626262626265,
+      "dense_rank": 11,
+      "dense_score": 0.84220886,
+      "bm25_rank": 30,
+      "bm25_score": 0.8715321829063934,
+      "retrieval_score": 0.026262626262626265,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_5",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_5",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2015,
+        "start_line": 209
+      },
+      "rrf_score": 0.026137303556658397,
+      "dense_rank": 12,
+      "dense_score": 0.8458679,
+      "bm25_rank": 33,
+      "bm25_score": 4.566366053851697e-06,
+      "retrieval_score": 0.026137303556658397,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_31",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_31",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1135
+      },
+      "rrf_score": 0.026132699813337858,
+      "dense_rank": 13,
+      "dense_score": 0.8057041,
+      "bm25_rank": 11,
+      "bm25_score": 6.406913413398347,
+      "retrieval_score": 0.026132699813337858,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_23",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_23",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 980
+      },
+      "rrf_score": 0.026129032258064518,
+      "dense_rank": 14,
+      "dense_score": 0.7875896,
+      "bm25_rank": 2,
+      "bm25_score": 17.280834030027535,
+      "retrieval_score": 0.026129032258064518,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_38",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_38",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1278
+      },
+      "rrf_score": 0.025728708679368183,
+      "dense_rank": 15,
+      "dense_score": 0.83314145,
+      "bm25_rank": 29,
+      "bm25_score": 0.8841571540871744,
+      "retrieval_score": 0.025728708679368183,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_60",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_60",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2015,
+        "start_line": 1641
+      },
+      "rrf_score": 0.025478740668614087,
+      "dense_rank": 16,
+      "dense_score": 0.8170833,
+      "bm25_rank": 18,
+      "bm25_score": 3.1356106528578533,
+      "retrieval_score": 0.025478740668614087,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_20",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_20",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 918
+      },
+      "rrf_score": 0.02513105149552883,
+      "dense_rank": 17,
+      "dense_score": 0.79709685,
+      "bm25_rank": 9,
+      "bm25_score": 6.713474040256157,
+      "retrieval_score": 0.02513105149552883,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_39",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_39",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1282
+      },
+      "rrf_score": 0.024963924963924963,
+      "dense_rank": 18,
+      "dense_score": 0.86622137,
+      "bm25_rank": 50,
+      "bm25_score": 3.321190444360361e-06,
+      "retrieval_score": 0.024963924963924963,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_42",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_42",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2015,
+        "start_line": 1315
+      },
+      "rrf_score": 0.024184149184149184,
+      "dense_rank": 19,
+      "dense_score": 0.8217557,
+      "bm25_rank": 28,
+      "bm25_score": 0.9557945182990313,
+      "retrieval_score": 0.024184149184149184,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_41",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_41",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1311
+      },
+      "rrf_score": 0.02411038489469862,
+      "dense_rank": 20,
+      "dense_score": 0.81686413,
+      "bm25_rank": 25,
+      "bm25_score": 1.0902733159898743,
+      "retrieval_score": 0.02411038489469862,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_14",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_14",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 833
+      },
+      "rrf_score": 0.02399425287356322,
+      "dense_rank": 21,
+      "dense_score": 0.81697935,
+      "bm25_rank": 27,
+      "bm25_score": 0.9992989838106392,
+      "retrieval_score": 0.02399425287356322,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_55",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_55",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1502
+      },
+      "rrf_score": 0.023796791443850267,
+      "dense_rank": 22,
+      "dense_score": 0.7679859,
+      "bm25_rank": 8,
+      "bm25_score": 7.976929867908639,
+      "retrieval_score": 0.023796791443850267,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_32",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_32",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1154
+      },
+      "rrf_score": 0.023542445644647556,
+      "dense_rank": 23,
+      "dense_score": 0.80278534,
+      "bm25_rank": 23,
+      "bm25_score": 1.1522606238886988,
+      "retrieval_score": 0.023542445644647556,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_49",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_49",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1394
+      },
+      "rrf_score": 0.02348901098901099,
+      "dense_rank": 24,
+      "dense_score": 0.8018031,
+      "bm25_rank": 20,
+      "bm25_score": 1.41153422051593,
+      "retrieval_score": 0.02348901098901099,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_47",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_47",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1363
+      },
+      "rrf_score": 0.02312889812889813,
+      "dense_rank": 25,
+      "dense_score": 0.82842773,
+      "bm25_rank": 44,
+      "bm25_score": 3.7018417817593745e-06,
+      "retrieval_score": 0.02312889812889813,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_48",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_48",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1367
+      },
+      "rrf_score": 0.023064687168610817,
+      "dense_rank": 26,
+      "dense_score": 0.80061364,
+      "bm25_rank": 22,
+      "bm25_score": 1.1675791020621056,
+      "retrieval_score": 0.023064687168610817,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_34",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_34",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1179
+      },
+      "rrf_score": 0.023058884835852007,
+      "dense_rank": 27,
+      "dense_score": 0.8252153,
+      "bm25_rank": 41,
+      "bm25_score": 3.858388915243324e-06,
+      "retrieval_score": 0.023058884835852007,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_57",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_57",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1550
+      },
+      "rrf_score": 0.023042071197411,
+      "dense_rank": 28,
+      "dense_score": 0.786603,
+      "bm25_rank": 15,
+      "bm25_score": 5.441280323126417,
+      "retrieval_score": 0.023042071197411,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_16",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_16",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 847
+      },
+      "rrf_score": 0.022762345679012343,
+      "dense_rank": 29,
+      "dense_score": 0.796448,
+      "bm25_rank": 21,
+      "bm25_score": 1.227411905347448,
+      "retrieval_score": 0.022762345679012343,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_36",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_36",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1217
+      },
+      "rrf_score": 0.022559217947111167,
+      "dense_rank": 30,
+      "dense_score": 0.7869104,
+      "bm25_rank": 19,
+      "bm25_score": 1.4268225404502102,
+      "retrieval_score": 0.022559217947111167,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_17",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_17",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 872
+      },
+      "rrf_score": 0.02254305977710233,
+      "dense_rank": 31,
+      "dense_score": 0.8042696,
+      "bm25_rank": 34,
+      "bm25_score": 4.165497211667647e-06,
+      "retrieval_score": 0.02254305977710233,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_45",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_45",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1344
+      },
+      "rrf_score": 0.02172891707775429,
+      "dense_rank": 32,
+      "dense_score": 0.8032365,
+      "bm25_rank": 39,
+      "bm25_score": 3.919745104064403e-06,
+      "retrieval_score": 0.02172891707775429,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_59",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_59",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1637
+      },
+      "rrf_score": 0.021629084215370457,
+      "dense_rank": 33,
+      "dense_score": 0.8139196,
+      "bm25_rank": 46,
+      "bm25_score": 3.594435301433448e-06,
+      "retrieval_score": 0.021629084215370457,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_22",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_22",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 965
+      },
+      "rrf_score": 0.02107907383136741,
+      "dense_rank": 34,
+      "dense_score": 0.77058196,
+      "bm25_rank": 24,
+      "bm25_score": 1.1373387230360081,
+      "retrieval_score": 0.02107907383136741,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_35",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_35",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1200
+      },
+      "rrf_score": 0.020944692920257444,
+      "dense_rank": 35,
+      "dense_score": 0.802433,
+      "bm25_rank": 43,
+      "bm25_score": 3.7795075350132627e-06,
+      "retrieval_score": 0.020944692920257444,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_40",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_40",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1290
+      },
+      "rrf_score": 0.020709430756159726,
+      "dense_rank": 36,
+      "dense_score": 0.8024572,
+      "bm25_rank": 47,
+      "bm25_score": 3.4937970581825136e-06,
+      "retrieval_score": 0.020709430756159726,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_30",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_30",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1131
+      },
+      "rrf_score": 0.020370370370370372,
+      "dense_rank": 37,
+      "dense_score": 0.80199933,
+      "bm25_rank": 48,
+      "bm25_score": 3.4449681034321207e-06,
+      "retrieval_score": 0.020370370370370372,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_24",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_24",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 992
+      },
+      "rrf_score": 0.020334805381534354,
+      "dense_rank": 38,
+      "dense_score": 0.7755525,
+      "bm25_rank": 31,
+      "bm25_score": 5.366281682279922e-06,
+      "retrieval_score": 0.020334805381534354,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_15",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_15",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 839
+      },
+      "rrf_score": 0.020303527481542245,
+      "dense_rank": 39,
+      "dense_score": 0.7774501,
+      "bm25_rank": 32,
+      "bm25_score": 5.323319475216419e-06,
+      "retrieval_score": 0.020303527481542245,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_12",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_12",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 493
+      },
+      "rrf_score": 0.02003205128205128,
+      "dense_rank": 40,
+      "dense_score": 0.78401935,
+      "bm25_rank": 36,
+      "bm25_score": 4.033446338755967e-06,
+      "retrieval_score": 0.02003205128205128,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_13",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_13",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 812
+      },
+      "rrf_score": 0.02000800320128051,
+      "dense_rank": 41,
+      "dense_score": 0.7932211,
+      "bm25_rank": 42,
+      "bm25_score": 3.7989239528089607e-06,
+      "retrieval_score": 0.02000800320128051,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_26",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_26",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1017
+      },
+      "rrf_score": 0.01978557504873294,
+      "dense_rank": 42,
+      "dense_score": 0.7743591,
+      "bm25_rank": 35,
+      "bm25_score": 4.066637406481309e-06,
+      "retrieval_score": 0.01978557504873294,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_37",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_37",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2015,
+        "start_line": 1257
+      },
+      "rrf_score": 0.014084507042253521,
+      "dense_rank": 43,
+      "dense_score": 0.83220017,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_56",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_56",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1523
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 6.245195729955945,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 44
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_51",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_51",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2015,
+        "start_line": 1438
+      },
+      "rrf_score": 0.0136986301369863,
+      "dense_rank": 45,
+      "dense_score": 0.83171165,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_21",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_21",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 947
+      },
+      "rrf_score": 0.013513513513513514,
+      "bm25_rank": 14,
+      "bm25_score": 5.538919514325625,
+      "retrieval_score": 0.013513513513513514,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_19",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_19",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 899
+      },
+      "rrf_score": 0.011627906976744186,
+      "bm25_rank": 26,
+      "bm25_score": 0.9992991115599705,
+      "retrieval_score": 0.011627906976744186,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 47
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_52",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_52",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1448
+      },
+      "rrf_score": 0.010752688172043012,
+      "dense_rank": 48,
+      "dense_score": 0.800594,
+      "retrieval_score": 0.010752688172043012,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_29",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_29",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 1114
+      },
+      "rrf_score": 0.010526315789473684,
+      "dense_rank": 49,
+      "dense_score": 0.7967184,
+      "retrieval_score": 0.010526315789473684,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_3",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_3",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2015,
+        "start_line": 50
+      },
+      "rrf_score": 0.010309278350515464,
+      "bm25_rank": 37,
+      "bm25_score": 3.983084200159603e-06,
+      "retrieval_score": 0.010309278350515464,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "year": 2015,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_43",
+        "table_ref": "KBC_financial_statements_2015_separate|1332",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_46",
+        "table_ref": "KBC_financial_statements_2015_separate|1359",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_9",
+        "table_ref": "KBC_financial_statements_2015_separate|299",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_18",
+        "table_ref": "KBC_financial_statements_2015_separate|882",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_58",
+        "table_ref": "KBC_financial_statements_2015_separate|1573",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_54",
+        "table_ref": "KBC_financial_statements_2015_separate|1485",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_6",
+        "table_ref": "KBC_financial_statements_2015_separate|224",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_8",
+        "table_ref": "KBC_financial_statements_2015_separate|268",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_44",
+        "table_ref": "KBC_financial_statements_2015_separate|1340",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_10",
+        "table_ref": "KBC_financial_statements_2015_separate|314",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_7",
+        "table_ref": "KBC_financial_statements_2015_separate|239",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_5",
+        "table_ref": "KBC_financial_statements_2015_separate|209",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_31",
+        "table_ref": "KBC_financial_statements_2015_separate|1135",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_23",
+        "table_ref": "KBC_financial_statements_2015_separate|980",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_38",
+        "table_ref": "KBC_financial_statements_2015_separate|1278",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_60",
+        "table_ref": "KBC_financial_statements_2015_separate|1641",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_20",
+        "table_ref": "KBC_financial_statements_2015_separate|918",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_39",
+        "table_ref": "KBC_financial_statements_2015_separate|1282",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_42",
+        "table_ref": "KBC_financial_statements_2015_separate|1315",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_41",
+        "table_ref": "KBC_financial_statements_2015_separate|1311",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_14",
+        "table_ref": "KBC_financial_statements_2015_separate|833",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_55",
+        "table_ref": "KBC_financial_statements_2015_separate|1502",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_32",
+        "table_ref": "KBC_financial_statements_2015_separate|1154",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_49",
+        "table_ref": "KBC_financial_statements_2015_separate|1394",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_47",
+        "table_ref": "KBC_financial_statements_2015_separate|1363",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_48",
+        "table_ref": "KBC_financial_statements_2015_separate|1367",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_34",
+        "table_ref": "KBC_financial_statements_2015_separate|1179",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_57",
+        "table_ref": "KBC_financial_statements_2015_separate|1550",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_16",
+        "table_ref": "KBC_financial_statements_2015_separate|847",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_36",
+        "table_ref": "KBC_financial_statements_2015_separate|1217",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_17",
+        "table_ref": "KBC_financial_statements_2015_separate|872",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_45",
+        "table_ref": "KBC_financial_statements_2015_separate|1344",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_59",
+        "table_ref": "KBC_financial_statements_2015_separate|1637",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_22",
+        "table_ref": "KBC_financial_statements_2015_separate|965",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_35",
+        "table_ref": "KBC_financial_statements_2015_separate|1200",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_40",
+        "table_ref": "KBC_financial_statements_2015_separate|1290",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_30",
+        "table_ref": "KBC_financial_statements_2015_separate|1131",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_24",
+        "table_ref": "KBC_financial_statements_2015_separate|992",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_15",
+        "table_ref": "KBC_financial_statements_2015_separate|839",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_12",
+        "table_ref": "KBC_financial_statements_2015_separate|493",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_13",
+        "table_ref": "KBC_financial_statements_2015_separate|812",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_26",
+        "table_ref": "KBC_financial_statements_2015_separate|1017",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_37",
+        "table_ref": "KBC_financial_statements_2015_separate|1257",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_56",
+        "table_ref": "KBC_financial_statements_2015_separate|1523",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_51",
+        "table_ref": "KBC_financial_statements_2015_separate|1438",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_21",
+        "table_ref": "KBC_financial_statements_2015_separate|947",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_19",
+        "table_ref": "KBC_financial_statements_2015_separate|899",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_52",
+        "table_ref": "KBC_financial_statements_2015_separate|1448",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_29",
+        "table_ref": "KBC_financial_statements_2015_separate|1114",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "KBC_financial_statements_2015_separate_table_3",
+        "table_ref": "KBC_financial_statements_2015_separate|50",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: 2 Doanh thu hoạt động tài chính Năm nay Đơn vị tính: VND Năm trước"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)"
+              ],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)",
+                "Lãi tiền gửi ngân hàng",
+                "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                "Lãi chênh lệch tỷ giá hối đoái chưa thực hiện",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)",
+                "Lãi tiền gửi ngân hàng",
+                "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                "Lãi chênh lệch tỷ giá hối đoái chưa thực hiện",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lương và thường"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lương và thường"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 22: GIÁ VÔN HÀNG BÁN VÀ DỊCH VỤ CUNG CẤP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá vốn đất có cơ sở hạ tầng cho thuê",
+                "Giá vốn bán nhà xưởng",
+                "Giá vốn kho, nhà xưởng và văn phòng cho thuê",
+                "Giá vốn dịch vụ đã cung cấp",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá vốn đất có cơ sở hạ tầng cho thuê",
+                "Giá vốn bán nhà xưởng",
+                "Giá vốn kho, nhà xưởng và văn phòng cho thuê",
+                "Giá vốn dịch vụ đã cung cấp",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 16: CHI PHÍ PHÀI TRÀ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí phát triển cơ sở hạ tầng trích trước đối với phần doanh thu đã được ghi nhận",
+                "- Khu công nghiệp Quế Võ hiện hữu",
+                "- Khu công nghiệp Quế Võ mở rộng",
+                "Chi phí lãi vay phải trả",
+                "Chi phí phát hành trải phiếu chuyển đổi",
+                "Chi phí lãi vay phải trả (*)",
+                "Chi phí phải trả bên liên quan (Thuyết minh số 27)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí phát triển cơ sở hạ tầng trích trước đối với phần doanh thu đã được ghi nhận",
+                "- Khu công nghiệp Quế Võ hiện hữu",
+                "- Khu công nghiệp Quế Võ mở rộng",
+                "Chi phí lãi vay phải trả",
+                "Chi phí phát hành trải phiếu chuyển đổi",
+                "Chi phí phải trả bên liên quan (Thuyết minh số 27)",
+                "Các chi phí phải trả khác",
+                "Chi phí lãi vay phải trả (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 8: CÁC KHOÁN PHẢI THU KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu chuyển nhượng cổ phần (i)",
+                "Phải thu lãi trả chấm (ii)",
+                "Phải thu Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc liên quan đến công nợ với Công ty Cổ phần Thủy điện SGI - Lào (iii)",
+                "Phải thu tiền đất cọc (v)",
+                "Phải thu từ các bên liên quan (Thuyết minh số 27)",
+                "Phải thu Ủy ban Nhân dân Xã Vân Dương",
+                "Công ty Cổ phần Dịch vụ Kinh Bắc (ii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu chuyển nhượng cổ phần (i)",
+                "Phải thu lãi trả chấm (ii)",
+                "Phải thu Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc liên quan đến công nợ với Công ty Cổ phần Thủy điện SGI - Lào (iii)",
+                "Phải thu Ủy ban Nhân dân tỉnh Bắc Ninh tiền hỗ trợ giá cho thuê lại đất có cơ sở hạ tầng (iv)",
+                "Phải thu tiền đất cọc (v)",
+                "Phải thu từ các bên liên quan (Thuyết minh số 27)",
+                "Phải thu Ủy ban Nhân dân Xã Vân Dương",
+                "Phải thu khác (vi)",
+                "Công ty Cổ phần Dịch vụ Kinh Bắc (ii)",
+                "Phải thu khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: TIÊN VÀ CÁC KHOÀN TƯƠNG ĐƯƠNG TIÊN (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Các khoản nợ được chuyển thành vốn chủ sở hữu",
+                "- tiền thu từ đi vay theo khế ước thông thường",
+                "- tiền thu từ phát hành trái phiếu chuyển đổi",
+                "- tiền trả nợ gốc vay theo khế ước thông thường",
+                "- tiền trả nợ gốc trái phiếu thường"
+              ],
+              "mục lục chỉ tiêu": [
+                "Các khoản nợ được chuyển thành vốn chủ sở hữu",
+                "- tiền thu từ đi vay theo khế ước thông thường",
+                "- tiền thu từ phát hành trái phiếu chuyển đổi",
+                "- tiền trả nợ gốc vay theo khế ước thông thường",
+                "- tiền trả nợ gốc trái phiếu thường"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 24: CHI PHÍ QUẢN LÝ DOANH NGHIỆP VÀ CHI PHÍ BÁN HÀNG"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí khấu hao tài sản cố định",
+                "Chi phí nhân viên quản lý",
+                "Chi phí dịch vụ mua ngoài",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí khấu hao tài sản cố định",
+                "Chi phí nhân viên quản lý",
+                "Chi phí dịch vụ mua ngoài",
+                "Khác",
+                "TỔNG CỘNG",
+                "Chi phí làm logo của Công ty",
+                "Phí tư vấn pháp lý, môi giới bán hàng",
+                "Chi phí nhân viên bán hàng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: 1 Phải thu khách hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Công ty Cổ phần Đầu tư Sài Gòn (*)",
+                "- Công ty Cổ phần Dịch vụ Kinh Bắc (**)",
+                "Phải thu từ các khách hàng khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Công ty Cổ phần Đầu tư Sài Gòn (*)",
+                "- Công ty Cổ phần Dịch vụ Kinh Bắc (**)",
+                "Phải thu từ các khách hàng khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Ngày 31 tháng 12năm 2014 (đếđược trình bảytrước dây)",
+                "Ngày 31 tháng 12năm 2014 (trìnhbảy lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "135",
+                "136",
+                "155",
+                "215"
+              ],
+              "mục lục chỉ tiêu": [
+                "135",
+                "136",
+                "155",
+                "215",
+                "216",
+                "261",
+                "268",
+                "315",
+                "319",
+                "333",
+                "337",
+                "338",
+                "339",
+                "342"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 15: THUẾ VÀ CÁC KHOÀN PHẢI THU - PHẢI NỘP NHÀ NƯỚC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Số phải nộp trong năm",
+                "Số đã nộp/được khấu trừ trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế thu nhập doanh nghiệp(Thuyết minh số 26.2)",
+                "Thuế giả trị gia tăng",
+                "Thuế thu nhập cá nhân",
+                "Các loại thuế khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế thu nhập doanh nghiệp(Thuyết minh số 26.2)",
+                "Thuế giả trị gia tăng",
+                "Thuế thu nhập cá nhân",
+                "Các loại thuế khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: TIÊN VÀ CÁC KHOÀN TƯƠNG ĐƯƠNG TIÊN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng",
+                "Các khoản tương đương tiền (*)",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng",
+                "Các khoản tương đương tiền (*)",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Số cuối năm",
+                "Thuế thu nhập hoãn lại phải trảThuế thu nhập hoãn lại phát sinh liên quan đến việc phân bổ thuế TNDN theo thời gian đối với Khu công nghiệp Quế Võ mở rộng",
+                "546.591.822",
+                "Thu nhập thuế thu nhập hoãn lại tính vào kết quả kinh doanh riêng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số cuối năm",
+                "Thuế thu nhập hoãn lại phải trảThuế thu nhập hoãn lại phát sinh liên quan đến việc phân bổ thuế TNDN theo thời gian đối với Khu công nghiệp Quế Võ mở rộng",
+                "546.591.822",
+                "Thu nhập thuế thu nhập hoãn lại tính vào kết quả kinh doanh riêng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: 2 Người mua trả tiền trước ngăn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Khách hàng đất cọc mua nhà và quyền sử dụng đất khu đô thị Phúc Ninh",
+                "Ngân hàng TMCP Quốc dân đất cọc mua nhà và quyền sử dụng đất khu đô thị Phúc Ninh",
+                "Công ty Cổ phần Điện lực Khu vực 1 (*)",
+                "Các đối tượng khác",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Khách hàng đất cọc mua nhà và quyền sử dụng đất khu đô thị Phúc Ninh",
+                "Ngân hàng TMCP Quốc dân đất cọc mua nhà và quyền sử dụng đất khu đô thị Phúc Ninh",
+                "Công ty Cổ phần Điện lực Khu vực 1 (*)",
+                "Các đối tượng khác",
+                "TỔNG CỘNG"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: CHI PHÍ TÀI CHÍNH Don vị tính: VND Năm nay Năm trước"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay",
+                "Chi phí bảo lãnh trái phiếu",
+                "Dự phòng giảm giá các khoản đầu tư",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh",
+                "Phí lưu ký chứng khoán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay",
+                "Chi phí bảo lãnh trái phiếu",
+                "Dự phòng giảm giá các khoản đầu tư",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh",
+                "Phí lưu ký chứng khoán",
+                "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện",
+                "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Hải Phòng",
+                "Công ty nhận khoản trả nợ vay",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Bắc Giang",
+                "Cân trừ lãi trái phiếu, phí bảo lãnh trái phiếu với nợ vay",
+                "Công ty nhận nợ vay",
+                "Công ty TNHH Một thành viên Phát triển Đỏ thị Tràng Cát",
+                "Công ty phải thu lãi trái phiếu",
+                "Công ty nhận trả nợ vay"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Hải Phòng",
+                "Công ty nhận khoản trả nợ vay",
+                "Công ty nhận tiền vay",
+                "Công ty trả nợ vay",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Bắc Giang",
+                "Cân trừ lãi trái phiếu, phí bảo lãnh trái phiếu với nợ vay",
+                "Công ty nhận nợ vay",
+                "Công ty TNHH Một thành viên Phát triển Đỏ thị Tràng Cát",
+                "Công ty phải thu lãi trái phiếu",
+                "Công ty nhận trả nợ vay",
+                "Ông Đăng Thành Tâm",
+                "Công ty trả gốc vay dài hạn",
+                "Công ty tạm ứng",
+                "Công ty nhận hoàn ứng",
+                "Công ty Cổ phần Công nghệ Viễn thông Sài Gòn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và các khoản tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số 4)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và các khoản tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số 4)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 11: CHI PHÍ XÂY DỰNG CƠ BẢN DỞ DANG Số cuối năm Đơn vị tính: VND Số đầu năm"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự án Khách sạn Hoa Sen Hà Nội (*)",
+                "Khu ngoại giao đoàn Hà Nội (**)",
+                "Khu công nghiệp Quế Võ mở rộng",
+                "Khu công nghiệp Quế Võ hiện hữu",
+                "Nhà máy Nhiệt điện Bắc Giang",
+                "Dự án khác",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự án Khách sạn Hoa Sen Hà Nội (*)",
+                "Khu ngoại giao đoàn Hà Nội (**)",
+                "Khu công nghiệp Quế Võ mở rộng",
+                "Khu công nghiệp Quế Võ hiện hữu",
+                "Nhà máy Nhiệt điện Bắc Giang",
+                "Dự án khác",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: 3 Các giao dịch về vốn với các chủ sở hữu và phân phối cổ tức, lợi nhuận"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số đầu năm",
+                "Tăng vốn trong năm",
+                "Số cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số đầu năm",
+                "Tăng vốn trong năm",
+                "Số cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát (*)",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Bắc Giang (**)",
+                "Bà Nguyễn Thị Thu HươngÔng Phan Anh Dũng",
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát (*)",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Bắc Giang (**)",
+                "Bà Nguyễn Thị Thu HươngÔng Phan Anh Dũng",
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 25: CHI PHÍ SẢN XUÁT, KINH DOANH THEO YẾU TỐ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí phát triển đất, xây dựng và cơ sở hạ tầng,nhà xưởng và cung cấp dịch vụ",
+                "Chi phí nhân công",
+                "Chi phí khấu hao tài sản cố định",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí khác",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí phát triển đất, xây dựng và cơ sở hạ tầng,nhà xưởng và cung cấp dịch vụ",
+                "Chi phí nhân công",
+                "Chi phí khấu hao tài sản cố định",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí khác",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 19: TRÁI PHIÉU CHUYÊN ĐỐI"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm(Trình bày lại)",
+                "Thay đổi trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu chuyển đổi (*)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu chuyển đổi (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: TÀI SẢN CÓ ĐỊNH HỮU HÌNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số đầu năm",
+                "Mua trong năm",
+                "Đầu tư xây dựng cơ bản hoàn thành",
+                "Số cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số đầu năm",
+                "Mua trong năm",
+                "Đầu tư xây dựng cơ bản hoàn thành",
+                "Số cuối năm",
+                "Đã khấu hao hết",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 13: CÁC KHOẢN ĐẦU TƯ TÀI CHÍNH DÀI HẠN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đầu tư vào công ty con",
+                "Đầu tư vào các công ty liên kết",
+                "Đầu tư dài hạn khác",
+                "Dự phòng giảm giá đầu tư dài hạn",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đầu tư vào công ty con",
+                "Đầu tư vào các công ty liên kết",
+                "Đầu tư dài hạn khác",
+                "Dự phòng giảm giá đầu tư dài hạn",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 13: 2 Đầu tư vào các công ty liên kết"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phầnCông nghệ Viễn thôngSải Gòn",
+                "Công ty Cổ phần Đầu tư Sài Gòn – HuếDầu tư Phát triển Khu",
+                "Công nghệ cao Sài GònCông ty Cổ phầnScanviwood",
+                "(iv)",
+                "TỔNG CỘNG",
+                "Dư phòng giảm giáđầu tư vào công tyliên kết",
+                "GIÁ TRỊ THUÀN"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phầnCông nghệ Viễn thôngSải Gòn",
+                "Công ty Cổ phần Đầu tư Sài Gòn – HuếDầu tư Phát triển Khu",
+                "Công nghệ cao Sài GònCông ty Cổ phầnScanviwood",
+                "(iv)",
+                "TỔNG CỘNG",
+                "Dư phòng giảm giáđầu tư vào công tyliên kết",
+                "GIÁ TRỊ THUÀN"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: HÀNG TÔN KHO"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự án Khu Đô thị Phúc Ninh",
+                "Dự án Khu công nghiệp Nam Sơn - Hạp Lĩnh",
+                "Dự án Khu công nghiệp Quế Võ hiện hữu",
+                "Dự án Khu công nghiệp Quế Võ mở rộng",
+                "Dự án Khu nhà thu nhập thấp",
+                "Các dự án khác",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự án Khu Đô thị Phúc Ninh",
+                "Dự án Khu công nghiệp Nam Sơn - Hạp Lĩnh",
+                "Dự án Khu công nghiệp Quế Võ hiện hữu",
+                "Dự án Khu công nghiệp Quế Võ mở rộng",
+                "Dự án Khu nhà thu nhập thấp",
+                "Các dự án khác",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bà Nguyễn Chung Thúy",
+                "Bà Lê Thị Thu Hằng",
+                "Ông Phan Anh Tuán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bà Nguyễn Chung Thúy",
+                "Bà Lê Thị Thu Hằng",
+                "Ông Phan Anh Tuán"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế Điều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                "(576.935.843) (mã chỉ tiêu 04; tham chiếu Thuyết minh số 3.588.622.690)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                "Chi phí lãi vay (mã chỉ tiêu 06; tham chiếu Thuyết minh số 23)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Tăng các khoản phải thu (mã chỉ tiêu 09)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế Điều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                "Khẩu hao tài sản cố định hữu hình (mã chỉ tiêu 02)",
+                "Các khoản dự phòng (Lãi)/lỗ chênh lệch tỷ giả hối đoái do đánh giá lại các khoản mục tiên tệ cố gốc ngoại tệ (mã chỉ tiêu 03; tham chiếu Thuyết minh số 21.2.23)",
+                "(576.935.843) (mã chỉ tiêu 04; tham chiếu Thuyết minh số 3.588.622.690)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                "Chi phí lãi vay (mã chỉ tiêu 06; tham chiếu Thuyết minh số 23)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Tăng các khoản phải thu (mã chỉ tiêu 09)",
+                "(Tăng)/giám hàng tồn kho (Giảm)/tăng các khoản phải trả (không kế lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp) (mã chỉ tiêu 10)",
+                "Tăng chi phí trả trước (mã chỉ tiêu 12)",
+                "Tiền lãi vay đã trả (mã chỉ tiêu 14)",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Tiền chi để mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền chi cho vay, mua các công cụ nợ của các đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền thu lãi cho vay, cố tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250; tham chiếu Thuyết minh số 13)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 13.3)",
+                "Dự phòng đầu tư tài chính dài hạn (mã chỉ tiêu 254)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 11)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250; tham chiếu Thuyết minh số 13)",
+                "Đầu tư vào công ty con (mã chỉ tiêu 251; tham chiếu Thuyết minh số 13.1)",
+                "Đầu tư vào các công ty liên doanh, liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 13.2)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 13.3)",
+                "Dự phòng đầu tư tài chính dài hạn (mã chỉ tiêu 254)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn của khách hàng (mã chỉ tiêu 211; tham chiếu Thuyết minh số 6.1)",
+                "Phải thu về cho vay dài hạn (mã chỉ tiêu 215; tham chiếu Thuyết minh số 7)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 8)",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 10)",
+                "Nguyên giả (mã chỉ tiêu 222)",
+                "Giá trị khấu hao lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227)",
+                "Nguyên giả (mã chỉ tiêu 228)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 11)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250; tham chiếu Thuyết minh số 13)",
+                "Đầu tư vào công ty con (mã chỉ tiêu 251; tham chiếu Thuyết minh số 13.1)",
+                "Đầu tư vào các công ty liên doanh, liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 13.2)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 13.3)",
+                "Dự phòng đầu tư tài chính dài hạn (mã chỉ tiêu 254)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261)",
+                "TỔNG CỘNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 14.1)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 15)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 16)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 14.1)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số 14.2)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 15)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 16)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 17)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 18)",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số 16)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337; tham chiếu Thuyết minh số 17)",
+                "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 18)",
+                "Trải phiếu chuyển đổi (mã chỉ tiêu 339; tham chiếu Thuyết minh số 19)",
+                "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số 26.3)",
+                "Dự phòng phải trả dài hạn (mã chỉ tiêu 342)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 20)",
+                "Vốn cổ phần (mã chỉ tiêu 411)",
+                "- Cổ phiếu cổ đông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Cổ phiếu quỹ (mã chỉ tiêu 415)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "- Lợi nhuận sau thuế chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                "- Lợi nhuận sau thuế chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                "TỔNG CỘNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: 2 Chi tiết vốn đầu tư của chủ sở hữu"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn góp của cổ đông",
+                "Thắng dư vốn cổ phần",
+                "Cổ phiếu quỹ",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn góp của cổ đông",
+                "Thắng dư vốn cổ phần",
+                "Cổ phiếu quỹ",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Trường hợp doanh thu được phân bổ trong thời hạn thuê đất",
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 410.905.086.146)",
+                "Trong đó:",
+                "Doanh thu cho thuê đất và cơ sở hạ tầng (*) (mã chỉ tiêu 125.890.401.298)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trường hợp doanh thu được phân bổ trong thời hạn thuê đất",
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 410.905.086.146)",
+                "Trong đó:",
+                "Doanh thu cho thuê đất và cơ sở hạ tầng (*) (mã chỉ tiêu 125.890.401.298)",
+                "Giá vốn hàng bán và dịch vụ cung cấp (mã chỉ tiêu (140.177.369.285))",
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 270.727.716.861)",
+                "Tổng lợi nhuận kế toán trước thuế (mã chỉ tiêu 477.087.481.552)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu (88.825.088.158))",
+                "Thu nhập/(chi phí) thuế TNDN hoãn lại (mã chỉ tiêu 208.060.250)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 388.470.453.644)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 17: PHẢI TRẢ KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả khác cho các bên liên quan(Thuyết minh số 27)",
+                "Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc",
+                "Công ty Cổ phần Đầu tư Sài Gòn",
+                "Phải trả khác",
+                "Hợp tác đầu tư khu đô thị Phúc Ninh (i)",
+                "Các khoản đặt cọc khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả khác cho các bên liên quan(Thuyết minh số 27)",
+                "Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc",
+                "Công ty Cổ phần Đầu tư Sài Gòn",
+                "Phải trả khác",
+                "Hợp tác đầu tư khu đô thị Phúc Ninh (i)",
+                "Các khoản đặt cọc khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: 1 Các khoản vay ngân hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Kỳ hạn trả gốc và lãi"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng TMCP Công thương Việt Nam – Chi nhánh Quế Võ",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng TMCP Công thương Việt Nam – Chi nhánh Quế Võ",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: 2 Trà trước cho người bán"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Đơn vị tính: VND Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc (i)",
+                "- Công ty TNHH Foster and Partners (ii)",
+                "Trả trước khác",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc (i)",
+                "- Công ty TNHH Foster and Partners (ii)",
+                "Trả trước khác",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: 2 Trái phiếu phát hành"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Lãi suất %/năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "KBC Bond 001",
+                "Chi phí bảo lãnh phát hành trái phiếu KBC Bond 001",
+                "KBC Bond 004",
+                "KBC Bond 005",
+                "KBC Bond 006",
+                "KBC Bond 007",
+                "TỔNG CỘNG",
+                "Trong đó:Trái phiếu phải thanh toán trong năm tới"
+              ],
+              "mục lục chỉ tiêu": [
+                "KBC Bond 001",
+                "Chi phí bảo lãnh phát hành trái phiếu KBC Bond 001",
+                "KBC Bond 004",
+                "KBC Bond 005",
+                "KBC Bond 006",
+                "KBC Bond 007",
+                "TỔNG CỘNG",
+                "Trong đó:Trái phiếu phải thanh toán trong năm tới"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: CÁC KHOÁN ĐẦU TƯ TÀI CHÍNH NGẮN HẠN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Ngày 31 tháng 12 năm 2015",
+                "Ngày 31 tháng 12 năm 2014"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chứng khoản kinh doanh:Cổ phiếu (*)",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chứng khoản kinh doanh:Cổ phiếu (*)",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Số dư đầu năm (mã chỉ tiêu 33.695.676.882)",
+                "- Tăng vốn (mã chỉ tiêu -)",
+                "- Lợi nhuận thuần trong năm (mã chỉ tiêu 192.586.723.671)",
+                "Số dư cuối năm (mã chỉ tiêu 226.282.400.553)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm (mã chỉ tiêu 33.695.676.882)",
+                "- Tăng vốn (mã chỉ tiêu -)",
+                "- Lợi nhuận thuần trong năm (mã chỉ tiêu 192.586.723.671)",
+                "Số dư cuối năm (mã chỉ tiêu 226.282.400.553)",
+                "Năm nay:",
+                "Số dư đầu năm (mã chỉ tiêu 226.282.400.553)",
+                "- Tăng vốn (*) (mã chỉ tiêu -)",
+                "- Lợi nhuận thuần trong năm (mã chỉ tiêu 388.470.453.644)",
+                "Số dư cuối năm (mã chỉ tiêu 614.752.854.197)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: PHÁI THU KHÁC VÊ CHO VAY"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Công ty Cổ phần khu công nghiệp Sài Gòn - Tây Ninh (*)",
+                "- Công ty Cổ phần Du lịch Sài Gòn",
+                "- Công ty Cổ phần Sản xuất Thương mại Sài Gòn",
+                "Phải thu từ các bên liên quan(Thuyết minh số 27)",
+                "- Công ty Cổ phần Dịch vụ Kinh Bắc"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Công ty Cổ phần khu công nghiệp Sài Gòn - Tây Ninh (*)",
+                "- Công ty Cổ phần Du lịch Sài Gòn",
+                "- Công ty Cổ phần Sản xuất Thương mại Sài Gòn",
+                "Phải thu từ các bên liên quan(Thuyết minh số 27)",
+                "- Công ty Cổ phần Dịch vụ Kinh Bắc",
+                "- Công ty Cổ phần Tư vấn và Đầu tư Kinh Bắc (**)",
+                "Ban quản lý dự án xây dựng thành phố Bắc Ninh (UBND thành phố Bắc Ninh)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: 3 Dự phòng các khoản phải thu"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Trích lập trong năm",
+                "Hoàn nhập trong năm",
+                "Giảm khác",
+                "Số dư cuối năm",
+                "Dự phòng phải thu khách hàng ngắn hạn khó đôi",
+                "Dự phòng phải thu về cho vay khó đôi",
+                "Dự phòng phải thu khác khó đôi"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Trích lập trong năm",
+                "Hoàn nhập trong năm",
+                "Giảm khác",
+                "Số dư cuối năm",
+                "Dự phòng phải thu khách hàng ngắn hạn khó đôi",
+                "Dự phòng phải thu về cho vay khó đôi",
+                "Dự phòng phải thu khác khó đôi"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                " (mã chỉ tiêu 23)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 24)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01; tham chiếu Thuyết minh số 21.1)",
+                "Các khoản giảm trừ doanh thu (mã chỉ tiêu 02; tham chiếu Thuyết minh số 21.1)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số 21.1)",
+                "Giá vốn hàng bán và dịch vụ cung cấp (mã chỉ tiêu 11; tham chiếu Thuyết minh số 22)",
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                "Chi phí bán hàng (mã chỉ tiêu 25; tham chiếu Thuyết minh số 24)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 24)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31)",
+                "Chi phí khác (mã chỉ tiêu 32)",
+                "(Lỗ)/lợi nhuận khác (mã chỉ tiêu 40)",
+                "Tổng lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 26.1)",
+                "Thu nhập thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 26.3)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120; tham chiếu Thuyết minh số 5)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN NGĂN HẠN (mã chỉ tiêu 100)",
+                "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 4)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120; tham chiếu Thuyết minh số 5)",
+                "Chứng khoán kinh doanh (mã chỉ tiêu 121)",
+                "Hàng tồn kho (mã chỉ tiêu 141)",
+                "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                "Thuế giả trị gia tăng được khấu trừ (mã chỉ tiêu 152)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN NGĂN HẠN (mã chỉ tiêu 100)",
+                "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 4)",
+                "Tiền (mã chỉ tiêu 111)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120; tham chiếu Thuyết minh số 5)",
+                "Chứng khoán kinh doanh (mã chỉ tiêu 121)",
+                "Dự phòng giảm giá chứng khoán kinh doanh (mã chỉ tiêu 122)",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6.1)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 6.2)",
+                "Phải thu về cho vay ngắn hạn (mã chỉ tiêu 135; tham chiếu Thuyết minh số 7)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 8)",
+                "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 6.3)",
+                "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 9)",
+                "Hàng tồn kho (mã chỉ tiêu 141)",
+                "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                "Thuế giả trị gia tăng được khấu trừ (mã chỉ tiêu 152)",
+                "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 15)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền chi khác cho hoạt động kinh doanh (mã chỉ tiêu 16)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Giảm các khoản phải thu (mã chỉ tiêu 09)",
+                "Tiền chi khác cho hoạt động kinh doanh (mã chỉ tiêu 16)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giảm các khoản phải thu (mã chỉ tiêu 09)",
+                "Tiền chi khác cho hoạt động kinh doanh (mã chỉ tiêu 16)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: 1 Doanh thu bán hàng và cung cấp dịch vụ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tổng doanh thu",
+                "Doanh thu cho thuê đất và cơ sở hạ tầng (*)",
+                "Doanh thu bán nhà xuống",
+                "Doanh thu cho thuê kho, nhà xuống và văn phỏng",
+                "Doanh thu cung cấp nước sach, điện, phí dịch vụ, xử lý nước thải",
+                "Doanh thu thuần"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tổng doanh thu",
+                "Doanh thu cho thuê đất và cơ sở hạ tầng (*)",
+                "Doanh thu bán nhà xuống",
+                "Doanh thu cho thuê kho, nhà xuống và văn phỏng",
+                "Doanh thu cung cấp nước sach, điện, phí dịch vụ, xử lý nước thải",
+                "Doanh thu thuần"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 26: 1 Chi phí thuế TNDN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí thuế TNDN hiện hành",
+                "Thu nhập thuế TNDN hoãn lại",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí thuế TNDN hiện hành",
+                "Thu nhập thuế TNDN hoãn lại",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Hải Phòng",
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát (**)",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Bắc Giang (*)",
+                "Ông Đặng Thành Tâm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Hải Phòng",
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát (**)",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn – Bắc Giang (*)",
+                "Ông Đặng Thành Tâm",
+                "Bà Nguyễn Thị Thu Hương",
+                "Ông Phan Anh Dũng",
+                "Công ty TNHH Một Thành viên Phát triển Đồ thị Tràng Cát",
+                "Công ty Cổ phần Công nghệ Viễn thông Sài Gòn – Chi nhánh Bắc Ninh",
+                "Công ty Cổ phần Đầu tư và Phát triển hạ tầng Khu công nghệ cao Sài Gòn",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Bắc Giang",
+                "Công ty Cổ phần Đầu tư Sài Gòn - Đà Nẵng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cho thuê dài hạnđất có cơ sở hátàng",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cho thuê dài hạnđất có cơ sở hátàng",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: 5 Cổ phiếu phổ thông"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đăng ký phát hành",
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Cổ phiếu quỹ",
+                "Cổ phiếu đang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đăng ký phát hành",
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Cổ phiếu quỹ",
+                "Cổ phiếu đang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: 7 Khấu hao và hao mòn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "8 – 25 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Máy móc, thiết bị",
+                "Phương tiện vận tải",
+                "Thiết bị văn phòng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Máy móc, thiết bị",
+                "Phương tiện vận tải",
+                "Thiết bị văn phòng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Khu Công nghiệp Sài Gòn- Hải Phòng",
+                "Công ty Cổ phần Đầu tư và Phát triển hạ tầng Khu công nghệ cao Sài Gòn",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Bắc Giang"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Khu Công nghiệp Sài Gòn- Hải Phòng",
+                "Công ty Cổ phần Đầu tư và Phát triển hạ tầng Khu công nghệ cao Sài Gòn",
+                "Công ty Cổ phần Khu công nghiệp Sài Gòn - Bắc Giang",
+                "Công ty Cổ phần Khu Công nghiệp Sài Gòn- Hải Phòng (i)",
+                "Công ty Cổ phần Đầu tư và Phát triển hạ tầng Khu công nghệ cao Sài Gòn (iii)",
+                "Công ty Cổ phần Đầu tư Sài Gòn - Đả Năng (iv)",
+                "Công ty Cổ phần Khu Công nghiệp Sài Gòn- Hải Phòng (ii)",
+                "Đặng Thành Tâm (v)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Có thể chuyển lỗ đến năm",
+                "Đã chuyển lỗ đến ngày 31/12/2015",
+                "Chưa chuyển lỗ tại ngày 31/12/2015"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "TỔNG CỘNG"
+              ],
+              "mục lục chỉ tiêu": [
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "TỔNG CỘNG"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c13"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c13"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c10",
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c10",
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03"
+          ]
+        },
+        "nominated_keys": [
+          "c03"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c08"
+          ]
+        },
+        "nominated_keys": [
+          "c08"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c03",
+      "c08",
+      "c10",
+      "c02",
+      "c13"
+    ],
+    "lexical_finalist_keys": [
+      "c10",
+      "c03",
+      "c08"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c03",
+      "c08",
+      "c10",
+      "c02",
+      "c13"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Tính lãi ròng từ hoạt động tài chính của công ty mẹ KBC năm 2015 theo đơn vị tỷ đồng.",
+      "giới hạn số bảng": 6,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "KBC",
+          "tên doanh nghiệp": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "năm": 2015,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "KBC",
+          "tên doanh nghiệp": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+          "năm": 2015,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 21: 2 Doanh thu hoạt động tài chính Năm nay Đơn vị tính: VND Năm trước"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                  "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                  "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)"
+                ],
+                "kỳ số liệu": [
+                  "Năm nay"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                  "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)",
+                  "Lãi tiền gửi ngân hàng",
+                  "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                  "Lãi chênh lệch tỷ giá hối đoái chưa thực hiện",
+                  "TỔNG CỘNG"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lãi từ chuyển nhượng các khoản đầu tư tài chính (*)",
+                  "Tiền lãi từ các khoản phải thu của hợp đồng cho thuê đất và nhà xưởng (**)",
+                  "Lãi tiền gửi ngân hàng",
+                  "Lãi từ mua bán chứng khoán và hoạt động tài chính",
+                  "Lãi chênh lệch tỷ giá hối đoái chưa thực hiện",
+                  "TỔNG CỘNG"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "báo cáo lưu chuyển tiền tệ",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                  "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                  "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                  "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                  "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                  "Lợi nhuận trước thuế Điều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                  "(576.935.843) (mã chỉ tiêu 04; tham chiếu Thuyết minh số 3.588.622.690)",
+                  "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                  "Chi phí lãi vay (mã chỉ tiêu 06; tham chiếu Thuyết minh số 23)",
+                  "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                  "Tăng các khoản phải thu (mã chỉ tiêu 09)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                  "Lợi nhuận trước thuế Điều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                  "Khẩu hao tài sản cố định hữu hình (mã chỉ tiêu 02)",
+                  "Các khoản dự phòng (Lãi)/lỗ chênh lệch tỷ giả hối đoái do đánh giá lại các khoản mục tiên tệ cố gốc ngoại tệ (mã chỉ tiêu 03; tham chiếu Thuyết minh số 21.2.23)",
+                  "(576.935.843) (mã chỉ tiêu 04; tham chiếu Thuyết minh số 3.588.622.690)",
+                  "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05; tham chiếu Thuyết minh số 21.2)",
+                  "Chi phí lãi vay (mã chỉ tiêu 06; tham chiếu Thuyết minh số 23)",
+                  "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                  "Tăng các khoản phải thu (mã chỉ tiêu 09)",
+                  "(Tăng)/giám hàng tồn kho (Giảm)/tăng các khoản phải trả (không kế lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp) (mã chỉ tiêu 10)",
+                  "Tăng chi phí trả trước (mã chỉ tiêu 12)",
+                  "Tiền lãi vay đã trả (mã chỉ tiêu 14)",
+                  "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                  "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                  "Tiền chi để mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                  "Tiền chi cho vay, mua các công cụ nợ của các đơn vị khác (mã chỉ tiêu 23)",
+                  "Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                  "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                  "Tiền thu hồi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                  "Tiền thu lãi cho vay, cố tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                  "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "báo cáo kết quả kinh doanh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                  "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                  "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                  "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                  "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                  " (mã chỉ tiêu 23)",
+                  "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 24)",
+                  "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                  "Thu nhập khác (mã chỉ tiêu 31)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01; tham chiếu Thuyết minh số 21.1)",
+                  "Các khoản giảm trừ doanh thu (mã chỉ tiêu 02; tham chiếu Thuyết minh số 21.1)",
+                  "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số 21.1)",
+                  "Giá vốn hàng bán và dịch vụ cung cấp (mã chỉ tiêu 11; tham chiếu Thuyết minh số 22)",
+                  "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                  "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 21.2)",
+                  "Chi phí tài chính Trong đó: Chi phí lãi vay (mã chỉ tiêu 22; tham chiếu Thuyết minh số 23)",
+                  "Chi phí bán hàng (mã chỉ tiêu 25; tham chiếu Thuyết minh số 24)",
+                  "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 24)",
+                  "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                  "Thu nhập khác (mã chỉ tiêu 31)",
+                  "Chi phí khác (mã chỉ tiêu 32)",
+                  "(Lỗ)/lợi nhuận khác (mã chỉ tiêu 40)",
+                  "Tổng lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                  "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 26.1)",
+                  "Thu nhập thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 26.3)",
+                  "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c10",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "báo cáo lưu chuyển tiền tệ",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                  "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                  "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                  "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                  "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)",
+                  "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                  "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                  "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                  "Tiền và các khoản tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số 4)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "LƯU CHUYẾN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                  "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                  "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                  "Lưu chuyển tiền thuần sử dụng vào hoạt động tài chính (mã chỉ tiêu 40)",
+                  "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                  "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                  "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                  "Tiền và các khoản tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số 4)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 23: CHI PHÍ TÀI CHÍNH Don vị tính: VND Năm nay Năm trước"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí lãi vay",
+                  "Chi phí bảo lãnh trái phiếu",
+                  "Dự phòng giảm giá các khoản đầu tư",
+                  "Lỗ từ thanh lý các khoản đầu tư",
+                  "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh",
+                  "Phí lưu ký chứng khoán"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí lãi vay",
+                  "Chi phí bảo lãnh trái phiếu",
+                  "Dự phòng giảm giá các khoản đầu tư",
+                  "Lỗ từ thanh lý các khoản đầu tư",
+                  "Chi phí lãi phát sinh từ khoản đặt cọc mua nhà khuđô thị Phúc Ninh",
+                  "Phí lưu ký chứng khoán",
+                  "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện",
+                  "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                  "TỔNG CỘNG"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "KBC — Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP — năm 2015 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 16: CHI PHÍ PHÀI TRÀ"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Số cuối năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí phát triển cơ sở hạ tầng trích trước đối với phần doanh thu đã được ghi nhận",
+                  "- Khu công nghiệp Quế Võ hiện hữu",
+                  "- Khu công nghiệp Quế Võ mở rộng",
+                  "Chi phí lãi vay phải trả",
+                  "Chi phí phát hành trải phiếu chuyển đổi",
+                  "Chi phí lãi vay phải trả (*)",
+                  "Chi phí phải trả bên liên quan (Thuyết minh số 27)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí phát triển cơ sở hạ tầng trích trước đối với phần doanh thu đã được ghi nhận",
+                  "- Khu công nghiệp Quế Võ hiện hữu",
+                  "- Khu công nghiệp Quế Võ mở rộng",
+                  "Chi phí lãi vay phải trả",
+                  "Chi phí phát hành trải phiếu chuyển đổi",
+                  "Chi phí phải trả bên liên quan (Thuyết minh số 27)",
+                  "Các chi phí phải trả khác",
+                  "Chi phí lãi vay phải trả (*)"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k21",
+              "nội dung": "Doanh thu hoạt động tài chính",
+              "vai trò": "trực tiếp"
+            },
+            {
+              "mã chỉ tiêu": "b01_k22",
+              "nội dung": "Chi phí lãi vay",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c08",
+          "đáp ứng chỉ tiêu": [
+            "b01_k21",
+            "b01_k22"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k21",
+            "description": "Doanh thu hoạt động tài chính",
+            "role": "trực tiếp"
+          },
+          {
+            "concept_key": "b01_k22",
+            "description": "Chi phí lãi vay",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c08"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c08"
+    ],
+    "output_cap": 6
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "KBC_financial_statements_2015_separate_table_8",
+      "metadata": {
+        "table_id": "KBC_financial_statements_2015_separate_table_8",
+        "doc_id": "KBC_financial_statements_2015_separate",
+        "ticker": "KBC",
+        "company_name": "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2015,
+        "start_line": 268
+      },
+      "rrf_score": 0.027912386121341344,
+      "dense_rank": 8,
+      "dense_score": 0.8402595,
+      "bm25_rank": 17,
+      "bm25_score": 4.250463663991389,
+      "retrieval_score": 0.027912386121341344,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 18,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "code": "01",
+            "note_ref": "21.1",
+            "label": "Doanh thu bán hàng và cung cấp dịch vụ"
+          },
+          {
+            "row": 3,
+            "code": "02",
+            "note_ref": "21.1",
+            "label": "Các khoản giảm trừ doanh thu"
+          },
+          {
+            "row": 4,
+            "code": "10",
+            "note_ref": "21.1",
+            "label": "Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+          },
+          {
+            "row": 5,
+            "code": "11",
+            "note_ref": "22",
+            "label": "Giá vốn hàng bán và dịch vụ cung cấp"
+          },
+          {
+            "row": 6,
+            "code": "20",
+            "label": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+          },
+          {
+            "row": 7,
+            "code": "21",
+            "note_ref": "21.2",
+            "label": "Doanh thu hoạt động tài chính"
+          },
+          {
+            "row": 8,
+            "code": "22",
+            "note_ref": "23",
+            "label": "Chi phí tài chính Trong đó: Chi phí lãi vay"
+          },
+          {
+            "row": 10,
+            "code": "25",
+            "note_ref": "24",
+            "label": "Chi phí bán hàng"
+          },
+          {
+            "row": 11,
+            "code": "26",
+            "note_ref": "24",
+            "label": "Chi phí quản lý doanh nghiệp"
+          },
+          {
+            "row": 12,
+            "code": "30",
+            "label": "Lợi nhuận thuần từ hoạt động kinh doanh"
+          },
+          {
+            "row": 13,
+            "code": "31",
+            "label": "Thu nhập khác"
+          },
+          {
+            "row": 14,
+            "code": "32",
+            "label": "Chi phí khác"
+          },
+          {
+            "row": 15,
+            "code": "40",
+            "label": "(Lỗ)/lợi nhuận khác"
+          },
+          {
+            "row": 16,
+            "code": "50",
+            "label": "Tổng lợi nhuận kế toán trước thuế"
+          },
+          {
+            "row": 17,
+            "code": "51",
+            "note_ref": "26.1",
+            "label": "Chi phí thuế TNDN hiện hành"
+          },
+          {
+            "row": 18,
+            "code": "52",
+            "note_ref": "26.3",
+            "label": "Thu nhập thuế TNDN hoãn lại"
+          },
+          {
+            "row": 19,
+            "code": "60",
+            "label": "Lợi nhuận sau thuế TNDN"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 6,
+            "code": "20",
+            "label": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+          },
+          {
+            "row": 7,
+            "code": "21",
+            "note_ref": "21.2",
+            "label": "Doanh thu hoạt động tài chính"
+          },
+          {
+            "row": 8,
+            "code": "22",
+            "note_ref": "23",
+            "label": "Chi phí tài chính Trong đó: Chi phí lãi vay"
+          },
+          {
+            "row": 9,
+            "code": "23",
+            "label": ""
+          },
+          {
+            "row": 11,
+            "code": "26",
+            "note_ref": "24",
+            "label": "Chi phí quản lý doanh nghiệp"
+          },
+          {
+            "row": 12,
+            "code": "30",
+            "label": "Lợi nhuận thuần từ hoạt động kinh doanh"
+          },
+          {
+            "row": 13,
+            "code": "31",
+            "label": "Thu nhập khác"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "KBC_financial_statements_2015_separate"
+      ],
+      "tables": [
+        "KBC_financial_statements_2015_separate|1332",
+        "KBC_financial_statements_2015_separate|1359",
+        "KBC_financial_statements_2015_separate|299",
+        "KBC_financial_statements_2015_separate|882",
+        "KBC_financial_statements_2015_separate|1573",
+        "KBC_financial_statements_2015_separate|1485",
+        "KBC_financial_statements_2015_separate|224",
+        "KBC_financial_statements_2015_separate|268",
+        "KBC_financial_statements_2015_separate|1340",
+        "KBC_financial_statements_2015_separate|314",
+        "KBC_financial_statements_2015_separate|239",
+        "KBC_financial_statements_2015_separate|209",
+        "KBC_financial_statements_2015_separate|1135",
+        "KBC_financial_statements_2015_separate|980",
+        "KBC_financial_statements_2015_separate|1278",
+        "KBC_financial_statements_2015_separate|1641",
+        "KBC_financial_statements_2015_separate|918",
+        "KBC_financial_statements_2015_separate|1282",
+        "KBC_financial_statements_2015_separate|1315",
+        "KBC_financial_statements_2015_separate|1311",
+        "KBC_financial_statements_2015_separate|833",
+        "KBC_financial_statements_2015_separate|1502",
+        "KBC_financial_statements_2015_separate|1154",
+        "KBC_financial_statements_2015_separate|1394",
+        "KBC_financial_statements_2015_separate|1363",
+        "KBC_financial_statements_2015_separate|1367",
+        "KBC_financial_statements_2015_separate|1179",
+        "KBC_financial_statements_2015_separate|1550",
+        "KBC_financial_statements_2015_separate|847",
+        "KBC_financial_statements_2015_separate|1217",
+        "KBC_financial_statements_2015_separate|872",
+        "KBC_financial_statements_2015_separate|1344",
+        "KBC_financial_statements_2015_separate|1637",
+        "KBC_financial_statements_2015_separate|965",
+        "KBC_financial_statements_2015_separate|1200",
+        "KBC_financial_statements_2015_separate|1290",
+        "KBC_financial_statements_2015_separate|1131",
+        "KBC_financial_statements_2015_separate|992",
+        "KBC_financial_statements_2015_separate|839",
+        "KBC_financial_statements_2015_separate|493",
+        "KBC_financial_statements_2015_separate|812",
+        "KBC_financial_statements_2015_separate|1017",
+        "KBC_financial_statements_2015_separate|1257",
+        "KBC_financial_statements_2015_separate|1523",
+        "KBC_financial_statements_2015_separate|1438",
+        "KBC_financial_statements_2015_separate|947",
+        "KBC_financial_statements_2015_separate|899",
+        "KBC_financial_statements_2015_separate|1448",
+        "KBC_financial_statements_2015_separate|1114",
+        "KBC_financial_statements_2015_separate|50"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "KBC_financial_statements_2015_separate"
+      ],
+      "tables": [
+        "KBC_financial_statements_2015_separate|1332",
+        "KBC_financial_statements_2015_separate|299",
+        "KBC_financial_statements_2015_separate|268",
+        "KBC_financial_statements_2015_separate|314",
+        "KBC_financial_statements_2015_separate|1359",
+        "KBC_financial_statements_2015_separate|1135"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "KBC_financial_statements_2015_separate"
+      ],
+      "tables": [
+        "KBC_financial_statements_2015_separate|1332",
+        "KBC_financial_statements_2015_separate|299",
+        "KBC_financial_statements_2015_separate|268",
+        "KBC_financial_statements_2015_separate|314",
+        "KBC_financial_statements_2015_separate|1359",
+        "KBC_financial_statements_2015_separate|1135"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "KBC_financial_statements_2015_separate"
+      ],
+      "tables": [
+        "KBC_financial_statements_2015_separate|268"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "KBC_financial_statements_2015_separate"
+      ],
+      "tables": [
+        "KBC_financial_statements_2015_separate|268"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f2": 0.5,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f2": 0.5,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "KBC_financial_statements_2015_separate|268",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

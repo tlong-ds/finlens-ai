@@ -1,0 +1,4292 @@
+{
+  "schema_version": 2,
+  "id": 122,
+  "question": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+  "started_at": "2026-08-23T09:27:39+00:00",
+  "finished_at": "2026-08-23T09:28:00+00:00",
+  "duration_seconds": 21.415800096998282,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/122.json",
+  "golden": {
+    "id": 122,
+    "question": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+    "relevant_docs": [
+      "HHV_financial_statements_2022_consolidated"
+    ],
+    "relevant_tables": [
+      "HHV_financial_statements_2022_consolidated|1521"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_5",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_5",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 286
+      },
+      "rrf_score": 0.03200204813108039,
+      "dense_rank": 1,
+      "dense_score": 0.8570001,
+      "bm25_rank": 2,
+      "bm25_score": 12.494575618085545,
+      "retrieval_score": 0.03200204813108039,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_7",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_7",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 329
+      },
+      "rrf_score": 0.030330882352941176,
+      "dense_rank": 2,
+      "dense_score": 0.8436518,
+      "bm25_rank": 8,
+      "bm25_score": 9.136137566673153,
+      "retrieval_score": 0.030330882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_81",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_81",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2598
+      },
+      "rrf_score": 0.030017921146953404,
+      "dense_rank": 3,
+      "dense_score": 0.86029303,
+      "bm25_rank": 12,
+      "bm25_score": 7.860967613813777,
+      "retrieval_score": 0.030017921146953404,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_79",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_79",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2496
+      },
+      "rrf_score": 0.02976190476190476,
+      "dense_rank": 4,
+      "dense_score": 0.827781,
+      "bm25_rank": 3,
+      "bm25_score": 10.078296889305822,
+      "retrieval_score": 0.02976190476190476,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_61",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_61",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2219
+      },
+      "rrf_score": 0.029083245521601686,
+      "dense_rank": 5,
+      "dense_score": 0.8268252,
+      "bm25_rank": 5,
+      "bm25_score": 9.958719222390643,
+      "retrieval_score": 0.029083245521601686,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_38",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_38",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1866
+      },
+      "rrf_score": 0.028006267136701922,
+      "dense_rank": 6,
+      "dense_score": 0.832728,
+      "bm25_rank": 14,
+      "bm25_score": 7.493784575239015,
+      "retrieval_score": 0.028006267136701922,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_74",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_74",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2385
+      },
+      "rrf_score": 0.028006267136701922,
+      "dense_rank": 7,
+      "dense_score": 0.8267231,
+      "bm25_rank": 9,
+      "bm25_score": 9.104205402257275,
+      "retrieval_score": 0.028006267136701922,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_11",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_11",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 421
+      },
+      "rrf_score": 0.027205882352941177,
+      "dense_rank": 8,
+      "dense_score": 0.83481836,
+      "bm25_rank": 20,
+      "bm25_score": 6.322349591274676,
+      "retrieval_score": 0.027205882352941177,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_18",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_18",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1481
+      },
+      "rrf_score": 0.026021080368906456,
+      "dense_rank": 9,
+      "dense_score": 0.83658326,
+      "bm25_rank": 32,
+      "bm25_score": 3.5014125949637718,
+      "retrieval_score": 0.026021080368906456,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_85",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_85",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2903
+      },
+      "rrf_score": 0.025989268947015427,
+      "dense_rank": 10,
+      "dense_score": 0.81458104,
+      "bm25_rank": 11,
+      "bm25_score": 8.789072480755792,
+      "retrieval_score": 0.025989268947015427,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_6",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_6",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 310
+      },
+      "rrf_score": 0.025807525807525808,
+      "dense_rank": 11,
+      "dense_score": 0.82236135,
+      "bm25_rank": 18,
+      "bm25_score": 6.556507153989054,
+      "retrieval_score": 0.025807525807525808,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_12",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_12",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 440
+      },
+      "rrf_score": 0.025563671006668783,
+      "dense_rank": 12,
+      "dense_score": 0.83537674,
+      "bm25_rank": 34,
+      "bm25_score": 3.390948550502274,
+      "retrieval_score": 0.025563671006668783,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_45",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_45",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1947
+      },
+      "rrf_score": 0.025478740668614087,
+      "dense_rank": 13,
+      "dense_score": 0.82152826,
+      "bm25_rank": 19,
+      "bm25_score": 6.331081875484283,
+      "retrieval_score": 0.025478740668614087,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_51",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_51",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2055
+      },
+      "rrf_score": 0.024336928009326728,
+      "dense_rank": 14,
+      "dense_score": 0.8077351,
+      "bm25_rank": 13,
+      "bm25_score": 7.676009300410665,
+      "retrieval_score": 0.024336928009326728,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_48",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_48",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2002
+      },
+      "rrf_score": 0.024322344322344324,
+      "dense_rank": 15,
+      "dense_score": 0.8102194,
+      "bm25_rank": 15,
+      "bm25_score": 7.380816450480625,
+      "retrieval_score": 0.024322344322344324,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_26",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_26",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1624
+      },
+      "rrf_score": 0.02427116752685172,
+      "dense_rank": 16,
+      "dense_score": 0.8013074,
+      "bm25_rank": 7,
+      "bm25_score": 9.392238590364636,
+      "retrieval_score": 0.02427116752685172,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_47",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_47",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 1979
+      },
+      "rrf_score": 0.0238230289279637,
+      "dense_rank": 17,
+      "dense_score": 0.8132401,
+      "bm25_rank": 22,
+      "bm25_score": 4.99808813751163,
+      "retrieval_score": 0.0238230289279637,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_55",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_55",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2125
+      },
+      "rrf_score": 0.023709315375982042,
+      "dense_rank": 18,
+      "dense_score": 0.81611586,
+      "bm25_rank": 28,
+      "bm25_score": 3.866898080126263,
+      "retrieval_score": 0.023709315375982042,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_75",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_75",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2408
+      },
+      "rrf_score": 0.02357456140350877,
+      "dense_rank": 19,
+      "dense_score": 0.8258961,
+      "bm25_rank": 36,
+      "bm25_score": 3.3088491686701937,
+      "retrieval_score": 0.02357456140350877,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_46",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_46",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1953
+      },
+      "rrf_score": 0.023403679653679656,
+      "dense_rank": 20,
+      "dense_score": 0.80714,
+      "bm25_rank": 17,
+      "bm25_score": 6.760757935337347,
+      "retrieval_score": 0.023403679653679656,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_78",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_78",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2471
+      },
+      "rrf_score": 0.022947810123262524,
+      "dense_rank": 21,
+      "dense_score": 0.8152051,
+      "bm25_rank": 33,
+      "bm25_score": 3.4569711095321027,
+      "retrieval_score": 0.022947810123262524,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_93",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_93",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3080
+      },
+      "rrf_score": 0.02286386203292396,
+      "dense_rank": 22,
+      "dense_score": 0.8116887,
+      "bm25_rank": 26,
+      "bm25_score": 4.626634782345083,
+      "retrieval_score": 0.02286386203292396,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_80",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_80",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2528
+      },
+      "rrf_score": 0.022759237949111367,
+      "dense_rank": 23,
+      "dense_score": 0.82031,
+      "bm25_rank": 39,
+      "bm25_score": 2.298096464484211,
+      "retrieval_score": 0.022759237949111367,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_9",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_9",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2022,
+        "start_line": 375
+      },
+      "rrf_score": 0.022291021671826623,
+      "dense_rank": 24,
+      "dense_score": 0.81410986,
+      "bm25_rank": 35,
+      "bm25_score": 3.3331701815465884,
+      "retrieval_score": 0.022291021671826623,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_65",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_65",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2266
+      },
+      "rrf_score": 0.021440036688832834,
+      "dense_rank": 25,
+      "dense_score": 0.8051145,
+      "bm25_rank": 29,
+      "bm25_score": 3.7397514202748763,
+      "retrieval_score": 0.021440036688832834,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_25",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_25",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1592
+      },
+      "rrf_score": 0.021307452030343597,
+      "dense_rank": 26,
+      "dense_score": 0.80073386,
+      "bm25_rank": 23,
+      "bm25_score": 4.7988458080341845,
+      "retrieval_score": 0.021307452030343597,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_92",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_92",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3059
+      },
+      "rrf_score": 0.021198668146503882,
+      "dense_rank": 27,
+      "dense_score": 0.80235636,
+      "bm25_rank": 25,
+      "bm25_score": 4.734461179432056,
+      "retrieval_score": 0.021198668146503882,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_66",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_66",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2270
+      },
+      "rrf_score": 0.020622895622895623,
+      "dense_rank": 28,
+      "dense_score": 0.8118946,
+      "bm25_rank": 48,
+      "bm25_score": 1.6199578352671784,
+      "retrieval_score": 0.020622895622895623,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_94",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_94",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3110
+      },
+      "rrf_score": 0.02028542303771662,
+      "dense_rank": 29,
+      "dense_score": 0.7985555,
+      "bm25_rank": 30,
+      "bm25_score": 3.678343195566998,
+      "retrieval_score": 0.02028542303771662,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_40",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_40",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1897
+      },
+      "rrf_score": 0.020113199919142913,
+      "dense_rank": 30,
+      "dense_score": 0.80600464,
+      "bm25_rank": 42,
+      "bm25_score": 2.0280650825426676,
+      "retrieval_score": 0.020113199919142913,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_86",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_86",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2924
+      },
+      "rrf_score": 0.019708737864077668,
+      "dense_rank": 31,
+      "dense_score": 0.8030948,
+      "bm25_rank": 40,
+      "bm25_score": 2.1978516086269466,
+      "retrieval_score": 0.019708737864077668,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_44",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_44",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1928
+      },
+      "rrf_score": 0.01960972796308757,
+      "dense_rank": 32,
+      "dense_score": 0.80339235,
+      "bm25_rank": 43,
+      "bm25_score": 1.950731253901879,
+      "retrieval_score": 0.01960972796308757,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_87",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_87",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2945
+      },
+      "rrf_score": 0.019433962264150943,
+      "dense_rank": 33,
+      "dense_score": 0.8040978,
+      "bm25_rank": 46,
+      "bm25_score": 1.8614450828101923,
+      "retrieval_score": 0.019433962264150943,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_97",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_97",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3178
+      },
+      "rrf_score": 0.019400187441424556,
+      "dense_rank": 34,
+      "dense_score": 0.79838246,
+      "bm25_rank": 37,
+      "bm25_score": 2.873753458207508,
+      "retrieval_score": 0.019400187441424556,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_72",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_72",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 2335
+      },
+      "rrf_score": 0.01639344262295082,
+      "dense_rank": 35,
+      "dense_score": 0.8635627,
+      "retrieval_score": 0.01639344262295082,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_90",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_90",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3011
+      },
+      "rrf_score": 0.01639344262295082,
+      "bm25_rank": 1,
+      "bm25_score": 15.732712672633237,
+      "retrieval_score": 0.01639344262295082,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 36
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_62",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_62",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2234
+      },
+      "rrf_score": 0.015625,
+      "bm25_rank": 4,
+      "bm25_score": 10.067323376099392,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 37
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_42",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_42",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1907
+      },
+      "rrf_score": 0.015384615384615385,
+      "dense_rank": 38,
+      "dense_score": 0.8386619,
+      "retrieval_score": 0.015384615384615385,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_20",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_20",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1521
+      },
+      "rrf_score": 0.015151515151515152,
+      "bm25_rank": 6,
+      "bm25_score": 9.500780478384673,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_10",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_10",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2022,
+        "start_line": 390
+      },
+      "rrf_score": 0.014285714285714285,
+      "dense_rank": 40,
+      "dense_score": 0.83028996,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_91",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_91",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3038
+      },
+      "rrf_score": 0.014285714285714285,
+      "bm25_rank": 10,
+      "bm25_score": 9.078561976689373,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 41
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_8",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_8",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 346
+      },
+      "rrf_score": 0.014084507042253521,
+      "dense_rank": 42,
+      "dense_score": 0.8302608,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_73",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_73",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2339
+      },
+      "rrf_score": 0.013333333333333334,
+      "dense_rank": 43,
+      "dense_score": 0.8264571,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_23",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_23",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1550
+      },
+      "rrf_score": 0.013157894736842105,
+      "bm25_rank": 16,
+      "bm25_score": 7.168590166240301,
+      "retrieval_score": 0.013157894736842105,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 44
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_70",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_70",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2022,
+        "start_line": 2308
+      },
+      "rrf_score": 0.0125,
+      "dense_rank": 45,
+      "dense_score": 0.81909794,
+      "retrieval_score": 0.0125,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_30",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_30",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1682
+      },
+      "rrf_score": 0.012345679012345678,
+      "bm25_rank": 21,
+      "bm25_score": 5.6301138105665265,
+      "retrieval_score": 0.012345679012345678,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_69",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_69",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 2293
+      },
+      "rrf_score": 0.012048192771084338,
+      "dense_rank": 47,
+      "dense_score": 0.8147708,
+      "retrieval_score": 0.012048192771084338,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_96",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_96",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3152
+      },
+      "rrf_score": 0.011904761904761904,
+      "bm25_rank": 24,
+      "bm25_score": 4.741432825401908,
+      "retrieval_score": 0.011904761904761904,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 48
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_71",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_71",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "income_statement",
+        "year": 2022,
+        "start_line": 2316
+      },
+      "rrf_score": 0.011494252873563218,
+      "dense_rank": 49,
+      "dense_score": 0.81256163,
+      "retrieval_score": 0.011494252873563218,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_95",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_95",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 3131
+      },
+      "rrf_score": 0.011494252873563218,
+      "bm25_rank": 27,
+      "bm25_score": 4.508971644257852,
+      "retrieval_score": 0.011494252873563218,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "year": 2022,
+        "report_type": "hợp nhất"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_5",
+        "table_ref": "HHV_financial_statements_2022_consolidated|286",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_7",
+        "table_ref": "HHV_financial_statements_2022_consolidated|329",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_81",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2598",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_79",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2496",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_61",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2219",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_38",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1866",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_74",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2385",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_11",
+        "table_ref": "HHV_financial_statements_2022_consolidated|421",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_18",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1481",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_85",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2903",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_6",
+        "table_ref": "HHV_financial_statements_2022_consolidated|310",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_12",
+        "table_ref": "HHV_financial_statements_2022_consolidated|440",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_45",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1947",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_51",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2055",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_48",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2002",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_26",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1624",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_47",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1979",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_55",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2125",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_75",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2408",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_46",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1953",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_78",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2471",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_93",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3080",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_80",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2528",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_9",
+        "table_ref": "HHV_financial_statements_2022_consolidated|375",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_65",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2266",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_25",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1592",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_92",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3059",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_66",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2270",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_94",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3110",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_40",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1897",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_86",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2924",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_44",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1928",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_87",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2945",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_97",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3178",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_72",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2335",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_90",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3011",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_62",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2234",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_42",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1907",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_20",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1521",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_10",
+        "table_ref": "HHV_financial_statements_2022_consolidated|390",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_91",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3038",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_8",
+        "table_ref": "HHV_financial_statements_2022_consolidated|346",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_73",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2339",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_23",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1550",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_70",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2308",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_30",
+        "table_ref": "HHV_financial_statements_2022_consolidated|1682",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_69",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2293",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_96",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3152",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_71",
+        "table_ref": "HHV_financial_statements_2022_consolidated|2316",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "income_statement",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "HHV_financial_statements_2022_consolidated_table_95",
+        "table_ref": "HHV_financial_statements_2022_consolidated|3131",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Tại ngày"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "31.12.2022 VND",
+                "100",
+                "110",
+                "111"
+              ],
+              "mục lục chỉ tiêu": [
+                "31.12.2022 VND",
+                "100",
+                "110",
+                "111",
+                "112",
+                "120",
+                "123",
+                "130",
+                "131",
+                "132",
+                "135",
+                "136",
+                "137",
+                "140",
+                "141",
+                "150",
+                "151",
+                "152",
+                "153"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 1: DOANH THU THUẦN VỀ BÁN HÀNG VÀ CUNG CẤP ĐỊCH VỤ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu bán hàng và cung cấp dịch vụ"
+              ],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Doanh thu bán hàng và cung cấp dịch vụ",
+                "Doanh thu các trạm thu phí BOT",
+                "Doanh thu hoạt động xây lắp"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Doanh thu bán hàng và cung cấp dịch vụ",
+                "Doanh thu các trạm thu phí BOT",
+                "Doanh thu hoạt động xây lắp",
+                "Doanh thu hoạt động duy tu bảo dưỡnghầm, đường",
+                "Doanh thu cung cấp dịch vụ trung chuyển",
+                "Doanh thu khác",
+                "Doanh thu thuần",
+                "Trong đó doanh thu đối với các bên liên quan"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: CÁC KHOÀN ĐẦU TƯ TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Ngắn hạn"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31.12.2022",
+                "01.01.2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngắn hạn",
+                "Tiền gửi có kỳ hạn (i)",
+                "Dài hạn",
+                "Tiền gửi có kỳ hạn (ii)",
+                "Trái phiếu (iii)",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngắn hạn",
+                "Tiền gửi có kỳ hạn (i)",
+                "Dài hạn",
+                "Tiền gửi có kỳ hạn (ii)",
+                "Trái phiếu (iii)",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: VAY VÀ NỘ THUÊ TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Tại ngày31.12.2022VND",
+                "Phát sinh trong năm",
+                "Tại ngày01.01.2022VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên thứ ba",
+                "Ngân hàng Vietinbank - CN Đà Nẵng",
+                "Ngân hàng TP Bank - CN ThăngLong Hà Nội",
+                "Ngân hàng Vietinbank - CN Hà Nội",
+                "Ngân hàng VietABank - CN Hà Nội"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bên liên quan",
+                "Công ty Cổ phần Tập đoàn Đèo Cả",
+                "Công ty CP Đầu tư Hải Thạch B.O.T",
+                "Công ty Cổ phần BOT Hưng Phát",
+                "Bên thứ ba",
+                "Ngân hàng Vietinbank - CN Đà Nẵng",
+                "Ngân hàng TP Bank - CN ThăngLong Hà Nội",
+                "Ngân hàng Vietinbank - CN Hà Nội",
+                "Ngân hàng VietABank - CN Hà Nội",
+                "Cán bộ, công nhân viên",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Đầu tư Hạ tầng Miền Bắc (mã chỉ tiêu 48.000.000.000)",
+                "Ngân hàng TP Bank (mã chỉ tiêu 2.430.891.282)",
+                "Trên 5 năm (mã chỉ tiêu 377.620.000.000)",
+                "Bên thứ ba (mã chỉ tiêu 377.620.000.000)",
+                "Ngân hàng Vietinbank - Chi nhánh Hà Nội (mã chỉ tiêu 357.460.000.000)",
+                "Ngân hàng VietABank - Chi nhánh Hà Nội (mã chỉ tiêu 20.160.000.000)",
+                "Cộng (mã chỉ tiêu 495.339.491.282)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TăngVND",
+                "Trên 1 năm đến 5 năm (mã chỉ tiêu 117.719.491.282)",
+                "Bên liên quan (mã chỉ tiêu 67.288.600.000)",
+                "Công ty CP Đầu tư Hải Thạch B.O.T (mã chỉ tiêu 67.288.600.000)",
+                "Bên thứ ba (mã chỉ tiêu 50.430.891.282)",
+                "Công ty Cổ phần Đầu tư Hạ tầng Miền Bắc (mã chỉ tiêu 48.000.000.000)",
+                "Ngân hàng TP Bank (mã chỉ tiêu 2.430.891.282)",
+                "Trên 5 năm (mã chỉ tiêu 377.620.000.000)",
+                "Bên thứ ba (mã chỉ tiêu 377.620.000.000)",
+                "Ngân hàng Vietinbank - Chi nhánh Hà Nội (mã chỉ tiêu 357.460.000.000)",
+                "Ngân hàng VietABank - Chi nhánh Hà Nội (mã chỉ tiêu 20.160.000.000)",
+                "Cộng (mã chỉ tiêu 495.339.491.282)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: Thông tin bộ phận (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu thuân về bán hàng và cung cấp dịch vụ ra bên ngoài",
+                "Doanh thu thuân về bán hàng và cung cấp dịch vụ ra bên ngoài"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu thuân về bán hàng và cung cấp dịch vụ ra bên ngoài",
+                "Tài sản bộ phận Tống chi phí đã phát sinh để mua tài sản cố định và các tài sản dài hạn khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu thuân về bán hàng và cung cấp dịch vụ ra bên ngoài",
+                "Tài sản bộ phận Tống chi phí đã phát sinh để mua tài sản cố định và các tài sản dài hạn khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: CHI PHÍ QUẢN LÝ DOANH NGHIỆP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng nợ phải thu khó đòi"
+              ],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Chi phí nhân viên",
+                "Chi phí dịch vụ mua ngoài",
+                "Thuế, phí, lệ phí",
+                "Dự phòng nợ phải thu khó đòi",
+                "Chi phí khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Chi phí nhân viên",
+                "Chi phí dịch vụ mua ngoài",
+                "Phân bổ lợi thế thương mại",
+                "Chi phí khấu hao",
+                "Chi phí công cụ, dụng cụ",
+                "Thuế, phí, lệ phí",
+                "Dự phòng nợ phải thu khó đòi",
+                "Chi phí khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần An ninh Đẻo Cả",
+                "17.375.835.146",
+                "Công ty Cổ phần Tư vấn Xây dựng Hoàng Long",
+                "-",
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam",
+                "Công ty Cổ phần Quản lý và Khai thác Đường cao tốc Đẻo Cả",
+                "3.853.966.284"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần An ninh Đẻo Cả",
+                "17.375.835.146",
+                "Công ty Cổ phần Tư vấn Xây dựng Hoàng Long",
+                "-",
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam",
+                "Công ty Cổ phần Quản lý và Khai thác Đường cao tốc Đẻo Cả",
+                "3.853.966.284"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: Giao dịch với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Công ty Cổ phần Đầu tư Hải Thạch B.O.T",
+                "Công ty Cổ phần Tư vấn Xây dựng A2Z",
+                "Doanh thu cho thuê xe",
+                "Cung cấp dịch vụ",
+                "Mua hàng hóa, dịch vụ",
+                "Thuê văn phòng, nhà"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Công ty Cổ phần Đầu tư Hải Thạch B.O.T",
+                "Chi phí lãi vay",
+                "Giao dịch khác",
+                "Nhận tiền vay",
+                "Trả tiền vay",
+                "Góp vốn",
+                "Công ty Cổ phần Tư vấn Xây dựng A2Z",
+                "Doanh thu cho thuê xe",
+                "Cung cấp dịch vụ",
+                "Mua hàng hóa, dịch vụ",
+                "Thuê văn phòng, nhà",
+                "Chi phí tài chính",
+                "Thanh toán tiền lãi vay",
+                "Công ty Cổ phần An ninh Đèo Cả",
+                "Chi phí dịch vụ bảo vệ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: GIÁ VÓN HÀNG BÁN VÀ CUNG CẤP DỊCH VỤ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Giá vốn các trạm thu phí BOT",
+                "Giá vốn hoạt động xây lắp",
+                "Giá vốn cung cấp dịch vụ trung chuyển",
+                "Giá vốn hoạt động duy tu bảo dưỡng hàm,đường",
+                "Giá vốn khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Giá vốn các trạm thu phí BOT",
+                "Giá vốn hoạt động xây lắp",
+                "Giá vốn cung cấp dịch vụ trung chuyển",
+                "Giá vốn hoạt động duy tu bảo dưỡng hàm,đường",
+                "Giá vốn khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu thuê xe",
+                "Phải thu cho thuê văn phòng"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tư vấnXây dựng Hoàng Long",
+                "Phải thu cho thuê văn phòng",
+                "Công ty Cổ phần BOTTrung Lương - Mỹ Thuận",
+                "Phải thu thuê xe"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Tư vấnXây dựng Hoàng Long",
+                "Phải thu cho thuê văn phòng",
+                "Công ty Cổ phần BOTTrung Lương - Mỹ Thuận",
+                "Phải thu thuê xe",
+                "Công ty Cổ Phần Tập đoànĐầu tư xây dựng Cầuđường Sài Gòn - Phú Yên",
+                "Công ty Cổ phần Xây dựngĐẻo Cả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "2022VND",
+                "Lợi nhuận sau thuế cho Cổ đông của Công tySố trích lập quỹ khen thưởng phúc lợi (mã chỉ tiêu 268.873.236.620-)",
+                "Lợi nhuận phân bổ cho cổ đông của Côngty sở hữu cổ phiếu phổ thông (mã chỉ tiêu 268.873.236.620)",
+                "Số bình quân gia quyền của cổ phiếu đang lưu hành trong năm (mã chỉ tiêu 267.384.090)",
+                "Lãi cơ bản trên cổ phiếu (mã chỉ tiêu 1.006)"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Lợi nhuận sau thuế cho Cổ đông của Công tySố trích lập quỹ khen thưởng phúc lợi (mã chỉ tiêu 268.873.236.620-)",
+                "Lợi nhuận phân bổ cho cổ đông của Côngty sở hữu cổ phiếu phổ thông (mã chỉ tiêu 268.873.236.620)",
+                "Số bình quân gia quyền của cổ phiếu đang lưu hành trong năm (mã chỉ tiêu 267.384.090)",
+                "Lãi cơ bản trên cổ phiếu (mã chỉ tiêu 1.006)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "2022VND",
+                "Lợi nhuận sau thuế cho Cổ đông của Công tySố trích lập quỹ khen thưởng phúc lợi (mã chỉ tiêu 268.873.236.620-)",
+                "Lợi nhuận phân bổ cho cổ đông của Côngty sở hữu cổ phiếu phổ thông (mã chỉ tiêu 268.873.236.620)",
+                "Số lượng CP phổ thông đang lưu hành bìnhquản trong năm (mã chỉ tiêu 267.384.090)",
+                "Số lượng cổ phiếu dự kiến phát hành (mã chỉ tiêu 267.384.090)",
+                "Lãi suy giảm trên cổ phiếu (mã chỉ tiêu 503)"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Lợi nhuận sau thuế cho Cổ đông của Công tySố trích lập quỹ khen thưởng phúc lợi (mã chỉ tiêu 268.873.236.620-)",
+                "Lợi nhuận phân bổ cho cổ đông của Côngty sở hữu cổ phiếu phổ thông (mã chỉ tiêu 268.873.236.620)",
+                "Số lượng CP phổ thông đang lưu hành bìnhquản trong năm (mã chỉ tiêu 267.384.090)",
+                "Số lượng cổ phiếu dự kiến phát hành (mã chỉ tiêu 267.384.090)",
+                "Lãi suy giảm trên cổ phiếu (mã chỉ tiêu 503)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số V.15)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số V.15)",
+                "Thuế và các khoản phải nộp ngân sách Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số V.16)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)",
+                "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số V.20a)",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Phải trả người bán dài hạn (mã chỉ tiêu 331; tham chiếu Thuyết minh số V.14b)",
+                "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số V.17b)",
+                "Doanh thu chưa thực hiện dài hạn (mã chỉ tiêu 336; tham chiếu Thuyết minh số V.18b)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337; tham chiếu Thuyết minh số V.19b)",
+                "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số V.20b)",
+                "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số V.21b)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số phải thu trong nămVND",
+                "Số đã thực thu trong nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuê giá trị gia tăng",
+                "Các khoản thuê khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuê giá trị gia tăng",
+                "Các khoản thuê khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: Giao dịch với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chính kết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam",
+                "Doanh thu nước uống đóng chai",
+                "Doanh thu thép",
+                "Mua hàng hóa, dịch vụ",
+                "Chi phí mua vật tư"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam",
+                "Doanh thu nước uống đóng chai",
+                "Doanh thu thép",
+                "Mua hàng hóa, dịch vụ",
+                "Chi phí mua vật tư",
+                "Chi phí thuê thiết bị, thuê xe",
+                "Công ty Cổ phần Đầu tư BOT Đèo Cả Khánh Hòa",
+                "Doanh thu vận hành trạm thu phí",
+                "Doanh thu trung tu",
+                "Doanh thu hoạt động duy tu bảo dưỡng hầm, đường",
+                "Giao dịch khác",
+                "Chia cổ tức"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: VAY VÀ NỘ THUÊ TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "4",
+                "Hợp đồng số 01/2016 - HĐTDDA/NHCT106-DEOCA ngày 02/02/2016"
+              ],
+              "mục lục chỉ tiêu": [
+                "4",
+                "Hợp đồng số 01/2016 - HĐTDDA/NHCT106-DEOCA ngày 02/02/2016"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Thuế thu nhập hoãn lại phải trả",
+                "Thuế suất thuế TNDN sử dụng để xác định giá trị thuế thu nhập hoãn lại phải trả",
+                "Thuế thu nhập hoãn lại phải trả liên quan đến khoản chênh lệch tạm thời được khấu trừ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế suất thuế TNDN sử dụng để xác định giá trị thuế thu nhập hoãn lại phải trả",
+                "Thuế thu nhập hoãn lại phải trả liên quan đến khoản chênh lệch tạm thời được khấu trừ",
+                "Thuế thu nhập hoãn lại phải trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế suất thuế TNDN sử dụng để xác định giá trị thuế thu nhập hoãn lại phải trả",
+                "Thuế thu nhập hoãn lại phải trả liên quan đến khoản chênh lệch tạm thời được khấu trừ",
+                "Thuế thu nhập hoãn lại phải trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "PHẢI THU DÀI HẠN KHÁC",
+                "PHẢI TRẢ NGƯỜI BÁNNGẤN HẠN"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "PHẢI THU DÀI HẠN KHÁC",
+                "Công ty Cổ phần BOTHưng Phát",
+                "Công ty Cổ phần Tập ĐoànĐèo Cả",
+                "PHẢI TRẢ NGƯỜI BÁNNGẤN HẠN",
+                "Phải trả mua vật tư",
+                "Phải trả tiền cung cấp công nghệthông tin"
+              ],
+              "mục lục chỉ tiêu": [
+                "PHẢI THU DÀI HẠN KHÁC",
+                "Công ty Cổ phần BOTHưng Phát",
+                "50.924.984.504",
+                "Công ty Cổ phần Tập ĐoànĐèo Cả",
+                "PHẢI TRẢ NGƯỜI BÁNNGẤN HẠN",
+                "Phải trả mua vật tư",
+                "Phải trả tiền cung cấp công nghệthông tin",
+                "Phải trả mua đồng phục",
+                "Phải trả chi phí đào tạo thạc sĩ",
+                "Phải trả mua công cụ dụng cụ, tài sản",
+                "Phải trả vé máy bay, khác",
+                "458.584.484.413"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: PHẢI THU KHÁC (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phải thu khác",
+                "Phải thu khác"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phải thu tạm ứng cổ tức (*)",
+                "Phải thu tiền sửa chữa, bảo hành dự án"
+              ],
+              "kỳ số liệu": [
+                "31.12.2022",
+                "01.01.2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ký cược, ký quỹ",
+                "Phải thu khác",
+                "Phải thu tiền sửa chữa, bảo hành dự án",
+                "Trung tâm phát triển quỹ đất và Cụm công nghiệp huyện Lạng Giang"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ký cược, ký quỹ",
+                "Phải thu khác",
+                "Phải thu tiền sửa chữa, bảo hành dự án",
+                "Trung tâm phát triển quỹ đất và Cụm công nghiệp huyện Lạng Giang",
+                "Trung tâm phát triển quỹ đất huyện Hữu Lũng",
+                "Trung tâm phát triển quỹ đất huyện Chi Lăng",
+                "Phải thu tạm ứng cổ tức (*)",
+                "Bên liên quan",
+                "Công ty Cổ phần BOT Hưng Phát",
+                "Bên thứ ba",
+                "Công ty Cổ phần Đầu tư Thương mại Quốc tế Hà Thành",
+                "Công ty Cổ phần Đầu tư và Xây Dứng Việt Thành",
+                "Hợp tác kinh doanh",
+                "Công ty Cổ phần Tập đoàn Đèo Cả",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay phải trả",
+                "Trích trước chi phí lãi vay",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay phải trả",
+                "Trích trước chi phí lãi vay",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VAY VÀ NỘ THUÊ TÀI CHÍNH NGĂN HẠN",
+                "Công ty Cổ phần Tập Đoàn Đẻo Cả",
+                "55.036.895.603",
+                "-",
+                "VAY VÀ NỘ THUÊ TÀI CHÍNH DÀI HẠN",
+                "Công ty Cổ phần Đầu tư Hải Thạch B.O.T"
+              ],
+              "mục lục chỉ tiêu": [
+                "VAY VÀ NỘ THUÊ TÀI CHÍNH NGĂN HẠN",
+                "Công ty Cổ phần Tập Đoàn Đẻo Cả",
+                "55.036.895.603",
+                "Công ty Cổ phần Đầu tư Hải Thạch B.O.T",
+                "-",
+                "Công ty Cổ phần BOT Hưng Phát",
+                "VAY VÀ NỘ THUÊ TÀI CHÍNH DÀI HẠN"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu nhận trước",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu nhận trước",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400; tham chiếu Thuyết minh số V.22)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)"
+              ],
+              "mục lục chỉ tiêu": [
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400; tham chiếu Thuyết minh số V.22)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "Lợi nhuận sau thuế (\"LNST\") chưa phân phối (mã chỉ tiêu 421)",
+                "- LNST chưa phân phối lũy kế của các năm trước (mã chỉ tiêu 421a)",
+                "- LNST chưa phân phối của năm nay (mã chỉ tiêu 421b)",
+                "Lợi ích cổ đông không kiểm soát (mã chỉ tiêu 429)",
+                "Nguồn kinh phí và quỹ khác (mã chỉ tiêu 430)",
+                "Nguồn kinh phí đã hình thành TSCĐ (mã chỉ tiêu 432)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: TÀI SẢN CÓ ĐỊNH HỮU HÌNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 01 tháng 01 năm 2022",
+                "Tại ngày 01 tháng 01 năm 2022",
+                "Tại ngày 01 tháng 01 năm 2022"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tại ngày 01 tháng 01 năm 2022",
+                "Số tăng trong năm",
+                "Tại ngày 31 tháng 12 năm 2022"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 01 tháng 01 năm 2022",
+                "Số tăng trong năm",
+                "Mua trong năm",
+                "Đầu tư XDCB hoàn thành",
+                "Tăng khác",
+                "Số giảm trong năm",
+                "Giảm khác",
+                "Tại ngày 31 tháng 12 năm 2022",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "PHẢI TRẢ NGƯỜI BAN DÀI HẠN"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tư vấn Xây dựng A2Z",
+                "-",
+                "Công ty Cổ phần Xây dựng Đẻo Cả",
+                "PHẢI TRẢ NGƯỜI BAN DÀI HẠN",
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Tư vấn Xây dựng A2Z",
+                "-",
+                "Công ty Cổ phần Xây dựng Đẻo Cả",
+                "PHẢI TRẢ NGƯỜI BAN DÀI HẠN",
+                "Công ty Cổ phần Đầu tư và Xây dựng ICV Việt Nam",
+                "Công ty Cổ phần Tư vấn Xây dựng Hoàng Long"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Từ 01 năm trở xuống VND",
+                "Trên 01 đến 05 năm VND",
+                "Trên 05 năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả cho người bán",
+                "Người mua trả tiền trước",
+                "Vay và nợ",
+                "Chi phí phải trả",
+                "Các khoản phải trả phải nộp khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả cho người bán",
+                "Người mua trả tiền trước",
+                "Vay và nợ",
+                "Chi phí phải trả",
+                "Các khoản phải trả phải nộp khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: Thông tin bộ phận (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng doanh thu thuần bán hàng và cung cấp dịch vụ",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ ra bên ngoài"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ ra bên ngoài",
+                "Tổng doanh thu thuần bán hàng và cung cấp dịch vụ",
+                "Kết quả kinh doanh theo bộ phận",
+                "Phận lãi hoặc lỗ trong công ty liên kết, liên doanh",
+                "Chi phí thuê thu nhập doanh nghiệp hiện hành",
+                "Chi phí thuê thu nhập doanh nghiệp hoãn lại"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ ra bên ngoài",
+                "Tổng doanh thu thuần bán hàng và cung cấp dịch vụ",
+                "Kết quả kinh doanh theo bộ phận",
+                "Lợi nhuận từ hoạt động kinh doanh",
+                "Phận lãi hoặc lỗ trong công ty liên kết, liên doanh",
+                "Chi phí thuê thu nhập doanh nghiệp hiện hành",
+                "Chi phí thuê thu nhập doanh nghiệp hoãn lại",
+                "Lợi nhuận sau thuê thu nhập doanh nghiệp",
+                "Tổng chi phí đã phát sinh để mua tài sản cổ định và các tài sản dài hạn khác",
+                "Tổng chi phí khấu hao và phân bổ chi phí trả trước dài hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số V.4b)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)",
+                "Tài sản cố định (mã chỉ tiêu 220)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số V.4b)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số V.10)",
+                "Nguyên giá (mã chỉ tiêu 222)",
+                "Giá trị khấu hao lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số V.11)",
+                "Nguyên giá (mã chỉ tiêu 228)",
+                "Giá trị khấu hao lũy kế (mã chỉ tiêu 229)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số V.12)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                "Đầu tư vào công ty liên doanh, liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số V.2b)",
+                "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số V.2a)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chỉ phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số V.9b)",
+                "Tài sản thuế thu nhập hoãn lại (mã chỉ tiêu 262; tham chiếu Thuyết minh số V.21a)",
+                "Lợi thế thương mại (mã chỉ tiêu 269; tham chiếu Thuyết minh số V.13)",
+                "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: VAY VÀ NỘ THUÊ TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "HĐ tín dụng số 02/2022-HDCVHM/NHCT480-DII ngày 04/01/2022"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1",
+                "HĐ tín dụng số 02/2022-HDCVHM/NHCT480-DII ngày 04/01/2022",
+                "2",
+                "3",
+                "4",
+                "5"
+              ],
+              "mục lục chỉ tiêu": [
+                "1",
+                "HĐ tín dụng số 02/2022-HDCVHM/NHCT480-DII ngày 04/01/2022",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: Thông tin bộ phận (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu thuần về bán hàng vàcung cấp dịch vụ ra bên ngoài"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu thuần về bán hàng vàcung cấp dịch vụ ra bên ngoài",
+                "Tổng doanh thu thuần bánhàng và cung cấp dịch vụ",
+                "Kết quả kinh doanh theo bổ phậnCác chi phí không phân bổ theobộ phận",
+                "Lợi nhuận từ hoạt động kinhdoanh",
+                "Doanh thu hoạt động tài chính",
+                "Chi phí tải chính"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu thuần về bán hàng vàcung cấp dịch vụ ra bên ngoài",
+                "Tổng doanh thu thuần bánhàng và cung cấp dịch vụ",
+                "Kết quả kinh doanh theo bổ phậnCác chi phí không phân bổ theobộ phận",
+                "Lợi nhuận từ hoạt động kinhdoanh",
+                "Doanh thu hoạt động tài chính",
+                "Chi phí tải chính",
+                "Phận lãi hoặc lỗ trong công ty liênkết, liên doanh",
+                "Thu nhập khác",
+                "Chi phí khác",
+                "Chi phí thuê thu nhập doanhnghiệp hiện hành",
+                "Chi phí thuê thu nhập doanhnghiệp hoãn lại",
+                "Lợi nhuận sau thuê thu nhậpdoanh nghiệp",
+                "Tổng chi phí đã phát sinh để mua tài sản cổ định và các tài sản dài hạnkhác",
+                "Tổng chi phí khấu hao và phân bổ chi phí trả trước dài hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: Giá trị hợp lý của tài sản và nợ phải trả tài chính (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31.12.2022",
+                "01.01.2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả cho người bán",
+                "Người mua trả tiền trước",
+                "Vay và nợ",
+                "Phải trả người lao động",
+                "Các khoản phải trả khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả cho người bán",
+                "Người mua trả tiền trước",
+                "Vay và nợ",
+                "Phải trả người lao động",
+                "Các khoản phải trả khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "PHÁI THU NGÂN HẠN KHẮC"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "TRÀ TRƯỚC CHO NGƯỜI BAN DẠI HẠN",
+                "Công ty Cố phân Tư vân Xây dựng Hoàng Long",
+                "-",
+                "PHÁI THU NGÂN HẠN KHẮC",
+                "Công ty Cố phân Tập Đoàn Đèo Cả"
+              ],
+              "mục lục chỉ tiêu": [
+                "TRÀ TRƯỚC CHO NGƯỜI BAN DẠI HẠN",
+                "Công ty Cố phân Tư vân Xây dựng Hoàng Long",
+                "-",
+                "Công ty Cố phân Tư vân Xây dựng A2Z",
+                "PHÁI THU NGÂN HẠN KHẮC",
+                "Công ty Cố phân Tập Đoàn Đèo Cả",
+                "Công ty Cố phân Đầu tư và Xây dựng ICV Việt Nam",
+                "Công ty Cố phân Xây dựng Đèo Cả",
+                "Công ty TNHH Đèo Cả Capital"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: Giao dịch với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tập Đoàn Đẻo Cả",
+                "Doanh thu hoạt động xây lắp",
+                "Doanh thu nước uống đóng chai",
+                "Doanh thu khác",
+                "Mua hàng hóa, dịch vụ"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Công ty Cổ phần Tập Đoàn Đẻo Cả",
+                "Doanh thu hoạt động xây lắp",
+                "Doanh thu nước uống đóng chai",
+                "Doanh thu khác",
+                "Mua hàng hóa, dịch vụ",
+                "Chi phí thi công công trình",
+                "Chi phí vé máy bay",
+                "Chi phí cho thuê thiết bị, phương tiện",
+                "Chi phí cung cấp công nghệ thông tin",
+                "Chi phí mua vật tư",
+                "Chi phí đào tạo thạc sĩ",
+                "Chi phí cho thuê văn phòng",
+                "Chi phí đồng phục và đào tạo nhân viên",
+                "Chi phí tài chính",
+                "Chi phí lãi vay",
+                "Giao dịch khác",
+                "Nhận tiền vay",
+                "Trả tiền vay",
+                "Hợp đồng hợp tác kinh doanh"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "2022VND",
+                "Tiền thu từ đi vay theo khế ước thông thường"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Tiền thu từ đi vay theo khế ước thông thường"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: PHẢI THU NGẮN HẠN CỦA KHÁCH HÀNG"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên liên quan",
+                "Công ty Cố phần Xây dựng Đèo Cả",
+                "Công ty Cố phần BOT Trung Lương - Mỹ Thuận",
+                "Công ty Cố phần Đầu tư BOT Đèo Cả Khánh Hòa"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bên liên quan",
+                "Công ty Cố phần Xây dựng Đèo Cả",
+                "Công ty Cố phần BOT Trung Lương - Mỹ Thuận",
+                "Công ty Cố phần Đầu tư BOT Đèo Cả Khánh Hòa",
+                "Công ty Cố phần Quản lý và Khai thác Đường Cao tốc Đèo Cả",
+                "CTCP Tập đoàn Đầu tư xây dựng Câu đường Sài Gòn - Phú Yên",
+                "Công ty Cố phần Tập đoàn Đèo Cả",
+                "Công ty Cố phần Tư vấn Xây dựng A2Z",
+                "Công ty Cố phần Tư vấn Xây dựng Hoàng Long",
+                "Bên thứ ba",
+                "Công ty Cố phần Xây dựng Câu đường 19",
+                "Công ty Cố phần Sông Đà 10",
+                "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                "Công ty TNHH Thu phí tự động VETC",
+                "Đổi tượng khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 4: Số tiền thực trả gốc trong năm"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Tiền trả nợ gốc vay theo khế ước thông thường"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Tiền trả nợ gốc vay theo khế ước thông thường"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: CHI PHÍ THUÉ THU NHẬP DOANH NGHIỆP HIỆN HÀNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hànhĐiều chỉnh chi phí thuế thu nhập doanh nghiệp của các năm trước vào chi phí thuế th",
+                "40.370.960",
+                "Chi phí thuế TNDN hiện hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hànhĐiều chỉnh chi phí thuế thu nhập doanh nghiệp của các năm trước vào chi phí thuế th",
+                "40.370.960",
+                "Chi phí thuế TNDN hiện hành"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: Giá trị hợp lý của tài sản và nợ phải trả tài chính"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu khách hàng Trả trước cho người bán",
+                "Đầu tư tài chính ngắn hạn",
+                "Phải thu về cho vay Các khoản phải thu khác"
+              ],
+              "kỳ số liệu": [
+                "31.12.2022",
+                "01.01.2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền và các khoản tương đương tiền",
+                "Phải thu khách hàng Trả trước cho người bán",
+                "260.602.778.486",
+                "Phải thu về cho vay Các khoản phải thu khác",
+                "561.653.131.117",
+                "Đầu tư tài chính ngắn hạn",
+                "Đầu tư tài chính dài hạn",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền và các khoản tương đương tiền",
+                "Phải thu khách hàng Trả trước cho người bán",
+                "260.602.778.486",
+                "Phải thu về cho vay Các khoản phải thu khác",
+                "561.653.131.117",
+                "Đầu tư tài chính ngắn hạn",
+                "Đầu tư tài chính dài hạn",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Giảm/(tăng) các khoản phải thu (mã chỉ tiêu 09)",
+                "Thu từ thanh lý, nhượng bán TSCĐ và tài sản dài hạn khác (mã chỉ tiêu 22)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận từ hoạt động kinh doanh trước những thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Giảm/(tăng) các khoản phải thu (mã chỉ tiêu 09)",
+                "(Tăng)/giảm hàng tồn kho (mã chỉ tiêu 10)",
+                "Tăng/(giảm) các khoản phải trả [không kể lãi vay phải trả, thuế TNDN phải nộp] (mã chỉ tiêu 11)",
+                "Chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Thu từ thanh lý, nhượng bán TSCĐ và tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Chi cho vay, mua các công cụ nợ của đơn vị khác (mã chỉ tiêu 23)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận kế toán trước thuế Điều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                "Khấu hao tài sản cố định (mã chỉ tiêu 02)",
+                "Các khoản dự phòng (mã chỉ tiêu 03)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05)",
+                "Chi phí lãi vay (mã chỉ tiêu 06)",
+                "Lợi nhuận từ hoạt động kinh doanh trước những thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Giảm/(tăng) các khoản phải thu (mã chỉ tiêu 09)",
+                "(Tăng)/giảm hàng tồn kho (mã chỉ tiêu 10)",
+                "Tăng/(giảm) các khoản phải trả [không kể lãi vay phải trả, thuế TNDN phải nộp] (mã chỉ tiêu 11)",
+                "(Tăng)/giảm chi phí trả trước (mã chỉ tiêu 12)",
+                "Tiền lãi vay đã trả (mã chỉ tiêu 14)",
+                "Thuế thu nhập doanh nghiệp đã nộp (mã chỉ tiêu 15)",
+                "Tiền thu khác từ hoạt động kinh doanh (mã chỉ tiêu 16)",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Chi để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Thu từ thanh lý, nhượng bán TSCĐ và tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Chi cho vay, mua các công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Thu lãi cho vay, cổ tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Thu từ vay ngắn hạn, dài hạn (mã chỉ tiêu 33)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 31)",
+                "Thu từ vay ngắn hạn, dài hạn (mã chỉ tiêu 33)",
+                "Chi trả nợ gốc vay (mã chỉ tiêu 34)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 31)",
+                "Thu từ vay ngắn hạn, dài hạn (mã chỉ tiêu 33)",
+                "Chi trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Lưu chuyển thuần từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60; tham chiếu Thuyết minh số V.1)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và các khoản tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số V.1)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: NỘ'XẦU"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phải thu khách hàng"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phải thu ngắn hạn khác"
+              ],
+              "kỳ số liệu": [
+                "31.12.2022",
+                "01.01.2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu khách hàng",
+                "Công ty Cổ phần Xây dựng Cầu đường 19",
+                "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                "Đối tượng khác",
+                "Phải thu ngắn hạn khác",
+                "Cục Quản lý Đường bộ III"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu khách hàng",
+                "Công ty Cổ phần Xây dựng Cầu đường 19",
+                "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                "Đối tượng khác",
+                "Trả trước cho người bán",
+                "Công ty Cổ phần Nhà thép Tiền chế Chí Việt",
+                "Phải thu ngắn hạn khác",
+                "Cục Quản lý Đường bộ III",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Ngày đáo hạn"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số 01/2015-HDTDDA/NHCT106-DEOCA",
+                "Số 01/2016-HĐTDDA/NHCT106-DEOCA",
+                "Số 02-2013-HDTDDA/NHCT106-DEOCA",
+                "Số 02/2015-HDTDDA/NHCT106-DEOCA",
+                "Số 01/2017-HĐTDDA/NHCT106-BOT BGLS",
+                "Số 23072014/HDDH; Phụ lục 1-9. Thông báo cơ cấu nợ số 23072014/HĐĐH/SĐBS-06"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số 01/2015-HDTDDA/NHCT106-DEOCA",
+                "Số 01/2016-HĐTDDA/NHCT106-DEOCA",
+                "Số 02-2013-HDTDDA/NHCT106-DEOCA",
+                "Số 02/2015-HDTDDA/NHCT106-DEOCA",
+                "Số 01/2017-HĐTDDA/NHCT106-BOT BGLS",
+                "Số 23072014/HDDH; Phụ lục 1-9. Thông báo cơ cấu nợ số 23072014/HĐĐH/SĐBS-06"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01; tham chiếu Thuyết minh số VI.1)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số VI.1)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01; tham chiếu Thuyết minh số VI.1)",
+                "Các khoản giảm trừ doanh thu (mã chỉ tiêu 02)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số VI.1)",
+                "Giá vốn hàng bán và cung cấp dịch vụ (mã chỉ tiêu 11; tham chiếu Thuyết minh số VI.2)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01; tham chiếu Thuyết minh số VI.1)",
+                "Các khoản giảm trừ doanh thu (mã chỉ tiêu 02)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số VI.1)",
+                "Giá vốn hàng bán và cung cấp dịch vụ (mã chỉ tiêu 11; tham chiếu Thuyết minh số VI.2)",
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số VI.3)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số VI.4)",
+                "- Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Phần lãi trong công ty liên doanh, liên kết (mã chỉ tiêu 24)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số VI.5)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31; tham chiếu Thuyết minh số VI.6)",
+                "Chi phí khác (mã chỉ tiêu 32; tham chiếu Thuyết minh số VI.7)",
+                "(Lỗ)/lợi nhuận khác (mã chỉ tiêu 40)",
+                "Tổng lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: THU NHẬP KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm tài chínhkết thúc ngày 31 tháng 12 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2022VND",
+                "Thu từ thanh lý tài sản cố định",
+                "Thu nhập khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "2022VND",
+                "Thu từ thanh lý tài sản cố định",
+                "Thu nhập khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Gói thầu Hợp phần quốc lộ 1 - Bảo hành chờ quyết toán",
+                "Bảo đảm thực hiện hợp đồng các nhà thầu",
+                "Phải trả khác",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Gói thầu Hợp phần quốc lộ 1 - Bảo hành chờ quyết toán",
+                "Bảo đảm thực hiện hợp đồng các nhà thầu",
+                "Phải trả khác",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                "Phải thu cung cấp dịch vụ",
+                "Phải thu vận hành các trạm thu phí",
+                "Phải thu duy tu bảo dưỡng hầm,đường"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                "Công ty Cổ phần Đầu tưBOT Đẻo Cả Khánh Hòa",
+                "Phải thu vận hành các trạm thu phí",
+                "Phải thu duy tu bảo dưỡng hầm,đường",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                "Công ty Cổ phần Đầu tưBOT Đẻo Cả Khánh Hòa",
+                "Phải thu vận hành các trạm thu phí",
+                "Phải thu duy tu bảo dưỡng hầm,đường",
+                "Cộng",
+                "Công ty Cổ phần Tập ĐoànĐẻo Cả",
+                "Công ty Cổ phần Tư vấnXây dựng A2Z",
+                "Phải thu cung cấp dịch vụ",
+                "Công ty có phần quản lý vàkhai thác đường cao tốcĐẻo Cả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Chi phí thuế thu nhập doanh nghiệp (“TNDN”) hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số VI.9)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)",
+                "Phân bổ cho:",
+                "Cổ đông của Công ty (mã chỉ tiêu 61)",
+                "Cổ đông không kiểm soát (mã chỉ tiêu 62)",
+                "Lãi cơ bản trên cổ phiếu (mã chỉ tiêu 70; tham chiếu Thuyết minh số VI.10)",
+                "Lãi suy giảm trên cổ phiếu (mã chỉ tiêu 71; tham chiếu Thuyết minh số VI.11)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí thuế thu nhập doanh nghiệp (“TNDN”) hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số VI.9)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)",
+                "Phân bổ cho:",
+                "Cổ đông của Công ty (mã chỉ tiêu 61)",
+                "Cổ đông không kiểm soát (mã chỉ tiêu 62)",
+                "Lãi cơ bản trên cổ phiếu (mã chỉ tiêu 70; tham chiếu Thuyết minh số VI.10)",
+                "Lãi suy giảm trên cổ phiếu (mã chỉ tiêu 71; tham chiếu Thuyết minh số VI.11)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: PHÀI THU VỀ CHO VAY NGÂN HẠN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ Phần Đầu tư Sài Gòn Asphalt(tên cũ: Công ty TNHH MTV Đầu tư Sài Gòn)",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ Phần Đầu tư Sài Gòn Asphalt(tên cũ: Công ty TNHH MTV Đầu tư Sài Gòn)",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Công nợ với các bên liên quan khác (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "PHẢI TRẢ NGẮN HẠN KHÁC",
+                "NGƯỜI MUA TRẢ TIỀN TRƯỚC NGẮN HẠN"
+              ],
+              "kỳ số liệu": [
+                "31.12.2022 VND",
+                "01.01.2022 VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "NGƯỜI MUA TRẢ TIỀN TRƯỚC NGẮN HẠN",
+                "Công ty Cổ phần Tập Đoàn Đèo Cả",
+                "PHẢI TRẢ NGẮN HẠN KHÁC"
+              ],
+              "mục lục chỉ tiêu": [
+                "NGƯỜI MUA TRẢ TIỀN TRƯỚC NGẮN HẠN",
+                "Công ty Cổ phần Tập Đoàn Đèo Cả",
+                "PHẢI TRẢ NGẮN HẠN KHÁC",
+                "26.298.646.606",
+                "Công ty Cổ phần Đầu tư Hải Thạch B.O.T",
+                "21.613.458.105",
+                "Công ty Cổ phần Xây Dương Đèo Cả",
+                "Cộng"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c17"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c17"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c11",
+            "c39"
+          ]
+        },
+        "nominated_keys": [
+          "c11",
+          "c39"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c04",
+            "c16",
+            "c36"
+          ]
+        },
+        "nominated_keys": [
+          "c04",
+          "c16",
+          "c36"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c04",
+      "c11",
+      "c16",
+      "c17",
+      "c39",
+      "c36"
+    ],
+    "lexical_finalist_keys": [
+      "c16",
+      "c09",
+      "c26"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c04",
+      "c11",
+      "c16",
+      "c17",
+      "c39",
+      "c36",
+      "c09",
+      "c26"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Số dư phải thu khách hàng ngắn hạn của HHV đến ngày 01/01/2022 là bao nhiêu trăm tỷ đồng?",
+      "giới hạn số bảng": 10,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "HHV",
+          "tên doanh nghiệp": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "năm": 2022,
+          "loại báo cáo": "hợp nhất"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "HHV",
+          "tên doanh nghiệp": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+          "năm": 2022,
+          "loại báo cáo": "hợp nhất",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Tại ngày"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "31.12.2022 VND",
+                  "100",
+                  "110",
+                  "111"
+                ],
+                "mục lục chỉ tiêu": [
+                  "31.12.2022 VND",
+                  "100",
+                  "110",
+                  "111",
+                  "112",
+                  "120",
+                  "123",
+                  "130",
+                  "131",
+                  "132",
+                  "135",
+                  "136",
+                  "137",
+                  "140",
+                  "141",
+                  "150",
+                  "151",
+                  "152",
+                  "153"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số V.15)",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số V.14a)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312; tham chiếu Thuyết minh số V.15)",
+                  "Thuế và các khoản phải nộp ngân sách Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số V.16)",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số V.17a)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số V18a)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số V.19a)",
+                  "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số V.20a)",
+                  "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Phải trả người bán dài hạn (mã chỉ tiêu 331; tham chiếu Thuyết minh số V.14b)",
+                  "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số V.17b)",
+                  "Doanh thu chưa thực hiện dài hạn (mã chỉ tiêu 336; tham chiếu Thuyết minh số V.18b)",
+                  "Phải trả dài hạn khác (mã chỉ tiêu 337; tham chiếu Thuyết minh số V.19b)",
+                  "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số V.20b)",
+                  "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số V.21b)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 5: Giá trị hợp lý của tài sản và nợ phải trả tài chính"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Phải thu khách hàng Trả trước cho người bán",
+                  "Đầu tư tài chính ngắn hạn",
+                  "Phải thu về cho vay Các khoản phải thu khác"
+                ],
+                "kỳ số liệu": [
+                  "31.12.2022",
+                  "01.01.2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tiền và các khoản tương đương tiền",
+                  "Phải thu khách hàng Trả trước cho người bán",
+                  "260.602.778.486",
+                  "Phải thu về cho vay Các khoản phải thu khác",
+                  "561.653.131.117",
+                  "Đầu tư tài chính ngắn hạn",
+                  "Đầu tư tài chính dài hạn",
+                  "Cộng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền và các khoản tương đương tiền",
+                  "Phải thu khách hàng Trả trước cho người bán",
+                  "260.602.778.486",
+                  "Phải thu về cho vay Các khoản phải thu khác",
+                  "561.653.131.117",
+                  "Đầu tư tài chính ngắn hạn",
+                  "Đầu tư tài chính dài hạn",
+                  "Cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c11",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số V.4b)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)",
+                  "Tài sản cố định (mã chỉ tiêu 220)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số V.4b)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số V.6b)",
+                  "Tài sản cố định (mã chỉ tiêu 220)",
+                  "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số V.10)",
+                  "Nguyên giá (mã chỉ tiêu 222)",
+                  "Giá trị khấu hao lũy kế (mã chỉ tiêu 223)",
+                  "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số V.11)",
+                  "Nguyên giá (mã chỉ tiêu 228)",
+                  "Giá trị khấu hao lũy kế (mã chỉ tiêu 229)",
+                  "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                  "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số V.12)",
+                  "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                  "Đầu tư vào công ty liên doanh, liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số V.2b)",
+                  "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255; tham chiếu Thuyết minh số V.2a)",
+                  "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                  "Chỉ phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số V.9b)",
+                  "Tài sản thuế thu nhập hoãn lại (mã chỉ tiêu 262; tham chiếu Thuyết minh số V.21a)",
+                  "Lợi thế thương mại (mã chỉ tiêu 269; tham chiếu Thuyết minh số V.13)",
+                  "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c16",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 7: NỘ'XẦU"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phải thu khách hàng"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phải thu ngắn hạn khác"
+                ],
+                "kỳ số liệu": [
+                  "31.12.2022",
+                  "01.01.2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Phải thu khách hàng",
+                  "Công ty Cổ phần Xây dựng Cầu đường 19",
+                  "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                  "Đối tượng khác",
+                  "Phải thu ngắn hạn khác",
+                  "Cục Quản lý Đường bộ III"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Phải thu khách hàng",
+                  "Công ty Cổ phần Xây dựng Cầu đường 19",
+                  "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                  "Đối tượng khác",
+                  "Trả trước cho người bán",
+                  "Công ty Cổ phần Nhà thép Tiền chế Chí Việt",
+                  "Phải thu ngắn hạn khác",
+                  "Cục Quản lý Đường bộ III",
+                  "Cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c17",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Đầu tư Hạ tầng Miền Bắc (mã chỉ tiêu 48.000.000.000)",
+                  "Ngân hàng TP Bank (mã chỉ tiêu 2.430.891.282)",
+                  "Trên 5 năm (mã chỉ tiêu 377.620.000.000)",
+                  "Bên thứ ba (mã chỉ tiêu 377.620.000.000)",
+                  "Ngân hàng Vietinbank - Chi nhánh Hà Nội (mã chỉ tiêu 357.460.000.000)",
+                  "Ngân hàng VietABank - Chi nhánh Hà Nội (mã chỉ tiêu 20.160.000.000)",
+                  "Cộng (mã chỉ tiêu 495.339.491.282)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TăngVND",
+                  "Trên 1 năm đến 5 năm (mã chỉ tiêu 117.719.491.282)",
+                  "Bên liên quan (mã chỉ tiêu 67.288.600.000)",
+                  "Công ty CP Đầu tư Hải Thạch B.O.T (mã chỉ tiêu 67.288.600.000)",
+                  "Bên thứ ba (mã chỉ tiêu 50.430.891.282)",
+                  "Công ty Cổ phần Đầu tư Hạ tầng Miền Bắc (mã chỉ tiêu 48.000.000.000)",
+                  "Ngân hàng TP Bank (mã chỉ tiêu 2.430.891.282)",
+                  "Trên 5 năm (mã chỉ tiêu 377.620.000.000)",
+                  "Bên thứ ba (mã chỉ tiêu 377.620.000.000)",
+                  "Ngân hàng Vietinbank - Chi nhánh Hà Nội (mã chỉ tiêu 357.460.000.000)",
+                  "Ngân hàng VietABank - Chi nhánh Hà Nội (mã chỉ tiêu 20.160.000.000)",
+                  "Cộng (mã chỉ tiêu 495.339.491.282)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c39",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 3: PHẢI THU NGẮN HẠN CỦA KHÁCH HÀNG"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Bên liên quan",
+                  "Công ty Cố phần Xây dựng Đèo Cả",
+                  "Công ty Cố phần BOT Trung Lương - Mỹ Thuận",
+                  "Công ty Cố phần Đầu tư BOT Đèo Cả Khánh Hòa"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Bên liên quan",
+                  "Công ty Cố phần Xây dựng Đèo Cả",
+                  "Công ty Cố phần BOT Trung Lương - Mỹ Thuận",
+                  "Công ty Cố phần Đầu tư BOT Đèo Cả Khánh Hòa",
+                  "Công ty Cố phần Quản lý và Khai thác Đường Cao tốc Đèo Cả",
+                  "CTCP Tập đoàn Đầu tư xây dựng Câu đường Sài Gòn - Phú Yên",
+                  "Công ty Cố phần Tập đoàn Đèo Cả",
+                  "Công ty Cố phần Tư vấn Xây dựng A2Z",
+                  "Công ty Cố phần Tư vấn Xây dựng Hoàng Long",
+                  "Bên thứ ba",
+                  "Công ty Cố phần Xây dựng Câu đường 19",
+                  "Công ty Cố phần Sông Đà 10",
+                  "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk",
+                  "Công ty TNHH Thu phí tự động VETC",
+                  "Đổi tượng khác",
+                  "Cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c36",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 3: Công nợ với các bên liên quan khác"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                  "Phải thu cung cấp dịch vụ",
+                  "Phải thu vận hành các trạm thu phí",
+                  "Phải thu duy tu bảo dưỡng hầm,đường"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                  "Công ty Cổ phần Đầu tưBOT Đẻo Cả Khánh Hòa",
+                  "Phải thu vận hành các trạm thu phí",
+                  "Phải thu duy tu bảo dưỡng hầm,đường",
+                  "Cộng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "PHẢI THU KHÁCH HÀNG NGÂN HẠN",
+                  "Công ty Cổ phần Đầu tưBOT Đẻo Cả Khánh Hòa",
+                  "Phải thu vận hành các trạm thu phí",
+                  "Phải thu duy tu bảo dưỡng hầm,đường",
+                  "Cộng",
+                  "Công ty Cổ phần Tập ĐoànĐẻo Cả",
+                  "Công ty Cổ phần Tư vấnXây dựng A2Z",
+                  "Phải thu cung cấp dịch vụ",
+                  "Công ty có phần quản lý vàkhai thác đường cao tốcĐẻo Cả"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c09",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 2: CÁC KHOÀN ĐẦU TƯ TÀI CHÍNH"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Ngắn hạn"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "31.12.2022",
+                  "01.01.2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ngắn hạn",
+                  "Tiền gửi có kỳ hạn (i)",
+                  "Dài hạn",
+                  "Tiền gửi có kỳ hạn (ii)",
+                  "Trái phiếu (iii)",
+                  "Cộng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Ngắn hạn",
+                  "Tiền gửi có kỳ hạn (i)",
+                  "Dài hạn",
+                  "Tiền gửi có kỳ hạn (ii)",
+                  "Trái phiếu (iii)",
+                  "Cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c26",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "HHV — CTCP Đầu tư Hạ tầng Giao thông Đèo Cả — năm 2022 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 6: PHẢI THU KHÁC (tiếp theo)"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phải thu khác",
+                  "Phải thu khác"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phải thu tạm ứng cổ tức (*)",
+                  "Phải thu tiền sửa chữa, bảo hành dự án"
+                ],
+                "kỳ số liệu": [
+                  "31.12.2022",
+                  "01.01.2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ký cược, ký quỹ",
+                  "Phải thu khác",
+                  "Phải thu tiền sửa chữa, bảo hành dự án",
+                  "Trung tâm phát triển quỹ đất và Cụm công nghiệp huyện Lạng Giang"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Ký cược, ký quỹ",
+                  "Phải thu khác",
+                  "Phải thu tiền sửa chữa, bảo hành dự án",
+                  "Trung tâm phát triển quỹ đất và Cụm công nghiệp huyện Lạng Giang",
+                  "Trung tâm phát triển quỹ đất huyện Hữu Lũng",
+                  "Trung tâm phát triển quỹ đất huyện Chi Lăng",
+                  "Phải thu tạm ứng cổ tức (*)",
+                  "Bên liên quan",
+                  "Công ty Cổ phần BOT Hưng Phát",
+                  "Bên thứ ba",
+                  "Công ty Cổ phần Đầu tư Thương mại Quốc tế Hà Thành",
+                  "Công ty Cổ phần Đầu tư và Xây Dứng Việt Thành",
+                  "Hợp tác kinh doanh",
+                  "Công ty Cổ phần Tập đoàn Đèo Cả",
+                  "Cộng"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Phải thu khách hàng ngắn hạn",
+              "vai trò": "tử số"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c16",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Phải thu khách hàng ngắn hạn",
+            "role": "tử số"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c16"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c16"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "HHV_financial_statements_2022_consolidated_table_26",
+      "metadata": {
+        "table_id": "HHV_financial_statements_2022_consolidated_table_26",
+        "doc_id": "HHV_financial_statements_2022_consolidated",
+        "ticker": "HHV",
+        "company_name": "CTCP Đầu tư Hạ tầng Giao thông Đèo Cả",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1624
+      },
+      "rrf_score": 0.02427116752685172,
+      "dense_rank": 16,
+      "dense_score": 0.8013074,
+      "bm25_rank": 7,
+      "bm25_score": 9.392238590364636,
+      "retrieval_score": 0.02427116752685172,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31.12.2022",
+          "value_2",
+          "value_3",
+          "01.01.2022",
+          "value_5",
+          "value_6",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31.12.2022",
+          "01.01.2022"
+        ],
+        "units": [],
+        "row_count": 11,
+        "table_titles": [
+          "Thuyết minh 7: NỘ'XẦU"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Phải thu khách hàng"
+          },
+          {
+            "row": 3,
+            "label": "Công ty Cổ phần Xây dựng Cầu đường 19"
+          },
+          {
+            "row": 4,
+            "label": "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk"
+          },
+          {
+            "row": 5,
+            "label": "Đối tượng khác"
+          },
+          {
+            "row": 6,
+            "label": "Trả trước cho người bán"
+          },
+          {
+            "row": 7,
+            "label": "Công ty Cổ phần Nhà thép Tiền chế Chí Việt"
+          },
+          {
+            "row": 8,
+            "label": "Đối tượng khác"
+          },
+          {
+            "row": 9,
+            "label": "Phải thu ngắn hạn khác"
+          },
+          {
+            "row": 10,
+            "label": "Cục Quản lý Đường bộ III"
+          },
+          {
+            "row": 11,
+            "label": "Đối tượng khác"
+          },
+          {
+            "row": 12,
+            "label": "Cộng"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Phải thu khách hàng"
+          },
+          {
+            "row": 3,
+            "label": "Công ty Cổ phần Xây dựng Cầu đường 19"
+          },
+          {
+            "row": 4,
+            "label": "Công ty Quản lý và Sửa chữa Đường bộ Đắk Lắk"
+          },
+          {
+            "row": 8,
+            "label": "Đối tượng khác"
+          },
+          {
+            "row": 9,
+            "label": "Phải thu ngắn hạn khác"
+          },
+          {
+            "row": 10,
+            "label": "Cục Quản lý Đường bộ III"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "HHV_financial_statements_2022_consolidated"
+      ],
+      "tables": [
+        "HHV_financial_statements_2022_consolidated|286",
+        "HHV_financial_statements_2022_consolidated|329",
+        "HHV_financial_statements_2022_consolidated|2598",
+        "HHV_financial_statements_2022_consolidated|2496",
+        "HHV_financial_statements_2022_consolidated|2219",
+        "HHV_financial_statements_2022_consolidated|1866",
+        "HHV_financial_statements_2022_consolidated|2385",
+        "HHV_financial_statements_2022_consolidated|421",
+        "HHV_financial_statements_2022_consolidated|1481",
+        "HHV_financial_statements_2022_consolidated|2903",
+        "HHV_financial_statements_2022_consolidated|310",
+        "HHV_financial_statements_2022_consolidated|440",
+        "HHV_financial_statements_2022_consolidated|1947",
+        "HHV_financial_statements_2022_consolidated|2055",
+        "HHV_financial_statements_2022_consolidated|2002",
+        "HHV_financial_statements_2022_consolidated|1624",
+        "HHV_financial_statements_2022_consolidated|1979",
+        "HHV_financial_statements_2022_consolidated|2125",
+        "HHV_financial_statements_2022_consolidated|2408",
+        "HHV_financial_statements_2022_consolidated|1953",
+        "HHV_financial_statements_2022_consolidated|2471",
+        "HHV_financial_statements_2022_consolidated|3080",
+        "HHV_financial_statements_2022_consolidated|2528",
+        "HHV_financial_statements_2022_consolidated|375",
+        "HHV_financial_statements_2022_consolidated|2266",
+        "HHV_financial_statements_2022_consolidated|1592",
+        "HHV_financial_statements_2022_consolidated|3059",
+        "HHV_financial_statements_2022_consolidated|2270",
+        "HHV_financial_statements_2022_consolidated|3110",
+        "HHV_financial_statements_2022_consolidated|1897",
+        "HHV_financial_statements_2022_consolidated|2924",
+        "HHV_financial_statements_2022_consolidated|1928",
+        "HHV_financial_statements_2022_consolidated|2945",
+        "HHV_financial_statements_2022_consolidated|3178",
+        "HHV_financial_statements_2022_consolidated|2335",
+        "HHV_financial_statements_2022_consolidated|3011",
+        "HHV_financial_statements_2022_consolidated|2234",
+        "HHV_financial_statements_2022_consolidated|1907",
+        "HHV_financial_statements_2022_consolidated|1521",
+        "HHV_financial_statements_2022_consolidated|390",
+        "HHV_financial_statements_2022_consolidated|3038",
+        "HHV_financial_statements_2022_consolidated|346",
+        "HHV_financial_statements_2022_consolidated|2339",
+        "HHV_financial_statements_2022_consolidated|1550",
+        "HHV_financial_statements_2022_consolidated|2308",
+        "HHV_financial_statements_2022_consolidated|1682",
+        "HHV_financial_statements_2022_consolidated|2293",
+        "HHV_financial_statements_2022_consolidated|3152",
+        "HHV_financial_statements_2022_consolidated|2316",
+        "HHV_financial_statements_2022_consolidated|3131"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "HHV_financial_statements_2022_consolidated"
+      ],
+      "tables": [
+        "HHV_financial_statements_2022_consolidated|286",
+        "HHV_financial_statements_2022_consolidated|329",
+        "HHV_financial_statements_2022_consolidated|2496",
+        "HHV_financial_statements_2022_consolidated|310",
+        "HHV_financial_statements_2022_consolidated|1624",
+        "HHV_financial_statements_2022_consolidated|1979",
+        "HHV_financial_statements_2022_consolidated|1521",
+        "HHV_financial_statements_2022_consolidated|3011"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "HHV_financial_statements_2022_consolidated"
+      ],
+      "tables": [
+        "HHV_financial_statements_2022_consolidated|286",
+        "HHV_financial_statements_2022_consolidated|329",
+        "HHV_financial_statements_2022_consolidated|2496",
+        "HHV_financial_statements_2022_consolidated|310",
+        "HHV_financial_statements_2022_consolidated|1624",
+        "HHV_financial_statements_2022_consolidated|1979",
+        "HHV_financial_statements_2022_consolidated|1521",
+        "HHV_financial_statements_2022_consolidated|3011",
+        "HHV_financial_statements_2022_consolidated|1481",
+        "HHV_financial_statements_2022_consolidated|1592"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "HHV_financial_statements_2022_consolidated"
+      ],
+      "tables": [
+        "HHV_financial_statements_2022_consolidated|1624"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "HHV_financial_statements_2022_consolidated"
+      ],
+      "tables": [
+        "HHV_financial_statements_2022_consolidated|1624"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f2": 0.4166666666666667,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f2": 0.35714285714285715,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "HHV_financial_statements_2022_consolidated|1521",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": false,
+        "reranker": false
+      },
+      "terminal": "final_llm"
+    }
+  ],
+  "error": null
+}

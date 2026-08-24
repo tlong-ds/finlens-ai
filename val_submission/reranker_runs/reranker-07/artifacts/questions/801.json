@@ -1,0 +1,4818 @@
+{
+  "schema_version": 2,
+  "id": 801,
+  "question": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-23T09:39:55+00:00",
+  "finished_at": "2026-08-23T09:40:13+00:00",
+  "duration_seconds": 17.8289214969991,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/801.json",
+  "golden": {
+    "id": 801,
+    "question": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+    "relevant_docs": [
+      "VJC_financial_statements_2016_consolidated",
+      "VSC_financial_statements_2016_consolidated"
+    ],
+    "relevant_tables": [
+      "VJC_financial_statements_2016_consolidated|198",
+      "VSC_financial_statements_2016_consolidated|166"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_31",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_31",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 969
+      },
+      "rrf_score": 0.03225806451612903,
+      "dense_rank": 1,
+      "dense_score": 0.8808586,
+      "bm25_rank": 2,
+      "bm25_score": 17.912811505933654,
+      "retrieval_score": 0.03225806451612903,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 166
+      },
+      "rrf_score": 0.032018442622950824,
+      "dense_rank": 2,
+      "dense_score": 0.8533131,
+      "bm25_rank": 1,
+      "bm25_score": 13.778188261160308,
+      "retrieval_score": 0.032018442622950824,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 198
+      },
+      "rrf_score": 0.031544957774465976,
+      "dense_rank": 3,
+      "dense_score": 0.85552377,
+      "bm25_rank": 1,
+      "bm25_score": 18.054548234990328,
+      "retrieval_score": 0.031544957774465976,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_6",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_6",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 132
+      },
+      "rrf_score": 0.031024531024531024,
+      "dense_rank": 4,
+      "dense_score": 0.8486645,
+      "bm25_rank": 3,
+      "bm25_score": 13.047545555870776,
+      "retrieval_score": 0.031024531024531024,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_40",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_40",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1057
+      },
+      "rrf_score": 0.031024531024531024,
+      "dense_rank": 5,
+      "dense_score": 0.8636688,
+      "bm25_rank": 6,
+      "bm25_score": 10.456447232140182,
+      "retrieval_score": 0.031024531024531024,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_25",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_25",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 722
+      },
+      "rrf_score": 0.030621785881252923,
+      "dense_rank": 6,
+      "dense_score": 0.8452612,
+      "bm25_rank": 2,
+      "bm25_score": 13.664880342200515,
+      "retrieval_score": 0.030621785881252923,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_41",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_41",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1080
+      },
+      "rrf_score": 0.030886196246139225,
+      "dense_rank": 7,
+      "dense_score": 0.8981589,
+      "bm25_rank": 9,
+      "bm25_score": 9.709343551838728,
+      "retrieval_score": 0.030886196246139225,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_33",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_33",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 819
+      },
+      "rrf_score": 0.0304147465437788,
+      "dense_rank": 8,
+      "dense_score": 0.8659841,
+      "bm25_rank": 10,
+      "bm25_score": 5.999707484402906,
+      "retrieval_score": 0.0304147465437788,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_35",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_35",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1001
+      },
+      "rrf_score": 0.030090497737556562,
+      "dense_rank": 9,
+      "dense_score": 0.8581473,
+      "bm25_rank": 8,
+      "bm25_score": 10.25729065524922,
+      "retrieval_score": 0.030090497737556562,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_31",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_31",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 780
+      },
+      "rrf_score": 0.030309988518943745,
+      "dense_rank": 10,
+      "dense_score": 0.8529959,
+      "bm25_rank": 7,
+      "bm25_score": 6.772324311274925,
+      "retrieval_score": 0.030309988518943745,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_6",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_6",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 168
+      },
+      "rrf_score": 0.02844551282051282,
+      "dense_rank": 11,
+      "dense_score": 0.83821905,
+      "bm25_rank": 4,
+      "bm25_score": 11.873659701999264,
+      "retrieval_score": 0.02844551282051282,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_38",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_38",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 900
+      },
+      "rrf_score": 0.03009207275993712,
+      "dense_rank": 12,
+      "dense_score": 0.86768806,
+      "bm25_rank": 13,
+      "bm25_score": 4.628149823732205,
+      "retrieval_score": 0.03009207275993712,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_38",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_38",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1045
+      },
+      "rrf_score": 0.02803921568627451,
+      "dense_rank": 13,
+      "dense_score": 0.8554024,
+      "bm25_rank": 15,
+      "bm25_score": 6.413141885738696,
+      "retrieval_score": 0.02803921568627451,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_29",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_29",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 768
+      },
+      "rrf_score": 0.029910714285714284,
+      "dense_rank": 14,
+      "dense_score": 0.8431409,
+      "bm25_rank": 4,
+      "bm25_score": 12.816979969322807,
+      "retrieval_score": 0.029910714285714284,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_36",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_36",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1011
+      },
+      "rrf_score": 0.027650648360030512,
+      "dense_rank": 15,
+      "dense_score": 0.8545385,
+      "bm25_rank": 16,
+      "bm25_score": 6.295177504212786,
+      "retrieval_score": 0.027650648360030512,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_24",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_24",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 701
+      },
+      "rrf_score": 0.02900988017658188,
+      "dense_rank": 16,
+      "dense_score": 0.84702885,
+      "bm25_rank": 11,
+      "bm25_score": 5.72227323132401,
+      "retrieval_score": 0.02900988017658188,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_39",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_39",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1051
+      },
+      "rrf_score": 0.027598020555767037,
+      "dense_rank": 17,
+      "dense_score": 0.8494204,
+      "bm25_rank": 14,
+      "bm25_score": 6.471274201227927,
+      "retrieval_score": 0.027598020555767037,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_30",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_30",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 774
+      },
+      "rrf_score": 0.028577260665441927,
+      "dense_rank": 18,
+      "dense_score": 0.8396251,
+      "bm25_rank": 9,
+      "bm25_score": 6.1312519845262266,
+      "retrieval_score": 0.028577260665441927,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_17",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_17",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 778
+      },
+      "rrf_score": 0.02758751902587519,
+      "dense_rank": 19,
+      "dense_score": 0.8487912,
+      "bm25_rank": 13,
+      "bm25_score": 6.583622905827573,
+      "retrieval_score": 0.02758751902587519,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_35",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_35",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 844
+      },
+      "rrf_score": 0.02821939586645469,
+      "dense_rank": 20,
+      "dense_score": 0.8460114,
+      "bm25_rank": 14,
+      "bm25_score": 4.021914861677351,
+      "retrieval_score": 0.02821939586645469,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_55",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_55",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1276
+      },
+      "rrf_score": 0.026973565905412694,
+      "dense_rank": 21,
+      "dense_score": 0.8554054,
+      "bm25_rank": 23,
+      "bm25_score": 5.5079237534894325,
+      "retrieval_score": 0.026973565905412694,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_28",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_28",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 751
+      },
+      "rrf_score": 0.02728937728937729,
+      "dense_rank": 22,
+      "dense_score": 0.82507277,
+      "bm25_rank": 5,
+      "bm25_score": 8.726592065022752,
+      "retrieval_score": 0.02728937728937729,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_7",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_7",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 182
+      },
+      "rrf_score": 0.0266900790166813,
+      "dense_rank": 23,
+      "dense_score": 0.8309009,
+      "bm25_rank": 7,
+      "bm25_score": 10.291962337117166,
+      "retrieval_score": 0.0266900790166813,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_10",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_10",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2016,
+        "start_line": 219
+      },
+      "rrf_score": 0.026916221033868093,
+      "dense_rank": 24,
+      "dense_score": 0.82501996,
+      "bm25_rank": 6,
+      "bm25_score": 7.182643685110035,
+      "retrieval_score": 0.026916221033868093,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_34",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_34",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 997
+      },
+      "rrf_score": 0.025859192525859193,
+      "dense_rank": 25,
+      "dense_score": 0.84583855,
+      "bm25_rank": 21,
+      "bm25_score": 5.797743505987777,
+      "retrieval_score": 0.025859192525859193,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_15",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_15",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 607
+      },
+      "rrf_score": 0.026709401709401708,
+      "dense_rank": 26,
+      "dense_score": 0.8394599,
+      "bm25_rank": 18,
+      "bm25_score": 3.4951559777621686,
+      "retrieval_score": 0.026709401709401708,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_28",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_28",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 927
+      },
+      "rrf_score": 0.025807525807525808,
+      "dense_rank": 27,
+      "dense_score": 0.8392737,
+      "bm25_rank": 18,
+      "bm25_score": 6.144503516363994,
+      "retrieval_score": 0.025807525807525808,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_22",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_22",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 693
+      },
+      "rrf_score": 0.02581612258494337,
+      "dense_rank": 28,
+      "dense_score": 0.8354031,
+      "bm25_rank": 19,
+      "bm25_score": 3.484906322829923,
+      "retrieval_score": 0.02581612258494337,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_23",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_23",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 861
+      },
+      "rrf_score": 0.025158227848101268,
+      "dense_rank": 29,
+      "dense_score": 0.8367645,
+      "bm25_rank": 20,
+      "bm25_score": 5.909421090772231,
+      "retrieval_score": 0.025158227848101268,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_32",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_32",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 805
+      },
+      "rrf_score": 0.025561706284597852,
+      "dense_rank": 30,
+      "dense_score": 0.8377255,
+      "bm25_rank": 23,
+      "bm25_score": 2.1218222837142453,
+      "retrieval_score": 0.025561706284597852,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_44",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_44",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1108
+      },
+      "rrf_score": 0.02411038489469862,
+      "dense_rank": 31,
+      "dense_score": 0.8347798,
+      "bm25_rank": 25,
+      "bm25_score": 5.244587145422445,
+      "retrieval_score": 0.02411038489469862,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_49",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_49",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1032
+      },
+      "rrf_score": 0.02548701298701299,
+      "dense_rank": 32,
+      "dense_score": 0.83378315,
+      "bm25_rank": 20,
+      "bm25_score": 3.335721957227843,
+      "retrieval_score": 0.02548701298701299,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_43",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_43",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1090
+      },
+      "rrf_score": 0.015873015873015872,
+      "bm25_rank": 3,
+      "bm25_score": 12.555961224187985,
+      "retrieval_score": 0.015873015873015872,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 33
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_11",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_11",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "cash_flow",
+        "year": 2016,
+        "start_line": 238
+      },
+      "rrf_score": 0.025098039215686277,
+      "dense_rank": 34,
+      "dense_score": 0.83610713,
+      "bm25_rank": 25,
+      "bm25_score": 2.026535806871803,
+      "retrieval_score": 0.025098039215686277,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1120
+      },
+      "rrf_score": 0.015625,
+      "dense_rank": 35,
+      "dense_score": 0.861475,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_47",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_47",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1001
+      },
+      "rrf_score": 0.024404761904761905,
+      "dense_rank": 36,
+      "dense_score": 0.83042413,
+      "bm25_rank": 24,
+      "bm25_score": 2.042141844680987,
+      "retrieval_score": 0.024404761904761905,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_33",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_33",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 993
+      },
+      "rrf_score": 0.015384615384615385,
+      "bm25_rank": 5,
+      "bm25_score": 11.687555380299447,
+      "retrieval_score": 0.015384615384615385,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 37
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_50",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_50",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1049
+      },
+      "rrf_score": 0.015873015873015872,
+      "dense_rank": 38,
+      "dense_score": 0.85598975,
+      "retrieval_score": 0.015873015873015872,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 829
+      },
+      "rrf_score": 0.014285714285714285,
+      "bm25_rank": 10,
+      "bm25_score": 9.429127449337946,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_7",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_7",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 149
+      },
+      "rrf_score": 0.014705882352941176,
+      "bm25_rank": 8,
+      "bm25_score": 6.460314977850054,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_21",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_21",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 835
+      },
+      "rrf_score": 0.014285714285714285,
+      "dense_rank": 41,
+      "dense_score": 0.8502583,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_18",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_18",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 640
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 5.123207960513026,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 42
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_24",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_24",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 877
+      },
+      "rrf_score": 0.014084507042253521,
+      "bm25_rank": 11,
+      "bm25_score": 7.2843010517124895,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_36",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_36",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 877
+      },
+      "rrf_score": 0.0136986301369863,
+      "dense_rank": 44,
+      "dense_score": 0.83802205,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 809
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 7.022376729917705,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 45
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_23",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_23",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 697
+      },
+      "rrf_score": 0.013333333333333334,
+      "bm25_rank": 15,
+      "bm25_score": 3.908491372155466,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1423
+      },
+      "rrf_score": 0.0136986301369863,
+      "dense_rank": 47,
+      "dense_score": 0.8464821,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_16",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_16",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 615
+      },
+      "rrf_score": 0.013157894736842105,
+      "bm25_rank": 16,
+      "bm25_score": 3.705149381127163,
+      "retrieval_score": 0.013157894736842105,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 48
+    },
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_3",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_3",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 25
+      },
+      "rrf_score": 0.013333333333333334,
+      "dense_rank": 49,
+      "dense_score": 0.8417822,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_20",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_20",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 653
+      },
+      "rrf_score": 0.012987012987012988,
+      "bm25_rank": 17,
+      "bm25_score": 3.5138977142494294,
+      "retrieval_score": 0.012987012987012988,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "year": 2016,
+        "report_type": "hợp nhất"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "year": 2016,
+        "report_type": "hợp nhất"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_31",
+        "table_ref": "VJC_financial_statements_2016_consolidated|969",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+        "table_ref": "VSC_financial_statements_2016_consolidated|166",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+        "table_ref": "VJC_financial_statements_2016_consolidated|198",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_6",
+        "table_ref": "VSC_financial_statements_2016_consolidated|132",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_40",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1057",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_25",
+        "table_ref": "VSC_financial_statements_2016_consolidated|722",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_41",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1080",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_33",
+        "table_ref": "VSC_financial_statements_2016_consolidated|819",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_35",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1001",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_31",
+        "table_ref": "VSC_financial_statements_2016_consolidated|780",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_6",
+        "table_ref": "VJC_financial_statements_2016_consolidated|168",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_38",
+        "table_ref": "VSC_financial_statements_2016_consolidated|900",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_38",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1045",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_29",
+        "table_ref": "VSC_financial_statements_2016_consolidated|768",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_36",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1011",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_24",
+        "table_ref": "VSC_financial_statements_2016_consolidated|701",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_39",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1051",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_30",
+        "table_ref": "VSC_financial_statements_2016_consolidated|774",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_17",
+        "table_ref": "VJC_financial_statements_2016_consolidated|778",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_35",
+        "table_ref": "VSC_financial_statements_2016_consolidated|844",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_55",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1276",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_28",
+        "table_ref": "VSC_financial_statements_2016_consolidated|751",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_7",
+        "table_ref": "VJC_financial_statements_2016_consolidated|182",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_10",
+        "table_ref": "VSC_financial_statements_2016_consolidated|219",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_34",
+        "table_ref": "VJC_financial_statements_2016_consolidated|997",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_15",
+        "table_ref": "VSC_financial_statements_2016_consolidated|607",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_28",
+        "table_ref": "VJC_financial_statements_2016_consolidated|927",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_22",
+        "table_ref": "VSC_financial_statements_2016_consolidated|693",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_23",
+        "table_ref": "VJC_financial_statements_2016_consolidated|861",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_32",
+        "table_ref": "VSC_financial_statements_2016_consolidated|805",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_44",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1108",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_49",
+        "table_ref": "VSC_financial_statements_2016_consolidated|1032",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_43",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1090",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_11",
+        "table_ref": "VSC_financial_statements_2016_consolidated|238",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "cash_flow",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_46",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1120",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_47",
+        "table_ref": "VSC_financial_statements_2016_consolidated|1001",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_33",
+        "table_ref": "VJC_financial_statements_2016_consolidated|993",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_50",
+        "table_ref": "VSC_financial_statements_2016_consolidated|1049",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_20",
+        "table_ref": "VJC_financial_statements_2016_consolidated|829",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_7",
+        "table_ref": "VSC_financial_statements_2016_consolidated|149",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_21",
+        "table_ref": "VJC_financial_statements_2016_consolidated|835",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_18",
+        "table_ref": "VSC_financial_statements_2016_consolidated|640",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_24",
+        "table_ref": "VJC_financial_statements_2016_consolidated|877",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_36",
+        "table_ref": "VSC_financial_statements_2016_consolidated|877",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_19",
+        "table_ref": "VJC_financial_statements_2016_consolidated|809",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_23",
+        "table_ref": "VSC_financial_statements_2016_consolidated|697",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_64",
+        "table_ref": "VJC_financial_statements_2016_consolidated|1423",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_16",
+        "table_ref": "VSC_financial_statements_2016_consolidated|615",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "VJC_financial_statements_2016_consolidated_table_3",
+        "table_ref": "VJC_financial_statements_2016_consolidated|25",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b02",
+        "table_id": "VSC_financial_statements_2016_consolidated_table_20",
+        "table_ref": "VSC_financial_statements_2016_consolidated|653",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 15: Phải trả người bán ngắn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Cảng Hàng không Việt Nam"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Nhiên liệu bay Petrolimex",
+                "Tổng Công ty Cảng Hàng không Việt Nam",
+                "Các nhà cung cấp khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Nhiên liệu bay Petrolimex",
+                "Tổng Công ty Cảng Hàng không Việt Nam",
+                "Các nhà cung cấp khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 19: Phải trả ngắn hạn khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả khác",
+                "Lệ phí sân bay phải trả",
+                "Đặt cọc ngắn hạn đã nhận",
+                "Phải trả cho các bên liên quan khác (*)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lệ phí sân bay phải trả",
+                "Đặt cọc ngắn hạn đã nhận",
+                "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh, một bên liên quan",
+                "Phải trả cho các bên liên quan khác (*)",
+                "Phải trả khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lệ phí sân bay phải trả",
+                "Đặt cọc ngắn hạn đã nhận",
+                "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh, một bên liên quan",
+                "Phải trả cho các bên liên quan khác (*)",
+                "Phải trả khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hàng tồn kho (Thuyết minh 9)",
+                "Tiền gửi tại ngân hàng (Thuyết minh 5)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hàng tồn kho (Thuyết minh 9)",
+                "Tiền gửi tại ngân hàng (Thuyết minh 5)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: Doanh thu chưa thực hiện ngắn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu vận chuyển hành khách và hoạt động phụ trợ nhận trước, sẽ được thực hiện trong vòng 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu vận chuyển hành khách và hoạt động phụ trợ nhận trước, sẽ được thực hiện trong vòng 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Máy bay số hiệu A320 MSN 7167, VNA675(Thuyết minh 10)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Máy bay số hiệu A320 MSN 7167, VNA675(Thuyết minh 10)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hợp đồng hợp tác đầu tư"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hợp đồng hợp tác đầu tư"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đăng ký Đầu tư số"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đăng ký Đầu tư số"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư tại ngày 31/12/2016",
+                "Số dư tại ngày 1/1/2016"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1/1/2015",
+                "Góp vốn",
+                "Biến động khác",
+                "Số dư tại ngày 1/1/2016",
+                "Lợi nhuận thuần trong năm",
+                "Ảnh hưởng của giao dịch chuyển nhượng vốn giữa các cổ đông của công ty con",
+                "Số dư tại ngày 31/12/2016"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1/1/2015",
+                "Góp vốn",
+                "Lợi nhuận thuần trong năm",
+                "Phân bổ vào các quỹ",
+                "Phát hành lại cổ phiếu quỹ",
+                "khen thưởng, phúc lợi",
+                "Cổ tức",
+                "Thù lao Hội đồng Quản trị và Ban kiểm soát",
+                "Biến động khác",
+                "Số dư tại ngày 1/1/2016",
+                "Cổ tức (Thuyết minh 20)",
+                "Ảnh hưởng của giao dịch chuyển nhượng vốn giữa các cổ đông của công ty con",
+                "Số dư tại ngày 31/12/2016"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 11: Chi phí trả trước dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Phân bổ trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Phân bổ trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Biến động các khoản phải trả và nợ phải trả khác (mã chỉ tiêu 11)",
+                "Tiền thu từ thanh lý, nhượng bán tài sản cố địnhvà tài sản dài hạn khác (mã chỉ tiêu 22)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận từ hoạt động kinh doanh trước những thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Biến động các khoản phải thu (mã chỉ tiêu 09)",
+                "Biến động hàng tồn kho (mã chỉ tiêu 10)",
+                "Biến động các khoản phải trả và nợ phải trả khác (mã chỉ tiêu 11)",
+                "Biến động chi phí trả trước (mã chỉ tiêu 12)",
+                "Tiền chi mua sắm, xây dựng tài sản cố địnhvà tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền thu từ thanh lý, nhượng bán tài sản cố địnhvà tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi mua các công cụ nợ của các đơn vị khác (mã chỉ tiêu 23)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế (mã chỉ tiêu 01)",
+                "Điều chỉnh cho các khoản",
+                "Khấu hao và phân bổ (mã chỉ tiêu 02)",
+                "Các khoản dự phòng (mã chỉ tiêu 03)",
+                "Lãi chênh lệch tỷ giá hối đoái do đánh giá lại",
+                "các khoản mục tiền tệ có gốc ngoại tệ (mã chỉ tiêu 04)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05)",
+                "Chi phí lãi vay (mã chỉ tiêu 06)",
+                "Lợi nhuận từ hoạt động kinh doanh trước những thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Biến động các khoản phải thu (mã chỉ tiêu 09)",
+                "Biến động hàng tồn kho (mã chỉ tiêu 10)",
+                "Biến động các khoản phải trả và nợ phải trả khác (mã chỉ tiêu 11)",
+                "Biến động chi phí trả trước (mã chỉ tiêu 12)",
+                "Tiền lãi vay đã trả (mã chỉ tiêu 14)",
+                "Thuế thu nhập doanh nghiệp đã nộp (mã chỉ tiêu 15)",
+                "Tiền thu khác từ hoạt động kinh doanh (mã chỉ tiêu 16)",
+                "Tiền chi khác cho hoạt động kinh doanh (mã chỉ tiêu 17)",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Tiền chi mua sắm, xây dựng tài sản cố địnhvà tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền thu từ thanh lý, nhượng bán tài sản cố địnhvà tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi mua các công cụ nợ của các đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu từ bán lại các công cụ nợcủa các đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào các đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư góp vốn vào các đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền thu lãi tiền gửi và cổ tức (mã chỉ tiêu 27)",
+                "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 31: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2016VND",
+                "▪ Cung cấp dịch vụ",
+                "▪ Sử dụng dịch vụ",
+                "▪ Cổ tức",
+                "▪ Tiền lương và thường",
+                "▪ Thù lao"
+              ],
+              "mục lục chỉ tiêu": [
+                "2016VND",
+                "▪ Cung cấp dịch vụ",
+                "▪ Sử dụng dịch vụ",
+                "▪ Cổ tức",
+                "▪ Tiền lương và thường",
+                "▪ Thù lao"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tài sản dài hạn (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)",
+                "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản dài hạn (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 8)",
+                "Nguyên giá (mã chỉ tiêu 222)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 9)",
+                "Nguyên giá (mã chỉ tiêu 228)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 10)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 5(b))",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 5(c))",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)",
+                "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "• Công ty TNHH Ngôi sao Xanh Tương lai",
+                "• Công ty Cổ phần Logistics Cảng Đà Nẵng",
+                "• Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ"
+              ],
+              "mục lục chỉ tiêu": [
+                "• Công ty TNHH Ngôi sao Xanh Tương lai",
+                "• Công ty Cổ phần Logistics Cảng Đà Nẵng",
+                "• Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 21)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 16(a))",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 18)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NGUỒN VỐN",
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 16(a))",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 18)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 20(a))",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 21)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 20(b))",
+                "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số 22)",
+                "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 21)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 24)",
+                "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "Lợi ích cổ đông không kiểm soát (mã chỉ tiêu 429)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 7(a))",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 8(a))",
+                "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151; tham chiếu Thuyết minh số 14(a))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123)",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 7(a))",
+                "Phải thu về cho vay ngắn hạn (mã chỉ tiêu 135)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN",
+                "Tài sản ngắn hạn(\\( 100 = 110 + 120 + 130 + 140 + 150 \\)) (mã chỉ tiêu 100)",
+                "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 5)",
+                "Tiền (mã chỉ tiêu 111)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120)",
+                "Công cụ tài chính kinh doanh (mã chỉ tiêu 121)",
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123)",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 7(a))",
+                "Phải thu về cho vay ngắn hạn (mã chỉ tiêu 135)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 8(a))",
+                "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 9)",
+                "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151; tham chiếu Thuyết minh số 14(a))",
+                "Thuế giá trị gia tăng được khấu trừ (mã chỉ tiêu 152; tham chiếu Thuyết minh số 16(b))",
+                "Thuế phải thu Nhà Nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 16(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: Tiền và các khoản tương đương tiền 31/12/2016VND 1/1/2016VND Tiền mặt 2.543.172.753 3.796.679.625"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng",
+                "Các khoản tương đương tiền"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng",
+                "Các khoản tương đương tiền"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 13: Đầu tư tài chính dài hạn 31/12/2016 1/1/2016 % quyềnsở hữu/quyềnbiểu quyết VND % quyềnsở hữu/quyềnbiểu quyết VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2016",
+                "1/1/2016"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "• Công ty liên kết- Thai Vietjet Air Joint Stock Company Limited (*)",
+                "- Công ty Cổ phần Nhà ga Quốc tế Cam Ranh (*) (**)",
+                "• Các đơn vị khác- Công ty Cổ phầnPhục vụ Mặt đất Sài Gòn",
+                "• Hợp đồng hợp tác đầu tư"
+              ],
+              "mục lục chỉ tiêu": [
+                "• Công ty liên kết- Thai Vietjet Air Joint Stock Company Limited (*)",
+                "- Công ty Cổ phần Nhà ga Quốc tế Cam Ranh (*) (**)",
+                "• Các đơn vị khác- Công ty Cổ phầnPhục vụ Mặt đất Sài Gòn",
+                "• Hợp đồng hợp tác đầu tư"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư tại ngày 31 tháng 12 năm 2016",
+                "Số dư tại ngày 1 tháng 1 năm 2016"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1 tháng 1 năm 2015",
+                "Cổ tức bằng cổ phiếu (Thuyết minh 25)",
+                "Thanh lý một công ty con có lợi ích cổ đông không kiểm soát",
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Chênh lệch quy đổi ngoại tệ các hoạt động ở nước ngoài",
+                "Số dư tại ngày 31 tháng 12 năm 2016"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1 tháng 1 năm 2015",
+                "Cổ tức bằng cổ phiếu (Thuyết minh 25)",
+                "Phát hành cổ phiếu phổ thông",
+                "Cổ tức (Thuyết minh 25)",
+                "Lợi nhuận thuần trong năm",
+                "Chênh lệch quy đổi ngoại tệ các hoạt động ở nước ngoài",
+                "Thanh lý một công ty con có lợi ích cổ đông không kiểm soát",
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Số dư tại ngày 31 tháng 12 năm 2016"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: Hàng tồn kho 31/12/2016 1/1/2016 Giá gốc VND Dự phòng VND Giá gốc VND Dự phòng VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2016",
+                "1/1/2016"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Nguyên vật liệu",
+                "Công cụ và dụng cụ",
+                "Hàng hóa"
+              ],
+              "mục lục chỉ tiêu": [
+                "Nguyên vật liệu",
+                "Công cụ và dụng cụ",
+                "Hàng hóa"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 13(b))",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NGUỒN VỐN",
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 13(b))",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 16(a))",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321)",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322; tham chiếu Thuyết minh số 17)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 16(b))",
+                "VỐN CHỦ SỞ HỮ'U (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 18)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 19)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 18)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418; tham chiếu Thuyết minh số 21)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421; tham chiếu Thuyết minh số 18)",
+                "- LNST chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                "- LNST chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                "Lợi ích cổ đông không kiểm soát (mã chỉ tiêu 429; tham chiếu Thuyết minh số 18)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ],
+              "kỳ số liệu": [
+                "Lãi suất năm",
+                "Năm đáo hạn",
+                "31/12/2016 VND",
+                "1/1/2016 VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Khoản vay 1 (i)",
+                "Khoản vay 2 (ii)",
+                "Khoản vay 3 (iii)",
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Khoản vay 1 (i)",
+                "Khoản vay 2 (ii)",
+                "Khoản vay 3 (iii)",
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 16: Vay"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vay dài hạn đến hạn trả"
+              ],
+              "kỳ số liệu": [
+                "Biến động tăng trong năm VND",
+                "Biến động giảm trong năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay dài hạn đến hạn trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay dài hạn đến hạn trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: Các khoản đầu tư tài chính"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Đầu tư nấm giữ đến ngày đáo hạn - ngắn hạn▪ Tiền gửi có kỳ hạn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đầu tư nấm giữ đến ngày đáo hạn - ngắn hạn▪ Tiền gửi có kỳ hạn"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đầu tư nấm giữ đến ngày đáo hạn - ngắn hạn▪ Tiền gửi có kỳ hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Tiền trả cổ tức cho cổ đông không kiểm soát (mã chỉ tiêu 36)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Nhận tiền góp vốn từ cổ đông không kiểm soát (mã chỉ tiêu 31)",
+                "Tiền thu từ phát hành lại cổ phiếu quỹ (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Tiền trả cổ tức cho cổ đông của Công ty (mã chỉ tiêu 36)",
+                "Tiền trả cổ tức cho cổ đông không kiểm soát (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 40)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Nhận tiền góp vốn từ cổ đông không kiểm soát (mã chỉ tiêu 31)",
+                "Tiền thu từ phát hành lại cổ phiếu quỹ (mã chỉ tiêu 31)",
+                "Tiền thu từ đi vay (mã chỉ tiêu 33)",
+                "Tiền trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Tiền trả cổ tức cho cổ đông của Công ty (mã chỉ tiêu 36)",
+                "Tiền trả cổ tức cho cổ đông không kiểm soát (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm\\( \\) (mã chỉ tiêu 50)",
+                "Tiền và các khoản tương đương tiền đầu năm (mã chỉ tiêu 60)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ (mã chỉ tiêu 61)",
+                "Tiền và các khoản tương đương tiền cuối năm\\( \\) (Thuyết minh 4) (mã chỉ tiêu 70)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: Phải thu ngắn hạn của khách hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty TNHH Cosco Container Lines Việt Nam",
+                "Công ty Cổ phần Đại lý Hàng hải Việt Nam",
+                "Công ty TNHH OOCL Việt Nam",
+                "Công ty TNHH APL-NOL Việt Nam",
+                "Công ty TNHH Bia Carlsberg Việt Nam"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH APL-NOL Việt Nam",
+                "Công ty Cổ phần Đại lý Hàng hải Việt Nam",
+                "Công ty Liên doanh Đại lý vận tải Evergreen Việt Nam",
+                "Công ty TNHH OOCL Việt Nam",
+                "Công ty TNHH Cosco Container Lines Việt Nam",
+                "Công ty TNHH Bia Carlsberg Việt Nam",
+                "Các khách hàng khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH APL-NOL Việt Nam",
+                "Công ty Cổ phần Đại lý Hàng hải Việt Nam",
+                "Công ty Liên doanh Đại lý vận tải Evergreen Việt Nam",
+                "Công ty TNHH OOCL Việt Nam",
+                "Công ty TNHH Cosco Container Lines Việt Nam",
+                "Công ty TNHH Bia Carlsberg Việt Nam",
+                "Các khách hàng khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Phân loại lại",
+                "Số dư cuối năm",
+                "Khấu hao trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chuyển từ xây dựng cơ bản dở dang",
+                "Thanh lý",
+                "Phân loại lại",
+                "Số dư cuối năm",
+                "Khấu hao trong năm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi ngân hàng (Thuyết minh 5)",
+                "Các khoản tương đương tiền (Thuyết minh 5)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi ngân hàng (Thuyết minh 5)",
+                "Các khoản tương đương tiền (Thuyết minh 5)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 30: Chi phí tài chính 2016VND 2015VND Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả 442.283.153.862 272.908.367.170"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả",
+                "Chi phí lãi vay",
+                "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả",
+                "Chi phí lãi vay",
+                "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Các khoản đóng góp vào quỹ bảo dưỡng máy bay",
+                "Đặc cọc mua máy bay",
+                "Đặt cọc thuê máy bay",
+                "Phải thu khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Các khoản đóng góp vào quỹ bảo dưỡng máy bay",
+                "Đặc cọc mua máy bay",
+                "Đặt cọc thuê máy bay",
+                "Phải thu khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 17: Chi phí phải trả ngắn hạn 31/12/2016VND 1/1/2016VND Chi phí liên quan đến máy bay 409.026.251.553 350.426.292.908"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí liên quan đến máy bay",
+                "Lương tháng 13",
+                "Chi phí lãi vay",
+                "Chi phí bảo trì",
+                "Chi phí khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí liên quan đến máy bay",
+                "Lương tháng 13",
+                "Chi phí lãi vay",
+                "Chi phí bảo trì",
+                "Chi phí khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh",
+                "Công ty Cổ phần Du lịch Bắc Mỹ An",
+                "Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh",
+                "Công ty Cổ phần Du lịch Bắc Mỹ An",
+                "Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136)",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 5(a))",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN",
+                "Tài sản ngắn hạn\\( \\) (mã chỉ tiêu 100)",
+                "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 4)",
+                "Tiền (mã chỉ tiêu 111)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120)",
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 5(a))",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136)",
+                "Dự phòng các khoản phải thu ngắn hạn khó đòi (mã chỉ tiêu 137)",
+                "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 7)",
+                "Hàng tồn kho (mã chỉ tiêu 141)",
+                "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151)",
+                "Thuế giá trị gia tăng được khấu trừ (mã chỉ tiêu 152; tham chiếu Thuyết minh số 13(a))",
+                "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đã được duyệt và đã ký kết hợp đồng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đã được duyệt và đã ký kết hợp đồng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "2016",
+                "2015"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu trong năm đề trả cổ tức (Thuyết minh 20)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu trong năm đề trả cổ tức (Thuyết minh 20)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: Chi phí xây dựng cơ bản dở dang 2016VND 2015VND Số dư đầu năm 82.695.831.636 5.652.438.424"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chi phí lãi vay vốn hóa",
+                "Chuyển sang tài sản cố định hữu hình",
+                "Chuyển sang tài sản cố định vô hình",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chi phí lãi vay vốn hóa",
+                "Chuyển sang tài sản cố định hữu hình",
+                "Chuyển sang tài sản cố định vô hình",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu phổ thông đã phát hành năm trước mang sang",
+                "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016",
+                "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 9 tháng 5 năm 2015",
+                "Số lượng bình quân gia quyền của cổ phiếu phổ thông trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu phổ thông đã phát hành năm trước mang sang",
+                "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016",
+                "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 9 tháng 5 năm 2015",
+                "Số lượng bình quân gia quyền của cổ phiếu phổ thông trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 22: Các khoản mục ngoài Băng cân đối kế toán"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trong vòng một năm",
+                "Trong vòng hai đến năm năm",
+                "Sau năm năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trong vòng một năm",
+                "Trong vòng hai đến năm năm",
+                "Sau năm năm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay dài hạn",
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay dài hạn",
+                "Khoản đến hạn trả trong vòng 12 tháng",
+                "Khoản đến hạn trả sau 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vay ngắn hạn",
+                "Vay dài hạn đến hạn trả"
+              ],
+              "kỳ số liệu": [
+                "Biến động trong năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngắn hạn",
+                "Vay dài hạn đến hạn trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngắn hạn",
+                "Vay dài hạn đến hạn trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 7(b))",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 8(b))",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 14(b))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tài sản dài hạn (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 7(b))",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 8(b))",
+                "Tài sản cố định (mã chỉ tiêu 220)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản dài hạn (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 7(b))",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 8(b))",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 10)",
+                "Nguyên giá (mã chỉ tiêu 222)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 11)",
+                "Nguyên giá (mã chỉ tiêu 228)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 12)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250; tham chiếu Thuyết minh số 13)",
+                "Đầu tư vào các công ty liên kết (mã chỉ tiêu 252)",
+                "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253)",
+                "Đầu tư nằm giữ đến ngày đáo hạn (mã chỉ tiêu 255)",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 14(b))",
+                "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: Dự phòng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Ngắn hạn"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Dự phòng lập trong năm",
+                "Chênh lệch tỷ giá hối đoái",
+                "Số dư cuối năm",
+                "Ngắn hạn",
+                "Dài hạn"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Dự phòng lập trong năm",
+                "Giá trị thời gian của dòng tiềnđã được chiết khấu",
+                "Dự phòng sử dụng trong năm",
+                "Dự phòng xóa số trong năm",
+                "Chênh lệch tỷ giá hối đoái",
+                "Số dư cuối năm",
+                "Ngắn hạn",
+                "Dài hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: Trả trước cho người bán"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trả trước cho Thai Vietjet Air Joint Stock Company Limited, một công ty liên kết"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trả trước cho dịch vụ sửa chữa động cơ",
+                "Trả trước cho Thai Vietjet Air Joint Stock Company Limited, một công ty liên kết",
+                "Trả trước cho dự án trung tâm huấn luyện bay",
+                "Trả trước cho Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai, một bên liên quan, để thực hiện dự án khu nhà ở cho tiếp viên",
+                "Trả trước khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trả trước cho dịch vụ sửa chữa động cơ",
+                "Trả trước cho Thai Vietjet Air Joint Stock Company Limited, một công ty liên kết",
+                "Trả trước cho dự án trung tâm huấn luyện bay",
+                "Trả trước cho Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai, một bên liên quan, để thực hiện dự án khu nhà ở cho tiếp viên",
+                "Trả trước khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 37: Các giao dịch phi tiền tệ từ các hoạt động đầu tư và tài chính 2016VND 2015VND Cổ tức bằng cổ phiếu 978.500.000.000 200.000.000.000"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cán trừ khoản phải trả cổ tức bằng tiền với khoản phải thu từ phát hành cổ phiếu phổ thông"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ tức bằng cổ phiếu",
+                "Cán trừ khoản phải trả cổ tức bằng tiền với khoản phải thu từ phát hành cổ phiếu phổ thông",
+                "Thanh lý một công ty con nhưng chưa thu tiền"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ tức bằng cổ phiếu",
+                "Cán trừ khoản phải trả cổ tức bằng tiền với khoản phải thu từ phát hành cổ phiếu phổ thông",
+                "Thanh lý một công ty con nhưng chưa thu tiền"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 12: Phải trả người bán ngắn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                "31/12/2016VND"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "31/12/2016VND",
+                "▪ Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ",
+                "▪ Công ty Cổ phần Đầu tư và Xây dựng Công trình thủyCienco 1 - Hải Phòng",
+                "▪ Công ty Cổ phần Cảng Nam Hải",
+                "▪ Công ty Cổ phần Dịch vụ Vận tải và Kho vận Hồng Quân",
+                "▪ Công ty Cổ phần Cảng Nam Hải Đình Vũ",
+                "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                "▪ Công ty Cổ phần Cảng Đà Nẵng"
+              ],
+              "mục lục chỉ tiêu": [
+                "31/12/2016VND",
+                "▪ Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ",
+                "▪ Công ty Cổ phần Logistics Cảng Đà Nẵng",
+                "▪ Công ty Kocks Ardelt Kranbau GmbH",
+                "▪ Công ty Cargotec Belgium NV",
+                "▪ Công ty Cổ phần Đầu tư và Xây dựng Công trình thủyCienco 1 - Hải Phòng",
+                "▪ Công ty Cổ phần Cảng Nam Hải",
+                "▪ Công ty Cổ phần Dịch vụ Vận tải và Kho vận Hồng Quân",
+                "▪ Công ty TNHH Xây dựng và Trang trí Nội thất Thăng Long",
+                "▪ Công ty Cổ phần Xăng đầu Dầu khí PVOIL Hải Phòng",
+                "▪ Công ty Cổ phần Cảng Nam Hải Đình Vũ",
+                "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                "▪ Công ty Cổ phần Cảng Đà Nẵng",
+                "▪ Công ty Cổ phần Vận tải biển Quốc tế VISC",
+                "▪ Công ty Cổ phần Dịch vụ Hàng hải Hải Âu",
+                "▪ Các nhà cung cấp khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 15: Phải trả ngắn hạn khác 31/12/2016VND 1/1/2016VND Kinh phí công đoàn 3.932.504.350 4.466.771.369"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ tức phải trả",
+                "Các khoản phải trả, phải nộp khác"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Kinh phí công đoàn",
+                "Cổ tức phải trả",
+                "Các khoản thu hộ hăng tàu",
+                "Các khoản phải trả, phải nộp khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Kinh phí công đoàn",
+                "Cổ tức phải trả",
+                "Các khoản thu hộ hăng tàu",
+                "Các khoản phải trả, phải nộp khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: Chi phí phải trả ngắn hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí phải trả ngắn hạn khác"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay",
+                "Chi phí phải trả ngắn hạn khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay",
+                "Chi phí phải trả ngắn hạn khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư dầu năm",
+                "Trích lập trong năm",
+                "Sử dụng trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư dầu năm",
+                "Trích lập trong năm",
+                "Sử dụng trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 32: Các giao dịch phi tiền tệ từ các hoạt động đầu tư và tài chính 2016VND 2015VND Trả cổ tức thông qua phát hành cổ phiếu phổ thông 41.411.000.000 68.745.010.000"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trả cổ tức thông qua phát hành cổ phiếu phổ thông"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trả cổ tức thông qua phát hành cổ phiếu phổ thông"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Xây dựng nhà kho số 3 tại Xí nghiệp Cảng Viconship",
+                "Cầu cảng giai đoạn 2 tại Công ty Cổ phần Cảng Xanh VIP",
+                "Các hạng mục khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Xây dựng nhà kho số 3 tại Xí nghiệp Cảng Viconship",
+                "Cầu cảng giai đoạn 2 tại Công ty Cổ phần Cảng Xanh VIP",
+                "Các hạng mục khác"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c09",
+          "c17",
+          "c25",
+          "c33",
+          "c41",
+          "c49",
+          "c08",
+          "c16",
+          "c24",
+          "c32",
+          "c40",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c08",
+            "c40"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c08",
+          "c40"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c03",
+          "c11",
+          "c19",
+          "c27",
+          "c35",
+          "c43",
+          "c02",
+          "c10",
+          "c18",
+          "c26",
+          "c34",
+          "c42",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03",
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c03",
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c05",
+          "c13",
+          "c21",
+          "c29",
+          "c37",
+          "c45",
+          "c04",
+          "c12",
+          "c20",
+          "c28",
+          "c36",
+          "c44"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c05",
+            "c13",
+            "c21",
+            "c29",
+            "c37",
+            "c45",
+            "c04",
+            "c12",
+            "c20",
+            "c28",
+            "c36",
+            "c44"
+          ]
+        },
+        "nominated_keys": [
+          "c05",
+          "c13",
+          "c21",
+          "c29",
+          "c37",
+          "c45",
+          "c04",
+          "c12",
+          "c20",
+          "c28",
+          "c36",
+          "c44"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c07",
+          "c15",
+          "c23",
+          "c31",
+          "c39",
+          "c47",
+          "c06",
+          "c14",
+          "c22",
+          "c30",
+          "c38",
+          "c46"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c07",
+            "c06"
+          ]
+        },
+        "nominated_keys": [
+          "c07",
+          "c06"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c03",
+      "c05",
+      "c07",
+      "c02",
+      "c06",
+      "c08",
+      "c13",
+      "c21",
+      "c40",
+      "c29",
+      "c37",
+      "c45",
+      "c04",
+      "c12",
+      "c20",
+      "c28",
+      "c36",
+      "c44"
+    ],
+    "lexical_finalist_keys": [
+      "c02",
+      "c03",
+      "c31",
+      "c06",
+      "c01",
+      "c04"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c03",
+      "c05",
+      "c07",
+      "c02",
+      "c06",
+      "c08",
+      "c13",
+      "c21",
+      "c40",
+      "c29",
+      "c37",
+      "c45",
+      "c04",
+      "c12",
+      "c20",
+      "c28",
+      "c36",
+      "c44",
+      "c31"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Hiệu số số dư nợ phải trả người bán ngắn hạn giữa CTCP Hàng không Vietjet và CTCP Container Việt Nam đến ngày 31/12/2016 là bao nhiêu tỷ đồng?",
+      "giới hạn số bảng": 18,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "VJC",
+          "tên doanh nghiệp": "CTCP Hàng không Vietjet",
+          "năm": 2016,
+          "loại báo cáo": "hợp nhất"
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "VSC",
+          "tên doanh nghiệp": "CTCP Container Việt Nam",
+          "năm": 2016,
+          "loại báo cáo": "hợp nhất"
+        }
+      ],
+      "các báo cáo bắt buộc": [
+        "b01",
+        "b02"
+      ],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "VJC",
+          "tên doanh nghiệp": "CTCP Hàng không Vietjet",
+          "năm": 2016,
+          "loại báo cáo": "hợp nhất",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 15: Phải trả người bán ngắn hạn"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tổng Công ty Cảng Hàng không Việt Nam"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Nhiên liệu bay Petrolimex",
+                  "Tổng Công ty Cảng Hàng không Việt Nam",
+                  "Các nhà cung cấp khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Công ty Cổ phần Nhiên liệu bay Petrolimex",
+                  "Tổng Công ty Cảng Hàng không Việt Nam",
+                  "Các nhà cung cấp khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 21)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 16(a))",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 18)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NGUỒN VỐN",
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 15)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 16(a))",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 17)",
+                  "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 18)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                  "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 20(a))",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 21)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                  "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 20(b))",
+                  "Thuế thu nhập hoãn lại phải trả (mã chỉ tiêu 341; tham chiếu Thuyết minh số 22)",
+                  "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 21)",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 24)",
+                  "Chênh lệch tỷ giá hối đoái (mã chỉ tiêu 417)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                  "Lợi ích cổ đông không kiểm soát (mã chỉ tiêu 429)",
+                  "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c05",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Phải thu ngắn hạn của khách hàng (Thuyết minh 6)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c07",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Khoản đến hạn trả trong vòng 12 tháng",
+                  "Khoản đến hạn trả sau 12 tháng"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vay dài hạn",
+                  "Khoản đến hạn trả trong vòng 12 tháng",
+                  "Khoản đến hạn trả sau 12 tháng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vay dài hạn",
+                  "Khoản đến hạn trả trong vòng 12 tháng",
+                  "Khoản đến hạn trả sau 12 tháng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tiền gửi ngân hàng (Thuyết minh 5)",
+                  "Các khoản tương đương tiền (Thuyết minh 5)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền gửi ngân hàng (Thuyết minh 5)",
+                  "Các khoản tương đương tiền (Thuyết minh 5)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c21",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 30: Chi phí tài chính 2016VND 2015VND Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả 442.283.153.862 272.908.367.170"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả",
+                  "Chi phí lãi vay",
+                  "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                  "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Giá trị thời gian của dòng tiền đã được chiết khấu của các khoản dự phòng phải trả",
+                  "Chi phí lãi vay",
+                  "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                  "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c29",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Các khoản đóng góp vào quỹ bảo dưỡng máy bay",
+                  "Đặc cọc mua máy bay",
+                  "Đặt cọc thuê máy bay",
+                  "Phải thu khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Các khoản đóng góp vào quỹ bảo dưỡng máy bay",
+                  "Đặc cọc mua máy bay",
+                  "Đặt cọc thuê máy bay",
+                  "Phải thu khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c37",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 17: Chi phí phải trả ngắn hạn 31/12/2016VND 1/1/2016VND Chi phí liên quan đến máy bay 409.026.251.553 350.426.292.908"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí liên quan đến máy bay",
+                  "Lương tháng 13",
+                  "Chi phí lãi vay",
+                  "Chi phí bảo trì",
+                  "Chi phí khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí liên quan đến máy bay",
+                  "Lương tháng 13",
+                  "Chi phí lãi vay",
+                  "Chi phí bảo trì",
+                  "Chi phí khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c45",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh",
+                  "Công ty Cổ phần Du lịch Bắc Mỹ An",
+                  "Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Ngân hàng Thương mại Cổ phần Phát triển Nhà Thành phố Hồ Chí Minh",
+                  "Công ty Cổ phần Du lịch Bắc Mỹ An",
+                  "Công ty Cổ phần Khách Sạn và Du Lịch Thiên Thai"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c31",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "VJC — CTCP Hàng không Vietjet — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 21: Dự phòng"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Ngắn hạn"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Dự phòng lập trong năm",
+                  "Chênh lệch tỷ giá hối đoái",
+                  "Số dư cuối năm",
+                  "Ngắn hạn",
+                  "Dài hạn"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Dự phòng lập trong năm",
+                  "Giá trị thời gian của dòng tiềnđã được chiết khấu",
+                  "Dự phòng sử dụng trong năm",
+                  "Dự phòng xóa số trong năm",
+                  "Chênh lệch tỷ giá hối đoái",
+                  "Số dư cuối năm",
+                  "Ngắn hạn",
+                  "Dài hạn"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "VSC",
+          "tên doanh nghiệp": "CTCP Container Việt Nam",
+          "năm": 2016,
+          "loại báo cáo": "hợp nhất",
+          "các bảng": [
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 13(b))",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NGUỒN VỐN",
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 12)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 13(b))",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 14)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 15)",
+                  "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 16(a))",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321)",
+                  "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322; tham chiếu Thuyết minh số 17)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                  "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 16(b))",
+                  "VỐN CHỦ SỞ HỮ'U (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 18)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 19)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 18)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418; tham chiếu Thuyết minh số 21)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421; tham chiếu Thuyết minh số 18)",
+                  "- LNST chưa phân phối lũy kế đến cuối năm trước (mã chỉ tiêu 421a)",
+                  "- LNST chưa phân phối năm nay (mã chỉ tiêu 421b)",
+                  "Lợi ích cổ đông không kiểm soát (mã chỉ tiêu 429; tham chiếu Thuyết minh số 18)",
+                  "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c06",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 12: Phải trả người bán ngắn hạn"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                  "31/12/2016VND"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "31/12/2016VND",
+                  "▪ Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ",
+                  "▪ Công ty Cổ phần Đầu tư và Xây dựng Công trình thủyCienco 1 - Hải Phòng",
+                  "▪ Công ty Cổ phần Cảng Nam Hải",
+                  "▪ Công ty Cổ phần Dịch vụ Vận tải và Kho vận Hồng Quân",
+                  "▪ Công ty Cổ phần Cảng Nam Hải Đình Vũ",
+                  "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                  "▪ Công ty Cổ phần Cảng Đà Nẵng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "31/12/2016VND",
+                  "▪ Công ty Cổ phần Cảng dịch vụ Dầu khí Đình Vũ",
+                  "▪ Công ty Cổ phần Logistics Cảng Đà Nẵng",
+                  "▪ Công ty Kocks Ardelt Kranbau GmbH",
+                  "▪ Công ty Cargotec Belgium NV",
+                  "▪ Công ty Cổ phần Đầu tư và Xây dựng Công trình thủyCienco 1 - Hải Phòng",
+                  "▪ Công ty Cổ phần Cảng Nam Hải",
+                  "▪ Công ty Cổ phần Dịch vụ Vận tải và Kho vận Hồng Quân",
+                  "▪ Công ty TNHH Xây dựng và Trang trí Nội thất Thăng Long",
+                  "▪ Công ty Cổ phần Xăng đầu Dầu khí PVOIL Hải Phòng",
+                  "▪ Công ty Cổ phần Cảng Nam Hải Đình Vũ",
+                  "▪ Công ty Cổ phần Greating Fortune Container Việt Nam",
+                  "▪ Công ty Cổ phần Cảng Đà Nẵng",
+                  "▪ Công ty Cổ phần Vận tải biển Quốc tế VISC",
+                  "▪ Công ty Cổ phần Dịch vụ Hàng hải Hải Âu",
+                  "▪ Các nhà cung cấp khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Số dư tại ngày 31/12/2016",
+                  "Số dư tại ngày 1/1/2016"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 1/1/2015",
+                  "Góp vốn",
+                  "Biến động khác",
+                  "Số dư tại ngày 1/1/2016",
+                  "Lợi nhuận thuần trong năm",
+                  "Ảnh hưởng của giao dịch chuyển nhượng vốn giữa các cổ đông của công ty con",
+                  "Số dư tại ngày 31/12/2016"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 1/1/2015",
+                  "Góp vốn",
+                  "Lợi nhuận thuần trong năm",
+                  "Phân bổ vào các quỹ",
+                  "Phát hành lại cổ phiếu quỹ",
+                  "khen thưởng, phúc lợi",
+                  "Cổ tức",
+                  "Thù lao Hội đồng Quản trị và Ban kiểm soát",
+                  "Biến động khác",
+                  "Số dư tại ngày 1/1/2016",
+                  "Cổ tức (Thuyết minh 20)",
+                  "Ảnh hưởng của giao dịch chuyển nhượng vốn giữa các cổ đông của công ty con",
+                  "Số dư tại ngày 31/12/2016"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c40",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                  "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Tài sản dài hạn (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                  "Tài sản cố định (mã chỉ tiêu 220)",
+                  "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                  "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)",
+                  "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tài sản dài hạn (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216)",
+                  "Tài sản cố định (mã chỉ tiêu 220)",
+                  "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 8)",
+                  "Nguyên giá (mã chỉ tiêu 222)",
+                  "Giá trị hao mòn lũy kế (mã chỉ tiêu 223)",
+                  "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 9)",
+                  "Nguyên giá (mã chỉ tiêu 228)",
+                  "Giá trị hao mòn lũy kế (mã chỉ tiêu 229)",
+                  "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                  "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 10)",
+                  "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                  "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 5(b))",
+                  "Đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 253; tham chiếu Thuyết minh số 5(c))",
+                  "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                  "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 11)",
+                  "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136)",
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 5(a))",
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                  "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN",
+                  "Tài sản ngắn hạn\\( \\) (mã chỉ tiêu 100)",
+                  "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 4)",
+                  "Tiền (mã chỉ tiêu 111)",
+                  "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                  "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120)",
+                  "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 5(a))",
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 6)",
+                  "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132)",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136)",
+                  "Dự phòng các khoản phải thu ngắn hạn khó đòi (mã chỉ tiêu 137)",
+                  "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 7)",
+                  "Hàng tồn kho (mã chỉ tiêu 141)",
+                  "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                  "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151)",
+                  "Thuế giá trị gia tăng được khấu trừ (mã chỉ tiêu 152; tham chiếu Thuyết minh số 13(a))",
+                  "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c12",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Đã được duyệt và đã ký kết hợp đồng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Đã được duyệt và đã ký kết hợp đồng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c20",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "2016",
+                  "2015"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu trong năm đề trả cổ tức (Thuyết minh 20)",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu trong năm đề trả cổ tức (Thuyết minh 20)",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c28",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 10: Chi phí xây dựng cơ bản dở dang 2016VND 2015VND Số dư đầu năm 82.695.831.636 5.652.438.424"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm",
+                  "Chi phí lãi vay vốn hóa",
+                  "Chuyển sang tài sản cố định hữu hình",
+                  "Chuyển sang tài sản cố định vô hình",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm",
+                  "Chi phí lãi vay vốn hóa",
+                  "Chuyển sang tài sản cố định hữu hình",
+                  "Chuyển sang tài sản cố định vô hình",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c36",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Cổ phiếu phổ thông đã phát hành năm trước mang sang",
+                  "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016",
+                  "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 9 tháng 5 năm 2015",
+                  "Số lượng bình quân gia quyền của cổ phiếu phổ thông trong năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Cổ phiếu phổ thông đã phát hành năm trước mang sang",
+                  "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 20 tháng 6 năm 2016",
+                  "Ảnh hưởng của việc phát hành cổ phiếu để trả cổ tức tại ngày 9 tháng 5 năm 2015",
+                  "Số lượng bình quân gia quyền của cổ phiếu phổ thông trong năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c44",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "VSC — CTCP Container Việt Nam — năm 2016 — hợp nhất",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 22: Các khoản mục ngoài Băng cân đối kế toán"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Trong vòng một năm",
+                  "Trong vòng hai đến năm năm",
+                  "Sau năm năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Trong vòng một năm",
+                  "Trong vòng hai đến năm năm",
+                  "Sau năm năm"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01",
+        "b02"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Phải trả người bán ngắn hạn",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b02_k01",
+              "nội dung": "Phải trả người bán ngắn hạn",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c03",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c02",
+          "đáp ứng chỉ tiêu": [
+            "b02_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "coverage_lock_reasons": [
+      "multi_ticker_aggregation_or_comparison"
+    ],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Phải trả người bán ngắn hạn",
+            "role": "trực tiếp"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Phải trả người bán ngắn hạn",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c03",
+      "c02"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c03",
+      "c02"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+      "metadata": {
+        "table_id": "VJC_financial_statements_2016_consolidated_table_8",
+        "doc_id": "VJC_financial_statements_2016_consolidated",
+        "ticker": "VJC",
+        "company_name": "CTCP Hàng không Vietjet",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 198
+      },
+      "rrf_score": 0.031544957774465976,
+      "dense_rank": 3,
+      "dense_score": 0.85552377,
+      "bm25_rank": 1,
+      "bm25_score": 18.054548234990328,
+      "retrieval_score": 0.031544957774465976,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 23,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "NGUỒN VỐN"
+          },
+          {
+            "row": 3,
+            "code": "300",
+            "label": "NỘ PHẢI TRẢ"
+          },
+          {
+            "row": 4,
+            "code": "310",
+            "label": "Nợ ngắn hạn"
+          },
+          {
+            "row": 5,
+            "code": "311",
+            "note_ref": "15",
+            "label": "Phải trả người bán ngắn hạn"
+          },
+          {
+            "row": 6,
+            "code": "312",
+            "label": "Người mua trả tiền trước ngắn hạn"
+          },
+          {
+            "row": 7,
+            "code": "313",
+            "note_ref": "16(a)",
+            "label": "Thuế phải nộp Nhà nước"
+          },
+          {
+            "row": 8,
+            "code": "315",
+            "note_ref": "17",
+            "label": "Chi phí phải trả ngắn hạn"
+          },
+          {
+            "row": 9,
+            "code": "318",
+            "note_ref": "18",
+            "label": "Doanh thu chưa thực hiện ngắn hạn"
+          },
+          {
+            "row": 10,
+            "code": "319",
+            "note_ref": "19",
+            "label": "Phải trả ngắn hạn khác"
+          },
+          {
+            "row": 11,
+            "code": "320",
+            "note_ref": "20(a)",
+            "label": "Vay ngắn hạn"
+          },
+          {
+            "row": 12,
+            "code": "321",
+            "note_ref": "21",
+            "label": "Dự phòng phải trả ngắn hạn"
+          },
+          {
+            "row": 13,
+            "code": "330",
+            "label": "Nợ dài hạn"
+          },
+          {
+            "row": 14,
+            "code": "337",
+            "label": "Phải trả dài hạn khác"
+          },
+          {
+            "row": 15,
+            "code": "338",
+            "note_ref": "20(b)",
+            "label": "Vay dài hạn"
+          },
+          {
+            "row": 16,
+            "code": "341",
+            "note_ref": "22",
+            "label": "Thuế thu nhập hoãn lại phải trả"
+          },
+          {
+            "row": 17,
+            "code": "342",
+            "note_ref": "21",
+            "label": "Dự phòng phải trả dài hạn"
+          },
+          {
+            "row": 18,
+            "code": "400",
+            "label": "VỐN CHỦ SỞ HỮU"
+          },
+          {
+            "row": 19,
+            "code": "410",
+            "note_ref": "23",
+            "label": "Vốn chủ sở hữu"
+          },
+          {
+            "row": 20,
+            "code": "411",
+            "note_ref": "24",
+            "label": "Vốn cổ phần"
+          },
+          {
+            "row": 21,
+            "code": "417",
+            "label": "Chênh lệch tỷ giá hối đoái"
+          },
+          {
+            "row": 22,
+            "code": "421",
+            "label": "Lợi nhuận sau thuế chưa phân phối"
+          },
+          {
+            "row": 23,
+            "code": "429",
+            "label": "Lợi ích cổ đông không kiểm soát"
+          },
+          {
+            "row": 24,
+            "code": "440",
+            "label": "TỔNG NGUỒN VỐN"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 4,
+            "code": "310",
+            "label": "Nợ ngắn hạn"
+          },
+          {
+            "row": 5,
+            "code": "311",
+            "note_ref": "15",
+            "label": "Phải trả người bán ngắn hạn"
+          },
+          {
+            "row": 6,
+            "code": "312",
+            "label": "Người mua trả tiền trước ngắn hạn"
+          },
+          {
+            "row": 7,
+            "code": "313",
+            "note_ref": "16(a)",
+            "label": "Thuế phải nộp Nhà nước"
+          },
+          {
+            "row": 8,
+            "code": "315",
+            "note_ref": "17",
+            "label": "Chi phí phải trả ngắn hạn"
+          },
+          {
+            "row": 9,
+            "code": "318",
+            "note_ref": "18",
+            "label": "Doanh thu chưa thực hiện ngắn hạn"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+      "metadata": {
+        "table_id": "VSC_financial_statements_2016_consolidated_table_8",
+        "doc_id": "VSC_financial_statements_2016_consolidated",
+        "ticker": "VSC",
+        "company_name": "CTCP Container Việt Nam",
+        "report_type": "consolidated",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 166
+      },
+      "rrf_score": 0.032018442622950824,
+      "dense_rank": 2,
+      "dense_score": 0.8533131,
+      "bm25_rank": 1,
+      "bm25_score": 13.778188261160308,
+      "retrieval_score": 0.032018442622950824,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 26,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "NGUỒN VỐN"
+          },
+          {
+            "row": 3,
+            "code": "300",
+            "label": "NỘ PHẢI TRẢ"
+          },
+          {
+            "row": 4,
+            "code": "310",
+            "label": "Nợ ngắn hạn"
+          },
+          {
+            "row": 5,
+            "code": "311",
+            "note_ref": "12",
+            "label": "Phải trả người bán ngắn hạn"
+          },
+          {
+            "row": 6,
+            "code": "312",
+            "label": "Người mua trả tiền trước ngắn hạn"
+          },
+          {
+            "row": 7,
+            "code": "313",
+            "note_ref": "13(b)",
+            "label": "Thuế và các khoản phải nộp Nhà nước"
+          },
+          {
+            "row": 8,
+            "code": "314",
+            "label": "Phải trả người lao động"
+          },
+          {
+            "row": 9,
+            "code": "315",
+            "note_ref": "14",
+            "label": "Chi phí phải trả ngắn hạn"
+          },
+          {
+            "row": 10,
+            "code": "319",
+            "note_ref": "15",
+            "label": "Phải trả ngắn hạn khác"
+          },
+          {
+            "row": 11,
+            "code": "320",
+            "note_ref": "16(a)",
+            "label": "Vay ngắn hạn"
+          },
+          {
+            "row": 12,
+            "code": "321",
+            "label": "Dự phòng phải trả ngắn hạn"
+          },
+          {
+            "row": 13,
+            "code": "322",
+            "note_ref": "17",
+            "label": "Quỹ khen thưởng, phúc lợi"
+          },
+          {
+            "row": 14,
+            "code": "330",
+            "label": "Nợ dài hạn"
+          },
+          {
+            "row": 15,
+            "code": "337",
+            "label": "Phải trả dài hạn khác"
+          },
+          {
+            "row": 16,
+            "code": "338",
+            "note_ref": "16(b)",
+            "label": "Vay dài hạn"
+          },
+          {
+            "row": 17,
+            "code": "400",
+            "label": "VỐN CHỦ SỞ HỮ'U"
+          },
+          {
+            "row": 18,
+            "code": "410",
+            "note_ref": "18",
+            "label": "Vốn chủ sở hữu"
+          },
+          {
+            "row": 19,
+            "code": "411",
+            "note_ref": "19",
+            "label": "Vốn cổ phần"
+          },
+          {
+            "row": 20,
+            "code": "411a",
+            "label": "- Cổ phiếu phổ thông có quyền biểu quyết"
+          },
+          {
+            "row": 21,
+            "code": "412",
+            "note_ref": "18",
+            "label": "Thặng dư vốn cổ phần"
+          },
+          {
+            "row": 22,
+            "code": "418",
+            "note_ref": "21",
+            "label": "Quỹ đầu tư phát triển"
+          },
+          {
+            "row": 23,
+            "code": "421",
+            "note_ref": "18",
+            "label": "Lợi nhuận sau thuế chưa phân phối"
+          },
+          {
+            "row": 24,
+            "code": "421a",
+            "label": "- LNST chưa phân phối lũy kế đến cuối năm trước"
+          },
+          {
+            "row": 25,
+            "code": "421b",
+            "label": "- LNST chưa phân phối năm nay"
+          },
+          {
+            "row": 26,
+            "code": "429",
+            "note_ref": "18",
+            "label": "Lợi ích cổ đông không kiểm soát"
+          },
+          {
+            "row": 27,
+            "code": "440",
+            "label": "TỔNG NGUỒN VỐN"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 4,
+            "code": "310",
+            "label": "Nợ ngắn hạn"
+          },
+          {
+            "row": 5,
+            "code": "311",
+            "note_ref": "12",
+            "label": "Phải trả người bán ngắn hạn"
+          },
+          {
+            "row": 6,
+            "code": "312",
+            "label": "Người mua trả tiền trước ngắn hạn"
+          },
+          {
+            "row": 7,
+            "code": "313",
+            "note_ref": "13(b)",
+            "label": "Thuế và các khoản phải nộp Nhà nước"
+          },
+          {
+            "row": 8,
+            "code": "314",
+            "label": "Phải trả người lao động"
+          },
+          {
+            "row": 9,
+            "code": "315",
+            "note_ref": "14",
+            "label": "Chi phí phải trả ngắn hạn"
+          },
+          {
+            "row": 10,
+            "code": "319",
+            "note_ref": "15",
+            "label": "Phải trả ngắn hạn khác"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "VJC_financial_statements_2016_consolidated",
+        "VSC_financial_statements_2016_consolidated"
+      ],
+      "tables": [
+        "VJC_financial_statements_2016_consolidated|969",
+        "VSC_financial_statements_2016_consolidated|166",
+        "VJC_financial_statements_2016_consolidated|198",
+        "VSC_financial_statements_2016_consolidated|132",
+        "VJC_financial_statements_2016_consolidated|1057",
+        "VSC_financial_statements_2016_consolidated|722",
+        "VJC_financial_statements_2016_consolidated|1080",
+        "VSC_financial_statements_2016_consolidated|819",
+        "VJC_financial_statements_2016_consolidated|1001",
+        "VSC_financial_statements_2016_consolidated|780",
+        "VJC_financial_statements_2016_consolidated|168",
+        "VSC_financial_statements_2016_consolidated|900",
+        "VJC_financial_statements_2016_consolidated|1045",
+        "VSC_financial_statements_2016_consolidated|768",
+        "VJC_financial_statements_2016_consolidated|1011",
+        "VSC_financial_statements_2016_consolidated|701",
+        "VJC_financial_statements_2016_consolidated|1051",
+        "VSC_financial_statements_2016_consolidated|774",
+        "VJC_financial_statements_2016_consolidated|778",
+        "VSC_financial_statements_2016_consolidated|844",
+        "VJC_financial_statements_2016_consolidated|1276",
+        "VSC_financial_statements_2016_consolidated|751",
+        "VJC_financial_statements_2016_consolidated|182",
+        "VSC_financial_statements_2016_consolidated|219",
+        "VJC_financial_statements_2016_consolidated|997",
+        "VSC_financial_statements_2016_consolidated|607",
+        "VJC_financial_statements_2016_consolidated|927",
+        "VSC_financial_statements_2016_consolidated|693",
+        "VJC_financial_statements_2016_consolidated|861",
+        "VSC_financial_statements_2016_consolidated|805",
+        "VJC_financial_statements_2016_consolidated|1108",
+        "VSC_financial_statements_2016_consolidated|1032",
+        "VJC_financial_statements_2016_consolidated|1090",
+        "VSC_financial_statements_2016_consolidated|238",
+        "VJC_financial_statements_2016_consolidated|1120",
+        "VSC_financial_statements_2016_consolidated|1001",
+        "VJC_financial_statements_2016_consolidated|993",
+        "VSC_financial_statements_2016_consolidated|1049",
+        "VJC_financial_statements_2016_consolidated|829",
+        "VSC_financial_statements_2016_consolidated|149",
+        "VJC_financial_statements_2016_consolidated|835",
+        "VSC_financial_statements_2016_consolidated|640",
+        "VJC_financial_statements_2016_consolidated|877",
+        "VSC_financial_statements_2016_consolidated|877",
+        "VJC_financial_statements_2016_consolidated|809",
+        "VSC_financial_statements_2016_consolidated|697",
+        "VJC_financial_statements_2016_consolidated|1423",
+        "VSC_financial_statements_2016_consolidated|615",
+        "VJC_financial_statements_2016_consolidated|25",
+        "VSC_financial_statements_2016_consolidated|653"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "VJC_financial_statements_2016_consolidated",
+        "VSC_financial_statements_2016_consolidated"
+      ],
+      "tables": [
+        "VJC_financial_statements_2016_consolidated|969",
+        "VJC_financial_statements_2016_consolidated|198",
+        "VJC_financial_statements_2016_consolidated|1057",
+        "VJC_financial_statements_2016_consolidated|1080",
+        "VSC_financial_statements_2016_consolidated|166",
+        "VSC_financial_statements_2016_consolidated|722",
+        "VSC_financial_statements_2016_consolidated|819",
+        "VJC_financial_statements_2016_consolidated|1045",
+        "VJC_financial_statements_2016_consolidated|1276",
+        "VSC_financial_statements_2016_consolidated|149",
+        "VJC_financial_statements_2016_consolidated|861",
+        "VJC_financial_statements_2016_consolidated|993",
+        "VJC_financial_statements_2016_consolidated|809",
+        "VSC_financial_statements_2016_consolidated|132",
+        "VSC_financial_statements_2016_consolidated|900",
+        "VSC_financial_statements_2016_consolidated|844",
+        "VSC_financial_statements_2016_consolidated|693",
+        "VSC_financial_statements_2016_consolidated|1001",
+        "VSC_financial_statements_2016_consolidated|877"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "VJC_financial_statements_2016_consolidated",
+        "VSC_financial_statements_2016_consolidated"
+      ],
+      "tables": [
+        "VJC_financial_statements_2016_consolidated|969",
+        "VJC_financial_statements_2016_consolidated|198",
+        "VJC_financial_statements_2016_consolidated|1057",
+        "VJC_financial_statements_2016_consolidated|1080",
+        "VSC_financial_statements_2016_consolidated|166",
+        "VSC_financial_statements_2016_consolidated|722",
+        "VSC_financial_statements_2016_consolidated|819",
+        "VJC_financial_statements_2016_consolidated|1045",
+        "VJC_financial_statements_2016_consolidated|1276",
+        "VSC_financial_statements_2016_consolidated|149",
+        "VJC_financial_statements_2016_consolidated|861",
+        "VJC_financial_statements_2016_consolidated|993",
+        "VJC_financial_statements_2016_consolidated|809",
+        "VSC_financial_statements_2016_consolidated|132",
+        "VSC_financial_statements_2016_consolidated|900",
+        "VSC_financial_statements_2016_consolidated|844",
+        "VSC_financial_statements_2016_consolidated|693",
+        "VSC_financial_statements_2016_consolidated|1001",
+        "VSC_financial_statements_2016_consolidated|877",
+        "VJC_financial_statements_2016_consolidated|1108"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "VJC_financial_statements_2016_consolidated",
+        "VSC_financial_statements_2016_consolidated"
+      ],
+      "tables": [
+        "VJC_financial_statements_2016_consolidated|198",
+        "VSC_financial_statements_2016_consolidated|166"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "VJC_financial_statements_2016_consolidated",
+        "VSC_financial_statements_2016_consolidated"
+      ],
+      "tables": [
+        "VJC_financial_statements_2016_consolidated|198",
+        "VSC_financial_statements_2016_consolidated|166"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.04,
+        "recall": 1.0,
+        "f2": 0.1724137931034483,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.10526315789473684,
+        "recall": 1.0,
+        "f2": 0.37037037037037035,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f2": 0.35714285714285715,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "VJC_financial_statements_2016_consolidated|198",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "VSC_financial_statements_2016_consolidated|166",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

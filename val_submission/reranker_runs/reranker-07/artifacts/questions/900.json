@@ -1,0 +1,4625 @@
+{
+  "schema_version": 2,
+  "id": 900,
+  "question": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+  "started_at": "2026-08-23T09:41:16+00:00",
+  "finished_at": "2026-08-23T09:41:44+00:00",
+  "duration_seconds": 28.14104202999806,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/900.json",
+  "golden": {
+    "id": 900,
+    "question": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+    "relevant_docs": [
+      "MSN_financial_statements_2016_separate",
+      "MSN_financial_statements_2017_separate",
+      "MSN_financial_statements_2019_separate",
+      "MSN_financial_statements_2021_separate"
+    ],
+    "relevant_tables": [
+      "MSN_financial_statements_2016_separate|814",
+      "MSN_financial_statements_2017_separate|788",
+      "MSN_financial_statements_2019_separate|805",
+      "MSN_financial_statements_2021_separate|1027"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_11",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_11",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 568
+      },
+      "rrf_score": 0.030117753623188408,
+      "dense_rank": 1,
+      "dense_score": 0.8981816,
+      "bm25_rank": 9,
+      "bm25_score": 14.672487081573697,
+      "retrieval_score": 0.030117753623188408,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_8",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_8",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 588
+      },
+      "rrf_score": 0.02946236559139785,
+      "dense_rank": 2,
+      "dense_score": 0.90207064,
+      "bm25_rank": 15,
+      "bm25_score": 13.355390641987324,
+      "retrieval_score": 0.02946236559139785,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_9",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_9",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 675
+      },
+      "rrf_score": 0.02938045560996381,
+      "dense_rank": 3,
+      "dense_score": 0.9033033,
+      "bm25_rank": 17,
+      "bm25_score": 13.355390641987324,
+      "retrieval_score": 0.02938045560996381,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_34",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_34",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 913
+      },
+      "rrf_score": 0.029273504273504274,
+      "dense_rank": 4,
+      "dense_score": 0.8667702,
+      "bm25_rank": 5,
+      "bm25_score": 19.10608127781003,
+      "retrieval_score": 0.029273504273504274,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_26",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_26",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 908
+      },
+      "rrf_score": 0.029273504273504274,
+      "dense_rank": 5,
+      "dense_score": 0.8905958,
+      "bm25_rank": 12,
+      "bm25_score": 13.704500328480506,
+      "retrieval_score": 0.029273504273504274,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_26",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_26",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 788
+      },
+      "rrf_score": 0.029116045245077504,
+      "dense_rank": 6,
+      "dense_score": 0.85607904,
+      "bm25_rank": 2,
+      "bm25_score": 22.335373725227804,
+      "retrieval_score": 0.029116045245077504,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_22",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_22",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 814
+      },
+      "rrf_score": 0.029051670471052088,
+      "dense_rank": 7,
+      "dense_score": 0.8536782,
+      "bm25_rank": 1,
+      "bm25_score": 22.335373725227804,
+      "retrieval_score": 0.029051670471052088,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_9",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_9",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 512
+      },
+      "rrf_score": 0.029030910609857977,
+      "dense_rank": 8,
+      "dense_score": 0.9019588,
+      "bm25_rank": 16,
+      "bm25_score": 13.355390641987324,
+      "retrieval_score": 0.029030910609857977,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_10",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_10",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 554
+      },
+      "rrf_score": 0.028991596638655463,
+      "dense_rank": 9,
+      "dense_score": 0.88006854,
+      "bm25_rank": 10,
+      "bm25_score": 14.143340528530782,
+      "retrieval_score": 0.028991596638655463,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_9",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_9",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 541
+      },
+      "rrf_score": 0.028438886647841874,
+      "dense_rank": 10,
+      "dense_score": 0.88081425,
+      "bm25_rank": 14,
+      "bm25_score": 13.387701128705993,
+      "retrieval_score": 0.028438886647841874,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_31",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_31",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 950
+      },
+      "rrf_score": 0.028404512489927477,
+      "dense_rank": 11,
+      "dense_score": 0.8628795,
+      "bm25_rank": 8,
+      "bm25_score": 15.101853620988862,
+      "retrieval_score": 0.028404512489927477,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_30",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_30",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1027
+      },
+      "rrf_score": 0.02821869488536155,
+      "dense_rank": 12,
+      "dense_score": 0.8512911,
+      "bm25_rank": 3,
+      "bm25_score": 22.307298395762675,
+      "retrieval_score": 0.02821869488536155,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_26",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_26",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 805
+      },
+      "rrf_score": 0.027820121951219513,
+      "dense_rank": 13,
+      "dense_score": 0.8494252,
+      "bm25_rank": 4,
+      "bm25_score": 20.20242833504603,
+      "retrieval_score": 0.027820121951219513,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_34",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_34",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 881
+      },
+      "rrf_score": 0.027745885954841176,
+      "dense_rank": 14,
+      "dense_score": 0.853736,
+      "bm25_rank": 7,
+      "bm25_score": 16.346066973187998,
+      "retrieval_score": 0.027745885954841176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_39",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_39",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1162
+      },
+      "rrf_score": 0.027651515151515153,
+      "dense_rank": 15,
+      "dense_score": 0.85266376,
+      "bm25_rank": 6,
+      "bm25_score": 18.821243226658826,
+      "retrieval_score": 0.027651515151515153,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_35",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_35",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 894
+      },
+      "rrf_score": 0.02749719416386083,
+      "dense_rank": 16,
+      "dense_score": 0.8839375,
+      "bm25_rank": 21,
+      "bm25_score": 12.544599969254168,
+      "retrieval_score": 0.02749719416386083,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_12",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_12",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 562
+      },
+      "rrf_score": 0.025978407557354925,
+      "dense_rank": 17,
+      "dense_score": 0.85705215,
+      "bm25_rank": 18,
+      "bm25_score": 13.03577968783981,
+      "retrieval_score": 0.025978407557354925,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_40",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_40",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1179
+      },
+      "rrf_score": 0.025779967159277502,
+      "dense_rank": 18,
+      "dense_score": 0.873405,
+      "bm25_rank": 27,
+      "bm25_score": 10.275489606570124,
+      "retrieval_score": 0.025779967159277502,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_32",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_32",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 965
+      },
+      "rrf_score": 0.025561706284597852,
+      "dense_rank": 19,
+      "dense_score": 0.86150473,
+      "bm25_rank": 23,
+      "bm25_score": 11.901253199351505,
+      "retrieval_score": 0.025561706284597852,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_27",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_27",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 794
+      },
+      "rrf_score": 0.022517394054395953,
+      "dense_rank": 20,
+      "dense_score": 0.8402319,
+      "bm25_rank": 25,
+      "bm25_score": 10.566952369013872,
+      "retrieval_score": 0.022517394054395953,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_4",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_4",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2019,
+        "start_line": 198
+      },
+      "rrf_score": 0.022154222766217868,
+      "dense_rank": 21,
+      "dense_score": 0.8443606,
+      "bm25_rank": 35,
+      "bm25_score": 8.911781522074973,
+      "retrieval_score": 0.022154222766217868,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_9",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_9",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 600
+      },
+      "rrf_score": 0.021572002294893863,
+      "dense_rank": 22,
+      "dense_score": 0.8480399,
+      "bm25_rank": 45,
+      "bm25_score": 6.907408901766458,
+      "retrieval_score": 0.021572002294893863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_4",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_4",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2017,
+        "start_line": 163
+      },
+      "rrf_score": 0.021464646464646464,
+      "dense_rank": 23,
+      "dense_score": 0.84321,
+      "bm25_rank": 39,
+      "bm25_score": 7.228510434768676,
+      "retrieval_score": 0.021464646464646464,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_23",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_23",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 822
+      },
+      "rrf_score": 0.021440036688832834,
+      "dense_rank": 24,
+      "dense_score": 0.83574265,
+      "bm25_rank": 29,
+      "bm25_score": 9.554449396291316,
+      "retrieval_score": 0.021440036688832834,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_41",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_41",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1200
+      },
+      "rrf_score": 0.021395881006864986,
+      "dense_rank": 25,
+      "dense_score": 0.8388918,
+      "bm25_rank": 32,
+      "bm25_score": 9.268671312968724,
+      "retrieval_score": 0.021395881006864986,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_27",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_27",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 826
+      },
+      "rrf_score": 0.021212121212121213,
+      "dense_rank": 26,
+      "dense_score": 0.83574265,
+      "bm25_rank": 30,
+      "bm25_score": 9.554449396291316,
+      "retrieval_score": 0.021212121212121213,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_3",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_3",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2016,
+        "start_line": 269
+      },
+      "rrf_score": 0.021039876624807226,
+      "dense_rank": 27,
+      "dense_score": 0.8429522,
+      "bm25_rank": 42,
+      "bm25_score": 7.010192616106394,
+      "retrieval_score": 0.021039876624807226,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_31",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_31",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1035
+      },
+      "rrf_score": 0.020697748853088657,
+      "dense_rank": 28,
+      "dense_score": 0.8346762,
+      "bm25_rank": 31,
+      "bm25_score": 9.554449396291316,
+      "retrieval_score": 0.020697748853088657,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_4",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_4",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2021,
+        "start_line": 303
+      },
+      "rrf_score": 0.020416666666666666,
+      "dense_rank": 29,
+      "dense_score": 0.83827627,
+      "bm25_rank": 40,
+      "bm25_score": 7.178462964707952,
+      "retrieval_score": 0.020416666666666666,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_10",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_10",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 525
+      },
+      "rrf_score": 0.019237883832778392,
+      "dense_rank": 30,
+      "dense_score": 0.83468974,
+      "bm25_rank": 46,
+      "bm25_score": 6.424688174533881,
+      "retrieval_score": 0.019237883832778392,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_31",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_31",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 865
+      },
+      "rrf_score": 0.01916024935826916,
+      "dense_rank": 31,
+      "dense_score": 0.83100325,
+      "bm25_rank": 41,
+      "bm25_score": 7.075050804012479,
+      "retrieval_score": 0.01916024935826916,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_28",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_28",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 915
+      },
+      "rrf_score": 0.01852010631912887,
+      "dense_rank": 32,
+      "dense_score": 0.830786,
+      "bm25_rank": 47,
+      "bm25_score": 6.4110278265667,
+      "retrieval_score": 0.01852010631912887,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_13",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_13",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 608
+      },
+      "rrf_score": 0.014492753623188406,
+      "dense_rank": 33,
+      "dense_score": 0.8743033,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_25",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_25",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 767
+      },
+      "rrf_score": 0.014084507042253521,
+      "bm25_rank": 11,
+      "bm25_score": 14.01732931698565,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 34
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_11",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_11",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 705
+      },
+      "rrf_score": 0.014084507042253521,
+      "dense_rank": 35,
+      "dense_score": 0.8680978,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_21",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_21",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 793
+      },
+      "rrf_score": 0.0136986301369863,
+      "bm25_rank": 13,
+      "bm25_score": 13.541366924102817,
+      "retrieval_score": 0.0136986301369863,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 36
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_11",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_11",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 531
+      },
+      "rrf_score": 0.013333333333333334,
+      "dense_rank": 37,
+      "dense_score": 0.8596728,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_2",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_2",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 237
+      },
+      "rrf_score": 0.012658227848101266,
+      "bm25_rank": 19,
+      "bm25_score": 12.94530417727302,
+      "retrieval_score": 0.012658227848101266,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 38
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_29",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_29",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1003
+      },
+      "rrf_score": 0.0125,
+      "bm25_rank": 20,
+      "bm25_score": 12.61746343590772,
+      "retrieval_score": 0.0125,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_24",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_24",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 742
+      },
+      "rrf_score": 0.012195121951219513,
+      "bm25_rank": 22,
+      "bm25_score": 12.100532410275214,
+      "retrieval_score": 0.012195121951219513,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_1",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_1",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 12
+      },
+      "rrf_score": 0.011904761904761904,
+      "dense_rank": 41,
+      "dense_score": 0.8475977,
+      "retrieval_score": 0.011904761904761904,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_28",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_28",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 953
+      },
+      "rrf_score": 0.011904761904761904,
+      "bm25_rank": 24,
+      "bm25_score": 10.64913192762149,
+      "retrieval_score": 0.011904761904761904,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 42
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_1",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_1",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 12
+      },
+      "rrf_score": 0.011764705882352941,
+      "dense_rank": 43,
+      "dense_score": 0.8475977,
+      "retrieval_score": 0.011764705882352941,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_24",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_24",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 881
+      },
+      "rrf_score": 0.011627906976744186,
+      "bm25_rank": 26,
+      "bm25_score": 10.36931693371177,
+      "retrieval_score": 0.011627906976744186,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 44
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_24",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_24",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 851
+      },
+      "rrf_score": 0.011494252873563218,
+      "dense_rank": 45,
+      "dense_score": 0.84355927,
+      "retrieval_score": 0.011494252873563218,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_25",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_25",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 784
+      },
+      "rrf_score": 0.011363636363636364,
+      "bm25_rank": 28,
+      "bm25_score": 10.091601402125926,
+      "retrieval_score": 0.011363636363636364,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_14",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_14",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 761
+      },
+      "rrf_score": 0.011111111111111112,
+      "dense_rank": 47,
+      "dense_score": 0.84173995,
+      "retrieval_score": 0.011111111111111112,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_12",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_12",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 726
+      },
+      "rrf_score": 0.01098901098901099,
+      "dense_rank": 48,
+      "dense_score": 0.8413551,
+      "retrieval_score": 0.01098901098901099,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_12",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_12",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 591
+      },
+      "rrf_score": 0.010869565217391304,
+      "dense_rank": 49,
+      "dense_score": 0.8403655,
+      "retrieval_score": 0.010869565217391304,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_3",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_3",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 268
+      },
+      "rrf_score": 0.010752688172043012,
+      "bm25_rank": 33,
+      "bm25_score": 9.056750824000849,
+      "retrieval_score": 0.010752688172043012,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 50
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "year": 2019,
+        "report_type": "riêng"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "year": 2016,
+        "report_type": "riêng"
+      },
+      {
+        "bucket_key": "b03",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "year": 2021,
+        "report_type": "riêng"
+      },
+      {
+        "bucket_key": "b04",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "year": 2017,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_11",
+        "table_ref": "MSN_financial_statements_2019_separate|568",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_8",
+        "table_ref": "MSN_financial_statements_2016_separate|588",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_9",
+        "table_ref": "MSN_financial_statements_2021_separate|675",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_34",
+        "table_ref": "MSN_financial_statements_2019_separate|913",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_26",
+        "table_ref": "MSN_financial_statements_2021_separate|908",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_26",
+        "table_ref": "MSN_financial_statements_2017_separate|788",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_22",
+        "table_ref": "MSN_financial_statements_2016_separate|814",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_9",
+        "table_ref": "MSN_financial_statements_2017_separate|512",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_10",
+        "table_ref": "MSN_financial_statements_2019_separate|554",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_9",
+        "table_ref": "MSN_financial_statements_2019_separate|541",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_31",
+        "table_ref": "MSN_financial_statements_2016_separate|950",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_30",
+        "table_ref": "MSN_financial_statements_2021_separate|1027",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_26",
+        "table_ref": "MSN_financial_statements_2019_separate|805",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_34",
+        "table_ref": "MSN_financial_statements_2017_separate|881",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_39",
+        "table_ref": "MSN_financial_statements_2021_separate|1162",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_35",
+        "table_ref": "MSN_financial_statements_2017_separate|894",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_12",
+        "table_ref": "MSN_financial_statements_2017_separate|562",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_40",
+        "table_ref": "MSN_financial_statements_2021_separate|1179",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_32",
+        "table_ref": "MSN_financial_statements_2016_separate|965",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_27",
+        "table_ref": "MSN_financial_statements_2017_separate|794",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_4",
+        "table_ref": "MSN_financial_statements_2019_separate|198",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_9",
+        "table_ref": "MSN_financial_statements_2016_separate|600",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_4",
+        "table_ref": "MSN_financial_statements_2017_separate|163",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_23",
+        "table_ref": "MSN_financial_statements_2016_separate|822",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_41",
+        "table_ref": "MSN_financial_statements_2021_separate|1200",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_27",
+        "table_ref": "MSN_financial_statements_2019_separate|826",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_3",
+        "table_ref": "MSN_financial_statements_2016_separate|269",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_31",
+        "table_ref": "MSN_financial_statements_2021_separate|1035",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_4",
+        "table_ref": "MSN_financial_statements_2021_separate|303",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_10",
+        "table_ref": "MSN_financial_statements_2017_separate|525",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_31",
+        "table_ref": "MSN_financial_statements_2019_separate|865",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_28",
+        "table_ref": "MSN_financial_statements_2016_separate|915",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_13",
+        "table_ref": "MSN_financial_statements_2019_separate|608",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_25",
+        "table_ref": "MSN_financial_statements_2017_separate|767",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_11",
+        "table_ref": "MSN_financial_statements_2021_separate|705",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_21",
+        "table_ref": "MSN_financial_statements_2016_separate|793",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_11",
+        "table_ref": "MSN_financial_statements_2017_separate|531",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_2",
+        "table_ref": "MSN_financial_statements_2016_separate|237",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_29",
+        "table_ref": "MSN_financial_statements_2021_separate|1003",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_24",
+        "table_ref": "MSN_financial_statements_2017_separate|742",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_1",
+        "table_ref": "MSN_financial_statements_2019_separate|12",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_28",
+        "table_ref": "MSN_financial_statements_2021_separate|953",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b04",
+        "table_id": "MSN_financial_statements_2017_separate_table_1",
+        "table_ref": "MSN_financial_statements_2017_separate|12",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_24",
+        "table_ref": "MSN_financial_statements_2021_separate|881",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b02",
+        "table_id": "MSN_financial_statements_2016_separate_table_24",
+        "table_ref": "MSN_financial_statements_2016_separate|851",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_25",
+        "table_ref": "MSN_financial_statements_2019_separate|784",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_14",
+        "table_ref": "MSN_financial_statements_2021_separate|761",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_12",
+        "table_ref": "MSN_financial_statements_2021_separate|726",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "MSN_financial_statements_2019_separate_table_12",
+        "table_ref": "MSN_financial_statements_2019_separate|591",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b03",
+        "table_id": "MSN_financial_statements_2021_separate_table_3",
+        "table_ref": "MSN_financial_statements_2021_separate|268",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "▪ Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science) (“MML”) (*)",
+                "▪ Công ty Cổ phần Phát triển Thương mại và Dịch vụ VCM (“VCM”) (**)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2019",
+                "1/1/2019"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "▪ Công ty TNHH Tàm nhìn Masan (“MH”)",
+                "▪ Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science) (“MML”) (*)",
+                "▪ Công ty Cổ phần Phát triển Thương mại và Dịch vụ VCM (“VCM”) (**)"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "▪ Công ty TNHH Tàm nhìn Masan (“MH”)",
+                "▪ Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science) (“MML”) (*)",
+                "▪ Công ty Cổ phần Phát triển Thương mại và Dịch vụ VCM (“VCM”) (**)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Vốn cổ phần được duyệt",
+                "Thặng dư vốn cổ phần"
+              ],
+              "kỳ số liệu": [
+                "31/12/2019",
+                "1/1/2019"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng Thương mại Cổ phần Kỹ thương Việt Nam (“Techcombank”)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2019",
+                "1/1/2019"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Thương mại Cổ phần Kỹ thương Việt Nam (“Techcombank”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng Thương mại Cổ phần Kỹ thương Việt Nam (“Techcombank”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Tầm Nhìn Masan (“MH”)",
+                "Công ty Cổ phần Masan Nutri-Science (trước dây là Công ty TNHH Masan Nutri-Science) (“MNS”)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2016",
+                "1/1/2016"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "Công ty Cổ phần Tầm Nhìn Masan (“MH”)",
+                "Công ty Cổ phần Masan Nutri-Science (trước dây là Công ty TNHH Masan Nutri-Science) (“MNS”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "Công ty Cổ phần Tầm Nhìn Masan (“MH”)",
+                "Công ty Cổ phần Masan Nutri-Science (trước dây là Công ty TNHH Masan Nutri-Science) (“MNS”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Mẫu B 09 – DN(Ban hành theo Thông tư số 200/2014/TT-BTCngày 22 tháng 12 năm 2014 của Bộ Tài chính)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng đầu tư trong năm",
+                "Thanh lý",
+                "Số dư cuối năm",
+                "Ngân hàng Thương mạiCổ phần Kỹ thương ViệtNam (“Techcombank”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng đầu tư trong năm",
+                "Thanh lý",
+                "Số dư cuối năm",
+                "Ngân hàng Thương mạiCổ phần Kỹ thương ViệtNam (“Techcombank”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phát hành cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu (Thuyết minh 15)",
+                "Mua cổ phiếu quỹ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1 tháng 1 năm 2015",
+                "Phát hành cổ phiếu",
+                "Lỗ thuần trong năm",
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Phát hành cổ phiếu (Thuyết minh 15)",
+                "Lợi nhuận thuần trong năm",
+                "Giao dịch vốn chủ sở hữu (Thuyết minh 17)",
+                "Mua cổ phiếu quỹ",
+                "Cổ tức"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1 tháng 1 năm 2015",
+                "Phát hành cổ phiếu",
+                "Lỗ thuần trong năm",
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Phát hành cổ phiếu (Thuyết minh 15)",
+                "Lợi nhuận thuần trong năm",
+                "Giao dịch vốn chủ sở hữu (Thuyết minh 17)",
+                "Mua cổ phiếu quỹ",
+                "Cổ tức",
+                "Số dư tại ngày 31 tháng 12 năm 2016"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Masan MEATLife, một công ty con sở hữu trực tiếp",
+                "Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan), một công ty con sở hữu trực tiếp",
+                "Công ty Cổ phần Dịch vụ và Phát triển Thương mại VCM, một công ty con sở hữu gián tiếp"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Masan MEATLife, một công ty con sở hữu trực tiếp",
+                "Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan), một công ty con sở hữu trực tiếp",
+                "Công ty TNHH Khai thác Chế biển Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp",
+                "Công ty Cổ phần Dịch vụ và Phát triển Thương mại VCM, một công ty con sở hữu gián tiếp",
+                "Bên thứ ba"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Masan MEATLife, một công ty con sở hữu trực tiếp",
+                "Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan), một công ty con sở hữu trực tiếp",
+                "Công ty TNHH Khai thác Chế biển Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp",
+                "Công ty Cổ phần Dịch vụ và Phát triển Thương mại VCM, một công ty con sở hữu gián tiếp",
+                "Bên thứ ba"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phí phát hành trái phiếu",
+                "Công ty Cổ phần Mobicast",
+                "Công ty Cổ phần The CrownX",
+                "Bán lại cổ phiếu CrownX"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2021 VND",
+                "Công ty Cổ phần The CrownX",
+                "Bán lại cổ phiếu CrownX",
+                "Công ty Cổ phần Mobicast",
+                "Techcombank và các công ty con (*)",
+                "Phí phát hành trái phiếu",
+                "Bán chứng khoán kinh doanh"
+              ],
+              "mục lục chỉ tiêu": [
+                "2021 VND",
+                "Công ty Cổ phần The CrownX",
+                "Bán lại cổ phiếu CrownX",
+                "Công ty Cổ phần Mobicast",
+                "Thu nhập lãi cho vay",
+                "Techcombank và các công ty con (*)",
+                "Phí phát hành trái phiếu",
+                "Bán chứng khoán kinh doanh",
+                "Mua chứng khoán kinh doanh",
+                "Thành viên quản lý chủ chốt"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phát hành cổ phiếu",
+                "Phát hành cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1 tháng 1 năm 2020",
+                "Phát hành cổ phiếu",
+                "Lỗ thuần trong năm",
+                "Cổ tức",
+                "Số dư tại ngày 1 tháng 1 năm 2021",
+                "Lợi nhuận thuần trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1 tháng 1 năm 2020",
+                "Phát hành cổ phiếu",
+                "Lỗ thuần trong năm",
+                "Cổ tức",
+                "Số dư tại ngày 1 tháng 1 năm 2021",
+                "Lợi nhuận thuần trong năm",
+                "Cổ tức (Thuyết minh 16)",
+                "Số dư tại ngày 31 tháng 12 năm 2021"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần The CrownX (“CrownX”) (**)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2021",
+                "1/1/2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần The CrownX (“CrownX”) (**)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần The CrownX (“CrownX”) (**)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 22: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Masan (trước đây là Công ty Cổ phần Tầm nhìn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH Tầm nhìn",
+                "Masan (trước đây là Công ty Cổ phần Tầm nhìn",
+                "Masan)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH Tầm nhìn",
+                "Masan (trước đây là Công ty Cổ phần Tầm nhìn",
+                "Masan)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 18)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 19)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 21)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 21)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 18)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 19)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 20)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31)",
+                "Chi phí khác (mã chỉ tiêu 32)",
+                "Kết quả từ các hoạt động khác (mã chỉ tiêu 40)",
+                "Lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 21)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 21)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: 000 tỷ VND (1/1/2017: không) trái phiếu chưa bao gồm chỉ phí phát hành, với thời gian đáo hạn là 2 năm và chịu lãi suất năm cố định là 9,0%. Trái phiếu này không được đảm bảo"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế"
+              ],
+              "kỳ số liệu": [
+                "Lãi suất năm",
+                "Năm đáo hạn",
+                "31/12/2017 VND",
+                "1/1/2017 VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "MRC Ltd (**)",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế"
+              ],
+              "mục lục chỉ tiêu": [
+                "MRC Ltd (**)",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty Cổ phần Hàng tiêu dùng Masan",
+                "Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science)",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế",
+                "Cấn trừ cổ tức phải thu với khoản vay phải trả"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science)",
+                "Công ty TNHH Tầm nhìn",
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty Cổ phần Hàng tiêu dùng Masan",
+                "Mua hàng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH",
+                "MasanConsumerHoldings",
+                "Khoản cho vay đã thu",
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Masan MEATLife (trước đây là Công ty Cổ phần Masan Nutri-Science)",
+                "Công ty TNHH Tầm nhìn",
+                "Masan",
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty Cổ phần Hàng tiêu dùng Masan",
+                "Mua hàng",
+                "Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo",
+                "Chi phí lãi vay",
+                "Thu nhập lãi trái phiếu",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế",
+                "Cấn trừ cổ tức phải thu với khoản vay phải trả",
+                "Cấn trừ cổ tức phải thu với chi phí lãi vay phải trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 17)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 18)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 20)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 20)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 17)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 18)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 19)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 20)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 20)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "ngày 17 tháng 7 năm 2019"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [],
+              "mục lục chỉ tiêu": []
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 15: Vốn cổ phần và thẳng dư vốn cổ phần"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Cổ phiếu quỹCổ phiếu phổ thông",
+                "Vốn cổ phần được duyệt",
+                "Thặng dư vốn cổ phần"
+              ],
+              "kỳ số liệu": [
+                "31/12/2016",
+                "1/1/2016"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần",
+                "Cổ phiếu quỹCổ phiếu phổ thông"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần",
+                "Cổ phiếu quỹCổ phiếu phổ thông"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền"
+              ],
+              "kỳ số liệu": [
+                "2016",
+                "2015"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)"
+              ],
+              "dòng gần với câu hỏi": [
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                "Cổ phiếu quỹ (mã chỉ tiêu 415; tham chiếu Thuyết minh số 15)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 14)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                "Vốn khác của chủ sở hữu (mã chỉ tiêu 414; tham chiếu Thuyết minh số 17)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NGUỒN VỐN",
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán (mã chỉ tiêu 311)",
+                "Chi phí phải trả (mã chỉ tiêu 315; tham chiếu Thuyết minh số 11)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 12)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 13)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Vay và trái phiếu dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 13)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 14)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                "Vốn khác của chủ sở hữu (mã chỉ tiêu 414; tham chiếu Thuyết minh số 17)",
+                "Cổ phiếu quỹ (mã chỉ tiêu 415; tham chiếu Thuyết minh số 15)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "- Lợi nhuận sau thuế chưa phân phốiđến cuối năm trước (mã chỉ tiêu 421a)",
+                "- Lợi nhuận/(lỗ) sau thuế năm nay (mã chỉ tiêu 421b)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần"
+              ],
+              "kỳ số liệu": [
+                "31/12/2021",
+                "1/1/2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu bằng tiền (Thuyết minh 15)"
+              ],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu bằng tiền (Thuyết minh 15)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu bằng tiền (Thuyết minh 15)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí phát hành trái phiếu chưa được phân bổ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu thường",
+                "Chi phí phát hành trái phiếu chưa được phân bổ",
+                "Trái phiếu thường đáo hạn trong vòng 12 tháng",
+                "Trái phiếu thường đáo hạn sau 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu thường",
+                "Chi phí phát hành trái phiếu chưa được phân bổ",
+                "Trái phiếu thường đáo hạn trong vòng 12 tháng",
+                "Trái phiếu thường đáo hạn sau 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)",
+                "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 11)",
+                "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số 10(b))",
+                "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 13)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NGUỒN VỐN",
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán (mã chỉ tiêu 311)",
+                "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 7(b))",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 10(a))",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 11)",
+                "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số 10(b))",
+                "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 13)",
+                "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)",
+                "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                "- LNST chưa phân phối đến cuối năm trước (mã chỉ tiêu 421a)",
+                "- LNST chưa phân phối năm nay/(lỗ sau thuế năm trước) (mã chỉ tiêu 421b)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty Cổ phần MasanNutri-Science",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệpQuốc tế"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHHMasanConsumerHoldings",
+                "Công ty Cổ phần MasanNutri-Science",
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo",
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệpQuốc tế",
+                "Khoản vay đã trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHHMasanConsumerHoldings",
+                "Công ty Cổ phần MasanNutri-Science",
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo",
+                "Công ty TNHH Shika",
+                "Khoản cho vay đã thu",
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệpQuốc tế",
+                "Khoản vay đã trả",
+                "Chi phí lãi vay",
+                "Các bên liên quan khácTechcombank và các công ty con",
+                "Ban quản lý chủ chốt"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "MÃU B 09 – DN(Ban hành theo Thông tư số 200/2014/TT-BTCngày 22 tháng 12 năm 2014 của Bộ Tài chính)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng các khoản đầu tư trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng các khoản đầu tư trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "ngày 31 tháng 8 năm 2017"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [],
+              "mục lục chỉ tiêu": []
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+        "các bảng": [
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền"
+              ],
+              "kỳ số liệu": [
+                "2019",
+                "2018"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phát hành cổ phiếu",
+                "Phát hành cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phát hành lại cổ phiếu quỹ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1 tháng 1 năm2018",
+                "Phát hành cổ phiếu",
+                "Phát hành lại cổ phiếu quỹ",
+                "Lợi nhuận thuần trong năm",
+                "Số dư tại ngày 1 tháng 1 năm2019",
+                "Số dư tại ngày 31 tháng 12năm 2019"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1 tháng 1 năm2018",
+                "Phát hành cổ phiếu",
+                "Phát hành lại cổ phiếu quỹ",
+                "Lợi nhuận thuần trong năm",
+                "Số dư tại ngày 1 tháng 1 năm2019",
+                "Số dư tại ngày 31 tháng 12năm 2019"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 24: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Masan Nutri-Science (trước đây là Công ty TNHH Masan Nutri-Science)",
+                "Công ty Cổ phần Tầm"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tầm",
+                "nhìn Masan",
+                "Công ty Cổ phần Masan Nutri-Science (trước đây là Công ty TNHH Masan Nutri-Science)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Tầm",
+                "nhìn Masan",
+                "Công ty Cổ phần Masan Nutri-Science (trước đây là Công ty TNHH Masan Nutri-Science)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 20)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 21)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Lợi nhuận/(lỗ) kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 23)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 23)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 20)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 21)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 22)",
+                "Lợi nhuận/(lỗ) thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31)",
+                "Chi phí khác (mã chỉ tiêu 32)",
+                "Kết quả từ các hoạt động khác (mã chỉ tiêu 40)",
+                "Lợi nhuận/(lỗ) kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 23)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 23)",
+                "Lợi nhuận/(lỗ) sau thuế TNDN (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 17: Vốn khác của chủ sở hữu"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Giao dịch vốn chủ sở hữu (*)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Giao dịch vốn chủ sở hữu (*)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần",
+                "Công ty Cổ phần Tầm nhìn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "2021 VND",
+                "Công ty Cổ phần Tầm nhìn",
+                "Masan (trước dây là Công ty TNHH Tầm nhìn Masan)",
+                "Thanh lý khoản đầu tư",
+                "Công ty Cổ phần",
+                "Masan MEATLife"
+              ],
+              "mục lục chỉ tiêu": [
+                "2021 VND",
+                "Công ty Cổ phần Tầm nhìn",
+                "Masan (trước dây là Công ty TNHH Tầm nhìn Masan)",
+                "Khoản cho vay đã cấp",
+                "Khoản cho vay đã thu hồi",
+                "Thu nhập lãi cho vay",
+                "Khoản vay đã nhận",
+                "Khoản vay đã hoàn trả",
+                "Chi phí lãi vay",
+                "Công ty TNHH The SHERPA",
+                "Thanh lý khoản đầu tư",
+                "Công ty Cổ phần",
+                "Masan MEATLife",
+                "Thu nhập từ cổ tức",
+                "Mua trái phiếu (**)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 18)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 19)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Lợi nhuận/(lỗ) kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 22)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 22)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 18)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 19)",
+                "Trong đó: Chi phí lãi vay (mã chỉ tiêu 23)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 20)",
+                "Lợi nhuận/(lỗ) thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Chi phí khác (mã chỉ tiêu 32; tham chiếu Thuyết minh số 21)",
+                "Kết quả từ hoạt động khác (mã chỉ tiêu 40)",
+                "Lợi nhuận/(lỗ) kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế TNDN hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 22)",
+                "Chi phí thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 22)",
+                "Lợi nhuận/(lỗ) sau thuế TNDN (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 12: Vay và trái phiếu phát hành 31/12/2021VND 1/1/2021VND Vay và trái phiếu phát hành ngắn hạn (a)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trái phiếu phát hành dài hạn (c)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngắn hạn",
+                "Vay và trái phiếu dài hạn đến hạn trả",
+                "Vay dài hạn (b)",
+                "Trái phiếu phát hành dài hạn (c)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngắn hạn",
+                "Vay và trái phiếu dài hạn đến hạn trả",
+                "Vay dài hạn (b)",
+                "Trái phiếu phát hành dài hạn (c)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 15: Vốn cổ phần và thặng dư vốn cổ phần"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Cổ phiếu quỹCổ phiếu phổ thông",
+                "Vốn cổ phần được duyệt",
+                "Thặng dư vốn cổ phần"
+              ],
+              "kỳ số liệu": [
+                "31/12/2017",
+                "1/1/2017"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần",
+                "Cổ phiếu quỹCổ phiếu phổ thông"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn cổ phần được duyệt",
+                "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                "Thặng dư vốn cổ phần",
+                "Cổ phiếu quỹCổ phiếu phổ thông"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 207.722: 849 cổ phiếu phổ thông; và"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phát hành cổ phiếu",
+                "Phát hành cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu thường",
+                "Mua cổ phiếu quỹ",
+                "Mua cổ phiếu quỹ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Phát hành cổ phiếu",
+                "Lợi nhuận thuần trong năm",
+                "Số dư tại ngày 1 tháng 1 năm 2017",
+                "Phát hành cổ phiếu thường"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 1 tháng 1 năm 2016",
+                "Phát hành cổ phiếu",
+                "Lợi nhuận thuần trong năm",
+                "Giao dịch vốn chủ sở hữu",
+                "Mua cổ phiếu quỹ",
+                "Cổ tức",
+                "Số dư tại ngày 1 tháng 1 năm 2017",
+                "Phát hành cổ phiếu thường",
+                "Số dư tại ngày 31 tháng 12 năm 2017"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+        "các bảng": [
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trái phiếu của Công ty Cổ phần Tài nguyên Masan, một công ty con sở hữu gián tiếp"
+              ],
+              "kỳ số liệu": [
+                "31/12/2019",
+                "1/1/2019"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu của Công ty Cổ phần Tài nguyên Masan, một công ty con sở hữu gián tiếp",
+                "Trái phiếu của Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp",
+                "Trái phiếu khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu của Công ty Cổ phần Tài nguyên Masan, một công ty con sở hữu gián tiếp",
+                "Trái phiếu của Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp",
+                "Trái phiếu khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: Chi phí tài chính"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí phát hành trái phiếu"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "• Trái chủ và các bên khác",
+                "• Các công ty con",
+                "Chi phí phát hành trái phiếu",
+                "Lỗ chênh lệch tỷ giá hồi đoái",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "• Trái chủ và các bên khác",
+                "• Các công ty con",
+                "Chi phí phát hành trái phiếu",
+                "Lỗ chênh lệch tỷ giá hồi đoái",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Thanh lý",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế"
+              ],
+              "kỳ số liệu": [
+                "2016 VND",
+                "2015 VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty TNHH Khai Thác Chế Biến Khoáng Sản Núi Pháo",
+                "Công ty TNHH Masan Brewery",
+                "Công ty TNHH Shika",
+                "Công ty TNHH Kenji",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế",
+                "Ban quản lý chủ chốt"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Tài nguyên Masan",
+                "Công ty TNHH Khai Thác Chế Biến Khoáng Sản Núi Pháo",
+                "Công ty TNHH Masan Brewery",
+                "Công ty TNHH Shika",
+                "Công ty TNHH Kenji",
+                "Công ty Cổ phần Dinh dưỡng Nông nghiệp Quốc tế",
+                "Ban quản lý chủ chốt"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: Chi phí tài chính"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "• Các ngân hàng",
+                "• Trái chủ và các bên khác",
+                "• Công ty con",
+                "Lỗ chênh lệch tỷ giá hối đoái",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "• Các ngân hàng",
+                "• Trái chủ và các bên khác",
+                "• Công ty con",
+                "Lỗ chênh lệch tỷ giá hối đoái",
+                "Lỗ từ thanh lý các khoản đầu tư",
+                "Chi phí khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "▪ Công ty Cổ phần Masan MEATLife (“MML”)",
+                "▪ Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan) (“MH”) (**)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2021",
+                "1/1/2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan) (“MH”) (**)",
+                "▪ Công ty Cổ phần Masan MEATLife (“MML”)",
+                "▪ Công ty TNHH The SHERPA (“SHERPA”) (***)"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Công ty Cổ phần Tầm nhìn Masan (trước đây là Công ty TNHH Tầm nhìn Masan) (“MH”) (**)",
+                "▪ Công ty Cổ phần Masan MEATLife (“MML”)",
+                "▪ Công ty TNHH The SHERPA (“SHERPA”) (***)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Hàng Tiêu dùng Masan",
+                "Công ty Cổ phần Dịch vụ",
+                "Công ty Cổ phần Dịch vụ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Hàng Tiêu dùng Masan",
+                "Mua hàng hóa",
+                "Chi phí lãi vay",
+                "Công ty Cổ phần Dịch vụ",
+                "Thương mại Tổng hợp",
+                "Wincommerce (trước dây là"
+              ],
+              "mục lục chỉ tiêu": [
+                "2021 VND",
+                "Công ty TNHH",
+                "MasanConsumerHoldings",
+                "Thu nhập lãi cho vay",
+                "Công ty Cổ phần Hàng Tiêu dùng Masan",
+                "Mua hàng hóa",
+                "Vonfram Masan",
+                "Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo",
+                "Khoản cho vay đã thu hồi",
+                "Khoản vay đã nhận",
+                "Khoản vay đã hoàn trả",
+                "Chi phí lãi vay",
+                "Công ty Cổ phần Dịch vụ",
+                "Thương mại Tổng hợp",
+                "Wincommerce (trước dây là",
+                "Vincommerce)",
+                "MEATDeli HN (trước dây là",
+                "Công ty TNHH MNS Meat Hà Nam)",
+                "Công ty TNHH MEATDeli Sài Gòn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2021",
+                "1/1/2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Thương mạiCổ phần Kỹ thương Việt Nam(“Techcombank”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng Thương mạiCổ phần Kỹ thương Việt Nam(“Techcombank”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b03",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: Phải thu ngắn hạn và dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "▪ Công ty Cổ phần Mobicast, một công ty con sở hữu gián tiếp (ii)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp (i)",
+                "▪ Công ty Cổ phần Mobicast, một công ty con sở hữu gián tiếp (ii)",
+                "▪ Công ty TNHH The SHERPA, một công ty con sở hữu trực tiếp",
+                "Phải thu cho vay từ các bên thứ ba"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Công ty TNHH Khai thác Chế biến Khoáng sản Núi Pháo, một công ty con sở hữu gián tiếp (i)",
+                "▪ Công ty Cổ phần Mobicast, một công ty con sở hữu gián tiếp (ii)",
+                "▪ Công ty TNHH The SHERPA, một công ty con sở hữu trực tiếp",
+                "Phải thu cho vay từ các bên thứ ba"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Masan Nutri-Science (“MNS”)",
+                "Công ty TNHH Tầm nhìn Masan (trước đây là Công ty Cổ phần Tầm nhìn Masan) (“MH”)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2017",
+                "1/1/2017"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "Công ty TNHH Tầm nhìn Masan (trước đây là Công ty Cổ phần Tầm nhìn Masan) (“MH”)",
+                "Công ty Cổ phần Masan Nutri-Science (“MNS”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH MasanConsumerHoldings (“MCH”)",
+                "Công ty TNHH Tầm nhìn Masan (trước đây là Công ty Cổ phần Tầm nhìn Masan) (“MH”)",
+                "Công ty Cổ phần Masan Nutri-Science (“MNS”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phát hành cổ phiếu thường (*)",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền"
+              ],
+              "kỳ số liệu": [
+                "2017",
+                "2016"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu thường (*)",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Phát hành cổ phiếu thường (*)",
+                "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b04",
+            "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng Thươngmại Cổ phần Kỹthương Việt Nam(“Techcombank”)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2017",
+                "1/1/2017"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Thươngmại Cổ phần Kỹthương Việt Nam(“Techcombank”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng Thươngmại Cổ phần Kỹthương Việt Nam(“Techcombank”)"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c13",
+          "c33",
+          "c02",
+          "c22",
+          "c36",
+          "c05",
+          "c25",
+          "c39",
+          "c48",
+          "c14",
+          "c23",
+          "c40"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c13",
+            "c36",
+            "c39"
+          ]
+        },
+        "nominated_keys": [
+          "c13",
+          "c36",
+          "c39"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c04",
+          "c21",
+          "c41",
+          "c07",
+          "c24",
+          "c38",
+          "c12",
+          "c28",
+          "c42",
+          "c50",
+          "c16",
+          "c30",
+          "c43"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c07",
+            "c38",
+            "c12",
+            "c50"
+          ]
+        },
+        "nominated_keys": [
+          "c07",
+          "c38",
+          "c12",
+          "c50"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c09",
+          "c26",
+          "c46",
+          "c11",
+          "c27",
+          "c45",
+          "c15",
+          "c29",
+          "c44",
+          "c06",
+          "c17",
+          "c34"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c06",
+            "c34",
+            "c26",
+            "c46",
+            "c45"
+          ]
+        },
+        "nominated_keys": [
+          "c06",
+          "c34",
+          "c26",
+          "c46",
+          "c45"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c10",
+          "c31",
+          "c49",
+          "c19",
+          "c32",
+          "c03",
+          "c18",
+          "c35",
+          "c47",
+          "c08",
+          "c20",
+          "c37"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c20"
+          ]
+        },
+        "nominated_keys": [
+          "c20"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c06",
+      "c07",
+      "c13",
+      "c20",
+      "c34",
+      "c36",
+      "c38",
+      "c12",
+      "c26",
+      "c39",
+      "c46",
+      "c50",
+      "c45"
+    ],
+    "lexical_finalist_keys": [
+      "c34",
+      "c36",
+      "c39",
+      "c46",
+      "c38",
+      "c50",
+      "c06",
+      "c07",
+      "c12",
+      "c13",
+      "c20",
+      "c26"
+    ],
+    "finalist_keys": [
+      "c06",
+      "c07",
+      "c13",
+      "c20",
+      "c34",
+      "c36",
+      "c38",
+      "c12",
+      "c26",
+      "c39",
+      "c46",
+      "c50",
+      "c45"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Với CTCP Tập đoàn Masan (MSN), năm nào trong các năm 2016, 2017, 2019 và 2021 có vốn cổ phần đã phát hành (cổ phiếu phổ thông) lớn nhất theo số liệu công ty mẹ?",
+      "giới hạn số bảng": 13,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2019,
+          "loại báo cáo": "riêng"
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2016,
+          "loại báo cáo": "riêng"
+        },
+        {
+          "mã báo cáo": "b03",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2021,
+          "loại báo cáo": "riêng"
+        },
+        {
+          "mã báo cáo": "b04",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2017,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [
+        "b01",
+        "b02",
+        "b03",
+        "b04"
+      ],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2019,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Vốn cổ phần được duyệt",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "kỳ số liệu": [
+                  "31/12/2019",
+                  "1/1/2019"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c26",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền"
+                ],
+                "kỳ số liệu": [
+                  "2019",
+                  "2018"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c46",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2019 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phát hành cổ phiếu",
+                  "Phát hành cổ phiếu"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phát hành lại cổ phiếu quỹ"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 1 tháng 1 năm2018",
+                  "Phát hành cổ phiếu",
+                  "Phát hành lại cổ phiếu quỹ",
+                  "Lợi nhuận thuần trong năm",
+                  "Số dư tại ngày 1 tháng 1 năm2019",
+                  "Số dư tại ngày 31 tháng 12năm 2019"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 1 tháng 1 năm2018",
+                  "Phát hành cổ phiếu",
+                  "Phát hành lại cổ phiếu quỹ",
+                  "Lợi nhuận thuần trong năm",
+                  "Số dư tại ngày 1 tháng 1 năm2019",
+                  "Số dư tại ngày 31 tháng 12năm 2019"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2016,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c07",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 15: Vốn cổ phần và thẳng dư vốn cổ phần"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Cổ phiếu quỹCổ phiếu phổ thông",
+                  "Vốn cổ phần được duyệt",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "kỳ số liệu": [
+                  "31/12/2016",
+                  "1/1/2016"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần",
+                  "Cổ phiếu quỹCổ phiếu phổ thông"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần",
+                  "Cổ phiếu quỹCổ phiếu phổ thông"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c36",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phát hành cổ phiếu"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phát hành cổ phiếu (Thuyết minh 15)",
+                  "Mua cổ phiếu quỹ"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 1 tháng 1 năm 2015",
+                  "Phát hành cổ phiếu",
+                  "Lỗ thuần trong năm",
+                  "Số dư tại ngày 1 tháng 1 năm 2016",
+                  "Phát hành cổ phiếu (Thuyết minh 15)",
+                  "Lợi nhuận thuần trong năm",
+                  "Giao dịch vốn chủ sở hữu (Thuyết minh 17)",
+                  "Mua cổ phiếu quỹ",
+                  "Cổ tức"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 1 tháng 1 năm 2015",
+                  "Phát hành cổ phiếu",
+                  "Lỗ thuần trong năm",
+                  "Số dư tại ngày 1 tháng 1 năm 2016",
+                  "Phát hành cổ phiếu (Thuyết minh 15)",
+                  "Lợi nhuận thuần trong năm",
+                  "Giao dịch vốn chủ sở hữu (Thuyết minh 17)",
+                  "Mua cổ phiếu quỹ",
+                  "Cổ tức",
+                  "Số dư tại ngày 31 tháng 12 năm 2016"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c38",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                  "Cổ phiếu quỹ (mã chỉ tiêu 415; tham chiếu Thuyết minh số 15)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 14)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                  "Vốn khác của chủ sở hữu (mã chỉ tiêu 414; tham chiếu Thuyết minh số 17)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NGUỒN VỐN",
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán (mã chỉ tiêu 311)",
+                  "Chi phí phải trả (mã chỉ tiêu 315; tham chiếu Thuyết minh số 11)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 12)",
+                  "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 13)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Vay và trái phiếu dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 13)",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 14)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 15)",
+                  "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 15)",
+                  "Vốn khác của chủ sở hữu (mã chỉ tiêu 414; tham chiếu Thuyết minh số 17)",
+                  "Cổ phiếu quỹ (mã chỉ tiêu 415; tham chiếu Thuyết minh số 15)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                  "- Lợi nhuận sau thuế chưa phân phốiđến cuối năm trước (mã chỉ tiêu 421a)",
+                  "- Lợi nhuận/(lỗ) sau thuế năm nay (mã chỉ tiêu 421b)",
+                  "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c45",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 17: Vốn khác của chủ sở hữu"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Giao dịch vốn chủ sở hữu (*)",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Giao dịch vốn chủ sở hữu (*)",
+                  "Số dư cuối năm"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b03",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2021,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c12",
+              "mã báo cáo": "b03",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "kỳ số liệu": [
+                  "31/12/2021",
+                  "1/1/2021"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vốn cổ phần được duyệtCổ phiếu phổ thông",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c39",
+              "mã báo cáo": "b03",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phát hành cổ phiếu",
+                  "Phát hành cổ phiếu"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 1 tháng 1 năm 2020",
+                  "Phát hành cổ phiếu",
+                  "Lỗ thuần trong năm",
+                  "Cổ tức",
+                  "Số dư tại ngày 1 tháng 1 năm 2021",
+                  "Lợi nhuận thuần trong năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 1 tháng 1 năm 2020",
+                  "Phát hành cổ phiếu",
+                  "Lỗ thuần trong năm",
+                  "Cổ tức",
+                  "Số dư tại ngày 1 tháng 1 năm 2021",
+                  "Lợi nhuận thuần trong năm",
+                  "Cổ tức (Thuyết minh 16)",
+                  "Số dư tại ngày 31 tháng 12 năm 2021"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c50",
+              "mã báo cáo": "b03",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2021 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)",
+                  "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                  "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 11)",
+                  "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số 10(b))",
+                  "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 13)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NGUỒN VỐN",
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán (mã chỉ tiêu 311)",
+                  "Thuế phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 7(b))",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 10(a))",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 11)",
+                  "Vay và trái phiếu phát hành ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 12(a))",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Chi phí phải trả dài hạn (mã chỉ tiêu 333; tham chiếu Thuyết minh số 10(b))",
+                  "Vay và trái phiếu phát hành dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 12(b))",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 13)",
+                  "Vốn cổ phần (mã chỉ tiêu 411; tham chiếu Thuyết minh số 14)",
+                  "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 14)",
+                  "Vốn khác của chủ sở hữu (mã chỉ tiêu 414)",
+                  "Lợi nhuận sau thuế chưa phân phối (mã chỉ tiêu 421)",
+                  "- LNST chưa phân phối đến cuối năm trước (mã chỉ tiêu 421a)",
+                  "- LNST chưa phân phối năm nay/(lỗ sau thuế năm trước) (mã chỉ tiêu 421b)",
+                  "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b04",
+          "mã doanh nghiệp": "MSN",
+          "tên doanh nghiệp": "CTCP Tập đoàn Masan",
+          "năm": 2017,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c06",
+              "mã báo cáo": "b04",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 15: Vốn cổ phần và thặng dư vốn cổ phần"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Cổ phiếu quỹCổ phiếu phổ thông",
+                  "Vốn cổ phần được duyệt",
+                  "Thặng dư vốn cổ phần"
+                ],
+                "kỳ số liệu": [
+                  "31/12/2017",
+                  "1/1/2017"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần",
+                  "Cổ phiếu quỹCổ phiếu phổ thông"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vốn cổ phần được duyệt",
+                  "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+                  "Thặng dư vốn cổ phần",
+                  "Cổ phiếu quỹCổ phiếu phổ thông"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c20",
+              "mã báo cáo": "b04",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Phát hành cổ phiếu thường (*)",
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền"
+                ],
+                "kỳ số liệu": [
+                  "2017",
+                  "2016"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu thường (*)",
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Phát hành cổ phiếu thường (*)",
+                  "Phát hành cổ phiếu theo mệnh giá bằng tiền",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c34",
+              "mã báo cáo": "b04",
+              "thuộc báo cáo": "MSN — CTCP Tập đoàn Masan — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phát hành cổ phiếu",
+                  "Phát hành cổ phiếu"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phát hành cổ phiếu thường",
+                  "Mua cổ phiếu quỹ",
+                  "Mua cổ phiếu quỹ"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 1 tháng 1 năm 2016",
+                  "Phát hành cổ phiếu",
+                  "Lợi nhuận thuần trong năm",
+                  "Số dư tại ngày 1 tháng 1 năm 2017",
+                  "Phát hành cổ phiếu thường"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 1 tháng 1 năm 2016",
+                  "Phát hành cổ phiếu",
+                  "Lợi nhuận thuần trong năm",
+                  "Giao dịch vốn chủ sở hữu",
+                  "Mua cổ phiếu quỹ",
+                  "Cổ tức",
+                  "Số dư tại ngày 1 tháng 1 năm 2017",
+                  "Phát hành cổ phiếu thường",
+                  "Số dư tại ngày 31 tháng 12 năm 2017"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01",
+        "b02",
+        "b03",
+        "b04"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b02_k01",
+              "nội dung": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b03",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b03_k01",
+              "nội dung": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b04",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b04_k01",
+              "nội dung": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c13",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c07",
+          "đáp ứng chỉ tiêu": [
+            "b02_k01"
+          ]
+        },
+        {
+          "mã bảng": "c12",
+          "đáp ứng chỉ tiêu": [
+            "b03_k01"
+          ]
+        },
+        {
+          "mã bảng": "c06",
+          "đáp ứng chỉ tiêu": [
+            "b04_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [
+      "b01",
+      "b02",
+      "b03",
+      "b04"
+    ],
+    "coverage_lock_reasons": [
+      "multi_year_selection_or_filter"
+    ],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01",
+      "b02",
+      "b03",
+      "b04"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+            "role": "trực tiếp"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+            "role": "trực tiếp"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b03",
+        "concepts": [
+          {
+            "concept_key": "b03_k01",
+            "description": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+            "role": "trực tiếp"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b04",
+        "concepts": [
+          {
+            "concept_key": "b04_k01",
+            "description": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c13",
+      "c07",
+      "c12",
+      "c06"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c13",
+      "c07",
+      "c12",
+      "c06"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "MSN_financial_statements_2019_separate_table_26",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2019_separate_table_26",
+        "doc_id": "MSN_financial_statements_2019_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2019,
+        "start_line": 805
+      },
+      "rrf_score": 0.027820121951219513,
+      "dense_rank": 13,
+      "dense_score": 0.8494252,
+      "bm25_rank": 4,
+      "bm25_score": 20.20242833504603,
+      "retrieval_score": 0.027820121951219513,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2019",
+          "value_2",
+          "1/1/2019",
+          "value_4",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31/12/2019",
+          "1/1/2019"
+        ],
+        "units": [],
+        "row_count": 3,
+        "table_titles": [
+          "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "MSN_financial_statements_2016_separate_table_22",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2016_separate_table_22",
+        "doc_id": "MSN_financial_statements_2016_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 814
+      },
+      "rrf_score": 0.029051670471052088,
+      "dense_rank": 7,
+      "dense_score": 0.8536782,
+      "bm25_rank": 1,
+      "bm25_score": 22.335373725227804,
+      "retrieval_score": 0.029051670471052088,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2016",
+          "value_2",
+          "1/1/2016",
+          "value_4",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31/12/2016",
+          "1/1/2016"
+        ],
+        "units": [],
+        "row_count": 4,
+        "table_titles": [
+          "Thuyết minh 15: Vốn cổ phần và thẳng dư vốn cổ phần"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu quỹCổ phiếu phổ thông"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu quỹCổ phiếu phổ thông"
+          }
+        ]
+      },
+      "rerank_score": 0.75,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "MSN_financial_statements_2021_separate_table_30",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2021_separate_table_30",
+        "doc_id": "MSN_financial_statements_2021_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1027
+      },
+      "rrf_score": 0.02821869488536155,
+      "dense_rank": 12,
+      "dense_score": 0.8512911,
+      "bm25_rank": 3,
+      "bm25_score": 22.307298395762675,
+      "retrieval_score": 0.02821869488536155,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2021",
+          "value_2",
+          "1/1/2021",
+          "value_4",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31/12/2021",
+          "1/1/2021"
+        ],
+        "units": [],
+        "row_count": 3,
+        "table_titles": [
+          "Thuyết minh 14: Vốn cổ phần và thặng dư vốn cổ phần"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệtCổ phiếu phổ thông"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệtCổ phiếu phổ thông"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 3,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "MSN_financial_statements_2017_separate_table_26",
+      "metadata": {
+        "table_id": "MSN_financial_statements_2017_separate_table_26",
+        "doc_id": "MSN_financial_statements_2017_separate",
+        "ticker": "MSN",
+        "company_name": "CTCP Tập đoàn Masan",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 788
+      },
+      "rrf_score": 0.029116045245077504,
+      "dense_rank": 6,
+      "dense_score": 0.85607904,
+      "bm25_rank": 2,
+      "bm25_score": 22.335373725227804,
+      "retrieval_score": 0.029116045245077504,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2017",
+          "value_2",
+          "1/1/2017",
+          "value_4",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31/12/2017",
+          "1/1/2017"
+        ],
+        "units": [],
+        "row_count": 4,
+        "table_titles": [
+          "Thuyết minh 15: Vốn cổ phần và thặng dư vốn cổ phần"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu quỹCổ phiếu phổ thông"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Vốn cổ phần được duyệt"
+          },
+          {
+            "row": 3,
+            "label": "Vốn cổ phần đã phát hànhCổ phiếu phổ thông"
+          },
+          {
+            "row": 4,
+            "label": "Thặng dư vốn cổ phần"
+          },
+          {
+            "row": 5,
+            "label": "Cổ phiếu quỹCổ phiếu phổ thông"
+          }
+        ]
+      },
+      "rerank_score": 0.25,
+      "rerank_reason": "llm",
+      "rerank_rank": 4,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "MSN_financial_statements_2019_separate",
+        "MSN_financial_statements_2016_separate",
+        "MSN_financial_statements_2021_separate",
+        "MSN_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "MSN_financial_statements_2019_separate|568",
+        "MSN_financial_statements_2016_separate|588",
+        "MSN_financial_statements_2021_separate|675",
+        "MSN_financial_statements_2019_separate|913",
+        "MSN_financial_statements_2021_separate|908",
+        "MSN_financial_statements_2017_separate|788",
+        "MSN_financial_statements_2016_separate|814",
+        "MSN_financial_statements_2017_separate|512",
+        "MSN_financial_statements_2019_separate|554",
+        "MSN_financial_statements_2019_separate|541",
+        "MSN_financial_statements_2016_separate|950",
+        "MSN_financial_statements_2021_separate|1027",
+        "MSN_financial_statements_2019_separate|805",
+        "MSN_financial_statements_2017_separate|881",
+        "MSN_financial_statements_2021_separate|1162",
+        "MSN_financial_statements_2017_separate|894",
+        "MSN_financial_statements_2017_separate|562",
+        "MSN_financial_statements_2021_separate|1179",
+        "MSN_financial_statements_2016_separate|965",
+        "MSN_financial_statements_2017_separate|794",
+        "MSN_financial_statements_2019_separate|198",
+        "MSN_financial_statements_2016_separate|600",
+        "MSN_financial_statements_2017_separate|163",
+        "MSN_financial_statements_2016_separate|822",
+        "MSN_financial_statements_2021_separate|1200",
+        "MSN_financial_statements_2019_separate|826",
+        "MSN_financial_statements_2016_separate|269",
+        "MSN_financial_statements_2021_separate|1035",
+        "MSN_financial_statements_2021_separate|303",
+        "MSN_financial_statements_2017_separate|525",
+        "MSN_financial_statements_2019_separate|865",
+        "MSN_financial_statements_2016_separate|915",
+        "MSN_financial_statements_2019_separate|608",
+        "MSN_financial_statements_2017_separate|767",
+        "MSN_financial_statements_2021_separate|705",
+        "MSN_financial_statements_2016_separate|793",
+        "MSN_financial_statements_2017_separate|531",
+        "MSN_financial_statements_2016_separate|237",
+        "MSN_financial_statements_2021_separate|1003",
+        "MSN_financial_statements_2017_separate|742",
+        "MSN_financial_statements_2019_separate|12",
+        "MSN_financial_statements_2021_separate|953",
+        "MSN_financial_statements_2017_separate|12",
+        "MSN_financial_statements_2021_separate|881",
+        "MSN_financial_statements_2016_separate|851",
+        "MSN_financial_statements_2019_separate|784",
+        "MSN_financial_statements_2021_separate|761",
+        "MSN_financial_statements_2021_separate|726",
+        "MSN_financial_statements_2019_separate|591",
+        "MSN_financial_statements_2021_separate|268"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "MSN_financial_statements_2017_separate",
+        "MSN_financial_statements_2016_separate",
+        "MSN_financial_statements_2019_separate",
+        "MSN_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "MSN_financial_statements_2017_separate|788",
+        "MSN_financial_statements_2016_separate|814",
+        "MSN_financial_statements_2019_separate|805",
+        "MSN_financial_statements_2017_separate|794",
+        "MSN_financial_statements_2017_separate|767",
+        "MSN_financial_statements_2016_separate|793",
+        "MSN_financial_statements_2016_separate|237",
+        "MSN_financial_statements_2021_separate|1027",
+        "MSN_financial_statements_2019_separate|826",
+        "MSN_financial_statements_2021_separate|1003",
+        "MSN_financial_statements_2019_separate|784",
+        "MSN_financial_statements_2021_separate|268",
+        "MSN_financial_statements_2016_separate|851"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "MSN_financial_statements_2017_separate",
+        "MSN_financial_statements_2016_separate",
+        "MSN_financial_statements_2019_separate",
+        "MSN_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "MSN_financial_statements_2017_separate|788",
+        "MSN_financial_statements_2016_separate|814",
+        "MSN_financial_statements_2019_separate|805",
+        "MSN_financial_statements_2017_separate|794",
+        "MSN_financial_statements_2017_separate|767",
+        "MSN_financial_statements_2016_separate|793",
+        "MSN_financial_statements_2016_separate|237",
+        "MSN_financial_statements_2021_separate|1027",
+        "MSN_financial_statements_2019_separate|826",
+        "MSN_financial_statements_2021_separate|1003",
+        "MSN_financial_statements_2019_separate|784",
+        "MSN_financial_statements_2021_separate|268",
+        "MSN_financial_statements_2016_separate|851"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "MSN_financial_statements_2019_separate",
+        "MSN_financial_statements_2016_separate",
+        "MSN_financial_statements_2021_separate",
+        "MSN_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "MSN_financial_statements_2019_separate|805",
+        "MSN_financial_statements_2016_separate|814",
+        "MSN_financial_statements_2021_separate|1027",
+        "MSN_financial_statements_2017_separate|788"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "MSN_financial_statements_2019_separate",
+        "MSN_financial_statements_2016_separate",
+        "MSN_financial_statements_2021_separate",
+        "MSN_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "MSN_financial_statements_2019_separate|805",
+        "MSN_financial_statements_2016_separate|814",
+        "MSN_financial_statements_2021_separate|1027",
+        "MSN_financial_statements_2017_separate|788"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.08,
+        "recall": 1.0,
+        "f2": 0.30303030303030304,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.3076923076923077,
+        "recall": 1.0,
+        "f2": 0.6896551724137931,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.3076923076923077,
+        "recall": 1.0,
+        "f2": 0.6896551724137931,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "MSN_financial_statements_2016_separate|814",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "MSN_financial_statements_2017_separate|788",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "MSN_financial_statements_2019_separate|805",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    },
+    {
+      "table_ref": "MSN_financial_statements_2021_separate|1027",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

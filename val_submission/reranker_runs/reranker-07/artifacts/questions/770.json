@@ -1,0 +1,5127 @@
+{
+  "schema_version": 2,
+  "id": 770,
+  "question": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-23T09:39:37+00:00",
+  "finished_at": "2026-08-23T09:40:02+00:00",
+  "duration_seconds": 24.244458415996633,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/770.json",
+  "golden": {
+    "id": 770,
+    "question": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+    "relevant_docs": [
+      "GAS_financial_statements_2023_separate",
+      "POW_financial_statements_2023_separate"
+    ],
+    "relevant_tables": [
+      "GAS_financial_statements_2023_separate|567",
+      "POW_financial_statements_2023_separate|358"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_44",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_44",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1857
+      },
+      "rrf_score": 0.03278688524590164,
+      "dense_rank": 1,
+      "dense_score": 0.8715046,
+      "bm25_rank": 1,
+      "bm25_score": 13.065154560587835,
+      "retrieval_score": 0.03278688524590164,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_38",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_38",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1175
+      },
+      "rrf_score": 0.032266458495966696,
+      "dense_rank": 2,
+      "dense_score": 0.86183465,
+      "bm25_rank": 1,
+      "bm25_score": 15.249526998356503,
+      "retrieval_score": 0.032266458495966696,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_55",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_55",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2150
+      },
+      "rrf_score": 0.0315136476426799,
+      "dense_rank": 3,
+      "dense_score": 0.85205835,
+      "bm25_rank": 2,
+      "bm25_score": 12.476862708122056,
+      "retrieval_score": 0.0315136476426799,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_46",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_46",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1252
+      },
+      "rrf_score": 0.03028233151183971,
+      "dense_rank": 4,
+      "dense_score": 0.8655062,
+      "bm25_rank": 12,
+      "bm25_score": 1.7704956431519843,
+      "retrieval_score": 0.03028233151183971,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_43",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_43",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1842
+      },
+      "rrf_score": 0.03125763125763126,
+      "dense_rank": 5,
+      "dense_score": 0.85849184,
+      "bm25_rank": 5,
+      "bm25_score": 6.908529340973004,
+      "retrieval_score": 0.03125763125763126,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_15",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_15",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 903
+      },
+      "rrf_score": 0.029910714285714284,
+      "dense_rank": 6,
+      "dense_score": 0.8589254,
+      "bm25_rank": 10,
+      "bm25_score": 2.226097825096928,
+      "retrieval_score": 0.029910714285714284,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_25",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_25",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1605
+      },
+      "rrf_score": 0.03007688828584351,
+      "dense_rank": 7,
+      "dense_score": 0.84965086,
+      "bm25_rank": 6,
+      "bm25_score": 6.06631852000831,
+      "retrieval_score": 0.03007688828584351,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_48",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_48",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1262
+      },
+      "rrf_score": 0.028577260665441927,
+      "dense_rank": 8,
+      "dense_score": 0.8545445,
+      "bm25_rank": 11,
+      "bm25_score": 2.1153741064526814,
+      "retrieval_score": 0.028577260665441927,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_38",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_38",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1751
+      },
+      "rrf_score": 0.029116045245077504,
+      "dense_rank": 9,
+      "dense_score": 0.8659829,
+      "bm25_rank": 17,
+      "bm25_score": 2.2921512732742415,
+      "retrieval_score": 0.029116045245077504,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_44",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_44",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1237
+      },
+      "rrf_score": 0.027972027972027972,
+      "dense_rank": 10,
+      "dense_score": 0.84572077,
+      "bm25_rank": 6,
+      "bm25_score": 3.129385633463864,
+      "retrieval_score": 0.027972027972027972,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_37",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_37",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1744
+      },
+      "rrf_score": 0.02844551282051282,
+      "dense_rank": 11,
+      "dense_score": 0.8545413,
+      "bm25_rank": 18,
+      "bm25_score": 2.187926944941242,
+      "retrieval_score": 0.02844551282051282,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_17",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_17",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 944
+      },
+      "rrf_score": 0.027884615384615386,
+      "dense_rank": 12,
+      "dense_score": 0.8587815,
+      "bm25_rank": 20,
+      "bm25_score": 1.003086529531533,
+      "retrieval_score": 0.027884615384615386,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_85",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_85",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2583
+      },
+      "rrf_score": 0.028258706467661692,
+      "dense_rank": 13,
+      "dense_score": 0.8445825,
+      "bm25_rank": 7,
+      "bm25_score": 5.082960504203906,
+      "retrieval_score": 0.028258706467661692,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_34",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_34",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1146
+      },
+      "rrf_score": 0.02728937728937729,
+      "dense_rank": 14,
+      "dense_score": 0.84116256,
+      "bm25_rank": 5,
+      "bm25_score": 3.401943739937465,
+      "retrieval_score": 0.02728937728937729,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_84",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_84",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2579
+      },
+      "rrf_score": 0.027692895339954164,
+      "dense_rank": 15,
+      "dense_score": 0.8413716,
+      "bm25_rank": 8,
+      "bm25_score": 5.026318582077617,
+      "retrieval_score": 0.027692895339954164,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_29",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_29",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1099
+      },
+      "rrf_score": 0.02690501986276634,
+      "dense_rank": 16,
+      "dense_score": 0.8496538,
+      "bm25_rank": 18,
+      "bm25_score": 1.0569087356933542,
+      "retrieval_score": 0.02690501986276634,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_39",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_39",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1805
+      },
+      "rrf_score": 0.027651515151515153,
+      "dense_rank": 17,
+      "dense_score": 0.8514733,
+      "bm25_rank": 20,
+      "bm25_score": 1.0066080439750011,
+      "retrieval_score": 0.027651515151515153,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_27",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_27",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1080
+      },
+      "rrf_score": 0.02668564312399929,
+      "dense_rank": 18,
+      "dense_score": 0.8480433,
+      "bm25_rank": 17,
+      "bm25_score": 1.0604818850565292,
+      "retrieval_score": 0.02668564312399929,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_6",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_6",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 716
+      },
+      "rrf_score": 0.02667140825035562,
+      "dense_rank": 19,
+      "dense_score": 0.84171975,
+      "bm25_rank": 14,
+      "bm25_score": 3.437768250775095,
+      "retrieval_score": 0.02667140825035562,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_16",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_16",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 924
+      },
+      "rrf_score": 0.026470588235294117,
+      "dense_rank": 20,
+      "dense_score": 0.8549935,
+      "bm25_rank": 25,
+      "bm25_score": 0.9322142306365534,
+      "retrieval_score": 0.026470588235294117,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_23",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_23",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1582
+      },
+      "rrf_score": 0.02658450704225352,
+      "dense_rank": 21,
+      "dense_score": 0.83563447,
+      "bm25_rank": 11,
+      "bm25_score": 4.507742622770004,
+      "retrieval_score": 0.02658450704225352,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_12",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_12",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 865
+      },
+      "rrf_score": 0.026171741361614778,
+      "dense_rank": 22,
+      "dense_score": 0.84561336,
+      "bm25_rank": 14,
+      "bm25_score": 1.6022690035087392,
+      "retrieval_score": 0.026171741361614778,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_48",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_48",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2016
+      },
+      "rrf_score": 0.026153846153846153,
+      "dense_rank": 23,
+      "dense_score": 0.83755887,
+      "bm25_rank": 15,
+      "bm25_score": 3.2748430445547556,
+      "retrieval_score": 0.026153846153846153,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_26",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_26",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1059
+      },
+      "rrf_score": 0.025561706284597852,
+      "dense_rank": 24,
+      "dense_score": 0.8479875,
+      "bm25_rank": 23,
+      "bm25_score": 0.9789144081344058,
+      "retrieval_score": 0.025561706284597852,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_41",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_41",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1834
+      },
+      "rrf_score": 0.025708635464733027,
+      "dense_rank": 25,
+      "dense_score": 0.84496677,
+      "bm25_rank": 22,
+      "bm25_score": 0.8690999794002797,
+      "retrieval_score": 0.025708635464733027,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_40",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_40",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1196
+      },
+      "rrf_score": 0.02454080096356519,
+      "dense_rank": 26,
+      "dense_score": 0.84345996,
+      "bm25_rank": 22,
+      "bm25_score": 0.9899479480987305,
+      "retrieval_score": 0.02454080096356519,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_36",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_36",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1737
+      },
+      "rrf_score": 0.024922600619195046,
+      "dense_rank": 27,
+      "dense_score": 0.8337615,
+      "bm25_rank": 16,
+      "bm25_score": 2.631368786411843,
+      "retrieval_score": 0.024922600619195046,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_24",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_24",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1042
+      },
+      "rrf_score": 0.024422933730454205,
+      "dense_rank": 28,
+      "dense_score": 0.8391965,
+      "bm25_rank": 19,
+      "bm25_score": 1.0532325160635463,
+      "retrieval_score": 0.024422933730454205,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_46",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_46",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1983
+      },
+      "rrf_score": 0.024691358024691357,
+      "dense_rank": 29,
+      "dense_score": 0.8351109,
+      "bm25_rank": 21,
+      "bm25_score": 0.9872927811886945,
+      "retrieval_score": 0.024691358024691357,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_19",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_19",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 961
+      },
+      "rrf_score": 0.016129032258064516,
+      "bm25_rank": 2,
+      "bm25_score": 4.9824979843075585,
+      "retrieval_score": 0.016129032258064516,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 30
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_54",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_54",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2134
+      },
+      "rrf_score": 0.015873015873015872,
+      "bm25_rank": 3,
+      "bm25_score": 9.06065731787562,
+      "retrieval_score": 0.015873015873015872,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 31
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_59",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_59",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1373
+      },
+      "rrf_score": 0.016129032258064516,
+      "dense_rank": 32,
+      "dense_score": 0.86234725,
+      "retrieval_score": 0.016129032258064516,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_52",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_52",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2039
+      },
+      "rrf_score": 0.015625,
+      "bm25_rank": 4,
+      "bm25_score": 7.43270408011698,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 33
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_6",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_6",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2023,
+        "start_line": 447
+      },
+      "rrf_score": 0.015873015873015872,
+      "bm25_rank": 3,
+      "bm25_score": 4.19819032469192,
+      "retrieval_score": 0.015873015873015872,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 34
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_71",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_71",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2419
+      },
+      "rrf_score": 0.014705882352941176,
+      "dense_rank": 35,
+      "dense_score": 0.8461988,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_50",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_50",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1281
+      },
+      "rrf_score": 0.015625,
+      "bm25_rank": 4,
+      "bm25_score": 3.5607840079374617,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 36
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_22",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_22",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1535
+      },
+      "rrf_score": 0.014492753623188406,
+      "bm25_rank": 9,
+      "bm25_score": 4.602632312370871,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 37
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_47",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_47",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1256
+      },
+      "rrf_score": 0.015151515151515152,
+      "dense_rank": 38,
+      "dense_score": 0.85693353,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_58",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_58",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2285
+      },
+      "rrf_score": 0.014492753623188406,
+      "dense_rank": 39,
+      "dense_score": 0.8461988,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_4",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_4",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2023,
+        "start_line": 358
+      },
+      "rrf_score": 0.014925373134328358,
+      "bm25_rank": 7,
+      "bm25_score": 3.0449720769806845,
+      "retrieval_score": 0.014925373134328358,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_66",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_66",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2386
+      },
+      "rrf_score": 0.014285714285714285,
+      "dense_rank": 41,
+      "dense_score": 0.8461988,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_49",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_49",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1275
+      },
+      "rrf_score": 0.014925373134328358,
+      "dense_rank": 42,
+      "dense_score": 0.85509825,
+      "retrieval_score": 0.014925373134328358,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_68",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_68",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2396
+      },
+      "rrf_score": 0.014285714285714285,
+      "bm25_rank": 10,
+      "bm25_score": 4.521528987032927,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_57",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_57",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1358
+      },
+      "rrf_score": 0.014705882352941176,
+      "bm25_rank": 8,
+      "bm25_score": 3.0111622187949654,
+      "retrieval_score": 0.014705882352941176,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 44
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_80",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_80",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2546
+      },
+      "rrf_score": 0.014084507042253521,
+      "dense_rank": 45,
+      "dense_score": 0.8461988,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_51",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_51",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1285
+      },
+      "rrf_score": 0.014492753623188406,
+      "bm25_rank": 9,
+      "bm25_score": 2.729270465961606,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_28",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_28",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1628
+      },
+      "rrf_score": 0.013888888888888888,
+      "dense_rank": 47,
+      "dense_score": 0.8461988,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_30",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_30",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1110
+      },
+      "rrf_score": 0.014285714285714285,
+      "dense_rank": 48,
+      "dense_score": 0.8521869,
+      "retrieval_score": 0.014285714285714285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_53",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_53",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 2089
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 3.730423112245951,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 49
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_41",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_41",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1206
+      },
+      "rrf_score": 0.013888888888888888,
+      "dense_rank": 50,
+      "dense_score": 0.8493199,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid"
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "year": 2023,
+        "report_type": "riêng"
+      },
+      {
+        "bucket_key": "b02",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "year": 2023,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_44",
+        "table_ref": "GAS_financial_statements_2023_separate|1857",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_38",
+        "table_ref": "POW_financial_statements_2023_separate|1175",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_55",
+        "table_ref": "GAS_financial_statements_2023_separate|2150",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_46",
+        "table_ref": "POW_financial_statements_2023_separate|1252",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_43",
+        "table_ref": "GAS_financial_statements_2023_separate|1842",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_15",
+        "table_ref": "POW_financial_statements_2023_separate|903",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_25",
+        "table_ref": "GAS_financial_statements_2023_separate|1605",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_48",
+        "table_ref": "POW_financial_statements_2023_separate|1262",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_38",
+        "table_ref": "GAS_financial_statements_2023_separate|1751",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_44",
+        "table_ref": "POW_financial_statements_2023_separate|1237",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_37",
+        "table_ref": "GAS_financial_statements_2023_separate|1744",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_17",
+        "table_ref": "POW_financial_statements_2023_separate|944",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_85",
+        "table_ref": "GAS_financial_statements_2023_separate|2583",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_34",
+        "table_ref": "POW_financial_statements_2023_separate|1146",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_84",
+        "table_ref": "GAS_financial_statements_2023_separate|2579",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_29",
+        "table_ref": "POW_financial_statements_2023_separate|1099",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_39",
+        "table_ref": "GAS_financial_statements_2023_separate|1805",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_27",
+        "table_ref": "POW_financial_statements_2023_separate|1080",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_6",
+        "table_ref": "GAS_financial_statements_2023_separate|716",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_16",
+        "table_ref": "POW_financial_statements_2023_separate|924",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_23",
+        "table_ref": "GAS_financial_statements_2023_separate|1582",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_12",
+        "table_ref": "POW_financial_statements_2023_separate|865",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_48",
+        "table_ref": "GAS_financial_statements_2023_separate|2016",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_26",
+        "table_ref": "POW_financial_statements_2023_separate|1059",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_41",
+        "table_ref": "GAS_financial_statements_2023_separate|1834",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_40",
+        "table_ref": "POW_financial_statements_2023_separate|1196",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_36",
+        "table_ref": "GAS_financial_statements_2023_separate|1737",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_24",
+        "table_ref": "POW_financial_statements_2023_separate|1042",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_46",
+        "table_ref": "GAS_financial_statements_2023_separate|1983",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_19",
+        "table_ref": "POW_financial_statements_2023_separate|961",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_54",
+        "table_ref": "GAS_financial_statements_2023_separate|2134",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_59",
+        "table_ref": "POW_financial_statements_2023_separate|1373",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_52",
+        "table_ref": "GAS_financial_statements_2023_separate|2039",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_6",
+        "table_ref": "POW_financial_statements_2023_separate|447",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_71",
+        "table_ref": "GAS_financial_statements_2023_separate|2419",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_50",
+        "table_ref": "POW_financial_statements_2023_separate|1281",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_22",
+        "table_ref": "GAS_financial_statements_2023_separate|1535",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_47",
+        "table_ref": "POW_financial_statements_2023_separate|1256",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_58",
+        "table_ref": "GAS_financial_statements_2023_separate|2285",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_4",
+        "table_ref": "POW_financial_statements_2023_separate|358",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_66",
+        "table_ref": "GAS_financial_statements_2023_separate|2386",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_49",
+        "table_ref": "POW_financial_statements_2023_separate|1275",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_68",
+        "table_ref": "GAS_financial_statements_2023_separate|2396",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_57",
+        "table_ref": "POW_financial_statements_2023_separate|1358",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_80",
+        "table_ref": "GAS_financial_statements_2023_separate|2546",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_51",
+        "table_ref": "POW_financial_statements_2023_separate|1285",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_28",
+        "table_ref": "GAS_financial_statements_2023_separate|1628",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_30",
+        "table_ref": "POW_financial_statements_2023_separate|1110",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2023_separate_table_53",
+        "table_ref": "GAS_financial_statements_2023_separate|2089",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b02",
+        "table_id": "POW_financial_statements_2023_separate_table_41",
+        "table_ref": "POW_financial_statements_2023_separate|1206",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 31 tháng 12 năm 2022"
+              ],
+              "kỳ số liệu": [
+                "LNST chưa phân phối lũy kế của các năm trước VND",
+                "LNST chưa phân phối của năm nay VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2022",
+                "Kết chuyển LNST chưa phân phối",
+                "Vốn tăng trong năm (i)",
+                "Lợi nhuận thuần trong năm",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2022",
+                "Kết chuyển LNST chưa phân phối",
+                "Lợi nhuận thuần trong năm",
+                "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19)",
+                "Chia cổ tức",
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2022",
+                "Vốn tăng trong năm (i)",
+                "Trích quỹ đầu tư phát triển (ii)",
+                "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19) (ii)",
+                "Chia cổ tức (ii)",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng TMCP Hàng Hải Việt Nam",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Tại ngày1.1.2023VND",
+                "Tại ngày31.12.2023VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Đông Nam Á",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngân hàng",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Đông Nam Á",
+                "Ngân hàng Thương mại Taipei Fubon",
+                "Ngân hàng Mizuho Bank, Ltd",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm (Thuyết minh 22)",
+                "Chi trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm (Thuyết minh 22)",
+                "Chi trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đăng ký, đã phát hành và đang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đăng ký, đã phát hành và đang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí nhân hiệu",
+                "Chi phí nhân viên quản lý",
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí an sinh xã hội",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí nhân hiệu",
+                "Chi phí nhân viên quản lý",
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí an sinh xã hội",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán trước thuế",
+                "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                "Thu nhập không chịu thuế",
+                "Chi phí không được khấu trừ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán trước thuế",
+                "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                "Thu nhập không chịu thuế",
+                "Chi phí không được khấu trừ",
+                "U'u đãi thuế",
+                "Điều chỉnh thuế TNDN từ Kết luận của Kiểm toán Nhà nước",
+                "Chi phí thuế TNDN (*)",
+                "Thuế TNDN - hiện hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 31: CHI PHÍ QUẢN LÝ DOANH NGHIỆP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí nhân công",
+                "Chi phí khấu hao",
+                "Chi phí vật liệu quản lý",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí dự phòng",
+                "Chi phí quản lý khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí nhân công",
+                "Chi phí khấu hao",
+                "Chi phí vật liệu quản lý",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí dự phòng",
+                "Chi phí quản lý khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh b: Dài hạn Số đầu năm Trong năm Số cuối năm Giá trị VND Số có khả năng trả nợ Tăng Giảm VND Chênh lệch tỷ giá Giá trị VND Số có khả năng trả nợ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay dài hạn",
+                "1.984.143.645.915",
+                "Vay dài hạn đến hạn trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay dài hạn",
+                "1.984.143.645.915",
+                "Vay dài hạn đến hạn trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 19: PHẢI TRẢ NGẮN HẠN KHÁC Số cuối năm Số đầu năm VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Cổ phần Bảo hiểm Dầu khí Việt Nam (i)",
+                "Tập đoàn Dầu khí Việt Nam (ii)"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "a. Phải trả ngắn hạn khác",
+                "Tổng Công ty Cổ phần Bảo hiểm Dầu khí Việt Nam (i)",
+                "Phải trả về cổ phần hóa",
+                "b. Phải trả ngắn hạn khác cho các bên liên quan(Chi tiết tại Thuyết minh số 36)",
+                "Tập đoàn Dầu khí Việt Nam (ii)",
+                "Các đối tượng khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "a. Phải trả ngắn hạn khác",
+                "Tổng Công ty Cổ phần Bảo hiểm Dầu khí Việt Nam (i)",
+                "Phải trả về cổ phần hóa",
+                "- Tiền thu từ cổ phần hóa chờ quyết toán chí phí cổ phần hóa",
+                "Simens AG",
+                "Phải trả ngắn hạn khác",
+                "b. Phải trả ngắn hạn khác cho các bên liên quan(Chi tiết tại Thuyết minh số 36)",
+                "Tập đoàn Dầu khí Việt Nam (ii)",
+                "Các đối tượng khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                "Tổng Công ty Dầu Việt Nam",
+                "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                "Tập đoàn Dầu khí Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trường Cao đẳng Nghề Dầu khí",
+                "Tập đoàn Dầu khí Việt Nam",
+                "Công ty Cổ phần Thủy điện Hủa Na",
+                "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Dịch vụ Bảo vệ An ninh Dầu khí Việt Nam",
+                "Trả trước cho người bán ngắn hạn",
+                "Tổng Công ty Dầu Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền và các khoản tương đương tiền",
+                "Ngân hàng Thương mại Cổ phần Đại chúng Việt Nam",
+                "Đầu tư nằm giữ đến ngày đáo hạn",
+                "Phải thu ngắn hạn của khách hàng",
+                "Công ty Cổ phần Phân bón Dầu khí Cà Mau",
+                "Trường Cao đẳng Nghề Dầu khí",
+                "Tập đoàn Dầu khí Việt Nam",
+                "Công ty Cổ phần Thủy điện Hủa Na",
+                "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Dịch vụ Bảo vệ An ninh Dầu khí Việt Nam",
+                "Trả trước cho người bán ngắn hạn",
+                "Tổng Công ty Dầu Việt Nam",
+                "Phải thu khác ngắn hạn",
+                "Ban Quản lý Dự án Điện lực Dầu khí Vũng Áng-Quảng Trạch",
+                "Công ty Cổ phần Xây dựng Dân dụng và Công nghiệp Dầu khí",
+                "Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2",
+                "Ban Quản lý Dự án Điện lực Dầu khí Sông Hậu 1",
+                "Ban Quản lý Dự án Điện lực Dầu khí Thái Bình 2"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Quỹ phát triển khoa học và công nghệ (mã chỉ tiêu 343)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Có phiếu phố thông có quyền biểu quyết (mã chỉ tiêu 411a)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 16)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 17)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 18)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 20)",
+                "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 22)",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 20)",
+                "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 22)",
+                "Quỹ phát triển khoa học và công nghệ (mã chỉ tiêu 343)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                "- Có phiếu phố thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                "Lợi nhuận sau thuê chưa phân phối (mã chỉ tiêu 421)",
+                "- Lợi nhuận sau thuê chưa phân phối lũy kế đến cuối nằm trước (mã chỉ tiêu 421a)",
+                "- Lợi nhuận sau thuê chưa phân phối năm 421b nay"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng TMCP Ngoại thương Việt Nam (i)",
+                "Ngân hàng TMCP Đại chúng Việt Nam (ii)"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Sumitomo Mitsui Singapore",
+                "Ngân hàng TMCP Ngoại thương Việt Nam (i)",
+                "Ngân hàng TMCP Đại chúng Việt Nam (ii)",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng HSBC USA New York",
+                "Tổ hợp Ngân hàng Hợp tác Quốc tế Nhật Bản và Ngân hàng Sumitomo Mitsui"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng Sumitomo Mitsui Singapore",
+                "Ngân hàng TMCP Ngoại thương Việt Nam (i)",
+                "Ngân hàng TMCP Đại chúng Việt Nam (ii)",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng HSBC USA New York",
+                "Tổ hợp Ngân hàng Hợp tác Quốc tế Nhật Bản và Ngân hàng Sumitomo Mitsui"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)",
+                "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí xây dựng cơ bản dở dang chưa thanh toán",
+                "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí xây dựng cơ bản dở dang chưa thanh toán",
+                "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng TMCP Hàng Hải Việt Nam",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Tại ngày1.1.2023VND",
+                "Tại ngày31.12.2023VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Mizuho Bank, Ltd",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng Thương mại Taipei Fubon",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngân hàng dài hạn đến hạn trả",
+                "Ngân hàng Mizuho Bank, Ltd",
+                "Ngân hàng TMCP Ngoại thương Việt Nam",
+                "Ngân hàng Thương mại Taipei Fubon",
+                "Ngân hàng TMCP Đông Nam Á",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                "Công ty Cổ phần CNG Việt Nam",
+                "Công ty Cổ phần Kinh doanh LPG Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "2023",
+                "2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                "Hồ Chí Minh",
+                "Công ty Cổ phần CNG Việt Nam",
+                "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                "Công ty Cổ phần Bọc ống Dầu khí Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                "Hồ Chí Minh",
+                "Công ty Cổ phần CNG Việt Nam",
+                "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                "Công ty TNHH Kho Cảng LNG Sơn Mỹ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu",
+                "Giá vốn",
+                "Chi phí khác",
+                "Thuế TNDN",
+                "Lợi nhuận sau thuế TNDN",
+                "Thuế GTGT bổ sung",
+                "Lợi nhuận được chia",
+                "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu",
+                "Giá vốn",
+                "Chi phí khác",
+                "Thuế TNDN",
+                "Lợi nhuận sau thuế TNDN",
+                "Thuế GTGT bổ sung",
+                "Lợi nhuận được chia",
+                "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)",
+                "Võ Thị Thanh Ngọc - Thành viên",
+                "Đỗ Đông Nguyễn - Thành viên",
+                "Trương Hồng Sơn - Thành viên",
+                "Phạm Văn Phong - Thành viênkiêm Tổng Giám đốc",
+                "Triệu Quốc Tuấn - Thành viên",
+                "Hoàng Văn Quang - Thành viên(đến ngày 25 tháng 5 năm 2023)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)",
+                "Võ Thị Thanh Ngọc - Thành viên",
+                "Đỗ Đông Nguyễn - Thành viên",
+                "Trương Hồng Sơn - Thành viên",
+                "Phạm Văn Phong - Thành viênkiêm Tổng Giám đốc",
+                "Triệu Quốc Tuấn - Thành viên",
+                "Hoàng Văn Quang - Thành viên(đến ngày 25 tháng 5 năm 2023)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: VỐN CHỦ SỞ HỮU"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư tại ngày 31 tháng 12 năm 2023",
+                "Số dư tại ngày 31 tháng 12 năm 2022"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 01 tháng 01 năm 2022",
+                "Lợi nhuận trong năm",
+                "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2021",
+                "Số dư tại ngày 31 tháng 12 năm 2022",
+                "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2022 (ii)",
+                "Số dư tại ngày 31 tháng 12 năm 2023"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 01 tháng 01 năm 2022",
+                "Lợi nhuận trong năm",
+                "Trích quỹ đầu tư phát triển từ lợi nhuận năm 2021",
+                "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2021",
+                "Số dư tại ngày 31 tháng 12 năm 2022",
+                "Trích quỹ đầu tư phát triển từ lợi nhuận năm 2022 (ii)",
+                "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2022 (ii)",
+                "Số dư tại ngày 31 tháng 12 năm 2023"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: GIẢ VỐN HÀNG BẢN VÀ DỊCH VỤ CUNG CẤP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Giá vốn bán điện"
+              ],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá vốn bán điện",
+                "Giá vốn dịch vụ",
+                "Giá vốn bán nguyên vật liệu và phế phẩm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá vốn bán điện",
+                "Giá vốn dịch vụ",
+                "Giá vốn bán nguyên vật liệu và phế phẩm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: VAY VÀ NỘ THUÊ TÀI CHÍNH Số đầu năm Trong năm Số cuối năm Giá trị VND Số có khả năng trả nợ Tăng Giảm VND Chênh lệch tỷ giá Giá trị VND Số có khả năng trả nợ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngắn hạn",
+                "Vay dài hạn đến hạn trả (Xem Thuyết minh số 20b)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngắn hạn",
+                "Vay dài hạn đến hạn trả (Xem Thuyết minh số 20b)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu đang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đã bán ra công chúng",
+                "Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu đang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "06 (mã chỉ tiêu 354.582.828.380)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "09 (mã chỉ tiêu (4.421.962.190.469))",
+                "11 (mã chỉ tiêu 6.153.557.317.059)",
+                "12 (mã chỉ tiêu (2.534.613.124.233))",
+                "14 (mã chỉ tiêu (305.083.057.953))",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế (mã chỉ tiêu 01)",
+                "Điều chỉnh cho các khoản:",
+                "02 (mã chỉ tiêu 1.609.401.005.272)",
+                "03 (mã chỉ tiêu 1.381.284.733.325)",
+                "04 (mã chỉ tiêu (11.289.624.743))",
+                "05 (mã chỉ tiêu (1.220.717.591.686))",
+                "06 (mã chỉ tiêu 354.582.828.380)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "09 (mã chỉ tiêu (4.421.962.190.469))",
+                "10 (mã chỉ tiêu (66.564.685.841))",
+                "11 (mã chỉ tiêu 6.153.557.317.059)",
+                "12 (mã chỉ tiêu (2.534.613.124.233))",
+                "14 (mã chỉ tiêu (305.083.057.953))",
+                "15 (mã chỉ tiêu (134.712.478.038))",
+                "17 (mã chỉ tiêu (97.725.956.888))",
+                "20 (mã chỉ tiêu 2.001.308.795.216)",
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác (mã chỉ tiêu 22)",
+                "Tiền chi cho vay, mua công cụ nợ của đơn vị khác (mã chỉ tiêu 23)",
+                "Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác (mã chỉ tiêu 24)",
+                "Tiền chi đầu tư góp vốn vào đơn vị khác (mã chỉ tiêu 25)",
+                "Tiền thu hồi đầu tư vốn vào đơn vị khác (mã chỉ tiêu 26)",
+                "Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia (mã chỉ tiêu 27)",
+                "30 (mã chỉ tiêu (4.986.647.543.111))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 32: LỘI NHUÂN KHÁC Năm nay Năm trước VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập từ thanh lý, nhượng bán tài sản (i)",
+                "Thu nhập từ tiền phạt hợp đồng",
+                "Thu nhập từ bồi thường bảo hiểm",
+                "Thu nhập khác",
+                "Các khoản khác",
+                "Lợi nhuận khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập từ thanh lý, nhượng bán tài sản (i)",
+                "Thu nhập từ tiền phạt hợp đồng",
+                "Thu nhập từ bồi thường bảo hiểm",
+                "Thu nhập khác",
+                "Các khoản khác",
+                "Lợi nhuận khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 24: CÁC KHOÀN MỤC NGOÀI BẢNG CẦN ĐỐI KẾ TOÁN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đô la Mỹ (USD)",
+                "Đồng Euro (EUR)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đô la Mỹ (USD)",
+                "Đồng Euro (EUR)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022",
+                "Cổ phiếu mới phát hành (Thuyết minh 22)",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022",
+                "Cổ phiếu mới phát hành (Thuyết minh 22)",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2",
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3"
+              ],
+              "kỳ số liệu": [
+                "Sản lượngtối thiểucam kết(tỷ m3/năm)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Xóa số",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 1 tháng 1 năm 2023"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2023",
+                "Mua trong năm",
+                "Chuyển từ chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                "Xóa số",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận thuần phân bổ cho các cổ đông (VND)",
+                "Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND)",
+                "Bình quân số cổ phiếu phổ thông đang lưu hành (cổ phiếu)",
+                "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận thuần phân bổ cho các cổ đông (VND)",
+                "Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND)",
+                "Bình quân số cổ phiếu phổ thông đang lưu hành (cổ phiếu)",
+                "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 31 tháng 12 năm 2023"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thanh lý/xóa số",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Tại ngày 1 tháng 1 năm 2023"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2023",
+                "Mua trong năm",
+                "Chuyển từ chi phí xây dựng cơ bảnđở dang (Thuyết minh 12)",
+                "Thanh lý/xóa số",
+                "Tại ngày 31 tháng 12 năm 2023",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 29: DOANH THU HOẠT ĐỘNG TÀI CHÍNH Năm nay Năm trước VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ tức, lợi nhuận được chia",
+                "Lãi tiền gửi ngân hàng",
+                "Lãi chênh lệch tỷ giá trong thanh toán",
+                "Lãi chênh lệch tỷ giá đánh giá lại",
+                "Lãi chuyển nhượng vốn",
+                "Lãi thu phí bảo lãnh",
+                "Doanh thu tài chính khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ tức, lợi nhuận được chia",
+                "Lãi tiền gửi ngân hàng",
+                "Lãi chênh lệch tỷ giá trong thanh toán",
+                "Lãi chênh lệch tỷ giá đánh giá lại",
+                "Lãi chuyển nhượng vốn",
+                "Lãi thu phí bảo lãnh",
+                "Doanh thu tài chính khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: HÀNG TỔN KHO Số cuối năm Số đầu năm Giá gốc VND Dự phòng Giá gốc VND Dự phòng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Nguyên liệu, vật liệu",
+                "Chi phí sản xuất, kinh doanh dở dang",
+                "Công cụ, dụng cụ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Nguyên liệu, vật liệu",
+                "Chi phí sản xuất, kinh doanh dở dang",
+                "Công cụ, dụng cụ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: NỘ XÃU Số cuối năm Số đầu năm Giá gốc Dự phòng VNDGiá trịcó thể thu hồi Giá gốc Dự phòng VNDGiá trịcó thể thu hồi"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch",
+                "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                "Các đối tượng khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch",
+                "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                "Các đối tượng khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 17: THUẾ VÀ CÁC KHOẢN PHẢI THU/PHẢI NỘP NHÀ NƯỚC Số đầu năm Số phải nộp/bù trừ trong năm Số đã nộp trong năm Số cuối năm VND VND VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số đầu năm",
+                "Số phải nộp/bù trừ trong năm",
+                "Số đã nộp trong năm",
+                "Số cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế giá trị gia tăng",
+                "Thuế xuất nhập khẩu",
+                "Thuế thu nhập doanh nghiệp",
+                "Thuế thu nhập cá nhân",
+                "Các loại thuế khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế giá trị gia tăng",
+                "Thuế xuất nhập khẩu",
+                "Thuế thu nhập doanh nghiệp",
+                "Thuế thu nhập cá nhân",
+                "Các loại thuế khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 33: CHI PHÍ THUẾ THU NHẬP DOANH NGHIỆP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành",
+                "171.397.040.386"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành",
+                "171.397.040.386"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ông Lê Như Linh",
+                "Ông Nguyễn Duy Giang",
+                "Ông Nguyễn Mạnh Tưởng",
+                "Ông Ngô Văn Chiến",
+                "Ông Trương Việt Phương",
+                "Ông Chu Quang Toàn"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ông Lê Như Linh",
+                "Ông Nguyễn Duy Giang",
+                "Ông Nguyễn Mạnh Tưởng",
+                "Ông Nguyễn Minh Đạo",
+                "Ông Nguyễn Kiên",
+                "Ông Phan Ngọc Hiền",
+                "Ông Ngô Văn Chiến",
+                "Ông Trương Việt Phương",
+                "Ông Chu Quang Toàn"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chuyển sang TSCĐ hữu hình (Thuyết minh 11(a))",
+                "Chuyển sang TSCĐ vô hình (Thuyết minh 11(b))",
+                "Góp vốn vào công ty con (Thuyết minh 34)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chuyển sang TSCĐ hữu hình (Thuyết minh 11(a))",
+                "Chuyển sang TSCĐ vô hình (Thuyết minh 11(b))",
+                "Góp vốn vào công ty con (Thuyết minh 34)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Chủ khí Lô 05-1b và 05-1c"
+              ],
+              "kỳ số liệu": [
+                "Sản lượngtối thiểucam kết(tỷ m3/năm)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Giá vốn bán khí khô",
+                "Giá vốn vận chuyển khí và condensate"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá vốn bán khí khô",
+                "Giá vốn bán LPG",
+                "Giá vốn vận chuyển khí và condensate",
+                "Giá vốn bán condensate",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá vốn bán khí khô",
+                "Giá vốn bán LPG",
+                "Giá vốn vận chuyển khí và condensate",
+                "Giá vốn bán condensate",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí mua khí từ các chủ mổ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí mua khí từ các chủ mổ",
+                "Chi phí khấu hao TSCĐ",
+                "Chi phí quảng cáo, tiếp thị",
+                "Chi phí nhân hiệu",
+                "Chi phí dự phòng thu đơn công trình khí",
+                "Chi phí dự phòng phải thu khó đòi"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí mua khí từ các chủ mổ",
+                "Chi phí khấu hao TSCĐ",
+                "Chi phí vận chuyển",
+                "Chi phí nhân công",
+                "Chi phí quảng cáo, tiếp thị",
+                "Chi phí nhân hiệu",
+                "Chi phí dự phòng thu đơn công trình khí",
+                "Chi phí dự phòng phải thu khó đòi",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 8: PHẢI THU KHÁC Số cuối năm Số đầu năm VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu Công ty Cổ phần Tư vấn Dự án Điện lực Dầu khí liên quan đến tiền góp vốn và cổ tức",
+                "Tập đoàn Dầu khí Việt Nam (ii)",
+                "Ban Quản lý Dư án Điện lực Dầu khí Vũng Áng - Quảng Trạch (iii)"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi tiền gửi ngân hàng dự thu",
+                "Phải thu Công ty Cổ phần Tư vấn Dự án Điện lực Dầu khí liên quan đến tiền góp vốn và cổ tức",
+                "Chi phí cổ phần hóa",
+                "a2. Phải thu khác ngắn hạn các bên liên quan (Chỉ tiết tại Thuyết minh số 36)",
+                "Tập đoàn Dầu khí Việt Nam (ii)",
+                "Ban Quản lý Dư án Điện lực Dầu khí Vũng Áng - Quảng Trạch (iii)",
+                "Phải thu các bên liên quan khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "a1. Phải thu khác ngắn hạn",
+                "Phải thu liên quan đến các chi phí sửa chữa Tổ máy số 1 Nhà máy Nhiệt điện Vũng Áng 1 (i)",
+                "Lãi tiền gửi ngân hàng dự thu",
+                "Phải thu Công ty Cổ phần Tư vấn Dự án Điện lực Dầu khí liên quan đến tiền góp vốn và cổ tức",
+                "Chi phí cổ phần hóa",
+                "Ký cược, ký quỹ ngắn hạn",
+                "Phải thu khác",
+                "a2. Phải thu khác ngắn hạn các bên liên quan (Chỉ tiết tại Thuyết minh số 36)",
+                "Tập đoàn Dầu khí Việt Nam (ii)",
+                "Ban Quản lý Dư án Điện lực Dầu khí Vũng Áng - Quảng Trạch (iii)",
+                "Phải thu các bên liên quan khác",
+                "Ký cược, ký quỹ dài hạn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trong vòng một năm",
+                "Trong năm thứ hai",
+                "Từ năm thứ ba đến năm thứ năm",
+                "Sau năm năm",
+                "Trừ: số phải trả trong vòng 12 tháng(được trình bày ở phần vay và nợ thuê tài chínhngắn hạn)",
+                "Số phải trả sau 12 tháng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trong vòng một năm",
+                "Trong năm thứ hai",
+                "Từ năm thứ ba đến năm thứ năm",
+                "Sau năm năm",
+                "Trừ: số phải trả trong vòng 12 tháng(được trình bày ở phần vay và nợ thuê tài chínhngắn hạn)",
+                "Số phải trả sau 12 tháng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh b: Đầu tư tài chính dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                "Công ty Cổ phần Điện lực Dầu khí",
+                "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)",
+                "Công ty Cổ phần Cơ điện Dầu khí (iii)",
+                "Công ty Cổ phần Điện Việt Lào (iii)"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Thủy điện Hủa Na (ii)",
+                "Công ty Cổ phần Điện lực Dầu khí",
+                "Công ty Cổ phần Thủy điện Đakđrinh (iii)",
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Thủy điện Hủa Na (ii)",
+                "Công ty Cổ phần Điện lực Dầu khí",
+                "Công ty Cổ phần Thủy điện Đakđrinh (iii)",
+                "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)",
+                "Công ty Cổ phần Thủy điện Nậm Chiến (iii)",
+                "Công ty Cổ phần Năng lượng Sông Hồng (iii)",
+                "Công ty Cổ phần Điện khí LNG Quảng Ninh (iii)",
+                "Công ty Cổ phần Điện Việt Lào (iii)",
+                "Công ty Cổ phần Thủy điện Sông Tranh 3 (iii)",
+                "Công ty Cổ phần EVN Quốc tế (ii)",
+                "Công ty Cổ phần Phát triển Đô thị Dầu khí (iii)",
+                "Công ty Cổ phần Cơ điện Dầu khí (iii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 12: TĂNG, GIĂM TÀI SẢN CỔ ĐỊNH HỮU HÌNH Nhà cửa và vật kiến trúc Máy móc và thiết bị Phương tiện vận tải Thiết bị văn phòng Khác Tổng VND VND VND VND VND VND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số đầu năm",
+                "Mua sắm mới",
+                "Đầu tư xây dựng cơ bản hoàn thành",
+                "Phân loại lại"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số đầu năm",
+                "Mua sắm mới",
+                "Đầu tư xây dựng cơ bản hoàn thành",
+                "Phân loại lại",
+                "Thanh lý, nhượng bán",
+                "Giảm khác",
+                "Số dư cuối năm",
+                "Khấu hao trong năm",
+                "Trích khấu hao vào xây dựng dở dang",
+                "Tại ngày đầu năm",
+                "Tại ngày cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 30: CHI PHÍ TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay (i)",
+                "Lỗ chênh lệch tỷ giá",
+                "Chi phí thực hiện khoản vay",
+                "Dự phòng đầu tư tài chính",
+                "Chi phí tài chính khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay (i)",
+                "Lỗ chênh lệch tỷ giá",
+                "Chi phí thực hiện khoản vay",
+                "Dự phòng đầu tư tài chính",
+                "Chi phí tài chính khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b02",
+            "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay",
+                "Năm trước"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán trước thuế",
+                "Trừ: Thu nhập không chịu thuế",
+                "Cộng: Các khoản chi phí không được khấu trừ",
+                "Thu nhập chịu thuế năm nay",
+                "Thu nhập được giảm 50% thuế thu nhập doanh nghiệp với mức thuế suất 10%",
+                "Thu nhập chịu thuế suất thông thường",
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán trước thuế",
+                "Trừ: Thu nhập không chịu thuế",
+                "Cộng: Các khoản chi phí không được khấu trừ",
+                "Thu nhập chịu thuế năm nay",
+                "Thu nhập được giảm 50% thuế thu nhập doanh nghiệp với mức thuế suất 10%",
+                "Thu nhập chịu thuế suất thông thường",
+                "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c09",
+          "c17",
+          "c25",
+          "c33",
+          "c41",
+          "c49",
+          "c08",
+          "c16",
+          "c24",
+          "c32",
+          "c40",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c09",
+            "c17",
+            "c25",
+            "c33",
+            "c41",
+            "c49",
+            "c40"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c09",
+          "c17",
+          "c25",
+          "c33",
+          "c41",
+          "c49",
+          "c40"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c03",
+          "c11",
+          "c19",
+          "c27",
+          "c35",
+          "c43",
+          "c02",
+          "c10",
+          "c18",
+          "c26",
+          "c34",
+          "c42",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03",
+            "c11",
+            "c19",
+            "c27",
+            "c35",
+            "c43",
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c03",
+          "c11",
+          "c19",
+          "c27",
+          "c35",
+          "c43",
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c05",
+          "c13",
+          "c21",
+          "c29",
+          "c37",
+          "c45",
+          "c04",
+          "c12",
+          "c20",
+          "c28",
+          "c36",
+          "c44"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c05",
+            "c13",
+            "c21",
+            "c29",
+            "c37",
+            "c45",
+            "c04",
+            "c12",
+            "c20",
+            "c28",
+            "c36",
+            "c44"
+          ]
+        },
+        "nominated_keys": [
+          "c05",
+          "c13",
+          "c21",
+          "c29",
+          "c37",
+          "c45",
+          "c04",
+          "c12",
+          "c20",
+          "c28",
+          "c36",
+          "c44"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c07",
+          "c15",
+          "c23",
+          "c31",
+          "c39",
+          "c47",
+          "c06",
+          "c14",
+          "c22",
+          "c30",
+          "c38",
+          "c46"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c07"
+          ]
+        },
+        "nominated_keys": [
+          "c07"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c03",
+      "c05",
+      "c07",
+      "c09",
+      "c11",
+      "c13",
+      "c17",
+      "c19",
+      "c21",
+      "c25",
+      "c27",
+      "c29",
+      "c33",
+      "c35",
+      "c37",
+      "c41",
+      "c43",
+      "c45",
+      "c02",
+      "c04",
+      "c49",
+      "c12",
+      "c40",
+      "c20",
+      "c28",
+      "c36",
+      "c44"
+    ],
+    "lexical_finalist_keys": [
+      "c40",
+      "c22",
+      "c32",
+      "c13",
+      "c19",
+      "c01"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c03",
+      "c05",
+      "c07",
+      "c09",
+      "c11",
+      "c13",
+      "c17",
+      "c19",
+      "c21",
+      "c25",
+      "c27",
+      "c29",
+      "c33",
+      "c35",
+      "c37",
+      "c41",
+      "c43",
+      "c45",
+      "c02",
+      "c04",
+      "c49",
+      "c12",
+      "c40",
+      "c20",
+      "c28",
+      "c36",
+      "c44",
+      "c22",
+      "c32"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Hiệu số vốn chủ sở hữu của công ty mẹ Tổng Công ty Khí Việt Nam - CTCP và công ty mẹ Tổng Công ty Điện lực Dầu khí Việt Nam tính đến ngày 31/12/2023 là bao nhiêu tỷ đồng?",
+      "giới hạn số bảng": 18,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GAS",
+          "tên doanh nghiệp": "Tổng Công ty Khí Việt Nam - CTCP",
+          "năm": 2023,
+          "loại báo cáo": "riêng"
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "POW",
+          "tên doanh nghiệp": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "năm": 2023,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [
+        "b01",
+        "b02"
+      ],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GAS",
+          "tên doanh nghiệp": "Tổng Công ty Khí Việt Nam - CTCP",
+          "năm": 2023,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 31 tháng 12 năm 2022"
+                ],
+                "kỳ số liệu": [
+                  "LNST chưa phân phối lũy kế của các năm trước VND",
+                  "LNST chưa phân phối của năm nay VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Khác",
+                  "Tại ngày 31 tháng 12 năm 2022",
+                  "Kết chuyển LNST chưa phân phối",
+                  "Vốn tăng trong năm (i)",
+                  "Lợi nhuận thuần trong năm",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2022",
+                  "Kết chuyển LNST chưa phân phối",
+                  "Lợi nhuận thuần trong năm",
+                  "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19)",
+                  "Chia cổ tức",
+                  "Khác",
+                  "Tại ngày 31 tháng 12 năm 2022",
+                  "Vốn tăng trong năm (i)",
+                  "Trích quỹ đầu tư phát triển (ii)",
+                  "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19) (ii)",
+                  "Chia cổ tức (ii)",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)",
+                  "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí xây dựng cơ bản dở dang chưa thanh toán",
+                  "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                  "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí xây dựng cơ bản dở dang chưa thanh toán",
+                  "Góp vốn vào công ty con bằng chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                  "Tăng vốn góp của chủ sở hữu từ thăng dư vốn cổ phần và quỹ đầu tư phát triển (Thuyết minh 22)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c05",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022",
+                  "Cổ phiếu mới phát hành (Thuyết minh 22)",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2022và ngày 31 tháng 12 năm 2022",
+                  "Cổ phiếu mới phát hành (Thuyết minh 22)",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c07",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm",
+                  "Chuyển sang TSCĐ hữu hình (Thuyết minh 11(a))",
+                  "Chuyển sang TSCĐ vô hình (Thuyết minh 11(b))",
+                  "Góp vốn vào công ty con (Thuyết minh 34)",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm",
+                  "Chuyển sang TSCĐ hữu hình (Thuyết minh 11(a))",
+                  "Chuyển sang TSCĐ vô hình (Thuyết minh 11(b))",
+                  "Góp vốn vào công ty con (Thuyết minh 34)",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c09",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Ngân hàng TMCP Hàng Hải Việt Nam",
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"
+                ],
+                "kỳ số liệu": [
+                  "Tại ngày1.1.2023VND",
+                  "Tại ngày31.12.2023VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Đông Nam Á",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vay ngân hàng",
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Đông Nam Á",
+                  "Ngân hàng Thương mại Taipei Fubon",
+                  "Ngân hàng Mizuho Bank, Ltd",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c11",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Ngân hàng TMCP Hàng Hải Việt Nam",
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam"
+                ],
+                "kỳ số liệu": [
+                  "Tại ngày1.1.2023VND",
+                  "Tại ngày31.12.2023VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ngân hàng Mizuho Bank, Ltd",
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng Thương mại Taipei Fubon",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vay ngân hàng dài hạn đến hạn trả",
+                  "Ngân hàng Mizuho Bank, Ltd",
+                  "Ngân hàng TMCP Ngoại thương Việt Nam",
+                  "Ngân hàng Thương mại Taipei Fubon",
+                  "Ngân hàng TMCP Đông Nam Á",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tập đoàn Điện lực Việt Nam",
+                  "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2",
+                  "Chủ khí Lô 06.1",
+                  "Chủ khí Lô 11.2",
+                  "Chủ khí Lô 05.2 và 05.3"
+                ],
+                "kỳ số liệu": [
+                  "Sản lượngtối thiểucam kết(tỷ m3/năm)"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chủ khí Lô 06.1",
+                  "Chủ khí Lô 11.2",
+                  "Chủ khí Lô 05-1b và 05-1c",
+                  "Tập đoàn Điện lực Việt Nam",
+                  "Công ty TNHH Phú Mỹ 3 BOT Power",
+                  "Công ty TNHH Năng lượng Mekong",
+                  "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chủ khí Lô 06.1",
+                  "Chủ khí Lô 11.2",
+                  "Chủ khí Lô 05.2 và 05.3",
+                  "Chủ khí Lô 102 và 106",
+                  "Chủ khí Lô 05-1b và 05-1c",
+                  "Tập đoàn Điện lực Việt Nam",
+                  "Công ty TNHH Phú Mỹ 3 BOT Power",
+                  "Công ty TNHH Năng lượng Mekong",
+                  "Công ty Cổ phần Điện lực Dầu khíNhơn trách 2"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c17",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm (Thuyết minh 22)",
+                  "Chi trong năm",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Tăng trong năm (Thuyết minh 22)",
+                  "Chi trong năm",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c19",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                  "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                  "Công ty Cổ phần CNG Việt Nam",
+                  "Công ty Cổ phần Kinh doanh LPG Việt Nam"
+                ],
+                "kỳ số liệu": [
+                  "2023",
+                  "2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                  "Hồ Chí Minh",
+                  "Công ty Cổ phần CNG Việt Nam",
+                  "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                  "Công ty Cổ phần Bọc ống Dầu khí Việt Nam"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Công ty Cổ phần Sản xuất Ông thép Dầu khí Việt Nam",
+                  "Hồ Chí Minh",
+                  "Công ty Cổ phần CNG Việt Nam",
+                  "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                  "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                  "Công ty TNHH Kho Cảng LNG Sơn Mỹ"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c21",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Xóa số",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 1 tháng 1 năm 2023"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2023",
+                  "Mua trong năm",
+                  "Chuyển từ chi phí xây dựng cơ bản dở dang (Thuyết minh 12)",
+                  "Xóa số",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Khấu hao trong năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c25",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số lượng cổ phiếu đăng ký, đã phát hành và đang lưu hành"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số lượng cổ phiếu đăng ký, đã phát hành và đang lưu hành"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c27",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Doanh thu",
+                  "Giá vốn",
+                  "Chi phí khác",
+                  "Thuế TNDN",
+                  "Lợi nhuận sau thuế TNDN",
+                  "Thuế GTGT bổ sung",
+                  "Lợi nhuận được chia",
+                  "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Doanh thu",
+                  "Giá vốn",
+                  "Chi phí khác",
+                  "Thuế TNDN",
+                  "Lợi nhuận sau thuế TNDN",
+                  "Thuế GTGT bổ sung",
+                  "Lợi nhuận được chia",
+                  "Lợi nhuận phân chia theo tỷ lệ góp vốn:- Tổng Công ty- Công ty Cổ phần Địa ốc Phú Long- Tổng Công ty Tư vấn Thiết kế Dầu khí- Công ty Cổ phần"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c29",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận thuần phân bổ cho các cổ đông (VND)",
+                  "Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND)",
+                  "Bình quân số cổ phiếu phổ thông đang lưu hành (cổ phiếu)",
+                  "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận thuần phân bổ cho các cổ đông (VND)",
+                  "Điều chỉnh giảm số trích quỹ khen thưởng, phúc lợi (VND)",
+                  "Bình quân số cổ phiếu phổ thông đang lưu hành (cổ phiếu)",
+                  "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c33",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí nhân hiệu",
+                  "Chi phí nhân viên quản lý",
+                  "Chi phí dự phòng phải thu khó đòi",
+                  "Chi phí an sinh xã hội",
+                  "Khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí nhân hiệu",
+                  "Chi phí nhân viên quản lý",
+                  "Chi phí dự phòng phải thu khó đòi",
+                  "Chi phí an sinh xã hội",
+                  "Khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c35",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "VND"
+                ],
+                "mục lục chỉ tiêu": [
+                  "VND"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c37",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 31 tháng 12 năm 2023"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thanh lý/xóa số",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Tại ngày 1 tháng 1 năm 2023"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2023",
+                  "Mua trong năm",
+                  "Chuyển từ chi phí xây dựng cơ bảnđở dang (Thuyết minh 12)",
+                  "Thanh lý/xóa số",
+                  "Tại ngày 31 tháng 12 năm 2023",
+                  "Khấu hao trong năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c41",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "VND"
+                ],
+                "mục lục chỉ tiêu": [
+                  "VND"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c43",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)",
+                  "Võ Thị Thanh Ngọc - Thành viên",
+                  "Đỗ Đông Nguyễn - Thành viên",
+                  "Trương Hồng Sơn - Thành viên",
+                  "Phạm Văn Phong - Thành viênkiêm Tổng Giám đốc",
+                  "Triệu Quốc Tuấn - Thành viên",
+                  "Hoàng Văn Quang - Thành viên(đến ngày 25 tháng 5 năm 2023)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Dương Mạnh Sơn - Chủ tịch(đến 25 tháng 5 năm 2023)",
+                  "Võ Thị Thanh Ngọc - Thành viên",
+                  "Đỗ Đông Nguyễn - Thành viên",
+                  "Trương Hồng Sơn - Thành viên",
+                  "Phạm Văn Phong - Thành viênkiêm Tổng Giám đốc",
+                  "Triệu Quốc Tuấn - Thành viên",
+                  "Hoàng Văn Quang - Thành viên(đến ngày 25 tháng 5 năm 2023)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c45",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "VND"
+                ],
+                "mục lục chỉ tiêu": [
+                  "VND"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c49",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận kế toán trước thuế",
+                  "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                  "Thu nhập không chịu thuế",
+                  "Chi phí không được khấu trừ"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận kế toán trước thuế",
+                  "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                  "Thu nhập không chịu thuế",
+                  "Chi phí không được khấu trừ",
+                  "U'u đãi thuế",
+                  "Điều chỉnh thuế TNDN từ Kết luận của Kiểm toán Nhà nước",
+                  "Chi phí thuế TNDN (*)",
+                  "Thuế TNDN - hiện hành"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "mã doanh nghiệp": "POW",
+          "tên doanh nghiệp": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+          "năm": 2023,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 23: VỐN CHỦ SỞ HỮU"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Số dư tại ngày 31 tháng 12 năm 2023",
+                  "Số dư tại ngày 31 tháng 12 năm 2022"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 01 tháng 01 năm 2022",
+                  "Lợi nhuận trong năm",
+                  "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2021",
+                  "Số dư tại ngày 31 tháng 12 năm 2022",
+                  "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2022 (ii)",
+                  "Số dư tại ngày 31 tháng 12 năm 2023"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 01 tháng 01 năm 2022",
+                  "Lợi nhuận trong năm",
+                  "Trích quỹ đầu tư phát triển từ lợi nhuận năm 2021",
+                  "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2021",
+                  "Số dư tại ngày 31 tháng 12 năm 2022",
+                  "Trích quỹ đầu tư phát triển từ lợi nhuận năm 2022 (ii)",
+                  "Trích quỹ khen thưởng, phúc lợi từ lợi nhuận năm 2022 (ii)",
+                  "Số dư tại ngày 31 tháng 12 năm 2023"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 29: DOANH THU HOẠT ĐỘNG TÀI CHÍNH Năm nay Năm trước VND VND"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Năm nay",
+                  "Năm trước"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Cổ tức, lợi nhuận được chia",
+                  "Lãi tiền gửi ngân hàng",
+                  "Lãi chênh lệch tỷ giá trong thanh toán",
+                  "Lãi chênh lệch tỷ giá đánh giá lại",
+                  "Lãi chuyển nhượng vốn",
+                  "Lãi thu phí bảo lãnh",
+                  "Doanh thu tài chính khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Cổ tức, lợi nhuận được chia",
+                  "Lãi tiền gửi ngân hàng",
+                  "Lãi chênh lệch tỷ giá trong thanh toán",
+                  "Lãi chênh lệch tỷ giá đánh giá lại",
+                  "Lãi chuyển nhượng vốn",
+                  "Lãi thu phí bảo lãnh",
+                  "Doanh thu tài chính khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c12",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 10: HÀNG TỔN KHO Số cuối năm Số đầu năm Giá gốc VND Dự phòng Giá gốc VND Dự phòng"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Nguyên liệu, vật liệu",
+                  "Chi phí sản xuất, kinh doanh dở dang",
+                  "Công cụ, dụng cụ"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Nguyên liệu, vật liệu",
+                  "Chi phí sản xuất, kinh doanh dở dang",
+                  "Công cụ, dụng cụ"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c40",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Quỹ phát triển khoa học và công nghệ (mã chỉ tiêu 343)",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Có phiếu phố thông có quyền biểu quyết (mã chỉ tiêu 411a)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NỘ PHẢI TRẢ (mã chỉ tiêu 300)",
+                  "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                  "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 16)",
+                  "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                  "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 17)",
+                  "Phải trả người lao động (mã chỉ tiêu 314)",
+                  "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 18)",
+                  "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 19)",
+                  "Vay và nợ thuê tài chính ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 20)",
+                  "Dự phòng phải trả ngắn hạn (mã chỉ tiêu 321; tham chiếu Thuyết minh số 22)",
+                  "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322)",
+                  "Nợ dài hạn (mã chỉ tiêu 330)",
+                  "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                  "Vay và nợ thuê tài chính dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 20)",
+                  "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 22)",
+                  "Quỹ phát triển khoa học và công nghệ (mã chỉ tiêu 343)",
+                  "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                  "Vốn chủ sở hữu (mã chỉ tiêu 410; tham chiếu Thuyết minh số 23)",
+                  "Vốn góp của chủ sở hữu (mã chỉ tiêu 411)",
+                  "- Có phiếu phố thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                  "Quỹ đầu tư phát triển (mã chỉ tiêu 418)",
+                  "Lợi nhuận sau thuê chưa phân phối (mã chỉ tiêu 421)",
+                  "- Lợi nhuận sau thuê chưa phân phối lũy kế đến cuối nằm trước (mã chỉ tiêu 421a)",
+                  "- Lợi nhuận sau thuê chưa phân phối năm 421b nay"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c20",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 9: NỘ XÃU Số cuối năm Số đầu năm Giá gốc Dự phòng VNDGiá trịcó thể thu hồi Giá gốc Dự phòng VNDGiá trịcó thể thu hồi"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                  "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                  "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch"
+                ],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                  "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch",
+                  "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                  "Các đối tượng khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Giá trị các khoản phải thuquá hạn thanh toán hoậckhó có khả năng thu hồiCông ty Mua bán Điện- Tập đoàn Điện lực Việt Nam(\"EPTC-EVN\")",
+                  "Ban Quản lý Dư án Điện lựcDầu khí Vũng Áng - QuảngTrạch",
+                  "Công ty Cổ phần Tư vấn Dựán Điện lực Dầu khí",
+                  "Các đối tượng khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c28",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 17: THUẾ VÀ CÁC KHOẢN PHẢI THU/PHẢI NỘP NHÀ NƯỚC Số đầu năm Số phải nộp/bù trừ trong năm Số đã nộp trong năm Số cuối năm VND VND VND VND"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Số đầu năm",
+                  "Số phải nộp/bù trừ trong năm",
+                  "Số đã nộp trong năm",
+                  "Số cuối năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thuế giá trị gia tăng",
+                  "Thuế xuất nhập khẩu",
+                  "Thuế thu nhập doanh nghiệp",
+                  "Thuế thu nhập cá nhân",
+                  "Các loại thuế khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Thuế giá trị gia tăng",
+                  "Thuế xuất nhập khẩu",
+                  "Thuế thu nhập doanh nghiệp",
+                  "Thuế thu nhập cá nhân",
+                  "Các loại thuế khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c36",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 33: CHI PHÍ THUẾ THU NHẬP DOANH NGHIỆP"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Năm nay",
+                  "Năm trước"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành",
+                  "171.397.040.386"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí thuế thu nhập doanh nghiệp tính trên thu nhập chịu thuế năm hiện hành",
+                  "171.397.040.386"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c44",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Năm nay",
+                  "Năm trước"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ông Lê Như Linh",
+                  "Ông Nguyễn Duy Giang",
+                  "Ông Nguyễn Mạnh Tưởng",
+                  "Ông Ngô Văn Chiến",
+                  "Ông Trương Việt Phương",
+                  "Ông Chu Quang Toàn"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Ông Lê Như Linh",
+                  "Ông Nguyễn Duy Giang",
+                  "Ông Nguyễn Mạnh Tưởng",
+                  "Ông Nguyễn Minh Đạo",
+                  "Ông Nguyễn Kiên",
+                  "Ông Phan Ngọc Hiền",
+                  "Ông Ngô Văn Chiến",
+                  "Ông Trương Việt Phương",
+                  "Ông Chu Quang Toàn"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c22",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh b: Đầu tư tài chính dài hạn"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                  "Công ty Cổ phần Điện lực Dầu khí",
+                  "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)",
+                  "Công ty Cổ phần Cơ điện Dầu khí (iii)",
+                  "Công ty Cổ phần Điện Việt Lào (iii)"
+                ],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Thủy điện Hủa Na (ii)",
+                  "Công ty Cổ phần Điện lực Dầu khí",
+                  "Công ty Cổ phần Thủy điện Đakđrinh (iii)",
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                  "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Công ty Cổ phần Thủy điện Hủa Na (ii)",
+                  "Công ty Cổ phần Điện lực Dầu khí",
+                  "Công ty Cổ phần Thủy điện Đakđrinh (iii)",
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam (i)",
+                  "Công ty Cổ phần Năng lượng tái tạo Điện lực Dầu khí (iii)",
+                  "Công ty Cổ phần Thủy điện Nậm Chiến (iii)",
+                  "Công ty Cổ phần Năng lượng Sông Hồng (iii)",
+                  "Công ty Cổ phần Điện khí LNG Quảng Ninh (iii)",
+                  "Công ty Cổ phần Điện Việt Lào (iii)",
+                  "Công ty Cổ phần Thủy điện Sông Tranh 3 (iii)",
+                  "Công ty Cổ phần EVN Quốc tế (ii)",
+                  "Công ty Cổ phần Phát triển Đô thị Dầu khí (iii)",
+                  "Công ty Cổ phần Cơ điện Dầu khí (iii)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c32",
+              "mã báo cáo": "b02",
+              "thuộc báo cáo": "POW — Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP — năm 2023 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                  "Tổng Công ty Dầu Việt Nam",
+                  "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                  "Tập đoàn Dầu khí Việt Nam"
+                ],
+                "kỳ số liệu": [
+                  "Số cuối năm",
+                  "Số đầu năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Trường Cao đẳng Nghề Dầu khí",
+                  "Tập đoàn Dầu khí Việt Nam",
+                  "Công ty Cổ phần Thủy điện Hủa Na",
+                  "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                  "Công ty Cổ phần Dịch vụ Bảo vệ An ninh Dầu khí Việt Nam",
+                  "Trả trước cho người bán ngắn hạn",
+                  "Tổng Công ty Dầu Việt Nam"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền và các khoản tương đương tiền",
+                  "Ngân hàng Thương mại Cổ phần Đại chúng Việt Nam",
+                  "Đầu tư nằm giữ đến ngày đáo hạn",
+                  "Phải thu ngắn hạn của khách hàng",
+                  "Công ty Cổ phần Phân bón Dầu khí Cà Mau",
+                  "Trường Cao đẳng Nghề Dầu khí",
+                  "Tập đoàn Dầu khí Việt Nam",
+                  "Công ty Cổ phần Thủy điện Hủa Na",
+                  "Tổng Công ty Khí Việt Nam - Công ty Cổ phần",
+                  "Công ty Cổ phần Dịch vụ Kỹ thuật Điện lực Dầu khí Việt Nam",
+                  "Công ty Cổ phần Dịch vụ Bảo vệ An ninh Dầu khí Việt Nam",
+                  "Trả trước cho người bán ngắn hạn",
+                  "Tổng Công ty Dầu Việt Nam",
+                  "Phải thu khác ngắn hạn",
+                  "Ban Quản lý Dự án Điện lực Dầu khí Vũng Áng-Quảng Trạch",
+                  "Công ty Cổ phần Xây dựng Dân dụng và Công nghiệp Dầu khí",
+                  "Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2",
+                  "Ban Quản lý Dự án Điện lực Dầu khí Sông Hậu 1",
+                  "Ban Quản lý Dự án Điện lực Dầu khí Thái Bình 2"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01",
+        "b02"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Vốn chủ sở hữu",
+              "vai trò": "tử số"
+            }
+          ]
+        },
+        {
+          "mã báo cáo": "b02",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b02_k01",
+              "nội dung": "Vốn chủ sở hữu",
+              "vai trò": "tử số"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c01",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c40",
+          "đáp ứng chỉ tiêu": [
+            "b02_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "coverage_lock_reasons": [
+      "multi_ticker_aggregation_or_comparison"
+    ],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01",
+      "b02"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Vốn chủ sở hữu",
+            "role": "tử số"
+          }
+        ]
+      },
+      {
+        "bucket_key": "b02",
+        "concepts": [
+          {
+            "concept_key": "b02_k01",
+            "description": "Vốn chủ sở hữu",
+            "role": "tử số"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c40"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01",
+      "c40"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "GAS_financial_statements_2023_separate_table_44",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2023_separate_table_44",
+        "doc_id": "GAS_financial_statements_2023_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2023,
+        "start_line": 1857
+      },
+      "rrf_score": 0.03278688524590164,
+      "dense_rank": 1,
+      "dense_score": 0.8715046,
+      "bm25_rank": 1,
+      "bm25_score": 13.065154560587835,
+      "retrieval_score": 0.03278688524590164,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Vốn góp của chủ sở hữu VND",
+          "Thặng dư vốn cổ phần VND",
+          "Quỹ đầu tư phát triển VND",
+          "LNST chưa phân phối lũy kế của các năm trước VND",
+          "LNST chưa phân phối của năm nay VND",
+          "Tổng cộng VND",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "LNST chưa phân phối lũy kế của các năm trước VND",
+          "LNST chưa phân phối của năm nay VND"
+        ],
+        "units": [],
+        "row_count": 15,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Tại ngày 1 tháng 1 năm 2022"
+          },
+          {
+            "row": 3,
+            "label": "Kết chuyển LNST chưa phân phối"
+          },
+          {
+            "row": 4,
+            "label": "Lợi nhuận thuần trong năm"
+          },
+          {
+            "row": 5,
+            "label": "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19)"
+          },
+          {
+            "row": 6,
+            "label": "Chia cổ tức"
+          },
+          {
+            "row": 7,
+            "label": "Khác"
+          },
+          {
+            "row": 8,
+            "label": "Tại ngày 31 tháng 12 năm 2022"
+          },
+          {
+            "row": 9,
+            "label": "Kết chuyển LNST chưa phân phối"
+          },
+          {
+            "row": 10,
+            "label": "Vốn tăng trong năm (i)"
+          },
+          {
+            "row": 11,
+            "label": "Lợi nhuận thuần trong năm"
+          },
+          {
+            "row": 12,
+            "label": "Trích quỹ đầu tư phát triển (ii)"
+          },
+          {
+            "row": 13,
+            "label": "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19) (ii)"
+          },
+          {
+            "row": 14,
+            "label": "Chia cổ tức (ii)"
+          },
+          {
+            "row": 15,
+            "label": "Khác"
+          },
+          {
+            "row": 16,
+            "label": "Tại ngày 31 tháng 12 năm 2023"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 7,
+            "label": "Khác"
+          },
+          {
+            "row": 8,
+            "label": "Tại ngày 31 tháng 12 năm 2022"
+          },
+          {
+            "row": 9,
+            "label": "Kết chuyển LNST chưa phân phối"
+          },
+          {
+            "row": 10,
+            "label": "Vốn tăng trong năm (i)"
+          },
+          {
+            "row": 11,
+            "label": "Lợi nhuận thuần trong năm"
+          },
+          {
+            "row": 15,
+            "label": "Khác"
+          },
+          {
+            "row": 16,
+            "label": "Tại ngày 31 tháng 12 năm 2023"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "POW_financial_statements_2023_separate_table_4",
+      "metadata": {
+        "table_id": "POW_financial_statements_2023_separate_table_4",
+        "doc_id": "POW_financial_statements_2023_separate",
+        "ticker": "POW",
+        "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2023,
+        "start_line": 358
+      },
+      "rrf_score": 0.014925373134328358,
+      "bm25_rank": 7,
+      "bm25_score": 3.0449720769806845,
+      "retrieval_score": 0.014925373134328358,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40,
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 24,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "code": "300",
+            "label": "NỘ PHẢI TRẢ"
+          },
+          {
+            "row": 3,
+            "code": "310",
+            "label": "Nợ ngắn hạn"
+          },
+          {
+            "row": 4,
+            "code": "311",
+            "note_ref": "16",
+            "label": "Phải trả người bán ngắn hạn"
+          },
+          {
+            "row": 5,
+            "code": "312",
+            "label": "Người mua trả tiền trước ngắn hạn"
+          },
+          {
+            "row": 6,
+            "code": "313",
+            "note_ref": "17",
+            "label": "Thuế và các khoản phải nộp Nhà nước"
+          },
+          {
+            "row": 7,
+            "code": "314",
+            "label": "Phải trả người lao động"
+          },
+          {
+            "row": 8,
+            "code": "315",
+            "note_ref": "18",
+            "label": "Chi phí phải trả ngắn hạn"
+          },
+          {
+            "row": 9,
+            "code": "319",
+            "note_ref": "19",
+            "label": "Phải trả ngắn hạn khác"
+          },
+          {
+            "row": 10,
+            "code": "320",
+            "note_ref": "20",
+            "label": "Vay và nợ thuê tài chính ngắn hạn"
+          },
+          {
+            "row": 11,
+            "code": "321",
+            "note_ref": "22",
+            "label": "Dự phòng phải trả ngắn hạn"
+          },
+          {
+            "row": 12,
+            "code": "322",
+            "label": "Quỹ khen thưởng, phúc lợi"
+          },
+          {
+            "row": 13,
+            "code": "330",
+            "label": "Nợ dài hạn"
+          },
+          {
+            "row": 14,
+            "code": "337",
+            "label": "Phải trả dài hạn khác"
+          },
+          {
+            "row": 15,
+            "code": "338",
+            "note_ref": "20",
+            "label": "Vay và nợ thuê tài chính dài hạn"
+          },
+          {
+            "row": 16,
+            "code": "342",
+            "note_ref": "22",
+            "label": "Dự phòng phải trả dài hạn"
+          },
+          {
+            "row": 17,
+            "code": "343",
+            "label": "Quỹ phát triển khoa học và công nghệ"
+          },
+          {
+            "row": 18,
+            "code": "400",
+            "label": "VỐN CHỦ SỞ HỮU"
+          },
+          {
+            "row": 19,
+            "code": "410",
+            "note_ref": "23",
+            "label": "Vốn chủ sở hữu"
+          },
+          {
+            "row": 20,
+            "code": "411",
+            "label": "Vốn góp của chủ sở hữu"
+          },
+          {
+            "row": 21,
+            "code": "411a",
+            "label": "- Có phiếu phố thông có quyền biểu quyết"
+          },
+          {
+            "row": 22,
+            "code": "418",
+            "label": "Quỹ đầu tư phát triển"
+          },
+          {
+            "row": 23,
+            "code": "421",
+            "label": "Lợi nhuận sau thuê chưa phân phối"
+          },
+          {
+            "row": 24,
+            "code": "421a",
+            "label": "- Lợi nhuận sau thuê chưa phân phối lũy kế đến cuối nằm trước"
+          },
+          {
+            "row": 25,
+            "label": "- Lợi nhuận sau thuê chưa phân phối năm 421b nay"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 17,
+            "code": "343",
+            "label": "Quỹ phát triển khoa học và công nghệ"
+          },
+          {
+            "row": 18,
+            "code": "400",
+            "label": "VỐN CHỦ SỞ HỮU"
+          },
+          {
+            "row": 19,
+            "code": "410",
+            "note_ref": "23",
+            "label": "Vốn chủ sở hữu"
+          },
+          {
+            "row": 20,
+            "code": "411",
+            "label": "Vốn góp của chủ sở hữu"
+          },
+          {
+            "row": 21,
+            "code": "411a",
+            "label": "- Có phiếu phố thông có quyền biểu quyết"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "GAS_financial_statements_2023_separate",
+        "POW_financial_statements_2023_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2023_separate|1857",
+        "POW_financial_statements_2023_separate|1175",
+        "GAS_financial_statements_2023_separate|2150",
+        "POW_financial_statements_2023_separate|1252",
+        "GAS_financial_statements_2023_separate|1842",
+        "POW_financial_statements_2023_separate|903",
+        "GAS_financial_statements_2023_separate|1605",
+        "POW_financial_statements_2023_separate|1262",
+        "GAS_financial_statements_2023_separate|1751",
+        "POW_financial_statements_2023_separate|1237",
+        "GAS_financial_statements_2023_separate|1744",
+        "POW_financial_statements_2023_separate|944",
+        "GAS_financial_statements_2023_separate|2583",
+        "POW_financial_statements_2023_separate|1146",
+        "GAS_financial_statements_2023_separate|2579",
+        "POW_financial_statements_2023_separate|1099",
+        "GAS_financial_statements_2023_separate|1805",
+        "POW_financial_statements_2023_separate|1080",
+        "GAS_financial_statements_2023_separate|716",
+        "POW_financial_statements_2023_separate|924",
+        "GAS_financial_statements_2023_separate|1582",
+        "POW_financial_statements_2023_separate|865",
+        "GAS_financial_statements_2023_separate|2016",
+        "POW_financial_statements_2023_separate|1059",
+        "GAS_financial_statements_2023_separate|1834",
+        "POW_financial_statements_2023_separate|1196",
+        "GAS_financial_statements_2023_separate|1737",
+        "POW_financial_statements_2023_separate|1042",
+        "GAS_financial_statements_2023_separate|1983",
+        "POW_financial_statements_2023_separate|961",
+        "GAS_financial_statements_2023_separate|2134",
+        "POW_financial_statements_2023_separate|1373",
+        "GAS_financial_statements_2023_separate|2039",
+        "POW_financial_statements_2023_separate|447",
+        "GAS_financial_statements_2023_separate|2419",
+        "POW_financial_statements_2023_separate|1281",
+        "GAS_financial_statements_2023_separate|1535",
+        "POW_financial_statements_2023_separate|1256",
+        "GAS_financial_statements_2023_separate|2285",
+        "POW_financial_statements_2023_separate|358",
+        "GAS_financial_statements_2023_separate|2386",
+        "POW_financial_statements_2023_separate|1275",
+        "GAS_financial_statements_2023_separate|2396",
+        "POW_financial_statements_2023_separate|1358",
+        "GAS_financial_statements_2023_separate|2546",
+        "POW_financial_statements_2023_separate|1285",
+        "GAS_financial_statements_2023_separate|1628",
+        "POW_financial_statements_2023_separate|1110",
+        "GAS_financial_statements_2023_separate|2089",
+        "POW_financial_statements_2023_separate|1206"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "GAS_financial_statements_2023_separate",
+        "POW_financial_statements_2023_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2023_separate|1857",
+        "GAS_financial_statements_2023_separate|2150",
+        "GAS_financial_statements_2023_separate|1842",
+        "GAS_financial_statements_2023_separate|1605",
+        "GAS_financial_statements_2023_separate|1751",
+        "GAS_financial_statements_2023_separate|1744",
+        "GAS_financial_statements_2023_separate|2583",
+        "GAS_financial_statements_2023_separate|1805",
+        "GAS_financial_statements_2023_separate|716",
+        "GAS_financial_statements_2023_separate|1582",
+        "GAS_financial_statements_2023_separate|1834",
+        "GAS_financial_statements_2023_separate|1737",
+        "GAS_financial_statements_2023_separate|1983",
+        "GAS_financial_statements_2023_separate|2039",
+        "GAS_financial_statements_2023_separate|2419",
+        "GAS_financial_statements_2023_separate|1535",
+        "GAS_financial_statements_2023_separate|2386",
+        "GAS_financial_statements_2023_separate|2396",
+        "GAS_financial_statements_2023_separate|2546",
+        "POW_financial_statements_2023_separate|1175",
+        "POW_financial_statements_2023_separate|1252",
+        "GAS_financial_statements_2023_separate|2089",
+        "POW_financial_statements_2023_separate|944",
+        "POW_financial_statements_2023_separate|358",
+        "POW_financial_statements_2023_separate|924",
+        "POW_financial_statements_2023_separate|1042",
+        "POW_financial_statements_2023_separate|1281",
+        "POW_financial_statements_2023_separate|1358"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "GAS_financial_statements_2023_separate",
+        "POW_financial_statements_2023_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2023_separate|1857",
+        "GAS_financial_statements_2023_separate|2150",
+        "GAS_financial_statements_2023_separate|1842",
+        "GAS_financial_statements_2023_separate|1605",
+        "GAS_financial_statements_2023_separate|1751",
+        "GAS_financial_statements_2023_separate|1744",
+        "GAS_financial_statements_2023_separate|2583",
+        "GAS_financial_statements_2023_separate|1805",
+        "GAS_financial_statements_2023_separate|716",
+        "GAS_financial_statements_2023_separate|1582",
+        "GAS_financial_statements_2023_separate|1834",
+        "GAS_financial_statements_2023_separate|1737",
+        "GAS_financial_statements_2023_separate|1983",
+        "GAS_financial_statements_2023_separate|2039",
+        "GAS_financial_statements_2023_separate|2419",
+        "GAS_financial_statements_2023_separate|1535",
+        "GAS_financial_statements_2023_separate|2386",
+        "GAS_financial_statements_2023_separate|2396",
+        "GAS_financial_statements_2023_separate|2546",
+        "POW_financial_statements_2023_separate|1175",
+        "POW_financial_statements_2023_separate|1252",
+        "GAS_financial_statements_2023_separate|2089",
+        "POW_financial_statements_2023_separate|944",
+        "POW_financial_statements_2023_separate|358",
+        "POW_financial_statements_2023_separate|924",
+        "POW_financial_statements_2023_separate|1042",
+        "POW_financial_statements_2023_separate|1281",
+        "POW_financial_statements_2023_separate|1358",
+        "POW_financial_statements_2023_separate|865",
+        "POW_financial_statements_2023_separate|1373"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "GAS_financial_statements_2023_separate",
+        "POW_financial_statements_2023_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2023_separate|1857",
+        "POW_financial_statements_2023_separate|358"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "GAS_financial_statements_2023_separate",
+        "POW_financial_statements_2023_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2023_separate|1857",
+        "POW_financial_statements_2023_separate|358"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 0.5,
+        "f2": 0.08620689655172414,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.03571428571428571,
+        "recall": 0.5,
+        "f2": 0.1388888888888889,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.03333333333333333,
+        "recall": 0.5,
+        "f2": 0.13157894736842105,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f2": 0.5,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f2": 0.5,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "GAS_financial_statements_2023_separate|567",
+      "stage_presence": {
+        "retriever": false,
+        "scout_union": false,
+        "finalists": false,
+        "final_llm": false,
+        "reranker": false
+      },
+      "terminal": "retriever"
+    },
+    {
+      "table_ref": "POW_financial_statements_2023_separate|358",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

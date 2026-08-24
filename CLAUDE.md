@@ -87,9 +87,9 @@ not arbitrary free text. `max_attempts` must be between 1 and 5.
 - `data_indexing.py` is a large, mostly self-contained CLI that turns those tables into a
   searchable Qdrant collection: it builds a manifest (JSONL) from the metadata catalog with a
   SQLite checkpoint (`.cache/qdrant_sync_v1.sqlite3`) for idempotent/resumable runs, embeds
-  table text with `BAAI/bge-m3` (via FlagEmbedding), and upserts dense vectors + payload
+  table text with the configured embedding model and upserts dense vectors + payload
   (`table_id`, `doc_id`, `ticker`, `company_name`, `year`, `report_type`, `table_type`,
-  `start_line`) into Qdrant, aliased for atomic collection swaps. It also exposes
+  `start_line`, `index_text`) into Qdrant, aliased for atomic collection swaps. It also exposes
   `retrieve`/`route`/`resolve` for testing retrieval without going through the LangGraph
   pipeline.
 
@@ -111,10 +111,13 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   table_type); `src/helper.py:validate_filters` locally drops anything malformed or not in the
   allowed vocab before it ever reaches Qdrant.
 - `retrieve_tables_node` / `rerank_tables_node` call `src/retrieval.py`'s `retrieve()` (Qdrant
-  dense search) and `rerank()`. Retrieval embeds the semantic query with the shared Granite
-  encoder and validates the exact eight-field Qdrant payload. Reranking resolves each candidate
-  CSV from `table_id`, builds bounded question-aware context from its columns and relevant rows,
-  then performs hierarchical LLM reranking. The LLM only sees opaque candidate keys; local code
+  dense search, optionally fused with BM25) and `rerank()`. Retrieval embeds the semantic query
+  with the shared Granite encoder and validates the exact nine-field Qdrant payload. In hybrid
+  mode, BM25 scrolls only payloads matching the metadata filters and scores their `index_text`
+  at query time; it does not read a local manifest or SQLite lexical index. Reranking resolves
+  each candidate CSV from `table_id`, builds bounded question-aware context from its columns and
+  relevant rows, then performs hierarchical LLM reranking. The LLM only sees opaque candidate
+  keys; local code
   maps them back to validated table IDs, salvages partial rankings, and uses deterministic dense
   fallback when both structured-response attempts are unusable. The offline manifest is not read
   at runtime.

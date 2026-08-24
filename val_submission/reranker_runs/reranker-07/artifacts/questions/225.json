@@ -1,0 +1,4268 @@
+{
+  "schema_version": 2,
+  "id": 225,
+  "question": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+  "started_at": "2026-08-23T09:28:30+00:00",
+  "finished_at": "2026-08-23T09:28:45+00:00",
+  "duration_seconds": 14.84802835499795,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/225.json",
+  "golden": {
+    "id": 225,
+    "question": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+    "relevant_docs": [
+      "SSI_financial_statements_2017_separate"
+    ],
+    "relevant_tables": [
+      "SSI_financial_statements_2017_separate|1619"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_54",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_54",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1619
+      },
+      "rrf_score": 0.03225806451612903,
+      "dense_rank": 1,
+      "dense_score": 0.87085295,
+      "bm25_rank": 2,
+      "bm25_score": 19.507452106633327,
+      "retrieval_score": 0.03225806451612903,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_8",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_8",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 296
+      },
+      "rrf_score": 0.02938045560996381,
+      "dense_rank": 2,
+      "dense_score": 0.8429381,
+      "bm25_rank": 1,
+      "bm25_score": 23.639136137893985,
+      "retrieval_score": 0.02938045560996381,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_16",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_16",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 444
+      },
+      "rrf_score": 0.02919863597612958,
+      "dense_rank": 3,
+      "dense_score": 0.8476855,
+      "bm25_rank": 8,
+      "bm25_score": 11.905549227314173,
+      "retrieval_score": 0.02919863597612958,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_50",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_50",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1571
+      },
+      "rrf_score": 0.02900988017658188,
+      "dense_rank": 4,
+      "dense_score": 0.8491516,
+      "bm25_rank": 11,
+      "bm25_score": 10.840279135296447,
+      "retrieval_score": 0.02900988017658188,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_26",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_26",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1244
+      },
+      "rrf_score": 0.027745885954841176,
+      "dense_rank": 5,
+      "dense_score": 0.8425996,
+      "bm25_rank": 7,
+      "bm25_score": 12.73273870433998,
+      "retrieval_score": 0.027745885954841176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_9",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_9",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 313
+      },
+      "rrf_score": 0.02694394213381555,
+      "dense_rank": 6,
+      "dense_score": 0.8421628,
+      "bm25_rank": 10,
+      "bm25_score": 11.066764209276027,
+      "retrieval_score": 0.02694394213381555,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_35",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_35",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1375
+      },
+      "rrf_score": 0.02651914295749912,
+      "dense_rank": 7,
+      "dense_score": 0.84474206,
+      "bm25_rank": 18,
+      "bm25_score": 8.235394998448342,
+      "retrieval_score": 0.02651914295749912,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_33",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_33",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1352
+      },
+      "rrf_score": 0.0265113137453563,
+      "dense_rank": 8,
+      "dense_score": 0.8295034,
+      "bm25_rank": 3,
+      "bm25_score": 14.920038511911947,
+      "retrieval_score": 0.0265113137453563,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_38",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_38",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1416
+      },
+      "rrf_score": 0.0264957264957265,
+      "dense_rank": 9,
+      "dense_score": 0.8537659,
+      "bm25_rank": 30,
+      "bm25_score": 5.786017855053631,
+      "retrieval_score": 0.0264957264957265,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_28",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_28",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1269
+      },
+      "rrf_score": 0.026470588235294117,
+      "dense_rank": 10,
+      "dense_score": 0.84820914,
+      "bm25_rank": 25,
+      "bm25_score": 7.336055264739636,
+      "retrieval_score": 0.026470588235294117,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_66",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_66",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1697
+      },
+      "rrf_score": 0.026021080368906456,
+      "dense_rank": 11,
+      "dense_score": 0.8519676,
+      "bm25_rank": 32,
+      "bm25_score": 5.457492973950388,
+      "retrieval_score": 0.026021080368906456,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_56",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_56",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1629
+      },
+      "rrf_score": 0.025873015873015874,
+      "dense_rank": 12,
+      "dense_score": 0.8695878,
+      "bm25_rank": 40,
+      "bm25_score": 4.835172652297606,
+      "retrieval_score": 0.025873015873015874,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_67",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_67",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1701
+      },
+      "rrf_score": 0.025859192525859193,
+      "dense_rank": 13,
+      "dense_score": 0.83680624,
+      "bm25_rank": 14,
+      "bm25_score": 8.968505578794236,
+      "retrieval_score": 0.025859192525859193,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_46",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_46",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1530
+      },
+      "rrf_score": 0.025274725274725275,
+      "dense_rank": 14,
+      "dense_score": 0.8456221,
+      "bm25_rank": 31,
+      "bm25_score": 5.481787194339129,
+      "retrieval_score": 0.025274725274725275,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_65",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_65",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1693
+      },
+      "rrf_score": 0.02523809523809524,
+      "dense_rank": 15,
+      "dense_score": 0.84425855,
+      "bm25_rank": 24,
+      "bm25_score": 7.544450983222411,
+      "retrieval_score": 0.02523809523809524,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_45",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_45",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1507
+      },
+      "rrf_score": 0.025206087507926443,
+      "dense_rank": 16,
+      "dense_score": 0.8437652,
+      "bm25_rank": 23,
+      "bm25_score": 7.731874180553215,
+      "retrieval_score": 0.025206087507926443,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_62",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_62",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1668
+      },
+      "rrf_score": 0.0251414204902577,
+      "dense_rank": 17,
+      "dense_score": 0.8443387,
+      "bm25_rank": 26,
+      "bm25_score": 7.313549413929179,
+      "retrieval_score": 0.0251414204902577,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_70",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_70",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1753
+      },
+      "rrf_score": 0.024568195354377605,
+      "dense_rank": 18,
+      "dense_score": 0.8301718,
+      "bm25_rank": 13,
+      "bm25_score": 9.327083927989392,
+      "retrieval_score": 0.024568195354377605,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_69",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_69",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1738
+      },
+      "rrf_score": 0.024527186761229315,
+      "dense_rank": 19,
+      "dense_score": 0.84507406,
+      "bm25_rank": 34,
+      "bm25_score": 5.288190163498649,
+      "retrieval_score": 0.024527186761229315,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_27",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_27",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1263
+      },
+      "rrf_score": 0.024305555555555552,
+      "dense_rank": 20,
+      "dense_score": 0.82837343,
+      "bm25_rank": 12,
+      "bm25_score": 9.43032461033914,
+      "retrieval_score": 0.024305555555555552,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_60",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_60",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1660
+      },
+      "rrf_score": 0.023026315789473686,
+      "dense_rank": 21,
+      "dense_score": 0.84024173,
+      "bm25_rank": 35,
+      "bm25_score": 5.188244245776066,
+      "retrieval_score": 0.023026315789473686,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_10",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_10",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2017,
+        "start_line": 330
+      },
+      "rrf_score": 0.022424242424242423,
+      "dense_rank": 22,
+      "dense_score": 0.8192884,
+      "bm25_rank": 15,
+      "bm25_score": 8.79406147250476,
+      "retrieval_score": 0.022424242424242423,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_15",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_15",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 427
+      },
+      "rrf_score": 0.022246272246272247,
+      "dense_rank": 23,
+      "dense_score": 0.82186663,
+      "bm25_rank": 17,
+      "bm25_score": 8.376624511597464,
+      "retrieval_score": 0.022246272246272247,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_77",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_77",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1821
+      },
+      "rrf_score": 0.022214040255277366,
+      "dense_rank": 24,
+      "dense_score": 0.83637,
+      "bm25_rank": 37,
+      "bm25_score": 5.088071697704763,
+      "retrieval_score": 0.022214040255277366,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_36",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_36",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1393
+      },
+      "rrf_score": 0.02214960058097313,
+      "dense_rank": 25,
+      "dense_score": 0.8244138,
+      "bm25_rank": 21,
+      "bm25_score": 7.829567149205805,
+      "retrieval_score": 0.02214960058097313,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_89",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_89",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1967
+      },
+      "rrf_score": 0.021674311926605506,
+      "dense_rank": 26,
+      "dense_score": 0.81958663,
+      "bm25_rank": 20,
+      "bm25_score": 7.832309022245784,
+      "retrieval_score": 0.021674311926605506,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_1",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_1",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 20
+      },
+      "rrf_score": 0.021572002294893863,
+      "dense_rank": 27,
+      "dense_score": 0.8364127,
+      "bm25_rank": 45,
+      "bm25_score": 4.2057301522553265,
+      "retrieval_score": 0.021572002294893863,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_51",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_51",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1575
+      },
+      "rrf_score": 0.021545233406695237,
+      "dense_rank": 28,
+      "dense_score": 0.8281918,
+      "bm25_rank": 29,
+      "bm25_score": 6.184136213975785,
+      "retrieval_score": 0.021545233406695237,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_83",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_83",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2017,
+        "start_line": 1879
+      },
+      "rrf_score": 0.021363636363636362,
+      "dense_rank": 29,
+      "dense_score": 0.82501864,
+      "bm25_rank": 28,
+      "bm25_score": 6.377836600271583,
+      "retrieval_score": 0.021363636363636362,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_71",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_71",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1769
+      },
+      "rrf_score": 0.021198668146503882,
+      "dense_rank": 30,
+      "dense_score": 0.83545,
+      "bm25_rank": 46,
+      "bm25_score": 4.061898670313399,
+      "retrieval_score": 0.021198668146503882,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_74",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_74",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1798
+      },
+      "rrf_score": 0.020370370370370372,
+      "dense_rank": 31,
+      "dense_score": 0.8319849,
+      "bm25_rank": 48,
+      "bm25_score": 3.813844463987637,
+      "retrieval_score": 0.020370370370370372,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_90",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_90",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1984
+      },
+      "rrf_score": 0.020305091733663162,
+      "dense_rank": 32,
+      "dense_score": 0.8259511,
+      "bm25_rank": 38,
+      "bm25_score": 5.062612875641166,
+      "retrieval_score": 0.020305091733663162,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_17",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_17",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 468
+      },
+      "rrf_score": 0.01985062893081761,
+      "dense_rank": 33,
+      "dense_score": 0.82262385,
+      "bm25_rank": 36,
+      "bm25_score": 5.094340726717774,
+      "retrieval_score": 0.01985062893081761,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_59",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_59",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1656
+      },
+      "rrf_score": 0.019704911667637354,
+      "dense_rank": 34,
+      "dense_score": 0.8244725,
+      "bm25_rank": 42,
+      "bm25_score": 4.427035455247859,
+      "retrieval_score": 0.019704911667637354,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_14",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_14",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2017,
+        "start_line": 412
+      },
+      "rrf_score": 0.019424799622819428,
+      "dense_rank": 35,
+      "dense_score": 0.8235155,
+      "bm25_rank": 41,
+      "bm25_score": 4.49275999976067,
+      "retrieval_score": 0.019424799622819428,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_30",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_30",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1309
+      },
+      "rrf_score": 0.019324122479462285,
+      "dense_rank": 36,
+      "dense_score": 0.8242888,
+      "bm25_rank": 44,
+      "bm25_score": 4.220636603137134,
+      "retrieval_score": 0.019324122479462285,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_78",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_78",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1838
+      },
+      "rrf_score": 0.01896117900790798,
+      "dense_rank": 37,
+      "dense_score": 0.82358456,
+      "bm25_rank": 47,
+      "bm25_score": 3.8959664570806507,
+      "retrieval_score": 0.01896117900790798,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_57",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_57",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1633
+      },
+      "rrf_score": 0.01639344262295082,
+      "dense_rank": 38,
+      "dense_score": 0.8732007,
+      "retrieval_score": 0.01639344262295082,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_75",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_75",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1813
+      },
+      "rrf_score": 0.015625,
+      "bm25_rank": 4,
+      "bm25_score": 14.791270390818045,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_94",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_94",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 2055
+      },
+      "rrf_score": 0.015625,
+      "dense_rank": 40,
+      "dense_score": 0.8558551,
+      "retrieval_score": 0.015625,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_25",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_25",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1203
+      },
+      "rrf_score": 0.015384615384615385,
+      "bm25_rank": 5,
+      "bm25_score": 13.087207143350247,
+      "retrieval_score": 0.015384615384615385,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 41
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_76",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_76",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1817
+      },
+      "rrf_score": 0.015151515151515152,
+      "bm25_rank": 6,
+      "bm25_score": 12.920562125762416,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 42
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_96",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_96",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 2182
+      },
+      "rrf_score": 0.014492753623188406,
+      "bm25_rank": 9,
+      "bm25_score": 11.156023484061624,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_34",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_34",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1369
+      },
+      "rrf_score": 0.014084507042253521,
+      "dense_rank": 44,
+      "dense_score": 0.8451524,
+      "retrieval_score": 0.014084507042253521,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_11",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_11",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 358
+      },
+      "rrf_score": 0.013157894736842105,
+      "bm25_rank": 16,
+      "bm25_score": 8.734580657525022,
+      "retrieval_score": 0.013157894736842105,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 45
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_81",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_81",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1850
+      },
+      "rrf_score": 0.012658227848101266,
+      "bm25_rank": 19,
+      "bm25_score": 8.175367895842697,
+      "retrieval_score": 0.012658227848101266,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_31",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_31",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1328
+      },
+      "rrf_score": 0.012195121951219513,
+      "dense_rank": 47,
+      "dense_score": 0.83669776,
+      "retrieval_score": 0.012195121951219513,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_68",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_68",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1720
+      },
+      "rrf_score": 0.012195121951219513,
+      "bm25_rank": 22,
+      "bm25_score": 7.764130707629786,
+      "retrieval_score": 0.012195121951219513,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 48
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_32",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_32",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1334
+      },
+      "rrf_score": 0.011627906976744186,
+      "dense_rank": 49,
+      "dense_score": 0.8351406,
+      "retrieval_score": 0.011627906976744186,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_43",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_43",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1474
+      },
+      "rrf_score": 0.011494252873563218,
+      "dense_rank": 50,
+      "dense_score": 0.83463585,
+      "retrieval_score": 0.011494252873563218,
+      "retrieval_mode": "hybrid"
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "year": 2017,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_54",
+        "table_ref": "SSI_financial_statements_2017_separate|1619",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_8",
+        "table_ref": "SSI_financial_statements_2017_separate|296",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_16",
+        "table_ref": "SSI_financial_statements_2017_separate|444",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_50",
+        "table_ref": "SSI_financial_statements_2017_separate|1571",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_26",
+        "table_ref": "SSI_financial_statements_2017_separate|1244",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_9",
+        "table_ref": "SSI_financial_statements_2017_separate|313",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_35",
+        "table_ref": "SSI_financial_statements_2017_separate|1375",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_33",
+        "table_ref": "SSI_financial_statements_2017_separate|1352",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_38",
+        "table_ref": "SSI_financial_statements_2017_separate|1416",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_28",
+        "table_ref": "SSI_financial_statements_2017_separate|1269",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_66",
+        "table_ref": "SSI_financial_statements_2017_separate|1697",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_56",
+        "table_ref": "SSI_financial_statements_2017_separate|1629",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_67",
+        "table_ref": "SSI_financial_statements_2017_separate|1701",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_46",
+        "table_ref": "SSI_financial_statements_2017_separate|1530",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_65",
+        "table_ref": "SSI_financial_statements_2017_separate|1693",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_45",
+        "table_ref": "SSI_financial_statements_2017_separate|1507",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_62",
+        "table_ref": "SSI_financial_statements_2017_separate|1668",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_70",
+        "table_ref": "SSI_financial_statements_2017_separate|1753",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_69",
+        "table_ref": "SSI_financial_statements_2017_separate|1738",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_27",
+        "table_ref": "SSI_financial_statements_2017_separate|1263",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_60",
+        "table_ref": "SSI_financial_statements_2017_separate|1660",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_10",
+        "table_ref": "SSI_financial_statements_2017_separate|330",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_15",
+        "table_ref": "SSI_financial_statements_2017_separate|427",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_77",
+        "table_ref": "SSI_financial_statements_2017_separate|1821",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_36",
+        "table_ref": "SSI_financial_statements_2017_separate|1393",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_89",
+        "table_ref": "SSI_financial_statements_2017_separate|1967",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_1",
+        "table_ref": "SSI_financial_statements_2017_separate|20",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_51",
+        "table_ref": "SSI_financial_statements_2017_separate|1575",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_83",
+        "table_ref": "SSI_financial_statements_2017_separate|1879",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_71",
+        "table_ref": "SSI_financial_statements_2017_separate|1769",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_74",
+        "table_ref": "SSI_financial_statements_2017_separate|1798",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_90",
+        "table_ref": "SSI_financial_statements_2017_separate|1984",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_17",
+        "table_ref": "SSI_financial_statements_2017_separate|468",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_59",
+        "table_ref": "SSI_financial_statements_2017_separate|1656",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_14",
+        "table_ref": "SSI_financial_statements_2017_separate|412",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_30",
+        "table_ref": "SSI_financial_statements_2017_separate|1309",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_78",
+        "table_ref": "SSI_financial_statements_2017_separate|1838",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_57",
+        "table_ref": "SSI_financial_statements_2017_separate|1633",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_75",
+        "table_ref": "SSI_financial_statements_2017_separate|1813",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_94",
+        "table_ref": "SSI_financial_statements_2017_separate|2055",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_25",
+        "table_ref": "SSI_financial_statements_2017_separate|1203",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_76",
+        "table_ref": "SSI_financial_statements_2017_separate|1817",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_96",
+        "table_ref": "SSI_financial_statements_2017_separate|2182",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_34",
+        "table_ref": "SSI_financial_statements_2017_separate|1369",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_11",
+        "table_ref": "SSI_financial_statements_2017_separate|358",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_81",
+        "table_ref": "SSI_financial_statements_2017_separate|1850",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_31",
+        "table_ref": "SSI_financial_statements_2017_separate|1328",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_68",
+        "table_ref": "SSI_financial_statements_2017_separate|1720",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_32",
+        "table_ref": "SSI_financial_statements_2017_separate|1334",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "SSI_financial_statements_2017_separate_table_43",
+        "table_ref": "SSI_financial_statements_2017_separate|1474",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 26: 3 Cổ phiếu"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Số lượng cổ phiếu đang lưu hành"
+              ],
+              "dòng gần với câu hỏi": [
+                "Số lượng cổ phiếu đã phát hành",
+                "Số lượng cổ phiếu được phép phát hành",
+                "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                "Số lượng cổ phiếu quỹ",
+                "- Cổ phiếu phổ thông"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm(cổ phiếu)",
+                "Số dư đầu năm(cổ phiếu)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu được phép phát hành",
+                "Số lượng cổ phiếu đã phát hành",
+                "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                "- Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu đang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu được phép phát hành",
+                "Số lượng cổ phiếu đã phát hành",
+                "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                "- Cổ phiếu phổ thông",
+                "Số lượng cổ phiếu quỹ",
+                "Cổ phiếu quỹ do Công ty nấm giữ",
+                "Số lượng cổ phiếu đang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: 1 Tài sản tài chính FVTPL Số cuối năm Số đầu năm (trình bày lại) Giá gốcVND Giá trị hợp lýVND Giá gốcVND Giá trị hợp lýVND"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu và Chứng chỉ quỹ (CCQ) niêm yết (1)",
+                "Cổ phiếu và CCQ niêm yết khác",
+                "Cổ phiếu và CCQ chưa niêm yết",
+                "Cổ phiếu chưa niêm yết khác"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm (trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu và Chứng chỉ quỹ (CCQ) niêm yết (1)",
+                "HPG",
+                "PLX",
+                "Cổ phiếu và CCQ niêm yết khác",
+                "Cổ phiếu và CCQ chưa niêm yết",
+                "CTCP Kính Viglacera Đáp Cầu"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu và Chứng chỉ quỹ (CCQ) niêm yết (1)",
+                "HPG",
+                "SSC",
+                "FPT",
+                "PVS",
+                "DBC",
+                "ELC",
+                "PET",
+                "LAS",
+                "VAF",
+                "FMC",
+                "VCG",
+                "PLX",
+                "Cổ phiếu và CCQ niêm yết khác",
+                "Cổ phiếu và CCQ chưa niêm yết",
+                "CTCP Kính Viglacera Đáp Cầu",
+                "CCQ SSIBF",
+                "CTCP Xây dựngCông nghiệp Descon",
+                "CCQ SSISCA",
+                "CTCP Đầu tư ĐườngMật trời (\"SSIR\")",
+                "Cổ phiếu chưa niêm yết khác",
+                "Trái phiếu chưa niêm yết",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Quyền sử dụng đất đã dùng để thế chấp cho trái phiếu Công ty phát hành"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm VND",
+                "Số đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Quyền sử dụng đất đã dùng để thế chấp cho trái phiếu Công ty phát hành",
+                "Nguyên giá TSCĐ đã hao mòn hết nhưng vẫn còn sử dụng",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Quyền sử dụng đất đã dùng để thế chấp cho trái phiếu Công ty phát hành",
+                "Nguyên giá TSCĐ đã hao mòn hết nhưng vẫn còn sử dụng",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.13: Phải trả Tổ chức phát hành chứng khoán"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả tổ chức phát hành chứng khoán khác"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả tổ chức phát hành chứng khoán khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả tổ chức phát hành chứng khoán khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.8: Tài sản tài chính chưa lưu ký tại VSD của Nhà đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.6: Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của Nhà đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, cảm cố",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, cảm cố",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 12: TÀI SẢN CÓ ĐỊNH HỮU HÌNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Ngày 31 tháng 12 năm 2017",
+                "Ngày 31 tháng 12 năm 2017",
+                "Ngày 31 tháng 12 năm 2017"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thanh lý",
+                "Ngày 31 tháng 12 năm 2017",
+                "Ngày 1 tháng 1 năm 2017",
+                "Nguyên giá TSCĐ đã khấu hao hết nhưng vẫn còn sử dụng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngày 1 tháng 1 năm 2017",
+                "Tăng trong năm",
+                "Mua trong năm",
+                "Giảm trong năm",
+                "Thanh lý",
+                "Ngày 31 tháng 12 năm 2017",
+                "Khẩu hao trong năm",
+                "Nguyên giá TSCĐ đã khấu hao hết nhưng vẫn còn sử dụng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "- Dự phòng chứng khoán trong năm (mã chỉ tiêu 314.255.226)",
+                "- Dự phòng giảm giá chứng khoán không niêm yết cuối năm (mã chỉ tiêu 19.850.000.000)",
+                "- Hoàn nhập dự phòng giảm giá chứng khoán chưa niêm yết đầu năm (mã chỉ tiêu (37.839.537.400))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Các khoản điều chỉnh tăng (mã chỉ tiêu 554.416.774.663)",
+                "- Dự phòng giảm giá chứng khoán không niêm yết cuối năm (mã chỉ tiêu 19.850.000.000)",
+                "- Dự phòng giá trị đầu tư nhận hoàn vốn cuối năm (mã chỉ tiêu 153.208.011.211)",
+                "- Dự phòng chứng khoán trong năm (mã chỉ tiêu 314.255.226)",
+                "- Chênh lệch giảm đánh giá lại TSTC FVTPL (mã chỉ tiêu 327.790.083.420)",
+                "- Thu nhập từ hoạt động không thuộc diện nộp thuế TNDN - Cổ tức (mã chỉ tiêu (154.792.520.066))",
+                "- Hoàn nhập dự phòng giảm giá chứng khoán chưa niêm yết đầu năm (mã chỉ tiêu (37.839.537.400))",
+                "- Hoàn nhập dự phòng giá trị đầu tư nhận hoàn vốn đầu năm (mã chỉ tiêu (198.657.082.945))"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận thuần trước thuế (mã chỉ tiêu 1.278.243.262.618)",
+                "Các điều chỉnh tăng/(giảm) lợi nhuận theo kế toán (mã chỉ tiêu (246.357.375.823))",
+                "Các khoản điều chỉnh tăng (mã chỉ tiêu 554.416.774.663)",
+                "- Dự phòng giảm giá chứng khoán không niêm yết cuối năm (mã chỉ tiêu 19.850.000.000)",
+                "- Dự phòng giá trị đầu tư nhận hoàn vốn cuối năm (mã chỉ tiêu 153.208.011.211)",
+                "- Dự phòng chứng khoán trong năm (mã chỉ tiêu 314.255.226)",
+                "- Chênh lệch giảm đánh giá lại TSTC FVTPL (mã chỉ tiêu 327.790.083.420)",
+                "- Dự phòng các khoản cho vay cuối năm (mã chỉ tiêu 32.070.269.995)",
+                "- Chênh lệch tạm thời chịu thuế chuyển sang năm sau (mã chỉ tiêu 20.443.468.238)",
+                "- Chi phí không được khấu trừ (mã chỉ tiêu 740.686.573)",
+                "Các khoản điều chỉnh giảm (mã chỉ tiêu (800.774.150.486))",
+                "- Thu nhập từ hoạt động không thuộc diện nộp thuế TNDN - Cổ tức (mã chỉ tiêu (154.792.520.066))",
+                "- Hoàn nhập dự phòng giảm giá chứng khoán chưa niêm yết đầu năm (mã chỉ tiêu (37.839.537.400))",
+                "- Hoàn nhập dự phòng giá trị đầu tư nhận hoàn vốn đầu năm (mã chỉ tiêu (198.657.082.945))",
+                "- Hoàn nhập dự phòng các khoản cho vay đầu năm (mã chỉ tiêu (40.051.234.311))",
+                "- Chênh lệch tăng đánh giá lại TSTC FVTPL (mã chỉ tiêu (362.650.941.804))",
+                "- Doanh thu hoàn vốn theo tiến độ đã tính thuế năm 2015 (mã chỉ tiêu (6.782.833.960))",
+                "- Chênh lệch tạm thời chịu thuế năm trước chuyển sang (mã chỉ tiêu -)",
+                "Thu nhập chịu thuế ước tính năm hiện hành (mã chỉ tiêu 1.031.885.886.795)",
+                "Thuế suất thuế TNDN (mã chỉ tiêu 20%)",
+                "Thuế TNDN phải trả ước tính năm hiện hành (mã chỉ tiêu 206.377.177.360)",
+                "Thuế TNDN phải trả đầu năm Điều chỉnh tăng thuế TNDN theo Quyết toán thuế (mã chỉ tiêu 43.518.450.132)",
+                "959.054 (mã chỉ tiêu 181.317.272)",
+                "Điều chỉnh tăng thuế TNDN theo Quyết định kiểm tra thuế (mã chỉ tiêu 191.027.032)",
+                "Thuế TNDN đã trả trong năm (mã chỉ tiêu (172.767.207.588))",
+                "Thuế TNDN phải trả cuối năm (mã chỉ tiêu 77.357.405.990)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "1.1. Cổ phiếu phổ thông"
+              ],
+              "kỳ số liệu": [
+                "Số dư đầu năm (trình bày lại)",
+                "Số dư cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngày 01/01/2016",
+                "A",
+                "1. Vốn đầu tư của chủ sở hữu",
+                "1.1. Cổ phiếu phổ thông",
+                "1.2. Thặng dư vốn cổ phần",
+                "2. Quỹ dự trữ bổ sung vốn điều lệ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngày 01/01/2016",
+                "A",
+                "1. Vốn đầu tư của chủ sở hữu",
+                "1.1. Cổ phiếu phổ thông",
+                "1.2. Thặng dư vốn cổ phần",
+                "2. Quỹ dự trữ bổ sung vốn điều lệ",
+                "3. Quỹ dự phòng tài chính và rủi ro nghiệp vụ",
+                "4. Chênh lệch đánh giá lại tài sản theo giá trị hợp lý",
+                "5. Lợi nhuận chưa phân phối",
+                "5.1. Lợi nhuận đã thực hiện",
+                "5.2. Lợi nhuận chưa thực hiện",
+                "TỔNG CỘNG"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 33: CHI PHÍ HOẠT ĐỘNG TỰ DOANH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí tư vấn đầu tư chứng khoán tự doanh"
+              ],
+              "kỳ số liệu": [
+                "Năm nay VND",
+                "Năm trước VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí tư vấn đầu tư chứng khoán tự doanh",
+                "Chi phí quản lý danh mục ủy thác",
+                "Chi phí khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí tư vấn đầu tư chứng khoán tự doanh",
+                "Chi phí quản lý danh mục ủy thác",
+                "Chi phí khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: GIÁ TRỊ KHÓI LƯỢNG GIAO DỊCH THỰC HIỆN TRONG NĂM"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "b. Của nhà đầu tư- Cổ phiếu- Trái phiếu- Chứng khoán khác"
+              ],
+              "kỳ số liệu": [
+                "Khối lượnggiao dịch thực hiệntrong năm(đơn vị)",
+                "Giá trịgiao dịch thực hiệntrong năm(VND)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "b. Của nhà đầu tư- Cổ phiếu- Trái phiếu- Chứng khoán khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "b. Của nhà đầu tư- Cổ phiếu- Trái phiếu- Chứng khoán khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay VND",
+                "Năm trước (trình bày lại) VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "01",
+                "01.1",
+                "01.2",
+                "30",
+                "31",
+                "32"
+              ],
+              "mục lục chỉ tiêu": [
+                "01",
+                "01.1",
+                "01.2",
+                "01.3",
+                "02",
+                "03",
+                "04",
+                "06",
+                "07",
+                "08",
+                "09",
+                "10",
+                "11",
+                "20",
+                "21",
+                "21.1",
+                "21.2",
+                "21.3",
+                "23",
+                "24",
+                "26",
+                "27",
+                "28",
+                "29",
+                "30",
+                "31",
+                "32",
+                "40"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: CÁC TÀI SẢN TÀI CHÍNH KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm VND",
+                "Số đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1.",
+                "2.",
+                "3.",
+                "4.",
+                "5.",
+                "6.",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "1.",
+                "2.",
+                "3.",
+                "4.",
+                "5.",
+                "6.",
+                "Tổng cộng"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 012; tham chiếu Thuyết minh số 27.4)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)",
+                "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Ngoại tệ các loại USD (mã chỉ tiêu 005)",
+                "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN CỦA CÔNG TY CHỨNG KHOÁN (CTCK) VÀ TÀI SẢN QUẢN LÝ THEO CAM KẾT",
+                "Ngoại tệ các loại USD (mã chỉ tiêu 005)",
+                "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)",
+                "Tài sản tài chính chờ về của CTCK (VND) (mã chỉ tiêu 010; tham chiếu Thuyết minh số 27.3)",
+                "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 012; tham chiếu Thuyết minh số 27.4)",
+                "Tài sản tài chính được hưởng quyền của CTCK (VND) (mã chỉ tiêu 013)",
+                "TÀI SẢN VÀ CÁC KHOÀN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỚI KHÁCH HÀNG",
+                "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của Nhà đầu tư (VND) (mã chỉ tiêu 021; tham chiếu Thuyết minh số 27.5)",
+                "Tài sản tài chính giao dịch tự do chuyển nhượng (mã chỉ tiêu 021.1)",
+                "Tài sản tài chính hạn chế chuyển nhượng (mã chỉ tiêu 021.2)",
+                "Tài sản tài chính giao dịch cẩm cố (mã chỉ tiêu 021.3)",
+                "Tài sản tài chính phong tỏa, tạm giữ (mã chỉ tiêu 021.4)",
+                "Tài sản tài chính chờ thanh toán (mã chỉ tiêu 021.5)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi của Tổ chức phát hành chứng khoán (mã chỉ tiêu 030; tham chiếu Thuyết minh số 27.11)",
+                "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của Nhà đầu tư (mã chỉ tiêu 024b; tham chiếu Thuyết minh số 27.8)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, cầm cố (mã chỉ tiêu 022.3)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của Nhà đầu tư (mã chỉ tiêu 022; tham chiếu Thuyết minh số 27.6)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, tự do chuyển nhượng (mã chỉ tiêu 022.1)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN VÀ CÁC KHOẢN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỐI KHÁCH HÀNG (tiếp theo)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của Nhà đầu tư (mã chỉ tiêu 022; tham chiếu Thuyết minh số 27.6)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, tự do chuyển nhượng (mã chỉ tiêu 022.1)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, hạn chế chuyển nhượng (mã chỉ tiêu 022.2)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, cầm cố (mã chỉ tiêu 022.3)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN VÀ CÁC KHOẢN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỐI KHÁCH HÀNG (tiếp theo)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của Nhà đầu tư (mã chỉ tiêu 022; tham chiếu Thuyết minh số 27.6)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, tự do chuyển nhượng (mã chỉ tiêu 022.1)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, hạn chế chuyển nhượng (mã chỉ tiêu 022.2)",
+                "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch, cầm cố (mã chỉ tiêu 022.3)",
+                "Tài sản tài chính chờ về của Nhà đầu tư (mã chỉ tiêu 023; tham chiếu Thuyết minh số 27.7)",
+                "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của Nhà đầu tư (mã chỉ tiêu 024b; tham chiếu Thuyết minh số 27.8)",
+                "Tài sản tài chính được hưởng quyền của Nhà đầu tư (mã chỉ tiêu 025; tham chiếu Thuyết minh số 27.9)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 026)",
+                "Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 027; tham chiếu Thuyết minh số 27.10)",
+                "Tiền gửi kí quỹ của Nhà đầu tư tại VSD (mã chỉ tiêu 027.1; tham chiếu Thuyết minh số 27.10)",
+                "Tiền gửi tổng hợp giao dịch chứng khoán của khách hàng (mã chỉ tiêu 028; tham chiếu Thuyết minh số 27.10)",
+                "Tiền gửi của Tổ chức phát hành chứng khoán (mã chỉ tiêu 030; tham chiếu Thuyết minh số 27.11)",
+                "Phải trả Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 031; tham chiếu Thuyết minh số 27.12)",
+                "Phải trả Nhà đầu tư trong nước về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 031.1)",
+                "Phải trả Nhà đầu tư nước ngoài về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 031.2)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: 3 Các khoản đầu tư nằm giữ đến ngày đáo hạn (HTM)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu chưa niêm yết",
+                "- Trái phiếu chuyển đổi TMS",
+                "Tiền gửi có kỳ hạn từ trên 3 tháng tới 1 năm",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu chưa niêm yết",
+                "- Trái phiếu chuyển đổi TMS",
+                "Tiền gửi có kỳ hạn từ trên 3 tháng tới 1 năm",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: PHÀI TRÀ HOẠT ĐỘNG GIAO DỊCH CHỨNG KHOÁN Số cuối nămVND Số đầu nămVND Phải trả Sở Giao dịch Chứng khoán(Phải trả về mua các tài sản tài chính) - 39.617.787.653"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả Sở Giao dịch Chứng khoán(Phải trả về mua các tài sản tài chính)"
+              ],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả Sở Giao dịch Chứng khoán(Phải trả về mua các tài sản tài chính)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả Sở Giao dịch Chứng khoán(Phải trả về mua các tài sản tài chính)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: LÃI/(Lỗ) TỪ CÁC TÀI SẢN TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết khác"
+              ],
+              "kỳ số liệu": [
+                "Số dư chênh lệch đánh giá lại cuối năm VND",
+                "Số dư chênh lệch đánh giá lại đầu năm (trình bày lại) VND",
+                "Chênh lệch thuần điều chỉnh số kế toán trong năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "HPG",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "CTCP xây dựng công nghiệp Descon",
+                "Cổ phiếu chưa niêm yết khác",
+                "3"
+              ],
+              "mục lục chỉ tiêu": [
+                "1",
+                "DBC",
+                "ELC",
+                "PLX",
+                "FMC",
+                "SSC",
+                "FPT",
+                "VAF",
+                "VCG",
+                "HPG",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "CTCP xây dựng công nghiệp Descon",
+                "Cổ phiếu chưa niêm yết khác",
+                "3"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 032; tham chiếu Thuyết minh số 27.13)",
+                "Phải trả cổ tức, gốc và lãi trái phiếu (mã chỉ tiêu 035; tham chiếu Thuyết minh số 27.14)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN VÀ CÁC KHOẠN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỚI KHÁCH HÀNG (tiếp theo)",
+                "Phải trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 032; tham chiếu Thuyết minh số 27.13)",
+                "Phải trả cổ tức, gốc và lãi trái phiếu (mã chỉ tiêu 035; tham chiếu Thuyết minh số 27.14)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN VÀ CÁC KHOẠN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỚI KHÁCH HÀNG (tiếp theo)",
+                "Phải trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 032; tham chiếu Thuyết minh số 27.13)",
+                "Phải trả cổ tức, gốc và lãi trái phiếu (mã chỉ tiêu 035; tham chiếu Thuyết minh số 27.14)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 41: 1 Nghiệp vụ với các bên liên quan (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phí giao dịch chứng khoán, phí lưu ký, phí hoa hồng phân phối chứng chỉ quỹ và ứng trước tiền bán",
+                "Cổ tức SSI",
+                "Cổ tức SSI",
+                "Giao dịch bán chứng khoán",
+                "Giao dịch mua chứng khoán"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận được chia",
+                "Phí giao dịch chứng khoán, phí lưu ký, phí hoa hồng phân phối chứng chỉ quỹ và ứng trước tiền bán",
+                "Số dư danh mục ủy thác đầu tư Các khoản phải trả quỹ phúc lợi và khác",
+                "Phí quản lý danh mục",
+                "Chi phí tư vấn đầu tư chứng khoán",
+                "Doanh thu tư vấn đầu tư chứng khoán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Quỹ đầu tư thành viên SSI",
+                "Công ty TNHH Quản lý Quỹ SSI (SSIAM)",
+                "Lợi nhuận được chia",
+                "Phí giao dịch chứng khoán, phí lưu ký, phí hoa hồng phân phối chứng chỉ quỹ và ứng trước tiền bán",
+                "Số dư danh mục ủy thác đầu tư Các khoản phải trả quỹ phúc lợi và khác",
+                "Phí quản lý danh mục",
+                "Chi phí tư vấn đầu tư chứng khoán",
+                "Doanh thu tư vấn đầu tư chứng khoán",
+                "Công ty TNHH Đầu tư NDH và công ty con",
+                "Giao dịch bán chứng khoán",
+                "Giao dịch mua chứng khoán",
+                "Cổ tức SSI",
+                "Doanh thu phí tư vấn, phí dịch vụ",
+                "Chi phí dịch vụ tư vấn",
+                "Daiwa Securities Group INC."
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: LÃI/(Lỗ) TỪ CÁC TÀI SẢN TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết khác"
+              ],
+              "kỳ số liệu": [
+                "Số dư chênh lệch đánh giá lại cuối năm VND",
+                "Số dư chênh lệch đánh giá lại đầu năm (trình bày lại) VND",
+                "Chênh lệch thuần điều chỉnh số kế toán trong năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "II",
+                "1",
+                "SGN",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                "Cổ phiếu chưa niêm yết khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "II",
+                "1",
+                "VSC",
+                "TMS",
+                "OPC",
+                "CTD",
+                "DHC",
+                "HAH",
+                "SGN",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                "Cổ phiếu chưa niêm yết khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.5: Tài sản tài chính niêm yết/đăng ký giao dịch của Nhà đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tài sản tài chính giao dịch tự do chuyển nhượng",
+                "Tài sản tài chính giao dịch hạn chế chuyển nhượng",
+                "Tài sản tài chính giao dịch cầm cố",
+                "Tài sản tài chính phong tỏa, tạm giữ",
+                "Tài sản tài chính chờ thanh toán",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản tài chính giao dịch tự do chuyển nhượng",
+                "Tài sản tài chính giao dịch hạn chế chuyển nhượng",
+                "Tài sản tài chính giao dịch cầm cố",
+                "Tài sản tài chính phong tỏa, tạm giữ",
+                "Tài sản tài chính chờ thanh toán",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.3: Tài sản tài chính chờ về của CTCK"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Cổ phiếu"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí môi giới chứng khoán"
+              ],
+              "kỳ số liệu": [
+                "Năm nay VND",
+                "Năm trước (trình bày lại) VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí môi giới chứng khoán",
+                "Chi phí hoạt động lưu ký",
+                "Chi phí lương và các khoản khác theo lương",
+                "Chi phí BHXH, BHYT, KPCĐ, BHTN"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí môi giới chứng khoán",
+                "Chi phí hoạt động lưu ký",
+                "Chi phí lương và các khoản khác theo lương",
+                "Chi phí BHXH, BHYT, KPCĐ, BHTN",
+                "Chi phí vật tư văn phòng",
+                "Chi phí công cụ, dụng cụ",
+                "Chi phí khấu hao TSCĐ",
+                "Chi phí dự phòng và hoàn nhập dự phòng",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí về vốn",
+                "Chi phí khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 36: CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm nay VND",
+                "Năm trước VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lương và các khoản phúc lợi",
+                "BHXH, BHYT, KPCĐ, BHTN",
+                "Chi phí văn phòng phẩm",
+                "Chi phí công cụ, dụng cụ",
+                "Chi phí khấu hao TSCĐ",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lương và các khoản phúc lợi",
+                "BHXH, BHYT, KPCĐ, BHTN",
+                "Chi phí văn phòng phẩm",
+                "Chi phí công cụ, dụng cụ",
+                "Chi phí khấu hao TSCĐ",
+                "Chi phí dịch vụ mua ngoài",
+                "Chi phí khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: CÁC TÀI SẢN ĐÃ CÀM CÓ, THẾ CHẤP"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Tài sản tài chính FVTPL (tính theo mệnh giá)",
+                "- Tài sản tài chính AFS (tính theo mệnh giá)",
+                "- Tiền gửi có kỳ hạn trên 3 tháng tới 1 năm",
+                "- Tiền gửi có kỳ hạn trên 1 năm",
+                "- Đầu tư vào công ty liên kết (tính theo mệnh giá)",
+                "- Tài sản cố định vô hình",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Tài sản tài chính FVTPL (tính theo mệnh giá)",
+                "- Tài sản tài chính AFS (tính theo mệnh giá)",
+                "- Tiền gửi có kỳ hạn trên 3 tháng tới 1 năm",
+                "- Tiền gửi có kỳ hạn trên 1 năm",
+                "- Đầu tư vào công ty liên kết (tính theo mệnh giá)",
+                "- Tài sản cố định vô hình",
+                "Tổng cộng"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền thu của Tổ chức phát hành chứng khoán (mã chỉ tiêu 14)",
+                "Chi trả phí lưu ký chứng khoán của khách hàng (mã chỉ tiêu 11)",
+                "Tiền chi trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 15)",
+                "Tiền thu bán chứng khoán môi giới cho khách hàng (mã chỉ tiêu 01)",
+                "Tiền chi mua chứng khoán môi giới cho khách hàng (mã chỉ tiêu 02)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền gửi ký quỹ của Nhà đầu tư tại VSD (mã chỉ tiêu 07.1)",
+                "Chi trả phí lưu ký chứng khoán của khách hàng (mã chỉ tiêu 11)",
+                "Tiền thu của Tổ chức phát hành chứng khoán (mã chỉ tiêu 14)",
+                "Tiền chi trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 15)",
+                "Tăng tiền thuần trong năm (mã chỉ tiêu 20)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",
+                "Tiền thu bán chứng khoán môi giới cho khách hàng (mã chỉ tiêu 01)",
+                "Tiền chi mua chứng khoán môi giới cho khách hàng (mã chỉ tiêu 02)",
+                "Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng (mã chỉ tiêu 07)",
+                "Tiền gửi ký quỹ của Nhà đầu tư tại VSD (mã chỉ tiêu 07.1)",
+                "Chi trả phí lưu ký chứng khoán của khách hàng (mã chỉ tiêu 11)",
+                "Tiền thu của Tổ chức phát hành chứng khoán (mã chỉ tiêu 14)",
+                "Tiền chi trả Tổ chức phát hành chứng khoán (mã chỉ tiêu 15)",
+                "Tăng tiền thuần trong năm (mã chỉ tiêu 20)",
+                "Tiền và các khoản tương đương tiền đầu năm của khách hàng (mã chỉ tiêu 30)",
+                "Tiền gửi ngân hàng đầu năm: (mã chỉ tiêu 31)",
+                "- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 32)",
+                "- Tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng (mã chỉ tiêu 33)",
+                "- Tiền gửi của Tổ chức phát hành (mã chỉ tiêu 35)",
+                "Tiền và các khoản tương đương tiền cuối năm của khách hàng (mã chỉ tiêu 40)",
+                "Tiền gửi ngân hàng cuối năm: (mã chỉ tiêu 41)",
+                "- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý (mã chỉ tiêu 42; tham chiếu Thuyết minh số 27.12)",
+                "Trong đó: Tiền gửi ký quỹ của Nhà đầu tư tại VSD",
+                "- Tiền gửi tổng hợp giao dịch chứng khoán cho khách hàng (mã chỉ tiêu 43; tham chiếu Thuyết minh số 27.10)",
+                "- Tiền gửi của Tổ chức phát hành (mã chỉ tiêu 45; tham chiếu Thuyết minh số 27.11)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 11: CÁC KHOÀN ĐẦU TƯ DÀI HẠN"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "- Trái phiếu CTCP Đầu tư Đường Mặt Trời"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm VND",
+                "Số đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Tiến gửi có kỳ hạn trên 1 năm (1)",
+                "- Trái phiếu CTCP Đầu tư Đường Mặt Trời",
+                "Đầu tư vào công ty con",
+                "- Công ty TNHH Quản lý Quỹ SSI",
+                "- Quỹ Đầu tư Thành viên SSI",
+                "Đầu tư vào công ty liên doanh, liên kết (2)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Các khoản đầu tư nắm giữ đến ngày đáo hạn",
+                "- Tiến gửi có kỳ hạn trên 1 năm (1)",
+                "- Trái phiếu CTCP Đầu tư Đường Mặt Trời",
+                "Đầu tư vào công ty con",
+                "- Công ty TNHH Quản lý Quỹ SSI",
+                "- Quỹ Đầu tư Thành viên SSI",
+                "Đầu tư vào công ty liên doanh, liên kết (2)",
+                "- Công ty Cổ phần tập đoàn PAN (PAN)",
+                "- Công ty Cổ phần Cảng Đồng Nai (PDN)",
+                "- Công ty Cổ phần Khử Trùng Việt Nam (VFG)",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.12: Phải trả nhà đầu tư của CTCK"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả Nhà đầu tư - Tiền gửi của Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải trả Nhà đầu tư - Tiền gửi của Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý",
+                "- Của Nhà đầu tư trong nước",
+                "- Của Nhà đầu tư nước ngoài",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải trả Nhà đầu tư - Tiền gửi của Nhà đầu tư về tiền gửi giao dịch chứng khoán theo phương thức CTCK quản lý",
+                "- Của Nhà đầu tư trong nước",
+                "- Của Nhà đầu tư nước ngoài",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.11: Tiền gửi của Tổ chức phát hành"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi bán chứng khoán bảo lãnh, đại lý phát hành",
+                "Tiền gửi thanh toán gốc, tiền lãi và cổ tức của Tổ chức phát hành"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi bán chứng khoán bảo lãnh, đại lý phát hành",
+                "Tiền gửi thanh toán gốc, tiền lãi và cổ tức của Tổ chức phát hành",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi bán chứng khoán bảo lãnh, đại lý phát hành",
+                "Tiền gửi thanh toán gốc, tiền lãi và cổ tức của Tổ chức phát hành",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: CÁC TÀI SẢN TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết khác"
+              ],
+              "kỳ số liệu": [
+                "Giá vốn bình quân gia quyền tính đến cuối ngày giao dịch VND",
+                "Lỗ bán chứng khoán năm nay VND",
+                "Lỗ bán chứng khoán năm trước (trình bày lại) VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VNS",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                "Cổ phiếu chưa niêm yết khác",
+                "3",
+                "TP_VDB110029",
+                "Trái phiếu niêm yết khác",
+                "4"
+              ],
+              "mục lục chỉ tiêu": [
+                "1",
+                "PET",
+                "PVS",
+                "SGN",
+                "ABC",
+                "VSC",
+                "VNS",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                "Cổ phiếu chưa niêm yết khác",
+                "3",
+                "TP_BVDB15207",
+                "TP_TD1520269",
+                "TP_TD1518357",
+                "TP_TD1621455",
+                "TP_VDB110029",
+                "Trái phiếu niêm yết khác",
+                "4",
+                "5"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 71)",
+                "Tiền chi trả vốn góp cho chủ sở hữu, mua lại cổ phiếu phát hành (mã chỉ tiêu 72)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TỪ",
+                "Tiền chi để mua sắm, xây dựng tài sản cố định, bắt động sản đầu tư và các tài sản khác (mã chỉ tiêu 61)",
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 71)",
+                "Tiền chi trả vốn góp cho chủ sở hữu, mua lại cổ phiếu phát hành (mã chỉ tiêu 72)",
+                "Tiền vay gốc (mã chỉ tiêu 73)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TỪ",
+                "Tiền chi để mua sắm, xây dựng tài sản cố định, bắt động sản đầu tư và các tài sản khác (mã chỉ tiêu 61)",
+                "Tiền thu từ thanh lý, nhượng bán tài sản cố định, bắt động sản đầu tư và các tài sản khác (mã chỉ tiêu 62)",
+                "Tiền chi đầu tư vốn vào công ty con, công ty liên doanh, liên kết và đầu tư khác (mã chỉ tiêu 63)",
+                "Tiền thu hồi các khoản đầu tư vào công ty con, công ty liên doanh, liên kết và đầu tư khác (mã chỉ tiêu 64)",
+                "Tiền thu về cổ tức và lợi nhuận được chia từ các khoản đầu tư tài chính dài hạn (mã chỉ tiêu 65)",
+                "Lưu chuyển tiền thuần sử dụng vào hoạt động đầu tư (mã chỉ tiêu 70)",
+                "LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu (mã chỉ tiêu 71)",
+                "Tiền chi trả vốn góp cho chủ sở hữu, mua lại cổ phiếu phát hành (mã chỉ tiêu 72)",
+                "Tiền vay gốc (mã chỉ tiêu 73)",
+                "- Tiền vay khác (mã chỉ tiêu 73.2)",
+                "Tiền chi trả nợ gốc vay (mã chỉ tiêu 74)",
+                "- Tiền chi trả gốc vay khác (mã chỉ tiêu 74.3)",
+                "Cổ tức, lợi nhuận đã trả cho chủ sở hữu (mã chỉ tiêu 76)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 80)",
+                "TẢNG/(GIÁM) TIÊN THUÀN TRONG NĂM (mã chỉ tiêu 90)",
+                "TIÊN VÀ CÁC KHOÀN TƯƠNG ĐƯƠNG TIÊN ĐẦU NĂM (mã chỉ tiêu 101; tham chiếu Thuyết minh số 5)",
+                "Tiền (mã chỉ tiêu 101.1)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 101.2)",
+                "TIÊN VÀ CÁC KHOÀN TƯƠNG ĐƯƠNG TIÊN CUỐI NĂM (mã chỉ tiêu 103; tham chiếu Thuyết minh số 5)",
+                "Tiền (mã chỉ tiêu 103.1)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 103.2)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Công ty:"
+              ],
+              "dòng gần với câu hỏi": [
+                "Mã chứng khoán:"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty:",
+                "Mã chứng khoán:",
+                "Địa chỉ trụ sở chính:",
+                "Điện thoại:"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty:",
+                "Mã chứng khoán:",
+                "Địa chỉ trụ sở chính:",
+                "Điện thoại:",
+                "Fax:",
+                "Người thực hiện công bố thông tin:",
+                "Địa chỉ:",
+                "Điện thoại (cơ quan):"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 30: THU NHẬP HOẠT ĐỘNG KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu khác (bao gồm phí các dịch vụ hỗ trợ Nhà đầu tư giao dịch chứng khoán)"
+              ],
+              "kỳ số liệu": [
+                "Năm nay VND",
+                "Năm trước VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu cho thuê tài sản",
+                "Doanh thu các dịch vụ tài chính khác",
+                "Doanh thu lãi trả chậm của khoản đầu tư nhận hoàn vốn theo tiến độ",
+                "Doanh thu khác (bao gồm phí các dịch vụ hỗ trợ Nhà đầu tư giao dịch chứng khoán)",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu cho thuê tài sản",
+                "Doanh thu các dịch vụ tài chính khác",
+                "Doanh thu lãi trả chậm của khoản đầu tư nhận hoàn vốn theo tiến độ",
+                "Doanh thu khác (bao gồm phí các dịch vụ hỗ trợ Nhà đầu tư giao dịch chứng khoán)",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYỀN TIỀN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế TNDN (mã chỉ tiêu 01)",
+                "Lãi về ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính AFS khi phân loại lại (mã chỉ tiêu 20)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 30)",
+                "Giảm/(tăng) tài sản tài chính FVTPL (mã chỉ tiêu 31)",
+                "Tiền chi khác từ hoạt động kinh doanh (mã chỉ tiêu 52)",
+                "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động kinh doanh (mã chỉ tiêu 60)"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYỀN TIỀN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Lợi nhuận trước thuế TNDN (mã chỉ tiêu 01)",
+                "Điều chỉnh cho các khoản: (mã chỉ tiêu 02)",
+                "Khấu hao TSCĐ (mã chỉ tiêu 03)",
+                "Các khoản dự phòng (mã chỉ tiêu 04)",
+                "Lỗ chênh lệch tỷ giá hối đoái chưa thực hiện (mã chỉ tiêu 05)",
+                "Chi phí lãi vay (mã chỉ tiêu 06)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 07)",
+                "Dự thu tiền lãi (mã chỉ tiêu 08)",
+                "Các khoản điều chỉnh khác (mã chỉ tiêu 09)",
+                "Tăng các chi phí phi tiền tệ (mã chỉ tiêu 10)",
+                "Lỗ đánh giá lại giá trị các tài sản tài chính FVTPL (mã chỉ tiêu 11)",
+                "(Hoàn nhập)/lỗ suy giảm giá trị các khoản cho vay (mã chỉ tiêu 13)",
+                "Lỗ về ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính AFS khi phân loại lại (mã chỉ tiêu 14)",
+                "Giảm các doanh thu phi tiền tệ (mã chỉ tiêu 18)",
+                "Lãi đánh giá lại giá trị các tài sản tài chính FVTPL (mã chỉ tiêu 19)",
+                "Lãi về ghi nhận chênh lệch đánh giá theo giá trị hợp lý tài sản tài chính AFS khi phân loại lại (mã chỉ tiêu 20)",
+                "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động (mã chỉ tiêu 30)",
+                "Giảm/(tăng) tài sản tài chính FVTPL (mã chỉ tiêu 31)",
+                "(Tăng)/giảm các khoản đầu tư HTM (mã chỉ tiêu 32)",
+                "Tăng các khoản cho vay (mã chỉ tiêu 33)",
+                "Giảm/(tăng) tài sản tài chính AFS (mã chỉ tiêu 34)",
+                "Giảm/(tăng) phải thu bán các tài sản tài chính (mã chỉ tiêu 35)",
+                "Tăng phải thu các dịch vụ CTCK cung cấp (mã chỉ tiêu 37)",
+                "(Tăng)/giảm các khoản phải thu khác (mã chỉ tiêu 39)",
+                "(Tăng)/giảm các tài sản khác (mã chỉ tiêu 40)",
+                "Tăng chi phí phải trả (không bao gồm chi phí lãi vay) (mã chỉ tiêu 41)",
+                "Tăng chi phí trả trước (mã chỉ tiêu 42)",
+                "Thuế TNDN đã nộp (mã chỉ tiêu 43)",
+                "Lãi vay đã trả (mã chỉ tiêu 44)",
+                "(Giảm)/tăng phải trả cho người bán (mã chỉ tiêu 45)",
+                "(Giảm)/tăng các khoản trích nộp phúc lợi nhân viên (mã chỉ tiêu 46)",
+                "Tăng thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 47)",
+                "Tăng phải trả người lao động (mã chỉ tiêu 48)",
+                "Giảm phải trả, phải nộp khác (mã chỉ tiêu 50)",
+                "Tiền thu khác từ hoạt động kinh doanh (mã chỉ tiêu 51)",
+                "- Tiền lãi đã thu",
+                "- Tiền thu khác",
+                "Tiền chi khác từ hoạt động kinh doanh (mã chỉ tiêu 52)",
+                "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động kinh doanh (mã chỉ tiêu 60)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí nghiệp vụ lưu ký chứng khoán",
+                "Chi phí nghiệp vụ bảo lãnh, đại lý phát hành chứng khoán",
+                "Chi phí nghiệp vụ tư vấn đầu tư chứng khoán",
+                "Chi phí nghiệp vụ môi giới chứng khoán (chi phí giao dịch phải trả cho Sở, chi phí lương, chi phí theo lương, chi phí khác)"
+              ],
+              "kỳ số liệu": [
+                "Năm nayVND",
+                "Năm trước(trình bày lại)VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí nghiệp vụ môi giới chứng khoán (chi phí giao dịch phải trả cho Sở, chi phí lương, chi phí theo lương, chi phí khác)",
+                "Chi phí nghiệp vụ bảo lãnh, đại lý phát hành chứng khoán",
+                "Chi phí hoạt động tư vấn tài chính",
+                "Chi phí nghiệp vụ tư vấn đầu tư chứng khoán",
+                "Chi phí nghiệp vụ lưu ký chứng khoán",
+                "Chi phí hoạt động khác (Thuyết minh số 32)",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí nghiệp vụ môi giới chứng khoán (chi phí giao dịch phải trả cho Sở, chi phí lương, chi phí theo lương, chi phí khác)",
+                "Chi phí nghiệp vụ bảo lãnh, đại lý phát hành chứng khoán",
+                "Chi phí hoạt động tư vấn tài chính",
+                "Chi phí nghiệp vụ tư vấn đầu tư chứng khoán",
+                "Chi phí nghiệp vụ lưu ký chứng khoán",
+                "Chi phí hoạt động khác (Thuyết minh số 32)",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 41.5: Mục đích và chính sách quản lý rủi ro tài chính (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trái phiếu phát hành"
+              ],
+              "kỳ số liệu": [
+                "Đến 01 nămVND",
+                "Từ 01 – 05 nămVND",
+                "Trên 05 nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền và các khoản tương đương tiền",
+                "Tài sản tài chính",
+                "Tài sản tài chính ghi nhận thông qua lãi/lỗ",
+                "Vay và nợ ngắn hạn",
+                "Trái phiếu phát hành",
+                "Chi phí phải trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền và các khoản tương đương tiền",
+                "Tài sản tài chính",
+                "Tài sản tài chính ghi nhận thông qua lãi/lỗ",
+                "Giữ đến ngày đáo hạn",
+                "Các khoản cho vay (không bao gồm dự phòng)",
+                "Sẵn sàng để bán",
+                "Góp vốn đầu tư dài hạn",
+                "Tài sản khác",
+                "Các khoản cầm cố, ký quỹ, ký cược",
+                "Phải thu khác (không bao gồm dự phòng)",
+                "Tài sản có định (bao gồm chi phí XD CB DD)",
+                "Tổng cộng",
+                "Vay và nợ ngắn hạn",
+                "Trái phiếu phát hành",
+                "Chi phí phải trả",
+                "Thuế và các khoản phải nộp Nhà nước",
+                "Phải trả, phải nộp khác",
+                "Mức chênh lệch thanh khoản ròng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 8: DỰ PHÒNG SUY GIÀM GIÁ TRỊ CÁC TÀI SẢN TÀI CHÍNH VÀ TÀI SẢN NHẬN THẾ CHẤP Số cuối nămVND Số đầu nămVND Dự phòng suy giảm giá trị các khoản cho vay (23.071.577.500) (28.431.004.933)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối nămVND",
+                "Số đầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự phòng suy giảm giá trị các khoản cho vay"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng suy giảm giá trị các khoản cho vay"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 24: CHI PHÍ PHÀI TRÀ Số dư cuối năm VND Số dư đầu năm VND Chi phí phải trả Sở Giao dịch Chứng khoán và Trung tâm Lưu ký Chứng khoán 15.568.197.526 6.446.105.688"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí phải trả Sở Giao dịch Chứng khoán và Trung tâm Lưu ký Chứng khoán",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí phải trả Sở Giao dịch Chứng khoán và Trung tâm Lưu ký Chứng khoán",
+                "Chi phí lãi trái phiếu",
+                "Chi phí lãi vay phải trả",
+                "Phí quản lý danh mục ủy thác và phí tư vấn đầu tư phải trả Công ty TNHH Quản lý Quỹ SSI",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí phải trả Sở Giao dịch Chứng khoán và Trung tâm Lưu ký Chứng khoán",
+                "Chi phí lãi trái phiếu",
+                "Chi phí lãi vay phải trả",
+                "Phí quản lý danh mục ủy thác và phí tư vấn đầu tư phải trả Công ty TNHH Quản lý Quỹ SSI",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán",
+                "Phí dịch vụ",
+                "Phí hoa hồng phải trả cho đối tác",
+                "Các khoản khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu các dịch vụ công ty chứng khoán cung cấp khó đồi"
+              ],
+              "kỳ số liệu": [
+                "Giá trịphải thu khó đồicuối nămVND",
+                "Số dự phòngđầu nămVND",
+                "Số trích lậptrong nămVND",
+                "Số hoàn nhậptrong nămVND",
+                "Số dự phòngcuối nămVND",
+                "Giá trịphải thu khó đồiđầu nămVND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Khách hàng Đặng Văn Sỹ",
+                "Dự phòng phải thu cổ tức, tiền lãi đến hạn khó đồi",
+                "Phải thu các dịch vụ công ty chứng khoán cung cấp khó đồi",
+                "- CTCP Công nghệ mới Kim Tự Tháp Việt Nam",
+                "- CTCP Thái Hòa"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng phải thu bán các tài sản tài chính khóđời",
+                "- Khách hàng Đặng Văn Sỹ",
+                "Dự phòng phải thu cổ tức, tiền lãi đến hạn khó đồi",
+                "Phải thu các dịch vụ công ty chứng khoán cung cấp khó đồi",
+                "- CTCP Công nghệ mới Kim Tự Tháp Việt Nam",
+                "- CTCP Thái Hòa",
+                "- Công ty Liên doanh Dược phẩm Éloge France Việt Nam",
+                "- CTCP Hàng hải Sài Gòn",
+                "- CTCP VIGLACERA Đông Triều",
+                "- Tổng CTCP Xây dựng điện Việt Nam (Vneco)",
+                "- CTCP Thủy điện Quế Phong",
+                "- CTCP KSA POLYMER Hà Nội",
+                "- CTCP Đầu tư Đẻo Cả",
+                "- Phải thu giao dịch ký quỹ quá hạn - khách hàng cá nhân",
+                "Phải thu khác khó đồi",
+                "- Tiền bán tài sản",
+                "- Phải thu CTCP Công nghệ mới Kim Tự Tháp Việt Nam",
+                "- Phải thu khác",
+                "Tổng công"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27.2: Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch của CTCK"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, tự do chuyển nhượng",
+                "Tài sản tài chính đã lưu ký tại VSD và chưa giao dịch, hạn chế chuyển nhượng",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: TRÁI PHIÉU PHÁT HÀNH Số cuối năm VND Số đầu năm VND Trái phiếu phát hành ngắn hạn 199.871.666.661 376.000.000.000"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trái phiếu phát hành ngắn hạn",
+                "Trái phiếu phát hành dài hạn",
+                "Phí thu xếp phát hành trái phiếu SSIBOND012016",
+                "Phí thu xếp phát hành trái phiếu SSIBOND022017",
+                "Phí thu xếp phát hành trái phiếu SSIBOND012016"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm VND",
+                "Số đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trái phiếu phát hành ngắn hạn",
+                "Trái phiếu SSIBOND012015",
+                "Trái phiếu SSIBOND022015",
+                "Trái phiếu SSIBOND012016"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trái phiếu phát hành ngắn hạn",
+                "Trái phiếu SSIBOND012015",
+                "Trái phiếu SSIBOND022015",
+                "Trái phiếu SSIBOND012016",
+                "Phí thu xếp phát hành trái phiếu SSIBOND012016",
+                "Trái phiếu phát hành dài hạn",
+                "Trái phiếu SSIBOND012017",
+                "Trái phiếu SSIBOND022017",
+                "Phí thu xếp phát hành trái phiếu SSIBOND022017",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: 2 Tài sản tài chính AFS"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết (1)",
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết",
+                "Cổ phiếu chưa niêmyết khác"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm (trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cổ phiếu niêm yết (1)",
+                "VSC",
+                "CTD",
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết",
+                "Tổng Công ty Máyđộng lực và máynông nghiệp ViệtNam (\"VEAM\")"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cổ phiếu niêm yết (1)",
+                "VSC",
+                "TMS",
+                "OPC",
+                "DHC",
+                "SGN",
+                "HAH",
+                "SGC",
+                "CTD",
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết",
+                "Tổng Công ty Máyđộng lực và máynông nghiệp ViệtNam (\"VEAM\")",
+                "CTCP PAN Farm",
+                "CTCP Dược phẩm CVI",
+                "CTCP ConCung",
+                "Cổ phiếu chưa niêmyết khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 32: CHI PHÍ HOẠT ĐỘNG KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí lãi hợp đồng bán cam kết mua lại chứng khoán",
+                "- (Hoàn nhập)/dự phòng phải thu các dịch vụ công ty chứng khoán cung cấp",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán (Hoàn nhập)/dự phòng phải thu khó đòi"
+              ],
+              "kỳ số liệu": [
+                "Năm nayVND",
+                "Năm trước(trình bày lại)VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi hợp đồng bán cam kết mua lại chứng khoán",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán (Hoàn nhập)/dự phòng phải thu khó đòi",
+                "- (Hoàn nhập)/dự phòng phải thu các dịch vụ công ty chứng khoán cung cấp",
+                "- Dự phòng phải thu khác",
+                "Chi phí khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi hợp đồng bán cam kết mua lại chứng khoán",
+                "Chi phí lãi hợp đồng đặt cọc môi giới chứng khoán (Hoàn nhập)/dự phòng phải thu khó đòi",
+                "- (Hoàn nhập)/dự phòng phải thu các dịch vụ công ty chứng khoán cung cấp",
+                "- Dự phòng phải thu khác",
+                "Chi phí khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 25: CÁC KHOÀN PHÀI TRẢ, PHÀI NỘP NGẤN HẠN KHÁC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả tiền mua/bán cổ phiếu cho khách hàng",
+                "Nhận ký quỹ, ký cược ngắn hạn của nhà đầu tư để mua chứng khoán (1)"
+              ],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Nhận ký quỹ, ký cược ngắn hạn của nhà đầu tư để mua chứng khoán (1)",
+                "Phải trả Công ty TNHH Quản lý Quỹ SSI",
+                "Phải trả cổ tức cho cổ đông Công ty",
+                "Phải trả trái tức cho trái chủ của Công ty",
+                "Phải trả tiền mua/bán cổ phiếu cho khách hàng",
+                "Phải trả khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Nhận ký quỹ, ký cược ngắn hạn của nhà đầu tư để mua chứng khoán (1)",
+                "Phải trả Công ty TNHH Quản lý Quỹ SSI",
+                "Phải trả cổ tức cho cổ đông Công ty",
+                "Phải trả trái tức cho trái chủ của Công ty",
+                "Phải trả tiền mua/bán cổ phiếu cho khách hàng",
+                "Phải trả khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 41: 1 Nghiệp vụ với các bên liên quan (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ tức SSI",
+                "Giao dịch mua chứng khoán",
+                "Nhận cọc môi giới chứng khoán",
+                "Phải trả hộ tiền bán chứng khoán"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu phí hợp đồng tư vấn",
+                "Giao dịch mua chứng khoán",
+                "Chi phí thuê kho và dịch vụ",
+                "Đặt cọc thuê văn phòng",
+                "Nhận cọc môi giới chứng khoán",
+                "Lãi nhận cọc phải trả",
+                "Chi phí mua hàng hóa",
+                "Phải trả hộ tiền bán chứng khoán",
+                "Công ty cổ phầnKhử trùng ViệtNam (VFG)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty cổ phầntập đoàn PAN vàcác công ty con",
+                "Doanh thu phí hợp đồng tư vấn",
+                "Giao dịch mua chứng khoán",
+                "Chi phí thuê kho và dịch vụ",
+                "Đặt cọc thuê văn phòng",
+                "Nhận cọc môi giới chứng khoán",
+                "Lãi nhận cọc phải trả",
+                "Chi phí mua hàng hóa",
+                "Phải trả hộ tiền bán chứng khoán",
+                "Công ty cổ phầnKhử trùng ViệtNam (VFG)",
+                "Công ty cổ phầnCảng Đồng Nai(PDN)",
+                "Công ty TNHHMTV Nguyễn SàiGòn",
+                "Phải thu giao dịch ký quỹ",
+                "Cổ tức SSI"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: CÁC LOẠI TÀI SẢN TÀI CHÍNH (tiếp theo)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết",
+                "Cổ phiếu và CCQ niêm yết",
+                "Cổ phiếu chưa niêm yết",
+                "Cổ phiếu và CCQ chưa niêm yết"
+              ],
+              "kỳ số liệu": [
+                "Số cuối năm",
+                "Số đầu năm (trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "FVTPL",
+                "Cổ phiếu và CCQ niêm yết",
+                "Cổ phiếu và CCQ chưa niêm yết",
+                "Trái phiếu chưa niêm yết",
+                "AFS",
+                "Cổ phiếu niêm yết",
+                "Cổ phiếu chưa niêm yết",
+                "Tổng công"
+              ],
+              "mục lục chỉ tiêu": [
+                "FVTPL",
+                "Cổ phiếu và CCQ niêm yết",
+                "Cổ phiếu và CCQ chưa niêm yết",
+                "Trái phiếu chưa niêm yết",
+                "AFS",
+                "Cổ phiếu niêm yết",
+                "Cổ phiếu chưa niêm yết",
+                "Tổng công"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư cuối năm VND",
+                "Số dư đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trụ sở chính (tại Thành phố Hồ Chí Minh)",
+                "Hà Nội",
+                "Hải Phòng",
+                "Nguyễn Công Trữ",
+                "Nha Trang",
+                "Vũng Tàu",
+                "Mỹ Đình",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trụ sở chính (tại Thành phố Hồ Chí Minh)",
+                "Hà Nội",
+                "Hải Phòng",
+                "Nguyễn Công Trữ",
+                "Nha Trang",
+                "Vũng Tàu",
+                "Mỹ Đình",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: TÀI SẢN NGÂN HẠN KHÁC Số cuối năm VND Số đầu năm VND Tạm ứng 8.887.124.630 9.017.820.063"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số cuối năm VND",
+                "Số đầu năm VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tạm ứng",
+                "Vật tư văn phòng, công cụ dụng cụ",
+                "Chi phí trả trước ngắn hạn",
+                "- Chi phí trả trước mua công cụ, vật liệu văn phòng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tạm ứng",
+                "Vật tư văn phòng, công cụ dụng cụ",
+                "Chi phí trả trước ngắn hạn",
+                "- Chi phí trả trước mua công cụ, vật liệu văn phòng",
+                "- Chi phí trả trước dịch vụ",
+                "Cảm cố, ký cược, ký quỹ ngắn hạn",
+                "Tài sản ngắn hạn khác",
+                "- Giá trị đầu tư nhận hoàn vốn theo tiến độ (1)",
+                "- Tiến gửi kí quỹ phải sinh của CTCK",
+                "- Khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: LÃI/(Lỗ) TỪ CÁC TÀI SẢN TÀI CHÍNH"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cổ phiếu niêm yết khác",
+                "Cổ phiếu chưa niêm yết khác"
+              ],
+              "kỳ số liệu": [
+                "Giá vốn bình quân gia quyền tính đến cuối ngày giao dịch VND",
+                "Lãi bán chứng khoán năm nay VND",
+                "Lãi bán chứng khoán năm trước (trình bày lại) VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "ABC",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "SSIR",
+                "CTCP Việt Tín",
+                "Chứng chỉ tiền gửi",
+                "Cổ phiếu chưa niêm yết khác",
+                "3"
+              ],
+              "mục lục chỉ tiêu": [
+                "1",
+                "LAS",
+                "FPT",
+                "CTD",
+                "PVS",
+                "HPG",
+                "PLX",
+                "VSC",
+                "ABC",
+                "Cổ phiếu niêm yết khác",
+                "2",
+                "VEAM",
+                "SSIR",
+                "CTCP Việt Tín",
+                "Chứng chỉ tiền gửi",
+                "Cổ phiếu chưa niêm yết khác",
+                "3",
+                "TP_TD1727397",
+                "TP_TD1520267",
+                "TP_TD1724415",
+                "TP_TD1732404",
+                "TP_TD1727396",
+                "TP_TD1631461",
+                "TP_TD1621451",
+                "TP_TP4A0206",
+                "Trái phiếu niêm yết khác",
+                "4",
+                "TP_VNCMBOND14_19",
+                "TP_BHS BOND 2016",
+                "Trái phiếu chưa niêm yết khác",
+                "5"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01"
+          ]
+        },
+        "nominated_keys": [
+          "c01"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02"
+          ]
+        },
+        "nominated_keys": [
+          "c02"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c19"
+          ]
+        },
+        "nominated_keys": [
+          "c19"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": []
+        },
+        "nominated_keys": [],
+        "error": "LLM không trả mã bảng hợp lệ"
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c19"
+    ],
+    "lexical_finalist_keys": [
+      "c01",
+      "c25",
+      "c17"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c19",
+      "c25",
+      "c17"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Số lượng cổ phiếu đang lưu hành của công ty mẹ CTCP Chứng khoán SSI đến ngày 31 tháng 12 năm 2017 là bao nhiêu cổ phiếu?",
+      "giới hạn số bảng": 5,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "SSI",
+          "tên doanh nghiệp": "CTCP Chứng khoán SSI",
+          "năm": 2017,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "SSI",
+          "tên doanh nghiệp": "CTCP Chứng khoán SSI",
+          "năm": 2017,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 26: 3 Cổ phiếu"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Số lượng cổ phiếu đang lưu hành"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Số lượng cổ phiếu đã phát hành",
+                  "Số lượng cổ phiếu được phép phát hành",
+                  "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                  "Số lượng cổ phiếu quỹ",
+                  "- Cổ phiếu phổ thông"
+                ],
+                "kỳ số liệu": [
+                  "Số dư cuối năm(cổ phiếu)",
+                  "Số dư đầu năm(cổ phiếu)"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số lượng cổ phiếu được phép phát hành",
+                  "Số lượng cổ phiếu đã phát hành",
+                  "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                  "- Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu đang lưu hành"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số lượng cổ phiếu được phép phát hành",
+                  "Số lượng cổ phiếu đã phát hành",
+                  "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ",
+                  "- Cổ phiếu phổ thông",
+                  "Số lượng cổ phiếu quỹ",
+                  "Cổ phiếu quỹ do Công ty nấm giữ",
+                  "Số lượng cổ phiếu đang lưu hành"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                  "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                  "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 012; tham chiếu Thuyết minh số 27.4)",
+                  "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)",
+                  "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Ngoại tệ các loại USD (mã chỉ tiêu 005)",
+                  "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                  "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                  "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)",
+                  "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN CỦA CÔNG TY CHỨNG KHOÁN (CTCK) VÀ TÀI SẢN QUẢN LÝ THEO CAM KẾT",
+                  "Ngoại tệ các loại USD (mã chỉ tiêu 005)",
+                  "Cổ phiếu đang lưu hành (số lượng) (mã chỉ tiêu 006; tham chiếu Thuyết minh số 26.3)",
+                  "Cổ phiếu quỹ (số lượng) (mã chỉ tiêu 007; tham chiếu Thuyết minh số 26.3)",
+                  "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 008; tham chiếu Thuyết minh số 27.1)",
+                  "Tài sản tài chính đã lưu ký tại Trung tâm Lưu ký Chứng khoán và chưa giao dịch của CTCK (VND) (mã chỉ tiêu 009; tham chiếu Thuyết minh số 27.2)",
+                  "Tài sản tài chính chờ về của CTCK (VND) (mã chỉ tiêu 010; tham chiếu Thuyết minh số 27.3)",
+                  "Tài sản tài chính chưa lưu ký tại Trung tâm Lưu ký Chứng khoán của CTCK (VND) (mã chỉ tiêu 012; tham chiếu Thuyết minh số 27.4)",
+                  "Tài sản tài chính được hưởng quyền của CTCK (VND) (mã chỉ tiêu 013)",
+                  "TÀI SẢN VÀ CÁC KHOÀN PHẢI TRẢ VỀ TÀI SẢN QUẢN LÝ CAM KẾT VỚI KHÁCH HÀNG",
+                  "Tài sản tài chính niêm yết/đăng ký giao dịch tại Trung tâm Lưu ký Chứng khoán của Nhà đầu tư (VND) (mã chỉ tiêu 021; tham chiếu Thuyết minh số 27.5)",
+                  "Tài sản tài chính giao dịch tự do chuyển nhượng (mã chỉ tiêu 021.1)",
+                  "Tài sản tài chính hạn chế chuyển nhượng (mã chỉ tiêu 021.2)",
+                  "Tài sản tài chính giao dịch cẩm cố (mã chỉ tiêu 021.3)",
+                  "Tài sản tài chính phong tỏa, tạm giữ (mã chỉ tiêu 021.4)",
+                  "Tài sản tài chính chờ thanh toán (mã chỉ tiêu 021.5)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c19",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 28: CÁC TÀI SẢN TÀI CHÍNH (tiếp theo)"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Cổ phiếu niêm yết khác",
+                  "Cổ phiếu chưa niêm yết khác"
+                ],
+                "kỳ số liệu": [
+                  "Giá vốn bình quân gia quyền tính đến cuối ngày giao dịch VND",
+                  "Lỗ bán chứng khoán năm nay VND",
+                  "Lỗ bán chứng khoán năm trước (trình bày lại) VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "VNS",
+                  "Cổ phiếu niêm yết khác",
+                  "2",
+                  "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                  "Cổ phiếu chưa niêm yết khác",
+                  "3",
+                  "TP_VDB110029",
+                  "Trái phiếu niêm yết khác",
+                  "4"
+                ],
+                "mục lục chỉ tiêu": [
+                  "1",
+                  "PET",
+                  "PVS",
+                  "SGN",
+                  "ABC",
+                  "VSC",
+                  "VNS",
+                  "Cổ phiếu niêm yết khác",
+                  "2",
+                  "TCT Máy động lực và máy nông nghiệp Việt Nam",
+                  "Cổ phiếu chưa niêm yết khác",
+                  "3",
+                  "TP_BVDB15207",
+                  "TP_TD1520269",
+                  "TP_TD1518357",
+                  "TP_TD1621455",
+                  "TP_VDB110029",
+                  "Trái phiếu niêm yết khác",
+                  "4",
+                  "5"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c25",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 12: TÀI SẢN CÓ ĐỊNH HỮU HÌNH"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Ngày 31 tháng 12 năm 2017",
+                  "Ngày 31 tháng 12 năm 2017",
+                  "Ngày 31 tháng 12 năm 2017"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thanh lý",
+                  "Ngày 31 tháng 12 năm 2017",
+                  "Ngày 1 tháng 1 năm 2017",
+                  "Nguyên giá TSCĐ đã khấu hao hết nhưng vẫn còn sử dụng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Ngày 1 tháng 1 năm 2017",
+                  "Tăng trong năm",
+                  "Mua trong năm",
+                  "Giảm trong năm",
+                  "Thanh lý",
+                  "Ngày 31 tháng 12 năm 2017",
+                  "Khẩu hao trong năm",
+                  "Nguyên giá TSCĐ đã khấu hao hết nhưng vẫn còn sử dụng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c17",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SSI — CTCP Chứng khoán SSI — năm 2017 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 27.8: Tài sản tài chính chưa lưu ký tại VSD của Nhà đầu tư"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Cổ phiếu"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Số dư cuối năm VND",
+                  "Số dư đầu năm VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Cổ phiếu"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Cổ phiếu"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Số lượng cổ phiếu đang lưu hành",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c01",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Số lượng cổ phiếu đang lưu hành",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01"
+    ],
+    "output_cap": 5
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "SSI_financial_statements_2017_separate_table_54",
+      "metadata": {
+        "table_id": "SSI_financial_statements_2017_separate_table_54",
+        "doc_id": "SSI_financial_statements_2017_separate",
+        "ticker": "SSI",
+        "company_name": "CTCP Chứng khoán SSI",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2017,
+        "start_line": 1619
+      },
+      "rrf_score": 0.03225806451612903,
+      "dense_rank": 1,
+      "dense_score": 0.87085295,
+      "bm25_rank": 2,
+      "bm25_score": 19.507452106633327,
+      "retrieval_score": 0.03225806451612903,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "Số dư cuối năm(cổ phiếu)",
+          "Số dư đầu năm(cổ phiếu)",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "Số dư cuối năm(cổ phiếu)",
+          "Số dư đầu năm(cổ phiếu)"
+        ],
+        "units": [],
+        "row_count": 9,
+        "table_titles": [
+          "Thuyết minh 26: 3 Cổ phiếu"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu được phép phát hành"
+          },
+          {
+            "row": 3,
+            "label": "Số lượng cổ phiếu đã phát hành"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ"
+          },
+          {
+            "row": 5,
+            "label": "- Cổ phiếu phổ thông"
+          },
+          {
+            "row": 6,
+            "label": "Số lượng cổ phiếu quỹ"
+          },
+          {
+            "row": 7,
+            "label": "Cổ phiếu quỹ do Công ty nấm giữ"
+          },
+          {
+            "row": 8,
+            "label": "- Cổ phiếu phổ thông"
+          },
+          {
+            "row": 9,
+            "label": "Số lượng cổ phiếu đang lưu hành"
+          },
+          {
+            "row": 10,
+            "label": "- Cổ phiếu phổ thông"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Số lượng cổ phiếu được phép phát hành"
+          },
+          {
+            "row": 3,
+            "label": "Số lượng cổ phiếu đã phát hành"
+          },
+          {
+            "row": 4,
+            "label": "Số lượng cổ phiếu đã phát hành và được gópvốn đầy đủ"
+          },
+          {
+            "row": 8,
+            "label": "- Cổ phiếu phổ thông"
+          },
+          {
+            "row": 9,
+            "label": "Số lượng cổ phiếu đang lưu hành"
+          },
+          {
+            "row": 10,
+            "label": "- Cổ phiếu phổ thông"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "SSI_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "SSI_financial_statements_2017_separate|1619",
+        "SSI_financial_statements_2017_separate|296",
+        "SSI_financial_statements_2017_separate|444",
+        "SSI_financial_statements_2017_separate|1571",
+        "SSI_financial_statements_2017_separate|1244",
+        "SSI_financial_statements_2017_separate|313",
+        "SSI_financial_statements_2017_separate|1375",
+        "SSI_financial_statements_2017_separate|1352",
+        "SSI_financial_statements_2017_separate|1416",
+        "SSI_financial_statements_2017_separate|1269",
+        "SSI_financial_statements_2017_separate|1697",
+        "SSI_financial_statements_2017_separate|1629",
+        "SSI_financial_statements_2017_separate|1701",
+        "SSI_financial_statements_2017_separate|1530",
+        "SSI_financial_statements_2017_separate|1693",
+        "SSI_financial_statements_2017_separate|1507",
+        "SSI_financial_statements_2017_separate|1668",
+        "SSI_financial_statements_2017_separate|1753",
+        "SSI_financial_statements_2017_separate|1738",
+        "SSI_financial_statements_2017_separate|1263",
+        "SSI_financial_statements_2017_separate|1660",
+        "SSI_financial_statements_2017_separate|330",
+        "SSI_financial_statements_2017_separate|427",
+        "SSI_financial_statements_2017_separate|1821",
+        "SSI_financial_statements_2017_separate|1393",
+        "SSI_financial_statements_2017_separate|1967",
+        "SSI_financial_statements_2017_separate|20",
+        "SSI_financial_statements_2017_separate|1575",
+        "SSI_financial_statements_2017_separate|1879",
+        "SSI_financial_statements_2017_separate|1769",
+        "SSI_financial_statements_2017_separate|1798",
+        "SSI_financial_statements_2017_separate|1984",
+        "SSI_financial_statements_2017_separate|468",
+        "SSI_financial_statements_2017_separate|1656",
+        "SSI_financial_statements_2017_separate|412",
+        "SSI_financial_statements_2017_separate|1309",
+        "SSI_financial_statements_2017_separate|1838",
+        "SSI_financial_statements_2017_separate|1633",
+        "SSI_financial_statements_2017_separate|1813",
+        "SSI_financial_statements_2017_separate|2055",
+        "SSI_financial_statements_2017_separate|1203",
+        "SSI_financial_statements_2017_separate|1817",
+        "SSI_financial_statements_2017_separate|2182",
+        "SSI_financial_statements_2017_separate|1369",
+        "SSI_financial_statements_2017_separate|358",
+        "SSI_financial_statements_2017_separate|1850",
+        "SSI_financial_statements_2017_separate|1328",
+        "SSI_financial_statements_2017_separate|1720",
+        "SSI_financial_statements_2017_separate|1334",
+        "SSI_financial_statements_2017_separate|1474"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "SSI_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "SSI_financial_statements_2017_separate|1619",
+        "SSI_financial_statements_2017_separate|296",
+        "SSI_financial_statements_2017_separate|1738"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "SSI_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "SSI_financial_statements_2017_separate|1619",
+        "SSI_financial_statements_2017_separate|296",
+        "SSI_financial_statements_2017_separate|1738",
+        "SSI_financial_statements_2017_separate|1393",
+        "SSI_financial_statements_2017_separate|1668"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "SSI_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "SSI_financial_statements_2017_separate|1619"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "SSI_financial_statements_2017_separate"
+      ],
+      "tables": [
+        "SSI_financial_statements_2017_separate|1619"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f2": 0.7142857142857143,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f2": 0.5555555555555556,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "SSI_financial_statements_2017_separate|1619",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

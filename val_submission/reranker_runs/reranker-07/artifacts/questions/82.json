@@ -1,0 +1,4552 @@
+{
+  "schema_version": 2,
+  "id": 82,
+  "question": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+  "started_at": "2026-08-23T09:27:06+00:00",
+  "finished_at": "2026-08-23T09:27:23+00:00",
+  "duration_seconds": 17.057429977998254,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/82.json",
+  "golden": {
+    "id": 82,
+    "question": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+    "relevant_docs": [
+      "NVB_financial_statements_2022_separate"
+    ],
+    "relevant_tables": [
+      "NVB_financial_statements_2022_separate|1035"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_31",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_31",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1248
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.88830984,
+      "bm25_rank": 1,
+      "bm25_score": 14.549953529953498,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_57",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_57",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1704
+      },
+      "rrf_score": 0.03076923076923077,
+      "dense_rank": 2,
+      "dense_score": 0.8688169,
+      "bm25_rank": 5,
+      "bm25_score": 13.016444102002522,
+      "retrieval_score": 0.03076923076923077,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_16",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_16",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1035
+      },
+      "rrf_score": 0.03057889822595705,
+      "dense_rank": 3,
+      "dense_score": 0.88704455,
+      "bm25_rank": 8,
+      "bm25_score": 12.51348713822235,
+      "retrieval_score": 0.03057889822595705,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_47",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_47",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1439
+      },
+      "rrf_score": 0.030330882352941176,
+      "dense_rank": 4,
+      "dense_score": 0.8501273,
+      "bm25_rank": 4,
+      "bm25_score": 13.016515246085897,
+      "retrieval_score": 0.030330882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_56",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_56",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 1685
+      },
+      "rrf_score": 0.030303030303030304,
+      "dense_rank": 5,
+      "dense_score": 0.8568743,
+      "bm25_rank": 6,
+      "bm25_score": 12.979342359982667,
+      "retrieval_score": 0.030303030303030304,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_9",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_9",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 450
+      },
+      "rrf_score": 0.03028233151183971,
+      "dense_rank": 6,
+      "dense_score": 0.89147264,
+      "bm25_rank": 12,
+      "bm25_score": 8.671900944053759,
+      "retrieval_score": 0.03028233151183971,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_15",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_15",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1029
+      },
+      "rrf_score": 0.029910714285714284,
+      "dense_rank": 7,
+      "dense_score": 0.87001663,
+      "bm25_rank": 10,
+      "bm25_score": 9.77700744879731,
+      "retrieval_score": 0.029910714285714284,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_52",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_52",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 1579
+      },
+      "rrf_score": 0.029827662395050816,
+      "dense_rank": 8,
+      "dense_score": 0.8454041,
+      "bm25_rank": 2,
+      "bm25_score": 14.071015417692632,
+      "retrieval_score": 0.029827662395050816,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_18",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_18",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1056
+      },
+      "rrf_score": 0.02792120864410021,
+      "dense_rank": 9,
+      "dense_score": 0.8389274,
+      "bm25_rank": 3,
+      "bm25_score": 14.01910760411018,
+      "retrieval_score": 0.02792120864410021,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_35",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_35",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1319
+      },
+      "rrf_score": 0.027799227799227798,
+      "dense_rank": 10,
+      "dense_score": 0.8472463,
+      "bm25_rank": 14,
+      "bm25_score": 6.952778143099388,
+      "retrieval_score": 0.027799227799227798,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_55",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_55",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1652
+      },
+      "rrf_score": 0.027313266443701224,
+      "dense_rank": 11,
+      "dense_score": 0.842896,
+      "bm25_rank": 9,
+      "bm25_score": 12.212928558959963,
+      "retrieval_score": 0.027313266443701224,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_34",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_34",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1290
+      },
+      "rrf_score": 0.027242401779095628,
+      "dense_rank": 12,
+      "dense_score": 0.8470099,
+      "bm25_rank": 16,
+      "bm25_score": 5.986800042162601,
+      "retrieval_score": 0.027242401779095628,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_21",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_21",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1104
+      },
+      "rrf_score": 0.026973565905412694,
+      "dense_rank": 13,
+      "dense_score": 0.8504627,
+      "bm25_rank": 23,
+      "bm25_score": 4.202109024497105,
+      "retrieval_score": 0.026973565905412694,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_49",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_49",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1464
+      },
+      "rrf_score": 0.02638888888888889,
+      "dense_rank": 14,
+      "dense_score": 0.84566677,
+      "bm25_rank": 20,
+      "bm25_score": 4.80144998403519,
+      "retrieval_score": 0.02638888888888889,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_32",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_32",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1265
+      },
+      "rrf_score": 0.026334026334026334,
+      "dense_rank": 15,
+      "dense_score": 0.84536505,
+      "bm25_rank": 18,
+      "bm25_score": 5.067726084070864,
+      "retrieval_score": 0.026334026334026334,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_19",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_19",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1077
+      },
+      "rrf_score": 0.02632034632034632,
+      "dense_rank": 16,
+      "dense_score": 0.84486145,
+      "bm25_rank": 15,
+      "bm25_score": 6.321072536489488,
+      "retrieval_score": 0.02632034632034632,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_53",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_53",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1604
+      },
+      "rrf_score": 0.026161328190508135,
+      "dense_rank": 17,
+      "dense_score": 0.83453816,
+      "bm25_rank": 7,
+      "bm25_score": 12.756273093220045,
+      "retrieval_score": 0.026161328190508135,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_27",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_27",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1204
+      },
+      "rrf_score": 0.025481764612199396,
+      "dense_rank": 18,
+      "dense_score": 0.8500785,
+      "bm25_rank": 31,
+      "bm25_score": 2.041361773673625,
+      "retrieval_score": 0.025481764612199396,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_42",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_42",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1404
+      },
+      "rrf_score": 0.025062266500622665,
+      "dense_rank": 19,
+      "dense_score": 0.83509237,
+      "bm25_rank": 13,
+      "bm25_score": 7.354170121303964,
+      "retrieval_score": 0.025062266500622665,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_48",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_48",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1458
+      },
+      "rrf_score": 0.024691358024691357,
+      "dense_rank": 20,
+      "dense_score": 0.8400093,
+      "bm25_rank": 21,
+      "bm25_score": 4.6738725477233976,
+      "retrieval_score": 0.024691358024691357,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_13",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_13",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 913
+      },
+      "rrf_score": 0.024610822831727205,
+      "dense_rank": 21,
+      "dense_score": 0.82443357,
+      "bm25_rank": 11,
+      "bm25_score": 9.54223632734523,
+      "retrieval_score": 0.024610822831727205,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_10",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_10",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 471
+      },
+      "rrf_score": 0.024444444444444446,
+      "dense_rank": 22,
+      "dense_score": 0.8452995,
+      "bm25_rank": 30,
+      "bm25_score": 2.3479549049534114,
+      "retrieval_score": 0.024444444444444446,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_25",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_25",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1179
+      },
+      "rrf_score": 0.023910582908885116,
+      "dense_rank": 23,
+      "dense_score": 0.8452291,
+      "bm25_rank": 33,
+      "bm25_score": 1.9021239979575604,
+      "retrieval_score": 0.023910582908885116,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_28",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_28",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1223
+      },
+      "rrf_score": 0.023739701159056,
+      "dense_rank": 24,
+      "dense_score": 0.8263322,
+      "bm25_rank": 17,
+      "bm25_score": 5.811093036046328,
+      "retrieval_score": 0.023739701159056,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_8",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_8",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 431
+      },
+      "rrf_score": 0.02353266888150609,
+      "dense_rank": 25,
+      "dense_score": 0.8383515,
+      "bm25_rank": 26,
+      "bm25_score": 3.21207107471344,
+      "retrieval_score": 0.02353266888150609,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_20",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_20",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1085
+      },
+      "rrf_score": 0.02329652572044169,
+      "dense_rank": 26,
+      "dense_score": 0.8253633,
+      "bm25_rank": 19,
+      "bm25_score": 4.926332726926935,
+      "retrieval_score": 0.02329652572044169,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_46",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_46",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1435
+      },
+      "rrf_score": 0.02325895875591616,
+      "dense_rank": 27,
+      "dense_score": 0.83669925,
+      "bm25_rank": 25,
+      "bm25_score": 3.9527180716588592,
+      "retrieval_score": 0.02325895875591616,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_17",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_17",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1037
+      },
+      "rrf_score": 0.023122159850307404,
+      "dense_rank": 28,
+      "dense_score": 0.8370235,
+      "bm25_rank": 27,
+      "bm25_score": 2.784430232799214,
+      "retrieval_score": 0.023122159850307404,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_24",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_24",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1158
+      },
+      "rrf_score": 0.023064687168610817,
+      "dense_rank": 29,
+      "dense_score": 0.83905166,
+      "bm25_rank": 32,
+      "bm25_score": 1.9879102197753094,
+      "retrieval_score": 0.023064687168610817,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_44",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_44",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2022,
+        "start_line": 1412
+      },
+      "rrf_score": 0.022809278350515466,
+      "dense_rank": 30,
+      "dense_score": 0.84112424,
+      "bm25_rank": 37,
+      "bm25_score": 1.549731506637724,
+      "retrieval_score": 0.022809278350515466,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_37",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_37",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1354
+      },
+      "rrf_score": 0.022399203583872575,
+      "dense_rank": 31,
+      "dense_score": 0.8215691,
+      "bm25_rank": 22,
+      "bm25_score": 4.52186317611706,
+      "retrieval_score": 0.022399203583872575,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_11",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_11",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 595
+      },
+      "rrf_score": 0.02200402224062463,
+      "dense_rank": 32,
+      "dense_score": 0.84241825,
+      "bm25_rank": 47,
+      "bm25_score": 1.3874822052025493e-06,
+      "retrieval_score": 0.02200402224062463,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_29",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_29",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1227
+      },
+      "rrf_score": 0.021568627450980392,
+      "dense_rank": 33,
+      "dense_score": 0.8373375,
+      "bm25_rank": 42,
+      "bm25_score": 0.8170969487685688,
+      "retrieval_score": 0.021568627450980392,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_26",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_26",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1200
+      },
+      "rrf_score": 0.021527777777777778,
+      "dense_rank": 34,
+      "dense_score": 0.8340595,
+      "bm25_rank": 36,
+      "bm25_score": 1.7248690410076992,
+      "retrieval_score": 0.021527777777777778,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_33",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_33",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1271
+      },
+      "rrf_score": 0.02152014652014652,
+      "dense_rank": 35,
+      "dense_score": 0.8113961,
+      "bm25_rank": 24,
+      "bm25_score": 4.159654379015289,
+      "retrieval_score": 0.02152014652014652,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_50",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_50",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1472
+      },
+      "rrf_score": 0.021073646850044363,
+      "dense_rank": 36,
+      "dense_score": 0.8290707,
+      "bm25_rank": 38,
+      "bm25_score": 1.3166132056099114,
+      "retrieval_score": 0.021073646850044363,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_45",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_45",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1431
+      },
+      "rrf_score": 0.020835594139989148,
+      "dense_rank": 37,
+      "dense_score": 0.82222736,
+      "bm25_rank": 35,
+      "bm25_score": 1.8574769852091242,
+      "retrieval_score": 0.020835594139989148,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_38",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_38",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1358
+      },
+      "rrf_score": 0.020669917320330716,
+      "dense_rank": 38,
+      "dense_score": 0.80824226,
+      "bm25_rank": 29,
+      "bm25_score": 2.5155194163598336,
+      "retrieval_score": 0.020669917320330716,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_3",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_3",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 329
+      },
+      "rrf_score": 0.020604395604395608,
+      "dense_rank": 39,
+      "dense_score": 0.83338267,
+      "bm25_rank": 44,
+      "bm25_score": 1.7816805467425082e-06,
+      "retrieval_score": 0.020604395604395608,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_39",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_39",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1377
+      },
+      "rrf_score": 0.020202020202020204,
+      "dense_rank": 40,
+      "dense_score": 0.82029676,
+      "bm25_rank": 39,
+      "bm25_score": 1.1596102934608155,
+      "retrieval_score": 0.020202020202020204,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_23",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_23",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1133
+      },
+      "rrf_score": 0.020125404530744337,
+      "dense_rank": 41,
+      "dense_score": 0.8240022,
+      "bm25_rank": 43,
+      "bm25_score": 0.47569198192833273,
+      "retrieval_score": 0.020125404530744337,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_1",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_1",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 96
+      },
+      "rrf_score": 0.0199009900990099,
+      "dense_rank": 42,
+      "dense_score": 0.81994927,
+      "bm25_rank": 40,
+      "bm25_score": 0.8365369125747949,
+      "retrieval_score": 0.0199009900990099,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_41",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_41",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1385
+      },
+      "rrf_score": 0.019704911667637354,
+      "dense_rank": 43,
+      "dense_score": 0.8154695,
+      "bm25_rank": 41,
+      "bm25_score": 0.8324614466736768,
+      "retrieval_score": 0.019704911667637354,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_51",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_51",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 1493
+      },
+      "rrf_score": 0.01904761904761905,
+      "dense_rank": 44,
+      "dense_score": 0.8088874,
+      "bm25_rank": 45,
+      "bm25_score": 1.6394768397211337e-06,
+      "retrieval_score": 0.01904761904761905,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_40",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_40",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1381
+      },
+      "rrf_score": 0.018967997123336928,
+      "dense_rank": 45,
+      "dense_score": 0.8122189,
+      "bm25_rank": 48,
+      "bm25_score": 1.1120580101805487e-06,
+      "retrieval_score": 0.018967997123336928,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_30",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_30",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1231
+      },
+      "rrf_score": 0.011363636363636364,
+      "bm25_rank": 28,
+      "bm25_score": 2.735813817277174,
+      "retrieval_score": 0.011363636363636364,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_22",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_22",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1108
+      },
+      "rrf_score": 0.010638297872340425,
+      "bm25_rank": 34,
+      "bm25_score": 1.8939555472040295,
+      "retrieval_score": 0.010638297872340425,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 47
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_5",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_5",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 365
+      },
+      "rrf_score": 0.01,
+      "dense_rank": 48,
+      "dense_score": 0.8200562,
+      "retrieval_score": 0.01,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_12",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_12",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 683
+      },
+      "rrf_score": 0.009433962264150943,
+      "bm25_rank": 46,
+      "bm25_score": 1.444394464292971e-06,
+      "retrieval_score": 0.009433962264150943,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 49
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_4",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_4",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 348
+      },
+      "rrf_score": 0.009345794392523364,
+      "dense_rank": 50,
+      "dense_score": 0.80376935,
+      "retrieval_score": 0.009345794392523364,
+      "retrieval_mode": "hybrid"
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "year": 2022,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_31",
+        "table_ref": "NVB_financial_statements_2022_separate|1248",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_57",
+        "table_ref": "NVB_financial_statements_2022_separate|1704",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_16",
+        "table_ref": "NVB_financial_statements_2022_separate|1035",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_47",
+        "table_ref": "NVB_financial_statements_2022_separate|1439",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_56",
+        "table_ref": "NVB_financial_statements_2022_separate|1685",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_9",
+        "table_ref": "NVB_financial_statements_2022_separate|450",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_15",
+        "table_ref": "NVB_financial_statements_2022_separate|1029",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_52",
+        "table_ref": "NVB_financial_statements_2022_separate|1579",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_18",
+        "table_ref": "NVB_financial_statements_2022_separate|1056",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_35",
+        "table_ref": "NVB_financial_statements_2022_separate|1319",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_55",
+        "table_ref": "NVB_financial_statements_2022_separate|1652",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_34",
+        "table_ref": "NVB_financial_statements_2022_separate|1290",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_21",
+        "table_ref": "NVB_financial_statements_2022_separate|1104",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_49",
+        "table_ref": "NVB_financial_statements_2022_separate|1464",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_32",
+        "table_ref": "NVB_financial_statements_2022_separate|1265",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_19",
+        "table_ref": "NVB_financial_statements_2022_separate|1077",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_53",
+        "table_ref": "NVB_financial_statements_2022_separate|1604",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_27",
+        "table_ref": "NVB_financial_statements_2022_separate|1204",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_42",
+        "table_ref": "NVB_financial_statements_2022_separate|1404",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_48",
+        "table_ref": "NVB_financial_statements_2022_separate|1458",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_13",
+        "table_ref": "NVB_financial_statements_2022_separate|913",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_10",
+        "table_ref": "NVB_financial_statements_2022_separate|471",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_25",
+        "table_ref": "NVB_financial_statements_2022_separate|1179",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_28",
+        "table_ref": "NVB_financial_statements_2022_separate|1223",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_8",
+        "table_ref": "NVB_financial_statements_2022_separate|431",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_20",
+        "table_ref": "NVB_financial_statements_2022_separate|1085",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_46",
+        "table_ref": "NVB_financial_statements_2022_separate|1435",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_17",
+        "table_ref": "NVB_financial_statements_2022_separate|1037",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_24",
+        "table_ref": "NVB_financial_statements_2022_separate|1158",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_44",
+        "table_ref": "NVB_financial_statements_2022_separate|1412",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_37",
+        "table_ref": "NVB_financial_statements_2022_separate|1354",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_11",
+        "table_ref": "NVB_financial_statements_2022_separate|595",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_29",
+        "table_ref": "NVB_financial_statements_2022_separate|1227",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_26",
+        "table_ref": "NVB_financial_statements_2022_separate|1200",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_33",
+        "table_ref": "NVB_financial_statements_2022_separate|1271",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_50",
+        "table_ref": "NVB_financial_statements_2022_separate|1472",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_45",
+        "table_ref": "NVB_financial_statements_2022_separate|1431",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_38",
+        "table_ref": "NVB_financial_statements_2022_separate|1358",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_3",
+        "table_ref": "NVB_financial_statements_2022_separate|329",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_39",
+        "table_ref": "NVB_financial_statements_2022_separate|1377",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_23",
+        "table_ref": "NVB_financial_statements_2022_separate|1133",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_1",
+        "table_ref": "NVB_financial_statements_2022_separate|96",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_41",
+        "table_ref": "NVB_financial_statements_2022_separate|1385",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_51",
+        "table_ref": "NVB_financial_statements_2022_separate|1493",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_40",
+        "table_ref": "NVB_financial_statements_2022_separate|1381",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_30",
+        "table_ref": "NVB_financial_statements_2022_separate|1231",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_22",
+        "table_ref": "NVB_financial_statements_2022_separate|1108",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_5",
+        "table_ref": "NVB_financial_statements_2022_separate|365",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_12",
+        "table_ref": "NVB_financial_statements_2022_separate|683",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "NVB_financial_statements_2022_separate_table_4",
+        "table_ref": "NVB_financial_statements_2022_separate|348",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "11.1. Tiền gửi của các TCTD khác",
+                "Tổng cộng tiền gửi và vay các TCTD khác",
+                "Tiền gửi của TCKT",
+                "11.2. Vay các TCTD khác",
+                "Tiền gửi có kỳ hạn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "11.1. Tiền gửi của các TCTD khác",
+                "a. Tiền gửi không kỳ hạn",
+                "- Bằng VND",
+                "Cộng",
+                "Tổng cộng tiền gửi và vay các TCTD khác",
+                "- Thuyết minh theo loại tiền gửi"
+              ],
+              "mục lục chỉ tiêu": [
+                "11.1. Tiền gửi của các TCTD khác",
+                "a. Tiền gửi không kỳ hạn",
+                "- Bằng VND",
+                "- Bằng ngoại hối",
+                "b. Tiền gửi có kỳ hạn",
+                "Cộng",
+                "11.2. Vay các TCTD khác",
+                "Tổng cộng tiền gửi và vay các TCTD khác",
+                "- Thuyết minh theo loại tiền gửi",
+                "Tiền gửi không kỳ hạn",
+                "Tiền gửi có kỳ hạn",
+                "Tiền gửi vốn chuyên dùng",
+                "Tiền gửi ký quỹ",
+                "Tổng cộng",
+                "- Thuyết minh theo đối tượng khách hàng, loại hình doanh nghiệp",
+                "Tiền gửi của TCKT",
+                "Doanh nghiệp nhà nước",
+                "Công ty CP, TNHH, Hợp danh",
+                "Doanh nghiệp tư nhân",
+                "Công ty chứng khoán, bảo hiểm, tài chính",
+                "Kinh tế cá thể, Kinh tế tập thể",
+                "Doanh nghiệp có vốn đầu tư nước ngoài",
+                "Tiền gửi của cá nhân"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 13.745.165)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu 384.031)",
+                "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                "Nợ phải trả",
+                "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền vay từ Chính phủ và NHNN (mã chỉ tiêu -)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trên 3 tháng (mã chỉ tiêu Từ 1 - 3 tháng)",
+                "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu 384.031)",
+                "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                "Cho vay khách hàng (*) (mã chỉ tiêu 1.814.023)",
+                "Hoạt động mua nợ (*) (mã chỉ tiêu -)",
+                "Chứng khoán đầu tư (*) (mã chỉ tiêu 1.649.999)",
+                "Góp vốn, đầu tư dài hạn (*) (mã chỉ tiêu -)",
+                "Tài sản cố định và Bất động sản đầu tư (mã chỉ tiêu -)",
+                "Tài sản Có khác (*) (mã chỉ tiêu 114.446)",
+                "Tổng Tài sản (mã chỉ tiêu 19.376.421)",
+                "Nợ phải trả",
+                "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền vay từ Chính phủ và NHNN (mã chỉ tiêu -)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 13.745.165)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu -)",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro (mã chỉ tiêu -)",
+                "Phát hành giấy tờ có giá (mã chỉ tiêu -)",
+                "Các khoản nợ khác (mã chỉ tiêu 1.041.887)",
+                "Tổng Nợ phải trả (mã chỉ tiêu 23.304.296)",
+                "Mức chênh thanh khoản ròng (mã chỉ tiêu (3.927.875))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phân tích chất lượng dư nợ cho vay, tiền gửi các TCTD khác",
+                "Tổng tiền gửi và cho vay các TCTD khác",
+                "Hoạt động tài chính, ngân hàng và bảo hiểm"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cộng",
+                "Tổng tiền gửi và cho vay các TCTD khác",
+                "Phân tích chất lượng dư nợ cho vay, tiền gửi các TCTD khác",
+                "- Nợ đủ tiêu chuẩn",
+                "Vận tải kho bãi",
+                "Hoạt động tài chính, ngân hàng và bảo hiểm",
+                "Y tế và hoạt động trợ giúp xã hội"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cộng",
+                "Tổng tiền gửi và cho vay các TCTD khác",
+                "Phân tích chất lượng dư nợ cho vay, tiền gửi các TCTD khác",
+                "- Nợ đủ tiêu chuẩn",
+                "Cho vay các tổ chức kinh tế, cá nhân trong nước",
+                "Cho vay bằng vốn tài trợ, ủy thác đầu tư",
+                "Tổng cộng",
+                "Nợ đủ tiêu chuẩn",
+                "Nợ cần chú ý",
+                "Nợ dưới tiêu chuẩn",
+                "Nợ nghi ngờ",
+                "Nợ có khả năng mất vốn",
+                "Nợ ngắn hạn",
+                "Nợ trung hạn",
+                "Nợ dài hạn",
+                "Nông nghiệp và lâm nghiệp",
+                "Công nghiệp chế biến, chế tạo",
+                "Xây dựng",
+                "Bán buôn và bán lẻ; sữa chữa ô tô, mô tô, xe máy vàđộng cơ khác",
+                "Dịch vụ lưu trú và ăn uống",
+                "Vận tải kho bãi",
+                "Hoạt động tài chính, ngân hàng và bảo hiểm",
+                "Y tế và hoạt động trợ giúp xã hội",
+                "Hoạt động dịch vụ khác",
+                "Sản xuất sản phẩm vật chất và dịch vụ tiêu dùng của hộ gia đình"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Ngày đáo hạn"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH MTV Mua bán nợ Việt Nam (tên cũ Công ty Mua bán nợ và tài sản tồn động của doanh nghiệp) - DATC",
+                "Công ty TNHH một thành viên Quản lý tài sản của các TCTD Việt Nam (VAMC)",
+                "Năm 2024",
+                "Năm 2025"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH MTV Mua bán nợ Việt Nam (tên cũ Công ty Mua bán nợ và tài sản tồn động của doanh nghiệp) - DATC",
+                "Công ty TNHH một thành viên Quản lý tài sản của các TCTD Việt Nam (VAMC)",
+                "Năm 2024",
+                "Năm 2025",
+                "Năm 2026",
+                "Năm 2027",
+                "Năm 2028",
+                "Năm 2029",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền gửi của khách hàng"
+              ],
+              "kỳ số liệu": [
+                "Đến 1 tháng",
+                "Từ 01 đến 03 tháng",
+                "Từ 03 đến 06 tháng",
+                "Từ 06 đến 12 tháng",
+                "Từ 1 đến 5 năm",
+                "Trên 5 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt, vàng bạc, đá quý",
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền gửi của khách hàng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt, vàng bạc, đá quý",
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Chứng khoán đầu tư (*)",
+                "Góp vốn, đầu tư dài hạn (*)",
+                "Tài sản cố định và Bất động sản đầu tư",
+                "Tài sản Có khác (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Tổng Nợ phải trả",
+                "Mức chênh lệch nhạy cảm với lãi suất nội bảng",
+                "Các cam kết ngoại bảng có tác động tới mức độ nhạy cảm với lãi suất của các tài sản và công nợ (ròng)",
+                "Mức chênh lệch nhạy cảm với lãi suất nội, ngoại bảng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "5 - 40 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phương tiện vận tải, truyền dẫn",
+                "Phần mềm kế toán",
+                "TSCĐ khác",
+                "Tài sản cố định vô hình"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phương tiện vận tải, truyền dẫn",
+                "Phần mềm kế toán",
+                "TSCĐ khác",
+                "Tài sản cố định vô hình"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "(Tăng)/Giảm các khoản tiền gửi và cho vay các TCTD khác"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Thu nhập từ hoạt động dịch vụ nhận được",
+                "Chênh lệch số tiền thực thu/ thực chi từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+                "Thu nhập khác",
+                "Tiền thu các khoản nợ đã được xử lý xoá, bù đáp bằng nguồn rủi ro",
+                "Những thay đổi về tài sản hoạt động",
+                "(Tăng)/Giảm các khoản tiền gửi và cho vay các TCTD khác",
+                "(Tăng)/Giảm các khoản về kinh doanh chứng khoán"
+              ],
+              "mục lục chỉ tiêu": [
+                "LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH",
+                "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+                "Chi phí lãi và các khoản chi phí tương tự đã trả",
+                "Thu nhập từ hoạt động dịch vụ nhận được",
+                "Chênh lệch số tiền thực thu/ thực chi từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+                "Thu nhập khác",
+                "Tiền thu các khoản nợ đã được xử lý xoá, bù đáp bằng nguồn rủi ro",
+                "Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ",
+                "Tiền thuế thu nhập thực nộp trong năm",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+                "Những thay đổi về tài sản hoạt động",
+                "(Tăng)/Giảm các khoản tiền gửi và cho vay các TCTD khác",
+                "(Tăng)/Giảm các khoản về kinh doanh chứng khoán",
+                "(Tăng)/Giảm các công cụ tài chính phải sinh và các tài sản tài chính khác",
+                "(Tăng)/Giảm các khoản cho vay khách hàng",
+                "(Tăng)/Giảm nguồn dự phòng để xử lý rủi ro, xử lý bù đáp tổn thất các khoản",
+                "(Tăng)/Giảm khác về tài sản hoạt động"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 8: Tài sản cố định hữu hình"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý, nhượng bán",
+                "- Giảm khác",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý, nhượng bán",
+                "- Giảm khác",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm",
+                "- Các thông tin khác về tài sản cố định hữu hình:",
+                "* Cam kết mua TSCĐ có giá trị lớn trong tương lai",
+                "* Nguyên giá tài sản cố định đã khấu hao hết nhưng vẫn còn sử dụng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Tài sản khác",
+                "- Chi phí chờ phân bổ",
+                "- Tài sản gán nợ chờ xử lý (*)",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Tài sản khác",
+                "- Chi phí chờ phân bổ",
+                "- Tài sản gán nợ chờ xử lý (*)",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh VIII: Các thông tin khác 26. Tỉnh hình thu nhập của cán bộ, công nhân viên Năm 2022 Năm 2021 I. Tổng số cán bộ, công nhân viên 2.114 1.976"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "I. Tổng số cán bộ, công nhân viên",
+                "1. Tổng quỹ lương",
+                "3. Thu nhập khác",
+                "4. Tổng thu nhập (1+2+3)",
+                "5. Tiền lương bình quân (đồng/người/tháng)",
+                "6. Thu nhập bình quân (đồng/người/tháng)"
+              ],
+              "mục lục chỉ tiêu": [
+                "I. Tổng số cán bộ, công nhân viên",
+                "1. Tổng quỹ lương",
+                "3. Thu nhập khác",
+                "4. Tổng thu nhập (1+2+3)",
+                "5. Tiền lương bình quân (đồng/người/tháng)",
+                "6. Thu nhập bình quân (đồng/người/tháng)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: Góp vốn, đầu tư dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đầu tư vào công ty con",
+                "Công ty TNHH Quản lý và khai thác TS",
+                "Đầu tư dài hạn khác",
+                "Công ty CP khoáng sản Sài Gòn - Quy Nhơn",
+                "Công ty CP ĐT Sài Gòn",
+                "Công ty CP Chứng khoán Navibank",
+                "Công ty CP Đầu tư Phát triển nhà máy điện Sài Gòn - Bình Thuận",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đầu tư vào công ty con",
+                "Công ty TNHH Quản lý và khai thác TS",
+                "Đầu tư dài hạn khác",
+                "Công ty CP khoáng sản Sài Gòn - Quy Nhơn",
+                "Công ty CP ĐT Sài Gòn",
+                "Công ty CP Chứng khoán Navibank",
+                "Công ty CP Đầu tư Phát triển nhà máy điện Sài Gòn - Bình Thuận",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 21: Lãi/ lỗ thuần từ hoạt động kinh doanh (mua bán) chứng khoán đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập từ mua bán chứng khoán đầu tư",
+                "Chi phí về mua bán chứng khoán đầu tư",
+                "Lãi/ lỗ thuần từ hoạt động mua bán chứng khoán đầu tư"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập từ mua bán chứng khoán đầu tư",
+                "Chi phí về mua bán chứng khoán đầu tư",
+                "Lãi/ lỗ thuần từ hoạt động mua bán chứng khoán đầu tư"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Nhóm 1",
+                "Nhóm 2",
+                "Nhóm 3",
+                "Nhóm 4",
+                "Nhóm 5"
+              ],
+              "mục lục chỉ tiêu": [
+                "Nhóm 1",
+                "Nhóm 2",
+                "Nhóm 3",
+                "Nhóm 4",
+                "Nhóm 5"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                "Tiền gửi của khách hàng"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt, vàng bạc, đá quỹ",
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền vay từ Chính phủ và NHNN"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trên 3 tháng",
+                "Tiền mặt, vàng bạc, đá quỹ",
+                "Tiền gửi tại ngân hàng Nhà nước",
+                "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Chứng khoán đầu tư (*)",
+                "Góp vốn, đầu tư dài hạn (*)",
+                "Tài sản cố định và Bất động sản đầu tư",
+                "Tài sản Có khác (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền vay từ Chính phủ và NHNN",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Tổng Nợ phải trả",
+                "Mức chênh thanh khoản ròng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tăng/(Giảm) tiền gửi của khách hàng",
+                "Tăng/(Giảm) các khoản tiền gửi và vay các TCTD",
+                "Tiền chi đầu tư, góp vốn vào các đơn vị khác",
+                "Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tăng/(Giảm) các khoản nợ chính phủ và NHNN",
+                "Tăng/(Giảm) các khoản tiền gửi và vay các TCTD",
+                "Tăng/(Giảm) tiền gửi của khách hàng",
+                "Tăng/(Giảm) phát hành giấy tờ có giá (ngoại trừ GTCG được tính vào hoạt động tài chính)",
+                "Tiền chi ra do bán, thanh lý bất động sản đầu tư",
+                "Tiền chi đầu tư, góp vốn vào các đơn vị khác",
+                "Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Những thay đổi về công nợ hoạt động",
+                "Tăng/(Giảm) các khoản nợ chính phủ và NHNN",
+                "Tăng/(Giảm) các khoản tiền gửi và vay các TCTD",
+                "Tăng/(Giảm) tiền gửi của khách hàng",
+                "Tăng/(Giảm) phát hành giấy tờ có giá (ngoại trừ GTCG được tính vào hoạt động tài chính)",
+                "Tăng/(Giảm) vốn tài trợ, ủy thác đầu tư, cho vay mà TCTD chịu rủi ro",
+                "Tăng/(Giảm) các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Tăng/(Giảm) khác về công nợ hoạt động",
+                "Chi từ các quỹ của tổ chức tin dụng",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+                "LUỦ CHUYỀN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ",
+                "Mua sắm TSCĐ",
+                "Tiền thu từ thanh lý, nhượng bán TSCĐ",
+                "Tiền chi từ thanh lý, nhượng bán TSCĐ",
+                "Mua sắm bất động sản đầu tư",
+                "Tiền thu từ bán, thanh lý bất động sản đầu tư",
+                "Tiền chi ra do bán, thanh lý bất động sản đầu tư",
+                "Tiền chi đầu tư, góp vốn vào các đơn vị khác",
+                "Tiền thu đầu tư, góp vốn vào các đơn vị khác",
+                "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+                "Lưu chuyển tiền từ hoạt động đầu tư"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 16.2: Chi tiết vốn đầu tư của TCTD"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Vốn góp các thành viên khác",
+                "- Cổ phiếu quỹ",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Vốn góp các thành viên khác",
+                "- Cổ phiếu quỹ",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 30: Giao dịch với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi KKH",
+                "Tiền gửi có kỳ hạn"
+              ],
+              "kỳ số liệu": [
+                "Phát sinh trong năm",
+                "Số dư tại 31/12/2022 Phải thu/(Phải trả)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty AMC",
+                "Trả lãi TG",
+                "Tiền gửi KKH",
+                "Tiền gửi có kỳ hạn",
+                "Ban điều hành",
+                "Thù lao HĐQT, BKS"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty AMC",
+                "Trả lãi TG",
+                "Tiền gửi KKH",
+                "Tiền gửi có kỳ hạn",
+                "Ban điều hành",
+                "Thù lao HĐQT, BKS"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền chi thanh toán giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác",
+                "Tiền thu từ phát hành giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "LƯU CHUYỀN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tăng vốn cổ phần từ góp vốn và/hoặc phát hành cổ phiếu",
+                "Tiền thu từ phát hành giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác",
+                "Tiền chi thanh toán giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác",
+                "Cổ tức trả cho cổ đông, lợi nhuận đã chia"
+              ],
+              "mục lục chỉ tiêu": [
+                "LƯU CHUYỀN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH",
+                "Tăng vốn cổ phần từ góp vốn và/hoặc phát hành cổ phiếu",
+                "Tiền thu từ phát hành giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác",
+                "Tiền chi thanh toán giấy tờ có giá dài hạn đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác",
+                "Cổ tức trả cho cổ đông, lợi nhuận đã chia",
+                "Tiền chi ra mua cổ phiếu quỹ",
+                "Tiền thu được do bán cổ phiếu quỹ",
+                "Lưu chuyển tiền từ hoạt động tài chính",
+                "Lưu chuyển tiền thuần trong năm",
+                "Tiền và các khoản tương đương tiền đầu năm",
+                "Điều chỉnh của ảnh hưởng thay đổi tỷ giá",
+                "Tiền và các khoản tương đương tiền cuối năm (tham chiếu Thuyết minh số VII.25)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: Chứng khoán đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "- Chứng khoán do các TCTD khác trong nước phát hành"
+              ],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chứng khoán Nợ",
+                "- Trái phiếu/tin phiếu Chính phủ",
+                "- Chứng khoán do các TCTD khác trong nước phát hành",
+                "Cộng",
+                "- Chứng khoán Nợ do các TCKT trong nước phát hành (*)",
+                "6.3. Dự phòng rủi ro chứng khoán đầu tư giữ đến ngày đáo hạn",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chứng khoán Nợ",
+                "- Trái phiếu/tin phiếu Chính phủ",
+                "- Chứng khoán do các TCTD khác trong nước phát hành",
+                "Cộng",
+                "- Chứng khoán Nợ do các TCKT trong nước phát hành (*)",
+                "6.3. Dự phòng rủi ro chứng khoán đầu tư giữ đến ngày đáo hạn",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                "Tiền gửi tại NHNN",
+                "Tiền mặt và các khoản tương đương tiền tại quỹ"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền mặt và các khoản tương đương tiền tại quỹ",
+                "Tiền gửi tại NHNN",
+                "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt và các khoản tương đương tiền tại quỹ",
+                "Tiền gửi tại NHNN",
+                "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: Tài sản cố định vô hình"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý nhượng bán",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý nhượng bán",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 19: Lãi/lỗ thuần từ hoạt động dịch vụ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu dịch vụ thanh toán",
+                "Thu dịch vụ ngân quỹ",
+                "Thu khác về dịch vụ",
+                "Chi phí từ hoạt động dịch vụ",
+                "Chi dịch vụ thanh toán",
+                "Chi về dịch vụ ngân quỹ",
+                "Chi khác về dịch vụ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu phí dịch vụ",
+                "Thu dịch vụ thanh toán",
+                "Thu dịch vụ ngân quỹ",
+                "Thu khác về dịch vụ",
+                "Chi phí từ hoạt động dịch vụ",
+                "Chi dịch vụ thanh toán",
+                "Chi về dịch vụ ngân quỹ",
+                "Chi khác về dịch vụ",
+                "Lãi/(lỗ) thuần từ hoạt động dịch vụ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Hội đồng quản trị, Ban kiểm soát, Ban Tổng Giám đốc và Kế toán trường"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Ngày bổ nhiệm",
+                "Ngày miễn nhiệm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bà BÙI THỊ THANH HƯƠNG",
+                "Ông NGUYỄN TIẾN D(~UNG",
+                "Bà TRƯƠNG LỆ HIỀN",
+                "Bà HOÀNG THU TRANG"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bà BÙI THỊ THANH HƯƠNG",
+                "Ông NGUYỄN TIẾN D(~UNG",
+                "Bà TRƯƠNG LỆ HIỀN",
+                "Bà HOÀNG THU TRANG",
+                "Bà TRỊNH THANH MAI",
+                "Ông PHẠM THỂ HIỆP",
+                "Ông TAMAKI KIDO",
+                "Bà TRẦN THỊ HÀ GIANG",
+                "Bà V(~KIM PHƯỢNG",
+                "Bà TRẦN THỊ MINH HƯỆ",
+                "Ông NGUYỄN ĐÌNH TUẤN",
+                "Bà DƯƠNG THỊ LỆ HÀ",
+                "Phó Tổng Giám đốc",
+                "Bà LÊ KIM CHI",
+                "Bà NGUYỄN THỊ THÙY DƯƠNG",
+                "Ông NGUYỄN ĐỨC HIỂU",
+                "Bà PHẠM THỊ HIỀN",
+                "Bà ĐỒ THỊ ĐỨC MINH",
+                "Ông TÀ KIỀU HUNG",
+                "Bà ĐỒ THỊ THANH HƯỜNG",
+                "Bà BÙI THỊ KHÁNH VÂN"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "- Dự phòng rủi ro các khoản nợ phải thu khó đòi",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "- Dự phòng rủi ro các khoản nợ phải thu khó đòi",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi của các TCTD khác",
+                "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                "Vay các TCTD khác",
+                "Tiền gửi và vay Chính phủ, NHNN"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước",
+                "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                "Tiền gửi của các TCTD khác",
+                "Vay các TCTD khác",
+                "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+                "Các khoản nợ chính phủ và Ngân hàng Nhà nước",
+                "Tiền gửi và vay Chính phủ, NHNN",
+                "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước",
+                "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                "Tiền gửi của các TCTD khác",
+                "Vay các TCTD khác",
+                "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, Ủy thác đầu tư, cho vay TCTD chịu rủi ro (tham chiếu Thuyết minh số V.13)",
+                "Phát hành giấy tờ có giá (tham chiếu Thuyết minh số V.14)",
+                "Các khoản nợ khác (tham chiếu Thuyết minh số V.15)",
+                "Các khoản lãi, phí phải trả",
+                "Thuế TNDN hoãn lại phải trả",
+                "Các khoản phải trả và công nợ khác",
+                "Dự phòng rủi ro khác (DP cho công nợ tiềm ấn và cam kết ngoại bảng)",
+                "TỔNG NỘ PHẢI TRẢ"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 3: Tiền gửi tại các TCTD khác và cho vay các TCTD khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi có kỳ hạn",
+                "Tiền gửi không kỳ hạn"
+              ],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi không kỳ hạn",
+                "Bằng VND",
+                "Bằng ngoại hối",
+                "Tiền gửi có kỳ hạn",
+                "Cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi không kỳ hạn",
+                "Bằng VND",
+                "Bằng ngoại hối",
+                "Tiền gửi có kỳ hạn",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 2: Tiền gửi tại Ngân hàng Nhà nước"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi thanh toán tại Ngân hàng Nhà nước"
+              ],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi thanh toán tại Ngân hàng Nhà nước",
+                "Bằng VND",
+                "Bằng ngoại hối",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi thanh toán tại Ngân hàng Nhà nước",
+                "Bằng VND",
+                "Bằng ngoại hối",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gói tại ngân hàng Nhà nước",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền, vàng gói tại và cho vay các TCTD khác (*)",
+                "Tiền gửi của khách hàng"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt, vàng bạc, đá quỹ",
+                "Tiền gói tại ngân hàng Nhà nước",
+                "Tiền, vàng gói tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền gửi của khách hàng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt, vàng bạc, đá quỹ",
+                "Tiền gói tại ngân hàng Nhà nước",
+                "Tiền, vàng gói tại và cho vay các TCTD khác (*)",
+                "Cho vay khách hàng (*)",
+                "Tài sản Có khác (*)",
+                "Tổng Tài sản",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Các khoản nợ khác",
+                "Tổng Nợ phải trả và Vốn chủ sở hữu",
+                "Trạng thái tiền tệ nội bảng",
+                "Trạng thái tiền tệ nội, ngoại bảng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vốn nhận tài trợ, ủy thác đầu tư, cho vay bằng VND",
+                "Tổng cộng vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn nhận tài trợ, ủy thác đầu tư, cho vay bằng VND",
+                "Tổng cộng vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: Chi phí hoạt động Năm 2022 Năm 2021 1. Chi nộp thuế và các khoản phí, lệ phí 1.245 1.312"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "5. Chi nộp phí bảo hiểm, bảo toàn tiền gửi của khách hàng"
+              ],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1. Chi nộp thuế và các khoản phí, lệ phí",
+                "2. Chi phí cho nhân viên",
+                "Công tác phí",
+                "Chi về các hoạt động đoàn thể của TCTD",
+                "5. Chi nộp phí bảo hiểm, bảo toàn tiền gửi của khách hàng",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "1. Chi nộp thuế và các khoản phí, lệ phí",
+                "2. Chi phí cho nhân viên",
+                "Chi lương và phụ cấp",
+                "Các khoản chi đóng góp theo lương",
+                "Chi trợ cấp",
+                "3. Chi về tài sản",
+                "Trong đó: Khấu hao tài sản cố định",
+                "4. Chi cho hoạt động quản lý công vụ",
+                "Công tác phí",
+                "Chi về các hoạt động đoàn thể của TCTD",
+                "5. Chi nộp phí bảo hiểm, bảo toàn tiền gửi của khách hàng",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý, nhượng bán",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "- Mua trong năm",
+                "- Thanh lý, nhượng bán",
+                "Số dư cuối năm",
+                "- Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: Tỉnh hình thực hiện nghĩa vụ với Ngân sách Nhà nước"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Số dư đầu năm",
+                "Phát sinh trong năm",
+                "Số dư cuối năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1. Thuế GTGT",
+                "2. Thuế TNDN",
+                "3. Các loại thuế khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "1. Thuế GTGT",
+                "2. Thuế TNDN",
+                "3. Các loại thuế khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: Chi phí lãi và các khoản chi phí tương tự"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trả lãi tiền gửi"
+              ],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trả lãi tiền gửi",
+                "Trả lãi tiền vay",
+                "Trả lãi phát hành giấy tờ có giá",
+                "Chi phí hoạt động tín dụng khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trả lãi tiền gửi",
+                "Trả lãi tiền vay",
+                "Trả lãi phát hành giấy tờ có giá",
+                "Chi phí hoạt động tín dụng khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: Phát hành giấy tờ có giá thông thường"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chứng chỉ tiền gửi"
+              ],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chứng chỉ tiền gửi",
+                "- Bằng VND",
+                "Tổng cộng",
+                "Các khoản phải trả nội bộ",
+                "Các khoản phải trả bên ngoài",
+                "Lãi và phí phải trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chứng chỉ tiền gửi",
+                "- Bằng VND",
+                "Tổng cộng",
+                "Các khoản phải trả nội bộ",
+                "Các khoản phải trả bên ngoài",
+                "Lãi và phí phải trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Hao mòn bất động sản đầu tư",
+                "Tài sản có khác (tham chiếu Thuyết minh số V.10)",
+                "Các khoản phải thu",
+                "Tài sản thuế TNDN hoãn lại",
+                "Tài sản Có khác",
+                "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác",
+                "TỔNG TÀI SẢN CÓ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tài sản cố định",
+                "Tài sản cố định hữu hình (tham chiếu Thuyết minh số V.08)",
+                "Nguyên giá tài sản cố định",
+                "Hao mòn tài sản cố định",
+                "Tài sản cố định thuê tài chính",
+                "Tài sản cố định vô hình (tham chiếu Thuyết minh số V.9)",
+                "Bất động sản đầu tư",
+                "Nguyên giá bất động sản đầu tư",
+                "Hao mòn bất động sản đầu tư",
+                "Tài sản có khác (tham chiếu Thuyết minh số V.10)",
+                "Các khoản phải thu",
+                "Các khoản lãi, phí phải thu",
+                "Tài sản thuế TNDN hoãn lại",
+                "Tài sản Có khác",
+                "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác",
+                "TỔNG TÀI SẢN CÓ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 22: Lãi/lỗ thuần từ các hoạt động kinh doanh khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập từ hoạt động khác",
+                "Chi phí từ hoạt động khác",
+                "Lãi/lỗ thuần từ các hoạt động kinh doanh khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập từ hoạt động khác",
+                "Chi phí từ hoạt động khác",
+                "Lãi/lỗ thuần từ các hoạt động kinh doanh khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 7: Góp vốn, đầu tư dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đầu tư vào công ty con",
+                "Các khoản đầu tư dài hạn khác",
+                "Dự phòng giảm giá đầu tư dài hạn",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đầu tư vào công ty con",
+                "Các khoản đầu tư dài hạn khác",
+                "Dự phòng giảm giá đầu tư dài hạn",
+                "Tổng cộng"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: Loại hình và giá trị tài sản thế chấp của khách hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                "Số dư tiền gửi ngoại tệ tại NCB",
+                "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB"
+              ],
+              "kỳ số liệu": [
+                "Giá trị đến31/12/2022",
+                "Giá trị đến01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phương tiện vận tải",
+                "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB",
+                "Số dư tiền gửi ngoại tệ tại NCB",
+                "Loại khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bất động sản",
+                "Bảo lãnh",
+                "Chứng khoán của doanh nghiệp",
+                "Hàng hóa, nguyên liệu, nhiên liệu, vật liệu",
+                "Máy móc thiết bị chuyên dùng",
+                "Phương tiện vận tải",
+                "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB",
+                "Số dư tiền gửi ngoại tệ tại NCB",
+                "Loại khác",
+                "Tổng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu -)",
+                "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                "Nợ phải trả",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu -)",
+                "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                "Cho vay khách hàng (*) (mã chỉ tiêu 8.088.597)",
+                "Hoạt động mua nợ (*) (mã chỉ tiêu -)",
+                "Chứng khoán đầu tư (*) (mã chỉ tiêu 1.649.999)",
+                "Góp vốn, đầu tư dài hạn (*) (mã chỉ tiêu -)",
+                "Tài sản cố định và Bắt động sản đầu tư (mã chỉ tiêu -)",
+                "Tài sản Có khác (*) (mã chỉ tiêu 104.185)",
+                "Tổng Tài sản (mã chỉ tiêu 25.256.703)",
+                "Nợ phải trả",
+                "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu -)",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro (mã chỉ tiêu -)",
+                "Phát hành giấy tờ có giá (mã chỉ tiêu -)",
+                "Các khoản nợ khác (mã chỉ tiêu 266.469)",
+                "Tổng Nợ phải trả (mã chỉ tiêu 22.211.780)",
+                "Mức chênh lệch nhạy cảm với lãi suất nội bảng (mã chỉ tiêu 3.044.923)",
+                "Các cam kết ngoại bảng có tác động tới mức độ nhạy cảm với lãi suất của các tài sản và công nợ (ròng) (mã chỉ tiêu -)",
+                "Mức chênh lệch nhạy cảm với lãi suất nội, ngoại bảng (mã chỉ tiêu 3.044.923)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 16: Vốn quỹ của Tổ chức tín dụng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư tại ngày 31/12/2022",
+                "Số dư tại ngày 31/12/2021",
+                "Số dư tại ngày 01/01/2022",
+                "Số dư tại ngày 01/01/2021"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư tại ngày 01/01/2021",
+                "Số dư tại ngày 31/12/2021",
+                "Số dư tại ngày 01/01/2022",
+                "- Tăng vốn trong năm",
+                "Số dư tại ngày 31/12/2022"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư tại ngày 01/01/2021",
+                "Số dư tại ngày 31/12/2021",
+                "Số dư tại ngày 01/01/2022",
+                "- Tăng vốn trong năm",
+                "Số dư tại ngày 31/12/2022"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 5: Đối với sự thay đổi (tăng/giảm) của Dự phòng rủi ro tín dụng Năm nay Dự phòng chung Dự phòng cụ thể Số dư đầu năm 303.086 388.529"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Dự phòng rủi ro trích lập / (hoàn nhập) trong năm",
+                "Sử dụng dự phòng rủi ro tín dụng trong năm",
+                "Chi tiết số dư dự phòng cuối năm (*)",
+                "Dự phòng rủi ro cho vay khách hàng",
+                "+ Dự phòng chung"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Dự phòng rủi ro trích lập / (hoàn nhập) trong năm",
+                "Sử dụng dự phòng rủi ro tín dụng trong năm",
+                "Số dư cuối năm (*)",
+                "Số dư cuối năm",
+                "Chi tiết số dư dự phòng cuối năm (*)",
+                "Dự phòng rủi ro cho vay khách hàng",
+                "+ Dự phòng chung",
+                "+ Dự phòng cụ thể",
+                "Cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 29: Nghĩa vụ nợ tiềm ăn và các cam kết đưa ra Chỉ tiêu 31/12/2022 01/01/2021 Bảo lãnh vay vốn 28.644 429"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cam kết thanh toán trong nghiệp vụ L/C",
+                "Các bảo lãnh khác",
+                "Bảo lãnh thanh toán",
+                "Bảo lãnh dự thầu",
+                "Cam kết bảo lãnh khác",
+                "Các cam kết khác",
+                "Tổng cộng"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bảo lãnh vay vốn",
+                "Cam kết giao dịch ngoại hối",
+                "Cam kết giao dịch hoán đối",
+                "Cam kết trong nghiệp vụ L/C",
+                "Cam kết thanh toán trong nghiệp vụ L/C",
+                "Các bảo lãnh khác",
+                "Bảo lãnh thanh toán",
+                "Bảo lãnh thực hiện hợp đồng",
+                "Bảo lãnh dự thầu",
+                "Cam kết bảo lãnh khác",
+                "Các cam kết khác",
+                "Tổng cộng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: Tài sản có khác 31/12/2022 01/01/2022 1. Chi phí xây dựng cơ bản dở dang 18.200 13.228"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "1. Chi phí xây dựng cơ bản dở dang",
+                "2. Các khoản phải thu",
+                "3. Các khoản lãi, phí phải thu",
+                "4. Tài sản có khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "1. Chi phí xây dựng cơ bản dở dang",
+                "2. Các khoản phải thu",
+                "3. Các khoản lãi, phí phải thu",
+                "4. Tài sản có khác",
+                "5. Các khoản dự phòng rủi ro cho các tài sản có nội bảng khác",
+                "Tổng cộng",
+                "10.1 Chi phí xây dựng cơ bản dở dang",
+                "- Mua sắm TSCĐ khác",
+                "Cộng",
+                "10.2 Các khoản phải thu",
+                "- Các khoản phải thu nội bộ",
+                "- Các khoản phải thu bên ngoài",
+                "Phải thu từ hoạt động bán nợ (*)",
+                "Phải thu các cá nhân",
+                "Phải thu các khoản ký quỹ",
+                "Các khoản phải thu bên ngoài khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "31/12/2022",
+                "01/01/2022"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cho vay ngắn hạn",
+                "Bằng VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cho vay ngắn hạn",
+                "Bằng VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "17.392 VND/CAD",
+                "25.127 VND/EUR",
+                "28.446 VND/GBP"
+              ],
+              "mục lục chỉ tiêu": [
+                "17.392 VND/CAD",
+                "25.127 VND/EUR",
+                "28.446 VND/GBP"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 32: Mức độ tập trung theo khu vực địa lý của các tài sản, công nợ và các khoản mục ngoại bằng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Trong nước"
+              ],
+              "mục lục chỉ tiêu": [
+                "Trong nước"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 20: Lãi/lỗ thuần từ hoạt động kinh doanh ngoại hối Năm 2022 Năm 2021 Thu nhập từ hoạt động kinh doanh ngoại hối 1.265.712 657.284"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Năm 2022",
+                "Năm 2021"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu nhập từ hoạt động kinh doanh ngoại hối",
+                "Thu từ kinh doanh ngoại tệ giao ngay và chênh lệch đánh giá ngoại tệ kinh doanh",
+                "Thu từ các công cụ tài chính phải sinh tiền tệ",
+                "Chi phí hoạt động kinh doanh ngoại hối",
+                "Chi từ kinh doanh ngoại tệ giao ngay và chênh lệch đánh giá ngoại tệ kinh doanh",
+                "Chi từ các công cụ tài chính phải sinh tiền tệ",
+                "Lãi/ (lỗ) thuần từ hoạt động kinh doanh ngoại hối"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập từ hoạt động kinh doanh ngoại hối",
+                "Thu từ kinh doanh ngoại tệ giao ngay và chênh lệch đánh giá ngoại tệ kinh doanh",
+                "Thu từ các công cụ tài chính phải sinh tiền tệ",
+                "Chi phí hoạt động kinh doanh ngoại hối",
+                "Chi từ kinh doanh ngoại tệ giao ngay và chênh lệch đánh giá ngoại tệ kinh doanh",
+                "Chi từ các công cụ tài chính phải sinh tiền tệ",
+                "Lãi/ (lỗ) thuần từ hoạt động kinh doanh ngoại hối"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                " (mã chỉ tiêu Hoạt động huy động và tín dụng)",
+                "Thu nhập (mã chỉ tiêu 4.616.092)",
+                "Chi phí (mã chỉ tiêu 4.100.666)",
+                "Thu nhập thuần (mã chỉ tiêu 515.426)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập (mã chỉ tiêu 4.616.092)",
+                "Chi phí (mã chỉ tiêu 4.100.666)",
+                "Thu nhập thuần (mã chỉ tiêu 515.426)",
+                "Tài sản bộ phận (mã chỉ tiêu 58.421.264)",
+                "Tài sản không phân bổ",
+                "Tổng tài sản",
+                "Nợ phải trả bộ phận (mã chỉ tiêu 81.943.334)",
+                "Nợ phải trả không phân bổ",
+                "Tổng nợ phải trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Vốn chủ sở hữu (tham chiếu Thuyết minh số V.16)",
+                "Vốn của TCTD",
+                "Vốn điều lệ",
+                "Vốn đầu tư XDCB",
+                "Thăng dư vốn cổ phần",
+                "Cổ phiếu quỹ",
+                "Quỹ của TCTD",
+                "Chênh lệch tỷ giá hối đoái"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vốn chủ sở hữu (tham chiếu Thuyết minh số V.16)",
+                "Vốn của TCTD",
+                "Vốn điều lệ",
+                "Vốn đầu tư XDCB",
+                "Thăng dư vốn cổ phần",
+                "Cổ phiếu quỹ",
+                "Quỹ của TCTD",
+                "Chênh lệch tỷ giá hối đoái",
+                "Chênh lệch đánh giá lại tài sản",
+                "Lợi nhuận chưa phân phối/Lỗ lũy kế",
+                "Lợi nhuận / (lỗ) năm nay",
+                "Lợi nhuận / (lỗ) năm trước",
+                "TỔNG NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c05",
+            "c17"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c05",
+          "c17"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02",
+            "c30",
+            "c50"
+          ]
+        },
+        "nominated_keys": [
+          "c02",
+          "c30",
+          "c50"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03"
+          ]
+        },
+        "nominated_keys": [
+          "c03"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c04",
+            "c08"
+          ]
+        },
+        "nominated_keys": [
+          "c04",
+          "c08"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c08",
+      "c30",
+      "c17",
+      "c50"
+    ],
+    "lexical_finalist_keys": [
+      "c12",
+      "c02",
+      "c08"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c08",
+      "c30",
+      "c17",
+      "c50",
+      "c12"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Số dư tiền gửi tại các TCTD khác của công ty mẹ Ngân hàng TMCP Quốc Dân (NVB) là bao nhiêu triệu đồng vào ngày 31/12/2022?",
+      "giới hạn số bảng": 10,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "NVB",
+          "tên doanh nghiệp": "Ngân hàng TMCP Quốc Dân",
+          "năm": 2022,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "NVB",
+          "tên doanh nghiệp": "Ngân hàng TMCP Quốc Dân",
+          "năm": 2022,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "11.1. Tiền gửi của các TCTD khác",
+                  "Tổng cộng tiền gửi và vay các TCTD khác",
+                  "Tiền gửi của TCKT",
+                  "11.2. Vay các TCTD khác",
+                  "Tiền gửi có kỳ hạn"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "11.1. Tiền gửi của các TCTD khác",
+                  "a. Tiền gửi không kỳ hạn",
+                  "- Bằng VND",
+                  "Cộng",
+                  "Tổng cộng tiền gửi và vay các TCTD khác",
+                  "- Thuyết minh theo loại tiền gửi"
+                ],
+                "mục lục chỉ tiêu": [
+                  "11.1. Tiền gửi của các TCTD khác",
+                  "a. Tiền gửi không kỳ hạn",
+                  "- Bằng VND",
+                  "- Bằng ngoại hối",
+                  "b. Tiền gửi có kỳ hạn",
+                  "Cộng",
+                  "11.2. Vay các TCTD khác",
+                  "Tổng cộng tiền gửi và vay các TCTD khác",
+                  "- Thuyết minh theo loại tiền gửi",
+                  "Tiền gửi không kỳ hạn",
+                  "Tiền gửi có kỳ hạn",
+                  "Tiền gửi vốn chuyên dùng",
+                  "Tiền gửi ký quỹ",
+                  "Tổng cộng",
+                  "- Thuyết minh theo đối tượng khách hàng, loại hình doanh nghiệp",
+                  "Tiền gửi của TCKT",
+                  "Doanh nghiệp nhà nước",
+                  "Công ty CP, TNHH, Hợp danh",
+                  "Doanh nghiệp tư nhân",
+                  "Công ty chứng khoán, bảo hiểm, tài chính",
+                  "Kinh tế cá thể, Kinh tế tập thể",
+                  "Doanh nghiệp có vốn đầu tư nước ngoài",
+                  "Tiền gửi của cá nhân"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                  "Tiền gửi của khách hàng"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tiền mặt, vàng bạc, đá quỹ",
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                  "Cho vay khách hàng (*)",
+                  "Tổng Tài sản",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền vay từ Chính phủ và NHNN"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Trên 3 tháng",
+                  "Tiền mặt, vàng bạc, đá quỹ",
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*)",
+                  "Cho vay khách hàng (*)",
+                  "Chứng khoán đầu tư (*)",
+                  "Góp vốn, đầu tư dài hạn (*)",
+                  "Tài sản cố định và Bất động sản đầu tư",
+                  "Tài sản Có khác (*)",
+                  "Tổng Tài sản",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền vay từ Chính phủ và NHNN",
+                  "Tiền gửi của khách hàng",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                  "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                  "Phát hành giấy tờ có giá",
+                  "Các khoản nợ khác",
+                  "Tổng Nợ phải trả",
+                  "Mức chênh thanh khoản ròng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 3: Tiền gửi tại các TCTD khác và cho vay các TCTD khác"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi có kỳ hạn",
+                  "Tiền gửi không kỳ hạn"
+                ],
+                "kỳ số liệu": [
+                  "31/12/2022",
+                  "01/01/2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tiền gửi không kỳ hạn",
+                  "Bằng VND",
+                  "Bằng ngoại hối",
+                  "Tiền gửi có kỳ hạn",
+                  "Cộng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền gửi không kỳ hạn",
+                  "Bằng VND",
+                  "Bằng ngoại hối",
+                  "Tiền gửi có kỳ hạn",
+                  "Cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 28: Loại hình và giá trị tài sản thế chấp của khách hàng"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                  "Số dư tiền gửi ngoại tệ tại NCB",
+                  "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB"
+                ],
+                "kỳ số liệu": [
+                  "Giá trị đến31/12/2022",
+                  "Giá trị đến01/01/2022"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Phương tiện vận tải",
+                  "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                  "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB",
+                  "Số dư tiền gửi ngoại tệ tại NCB",
+                  "Loại khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Bất động sản",
+                  "Bảo lãnh",
+                  "Chứng khoán của doanh nghiệp",
+                  "Hàng hóa, nguyên liệu, nhiên liệu, vật liệu",
+                  "Máy móc thiết bị chuyên dùng",
+                  "Phương tiện vận tải",
+                  "Số dư tiền gửi, Số Tiết kiệm bằng VND tại TCTD",
+                  "Số dư tiền gửi, kỳ phiếu, chứng chỉ tiền gỏi bằng VND tại NCB",
+                  "Số dư tiền gửi ngoại tệ tại NCB",
+                  "Loại khác",
+                  "Tổng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c05",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Tiền gửi của khách hàng (mã chỉ tiêu 13.745.165)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu 384.031)",
+                  "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                  "Nợ phải trả",
+                  "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền vay từ Chính phủ và NHNN (mã chỉ tiêu -)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Trên 3 tháng (mã chỉ tiêu Từ 1 - 3 tháng)",
+                  "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu 384.031)",
+                  "Tiền gối tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gối tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                  "Cho vay khách hàng (*) (mã chỉ tiêu 1.814.023)",
+                  "Hoạt động mua nợ (*) (mã chỉ tiêu -)",
+                  "Chứng khoán đầu tư (*) (mã chỉ tiêu 1.649.999)",
+                  "Góp vốn, đầu tư dài hạn (*) (mã chỉ tiêu -)",
+                  "Tài sản cố định và Bất động sản đầu tư (mã chỉ tiêu -)",
+                  "Tài sản Có khác (*) (mã chỉ tiêu 114.446)",
+                  "Tổng Tài sản (mã chỉ tiêu 19.376.421)",
+                  "Nợ phải trả",
+                  "Tiền gửi của và vay từ các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền vay từ Chính phủ và NHNN (mã chỉ tiêu -)",
+                  "Tiền gửi của khách hàng (mã chỉ tiêu 13.745.165)",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu -)",
+                  "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro (mã chỉ tiêu -)",
+                  "Phát hành giấy tờ có giá (mã chỉ tiêu -)",
+                  "Các khoản nợ khác (mã chỉ tiêu 1.041.887)",
+                  "Tổng Nợ phải trả (mã chỉ tiêu 23.304.296)",
+                  "Mức chênh thanh khoản ròng (mã chỉ tiêu (3.927.875))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu -)",
+                  "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                  "Nợ phải trả",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền mặt, vàng bạc, đá quý (mã chỉ tiêu -)",
+                  "Tiền gửi tại ngân hàng Nhà nước (mã chỉ tiêu 3.749.729)",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*) (mã chỉ tiêu 11.658.653)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (*) (mã chỉ tiêu 5.540)",
+                  "Cho vay khách hàng (*) (mã chỉ tiêu 8.088.597)",
+                  "Hoạt động mua nợ (*) (mã chỉ tiêu -)",
+                  "Chứng khoán đầu tư (*) (mã chỉ tiêu 1.649.999)",
+                  "Góp vốn, đầu tư dài hạn (*) (mã chỉ tiêu -)",
+                  "Tài sản cố định và Bắt động sản đầu tư (mã chỉ tiêu -)",
+                  "Tài sản Có khác (*) (mã chỉ tiêu 104.185)",
+                  "Tổng Tài sản (mã chỉ tiêu 25.256.703)",
+                  "Nợ phải trả",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác (mã chỉ tiêu 8.517.244)",
+                  "Tiền gửi của khách hàng (mã chỉ tiêu 13.428.067)",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu -)",
+                  "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro (mã chỉ tiêu -)",
+                  "Phát hành giấy tờ có giá (mã chỉ tiêu -)",
+                  "Các khoản nợ khác (mã chỉ tiêu 266.469)",
+                  "Tổng Nợ phải trả (mã chỉ tiêu 22.211.780)",
+                  "Mức chênh lệch nhạy cảm với lãi suất nội bảng (mã chỉ tiêu 3.044.923)",
+                  "Các cam kết ngoại bảng có tác động tới mức độ nhạy cảm với lãi suất của các tài sản và công nợ (ròng) (mã chỉ tiêu -)",
+                  "Mức chênh lệch nhạy cảm với lãi suất nội, ngoại bảng (mã chỉ tiêu 3.044.923)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c30",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "báo cáo lưu chuyển tiền tệ",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                  "Tiền gửi tại NHNN",
+                  "Tiền mặt và các khoản tương đương tiền tại quỹ"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Tiền mặt và các khoản tương đương tiền tại quỹ",
+                  "Tiền gửi tại NHNN",
+                  "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                  "Tổng cộng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền mặt và các khoản tương đương tiền tại quỹ",
+                  "Tiền gửi tại NHNN",
+                  "Tiền gửi tại các TCTD khác và cho vay các TCTD khác (không ký hạn và ký hạn < 3 tháng)",
+                  "Tổng cộng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c17",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền gửi của khách hàng"
+                ],
+                "kỳ số liệu": [
+                  "Đến 1 tháng",
+                  "Từ 01 đến 03 tháng",
+                  "Từ 03 đến 06 tháng",
+                  "Từ 06 đến 12 tháng",
+                  "Từ 1 đến 5 năm",
+                  "Trên 5 năm"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tiền mặt, vàng bạc, đá quý",
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                  "Cho vay khách hàng (*)",
+                  "Tổng Tài sản",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền gửi của khách hàng"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền mặt, vàng bạc, đá quý",
+                  "Tiền gửi tại ngân hàng Nhà nước",
+                  "Tiền, vàng gửi tại và cho vay các TCTD khác (*)",
+                  "Cho vay khách hàng (*)",
+                  "Chứng khoán đầu tư (*)",
+                  "Góp vốn, đầu tư dài hạn (*)",
+                  "Tài sản cố định và Bất động sản đầu tư",
+                  "Tài sản Có khác (*)",
+                  "Tổng Tài sản",
+                  "Tiền gửi của và vay từ NHNN và các TCTD khác",
+                  "Tiền gửi của khách hàng",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                  "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                  "Phát hành giấy tờ có giá",
+                  "Các khoản nợ khác",
+                  "Tổng Nợ phải trả",
+                  "Mức chênh lệch nhạy cảm với lãi suất nội bảng",
+                  "Các cam kết ngoại bảng có tác động tới mức độ nhạy cảm với lãi suất của các tài sản và công nợ (ròng)",
+                  "Mức chênh lệch nhạy cảm với lãi suất nội, ngoại bảng"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c50",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tiền gửi của các TCTD khác",
+                  "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                  "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                  "Vay các TCTD khác",
+                  "Tiền gửi và vay Chính phủ, NHNN"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước",
+                  "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                  "Tiền gửi của các TCTD khác",
+                  "Vay các TCTD khác",
+                  "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+                  "Các khoản nợ chính phủ và Ngân hàng Nhà nước",
+                  "Tiền gửi và vay Chính phủ, NHNN",
+                  "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước",
+                  "Tiền gửi và vay các TCTD khác (tham chiếu Thuyết minh số V.11)",
+                  "Tiền gửi của các TCTD khác",
+                  "Vay các TCTD khác",
+                  "Tiền gửi của khách hàng (tham chiếu Thuyết minh số V.12)",
+                  "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                  "Vốn tài trợ, Ủy thác đầu tư, cho vay TCTD chịu rủi ro (tham chiếu Thuyết minh số V.13)",
+                  "Phát hành giấy tờ có giá (tham chiếu Thuyết minh số V.14)",
+                  "Các khoản nợ khác (tham chiếu Thuyết minh số V.15)",
+                  "Các khoản lãi, phí phải trả",
+                  "Thuế TNDN hoãn lại phải trả",
+                  "Các khoản phải trả và công nợ khác",
+                  "Dự phòng rủi ro khác (DP cho công nợ tiềm ấn và cam kết ngoại bảng)",
+                  "TỔNG NỘ PHẢI TRẢ"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c12",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "NVB — Ngân hàng TMCP Quốc Dân — năm 2022 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 16: Vốn quỹ của Tổ chức tín dụng"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Số dư tại ngày 31/12/2022",
+                  "Số dư tại ngày 31/12/2021",
+                  "Số dư tại ngày 01/01/2022",
+                  "Số dư tại ngày 01/01/2021"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư tại ngày 01/01/2021",
+                  "Số dư tại ngày 31/12/2021",
+                  "Số dư tại ngày 01/01/2022",
+                  "- Tăng vốn trong năm",
+                  "Số dư tại ngày 31/12/2022"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư tại ngày 01/01/2021",
+                  "Số dư tại ngày 31/12/2021",
+                  "Số dư tại ngày 01/01/2022",
+                  "- Tăng vốn trong năm",
+                  "Số dư tại ngày 31/12/2022"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Tiền gửi của các TCTD khác",
+              "vai trò": "số dư cuối kỳ"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c50",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c03",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Tiền gửi của các TCTD khác",
+            "role": "số dư cuối kỳ"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c50",
+      "c03"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c50",
+      "c03"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_4",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_4",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2022,
+        "start_line": 348
+      },
+      "rrf_score": 0.009345794392523364,
+      "dense_rank": 50,
+      "dense_score": 0.80376935,
+      "retrieval_score": 0.009345794392523364,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 17,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+          },
+          {
+            "row": 3,
+            "label": "Các khoản nợ chính phủ và Ngân hàng Nhà nước"
+          },
+          {
+            "row": 4,
+            "label": "Tiền gửi và vay Chính phủ, NHNN"
+          },
+          {
+            "row": 5,
+            "label": "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước"
+          },
+          {
+            "row": 6,
+            "note_ref": "V.11",
+            "label": "Tiền gửi và vay các TCTD khác"
+          },
+          {
+            "row": 7,
+            "label": "Tiền gửi của các TCTD khác"
+          },
+          {
+            "row": 8,
+            "label": "Vay các TCTD khác"
+          },
+          {
+            "row": 9,
+            "note_ref": "V.12",
+            "label": "Tiền gửi của khách hàng"
+          },
+          {
+            "row": 10,
+            "label": "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác"
+          },
+          {
+            "row": 11,
+            "note_ref": "V.13",
+            "label": "Vốn tài trợ, Ủy thác đầu tư, cho vay TCTD chịu rủi ro"
+          },
+          {
+            "row": 12,
+            "note_ref": "V.14",
+            "label": "Phát hành giấy tờ có giá"
+          },
+          {
+            "row": 13,
+            "note_ref": "V.15",
+            "label": "Các khoản nợ khác"
+          },
+          {
+            "row": 14,
+            "label": "Các khoản lãi, phí phải trả"
+          },
+          {
+            "row": 15,
+            "label": "Thuế TNDN hoãn lại phải trả"
+          },
+          {
+            "row": 16,
+            "label": "Các khoản phải trả và công nợ khác"
+          },
+          {
+            "row": 17,
+            "label": "Dự phòng rủi ro khác (DP cho công nợ tiềm ấn và cam kết ngoại bảng)"
+          },
+          {
+            "row": 18,
+            "label": "TỔNG NỘ PHẢI TRẢ"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 5,
+            "label": "Giao dịch bán và mua lại trái phiếu Chính phủ với Kho bạc Nhà nước"
+          },
+          {
+            "row": 6,
+            "note_ref": "V.11",
+            "label": "Tiền gửi và vay các TCTD khác"
+          },
+          {
+            "row": 7,
+            "label": "Tiền gửi của các TCTD khác"
+          },
+          {
+            "row": 8,
+            "label": "Vay các TCTD khác"
+          },
+          {
+            "row": 9,
+            "note_ref": "V.12",
+            "label": "Tiền gửi của khách hàng"
+          },
+          {
+            "row": 10,
+            "label": "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "NVB_financial_statements_2022_separate_table_16",
+      "metadata": {
+        "table_id": "NVB_financial_statements_2022_separate_table_16",
+        "doc_id": "NVB_financial_statements_2022_separate",
+        "ticker": "NVB",
+        "company_name": "Ngân hàng TMCP Quốc Dân",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2022,
+        "start_line": 1035
+      },
+      "rrf_score": 0.03057889822595705,
+      "dense_rank": 3,
+      "dense_score": 0.88704455,
+      "bm25_rank": 8,
+      "bm25_score": 12.51348713822235,
+      "retrieval_score": 0.03057889822595705,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2022",
+          "01/01/2022",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "31/12/2022",
+          "01/01/2022"
+        ],
+        "units": [],
+        "row_count": 7,
+        "table_titles": [
+          "Thuyết minh 3: Tiền gửi tại các TCTD khác và cho vay các TCTD khác"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Tiền gửi không kỳ hạn"
+          },
+          {
+            "row": 3,
+            "label": "Bằng VND"
+          },
+          {
+            "row": 4,
+            "label": "Bằng ngoại hối"
+          },
+          {
+            "row": 5,
+            "label": "Tiền gửi có kỳ hạn"
+          },
+          {
+            "row": 6,
+            "label": "Bằng VND"
+          },
+          {
+            "row": 7,
+            "label": "Bằng ngoại hối"
+          },
+          {
+            "row": 8,
+            "label": "Cộng"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Tiền gửi không kỳ hạn"
+          },
+          {
+            "row": 3,
+            "label": "Bằng VND"
+          },
+          {
+            "row": 4,
+            "label": "Bằng ngoại hối"
+          },
+          {
+            "row": 5,
+            "label": "Tiền gửi có kỳ hạn"
+          },
+          {
+            "row": 6,
+            "label": "Bằng VND"
+          },
+          {
+            "row": 7,
+            "label": "Bằng ngoại hối"
+          },
+          {
+            "row": 8,
+            "label": "Cộng"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "NVB_financial_statements_2022_separate"
+      ],
+      "tables": [
+        "NVB_financial_statements_2022_separate|1248",
+        "NVB_financial_statements_2022_separate|1704",
+        "NVB_financial_statements_2022_separate|1035",
+        "NVB_financial_statements_2022_separate|1439",
+        "NVB_financial_statements_2022_separate|1685",
+        "NVB_financial_statements_2022_separate|450",
+        "NVB_financial_statements_2022_separate|1029",
+        "NVB_financial_statements_2022_separate|1579",
+        "NVB_financial_statements_2022_separate|1056",
+        "NVB_financial_statements_2022_separate|1319",
+        "NVB_financial_statements_2022_separate|1652",
+        "NVB_financial_statements_2022_separate|1290",
+        "NVB_financial_statements_2022_separate|1104",
+        "NVB_financial_statements_2022_separate|1464",
+        "NVB_financial_statements_2022_separate|1265",
+        "NVB_financial_statements_2022_separate|1077",
+        "NVB_financial_statements_2022_separate|1604",
+        "NVB_financial_statements_2022_separate|1204",
+        "NVB_financial_statements_2022_separate|1404",
+        "NVB_financial_statements_2022_separate|1458",
+        "NVB_financial_statements_2022_separate|913",
+        "NVB_financial_statements_2022_separate|471",
+        "NVB_financial_statements_2022_separate|1179",
+        "NVB_financial_statements_2022_separate|1223",
+        "NVB_financial_statements_2022_separate|431",
+        "NVB_financial_statements_2022_separate|1085",
+        "NVB_financial_statements_2022_separate|1435",
+        "NVB_financial_statements_2022_separate|1037",
+        "NVB_financial_statements_2022_separate|1158",
+        "NVB_financial_statements_2022_separate|1412",
+        "NVB_financial_statements_2022_separate|1354",
+        "NVB_financial_statements_2022_separate|595",
+        "NVB_financial_statements_2022_separate|1227",
+        "NVB_financial_statements_2022_separate|1200",
+        "NVB_financial_statements_2022_separate|1271",
+        "NVB_financial_statements_2022_separate|1472",
+        "NVB_financial_statements_2022_separate|1431",
+        "NVB_financial_statements_2022_separate|1358",
+        "NVB_financial_statements_2022_separate|329",
+        "NVB_financial_statements_2022_separate|1377",
+        "NVB_financial_statements_2022_separate|1133",
+        "NVB_financial_statements_2022_separate|96",
+        "NVB_financial_statements_2022_separate|1385",
+        "NVB_financial_statements_2022_separate|1493",
+        "NVB_financial_statements_2022_separate|1381",
+        "NVB_financial_statements_2022_separate|1231",
+        "NVB_financial_statements_2022_separate|1108",
+        "NVB_financial_statements_2022_separate|365",
+        "NVB_financial_statements_2022_separate|683",
+        "NVB_financial_statements_2022_separate|348"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "NVB_financial_statements_2022_separate"
+      ],
+      "tables": [
+        "NVB_financial_statements_2022_separate|1248",
+        "NVB_financial_statements_2022_separate|1704",
+        "NVB_financial_statements_2022_separate|1035",
+        "NVB_financial_statements_2022_separate|1439",
+        "NVB_financial_statements_2022_separate|1685",
+        "NVB_financial_statements_2022_separate|1579",
+        "NVB_financial_statements_2022_separate|1412",
+        "NVB_financial_statements_2022_separate|1604",
+        "NVB_financial_statements_2022_separate|348"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "NVB_financial_statements_2022_separate"
+      ],
+      "tables": [
+        "NVB_financial_statements_2022_separate|1248",
+        "NVB_financial_statements_2022_separate|1704",
+        "NVB_financial_statements_2022_separate|1035",
+        "NVB_financial_statements_2022_separate|1439",
+        "NVB_financial_statements_2022_separate|1685",
+        "NVB_financial_statements_2022_separate|1579",
+        "NVB_financial_statements_2022_separate|1412",
+        "NVB_financial_statements_2022_separate|1604",
+        "NVB_financial_statements_2022_separate|348",
+        "NVB_financial_statements_2022_separate|1290"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "NVB_financial_statements_2022_separate"
+      ],
+      "tables": [
+        "NVB_financial_statements_2022_separate|348",
+        "NVB_financial_statements_2022_separate|1035"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "NVB_financial_statements_2022_separate"
+      ],
+      "tables": [
+        "NVB_financial_statements_2022_separate|348",
+        "NVB_financial_statements_2022_separate|1035"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.1111111111111111,
+        "recall": 1.0,
+        "f2": 0.38461538461538464,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f2": 0.35714285714285715,
+        "mrr5": 0.3333333333333333
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 0.5
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "NVB_financial_statements_2022_separate|1035",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

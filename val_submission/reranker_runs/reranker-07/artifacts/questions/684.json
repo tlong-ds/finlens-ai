@@ -1,0 +1,4331 @@
+{
+  "schema_version": 2,
+  "id": 684,
+  "question": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+  "started_at": "2026-08-23T09:38:52+00:00",
+  "finished_at": "2026-08-23T09:39:22+00:00",
+  "duration_seconds": 30.10285713399935,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/684.json",
+  "golden": {
+    "id": 684,
+    "question": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+    "relevant_docs": [
+      "SHB_financial_statements_2016_separate"
+    ],
+    "relevant_tables": [
+      "SHB_financial_statements_2016_separate|1479"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_33",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_33",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1479
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.8514783,
+      "bm25_rank": 1,
+      "bm25_score": 22.68194919466656,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_85",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_85",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2364
+      },
+      "rrf_score": 0.032266458495966696,
+      "dense_rank": 2,
+      "dense_score": 0.8562634,
+      "bm25_rank": 3,
+      "bm25_score": 21.177029706430183,
+      "retrieval_score": 0.032266458495966696,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_2",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_2",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 169
+      },
+      "rrf_score": 0.030330882352941176,
+      "dense_rank": 3,
+      "dense_score": 0.81355405,
+      "bm25_rank": 4,
+      "bm25_score": 20.07365969826087,
+      "retrieval_score": 0.030330882352941176,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_63",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_63",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1887
+      },
+      "rrf_score": 0.030309988518943745,
+      "dense_rank": 4,
+      "dense_score": 0.82133746,
+      "bm25_rank": 7,
+      "bm25_score": 16.06854305662256,
+      "retrieval_score": 0.030309988518943745,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_35",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_35",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1492
+      },
+      "rrf_score": 0.030158730158730156,
+      "dense_rank": 5,
+      "dense_score": 0.8353172,
+      "bm25_rank": 10,
+      "bm25_score": 15.310782392147118,
+      "retrieval_score": 0.030158730158730156,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_64",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_64",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1889
+      },
+      "rrf_score": 0.02964426877470356,
+      "dense_rank": 6,
+      "dense_score": 0.81617326,
+      "bm25_rank": 9,
+      "bm25_score": 15.91940287632675,
+      "retrieval_score": 0.02964426877470356,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_62",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_62",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1883
+      },
+      "rrf_score": 0.028991596638655463,
+      "dense_rank": 7,
+      "dense_score": 0.8121778,
+      "bm25_rank": 8,
+      "bm25_score": 15.966607043964746,
+      "retrieval_score": 0.028991596638655463,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_94",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_94",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2514
+      },
+      "rrf_score": 0.028949545078577336,
+      "dense_rank": 8,
+      "dense_score": 0.80154425,
+      "bm25_rank": 2,
+      "bm25_score": 21.762434627657086,
+      "retrieval_score": 0.028949545078577336,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_70",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_70",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2096
+      },
+      "rrf_score": 0.028125,
+      "dense_rank": 9,
+      "dense_score": 0.82799,
+      "bm25_rank": 20,
+      "bm25_score": 11.7903684991827,
+      "retrieval_score": 0.028125,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_7",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_7",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2016,
+        "start_line": 343
+      },
+      "rrf_score": 0.02797339593114241,
+      "dense_rank": 10,
+      "dense_score": 0.8065728,
+      "bm25_rank": 11,
+      "bm25_score": 15.093005058596766,
+      "retrieval_score": 0.02797339593114241,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_44",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_44",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1604
+      },
+      "rrf_score": 0.027730294396961064,
+      "dense_rank": 11,
+      "dense_score": 0.79946584,
+      "bm25_rank": 5,
+      "bm25_score": 17.764078842965475,
+      "retrieval_score": 0.027730294396961064,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_84",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_84",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2310
+      },
+      "rrf_score": 0.0273972602739726,
+      "dense_rank": 12,
+      "dense_score": 0.8064201,
+      "bm25_rank": 13,
+      "bm25_score": 12.880943872384229,
+      "retrieval_score": 0.0273972602739726,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_27",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_27",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1407
+      },
+      "rrf_score": 0.0266900790166813,
+      "dense_rank": 13,
+      "dense_score": 0.8160963,
+      "bm25_rank": 25,
+      "bm25_score": 8.071954472085169,
+      "retrieval_score": 0.0266900790166813,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_3",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_3",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 200
+      },
+      "rrf_score": 0.024288588674906582,
+      "dense_rank": 14,
+      "dense_score": 0.8096282,
+      "bm25_rank": 38,
+      "bm25_score": 5.894676503444783,
+      "retrieval_score": 0.024288588674906582,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_51",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_51",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1682
+      },
+      "rrf_score": 0.02402186421173763,
+      "dense_rank": 15,
+      "dense_score": 0.80067444,
+      "bm25_rank": 28,
+      "bm25_score": 7.31688964607571,
+      "retrieval_score": 0.02402186421173763,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_22",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_22",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1358
+      },
+      "rrf_score": 0.023839931885908897,
+      "dense_rank": 16,
+      "dense_score": 0.79390067,
+      "bm25_rank": 21,
+      "bm25_score": 10.777419459929794,
+      "retrieval_score": 0.023839931885908897,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_90",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_90",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2435
+      },
+      "rrf_score": 0.023434343434343436,
+      "dense_rank": 17,
+      "dense_score": 0.8043033,
+      "bm25_rank": 39,
+      "bm25_score": 5.893882175196037,
+      "retrieval_score": 0.023434343434343436,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_77",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_77",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2234
+      },
+      "rrf_score": 0.02325895875591616,
+      "dense_rank": 18,
+      "dense_score": 0.79644835,
+      "bm25_rank": 27,
+      "bm25_score": 7.399529667672428,
+      "retrieval_score": 0.02325895875591616,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_24",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_24",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1366
+      },
+      "rrf_score": 0.0227214377406932,
+      "dense_rank": 19,
+      "dense_score": 0.79793143,
+      "bm25_rank": 35,
+      "bm25_score": 6.508452085081545,
+      "retrieval_score": 0.0227214377406932,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_30",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_30",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1444
+      },
+      "rrf_score": 0.02268782544011902,
+      "dense_rank": 20,
+      "dense_score": 0.8047592,
+      "bm25_rank": 49,
+      "bm25_score": 4.004182802794755,
+      "retrieval_score": 0.02268782544011902,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_82",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_82",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2255
+      },
+      "rrf_score": 0.022108843537414963,
+      "dense_rank": 21,
+      "dense_score": 0.7886488,
+      "bm25_rank": 24,
+      "bm25_score": 8.357041958901366,
+      "retrieval_score": 0.022108843537414963,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_45",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_45",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1608
+      },
+      "rrf_score": 0.021980676328502417,
+      "dense_rank": 22,
+      "dense_score": 0.7919847,
+      "bm25_rank": 30,
+      "bm25_score": 6.771010869518327,
+      "retrieval_score": 0.021980676328502417,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_46",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_46",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1612
+      },
+      "rrf_score": 0.021741699161054,
+      "dense_rank": 23,
+      "dense_score": 0.7917962,
+      "bm25_rank": 31,
+      "bm25_score": 6.6662103078140404,
+      "retrieval_score": 0.021741699161054,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_40",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_40",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1558
+      },
+      "rrf_score": 0.021663577386468954,
+      "dense_rank": 24,
+      "dense_score": 0.7866444,
+      "bm25_rank": 23,
+      "bm25_score": 9.480606661047815,
+      "retrieval_score": 0.021663577386468954,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_92",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_92",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2466
+      },
+      "rrf_score": 0.021431828545371637,
+      "dense_rank": 25,
+      "dense_score": 0.79551435,
+      "bm25_rank": 42,
+      "bm25_score": 5.184659118105052,
+      "retrieval_score": 0.021431828545371637,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_43",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_43",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1570
+      },
+      "rrf_score": 0.02072594501718213,
+      "dense_rank": 26,
+      "dense_score": 0.7888481,
+      "bm25_rank": 36,
+      "bm25_score": 6.508452085081545,
+      "retrieval_score": 0.02072594501718213,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_5",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_5",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2016,
+        "start_line": 277
+      },
+      "rrf_score": 0.020709430756159726,
+      "dense_rank": 27,
+      "dense_score": 0.79358757,
+      "bm25_rank": 47,
+      "bm25_score": 4.05874172702109,
+      "retrieval_score": 0.020709430756159726,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_41",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_41",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1562
+      },
+      "rrf_score": 0.020673486786018755,
+      "dense_rank": 28,
+      "dense_score": 0.7868318,
+      "bm25_rank": 32,
+      "bm25_score": 6.618092058183386,
+      "retrieval_score": 0.020673486786018755,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_42",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_42",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1566
+      },
+      "rrf_score": 0.02046142603612068,
+      "dense_rank": 29,
+      "dense_score": 0.7868318,
+      "bm25_rank": 33,
+      "bm25_score": 6.618092058183386,
+      "retrieval_score": 0.02046142603612068,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_10",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_10",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 439
+      },
+      "rrf_score": 0.01971639471639472,
+      "dense_rank": 30,
+      "dense_score": 0.78795546,
+      "bm25_rank": 44,
+      "bm25_score": 4.909173812504072,
+      "retrieval_score": 0.01971639471639472,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_37",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_37",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1525
+      },
+      "rrf_score": 0.015151515151515152,
+      "bm25_rank": 6,
+      "bm25_score": 16.523499267232545,
+      "retrieval_score": 0.015151515151515152,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 31
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_4",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_4",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 241
+      },
+      "rrf_score": 0.014492753623188406,
+      "dense_rank": 32,
+      "dense_score": 0.8122886,
+      "retrieval_score": 0.014492753623188406,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_101",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_101",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2975
+      },
+      "rrf_score": 0.013888888888888888,
+      "bm25_rank": 12,
+      "bm25_score": 14.441429157134428,
+      "retrieval_score": 0.013888888888888888,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 33
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_102",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_102",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2988
+      },
+      "rrf_score": 0.013513513513513514,
+      "bm25_rank": 14,
+      "bm25_score": 12.73927322591912,
+      "retrieval_score": 0.013513513513513514,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 34
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_99",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_99",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2816
+      },
+      "rrf_score": 0.013333333333333334,
+      "bm25_rank": 15,
+      "bm25_score": 12.447556079594365,
+      "retrieval_score": 0.013333333333333334,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 35
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_28",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_28",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1436
+      },
+      "rrf_score": 0.013157894736842105,
+      "dense_rank": 36,
+      "dense_score": 0.80309117,
+      "retrieval_score": 0.013157894736842105,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_98",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_98",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2761
+      },
+      "rrf_score": 0.013157894736842105,
+      "bm25_rank": 16,
+      "bm25_score": 12.439972400534764,
+      "retrieval_score": 0.013157894736842105,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 37
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_78",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_78",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2238
+      },
+      "rrf_score": 0.012987012987012988,
+      "dense_rank": 38,
+      "dense_score": 0.80208135,
+      "retrieval_score": 0.012987012987012988,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_97",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_97",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2742
+      },
+      "rrf_score": 0.012987012987012988,
+      "bm25_rank": 17,
+      "bm25_score": 12.301281192333981,
+      "retrieval_score": 0.012987012987012988,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 39
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_100",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_100",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2831
+      },
+      "rrf_score": 0.01282051282051282,
+      "bm25_rank": 18,
+      "bm25_score": 12.153231142899747,
+      "retrieval_score": 0.01282051282051282,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_14",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_14",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 851
+      },
+      "rrf_score": 0.012658227848101266,
+      "bm25_rank": 19,
+      "bm25_score": 12.11491409644276,
+      "retrieval_score": 0.012658227848101266,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 41
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_61",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_61",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1850
+      },
+      "rrf_score": 0.0125,
+      "dense_rank": 42,
+      "dense_score": 0.8005123,
+      "retrieval_score": 0.0125,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_58",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_58",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1815
+      },
+      "rrf_score": 0.012195121951219513,
+      "bm25_rank": 22,
+      "bm25_score": 9.748664580667132,
+      "retrieval_score": 0.012195121951219513,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_83",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_83",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2306
+      },
+      "rrf_score": 0.012048192771084338,
+      "dense_rank": 44,
+      "dense_score": 0.79700273,
+      "retrieval_score": 0.012048192771084338,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_66",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_66",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1924
+      },
+      "rrf_score": 0.011904761904761904,
+      "dense_rank": 45,
+      "dense_score": 0.7965557,
+      "retrieval_score": 0.011904761904761904,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_1",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_1",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 18
+      },
+      "rrf_score": 0.011627906976744186,
+      "bm25_rank": 26,
+      "bm25_score": 7.635831103932529,
+      "retrieval_score": 0.011627906976744186,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_81",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_81",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 2251
+      },
+      "rrf_score": 0.011235955056179775,
+      "dense_rank": 47,
+      "dense_score": 0.7935817,
+      "retrieval_score": 0.011235955056179775,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_86",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_86",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2016,
+        "start_line": 2370
+      },
+      "rrf_score": 0.011235955056179775,
+      "bm25_rank": 29,
+      "bm25_score": 6.816642879422199,
+      "retrieval_score": 0.011235955056179775,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 48
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_48",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_48",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1622
+      },
+      "rrf_score": 0.011111111111111112,
+      "dense_rank": 49,
+      "dense_score": 0.79331297,
+      "retrieval_score": 0.011111111111111112,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_13",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_13",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 782
+      },
+      "rrf_score": 0.01098901098901099,
+      "dense_rank": 50,
+      "dense_score": 0.7926962,
+      "retrieval_score": 0.01098901098901099,
+      "retrieval_mode": "hybrid"
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "year": 2016,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_33",
+        "table_ref": "SHB_financial_statements_2016_separate|1479",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_85",
+        "table_ref": "SHB_financial_statements_2016_separate|2364",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_2",
+        "table_ref": "SHB_financial_statements_2016_separate|169",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_63",
+        "table_ref": "SHB_financial_statements_2016_separate|1887",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_35",
+        "table_ref": "SHB_financial_statements_2016_separate|1492",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_64",
+        "table_ref": "SHB_financial_statements_2016_separate|1889",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_62",
+        "table_ref": "SHB_financial_statements_2016_separate|1883",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_94",
+        "table_ref": "SHB_financial_statements_2016_separate|2514",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_70",
+        "table_ref": "SHB_financial_statements_2016_separate|2096",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_7",
+        "table_ref": "SHB_financial_statements_2016_separate|343",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_44",
+        "table_ref": "SHB_financial_statements_2016_separate|1604",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_84",
+        "table_ref": "SHB_financial_statements_2016_separate|2310",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_27",
+        "table_ref": "SHB_financial_statements_2016_separate|1407",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_3",
+        "table_ref": "SHB_financial_statements_2016_separate|200",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_51",
+        "table_ref": "SHB_financial_statements_2016_separate|1682",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_22",
+        "table_ref": "SHB_financial_statements_2016_separate|1358",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_90",
+        "table_ref": "SHB_financial_statements_2016_separate|2435",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_77",
+        "table_ref": "SHB_financial_statements_2016_separate|2234",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_24",
+        "table_ref": "SHB_financial_statements_2016_separate|1366",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_30",
+        "table_ref": "SHB_financial_statements_2016_separate|1444",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_82",
+        "table_ref": "SHB_financial_statements_2016_separate|2255",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_45",
+        "table_ref": "SHB_financial_statements_2016_separate|1608",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_46",
+        "table_ref": "SHB_financial_statements_2016_separate|1612",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_40",
+        "table_ref": "SHB_financial_statements_2016_separate|1558",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_92",
+        "table_ref": "SHB_financial_statements_2016_separate|2466",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_43",
+        "table_ref": "SHB_financial_statements_2016_separate|1570",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_5",
+        "table_ref": "SHB_financial_statements_2016_separate|277",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_41",
+        "table_ref": "SHB_financial_statements_2016_separate|1562",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_42",
+        "table_ref": "SHB_financial_statements_2016_separate|1566",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_10",
+        "table_ref": "SHB_financial_statements_2016_separate|439",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_37",
+        "table_ref": "SHB_financial_statements_2016_separate|1525",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_4",
+        "table_ref": "SHB_financial_statements_2016_separate|241",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_101",
+        "table_ref": "SHB_financial_statements_2016_separate|2975",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_102",
+        "table_ref": "SHB_financial_statements_2016_separate|2988",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_99",
+        "table_ref": "SHB_financial_statements_2016_separate|2816",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_28",
+        "table_ref": "SHB_financial_statements_2016_separate|1436",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_98",
+        "table_ref": "SHB_financial_statements_2016_separate|2761",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_78",
+        "table_ref": "SHB_financial_statements_2016_separate|2238",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_97",
+        "table_ref": "SHB_financial_statements_2016_separate|2742",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_100",
+        "table_ref": "SHB_financial_statements_2016_separate|2831",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_14",
+        "table_ref": "SHB_financial_statements_2016_separate|851",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_61",
+        "table_ref": "SHB_financial_statements_2016_separate|1850",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_58",
+        "table_ref": "SHB_financial_statements_2016_separate|1815",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_83",
+        "table_ref": "SHB_financial_statements_2016_separate|2306",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_66",
+        "table_ref": "SHB_financial_statements_2016_separate|1924",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_1",
+        "table_ref": "SHB_financial_statements_2016_separate|18",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_81",
+        "table_ref": "SHB_financial_statements_2016_separate|2251",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_86",
+        "table_ref": "SHB_financial_statements_2016_separate|2370",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_48",
+        "table_ref": "SHB_financial_statements_2016_separate|1622",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "SHB_financial_statements_2016_separate_table_13",
+        "table_ref": "SHB_financial_statements_2016_separate|782",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 9: Dự phòng rủi ro cho vay khách hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng chung (i)",
+                "Dự phòng cụ thể (ii)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự phòng chung (i)",
+                "Dự phòng cụ thể (ii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng chung (i)",
+                "Dự phòng cụ thể (ii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng trích lập/(hoàn nhập) trong năm(Thuyết minh 29)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Dự phòng trích lập/(hoàn nhập) trong năm(Thuyết minh 29)",
+                "Tăng do sáp nhập VVF",
+                "Giảm do tách SHB Lào thành công ty con",
+                "Giảm do tách SHB Campuchia thành công ty con",
+                "Chênh lệch tỷ giá",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Dự phòng trích lập/(hoàn nhập) trong năm(Thuyết minh 29)",
+                "Tăng do sáp nhập VVF",
+                "Giảm do tách SHB Lào thành công ty con",
+                "Giảm do tách SHB Campuchia thành công ty con",
+                "Chênh lệch tỷ giá",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 18: Vốn tài trợ, ủy thác đầu tư, cho vay tổ chức tín dụng chịu rủi ro 31/12/2016 31/12/2015 Triệu VND Lãi suất/năm Triệu VND Lãi suất/năm"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vay dài hạn Dự án Phát triển Năng lượng tái tạo (ii)",
+                "Vay trung, dài hạn từ Dự án Tài trợ Doanh nghiệp vừa và nhỏ giai đoạn II và III (i)"
+              ],
+              "kỳ số liệu": [
+                "31/12/2016",
+                "31/12/2015"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay trung, dài hạn từ Dự án Tài trợ Doanh nghiệp vừa và nhỏ giai đoạn II và III (i)",
+                "Vay dài hạn Dự án Phát triển Năng lượng tái tạo (ii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay trung, dài hạn từ Dự án Tài trợ Doanh nghiệp vừa và nhỏ giai đoạn II và III (i)",
+                "Vay dài hạn Dự án Phát triển Năng lượng tái tạo (ii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 8: Cho vay khách hàng"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các khoản trả thay khách hàng",
+                "Cho vay các tổ chức kinh tế, cá nhân",
+                "Cho vay bằng vốn tài trợ, ủy thác đầu tư",
+                "Cho vay chiết khấu công cụ chuyển nhượng và các giấy tờ có giá"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cho vay các tổ chức kinh tế, cá nhân",
+                "Cho vay bằng vốn tài trợ, ủy thác đầu tư",
+                "Các khoản trả thay khách hàng",
+                "Cho vay chiết khấu công cụ chuyển nhượng và các giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Cho vay các tổ chức kinh tế, cá nhân",
+                "Cho vay bằng vốn tài trợ, ủy thác đầu tư",
+                "Các khoản trả thay khách hàng",
+                "Cho vay chiết khấu công cụ chuyển nhượng và các giấy tờ có giá"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 33: Các giao dịch chủ yếu với các bên liên quan"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "▪ Cho vay"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Góp vốn",
+                "▪ Tiền gửi không kỳ hạn và có kỳ hạn",
+                "▪ Cho vay",
+                "▪ Phải thu khác",
+                "▪ Phải trả khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Góp vốn",
+                "▪ Tiền gửi không kỳ hạn và có kỳ hạn",
+                "▪ Cho vay",
+                "▪ Phải thu khác",
+                "▪ Phải trả khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 26: Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Hoàn nhập/(trích lập) dự phòng chung chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng giảm giá chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng cụ thể chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi/(lỗ) từ mua bán chứng khoán sẵn sàng để bán",
+                "Hoàn nhập/(trích lập) dự phòng giảm giá chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng chung chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng cụ thể chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi/(lỗ) từ mua bán chứng khoán sẵn sàng để bán",
+                "Hoàn nhập/(trích lập) dự phòng giảm giá chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng chung chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Hoàn nhập/(trích lập) dự phòng cụ thể chứng khoán đầu tư sẵn sàng để bán (Thuyết minh 10(i))",
+                "Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "▪ Thu lãi cho vay"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Thu lãi cho vay",
+                "▪ Chi lãi tiền gửi",
+                "▪ Chi phí khác",
+                "▪ Chi lãi tiền gửi không kỳ hạn và có kỳ hạn",
+                "▪ Thu lãi điều chuyển vốn nội bộ",
+                "▪ Thù lao Hội đồng Quản trị và Ban kiểm soát"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Thu lãi cho vay",
+                "▪ Chi lãi tiền gửi",
+                "▪ Chi phí khác",
+                "▪ Chi lãi tiền gửi không kỳ hạn và có kỳ hạn",
+                "▪ Thu lãi điều chuyển vốn nội bộ",
+                "▪ Thù lao Hội đồng Quản trị và Ban kiểm soát"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Tiền gửi của khách hàng",
+                "Vốn và quỹ dự phòng",
+                "Tiền gửi và cho vay các TCTD khác - gộp"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại NHNN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Gớp vốn, đầu tư dài hạn",
+                "Tài sản cố định",
+                "Tài sản có khác - gộp",
+                "Nợ phải trả NHNNVN và vay các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Vốn và quỹ dự phòng",
+                "Trạng thái tiền tệ nội bằng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Tiền gửi của khách hàng",
+                "Tiền gửi và cho vay các TCTD khác - gộp"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dưới 3 tháng",
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Gộp vốn, đầu tư dài hạn - gộp",
+                "Tài sản cố định và bất động sản đầu tư",
+                "Tài sản có khác - gộp",
+                "Nợ phải trả NHNNVN và các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Mức chênh thanh khoản ròng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi của khách hàng bằng Đồng Việt Nam",
+                "Vàng miếng, không bao gồm vàng miếng không có giá niêm yết, tiền gửi của khách hàng bằng ngoại tệ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi của khách hàng bằng Đồng Việt Nam",
+                "Vàng miếng, không bao gồm vàng miếng không có giá niêm yết, tiền gửi của khách hàng bằng ngoại tệ",
+                "▪ Có thời hạn còn lại dưới 1 năm",
+                "▪ Có thời hạn còn lại từ 1 năm đến 5 năm",
+                "▪ Có thời hạn còn lại trên 5 năm",
+                "Chứng khoán do các tổ chức tín dụng khác phát hành được niêm yết trên Sở giao dịch chứng khoán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi của khách hàng bằng Đồng Việt Nam",
+                "Vàng miếng, không bao gồm vàng miếng không có giá niêm yết, tiền gửi của khách hàng bằng ngoại tệ",
+                "▪ Có thời hạn còn lại dưới 1 năm",
+                "▪ Có thời hạn còn lại từ 1 năm đến 5 năm",
+                "▪ Có thời hạn còn lại trên 5 năm",
+                "Chứng khoán do các tổ chức tín dụng khác phát hành được niêm yết trên Sở giao dịch chứng khoán",
+                "Chứng khoán do doanh nghiệp khác phát hành được niêm yết trên Sở giao dịch chứng khoán",
+                "Chứng khoán chưa được niêm yết trên Sở giao dịch chứng khoán, giấy tờ có giá (trừ các chứng khoán và giấy tờ có giá được quy định tại Điểm c, Khoản 6, Điều 12,",
+                "Chứng khoán chưa được niêm yết trên Sở giao dịch chứng khoán, giấy tờ có giá do doanh nghiệp có đăng ký niêm yết chứng khoán trên Sở giao dịch chứng khoán phát",
+                "Chứng khoán chưa được niêm yết trên Sở giao dịch chứng khoán, giấy tờ có giá do doanh nghiệp không có đăng ký niêm yết chứng khoán trên Sở giao dịch chứng khoán",
+                "Bất động sản",
+                "Vàng miếng không có giá niêm yết, vàng khác và các loại tài sản bảo đảm khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 16: Tiền gửi và vay các tổ chức tín dụng khác 31/12/2016Triệu VND 31/12/2015Triệu VND Tiền gửi không kỳ hạn của các TCTD khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền vay từ Dự án tài chính (*)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bằng VND",
+                "Bằng ngoại tệ",
+                "Vay các TCTD khác bằng ngoại tệ",
+                "Tiền vay từ Dự án tài chính (*)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bằng VND",
+                "Bằng ngoại tệ",
+                "Vay các TCTD khác bằng VND",
+                "Vay các TCTD khác bằng ngoại tệ",
+                "Tiền vay từ Dự án tài chính (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 11: Góp vốn, đầu tư dài hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng giảm giá góp vốn, đầu tư dài hạn (iii)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Đầu tư vào công ty con - giá gốc (i)",
+                "Đầu tư góp vốn dài hạn khác - giá gốc (ii)",
+                "Dự phòng giảm giá góp vốn, đầu tư dài hạn (iii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Đầu tư vào công ty con - giá gốc (i)",
+                "Đầu tư góp vốn dài hạn khác - giá gốc (ii)",
+                "Dự phòng giảm giá góp vốn, đầu tư dài hạn (iii)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 29: Chi phí dự phòng rủi ro tín dụng Thuyết minh 2016 Triệu VND 2015 Triệu VND Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác 6 (15.000)"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trích lập dự phòng chung cho vay khách hàng",
+                "Trích lập dự phòng cụ thể cho vay khách hàng",
+                "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+              ],
+              "kỳ số liệu": [
+                "2016 Triệu VND",
+                "2015 Triệu VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                "Trích lập dự phòng chung cho vay khách hàng",
+                "Trích lập dự phòng cụ thể cho vay khách hàng",
+                "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                "Trích lập dự phòng chung cho vay khách hàng",
+                "Trích lập dự phòng cụ thể cho vay khách hàng",
+                "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trích lập dự phòng trong năm (Thuyết minh 28)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tăng các khoản cho vay khách hàng (mã chỉ tiêu 12)",
+                "Tăng vốn tài trợ, ủy thác đầu tư, cho vay mà tổ chức tín dụng chịu rủi ro (mã chỉ tiêu 19)",
+                "Tăng tiền gửi của khách hàng (mã chỉ tiêu 17)",
+                "Giảm nguồn dự phòng để bù đắp tồn thất (mã chỉ tiêu 13)",
+                "(Tăng)/giảm các khoản tiền gửi và cho vay các tổ chức tín dụng khác (mã chỉ tiêu 09)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Thu nhập/(chi phí) khác (mã chỉ tiêu 05)",
+                "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro (mã chỉ tiêu 06)",
+                "Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ (mã chỉ tiêu 07)",
+                "(Tăng)/giảm các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu 11)",
+                "Tăng các khoản cho vay khách hàng (mã chỉ tiêu 12)",
+                "Giảm nguồn dự phòng để bù đắp tồn thất (mã chỉ tiêu 13)",
+                "Tăng phát hành giấy tờ có giá (mã chỉ tiêu 18)",
+                "Tăng vốn tài trợ, ủy thác đầu tư, cho vay mà tổ chức tín dụng chịu rủi ro (mã chỉ tiêu 19)",
+                "(Giảm)/tăng các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu 20)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập lãi và các khoản thu nhập tương tự nhận được (mã chỉ tiêu 01)",
+                "Chi phí lãi và các chi phí tương tự đã trả (mã chỉ tiêu 02)",
+                "Thu nhập từ hoạt động dịch vụ nhận được (mã chỉ tiêu 03)",
+                "Chênh lệch số tiền thực (chi)/thu từ hoạt động kinh doanh ngoại hối và chứng khoán (mã chỉ tiêu 04)",
+                "Thu nhập/(chi phí) khác (mã chỉ tiêu 05)",
+                "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro (mã chỉ tiêu 06)",
+                "Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ (mã chỉ tiêu 07)",
+                "Tiền thuế thu nhập thực nộp trong kỳ (mã chỉ tiêu 08)",
+                "(Tăng)/giảm các khoản tiền gửi và cho vay các tổ chức tín dụng khác (mã chỉ tiêu 09)",
+                "Tăng các khoản về kinh doanh chứng khoán (mã chỉ tiêu 10)",
+                "(Tăng)/giảm các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu 11)",
+                "Tăng các khoản cho vay khách hàng (mã chỉ tiêu 12)",
+                "Giảm nguồn dự phòng để bù đắp tồn thất (mã chỉ tiêu 13)",
+                "Tăng khác về tài sản hoạt động (mã chỉ tiêu 14)",
+                "(Giảm)/tăng các khoản nợ Chính phủ và NHNNVN (mã chỉ tiêu 15)",
+                "Tăng tiền gửi, tiền vay các tổ chức tín dụng khác (mã chỉ tiêu 16)",
+                "Tăng tiền gửi của khách hàng (mã chỉ tiêu 17)",
+                "Tăng phát hành giấy tờ có giá (mã chỉ tiêu 18)",
+                "Tăng vốn tài trợ, ủy thác đầu tư, cho vay mà tổ chức tín dụng chịu rủi ro (mã chỉ tiêu 19)",
+                "(Giảm)/tăng các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu 20)",
+                "Tăng/(giảm) khác về nợ hoạt động (mã chỉ tiêu 21)",
+                "LU'U CHUYÊN TIÊN THUÀN TỪ HOẠT ĐỘNG KINH DOANH (mã chỉ tiêu I)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vốn tài trợ, ủy thác đầu tư, cho vay tổ chức tín dụng chịu rủi ro (mã chỉ tiêu V; tham chiếu Thuyết minh số 18)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu III; tham chiếu Thuyết minh số 17)",
+                "Các khoản nợ Chính phủ và Ngân hàng Nhà nước (mã chỉ tiêu I; tham chiếu Thuyết minh số 15)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                " (mã chỉ tiêu NỘ PHẢI TRẢ)",
+                "Các khoản nợ Chính phủ và Ngân hàng Nhà nước (mã chỉ tiêu I; tham chiếu Thuyết minh số 15)",
+                "Tiền gửi và vay các tổ chức tín dụng khác (mã chỉ tiêu II; tham chiếu Thuyết minh số 16)",
+                "Vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu III; tham chiếu Thuyết minh số 17)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu IV; tham chiếu Thuyết minh số 7)",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay tổ chức tín dụng chịu rủi ro (mã chỉ tiêu V; tham chiếu Thuyết minh số 18)",
+                "Phát hành giấy tờ có giá (mã chỉ tiêu VI; tham chiếu Thuyết minh số 19)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU (mã chỉ tiêu B)",
+                "Các khoản nợ Chính phủ và Ngân hàng Nhà nước (mã chỉ tiêu I; tham chiếu Thuyết minh số 15)",
+                "Tiền gửi và vay các tổ chức tín dụng khác (mã chỉ tiêu II; tham chiếu Thuyết minh số 16)",
+                "Tiền gửi của các tổ chức tín dụng khác (mã chỉ tiêu 1)",
+                "Vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                "Tiền gửi của khách hàng (mã chỉ tiêu III; tham chiếu Thuyết minh số 17)",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác (mã chỉ tiêu IV; tham chiếu Thuyết minh số 7)",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay tổ chức tín dụng chịu rủi ro (mã chỉ tiêu V; tham chiếu Thuyết minh số 18)",
+                "Phát hành giấy tờ có giá (mã chỉ tiêu VI; tham chiếu Thuyết minh số 19)",
+                "Các khoản nợ khác (mã chỉ tiêu VII; tham chiếu Thuyết minh số 20)",
+                "Các khoản lãi, phí phải trả (mã chỉ tiêu 1)",
+                "Các khoản phải trả và công nợ khác (mã chỉ tiêu 3)",
+                "TỔNG NỘ PHẢI TRẢ",
+                "VỐN CHỦ SỞ HỮU",
+                "Vốn và các quỹ (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 21)",
+                "Vốn (mã chỉ tiêu 1)",
+                "Vốn điều lệ (mã chỉ tiêu a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu c)",
+                "Cổ phiếu quỹ (mã chỉ tiêu d)",
+                "Các quỹ của tổ chức tín dụng (mã chỉ tiêu 2)",
+                "Lợi nhuận chưa phân phối (mã chỉ tiêu 5)",
+                "TỔNG VỐN CHỦ SỞ HỮU",
+                "TỔNG NỘ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 23: Thu nhập lãi thuần"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng và cho vay các TCTD khác"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại các TCTD khác",
+                "Cho vay khách hàng và cho vay các TCTD khác",
+                "Các khoản đầu tư chứng khoán nợ",
+                "Trả lãi tiền gửi",
+                "Trả lãi tiền vay",
+                "Trả lãi phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi tại các TCTD khác",
+                "Cho vay khách hàng và cho vay các TCTD khác",
+                "Các khoản đầu tư chứng khoán nợ",
+                "Thu phí từ nghiệp vụ bảo lãnh",
+                "Các hoạt động tín dụng khác",
+                "Trả lãi tiền gửi",
+                "Trả lãi tiền vay",
+                "Trả lãi phát hành giấy tờ có giá",
+                "Chi phí hoạt động tín dụng khác",
+                "Thu nhập lãi thuần"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trích lập dự phòng trong năm"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tăng do sáp nhập VVF",
+                "Trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tăng do sáp nhập VVF",
+                "Trích lập dự phòng trong năm (Thuyết minh 26)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Công ty TNHH MTV Quản lý Nợ và Khai thác Tài sản NH TMCP Sài Gòn - Hà Nội (“SHB AMC”)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH MTV Quản lý Nợ và Khai thác Tài sản NH TMCP Sài Gòn - Hà Nội (“SHB AMC”)",
+                "Công ty Cổ phần Chứng khoán SHB (“SHBS”)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty TNHH MTV Quản lý Nợ và Khai thác Tài sản NH TMCP Sài Gòn - Hà Nội (“SHB AMC”)",
+                "Công ty Cổ phần Chứng khoán SHB (“SHBS”)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Tiền gửi của khách hàng",
+                "Tiền gửi và cho vay các TCTD khác - gộp"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại NHNN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Chứng khoán kinh doanh - gộp",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNN",
+                "Tiền gửi và cho vay các TCTD khác - gộp",
+                "Chứng khoán kinh doanh - gộp",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Góp vốn, đầu tư dài hạn",
+                "Tài sản cố định và bất động sản đầu tư",
+                "Nợ phải trả NHNNVN và vay các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Các công cụ tài chính phải sinh và các khoản nợ tài chính khác",
+                "Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Vốn và các quỹ",
+                "Trạng thái tiền tệ nội bằng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 24: Lãi thuần từ hoạt động dịch vụ"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dịch vụ thanh toán và tiền mặt",
+                "Dịch vụ ngân quỹ",
+                "Dịch vụ đại lý",
+                "Dịch vụ khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dịch vụ thanh toán và tiền mặt",
+                "Dịch vụ ngân quỹ",
+                "Dịch vụ đại lý",
+                "Dịch vụ tư vấn",
+                "Dịch vụ khác",
+                "Lãi thuần từ hoạt động dịch vụ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các khoản chờ thanh toán liên ngân hàng",
+                "Nợ cho vay chờ xử lý của Vinashin"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tài sản gán nợ chờ xử lý",
+                "Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia",
+                "Các khoản chờ thanh toán liên ngân hàng",
+                "Nợ cho vay chờ xử lý của Vinashin",
+                "Tài sản Có khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ủy thác quản lý danh mục đầu tư",
+                "Ủy thác REPO tài sản",
+                "Ủy thác khác",
+                "Vật liệu và công cụ",
+                "Chi phí chờ phân bổ",
+                "Tài sản gán nợ chờ xử lý",
+                "Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia",
+                "Các khoản chờ thanh toán liên ngân hàng",
+                "Nợ cho vay chờ xử lý của Vinashin",
+                "Tài sản Có khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "ngày 13 tháng 11 năm 1993"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giấy Chứng nhậnĐăng ký Kinh doanh số"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giấy Chứng nhậnĐăng ký Kinh doanh số"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "5"
+              ],
+              "mục lục chỉ tiêu": [
+                "5"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                "Cho vay khách hàng (mã chỉ tiêu VI)",
+                "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                "Dự phòng rủi ro chứng khoán đầu tư (mã chỉ tiêu 3)",
+                "Tiền gửi tại Ngân hàng Nhà nước (mã chỉ tiêu II; tham chiếu Thuyết minh số 5)",
+                "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu V; tham chiếu Thuyết minh số 7)",
+                "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)",
+                "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                "Chứng khoán đầu tư (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 10)",
+                "Tài sản Có khác (mã chỉ tiêu 4)",
+                "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                "TỔNG TÀI SẢN"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN (mã chỉ tiêu A)",
+                "Tiền mặt và vàng (mã chỉ tiêu I; tham chiếu Thuyết minh số 4)",
+                "Tiền gửi tại Ngân hàng Nhà nước (mã chỉ tiêu II; tham chiếu Thuyết minh số 5)",
+                "Tiền gửi và cho vay các tổ chức tín dụng khác (mã chỉ tiêu III; tham chiếu Thuyết minh số 6)",
+                "Tiền gửi tại các tổ chức tín dụng khác (mã chỉ tiêu 1)",
+                "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                "Các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu V; tham chiếu Thuyết minh số 7)",
+                "Cho vay khách hàng (mã chỉ tiêu VI)",
+                "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)",
+                "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                "Chứng khoán đầu tư (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 10)",
+                "Chứng khoán đầu tư sẵn sàng để bán (mã chỉ tiêu 1)",
+                "Chứng khoán đầu tư giữ đến ngày đáo hạn (mã chỉ tiêu 2)",
+                "Dự phòng rủi ro chứng khoán đầu tư (mã chỉ tiêu 3)",
+                "Góp vốn, đầu tư dài hạn (mã chỉ tiêu IX; tham chiếu Thuyết minh số 11)",
+                "Đầu tư vào công ty con (mã chỉ tiêu 1)",
+                "Đầu tư dài hạn khác (mã chỉ tiêu 4)",
+                "Dự phòng giảm giá đầu tư dài hạn (mã chỉ tiêu 5)",
+                "Tài sản cố định (mã chỉ tiêu X)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 1; tham chiếu Thuyết minh số 12)",
+                "Nguyên giá (mã chỉ tiêu a)",
+                "Giá trị hao mòn lũy kế (mã chỉ tiêu b)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 3; tham chiếu Thuyết minh số 13)",
+                "Tài sản Có khác (mã chỉ tiêu XII; tham chiếu Thuyết minh số 14)",
+                "Các khoản phải thu (mã chỉ tiêu 1)",
+                "Các khoản lãi, phí phải thu (mã chỉ tiêu 2)",
+                "Tài sản Có khác (mã chỉ tiêu 4)",
+                "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                "TỔNG TÀI SẢN"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro các khoản phải thu",
+                "Dự phòng rủi ro các khoản ủy thác tồn động tài chính (*)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự phòng rủi ro các khoản phải thu",
+                "Dự phòng rủi ro các khoản ủy thác tồn động tài chính (*)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng rủi ro các khoản phải thu",
+                "Dự phòng rủi ro các khoản ủy thác tồn động tài chính (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro trái phiếu VAMC (**)",
+                "Dự phòng rủi ro trái phiếu do các TCKT trong nước phát hành (*)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự phòng rủi ro trái phiếu do các TCKT trong nước phát hành (*)",
+                "Dự phòng rủi ro trái phiếu VAMC (**)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng rủi ro trái phiếu do các TCKT trong nước phát hành (*)",
+                "Dự phòng rủi ro trái phiếu VAMC (**)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Sử dụng dự phòng trong năm",
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 28)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 28)",
+                "Sử dụng dự phòng trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 28)",
+                "Sử dụng dự phòng trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 29)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng do sáp nhập VVF",
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 29)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng do sáp nhập VVF",
+                "Hoàn nhập dự phòng trong năm (Thuyết minh 29)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Trích lập dự phòng trong năm (Thuyết minh 29)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 29)",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 29)",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu X; tham chiếu Thuyết minh số 29)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu IX)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lãi thuần từ hoạt động khác (mã chỉ tiêu VI; tham chiếu Thuyết minh số 27)",
+                "(Lỗ)/thu nhập từ góp vốn, mua cổ phần (mã chỉ tiêu VII)",
+                "Chi phí hoạt động (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 28)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu IX)",
+                "Chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu X; tham chiếu Thuyết minh số 29)",
+                "Tổng lợi nhuận trước thuế (mã chỉ tiêu XI)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu nhập lãi và các khoản thu nhập tương tự (mã chỉ tiêu 1)",
+                "Chi phí lãi và các chi phí tương tự (mã chỉ tiêu 2)",
+                "Thu nhập lãi thuần (mã chỉ tiêu I; tham chiếu Thuyết minh số 23)",
+                "Thu nhập từ hoạt động dịch vụ (mã chỉ tiêu 3)",
+                "Chi phí hoạt động dịch vụ (mã chỉ tiêu 4)",
+                "Lãi thuần từ hoạt động dịch vụ (mã chỉ tiêu II; tham chiếu Thuyết minh số 24)",
+                "Lãi thuần từ hoạt động kinh doanh ngoại hối (mã chỉ tiêu III; tham chiếu Thuyết minh số 25)",
+                "Lãi thuần từ mua bán chứng khoán kinh doanh (mã chỉ tiêu IV)",
+                "Lãi/(lỗ) thuần từ mua bán chứng khoán đầu tư (mã chỉ tiêu V; tham chiếu Thuyết minh số 26)",
+                "Thu nhập từ hoạt động khác (mã chỉ tiêu 5)",
+                "Chi phí hoạt động khác (mã chỉ tiêu 6)",
+                "Lãi thuần từ hoạt động khác (mã chỉ tiêu VI; tham chiếu Thuyết minh số 27)",
+                "(Lỗ)/thu nhập từ góp vốn, mua cổ phần (mã chỉ tiêu VII)",
+                "Chi phí hoạt động (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 28)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu IX)",
+                "Chi phí dự phòng rủi ro tín dụng (mã chỉ tiêu X; tham chiếu Thuyết minh số 29)",
+                "Tổng lợi nhuận trước thuế (mã chỉ tiêu XI)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 10: Chứng khoán đầu tư 31/12/2016Triệu VND 31/12/2015Triệu VND Chứng khoán đầu tư sẵn sàng để bán"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro chứng khoán giữ đến ngày đáo hạn (ii)",
+                "Dự phòng rủi ro chứng khoán sẵn sàng để bán (i)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "▪ Chứng khoán Chính phủ",
+                "▪ Chứng khoán Nợ do các TCTD khác trong nướcphát hành",
+                "Dự phòng rủi ro chứng khoán sẵn sàng để bán (i)",
+                "Dự phòng rủi ro chứng khoán giữ đến ngày đáo hạn (ii)"
+              ],
+              "mục lục chỉ tiêu": [
+                "▪ Chứng khoán Chính phủ",
+                "▪ Chứng khoán Nợ do các TCTD khác trong nướcphát hành",
+                "▪ Chứng khoán Nợ do các tổ chức kinh tế (“TCKT”)trong nước phát hành",
+                "▪ Chứng khoán do các TCTD khác trong nước phát hành",
+                "▪ Chứng khoán do các TCKT trong nước phát hành",
+                "Dự phòng rủi ro chứng khoán sẵn sàng để bán (i)",
+                "▪ Chứng khoán do các TCKT trong nước phát hành(bao gồm trái phiếu đặc biệt)",
+                "Dự phòng rủi ro chứng khoán giữ đến ngày đáo hạn (ii)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tài trợ, ủy thác đầu tư,cho vay mà TCTDchịu rủi ro",
+                "Tiền gửi của khách hàng"
+              ],
+              "kỳ số liệu": [
+                "Dưới1 tháng",
+                "Từ 1 đến3 tháng",
+                "Từ 3 đến6 tháng",
+                "Từ 6 đến12 tháng",
+                "Từ 1 đến5 năm",
+                "Trên 5 năm"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Các công cụ tài chính phàisinh và các tài sản tài chínhkhác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Nợ phải trả NHNNVNvà các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Vốn tài trợ, ủy thác đầu tư,cho vay mà TCTDchịu rủi ro",
+                "Phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vaycác TCTD khác - gộp",
+                "Các công cụ tài chính phàisinh và các tài sản tài chínhkhác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Góp vốn, đầu tư dài hạn",
+                "Tài sản cố định",
+                "Tài sản có khác - gộp",
+                "Nợ phải trả NHNNVNvà các TCTD khác",
+                "Tiền gửi của khách hàng",
+                "Vốn tài trợ, ủy thác đầu tư,cho vay mà TCTDchịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Mức chênh nhạy cảmvới lãi suất"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tải trợ, ủy thác đầu tư, cho vayTCTD chịu rủi ro",
+                "Tiền gửi của khách hàng",
+                "Tiền gửi và cho vay các TCTD khác-gộp"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vay các TCTD khác-gộp",
+                "Các công cụ tài chính phải sinhvà các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Tiền gửi của khách hàng",
+                "Vốn tải trợ, ủy thác đầu tư, cho vayTCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dưới 3 tháng",
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vay các TCTD khác-gộp",
+                "Các công cụ tài chính phải sinhvà các tài sản tài chính khác",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Góp vốn, đầu tư dài hạn - gộp",
+                "Tài sản cố định và bất động sảnđầu tư",
+                "Tài sản có khác - gộp",
+                "Nợ phải trả NHNNVN và cácTCTD khác",
+                "Tiền gửi của khách hàng",
+                "Vốn tải trợ, ủy thác đầu tư, cho vayTCTD chịu rủi ro",
+                "Phát hành giấy tờ có giá",
+                "Các khoản nợ khác",
+                "Mức chênh thanh khoản ròng"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 14: Tài sản Có khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro cho các tài sản Có nội bằng khác (iv)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Các khoản phải thu",
+                "▪ Các khoản phải thu (i)",
+                "▪ Mua sắm TSCĐ và XDCB dở dang (ii)",
+                "▪ Tài sản Có khác",
+                "Dự phòng rủi ro cho các tài sản Có nội bằng khác (iv)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Các khoản phải thu",
+                "▪ Các khoản phải thu (i)",
+                "▪ Mua sắm TSCĐ và XDCB dở dang (ii)",
+                "Các khoản lãi, phí phải thu",
+                "Tài sản Có khác (iii)",
+                "▪ Các khoản ủy thác đầu tư",
+                "▪ Tài sản Có khác",
+                "Dự phòng rủi ro cho các tài sản Có nội bằng khác (iv)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 25: Lãi thuần từ hoạt động kinh doanh ngoại hối 2016Triệu VND 2015Triệu VND Lãi từ kinh doanh ngoại hối"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hợp đồng tiền tệ giao ngay",
+                "Thu nhập kinh doanh vàng",
+                "Các công cụ phải sinh tiền tệ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hợp đồng tiền tệ giao ngay",
+                "Thu nhập kinh doanh vàng",
+                "Các công cụ phải sinh tiền tệ",
+                "Chi phí kinh doanh vàng",
+                "Lãi thuần từ hoạt động kinh doanh ngoại hối"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Sử dụng dự phòng trong năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 28)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                "Sử dụng dự phòng trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                "Sử dụng dự phòng trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Dự phòng rủi ro cho vay khách hàng",
+                "Cho vay khách hàng"
+              ],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                "Dự phòng rủi ro chứng khoán đầu tư",
+                "Cho vay các tổ chức tín dụng khác",
+                "Dự phòng giảm giá đầu tư dài hạn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Cho vay các tổ chức tín dụng khác",
+                "Cho vay khách hàng",
+                "Dự phòng rủi ro cho vay khách hàng",
+                "Chứng khoán đầu tư sẵn sàng để bán",
+                "Tài sản Có khác - gộp",
+                "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                "Các khoản nợ khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi tại các tổ chức tín dụng khác",
+                "Cho vay các tổ chức tín dụng khác",
+                "Cho vay khách hàng",
+                "Dự phòng rủi ro cho vay khách hàng",
+                "Chứng khoán đầu tư sẵn sàng để bán",
+                "Dự phòng rủi ro chứng khoán đầu tư",
+                "Đầu tư dài hạn khác",
+                "Dự phòng giảm giá đầu tư dài hạn",
+                "Tài sản cố định hữu hình",
+                "Tài sản cố định vô hình",
+                "Tài sản Có khác - gộp",
+                "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                "Các khoản nợ khác",
+                "Tài sản thuần có thể xác định được của VVF"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 28: Chi phí hoạt động"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí dự phòng rủi ro khác (Thuyết minh 14)",
+                "Chi nộp phí bảo hiểm, bảo hiểm tiền gửi của khách hàng",
+                "Hoàn nhập dự phòng giảm giá góp vốn đầu tư dài hạn khác (Thuyết minh 11(iii))"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi về hoạt động đoàn thể của TCTD",
+                "Chi nộp phí bảo hiểm, bảo hiểm tiền gửi của khách hàng",
+                "Hoàn nhập dự phòng giảm giá góp vốn đầu tư dài hạn khác (Thuyết minh 11(iii))",
+                "Chi phí dự phòng rủi ro khác (Thuyết minh 14)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi nộp thuế và các khoản phí, lệ phí",
+                "Chi phí cho nhân viên",
+                "Chi lương và phụ cấp",
+                "Các khoản chi đóng góp theo lương",
+                "Chi trợ cấp và chi khác cho nhân viên",
+                "Chi về tài sản",
+                "Khẩu hao tài sản cố định",
+                "Chi cho hoạt động quản lý công vụ:",
+                "Công tác phí",
+                "Chi về hoạt động đoàn thể của TCTD",
+                "Chi nộp phí bảo hiểm, bảo hiểm tiền gửi của khách hàng",
+                "Hoàn nhập dự phòng giảm giá góp vốn đầu tư dài hạn khác (Thuyết minh 11(iii))",
+                "Chi phí dự phòng rủi ro khác (Thuyết minh 14)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 6: Tiền gửi và cho vay các tổ chức tín dụng khác 31/12/2016Triệu VND 31/12/2015Triệu VND Tiền gửi không kỳ hạn"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng rủi ro cho vay các TCTD khác (i)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi không kỳ hạn bằng VND",
+                "Tiền gửi không kỳ hạn bằng ngoại tệ",
+                "Tiền gửi có kỳ hạn bằng VND",
+                "Bằng VND",
+                "Dự phòng rủi ro cho vay các TCTD khác (i)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền gửi không kỳ hạn bằng VND",
+                "Tiền gửi không kỳ hạn bằng ngoại tệ",
+                "Tiền gửi có kỳ hạn bằng VND",
+                "Tiền gửi có kỳ hạn bằng ngoại tệ",
+                "Bằng VND",
+                "Dự phòng rủi ro cho vay các TCTD khác (i)",
+                "Nhóm 1 - Nợ đủ tiêu chuẩn",
+                "Nhóm 5 - Nợ có khả năng mất vốn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty TNHH khác",
+                "50% (Nhà nước chiếm cổ phần chi phối)",
+                "Công ty cổ phần khác",
+                "Công ty hợp danh",
+                "Hộ kinh doanh, cá nhân",
+                "Thành phần kinh tế khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Nhà nước",
+                "Công ty TNHH MTV Vốn Nhà nước",
+                "Công ty TNHH khác",
+                "50% (Nhà nước chiếm cổ phần chi phối)",
+                "Công ty cổ phần khác",
+                "Công ty hợp danh",
+                "Doanh nghiệp tư nhân",
+                "Doanh nghiệp có vốn đầu tư nước ngoài",
+                "Hợp tác xã và liên hiệp hợp tác xã",
+                "Hộ kinh doanh, cá nhân",
+                "Thành phần kinh tế khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng chung chứng khoán sẵn sàng để bán (**)",
+                "Dự phòng giảm giá chứng khoán sẵn sàng để bán (*)",
+                "Dự phòng cụ thể chứng khoán sẵn sàng để bán (***)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự phòng giảm giá chứng khoán sẵn sàng để bán (*)",
+                "Dự phòng chung chứng khoán sẵn sàng để bán (**)",
+                "Dự phòng cụ thể chứng khoán sẵn sàng để bán (***)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự phòng giảm giá chứng khoán sẵn sàng để bán (*)",
+                "Dự phòng chung chứng khoán sẵn sàng để bán (**)",
+                "Dự phòng cụ thể chứng khoán sẵn sàng để bán (***)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm (Thuyết minh 26)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Bảo lãnh vay vốn (mã chỉ tiêu 1)",
+                "Cam kết giao dịch hối đoái (mã chỉ tiêu 2)",
+                "Cam kết mua ngoại tệ",
+                "Cam kết bán ngoại tệ",
+                "Cam kết giao dịch hoán đối",
+                "Cam kết trong nghiệp vụ L/C (mã chỉ tiêu 4)",
+                "Bảo lãnh khác (mã chỉ tiêu 5)",
+                "Các cam kết khác (mã chỉ tiêu 6)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bảo lãnh vay vốn (mã chỉ tiêu 1)",
+                "Cam kết giao dịch hối đoái (mã chỉ tiêu 2)",
+                "Cam kết mua ngoại tệ",
+                "Cam kết bán ngoại tệ",
+                "Cam kết giao dịch hoán đối",
+                "Cam kết trong nghiệp vụ L/C (mã chỉ tiêu 4)",
+                "Bảo lãnh khác (mã chỉ tiêu 5)",
+                "Các cam kết khác (mã chỉ tiêu 6)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Nhóm 1 - Nợ đủ tiêu chuẩn",
+                "Nhóm 2 - Nợ cần chú ý",
+                "Nhóm 3 - Nợ dưới tiêu chuẩn",
+                "Nhóm 4 - Nợ nghi ngờ",
+                "Nhóm 5 - Nợ có khả năng mất vốn"
+              ],
+              "mục lục chỉ tiêu": [
+                "Nhóm 1 - Nợ đủ tiêu chuẩn",
+                "Nhóm 2 - Nợ cần chú ý",
+                "Nhóm 3 - Nợ dưới tiêu chuẩn",
+                "Nhóm 4 - Nợ nghi ngờ",
+                "Nhóm 5 - Nợ có khả năng mất vốn"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Cho vay khách hàng - gộp",
+                "Vốn tài trợ, ủy thác đàutư, cho vay mà TCTDchịu rủi ro"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vaycác TCTD khác - gộp",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Tiền gửi của khách hàngCác công cụ tài chínhphải sinh và các khoảnnợ tài chính khác",
+                "Vốn tài trợ, ủy thác đàutư, cho vay mà TCTDchịu rủi ro",
+                "Phát hành giấy tờ có giáCác khoản nợ khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại 31 tháng 12 năm 2015(Triệu VND)",
+                "Tiền mặt và vàng",
+                "Tiền gửi tại NHNNVN",
+                "Tiền gửi và cho vaycác TCTD khác - gộp",
+                "Cho vay khách hàng - gộp",
+                "Chứng khoán đầu tư - gộp",
+                "Gộp vốn, đầu tư dài hạn",
+                "Tài sản cố định",
+                "Tài sản có khác - gộp",
+                "Nợ phải trả NHNNVNvà các TCTD khác",
+                "Tiền gửi của khách hàngCác công cụ tài chínhphải sinh và các khoảnnợ tài chính khác",
+                "Vốn tài trợ, ủy thác đàutư, cho vay mà TCTDchịu rủi ro",
+                "Phát hành giấy tờ có giáCác khoản nợ khác",
+                "-",
+                "Mức chênh nhạy cảmvới lãi suất"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh 27: Lãi thuần từ hoạt động khác 2016Triệu VND 2015Triệu VND Thu nhập hoạt động kinh doanh khác"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thu hồi nợ đã xóa số trong những năm trước",
+                "Thu từ thanh lý, nhượng bán tài sản cố định",
+                "Thu nhập khác",
+                "Thu nhập hoạt động kinh doanh khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thu hồi nợ đã xóa số trong những năm trước",
+                "Thu từ thanh lý, nhượng bán tài sản cố định",
+                "Thu nhập khác",
+                "Thu nhập hoạt động kinh doanh khác",
+                "Chi hỗ trợ công tác xã hội",
+                "Chi phí thanh lý, nhượng bán tài sản cố định",
+                "Chi về hoạt động kinh doanh khác",
+                "Chi phí hoạt động kinh doanh khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự phòng thiếu trong những năm trước"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Chi phí thuế hiện hành",
+                "Năm hiện hành",
+                "Dự phòng thiếu trong những năm trước",
+                "Chi phí thuế thu nhập",
+                "Chi phí thuế thu nhập hoãn lại"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí thuế hiện hành",
+                "Năm hiện hành",
+                "Dự phòng thiếu trong những năm trước",
+                "Chi phí thuế thu nhập",
+                "Chi phí thuế thu nhập hoãn lại"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01"
+          ]
+        },
+        "nominated_keys": [
+          "c01"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02",
+            "c22",
+            "c26",
+            "c06"
+          ]
+        },
+        "nominated_keys": [
+          "c02",
+          "c22",
+          "c26",
+          "c06"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03"
+          ]
+        },
+        "nominated_keys": [
+          "c03"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c04",
+            "c08"
+          ]
+        },
+        "nominated_keys": [
+          "c04",
+          "c08"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c08",
+      "c22",
+      "c26",
+      "c06"
+    ],
+    "lexical_finalist_keys": [
+      "c03",
+      "c08",
+      "c17"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c08",
+      "c22",
+      "c26",
+      "c06",
+      "c17"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Tỷ trọng dự phòng chung trên tổng dự phòng rủi ro cho vay khách hàng của công ty mẹ Ngân hàng TMCP Sài Gòn - Hà Nội năm 2016 là bao nhiêu phần trăm?",
+      "giới hạn số bảng": 9,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "SHB",
+          "tên doanh nghiệp": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+          "năm": 2016,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "SHB",
+          "tên doanh nghiệp": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+          "năm": 2016,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 9: Dự phòng rủi ro cho vay khách hàng"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Dự phòng chung (i)",
+                  "Dự phòng cụ thể (ii)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Dự phòng chung (i)",
+                  "Dự phòng cụ thể (ii)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Dự phòng chung (i)",
+                  "Dự phòng cụ thể (ii)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 29: Chi phí dự phòng rủi ro tín dụng Thuyết minh 2016 Triệu VND 2015 Triệu VND Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác 6 (15.000)"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Trích lập dự phòng chung cho vay khách hàng",
+                  "Trích lập dự phòng cụ thể cho vay khách hàng",
+                  "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                  "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+                ],
+                "kỳ số liệu": [
+                  "2016 Triệu VND",
+                  "2015 Triệu VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                  "Trích lập dự phòng chung cho vay khách hàng",
+                  "Trích lập dự phòng cụ thể cho vay khách hàng",
+                  "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Hoàn nhập dự phòng cụ thể tiền gửi tại các TCTD khác",
+                  "Trích lập dự phòng chung cho vay khách hàng",
+                  "Trích lập dự phòng cụ thể cho vay khách hàng",
+                  "Trích lập dự phòng trái phiếu đặc biệt do VAMC phát hành"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                  "Cho vay khách hàng (mã chỉ tiêu VI)",
+                  "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                  "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                  "Dự phòng rủi ro chứng khoán đầu tư (mã chỉ tiêu 3)",
+                  "Tiền gửi tại Ngân hàng Nhà nước (mã chỉ tiêu II; tham chiếu Thuyết minh số 5)",
+                  "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                  "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu V; tham chiếu Thuyết minh số 7)",
+                  "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)",
+                  "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                  "Chứng khoán đầu tư (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 10)",
+                  "Tài sản Có khác (mã chỉ tiêu 4)",
+                  "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                  "TỔNG TÀI SẢN"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN (mã chỉ tiêu A)",
+                  "Tiền mặt và vàng (mã chỉ tiêu I; tham chiếu Thuyết minh số 4)",
+                  "Tiền gửi tại Ngân hàng Nhà nước (mã chỉ tiêu II; tham chiếu Thuyết minh số 5)",
+                  "Tiền gửi và cho vay các tổ chức tín dụng khác (mã chỉ tiêu III; tham chiếu Thuyết minh số 6)",
+                  "Tiền gửi tại các tổ chức tín dụng khác (mã chỉ tiêu 1)",
+                  "Cho vay các tổ chức tín dụng khác (mã chỉ tiêu 2)",
+                  "Dự phòng rủi ro (mã chỉ tiêu 3)",
+                  "Các công cụ tài chính phải sinh và các tài sản tài chính khác (mã chỉ tiêu V; tham chiếu Thuyết minh số 7)",
+                  "Cho vay khách hàng (mã chỉ tiêu VI)",
+                  "Cho vay khách hàng (mã chỉ tiêu 1; tham chiếu Thuyết minh số 8)",
+                  "Dự phòng rủi ro cho vay khách hàng (mã chỉ tiêu 2; tham chiếu Thuyết minh số 9)",
+                  "Chứng khoán đầu tư (mã chỉ tiêu VIII; tham chiếu Thuyết minh số 10)",
+                  "Chứng khoán đầu tư sẵn sàng để bán (mã chỉ tiêu 1)",
+                  "Chứng khoán đầu tư giữ đến ngày đáo hạn (mã chỉ tiêu 2)",
+                  "Dự phòng rủi ro chứng khoán đầu tư (mã chỉ tiêu 3)",
+                  "Góp vốn, đầu tư dài hạn (mã chỉ tiêu IX; tham chiếu Thuyết minh số 11)",
+                  "Đầu tư vào công ty con (mã chỉ tiêu 1)",
+                  "Đầu tư dài hạn khác (mã chỉ tiêu 4)",
+                  "Dự phòng giảm giá đầu tư dài hạn (mã chỉ tiêu 5)",
+                  "Tài sản cố định (mã chỉ tiêu X)",
+                  "Tài sản cố định hữu hình (mã chỉ tiêu 1; tham chiếu Thuyết minh số 12)",
+                  "Nguyên giá (mã chỉ tiêu a)",
+                  "Giá trị hao mòn lũy kế (mã chỉ tiêu b)",
+                  "Tài sản cố định vô hình (mã chỉ tiêu 3; tham chiếu Thuyết minh số 13)",
+                  "Tài sản Có khác (mã chỉ tiêu XII; tham chiếu Thuyết minh số 14)",
+                  "Các khoản phải thu (mã chỉ tiêu 1)",
+                  "Các khoản lãi, phí phải thu (mã chỉ tiêu 2)",
+                  "Tài sản Có khác (mã chỉ tiêu 4)",
+                  "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác (mã chỉ tiêu 5)",
+                  "TỔNG TÀI SẢN"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Sử dụng dự phòng trong năm",
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                  "Sử dụng dự phòng trong năm",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                  "Sử dụng dự phòng trong năm",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Dự phòng rủi ro cho vay khách hàng",
+                  "Cho vay khách hàng"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                  "Dự phòng rủi ro chứng khoán đầu tư",
+                  "Cho vay các tổ chức tín dụng khác",
+                  "Dự phòng giảm giá đầu tư dài hạn"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Cho vay các tổ chức tín dụng khác",
+                  "Cho vay khách hàng",
+                  "Dự phòng rủi ro cho vay khách hàng",
+                  "Chứng khoán đầu tư sẵn sàng để bán",
+                  "Tài sản Có khác - gộp",
+                  "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                  "Các khoản nợ khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tiền gửi tại NHNNVN",
+                  "Tiền gửi tại các tổ chức tín dụng khác",
+                  "Cho vay các tổ chức tín dụng khác",
+                  "Cho vay khách hàng",
+                  "Dự phòng rủi ro cho vay khách hàng",
+                  "Chứng khoán đầu tư sẵn sàng để bán",
+                  "Dự phòng rủi ro chứng khoán đầu tư",
+                  "Đầu tư dài hạn khác",
+                  "Dự phòng giảm giá đầu tư dài hạn",
+                  "Tài sản cố định hữu hình",
+                  "Tài sản cố định vô hình",
+                  "Tài sản Có khác - gộp",
+                  "Dự phòng rủi ro cho các tài sản Có nội bảng khác",
+                  "Các khoản nợ khác",
+                  "Tài sản thuần có thể xác định được của VVF"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c22",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Trích lập dự phòng trong năm"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c26",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Trích lập dự phòng trong năm (Thuyết minh 26)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tăng do sáp nhập VVF",
+                  "Trích lập dự phòng trong năm (Thuyết minh 26)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tăng do sáp nhập VVF",
+                  "Trích lập dự phòng trong năm (Thuyết minh 26)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c06",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                  "Số dư cuối năm"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Số dư đầu năm",
+                  "Trích lập dự phòng trong năm (Thuyết minh 28)",
+                  "Số dư cuối năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c17",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "SHB — Ngân hàng TMCP Sài Gòn - Hà Nội — năm 2016 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh 33: Các giao dịch chủ yếu với các bên liên quan"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "▪ Cho vay"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "▪ Góp vốn",
+                  "▪ Tiền gửi không kỳ hạn và có kỳ hạn",
+                  "▪ Cho vay",
+                  "▪ Phải thu khác",
+                  "▪ Phải trả khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "▪ Góp vốn",
+                  "▪ Tiền gửi không kỳ hạn và có kỳ hạn",
+                  "▪ Cho vay",
+                  "▪ Phải thu khác",
+                  "▪ Phải trả khác"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Dự phòng chung (i)",
+              "vai trò": "trực tiếp"
+            },
+            {
+              "mã chỉ tiêu": "b01_k02",
+              "nội dung": "Dự phòng cụ thể (ii)",
+              "vai trò": "trực tiếp"
+            },
+            {
+              "mã chỉ tiêu": "b01_k03",
+              "nội dung": "Dự phòng rủi ro cho vay khách hàng",
+              "vai trò": "trực tiếp"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c01",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01",
+            "b01_k02"
+          ]
+        },
+        {
+          "mã bảng": "c03",
+          "đáp ứng chỉ tiêu": [
+            "b01_k03"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Dự phòng chung (i)",
+            "role": "trực tiếp"
+          },
+          {
+            "concept_key": "b01_k02",
+            "description": "Dự phòng cụ thể (ii)",
+            "role": "trực tiếp"
+          },
+          {
+            "concept_key": "b01_k03",
+            "description": "Dự phòng rủi ro cho vay khách hàng",
+            "role": "trực tiếp"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c03"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01",
+      "c03"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_33",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_33",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2016,
+        "start_line": 1479
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.8514783,
+      "bm25_rank": 1,
+      "bm25_score": 22.68194919466656,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "31/12/2016Triệu VND",
+          "31/12/2015Triệu VND",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [],
+        "units": [],
+        "row_count": 3,
+        "table_titles": [
+          "Thuyết minh 9: Dự phòng rủi ro cho vay khách hàng"
+        ],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Dự phòng chung (i)"
+          },
+          {
+            "row": 3,
+            "label": "Dự phòng cụ thể (ii)"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Dự phòng chung (i)"
+          },
+          {
+            "row": 3,
+            "label": "Dự phòng cụ thể (ii)"
+          },
+          {
+            "row": 4,
+            "label": ""
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "SHB_financial_statements_2016_separate_table_2",
+      "metadata": {
+        "table_id": "SHB_financial_statements_2016_separate_table_2",
+        "doc_id": "SHB_financial_statements_2016_separate",
+        "ticker": "SHB",
+        "company_name": "Ngân hàng TMCP Sài Gòn - Hà Nội",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2016,
+        "start_line": 169
+      },
+      "rrf_score": 0.030330882352941176,
+      "dense_rank": 3,
+      "dense_score": 0.81355405,
+      "bm25_rank": 4,
+      "bm25_score": 20.07365969826087,
+      "retrieval_score": 0.030330882352941176,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 32,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "code": "A",
+            "label": "TÀI SẢN"
+          },
+          {
+            "row": 3,
+            "code": "I",
+            "note_ref": "4",
+            "label": "Tiền mặt và vàng"
+          },
+          {
+            "row": 4,
+            "code": "II",
+            "note_ref": "5",
+            "label": "Tiền gửi tại Ngân hàng Nhà nước"
+          },
+          {
+            "row": 5,
+            "code": "III",
+            "note_ref": "6",
+            "label": "Tiền gửi và cho vay các tổ chức tín dụng khác"
+          },
+          {
+            "row": 6,
+            "code": "1",
+            "label": "Tiền gửi tại các tổ chức tín dụng khác"
+          },
+          {
+            "row": 7,
+            "code": "2",
+            "label": "Cho vay các tổ chức tín dụng khác"
+          },
+          {
+            "row": 8,
+            "code": "3",
+            "label": "Dự phòng rủi ro"
+          },
+          {
+            "row": 9,
+            "code": "V",
+            "note_ref": "7",
+            "label": "Các công cụ tài chính phải sinh và các tài sản tài chính khác"
+          },
+          {
+            "row": 10,
+            "code": "VI",
+            "label": "Cho vay khách hàng"
+          },
+          {
+            "row": 11,
+            "code": "1",
+            "note_ref": "8",
+            "label": "Cho vay khách hàng"
+          },
+          {
+            "row": 12,
+            "code": "2",
+            "note_ref": "9",
+            "label": "Dự phòng rủi ro cho vay khách hàng"
+          },
+          {
+            "row": 13,
+            "code": "VIII",
+            "note_ref": "10",
+            "label": "Chứng khoán đầu tư"
+          },
+          {
+            "row": 14,
+            "code": "1",
+            "label": "Chứng khoán đầu tư sẵn sàng để bán"
+          },
+          {
+            "row": 15,
+            "code": "2",
+            "label": "Chứng khoán đầu tư giữ đến ngày đáo hạn"
+          },
+          {
+            "row": 16,
+            "code": "3",
+            "label": "Dự phòng rủi ro chứng khoán đầu tư"
+          },
+          {
+            "row": 17,
+            "code": "IX",
+            "note_ref": "11",
+            "label": "Góp vốn, đầu tư dài hạn"
+          },
+          {
+            "row": 18,
+            "code": "1",
+            "label": "Đầu tư vào công ty con"
+          },
+          {
+            "row": 19,
+            "code": "4",
+            "label": "Đầu tư dài hạn khác"
+          },
+          {
+            "row": 20,
+            "code": "5",
+            "label": "Dự phòng giảm giá đầu tư dài hạn"
+          },
+          {
+            "row": 21,
+            "code": "X",
+            "label": "Tài sản cố định"
+          },
+          {
+            "row": 22,
+            "code": "1",
+            "note_ref": "12",
+            "label": "Tài sản cố định hữu hình"
+          },
+          {
+            "row": 23,
+            "code": "a",
+            "label": "Nguyên giá"
+          },
+          {
+            "row": 24,
+            "code": "b",
+            "label": "Giá trị hao mòn lũy kế"
+          },
+          {
+            "row": 25,
+            "code": "3",
+            "note_ref": "13",
+            "label": "Tài sản cố định vô hình"
+          },
+          {
+            "row": 26,
+            "code": "a",
+            "label": "Nguyên giá"
+          },
+          {
+            "row": 27,
+            "code": "b",
+            "label": "Giá trị hao mòn lũy kế"
+          },
+          {
+            "row": 28,
+            "code": "XII",
+            "note_ref": "14",
+            "label": "Tài sản Có khác"
+          },
+          {
+            "row": 29,
+            "code": "1",
+            "label": "Các khoản phải thu"
+          },
+          {
+            "row": 30,
+            "code": "2",
+            "label": "Các khoản lãi, phí phải thu"
+          },
+          {
+            "row": 31,
+            "code": "4",
+            "label": "Tài sản Có khác"
+          },
+          {
+            "row": 32,
+            "code": "5",
+            "label": "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác"
+          },
+          {
+            "row": 33,
+            "label": "TỔNG TÀI SẢN"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 7,
+            "code": "2",
+            "label": "Cho vay các tổ chức tín dụng khác"
+          },
+          {
+            "row": 8,
+            "code": "3",
+            "label": "Dự phòng rủi ro"
+          },
+          {
+            "row": 9,
+            "code": "V",
+            "note_ref": "7",
+            "label": "Các công cụ tài chính phải sinh và các tài sản tài chính khác"
+          },
+          {
+            "row": 11,
+            "code": "1",
+            "note_ref": "8",
+            "label": "Cho vay khách hàng"
+          },
+          {
+            "row": 12,
+            "code": "2",
+            "note_ref": "9",
+            "label": "Dự phòng rủi ro cho vay khách hàng"
+          },
+          {
+            "row": 13,
+            "code": "VIII",
+            "note_ref": "10",
+            "label": "Chứng khoán đầu tư"
+          },
+          {
+            "row": 31,
+            "code": "4",
+            "label": "Tài sản Có khác"
+          },
+          {
+            "row": 32,
+            "code": "5",
+            "label": "Các khoản dự phòng rủi ro cho các tài sản Có nội bằng khác"
+          },
+          {
+            "row": 33,
+            "label": "TỔNG TÀI SẢN"
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "SHB_financial_statements_2016_separate"
+      ],
+      "tables": [
+        "SHB_financial_statements_2016_separate|1479",
+        "SHB_financial_statements_2016_separate|2364",
+        "SHB_financial_statements_2016_separate|169",
+        "SHB_financial_statements_2016_separate|1887",
+        "SHB_financial_statements_2016_separate|1492",
+        "SHB_financial_statements_2016_separate|1889",
+        "SHB_financial_statements_2016_separate|1883",
+        "SHB_financial_statements_2016_separate|2514",
+        "SHB_financial_statements_2016_separate|2096",
+        "SHB_financial_statements_2016_separate|343",
+        "SHB_financial_statements_2016_separate|1604",
+        "SHB_financial_statements_2016_separate|2310",
+        "SHB_financial_statements_2016_separate|1407",
+        "SHB_financial_statements_2016_separate|200",
+        "SHB_financial_statements_2016_separate|1682",
+        "SHB_financial_statements_2016_separate|1358",
+        "SHB_financial_statements_2016_separate|2435",
+        "SHB_financial_statements_2016_separate|2234",
+        "SHB_financial_statements_2016_separate|1366",
+        "SHB_financial_statements_2016_separate|1444",
+        "SHB_financial_statements_2016_separate|2255",
+        "SHB_financial_statements_2016_separate|1608",
+        "SHB_financial_statements_2016_separate|1612",
+        "SHB_financial_statements_2016_separate|1558",
+        "SHB_financial_statements_2016_separate|2466",
+        "SHB_financial_statements_2016_separate|1570",
+        "SHB_financial_statements_2016_separate|277",
+        "SHB_financial_statements_2016_separate|1562",
+        "SHB_financial_statements_2016_separate|1566",
+        "SHB_financial_statements_2016_separate|439",
+        "SHB_financial_statements_2016_separate|1525",
+        "SHB_financial_statements_2016_separate|241",
+        "SHB_financial_statements_2016_separate|2975",
+        "SHB_financial_statements_2016_separate|2988",
+        "SHB_financial_statements_2016_separate|2816",
+        "SHB_financial_statements_2016_separate|1436",
+        "SHB_financial_statements_2016_separate|2761",
+        "SHB_financial_statements_2016_separate|2238",
+        "SHB_financial_statements_2016_separate|2742",
+        "SHB_financial_statements_2016_separate|2831",
+        "SHB_financial_statements_2016_separate|851",
+        "SHB_financial_statements_2016_separate|1850",
+        "SHB_financial_statements_2016_separate|1815",
+        "SHB_financial_statements_2016_separate|2306",
+        "SHB_financial_statements_2016_separate|1924",
+        "SHB_financial_statements_2016_separate|18",
+        "SHB_financial_statements_2016_separate|2251",
+        "SHB_financial_statements_2016_separate|2370",
+        "SHB_financial_statements_2016_separate|1622",
+        "SHB_financial_statements_2016_separate|782"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "SHB_financial_statements_2016_separate"
+      ],
+      "tables": [
+        "SHB_financial_statements_2016_separate|1479",
+        "SHB_financial_statements_2016_separate|2364",
+        "SHB_financial_statements_2016_separate|169",
+        "SHB_financial_statements_2016_separate|1887",
+        "SHB_financial_statements_2016_separate|2514",
+        "SHB_financial_statements_2016_separate|1608",
+        "SHB_financial_statements_2016_separate|1570",
+        "SHB_financial_statements_2016_separate|1889"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "SHB_financial_statements_2016_separate"
+      ],
+      "tables": [
+        "SHB_financial_statements_2016_separate|1479",
+        "SHB_financial_statements_2016_separate|2364",
+        "SHB_financial_statements_2016_separate|169",
+        "SHB_financial_statements_2016_separate|1887",
+        "SHB_financial_statements_2016_separate|2514",
+        "SHB_financial_statements_2016_separate|1608",
+        "SHB_financial_statements_2016_separate|1570",
+        "SHB_financial_statements_2016_separate|1889",
+        "SHB_financial_statements_2016_separate|2435"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "SHB_financial_statements_2016_separate"
+      ],
+      "tables": [
+        "SHB_financial_statements_2016_separate|1479",
+        "SHB_financial_statements_2016_separate|169"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "SHB_financial_statements_2016_separate"
+      ],
+      "tables": [
+        "SHB_financial_statements_2016_separate|1479",
+        "SHB_financial_statements_2016_separate|169"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f2": 0.4166666666666667,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.1111111111111111,
+        "recall": 1.0,
+        "f2": 0.38461538461538464,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f2": 0.8333333333333334,
+        "mrr5": 1.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "SHB_financial_statements_2016_separate|1479",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": true,
+        "reranker": true
+      },
+      "terminal": "selected"
+    }
+  ],
+  "error": null
+}

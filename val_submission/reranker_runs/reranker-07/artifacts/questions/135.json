@@ -1,0 +1,4495 @@
+{
+  "schema_version": 2,
+  "id": 135,
+  "question": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+  "started_at": "2026-08-23T09:28:00+00:00",
+  "finished_at": "2026-08-23T09:28:20+00:00",
+  "duration_seconds": 19.763663394001924,
+  "provider_attempts": 1,
+  "source_artifact": "/home/tuanta/Financial_AI/finlens-ai/val_submission/runs/reranker-06/artifacts/questions/135.json",
+  "golden": {
+    "id": 135,
+    "question": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+    "relevant_docs": [
+      "GAS_financial_statements_2021_separate"
+    ],
+    "relevant_tables": [
+      "GAS_financial_statements_2021_separate|1024"
+    ]
+  },
+  "retriever_candidates": [
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_8",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_8",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 346
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.8529694,
+      "bm25_rank": 1,
+      "bm25_score": 16.69645467576597,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_21",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_21",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1069
+      },
+      "rrf_score": 0.030834914611005692,
+      "dense_rank": 2,
+      "dense_score": 0.8167832,
+      "bm25_rank": 2,
+      "bm25_score": 14.017360711569564,
+      "retrieval_score": 0.030834914611005692,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_44",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_44",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1369
+      },
+      "rrf_score": 0.03036576949620428,
+      "dense_rank": 3,
+      "dense_score": 0.8474434,
+      "bm25_rank": 9,
+      "bm25_score": 10.670541228820674,
+      "retrieval_score": 0.03036576949620428,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_9",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_9",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 365
+      },
+      "rrf_score": 0.03007688828584351,
+      "dense_rank": 4,
+      "dense_score": 0.8262278,
+      "bm25_rank": 7,
+      "bm25_score": 10.950425541088773,
+      "retrieval_score": 0.03007688828584351,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_12",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_12",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "cash_flow",
+        "year": 2021,
+        "start_line": 452
+      },
+      "rrf_score": 0.02967032967032967,
+      "dense_rank": 5,
+      "dense_score": 0.84374857,
+      "bm25_rank": 10,
+      "bm25_score": 9.164572422012725,
+      "retrieval_score": 0.02967032967032967,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_10",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_10",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 386
+      },
+      "rrf_score": 0.029513888888888888,
+      "dense_rank": 6,
+      "dense_score": 0.8438692,
+      "bm25_rank": 12,
+      "bm25_score": 7.39870950116702,
+      "retrieval_score": 0.029513888888888888,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_43",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_43",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1356
+      },
+      "rrf_score": 0.02938045560996381,
+      "dense_rank": 7,
+      "dense_score": 0.8547338,
+      "bm25_rank": 17,
+      "bm25_score": 5.682503263791483,
+      "retrieval_score": 0.02938045560996381,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_18",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_18",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1024
+      },
+      "rrf_score": 0.029030910609857977,
+      "dense_rank": 8,
+      "dense_score": 0.8041941,
+      "bm25_rank": 3,
+      "bm25_score": 12.013358213738556,
+      "retrieval_score": 0.029030910609857977,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_19",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_19",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1045
+      },
+      "rrf_score": 0.028958333333333336,
+      "dense_rank": 9,
+      "dense_score": 0.8041941,
+      "bm25_rank": 4,
+      "bm25_score": 12.013358213738556,
+      "retrieval_score": 0.028958333333333336,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_39",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_39",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1287
+      },
+      "rrf_score": 0.028790389395194696,
+      "dense_rank": 10,
+      "dense_score": 0.80957437,
+      "bm25_rank": 8,
+      "bm25_score": 10.80950756570953,
+      "retrieval_score": 0.028790389395194696,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_38",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_38",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1272
+      },
+      "rrf_score": 0.028006267136701922,
+      "dense_rank": 11,
+      "dense_score": 0.8141612,
+      "bm25_rank": 14,
+      "bm25_score": 6.594334140683303,
+      "retrieval_score": 0.028006267136701922,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_16",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_16",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 973
+      },
+      "rrf_score": 0.027984344422700584,
+      "dense_rank": 12,
+      "dense_score": 0.81032896,
+      "bm25_rank": 13,
+      "bm25_score": 6.876257922746209,
+      "retrieval_score": 0.027984344422700584,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_40",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_40",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1295
+      },
+      "rrf_score": 0.02719970792259949,
+      "dense_rank": 13,
+      "dense_score": 0.79611886,
+      "bm25_rank": 6,
+      "bm25_score": 11.300025034457512,
+      "retrieval_score": 0.02719970792259949,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_32",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_32",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1221
+      },
+      "rrf_score": 0.027149321266968326,
+      "dense_rank": 14,
+      "dense_score": 0.7932543,
+      "bm25_rank": 5,
+      "bm25_score": 11.842056020996203,
+      "retrieval_score": 0.027149321266968326,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_49",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_49",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1433
+      },
+      "rrf_score": 0.027046783625730993,
+      "dense_rank": 15,
+      "dense_score": 0.8090962,
+      "bm25_rank": 16,
+      "bm25_score": 5.910995106946027,
+      "retrieval_score": 0.027046783625730993,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_50",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_50",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1459
+      },
+      "rrf_score": 0.0266900790166813,
+      "dense_rank": 16,
+      "dense_score": 0.8172706,
+      "bm25_rank": 25,
+      "bm25_score": 4.080576473891427,
+      "retrieval_score": 0.0266900790166813,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_11",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_11",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "income_statement",
+        "year": 2021,
+        "start_line": 420
+      },
+      "rrf_score": 0.025603392041748205,
+      "dense_rank": 17,
+      "dense_score": 0.8075506,
+      "bm25_rank": 24,
+      "bm25_score": 4.382562496747833,
+      "retrieval_score": 0.025603392041748205,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_22",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_22",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1085
+      },
+      "rrf_score": 0.025158227848101268,
+      "dense_rank": 18,
+      "dense_score": 0.8000897,
+      "bm25_rank": 20,
+      "bm25_score": 4.91096499453945,
+      "retrieval_score": 0.025158227848101268,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_36",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_36",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1254
+      },
+      "rrf_score": 0.024185517143263623,
+      "dense_rank": 19,
+      "dense_score": 0.7785414,
+      "bm25_rank": 11,
+      "bm25_score": 8.04240012276765,
+      "retrieval_score": 0.024185517143263623,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_31",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_31",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1217
+      },
+      "rrf_score": 0.023822791864028976,
+      "dense_rank": 20,
+      "dense_score": 0.8052671,
+      "bm25_rank": 37,
+      "bm25_score": 2.106010878687062,
+      "retrieval_score": 0.023822791864028976,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_45",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_45",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1386
+      },
+      "rrf_score": 0.023403679653679656,
+      "dense_rank": 21,
+      "dense_score": 0.8021744,
+      "bm25_rank": 36,
+      "bm25_score": 2.113887015165367,
+      "retrieval_score": 0.023403679653679656,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_29",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_29",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1190
+      },
+      "rrf_score": 0.023399014778325122,
+      "dense_rank": 22,
+      "dense_score": 0.79529,
+      "bm25_rank": 27,
+      "bm25_score": 3.9628627564218664,
+      "retrieval_score": 0.023399014778325122,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_57",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_57",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1573
+      },
+      "rrf_score": 0.022767295597484277,
+      "dense_rank": 23,
+      "dense_score": 0.77052283,
+      "bm25_rank": 15,
+      "bm25_score": 6.442797406330692,
+      "retrieval_score": 0.022767295597484277,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_55",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_55",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1552
+      },
+      "rrf_score": 0.022727272727272728,
+      "dense_rank": 24,
+      "dense_score": 0.79064566,
+      "bm25_rank": 28,
+      "bm25_score": 3.51259367922945,
+      "retrieval_score": 0.022727272727272728,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_71",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_71",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1762
+      },
+      "rrf_score": 0.022616917965755177,
+      "dense_rank": 25,
+      "dense_score": 0.7914375,
+      "bm25_rank": 31,
+      "bm25_score": 3.342165639019923,
+      "retrieval_score": 0.022616917965755177,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_52",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_52",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1540
+      },
+      "rrf_score": 0.022347066167290888,
+      "dense_rank": 26,
+      "dense_score": 0.78689927,
+      "bm25_rank": 29,
+      "bm25_score": 3.509718154173905,
+      "retrieval_score": 0.022347066167290888,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_37",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_37",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1256
+      },
+      "rrf_score": 0.02224694104560623,
+      "dense_rank": 27,
+      "dense_score": 0.790872,
+      "bm25_rank": 33,
+      "bm25_score": 2.934538231795059,
+      "retrieval_score": 0.02224694104560623,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_68",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_68",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1728
+      },
+      "rrf_score": 0.022154222766217868,
+      "dense_rank": 28,
+      "dense_score": 0.78078556,
+      "bm25_rank": 26,
+      "bm25_score": 4.0421535675185405,
+      "retrieval_score": 0.022154222766217868,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_59",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_59",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1615
+      },
+      "rrf_score": 0.02191142191142191,
+      "dense_rank": 29,
+      "dense_score": 0.7660817,
+      "bm25_rank": 18,
+      "bm25_score": 5.566662369973394,
+      "retrieval_score": 0.02191142191142191,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_78",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_78",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1841
+      },
+      "rrf_score": 0.021369433877825018,
+      "dense_rank": 30,
+      "dense_score": 0.76667833,
+      "bm25_rank": 22,
+      "bm25_score": 4.491934910343485,
+      "retrieval_score": 0.021369433877825018,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_25",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_25",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1138
+      },
+      "rrf_score": 0.019803921568627453,
+      "dense_rank": 31,
+      "dense_score": 0.7775609,
+      "bm25_rank": 40,
+      "bm25_score": 1.9277005794510202,
+      "retrieval_score": 0.019803921568627453,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_47",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_47",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1425
+      },
+      "rrf_score": 0.01282051282051282,
+      "dense_rank": 32,
+      "dense_score": 0.8001981,
+      "retrieval_score": 0.01282051282051282,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_3",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_3",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 195
+      },
+      "rrf_score": 0.012658227848101266,
+      "bm25_rank": 19,
+      "bm25_score": 5.503789287251675,
+      "retrieval_score": 0.012658227848101266,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 33
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_80",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_80",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1851
+      },
+      "rrf_score": 0.0125,
+      "dense_rank": 34,
+      "dense_score": 0.7999231,
+      "retrieval_score": 0.0125,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_28",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_28",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1167
+      },
+      "rrf_score": 0.012345679012345678,
+      "bm25_rank": 21,
+      "bm25_score": 4.630567669499941,
+      "retrieval_score": 0.012345679012345678,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 35
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_54",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_54",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1548
+      },
+      "rrf_score": 0.012345679012345678,
+      "dense_rank": 36,
+      "dense_score": 0.79900974,
+      "retrieval_score": 0.012345679012345678,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_81",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_81",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1872
+      },
+      "rrf_score": 0.012195121951219513,
+      "dense_rank": 37,
+      "dense_score": 0.7965243,
+      "retrieval_score": 0.012195121951219513,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_2",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_2",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 191
+      },
+      "rrf_score": 0.012048192771084338,
+      "bm25_rank": 23,
+      "bm25_score": 4.397786120647364,
+      "retrieval_score": 0.012048192771084338,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 38
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_58",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_58",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1607
+      },
+      "rrf_score": 0.011235955056179775,
+      "dense_rank": 39,
+      "dense_score": 0.78924,
+      "retrieval_score": 0.011235955056179775,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_76",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_76",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1793
+      },
+      "rrf_score": 0.011111111111111112,
+      "bm25_rank": 30,
+      "bm25_score": 3.418893858327907,
+      "retrieval_score": 0.011111111111111112,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 40
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_27",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_27",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1148
+      },
+      "rrf_score": 0.01098901098901099,
+      "dense_rank": 41,
+      "dense_score": 0.7826978,
+      "retrieval_score": 0.01098901098901099,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_72",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_72",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1779
+      },
+      "rrf_score": 0.010869565217391304,
+      "dense_rank": 42,
+      "dense_score": 0.7814441,
+      "retrieval_score": 0.010869565217391304,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_77",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_77",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1814
+      },
+      "rrf_score": 0.010869565217391304,
+      "bm25_rank": 32,
+      "bm25_score": 3.335111566247057,
+      "retrieval_score": 0.010869565217391304,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 43
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_63",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_63",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1704
+      },
+      "rrf_score": 0.010752688172043012,
+      "dense_rank": 44,
+      "dense_score": 0.7814441,
+      "retrieval_score": 0.010752688172043012,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_34",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_34",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1250
+      },
+      "rrf_score": 0.010638297872340425,
+      "dense_rank": 45,
+      "dense_score": 0.7814441,
+      "retrieval_score": 0.010638297872340425,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_73",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_73",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1783
+      },
+      "rrf_score": 0.010638297872340425,
+      "bm25_rank": 34,
+      "bm25_score": 2.8172700820145153,
+      "retrieval_score": 0.010638297872340425,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 46
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_75",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_75",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1789
+      },
+      "rrf_score": 0.010526315789473684,
+      "bm25_rank": 35,
+      "bm25_score": 2.7345634955857467,
+      "retrieval_score": 0.010526315789473684,
+      "retrieval_mode": "hybrid",
+      "dense_rank": 47
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_53",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_53",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1544
+      },
+      "rrf_score": 0.010416666666666666,
+      "dense_rank": 48,
+      "dense_score": 0.7795863,
+      "retrieval_score": 0.010416666666666666,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_23",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_23",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1104
+      },
+      "rrf_score": 0.010309278350515464,
+      "dense_rank": 49,
+      "dense_score": 0.7788798,
+      "retrieval_score": 0.010309278350515464,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_51",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_51",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1486
+      },
+      "rrf_score": 0.01020408163265306,
+      "dense_rank": 50,
+      "dense_score": 0.77879804,
+      "retrieval_score": 0.01020408163265306,
+      "retrieval_mode": "hybrid"
+    }
+  ],
+  "reranker_diagnostics": {
+    "input_candidate_count": 50,
+    "available_buckets": [
+      {
+        "bucket_key": "b01",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "year": 2021,
+        "report_type": "riêng"
+      }
+    ],
+    "candidate_catalog": {
+      "c01": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_8",
+        "table_ref": "GAS_financial_statements_2021_separate|346",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 1
+      },
+      "c02": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_21",
+        "table_ref": "GAS_financial_statements_2021_separate|1069",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 2
+      },
+      "c03": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_44",
+        "table_ref": "GAS_financial_statements_2021_separate|1369",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 3
+      },
+      "c04": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_9",
+        "table_ref": "GAS_financial_statements_2021_separate|365",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 4
+      },
+      "c05": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_12",
+        "table_ref": "GAS_financial_statements_2021_separate|452",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "cash_flow",
+        "retrieval_rank": 5
+      },
+      "c06": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_10",
+        "table_ref": "GAS_financial_statements_2021_separate|386",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "balance_sheet",
+        "retrieval_rank": 6
+      },
+      "c07": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_43",
+        "table_ref": "GAS_financial_statements_2021_separate|1356",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 7
+      },
+      "c08": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_18",
+        "table_ref": "GAS_financial_statements_2021_separate|1024",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 8
+      },
+      "c09": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_19",
+        "table_ref": "GAS_financial_statements_2021_separate|1045",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 9
+      },
+      "c10": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_39",
+        "table_ref": "GAS_financial_statements_2021_separate|1287",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 10
+      },
+      "c11": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_38",
+        "table_ref": "GAS_financial_statements_2021_separate|1272",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 11
+      },
+      "c12": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_16",
+        "table_ref": "GAS_financial_statements_2021_separate|973",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 12
+      },
+      "c13": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_40",
+        "table_ref": "GAS_financial_statements_2021_separate|1295",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 13
+      },
+      "c14": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_32",
+        "table_ref": "GAS_financial_statements_2021_separate|1221",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 14
+      },
+      "c15": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_49",
+        "table_ref": "GAS_financial_statements_2021_separate|1433",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 15
+      },
+      "c16": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_50",
+        "table_ref": "GAS_financial_statements_2021_separate|1459",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 16
+      },
+      "c17": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_11",
+        "table_ref": "GAS_financial_statements_2021_separate|420",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "income_statement",
+        "retrieval_rank": 17
+      },
+      "c18": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_22",
+        "table_ref": "GAS_financial_statements_2021_separate|1085",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 18
+      },
+      "c19": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_36",
+        "table_ref": "GAS_financial_statements_2021_separate|1254",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 19
+      },
+      "c20": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_31",
+        "table_ref": "GAS_financial_statements_2021_separate|1217",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 20
+      },
+      "c21": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_45",
+        "table_ref": "GAS_financial_statements_2021_separate|1386",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 21
+      },
+      "c22": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_29",
+        "table_ref": "GAS_financial_statements_2021_separate|1190",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 22
+      },
+      "c23": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_57",
+        "table_ref": "GAS_financial_statements_2021_separate|1573",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 23
+      },
+      "c24": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_55",
+        "table_ref": "GAS_financial_statements_2021_separate|1552",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 24
+      },
+      "c25": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_71",
+        "table_ref": "GAS_financial_statements_2021_separate|1762",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 25
+      },
+      "c26": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_52",
+        "table_ref": "GAS_financial_statements_2021_separate|1540",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 26
+      },
+      "c27": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_37",
+        "table_ref": "GAS_financial_statements_2021_separate|1256",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 27
+      },
+      "c28": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_68",
+        "table_ref": "GAS_financial_statements_2021_separate|1728",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 28
+      },
+      "c29": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_59",
+        "table_ref": "GAS_financial_statements_2021_separate|1615",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 29
+      },
+      "c30": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_78",
+        "table_ref": "GAS_financial_statements_2021_separate|1841",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 30
+      },
+      "c31": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_25",
+        "table_ref": "GAS_financial_statements_2021_separate|1138",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 31
+      },
+      "c32": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_47",
+        "table_ref": "GAS_financial_statements_2021_separate|1425",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 32
+      },
+      "c33": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_3",
+        "table_ref": "GAS_financial_statements_2021_separate|195",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 33
+      },
+      "c34": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_80",
+        "table_ref": "GAS_financial_statements_2021_separate|1851",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 34
+      },
+      "c35": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_28",
+        "table_ref": "GAS_financial_statements_2021_separate|1167",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 35
+      },
+      "c36": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_54",
+        "table_ref": "GAS_financial_statements_2021_separate|1548",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 36
+      },
+      "c37": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_81",
+        "table_ref": "GAS_financial_statements_2021_separate|1872",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 37
+      },
+      "c38": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_2",
+        "table_ref": "GAS_financial_statements_2021_separate|191",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 38
+      },
+      "c39": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_58",
+        "table_ref": "GAS_financial_statements_2021_separate|1607",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 39
+      },
+      "c40": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_76",
+        "table_ref": "GAS_financial_statements_2021_separate|1793",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 40
+      },
+      "c41": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_27",
+        "table_ref": "GAS_financial_statements_2021_separate|1148",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 41
+      },
+      "c42": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_72",
+        "table_ref": "GAS_financial_statements_2021_separate|1779",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 42
+      },
+      "c43": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_77",
+        "table_ref": "GAS_financial_statements_2021_separate|1814",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 43
+      },
+      "c44": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_63",
+        "table_ref": "GAS_financial_statements_2021_separate|1704",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 44
+      },
+      "c45": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_34",
+        "table_ref": "GAS_financial_statements_2021_separate|1250",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 45
+      },
+      "c46": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_73",
+        "table_ref": "GAS_financial_statements_2021_separate|1783",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 46
+      },
+      "c47": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_75",
+        "table_ref": "GAS_financial_statements_2021_separate|1789",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 47
+      },
+      "c48": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_53",
+        "table_ref": "GAS_financial_statements_2021_separate|1544",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 48
+      },
+      "c49": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_23",
+        "table_ref": "GAS_financial_statements_2021_separate|1104",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 49
+      },
+      "c50": {
+        "bucket_key": "b01",
+        "table_id": "GAS_financial_statements_2021_separate_table_51",
+        "table_ref": "GAS_financial_statements_2021_separate|1486",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "table_type": "note_table",
+        "retrieval_rank": 50
+      }
+    },
+    "candidate_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26",
+      "c27",
+      "c28",
+      "c29",
+      "c30",
+      "c31",
+      "c32",
+      "c33",
+      "c34",
+      "c35",
+      "c36",
+      "c37",
+      "c38",
+      "c39",
+      "c40",
+      "c41",
+      "c42",
+      "c43",
+      "c44",
+      "c45",
+      "c46",
+      "c47",
+      "c48",
+      "c49",
+      "c50"
+    ],
+    "scout_prompts": [
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c01",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)"
+              ],
+              "dòng gần với câu hỏi": [
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)",
+                "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 14(b))",
+                "TÀI SẢN NGẮN HẠN (mã chỉ tiêu 100)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 4(a))",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 6(a))",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN NGẮN HẠN (mã chỉ tiêu 100)",
+                "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 3)",
+                "Tiền (mã chỉ tiêu 111)",
+                "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120)",
+                "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 4(a))",
+                "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)",
+                "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 6(a))",
+                "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)",
+                "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 9)",
+                "Hàng tồn kho (mã chỉ tiêu 141)",
+                "Dự phòng giảm giá hàng tồn kho (mã chỉ tiêu 149)",
+                "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151; tham chiếu Thuyết minh số 10(a))",
+                "Thuế Giá trị gia tăng (\"GTGT\") được khấu trừ (mã chỉ tiêu 152; tham chiếu Thuyết minh số 14(a))",
+                "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 14(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c05",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "báo cáo lưu chuyển tiền tệ",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tăng các khoản phải thu (mã chỉ tiêu 09)",
+                "Tiền thu từ tiền gửi ngân hàng có kỳ hạn (mã chỉ tiêu 24)",
+                "Tăng các khoản phải trả (mã chỉ tiêu 11)",
+                "Tiền gửi tiền ngân hàng có kỳ hạn (mã chỉ tiêu 23)",
+                "Tiền thu từ vay dài hạn (mã chỉ tiêu 33)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Lợi nhuận từ hoạt động kinh doanh trướcnhững thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Tăng các khoản phải thu (mã chỉ tiêu 09)",
+                "Tăng hàng tồn kho (mã chỉ tiêu 10)",
+                "Tăng các khoản phải trả (mã chỉ tiêu 11)",
+                "Tăng chỉ phí trả trước (mã chỉ tiêu 12)",
+                "Tiền gửi tiền ngân hàng có kỳ hạn (mã chỉ tiêu 23)",
+                "Tiền thu từ tiền gửi ngân hàng có kỳ hạn (mã chỉ tiêu 24)",
+                "Tiền thu lãi tiền gửi và cổ tức được chia (mã chỉ tiêu 27)"
+              ],
+              "mục lục chỉ tiêu": [
+                "2020VND (mã chỉ tiêu 2021VND)",
+                "Lợi nhuận kế toán trước thuếĐiều chỉnh cho các khoản: (mã chỉ tiêu 01)",
+                "Khấu hao tài sản cố định (\"TSCĐ\") (mã chỉ tiêu 02)",
+                "Các khoản dự phòng (mã chỉ tiêu 03)",
+                "Lãi chênh lệch tỷ giá hối doái do đánh giá lạicác khoản mục tiền tệ có gốc ngoại tệ (mã chỉ tiêu 04)",
+                "Lãi từ hoạt động đầu tư (mã chỉ tiêu 05)",
+                "Chi phí lãi vay (mã chỉ tiêu 06)",
+                "Lợi nhuận từ hoạt động kinh doanh trướcnhững thay đổi vốn lưu động (mã chỉ tiêu 08)",
+                "Tăng các khoản phải thu (mã chỉ tiêu 09)",
+                "Tăng hàng tồn kho (mã chỉ tiêu 10)",
+                "Tăng các khoản phải trả (mã chỉ tiêu 11)",
+                "Tăng chỉ phí trả trước (mã chỉ tiêu 12)",
+                "Tiền lãi vay đã trả (mã chỉ tiêu 14)",
+                "Tiền thuế TNDN đã nộp (mã chỉ tiêu 15)",
+                "Tiền chi khác từ hoạt động kinh doanh (mã chỉ tiêu 17)",
+                "Lưu chuyển tiền thuần từ hoạt động kinh doanh (mã chỉ tiêu 20)",
+                "Tiền chỉ để mua sắm, xây dựng TSCĐvà các tài sản dài hạn khác (mã chỉ tiêu 21)",
+                "Tiền gửi tiền ngân hàng có kỳ hạn (mã chỉ tiêu 23)",
+                "Tiền thu từ tiền gửi ngân hàng có kỳ hạn (mã chỉ tiêu 24)",
+                "Tiền thu lãi tiền gửi và cổ tức được chia (mã chỉ tiêu 27)",
+                "Lưu chuyển tiền thuần từ hoạt động đầu tư (mã chỉ tiêu 30)",
+                "Tiền thu từ vay dài hạn (mã chỉ tiêu 33)",
+                "Tiền chỉ trả nợ gốc vay (mã chỉ tiêu 34)",
+                "Tiền chỉ trả cổ tức cho chủ sở hữu (mã chỉ tiêu 36)",
+                "Lưu chuyển tiền thuần từ hoạt động tài chính (mã chỉ tiêu 40)",
+                "Lưu chuyển tiền thuần trong năm (mã chỉ tiêu 50)",
+                "Tiền và tương đương tiền đầu năm (mã chỉ tiêu 60; tham chiếu Thuyết minh số 3)",
+                "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đốingoại tệ (mã chỉ tiêu 61)",
+                "Tiền và tương đương tiền cuối năm (mã chỉ tiêu 70; tham chiếu Thuyết minh số 3)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c09",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Bên thứ ba"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên thứ ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bên thứ ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c13",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                "Bên thú ba",
+                "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước",
+                "Phải trả liên quan đến BCC (*)",
+                "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                "Khác",
+                "Bên thú ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước",
+                "Phải trả liên quan đến BCC (*)",
+                "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                "Khác",
+                "Bên thú ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c17",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "báo cáo kết quả kinh doanh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số 25)"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số 25)",
+                "Giá vốn hàng bán và dịch vụ cung cấp (mã chỉ tiêu 11; tham chiếu Thuyết minh số 26)",
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu bán hàng và cung cấp dịch vụ (mã chỉ tiêu 01)",
+                "Doanh thu thuần về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 10; tham chiếu Thuyết minh số 25)",
+                "Giá vốn hàng bán và dịch vụ cung cấp (mã chỉ tiêu 11; tham chiếu Thuyết minh số 26)",
+                "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ (mã chỉ tiêu 20)",
+                "Doanh thu hoạt động tài chính (mã chỉ tiêu 21; tham chiếu Thuyết minh số 27)",
+                "Chi phí tài chính (mã chỉ tiêu 22; tham chiếu Thuyết minh số 28)",
+                "- Trong đó: Chi phí lãi vay (mã chỉ tiêu 23; tham chiếu Thuyết minh số 28)",
+                "Chi phí bán hàng (mã chỉ tiêu 25; tham chiếu Thuyết minh số 29)",
+                "Chi phí quản lý doanh nghiệp (mã chỉ tiêu 26; tham chiếu Thuyết minh số 30)",
+                "Lợi nhuận thuần từ hoạt động kinh doanh (mã chỉ tiêu 30)",
+                "Thu nhập khác (mã chỉ tiêu 31)",
+                "Chi phí khác (mã chỉ tiêu 32)",
+                "Lợi nhuận/(lỗ) khác (mã chỉ tiêu 40)",
+                "Tổng lợi nhuận kế toán trước thuế (mã chỉ tiêu 50)",
+                "Chi phí thuế thu nhập doanh nghiệp (\"TNDN\") hiện hành (mã chỉ tiêu 51; tham chiếu Thuyết minh số 31)",
+                "Thuế TNDN hoãn lại (mã chỉ tiêu 52; tham chiếu Thuyết minh số 31)",
+                "Lợi nhuận sau thuế TNDN (mã chỉ tiêu 60)",
+                "Lãi cơ bản trên cổ phiếu (mã chỉ tiêu 70; tham chiếu Thuyết minh số 23(a))",
+                "Lãi suy giảm trên cổ phiếu (mã chỉ tiêu 71; tham chiếu Thuyết minh số 23(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c21",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm (Thuyết minh 22)",
+                "Chi trong năm",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm (Thuyết minh 22)",
+                "Chi trong năm",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c25",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Các bên liên quan khácTổng Công ty Điện lực Dầu khí Việt Nam",
+                "Bên liên quan khácNgân hàng TMCP Đại chúng Việt Nam",
+                "Công ty mẹTập đoàn Dầu khí Việt Nam",
+                "Tổng Công ty Phân bón và Hóa chất Dầu khí - CTCP"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên liên quan khácNgân hàng TMCP Đại chúng Việt Nam",
+                "Công ty mẹTập đoàn Dầu khí Việt Nam",
+                "Công ty liên kếtCông ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Các bên liên quan khácTổng Công ty Điện lực Dầu khí Việt Nam",
+                "Tổng Công ty Phân bón và Hóa chất Dầu khí - CTCP",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí",
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Tổng Công ty Hóa chất và Dịch vụ Dầu Khí - CTCP"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lương và các quyền lợi gộp khác",
+                "Bên liên quan khácNgân hàng TMCP Đại chúng Việt Nam",
+                "Công ty mẹTập đoàn Dầu khí Việt Nam",
+                "Các công ty conCông ty Cổ phần Phân phối Khí thấp áp Dầu khíViệt Nam",
+                "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                "Công ty Cổ phần CNG Việt Nam",
+                "Công ty liên kếtCông ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Các bên liên quan khácTổng Công ty Điện lực Dầu khí Việt Nam",
+                "Tổng Công ty Phân bón và Hóa chất Dầu khí - CTCP",
+                "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí",
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Tổng Công ty Hóa chất và Dịch vụ Dầu Khí - CTCP"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c29",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí dự phòng thu đơn công trình khí"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí mua khí từ các chủ mổ",
+                "Chi phí khấu hao",
+                "Chi phí quảng cáo, tiếp thị",
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí dự phòng thu đơn công trình khí",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí mua khí từ các chủ mổ",
+                "Chi phí khấu hao",
+                "Chi phí vận chuyển",
+                "Chi phí nhân công",
+                "Chi phí quảng cáo, tiếp thị",
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí dự phòng thu đơn công trình khí",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c33",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bà Trần Thị Hoàng AnhÔng Nguyễn Công MinhBà Nguyễn Thị Kim Yến",
+                "Bà Hồ Thị Ái Thanh"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bà Trần Thị Hoàng AnhÔng Nguyễn Công MinhBà Nguyễn Thị Kim Yến",
+                "Bà Hồ Thị Ái Thanh"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c37",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Tập đoàn Điện lực Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Sản lượngtối thiểucam kết(tỷ m3/năm)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 102 và 106",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Điện lực Dầu khí"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Điện lực Dầu khí",
+                "Nhơn trách 2"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c41",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí mua khí bao tiêu (*)",
+                "Chi phí vỏ bình gas",
+                "Chi phí thuê đất và thuê văn phòng",
+                "Chi phí bảo dưỡng sửa chữa",
+                "Chi phí bảo hiểm",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí mua khí bao tiêu (*)",
+                "Chi phí vỏ bình gas",
+                "Chi phí thuê đất và thuê văn phòng",
+                "Chi phí bảo dưỡng sửa chữa",
+                "Chi phí bảo hiểm",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c45",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c49",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi nhánh Tổng Công ty Điệnlực Dầu khí Việt Nam - CTCP -Công ty Điện lực Dầu khíNhơn Trạch",
+                "Tổng Công ty Tư vấnThiết kế Dầu khí – CTCP (*)"
+              ],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tổng Công ty Tư vấnThiết kế Dầu khí – CTCP (*)",
+                "Trên 3 năm",
+                "Từ 6 tháng đến 1 năm",
+                "Công ty Cổ phần Điện lựcDầu khí Nhơn Trạch 2",
+                "Từ 2 năm đến 3 năm",
+                "Chi nhánh Tổng Công ty Điệnlực Dầu khí Việt Nam - CTCP -Công ty Điện lực Dầu khíNhơn Trạch"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tổng Công ty Tư vấnThiết kế Dầu khí – CTCP (*)",
+                "Trên 3 năm",
+                "Từ 2 năm đến 3 năm",
+                "Từ 1 năm đến 2 năm",
+                "Từ 6 tháng đến 1 năm",
+                "Công ty Cổ phần Điện lựcDầu khí Nhơn Trạch 2",
+                "Chi nhánh Tổng Công ty Điệnlực Dầu khí Việt Nam - CTCP -Công ty Điện lực Dầu khíNhơn Trạch",
+                "Khác"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c02",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Bên thứ ba"
+              ],
+              "dòng gần với câu hỏi": [
+                "Phải thu tiền bảo lãnh (*)",
+                "Dự thu tạm tính doanh thu bán và vận chuyển khí"
+              ],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự thu tạm tính doanh thu bán và vận chuyển khí",
+                "Phải thu tiền bảo lãnh (*)",
+                "Dự thu lãi tiền gửi",
+                "Khác",
+                "Bên liên quan (Thuyết minh 35(b))",
+                "Bên thứ ba"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự thu tạm tính doanh thu bán và vận chuyển khí",
+                "Phải thu tiền bảo lãnh (*)",
+                "Dự thu lãi tiền gửi",
+                "Khác",
+                "Bên liên quan (Thuyết minh 35(b))",
+                "Bên thứ ba"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c06",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 17)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 13)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 15)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 16)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 18(a))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 13)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 15)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 16)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 17)"
+              ],
+              "mục lục chỉ tiêu": [
+                "NỘ PHẢI TRÀ (mã chỉ tiêu 300)",
+                "Nợ ngắn hạn (mã chỉ tiêu 310)",
+                "Phải trả người bán ngắn hạn (mã chỉ tiêu 311; tham chiếu Thuyết minh số 13)",
+                "Người mua trả tiền trước ngắn hạn (mã chỉ tiêu 312)",
+                "Thuế và các khoản phải nộp Nhà nước (mã chỉ tiêu 313; tham chiếu Thuyết minh số 14(c))",
+                "Phải trả người lao động (mã chỉ tiêu 314)",
+                "Chi phí phải trả ngắn hạn (mã chỉ tiêu 315; tham chiếu Thuyết minh số 15)",
+                "Doanh thu chưa thực hiện ngắn hạn (mã chỉ tiêu 318; tham chiếu Thuyết minh số 16)",
+                "Phải trả ngắn hạn khác (mã chỉ tiêu 319; tham chiếu Thuyết minh số 17)",
+                "Vay ngắn hạn (mã chỉ tiêu 320; tham chiếu Thuyết minh số 18(a))",
+                "Quỹ khen thưởng, phúc lợi (mã chỉ tiêu 322; tham chiếu Thuyết minh số 19)",
+                "Nợ dài hạn (mã chỉ tiêu 330)",
+                "Phải trả dài hạn khác (mã chỉ tiêu 337)",
+                "Vay dài hạn (mã chỉ tiêu 338; tham chiếu Thuyết minh số 18(b))",
+                "Dự phòng phải trả dài hạn (mã chỉ tiêu 342; tham chiếu Thuyết minh số 20)",
+                "Quỹ phát triển khoa học và công nghệ (mã chỉ tiêu 343)",
+                "VỐN CHỦ SỞ HỮU (mã chỉ tiêu 400)",
+                "Vốn chủ sở hữu (mã chỉ tiêu 410)",
+                "Vốn góp của chủ sở hữu (mã chỉ tiêu 411; tham chiếu Thuyết minh số 21, 22)",
+                "- Cổ phiếu phổ thông có quyền biểu quyết (mã chỉ tiêu 411a)",
+                "Thặng dư vốn cổ phần (mã chỉ tiêu 412; tham chiếu Thuyết minh số 22)",
+                "Quỹ đầu tư phát triển (mã chỉ tiêu 418; tham chiếu Thuyết minh số 22)",
+                "Lợi nhuận sau thuế (\"LNST\")chưa phân phối (mã chỉ tiêu 421; tham chiếu Thuyết minh số 22)",
+                "- LNST chưa phân phối lũy kế của cácnăm trước (mã chỉ tiêu 421a)",
+                "- LNST chưa phân phối của năm nay (mã chỉ tiêu 421b)",
+                "TỔNG NGUỒN VỐN (mã chỉ tiêu 440)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c10",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Bên thứ ba"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí mua, xử lý và vận chuyển khí",
+                "Chi phí lãi vay phải trả",
+                "Khác",
+                "Bên liên quan (Thuyết minh 35(b))",
+                "Bên thứ ba"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí mua, xử lý và vận chuyển khí",
+                "Chi phí lãi vay phải trả",
+                "Khác",
+                "Bên liên quan (Thuyết minh 35(b))",
+                "Bên thứ ba"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c14",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Bên thứ ba (*)"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên thứ ba (*)",
+                "Bên liên quan(Thuyết minh 35(b))"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bên thứ ba (*)",
+                "Bên liên quan(Thuyết minh 35(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c18",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Phải thu góp vốn theo BCC (*)"
+              ],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Phải thu góp vốn theo BCC (*)",
+                "Ký quỹ, ký cược"
+              ],
+              "mục lục chỉ tiêu": [
+                "Phải thu góp vốn theo BCC (*)",
+                "Ký quỹ, ký cược"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c22",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 1 tháng 1 năm 2021"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2021",
+                "Mua trong năm",
+                "Thanh lý",
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c26",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Doanh thu bán khí khô",
+                "Doanh thu vân chuyên khí và condensate"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Doanh thu bán khí khô",
+                "Doanh thu bán LPG",
+                "Doanh thu vân chuyên khí và condensate",
+                "Doanh thu bán condensate",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Doanh thu bán khí khô",
+                "Doanh thu bán LPG",
+                "Doanh thu vân chuyên khí và condensate",
+                "Doanh thu bán condensate",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c30",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Dự án đường ống dẫn khí Nam Côn Sơn 2 - Giai đoạn 2",
+                "Dự án thu gom và phân phối khí mô Cá Rồng Đồ"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Dự án kho cảng nhập khẩu LNG Sơn Mỹ",
+                "Dự án đường ống dẫn khí Nam Côn Sơn 2 - Giai đoạn 2",
+                "Dự án kho chứa LNG quy mô 1 triệu tấn/năm tại Thị Vải",
+                "Dự án thu gom và phân phối khí mô Cá Rồng Đồ"
+              ],
+              "mục lục chỉ tiêu": [
+                "Dự án kho cảng nhập khẩu LNG Sơn Mỹ",
+                "Dự án đường ống dẫn khí Nam Côn Sơn 2 - Giai đoạn 2",
+                "Dự án kho chứa LNG quy mô 1 triệu tấn/năm tại Thị Vải",
+                "Dự án thu gom và phân phối khí mô Cá Rồng Đồ"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c34",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Tập đoàn Điện lực Việt Nam"
+              ],
+              "kỳ số liệu": [
+                "Sản lượng tối thiểu cam kết(tỷ m3/năm)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Điện lực Dầu khí Nhơn trạch 2"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chủ khí Lô 06.1",
+                "Chủ khí Lô 11.2",
+                "Chủ khí Lô 05.2 và 05.3",
+                "Chủ khí Lô 102 và 106",
+                "Chủ khí Lô 05-1b và 05-1c",
+                "Tập đoàn Điện lực Việt Nam",
+                "Công ty TNHH Phú Mỹ 3 BOT Power",
+                "Công ty TNHH Năng lượng Mekong",
+                "Tổng Công ty Điện lực Dầu khí Việt Nam",
+                "Công ty Cổ phần Điện lực Dầu khí Nhơn trạch 2"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c38",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ông Dương Mạnh Sơn",
+                "Thành viên(dến ngày 24 tháng 9 năm 2021)",
+                "Ông Nguyễn Sinh Khang",
+                "Bà Võ Thị Thanh NgọcÔng Đỗ Đông NguyênÔng Trương Hồng SơnÔng Triệu Quốc Tuấn",
+                "Ông Hoàng Văn Quang",
+                "Ông Phan Quốc Nghĩa"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ông Dương Mạnh Sơn",
+                "Thành viên(dến ngày 24 tháng 9 năm 2021)",
+                "Ông Nguyễn Sinh Khang",
+                "Bà Võ Thị Thanh NgọcÔng Đỗ Đông NguyênÔng Trương Hồng SơnÔng Triệu Quốc Tuấn",
+                "Ông Hoàng Văn Quang",
+                "Ông Phan Quốc Nghĩa"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c42",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c46",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Tổng Công ty Bảo dưỡng - Sửa chữa Công trìnhDầu khí - CTCP",
+                "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Liên doanh Việt - Nga Vietsovpetro",
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Trường Cao Đằng Dầu khí",
+                "Tổng Công ty Bảo dưỡng - Sửa chữa Công trìnhDầu khí - CTCP",
+                "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP"
+              ],
+              "mục lục chỉ tiêu": [
+                "Liên doanh Việt - Nga Vietsovpetro",
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Trường Cao Đằng Dầu khí",
+                "Tổng Công ty Bảo dưỡng - Sửa chữa Công trìnhDầu khí - CTCP",
+                "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c50",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "2021",
+                "2020(Trình bày lại)"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận thuân phân bổ cho các cổ đông (VND)",
+                "Điều chỉnh giảm sở trích quỹ khen thưởng, phúc lợi (VND)",
+                "Bình quân sở cổ phiếu phố thông đang lưu hành (cổ phiếu)",
+                "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận thuân phân bổ cho các cổ đông (VND)",
+                "Điều chỉnh giảm sở trích quỹ khen thưởng, phúc lợi (VND)",
+                "Bình quân sở cổ phiếu phố thông đang lưu hành (cổ phiếu)",
+                "Lãi cơ bản trên mỗi cổ phiếu (VND)"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c03",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng TMCP Hàng Hải Việt Nam",
+                "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Đông Nam Á"
+              ],
+              "kỳ số liệu": [
+                "Tại ngày1.1.2021VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng Mizuho Bank, Ltd",
+                "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                "Ngân hàng Thương mại Taipei Fubon",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngân hàng (*)",
+                "Ngân hàng Mizuho Bank, Ltd",
+                "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                "Ngân hàng Thương mại Taipei Fubon",
+                "Ngân hàng TMCP Đông Nam Á",
+                "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                "Ngân hàng TMCP Hàng Hải Việt Nam"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c07",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Vay ngân hàng đàihạn đến hạn trả"
+              ],
+              "kỳ số liệu": [
+                "Tại ngày1.1.2021VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Vay ngân hàng đàihạn đến hạn trả"
+              ],
+              "mục lục chỉ tiêu": [
+                "Vay ngân hàng đàihạn đến hạn trả"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c11",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "Tại ngày1.1.2021VND",
+                "Tại ngày31.12.2021VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế GTGT được khấu trừ",
+                "Nội địa",
+                "Nhập khẩu",
+                "Thuế nhập khẩu",
+                "Thuế TNDN",
+                "Thuế thu nhập cá nhân",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế GTGT được khấu trừ",
+                "Nội địa",
+                "Nhập khẩu",
+                "Thuế nhập khẩu",
+                "Thuế TNDN",
+                "Thuế thu nhập cá nhân",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c15",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2020"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tại ngày 1 tháng 1 năm 2020",
+                "Tại ngày 31 tháng 12 năm 2020",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2020",
+                "Tại ngày 31 tháng 12 năm 2020",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c19",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [
+                "Thuyết minh n: 14 THUÊ VÀ CÁC KHOÀN PHÀI THU/PHÀI NỘP NHÀ NƯỚC"
+              ],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế nhập khẩu",
+                "Thuế GTGT hàng nhập khẩu",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế nhập khẩu",
+                "Thuế GTGT hàng nhập khẩu",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c23",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Chi phí dự phòng phải thu khó đòi"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí an sinh xã hội",
+                "Chi phí nhân viên quản lý",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí dự phòng phải thu khó đòi",
+                "Chi phí an sinh xã hội",
+                "Chi phí nhân viên quản lý",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c27",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Thuế TNDN",
+                "Thuế GTGT",
+                "Thuế thu nhập cá nhân",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Thuế TNDN",
+                "Thuế GTGT",
+                "Thuế thu nhập cá nhân",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c31",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [
+                "2021",
+                "2020"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Hàng mua đang đi đường",
+                "Vật tư, phụ tùng thay thế",
+                "Thành phẩm",
+                "Hàng hóa",
+                "Hàng gửi đi bán"
+              ],
+              "mục lục chỉ tiêu": [
+                "Hàng mua đang đi đường",
+                "Vật tư, phụ tùng thay thế",
+                "Nguyên vật liệu",
+                "Công cụ, dụng cụ",
+                "Chi phí SXKD dở dang",
+                "Thành phẩm",
+                "Hàng hóa",
+                "Hàng gửi đi bán"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c35",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 1 tháng 1 năm 2021"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2021",
+                "Mua trong năm",
+                "Chuyển từ chi phí xây dựng cơ bảnđở dang (Thuyết minh 12)",
+                "Thanh lý",
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Khấu hao trong năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c39",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lợi nhuận kế toán kế toán trước thuế",
+                "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                "Chi phí thuế TNDN (*)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lợi nhuận kế toán kế toán trước thuế",
+                "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                "Chi phí thuế TNDN (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c43",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Tập đoàn Dầu khí Việt Nam",
+                "Tập đoàn Dầu khí Việt Nam"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Lọc Hóa Dầu Bình Sơn",
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Liên doanh Việt - Nga Vietsovpetro",
+                "Tổng Công ty Hóa chất và Dịch vụ Dầu khí - CTCP",
+                "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Tổng Công ty Cổ phần Khoan và Dịch vụ Khoan Dầu khí"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tập đoàn Dầu khí Việt Nam",
+                "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                "Công ty Cổ phần Sản xuất ống thép Dầu khí Việt Nam",
+                "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Công ty Cổ phần Lọc Hóa Dầu Bình Sơn",
+                "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                "Liên doanh Việt - Nga Vietsovpetro",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí",
+                "Tổng Công ty Hóa chất và Dịch vụ Dầu khí - CTCP",
+                "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                "Tổng Công ty Dầu Việt Nam - CTCP",
+                "Tổng Công ty Cổ phần Khoan và Dịch vụ Khoan Dầu khí",
+                "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c47",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                "Tổng Công ty Dầu Việt Nam",
+                "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                "Công ty Cổ phần Phát triển Đô thị Dầu khí",
+                "Tổng Công ty Dầu Việt Nam",
+                "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                "Công ty Cổ phần Phát triển Đô thị Dầu khí",
+                "Tổng Công ty Dầu Việt Nam",
+                "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                "Tổng Công ty Cổ phần Vận tải Dầu khí"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "nhiệm vụ": "Giữ mọi bảng có thể cần để trả lời câu hỏi.",
+        "câu hỏi": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+        "các bảng": [
+          {
+            "mã bảng": "c04",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng cân đối kế toán",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))"
+              ],
+              "kỳ số liệu": [
+                "kỳ hiện tại",
+                "kỳ trước"
+              ],
+              "đơn vị": [
+                "VND"
+              ],
+              "các dòng lân cận": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 6(b))",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))",
+                "Tài sản cố định (mã chỉ tiêu 220)"
+              ],
+              "mục lục chỉ tiêu": [
+                "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 6(b))",
+                "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))",
+                "Tài sản cố định (mã chỉ tiêu 220)",
+                "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 11(a))",
+                "Nguyên giá (mã chỉ tiêu 222)",
+                "Giá trị khấu hao lũy kế (mã chỉ tiêu 223)",
+                "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 11(b))",
+                "Nguyên giá (mã chỉ tiêu 228)",
+                "Giá trị khấu hao lũy kế (mã chỉ tiêu 229)",
+                "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 12)",
+                "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                "Đầu tư vào công ty con (mã chỉ tiêu 251; tham chiếu Thuyết minh số 4(b))",
+                "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 4(c))",
+                "Dự phòng đầu tư tài chính dài hạn (mã chỉ tiêu 254; tham chiếu Thuyết minh số 4(b),4(c))",
+                "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 10(b))",
+                "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c08",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [
+                "Bên thứ ba"
+              ],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Bên thứ ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ],
+              "mục lục chỉ tiêu": [
+                "Bên thứ ba",
+                "Bên liên quan (Thuyết minh 35(b))"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c12",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tiền gửi ngân hàng không kỳ hạn"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng không kỳ hạn",
+                "Tiền đang chuyển",
+                "Các khoản tương đương tiền (*)"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tiền mặt",
+                "Tiền gửi ngân hàng không kỳ hạn",
+                "Tiền đang chuyển",
+                "Các khoản tương đương tiền (*)"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c16",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Tại ngày 31 tháng 12 năm 2021",
+                "Tại ngày 31 tháng 12 năm 2020",
+                "Tiền chênh lệch giá khí phải trả cho Nhà nước"
+              ],
+              "kỳ số liệu": [
+                "LNST chưa phân phối lũy kê của các năm trước VND",
+                "LNST chưa phân phối năm nay VND"
+              ],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chia cổ tức",
+                "Tiền chênh lệch giá khí phải trả cho Nhà nước",
+                "Thuế TNDN điều chỉnh giảm liên quan đến chi trả tiền chênh lệch giá khí cho Nhà nước",
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2020",
+                "Kết chuyển LNST chưa phân phối",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ],
+              "mục lục chỉ tiêu": [
+                "Tại ngày 1 tháng 1 năm 2020",
+                "Kết chuyển LNST chưa phân phối",
+                "Lợi nhuận thuần trong năm",
+                "Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19)",
+                "Chia cổ tức",
+                "Tiền chênh lệch giá khí phải trả cho Nhà nước",
+                "Thuế TNDN điều chỉnh giảm liên quan đến chi trả tiền chênh lệch giá khí cho Nhà nước",
+                "Khác",
+                "Tại ngày 31 tháng 12 năm 2020",
+                "Trích quỹ đầu tư phát triển Trích quỹ khen thưởng, phúc lợi (Thuyết minh 19) (*)",
+                "Chia cổ tức (*)",
+                "Tại ngày 31 tháng 12 năm 2021"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c20",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chuyển sang TSCĐ(Thuyết minh 11(a))",
+                "Số dư cuối năm"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số dư đầu năm",
+                "Tăng trong năm",
+                "Chuyển sang TSCĐ(Thuyết minh 11(a))",
+                "Số dư cuối năm"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c24",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Chi phí lãi vay",
+                "Dự phòng/(hoàn nhập) dự phòng giảm giá các khoản đầu tư tài chính",
+                "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                "Lỗ thuần do đánh giá lại các khoản có gốc ngoại tệ cuối năm",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Chi phí lãi vay",
+                "Dự phòng/(hoàn nhập) dự phòng giảm giá các khoản đầu tư tài chính",
+                "Lỗ chênh lệch tỷ giá hối đoái đã thực hiện",
+                "Lỗ thuần do đánh giá lại các khoản có gốc ngoại tệ cuối năm",
+                "Khác"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c28",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [
+                "Ngân hàng TMCP Đại chúng Việt Nam"
+              ],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Ngân hàng TMCP Đại chúng Việt Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Ngân hàng TMCP Đại chúng Việt Nam"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c32",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Số lượng cổ phiếu đăng ký,dã phát hành, và đang lưu hành"
+              ],
+              "mục lục chỉ tiêu": [
+                "Số lượng cổ phiếu đăng ký,dã phát hành, và đang lưu hành"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c36",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Lãi tiên gửi",
+                "Cổ tức được chia",
+                "Lãi thuần do đánh giá lại các khoảncó gốc ngoại tệ cuối năm",
+                "Lãi chênh lệch tỷ giá hối đoái đã thực hiện"
+              ],
+              "mục lục chỉ tiêu": [
+                "Lãi tiên gửi",
+                "Cổ tức được chia",
+                "Lãi thuần do đánh giá lại các khoảncó gốc ngoại tệ cuối năm",
+                "Lãi chênh lệch tỷ giá hối đoái đã thực hiện"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c40",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Công ty Điều hành Đường ống Tây Nam"
+              ],
+              "mục lục chỉ tiêu": [
+                "Công ty Điều hành Đường ống Tây Nam"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c44",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "VND"
+              ],
+              "mục lục chỉ tiêu": [
+                "VND"
+              ]
+            }
+          },
+          {
+            "mã bảng": "c48",
+            "mã báo cáo": "b01",
+            "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+            "loại bảng": "bảng thuyết minh",
+            "nội dung": {
+              "tên bảng": [],
+              "tên bảng khớp trực tiếp": [],
+              "dòng khớp trực tiếp": [],
+              "dòng gần với câu hỏi": [],
+              "kỳ số liệu": [],
+              "đơn vị": [],
+              "các dòng lân cận": [
+                "Giá vốn bán khí khô",
+                "Giá vốn bán LPG",
+                "Giá vốn vận chuyển khí và condensate",
+                "Giá vốn bán condensate",
+                "Khác"
+              ],
+              "mục lục chỉ tiêu": [
+                "Giá vốn bán khí khô",
+                "Giá vốn bán LPG",
+                "Giá vốn vận chuyển khí và condensate",
+                "Giá vốn bán condensate",
+                "Khác"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "scouts": [
+      {
+        "scout_index": 1,
+        "input_keys": [
+          "c01",
+          "c05",
+          "c09",
+          "c13",
+          "c17",
+          "c21",
+          "c25",
+          "c29",
+          "c33",
+          "c37",
+          "c41",
+          "c45",
+          "c49"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c01",
+            "c09",
+            "c13"
+          ]
+        },
+        "nominated_keys": [
+          "c01",
+          "c09",
+          "c13"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 2,
+        "input_keys": [
+          "c02",
+          "c06",
+          "c10",
+          "c14",
+          "c18",
+          "c22",
+          "c26",
+          "c30",
+          "c34",
+          "c38",
+          "c42",
+          "c46",
+          "c50"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c02",
+            "c14"
+          ]
+        },
+        "nominated_keys": [
+          "c02",
+          "c14"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 3,
+        "input_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c03",
+            "c07",
+            "c11",
+            "c15",
+            "c19",
+            "c23",
+            "c27",
+            "c31",
+            "c35",
+            "c39",
+            "c43",
+            "c47"
+          ]
+        },
+        "nominated_keys": [
+          "c03",
+          "c07",
+          "c11",
+          "c15",
+          "c19",
+          "c23",
+          "c27",
+          "c31",
+          "c35",
+          "c39",
+          "c43",
+          "c47"
+        ],
+        "error": null
+      },
+      {
+        "scout_index": 4,
+        "input_keys": [
+          "c04",
+          "c08",
+          "c12",
+          "c16",
+          "c20",
+          "c24",
+          "c28",
+          "c32",
+          "c36",
+          "c40",
+          "c44",
+          "c48"
+        ],
+        "response": {
+          "các bảng phù hợp": [
+            "c04",
+            "c08"
+          ]
+        },
+        "nominated_keys": [
+          "c04",
+          "c08"
+        ],
+        "error": null
+      }
+    ],
+    "scout_nominated_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c07",
+      "c08",
+      "c09",
+      "c14",
+      "c11",
+      "c13",
+      "c15",
+      "c19",
+      "c23",
+      "c27",
+      "c31",
+      "c35",
+      "c39",
+      "c43",
+      "c47"
+    ],
+    "lexical_finalist_keys": [
+      "c01",
+      "c02",
+      "c08"
+    ],
+    "finalist_keys": [
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c07",
+      "c08",
+      "c09",
+      "c14",
+      "c11",
+      "c13",
+      "c15",
+      "c19",
+      "c23",
+      "c27",
+      "c31",
+      "c35",
+      "c39",
+      "c43",
+      "c47"
+    ],
+    "final_prompt": {
+      "nhiệm vụ": "Chọn đúng và đủ các bảng cần để trả lời câu hỏi.",
+      "câu hỏi": "Số dư khoản phải thu ngắn hạn của khách hàng bên thứ ba công ty mẹ Tổng Công ty Khí Việt Nam - CTCP đến ngày 31/12/2021 là bao nhiêu tỷ đồng?",
+      "giới hạn số bảng": 18,
+      "các báo cáo hiện có": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GAS",
+          "tên doanh nghiệp": "Tổng Công ty Khí Việt Nam - CTCP",
+          "năm": 2021,
+          "loại báo cáo": "riêng"
+        }
+      ],
+      "các báo cáo bắt buộc": [],
+      "bảng theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "mã doanh nghiệp": "GAS",
+          "tên doanh nghiệp": "Tổng Công ty Khí Việt Nam - CTCP",
+          "năm": 2021,
+          "loại báo cáo": "riêng",
+          "các bảng": [
+            {
+              "mã bảng": "c01",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                  "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)",
+                  "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 14(b))",
+                  "TÀI SẢN NGẮN HẠN (mã chỉ tiêu 100)"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 4(a))",
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)",
+                  "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 6(a))",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                  "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN NGẮN HẠN (mã chỉ tiêu 100)",
+                  "Tiền và các khoản tương đương tiền (mã chỉ tiêu 110; tham chiếu Thuyết minh số 3)",
+                  "Tiền (mã chỉ tiêu 111)",
+                  "Các khoản tương đương tiền (mã chỉ tiêu 112)",
+                  "Đầu tư tài chính ngắn hạn (mã chỉ tiêu 120)",
+                  "Đầu tư nắm giữ đến ngày đáo hạn (mã chỉ tiêu 123; tham chiếu Thuyết minh số 4(a))",
+                  "Các khoản phải thu ngắn hạn (mã chỉ tiêu 130)",
+                  "Phải thu ngắn hạn của khách hàng (mã chỉ tiêu 131; tham chiếu Thuyết minh số 5)",
+                  "Trả trước cho người bán ngắn hạn (mã chỉ tiêu 132; tham chiếu Thuyết minh số 6(a))",
+                  "Phải thu ngắn hạn khác (mã chỉ tiêu 136; tham chiếu Thuyết minh số 7(a))",
+                  "Dự phòng phải thu ngắn hạn khó đòi (mã chỉ tiêu 137; tham chiếu Thuyết minh số 8)",
+                  "Hàng tồn kho (mã chỉ tiêu 140; tham chiếu Thuyết minh số 9)",
+                  "Hàng tồn kho (mã chỉ tiêu 141)",
+                  "Dự phòng giảm giá hàng tồn kho (mã chỉ tiêu 149)",
+                  "Tài sản ngắn hạn khác (mã chỉ tiêu 150)",
+                  "Chi phí trả trước ngắn hạn (mã chỉ tiêu 151; tham chiếu Thuyết minh số 10(a))",
+                  "Thuế Giá trị gia tăng (\"GTGT\") được khấu trừ (mã chỉ tiêu 152; tham chiếu Thuyết minh số 14(a))",
+                  "Thuế và các khoản khác phải thu Nhà nước (mã chỉ tiêu 153; tham chiếu Thuyết minh số 14(b))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c02",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Bên thứ ba"
+                ],
+                "dòng gần với câu hỏi": [
+                  "Phải thu tiền bảo lãnh (*)",
+                  "Dự thu tạm tính doanh thu bán và vận chuyển khí"
+                ],
+                "kỳ số liệu": [
+                  "2021",
+                  "2020"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Dự thu tạm tính doanh thu bán và vận chuyển khí",
+                  "Phải thu tiền bảo lãnh (*)",
+                  "Dự thu lãi tiền gửi",
+                  "Khác",
+                  "Bên liên quan (Thuyết minh 35(b))",
+                  "Bên thứ ba"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Dự thu tạm tính doanh thu bán và vận chuyển khí",
+                  "Phải thu tiền bảo lãnh (*)",
+                  "Dự thu lãi tiền gửi",
+                  "Khác",
+                  "Bên liên quan (Thuyết minh 35(b))",
+                  "Bên thứ ba"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c03",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Ngân hàng TMCP Hàng Hải Việt Nam",
+                  "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Đông Nam Á"
+                ],
+                "kỳ số liệu": [
+                  "Tại ngày1.1.2021VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Ngân hàng Mizuho Bank, Ltd",
+                  "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                  "Ngân hàng Thương mại Taipei Fubon",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vay ngân hàng (*)",
+                  "Ngân hàng Mizuho Bank, Ltd",
+                  "Ngân hàng Đầu tư và Phát triển Việt Nam",
+                  "Ngân hàng TMCP Ngoại Thương Việt Nam",
+                  "Ngân hàng Thương mại Taipei Fubon",
+                  "Ngân hàng TMCP Đông Nam Á",
+                  "Ngân hàng TMCP Sài Gòn - Hà Nội",
+                  "Ngân hàng TMCP Xuất nhập khẩu Việt Nam",
+                  "Ngân hàng TMCP Hàng Hải Việt Nam"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c04",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng cân đối kế toán",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))"
+                ],
+                "kỳ số liệu": [
+                  "kỳ hiện tại",
+                  "kỳ trước"
+                ],
+                "đơn vị": [
+                  "VND"
+                ],
+                "các dòng lân cận": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 6(b))",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))",
+                  "Tài sản cố định (mã chỉ tiêu 220)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "TÀI SẢN DÀI HẠN (mã chỉ tiêu 200)",
+                  "Các khoản phải thu dài hạn (mã chỉ tiêu 210)",
+                  "Trả trước cho người bán dài hạn (mã chỉ tiêu 212; tham chiếu Thuyết minh số 6(b))",
+                  "Phải thu dài hạn khác (mã chỉ tiêu 216; tham chiếu Thuyết minh số 7(b))",
+                  "Tài sản cố định (mã chỉ tiêu 220)",
+                  "Tài sản cố định hữu hình (mã chỉ tiêu 221; tham chiếu Thuyết minh số 11(a))",
+                  "Nguyên giá (mã chỉ tiêu 222)",
+                  "Giá trị khấu hao lũy kế (mã chỉ tiêu 223)",
+                  "Tài sản cố định vô hình (mã chỉ tiêu 227; tham chiếu Thuyết minh số 11(b))",
+                  "Nguyên giá (mã chỉ tiêu 228)",
+                  "Giá trị khấu hao lũy kế (mã chỉ tiêu 229)",
+                  "Tài sản dở dang dài hạn (mã chỉ tiêu 240)",
+                  "Chi phí xây dựng cơ bản dở dang (mã chỉ tiêu 242; tham chiếu Thuyết minh số 12)",
+                  "Đầu tư tài chính dài hạn (mã chỉ tiêu 250)",
+                  "Đầu tư vào công ty con (mã chỉ tiêu 251; tham chiếu Thuyết minh số 4(b))",
+                  "Đầu tư vào công ty liên kết (mã chỉ tiêu 252; tham chiếu Thuyết minh số 4(c))",
+                  "Dự phòng đầu tư tài chính dài hạn (mã chỉ tiêu 254; tham chiếu Thuyết minh số 4(b),4(c))",
+                  "Tài sản dài hạn khác (mã chỉ tiêu 260)",
+                  "Chi phí trả trước dài hạn (mã chỉ tiêu 261; tham chiếu Thuyết minh số 10(b))",
+                  "TỔNG TÀI SẢN (mã chỉ tiêu 270)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c07",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Vay ngân hàng đàihạn đến hạn trả"
+                ],
+                "kỳ số liệu": [
+                  "Tại ngày1.1.2021VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Vay ngân hàng đàihạn đến hạn trả"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Vay ngân hàng đàihạn đến hạn trả"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c08",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Bên thứ ba"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Bên thứ ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Bên thứ ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c09",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Bên thứ ba"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Bên thứ ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Bên thứ ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c14",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [
+                  "Bên thứ ba (*)"
+                ],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "2021",
+                  "2020"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Bên thứ ba (*)",
+                  "Bên liên quan(Thuyết minh 35(b))"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Bên thứ ba (*)",
+                  "Bên liên quan(Thuyết minh 35(b))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c11",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "Tại ngày1.1.2021VND",
+                  "Tại ngày31.12.2021VND"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thuế GTGT được khấu trừ",
+                  "Nội địa",
+                  "Nhập khẩu",
+                  "Thuế nhập khẩu",
+                  "Thuế TNDN",
+                  "Thuế thu nhập cá nhân",
+                  "Khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Thuế GTGT được khấu trừ",
+                  "Nội địa",
+                  "Nhập khẩu",
+                  "Thuế nhập khẩu",
+                  "Thuế TNDN",
+                  "Thuế thu nhập cá nhân",
+                  "Khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c13",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                  "Bên thú ba",
+                  "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước",
+                  "Phải trả liên quan đến BCC (*)",
+                  "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                  "Khác",
+                  "Bên thú ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chênh lệch giá khí trong bao tiêu phải nộp Nhà nước",
+                  "Phải trả liên quan đến BCC (*)",
+                  "Chiết khấu doanh thu vận chuyển khí Nam Côn Sơn",
+                  "Khác",
+                  "Bên thú ba",
+                  "Bên liên quan (Thuyết minh 35(b))"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c15",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2021",
+                  "Tại ngày 31 tháng 12 năm 2020"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Tại ngày 1 tháng 1 năm 2020",
+                  "Tại ngày 31 tháng 12 năm 2020",
+                  "Tại ngày 31 tháng 12 năm 2021"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2020",
+                  "Tại ngày 31 tháng 12 năm 2020",
+                  "Tại ngày 31 tháng 12 năm 2021"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c19",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [
+                  "Thuyết minh n: 14 THUÊ VÀ CÁC KHOÀN PHÀI THU/PHÀI NỘP NHÀ NƯỚC"
+                ],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thuế nhập khẩu",
+                  "Thuế GTGT hàng nhập khẩu",
+                  "Khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Thuế nhập khẩu",
+                  "Thuế GTGT hàng nhập khẩu",
+                  "Khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c23",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Chi phí dự phòng phải thu khó đòi"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Chi phí dự phòng phải thu khó đòi",
+                  "Chi phí an sinh xã hội",
+                  "Chi phí nhân viên quản lý",
+                  "Khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Chi phí dự phòng phải thu khó đòi",
+                  "Chi phí an sinh xã hội",
+                  "Chi phí nhân viên quản lý",
+                  "Khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c27",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Thuế TNDN",
+                  "Thuế GTGT",
+                  "Thuế thu nhập cá nhân",
+                  "Khác"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Thuế TNDN",
+                  "Thuế GTGT",
+                  "Thuế thu nhập cá nhân",
+                  "Khác"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c31",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [
+                  "2021",
+                  "2020"
+                ],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Hàng mua đang đi đường",
+                  "Vật tư, phụ tùng thay thế",
+                  "Thành phẩm",
+                  "Hàng hóa",
+                  "Hàng gửi đi bán"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Hàng mua đang đi đường",
+                  "Vật tư, phụ tùng thay thế",
+                  "Nguyên vật liệu",
+                  "Công cụ, dụng cụ",
+                  "Chi phí SXKD dở dang",
+                  "Thành phẩm",
+                  "Hàng hóa",
+                  "Hàng gửi đi bán"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c35",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tại ngày 31 tháng 12 năm 2021",
+                  "Tại ngày 31 tháng 12 năm 2021",
+                  "Tại ngày 31 tháng 12 năm 2021"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Khác",
+                  "Tại ngày 31 tháng 12 năm 2021",
+                  "Tại ngày 1 tháng 1 năm 2021"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tại ngày 1 tháng 1 năm 2021",
+                  "Mua trong năm",
+                  "Chuyển từ chi phí xây dựng cơ bảnđở dang (Thuyết minh 12)",
+                  "Thanh lý",
+                  "Khác",
+                  "Tại ngày 31 tháng 12 năm 2021",
+                  "Khấu hao trong năm"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c39",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Lợi nhuận kế toán kế toán trước thuế",
+                  "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                  "Chi phí thuế TNDN (*)"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Lợi nhuận kế toán kế toán trước thuế",
+                  "Thuế tính ở thuế suất 20%Điều chỉnh:",
+                  "Chi phí thuế TNDN (*)"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c43",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tổng Công ty Dầu Việt Nam - CTCP",
+                  "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                  "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                  "Tập đoàn Dầu khí Việt Nam",
+                  "Tập đoàn Dầu khí Việt Nam"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Lọc Hóa Dầu Bình Sơn",
+                  "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                  "Liên doanh Việt - Nga Vietsovpetro",
+                  "Tổng Công ty Hóa chất và Dịch vụ Dầu khí - CTCP",
+                  "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                  "Tổng Công ty Dầu Việt Nam - CTCP",
+                  "Tổng Công ty Cổ phần Khoan và Dịch vụ Khoan Dầu khí"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Tập đoàn Dầu khí Việt Nam",
+                  "Công ty Cổ phần Bọc ống Dầu khí Việt Nam",
+                  "Công ty Cổ phần Sản xuất ống thép Dầu khí Việt Nam",
+                  "Công ty Cổ phần Kinh doanh LPG Việt Nam",
+                  "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                  "Công ty Cổ phần Lọc Hóa Dầu Bình Sơn",
+                  "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+                  "Liên doanh Việt - Nga Vietsovpetro",
+                  "Tổng Công ty Cổ phần Vận tải Dầu khí",
+                  "Tổng Công ty Hóa chất và Dịch vụ Dầu khí - CTCP",
+                  "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+                  "Tổng Công ty Dầu Việt Nam - CTCP",
+                  "Tổng Công ty Cổ phần Khoan và Dịch vụ Khoan Dầu khí",
+                  "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                  "Tổng Công ty Tư vấn Thiết kế Dầu khí - CTCP"
+                ]
+              }
+            },
+            {
+              "mã bảng": "c47",
+              "mã báo cáo": "b01",
+              "thuộc báo cáo": "GAS — Tổng Công ty Khí Việt Nam - CTCP — năm 2021 — riêng",
+              "loại bảng": "bảng thuyết minh",
+              "nội dung": {
+                "tên bảng": [],
+                "tên bảng khớp trực tiếp": [],
+                "dòng khớp trực tiếp": [],
+                "dòng gần với câu hỏi": [
+                  "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                  "Tổng Công ty Dầu Việt Nam",
+                  "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                  "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                  "Tổng Công ty Cổ phần Vận tải Dầu khí"
+                ],
+                "kỳ số liệu": [],
+                "đơn vị": [],
+                "các dòng lân cận": [
+                  "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                  "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                  "Công ty Cổ phần Phát triển Đô thị Dầu khí",
+                  "Tổng Công ty Dầu Việt Nam",
+                  "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                  "Tổng Công ty Cổ phần Vận tải Dầu khí"
+                ],
+                "mục lục chỉ tiêu": [
+                  "Công ty Cổ phần Kinh doanh Khí Miền Nam",
+                  "Tổng Công ty Điện lực Đầu khí Việt Nam",
+                  "Công ty Cổ phần Phát triển Đô thị Dầu khí",
+                  "Tổng Công ty Dầu Việt Nam",
+                  "Tổng Công ty Thăm dò và Khai thác Dầu khí",
+                  "Tổng Công ty Cổ phần Vận tải Dầu khí"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "final_response": {
+      "các báo cáo cần dùng": [
+        "b01"
+      ],
+      "nhu cầu theo báo cáo": [
+        {
+          "mã báo cáo": "b01",
+          "các chỉ tiêu": [
+            {
+              "mã chỉ tiêu": "b01_k01",
+              "nội dung": "Phải thu ngắn hạn của khách hàng",
+              "vai trò": "số dư cuối kỳ"
+            },
+            {
+              "mã chỉ tiêu": "b01_k02",
+              "nội dung": "Bên thứ ba",
+              "vai trò": "tử số"
+            }
+          ]
+        }
+      ],
+      "các bảng được chọn": [
+        {
+          "mã bảng": "c01",
+          "đáp ứng chỉ tiêu": [
+            "b01_k01"
+          ]
+        },
+        {
+          "mã bảng": "c14",
+          "đáp ứng chỉ tiêu": [
+            "b01_k02"
+          ]
+        }
+      ]
+    },
+    "final_error": null,
+    "coverage_locked_bucket_keys": [],
+    "coverage_lock_reasons": [],
+    "policy_added_required_bucket_keys": [],
+    "required_bucket_keys": [
+      "b01"
+    ],
+    "bucket_requirements": [
+      {
+        "bucket_key": "b01",
+        "concepts": [
+          {
+            "concept_key": "b01_k01",
+            "description": "Phải thu ngắn hạn của khách hàng",
+            "role": "số dư cuối kỳ"
+          },
+          {
+            "concept_key": "b01_k02",
+            "description": "Bên thứ ba",
+            "role": "tử số"
+          }
+        ]
+      }
+    ],
+    "uncovered_concept_keys": [],
+    "final_llm_keys": [
+      "c01",
+      "c14"
+    ],
+    "coverage_completion": {},
+    "unresolved_required_bucket_keys": [],
+    "selected_keys": [
+      "c01",
+      "c14"
+    ],
+    "output_cap": 8
+  },
+  "reranked_candidates": [
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_8",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_8",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "balance_sheet",
+        "year": 2021,
+        "start_line": 346
+      },
+      "rrf_score": 0.03252247488101534,
+      "dense_rank": 1,
+      "dense_score": 0.8529694,
+      "bm25_rank": 1,
+      "bm25_score": 16.69645467576597,
+      "retrieval_score": 0.03252247488101534,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "item_code",
+          "item_label_raw",
+          "item_label_norm",
+          "note_ref",
+          "period_current",
+          "period_prior",
+          "unit",
+          "entity_type"
+        ],
+        "periods": [
+          "kỳ hiện tại",
+          "kỳ trước"
+        ],
+        "units": [
+          "VND"
+        ],
+        "row_count": 18,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "code": "100",
+            "label": "TÀI SẢN NGẮN HẠN"
+          },
+          {
+            "row": 3,
+            "code": "110",
+            "note_ref": "3",
+            "label": "Tiền và các khoản tương đương tiền"
+          },
+          {
+            "row": 4,
+            "code": "111",
+            "label": "Tiền"
+          },
+          {
+            "row": 5,
+            "code": "112",
+            "label": "Các khoản tương đương tiền"
+          },
+          {
+            "row": 6,
+            "code": "120",
+            "label": "Đầu tư tài chính ngắn hạn"
+          },
+          {
+            "row": 7,
+            "code": "123",
+            "note_ref": "4(a)",
+            "label": "Đầu tư nắm giữ đến ngày đáo hạn"
+          },
+          {
+            "row": 8,
+            "code": "130",
+            "label": "Các khoản phải thu ngắn hạn"
+          },
+          {
+            "row": 9,
+            "code": "131",
+            "note_ref": "5",
+            "label": "Phải thu ngắn hạn của khách hàng"
+          },
+          {
+            "row": 10,
+            "code": "132",
+            "note_ref": "6(a)",
+            "label": "Trả trước cho người bán ngắn hạn"
+          },
+          {
+            "row": 11,
+            "code": "136",
+            "note_ref": "7(a)",
+            "label": "Phải thu ngắn hạn khác"
+          },
+          {
+            "row": 12,
+            "code": "137",
+            "note_ref": "8",
+            "label": "Dự phòng phải thu ngắn hạn khó đòi"
+          },
+          {
+            "row": 13,
+            "code": "140",
+            "note_ref": "9",
+            "label": "Hàng tồn kho"
+          },
+          {
+            "row": 14,
+            "code": "141",
+            "label": "Hàng tồn kho"
+          },
+          {
+            "row": 15,
+            "code": "149",
+            "label": "Dự phòng giảm giá hàng tồn kho"
+          },
+          {
+            "row": 16,
+            "code": "150",
+            "label": "Tài sản ngắn hạn khác"
+          },
+          {
+            "row": 17,
+            "code": "151",
+            "note_ref": "10(a)",
+            "label": "Chi phí trả trước ngắn hạn"
+          },
+          {
+            "row": 18,
+            "code": "152",
+            "note_ref": "14(a)",
+            "label": "Thuế Giá trị gia tăng (\"GTGT\") được khấu trừ"
+          },
+          {
+            "row": 19,
+            "code": "153",
+            "note_ref": "14(b)",
+            "label": "Thuế và các khoản khác phải thu Nhà nước"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 7,
+            "code": "123",
+            "note_ref": "4(a)",
+            "label": "Đầu tư nắm giữ đến ngày đáo hạn"
+          },
+          {
+            "row": 8,
+            "code": "130",
+            "label": "Các khoản phải thu ngắn hạn"
+          },
+          {
+            "row": 9,
+            "code": "131",
+            "note_ref": "5",
+            "label": "Phải thu ngắn hạn của khách hàng"
+          },
+          {
+            "row": 10,
+            "code": "132",
+            "note_ref": "6(a)",
+            "label": "Trả trước cho người bán ngắn hạn"
+          },
+          {
+            "row": 11,
+            "code": "136",
+            "note_ref": "7(a)",
+            "label": "Phải thu ngắn hạn khác"
+          },
+          {
+            "row": 12,
+            "code": "137",
+            "note_ref": "8",
+            "label": "Dự phòng phải thu ngắn hạn khó đòi"
+          }
+        ]
+      },
+      "rerank_score": 1.0,
+      "rerank_reason": "llm",
+      "rerank_rank": 1,
+      "rerank_source": "llm"
+    },
+    {
+      "table_id": "GAS_financial_statements_2021_separate_table_32",
+      "metadata": {
+        "table_id": "GAS_financial_statements_2021_separate_table_32",
+        "doc_id": "GAS_financial_statements_2021_separate",
+        "ticker": "GAS",
+        "company_name": "Tổng Công ty Khí Việt Nam - CTCP",
+        "report_type": "separate",
+        "table_type": "note_table",
+        "year": 2021,
+        "start_line": 1221
+      },
+      "rrf_score": 0.027149321266968326,
+      "dense_rank": 14,
+      "dense_score": 0.7932543,
+      "bm25_rank": 5,
+      "bm25_score": 11.842056020996203,
+      "retrieval_score": 0.027149321266968326,
+      "retrieval_mode": "hybrid",
+      "rerank_context": {
+        "columns": [
+          "row_label_raw",
+          "2021",
+          "value_2",
+          "2020",
+          "value_4",
+          "note_number",
+          "note_title"
+        ],
+        "periods": [
+          "2021",
+          "2020"
+        ],
+        "units": [],
+        "row_count": 3,
+        "table_titles": [],
+        "row_catalog": [
+          {
+            "row": 2,
+            "label": "Bên thứ ba (*)"
+          },
+          {
+            "row": 3,
+            "label": "Bên liên quan(Thuyết minh 35(b))"
+          }
+        ],
+        "detailed_rows": [
+          {
+            "row": 2,
+            "label": "Bên thứ ba (*)"
+          },
+          {
+            "row": 3,
+            "label": "Bên liên quan(Thuyết minh 35(b))"
+          },
+          {
+            "row": 4,
+            "label": ""
+          }
+        ]
+      },
+      "rerank_score": 0.5,
+      "rerank_reason": "llm",
+      "rerank_rank": 2,
+      "rerank_source": "llm"
+    }
+  ],
+  "stage_rankings": {
+    "retriever": {
+      "docs": [
+        "GAS_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2021_separate|346",
+        "GAS_financial_statements_2021_separate|1069",
+        "GAS_financial_statements_2021_separate|1369",
+        "GAS_financial_statements_2021_separate|365",
+        "GAS_financial_statements_2021_separate|452",
+        "GAS_financial_statements_2021_separate|386",
+        "GAS_financial_statements_2021_separate|1356",
+        "GAS_financial_statements_2021_separate|1024",
+        "GAS_financial_statements_2021_separate|1045",
+        "GAS_financial_statements_2021_separate|1287",
+        "GAS_financial_statements_2021_separate|1272",
+        "GAS_financial_statements_2021_separate|973",
+        "GAS_financial_statements_2021_separate|1295",
+        "GAS_financial_statements_2021_separate|1221",
+        "GAS_financial_statements_2021_separate|1433",
+        "GAS_financial_statements_2021_separate|1459",
+        "GAS_financial_statements_2021_separate|420",
+        "GAS_financial_statements_2021_separate|1085",
+        "GAS_financial_statements_2021_separate|1254",
+        "GAS_financial_statements_2021_separate|1217",
+        "GAS_financial_statements_2021_separate|1386",
+        "GAS_financial_statements_2021_separate|1190",
+        "GAS_financial_statements_2021_separate|1573",
+        "GAS_financial_statements_2021_separate|1552",
+        "GAS_financial_statements_2021_separate|1762",
+        "GAS_financial_statements_2021_separate|1540",
+        "GAS_financial_statements_2021_separate|1256",
+        "GAS_financial_statements_2021_separate|1728",
+        "GAS_financial_statements_2021_separate|1615",
+        "GAS_financial_statements_2021_separate|1841",
+        "GAS_financial_statements_2021_separate|1138",
+        "GAS_financial_statements_2021_separate|1425",
+        "GAS_financial_statements_2021_separate|195",
+        "GAS_financial_statements_2021_separate|1851",
+        "GAS_financial_statements_2021_separate|1167",
+        "GAS_financial_statements_2021_separate|1548",
+        "GAS_financial_statements_2021_separate|1872",
+        "GAS_financial_statements_2021_separate|191",
+        "GAS_financial_statements_2021_separate|1607",
+        "GAS_financial_statements_2021_separate|1793",
+        "GAS_financial_statements_2021_separate|1148",
+        "GAS_financial_statements_2021_separate|1779",
+        "GAS_financial_statements_2021_separate|1814",
+        "GAS_financial_statements_2021_separate|1704",
+        "GAS_financial_statements_2021_separate|1250",
+        "GAS_financial_statements_2021_separate|1783",
+        "GAS_financial_statements_2021_separate|1789",
+        "GAS_financial_statements_2021_separate|1544",
+        "GAS_financial_statements_2021_separate|1104",
+        "GAS_financial_statements_2021_separate|1486"
+      ]
+    },
+    "scout_union": {
+      "docs": [
+        "GAS_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2021_separate|346",
+        "GAS_financial_statements_2021_separate|1069",
+        "GAS_financial_statements_2021_separate|1369",
+        "GAS_financial_statements_2021_separate|365",
+        "GAS_financial_statements_2021_separate|1356",
+        "GAS_financial_statements_2021_separate|1024",
+        "GAS_financial_statements_2021_separate|1045",
+        "GAS_financial_statements_2021_separate|1221",
+        "GAS_financial_statements_2021_separate|1272",
+        "GAS_financial_statements_2021_separate|1295",
+        "GAS_financial_statements_2021_separate|1433",
+        "GAS_financial_statements_2021_separate|1254",
+        "GAS_financial_statements_2021_separate|1573",
+        "GAS_financial_statements_2021_separate|1256",
+        "GAS_financial_statements_2021_separate|1138",
+        "GAS_financial_statements_2021_separate|1167",
+        "GAS_financial_statements_2021_separate|1607",
+        "GAS_financial_statements_2021_separate|1814",
+        "GAS_financial_statements_2021_separate|1789"
+      ]
+    },
+    "finalists": {
+      "docs": [
+        "GAS_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2021_separate|346",
+        "GAS_financial_statements_2021_separate|1069",
+        "GAS_financial_statements_2021_separate|1369",
+        "GAS_financial_statements_2021_separate|365",
+        "GAS_financial_statements_2021_separate|1356",
+        "GAS_financial_statements_2021_separate|1024",
+        "GAS_financial_statements_2021_separate|1045",
+        "GAS_financial_statements_2021_separate|1221",
+        "GAS_financial_statements_2021_separate|1272",
+        "GAS_financial_statements_2021_separate|1295",
+        "GAS_financial_statements_2021_separate|1433",
+        "GAS_financial_statements_2021_separate|1254",
+        "GAS_financial_statements_2021_separate|1573",
+        "GAS_financial_statements_2021_separate|1256",
+        "GAS_financial_statements_2021_separate|1138",
+        "GAS_financial_statements_2021_separate|1167",
+        "GAS_financial_statements_2021_separate|1607",
+        "GAS_financial_statements_2021_separate|1814",
+        "GAS_financial_statements_2021_separate|1789"
+      ]
+    },
+    "final_llm": {
+      "docs": [
+        "GAS_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2021_separate|346",
+        "GAS_financial_statements_2021_separate|1221"
+      ]
+    },
+    "reranker": {
+      "docs": [
+        "GAS_financial_statements_2021_separate"
+      ],
+      "tables": [
+        "GAS_financial_statements_2021_separate|346",
+        "GAS_financial_statements_2021_separate|1221"
+      ]
+    }
+  },
+  "stage_metrics": {
+    "retriever": {
+      "tables": {
+        "precision": 0.02,
+        "recall": 1.0,
+        "f2": 0.09259259259259259,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "scout_union": {
+      "tables": {
+        "precision": 0.05263157894736842,
+        "recall": 1.0,
+        "f2": 0.21739130434782608,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "finalists": {
+      "tables": {
+        "precision": 0.05263157894736842,
+        "recall": 1.0,
+        "f2": 0.21739130434782608,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "final_llm": {
+      "tables": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    },
+    "reranker": {
+      "tables": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f2": 0.0,
+        "mrr5": 0.0
+      },
+      "docs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f2": 1.0,
+        "mrr5": 1.0
+      }
+    }
+  },
+  "loss_attribution": [
+    {
+      "table_ref": "GAS_financial_statements_2021_separate|1024",
+      "stage_presence": {
+        "retriever": true,
+        "scout_union": true,
+        "finalists": true,
+        "final_llm": false,
+        "reranker": false
+      },
+      "terminal": "final_llm"
+    }
+  ],
+  "error": null
+}
