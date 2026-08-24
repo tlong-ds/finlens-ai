@@ -65,6 +65,7 @@ def parse_query_with_diagnostics(
                     previous_response=previous_response,
                 ),
                 system_prompt=PARSE_SYSTEM_PROMPT,
+                native=False,
             )
             logger.info(
                 "question_id=%s parser_attempt=%d raw_filters=%s",

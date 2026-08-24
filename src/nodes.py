@@ -22,7 +22,7 @@ from src.helper import (
     ordered_unique,
     retry_or_exhausted,
 )
-from src.llm import LLMResponseError, generate_structured
+from src.llm import LLMResponseError, LLMTransientError, generate_structured
 from src.parser import parse_query_with_diagnostics
 from src.retrieval import (
     RETRIEVAL_TOP_K,
@@ -32,10 +32,18 @@ from src.retrieval import (
 )
 from src.planning import (
     build_planning_inventory,
-    generated_alias_feedback,
+    generated_evidence_variables,
+    generated_context_coverage_feedback,
+    generated_semantic_feedback,
+    normalize_generated_code,
+    normalize_generated_selectors,
+    normalize_generated_semantics,
+    parse_malformed_generator_json,
+    generated_rounding_feedback,
     hydrate_planned_rows,
 )
 from src.prompt import (
+    GENERATOR_RESPONSE_SCHEMA,
     GENERATOR_SYSTEM_PROMPT,
     PLANNER_SYSTEM_PROMPT,
     build_generator_prompt,
@@ -284,10 +292,27 @@ def plan_generation_context_node(
         alias_metadata,
         state.get("rerank_contexts") or {},
     )
-    generation_plan = generate_structured(
-        build_planner_prompt(str(state.get("question") or ""), inventory),
-        system_prompt=PLANNER_SYSTEM_PROMPT,
-    )
+    question = str(state.get("question") or "")
+    generation_plan: dict[str, Any] | None = None
+    response_error: LLMResponseError | None = None
+    for response_attempt in range(1, 4):
+        feedback = (
+            "Phản hồi trước không phải JSON object hợp lệ. Chỉ trả về JSON đúng "
+            "schema được yêu cầu."
+            if response_attempt > 1
+            else ""
+        )
+        try:
+            generation_plan = generate_structured(
+                build_planner_prompt(question, inventory, feedback),
+                system_prompt=PLANNER_SYSTEM_PROMPT,
+            )
+            break
+        except LLMResponseError as error:
+            response_error = error
+    if generation_plan is None:
+        assert response_error is not None
+        raise response_error
     selected_rows = hydrate_planned_rows(generation_plan, dataframes, inventory)
     return Command(
         update={
@@ -316,17 +341,35 @@ def generate_code_node(
         "pandas_query": "",
         "evidence_variables": [],
     }
+    allowed_aliases = set(state.get("evidence_sources") or [])
     generator_prompt = build_generator_prompt(
         question=str(state.get("question") or ""),
         generation_plan=state.get("generation_plan") or {},
         planned_context=state.get("planned_context") or {},
         feedback=str(state.get("feedback") or ""),
     )
+    native_json = attempt == 1 and len(generator_prompt) <= 24_000
+    structured_options = {
+        "system_prompt": GENERATOR_SYSTEM_PROMPT,
+        "json_schema": GENERATOR_RESPONSE_SCHEMA,
+        "sdk_max_retries": 0,
+        "invalid_json_parser": parse_malformed_generator_json,
+    }
     try:
-        generated = generate_structured(
-            generator_prompt,
-            system_prompt=GENERATOR_SYSTEM_PROMPT,
-        )
+        try:
+            generated = generate_structured(
+                generator_prompt,
+                native=native_json,
+                **structured_options,
+            )
+        except LLMTransientError:
+            if not native_json:
+                raise
+            generated = generate_structured(
+                generator_prompt,
+                native=False,
+                **structured_options,
+            )
     except LLMResponseError as error:
         update["feedback"] = f"Generator call failed: {concise_error(error)}"
         return retry_or_exhausted(state, update, attempt=attempt)
@@ -336,26 +379,64 @@ def generate_code_node(
         update["feedback"] = feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
-    evidence_variables = generated["evidence_variables"]
-    allowed_aliases = set(state.get("evidence_sources") or [])
-    unknown_aliases = [
-        alias for alias in evidence_variables if alias not in allowed_aliases
-    ]
-    if unknown_aliases:
-        update["feedback"] = "Unknown evidence variables: " + ", ".join(
-            unknown_aliases
-        )
+    normalized_code, code_feedback = normalize_generated_code(
+        generated["pandas_query"]
+    )
+    if code_feedback:
+        update["feedback"] = code_feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
-    alias_feedback = generated_alias_feedback(
-        generated["pandas_query"], evidence_variables, allowed_aliases
+    normalized_code, selector_feedback = normalize_generated_selectors(
+        normalized_code,
+        state.get("dataframes") or {},
+    )
+    if selector_feedback:
+        update["feedback"] = selector_feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    normalized_code, semantic_normalization_feedback = normalize_generated_semantics(
+        normalized_code,
+        str(state.get("question") or ""),
+        state.get("dataframes") or {},
+    )
+    if semantic_normalization_feedback:
+        update["feedback"] = semantic_normalization_feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    evidence_variables, alias_feedback = generated_evidence_variables(
+        normalized_code, allowed_aliases
     )
     if alias_feedback:
         update["feedback"] = alias_feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
+    coverage_feedback = generated_context_coverage_feedback(
+        evidence_variables,
+        str(state.get("question") or ""),
+        state.get("alias_metadata") or {},
+    )
+    if coverage_feedback:
+        update["feedback"] = coverage_feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    rounding_feedback = generated_rounding_feedback(
+        normalized_code, str(state.get("question") or "")
+    )
+    if rounding_feedback:
+        update["feedback"] = rounding_feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
+    semantic_feedback = generated_semantic_feedback(
+        normalized_code,
+        str(state.get("question") or ""),
+        state.get("dataframes") or {},
+    )
+    if semantic_feedback:
+        update["feedback"] = semantic_feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
     attribute_feedback = _unsupported_dataframe_attribute_feedback(
-        generated["pandas_query"],
+        normalized_code,
         set(state.get("dataframes") or {}),
     )
     if attribute_feedback:
@@ -365,7 +446,7 @@ def generate_code_node(
     update.update(
         {
             "feedback": "",
-            "pandas_query": generated["pandas_query"],
+            "pandas_query": normalized_code,
             "evidence_variables": evidence_variables,
         }
     )

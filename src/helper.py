@@ -53,8 +53,8 @@ def generator_feedback(response: Mapping[str, Any]) -> str | None:
     ].strip():
         return "pandas_query phải là chuỗi không rỗng."
     evidence_variables = response["evidence_variables"]
-    if not isinstance(evidence_variables, list) or not evidence_variables:
-        return "evidence_variables phải là mảng alias DataFrame không rỗng."
+    if not isinstance(evidence_variables, list):
+        return "evidence_variables phải là mảng alias DataFrame."
     if not all(isinstance(alias, str) for alias in evidence_variables):
         return "Mọi evidence variable phải là alias dạng chuỗi."
     return None

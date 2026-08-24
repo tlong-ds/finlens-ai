@@ -1391,6 +1391,7 @@ def rerank_with_diagnostics(
             scout_response = generate_structured(
                 scout_prompt,
                 system_prompt=RERANK_SCOUT_SYSTEM_PROMPT,
+                native=False,
             )
             scout_keys = _salvage_rerank_response(
                 scout_response,
@@ -1461,6 +1462,7 @@ def rerank_with_diagnostics(
         final_response = generate_structured(
             final_prompt,
             system_prompt=RERANK_SYSTEM_PROMPT,
+            native=False,
         )
         final_decision = _salvage_final_response(
             final_response,
