@@ -11,6 +11,7 @@ Uses ``ViFinQA/financial_statements`` as the default input directory.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import logging
 import os
@@ -32,6 +33,20 @@ import pandas as pd
 PAGE_MARKER_RE = re.compile(r'={3,}\s*PAGE\s+(\d+)\s*={3,}')
 
 TABLE_TAG_RE = re.compile(r'<table[^>]*>.*?</table>', re.DOTALL | re.IGNORECASE)
+HTML_CELL_RE = re.compile(
+    r'<t[dh]\b(?P<attrs>[^>]*)>(?P<content>.*?)</t[dh]>',
+    re.DOTALL | re.IGNORECASE,
+)
+HTML_TAG_RE = re.compile(r'<[^>]+>')
+HTML_ROWSPAN_RE = re.compile(r'\browspan\s*=\s*["\']?(\d+)', re.IGNORECASE)
+# This intentionally requires a thousands/decimal separator: row codes such
+# as ``09`` and years such as ``2025`` are not financial amount evidence.
+FINANCIAL_AMOUNT_TOKEN_RE = re.compile(r'\(?-?\d{1,3}(?:[.,]\d{3})+\)?')
+MERGED_LABEL_START_RE = re.compile(
+    r'(?:^|\s)(?:tăng|giảm|thu|chi|lãi|lỗ|khấu\s+hao|hoàn\s+nhập|'
+    r'tổng\s+lợi\s+nhuận|điều\s+chỉnh)\b',
+    re.IGNORECASE,
+)
 
 # Mã mẫu biểu — handles OCR variations ("Mâu"→"Mẫu", "MẪU SỐ B", extra spaces, – vs -)
 # Groups: (1) number e.g. "02", (2) optional letter e.g. "b", (3) entity suffix e.g. "TCTD"
@@ -170,7 +185,10 @@ TABLE_TYPE_VI: dict[str, str] = {
 # Remove formula in parentheses like (20=10-11), (100 = 110 + 120 + ...)
 FORMULA_IN_PARENS_RE = re.compile(r'\(\s*\d+\s*=[\s\d+\-×*/]+\)')
 # Remove leading numbering like "1.", "A.", "I.", "II.", "a)"
-LEADING_NUMBER_RE = re.compile(r'^\s*(?:[IVXivx]+\.|[A-Za-z]\.|[A-Za-z]\)|\d+\.)\s*')
+# A decimal/thousands-formatted amount can start with ``1.`` or ``2.``.
+# Require whitespace after a numeric list marker so ``2.528.849`` is never
+# shortened to ``528.849`` when a malformed table maps it into a label field.
+LEADING_NUMBER_RE = re.compile(r'^\s*(?:[IVXivx]+\.|[A-Za-z]\.|[A-Za-z]\)|\d+\.\s+)')
 # Collapse whitespace
 MULTI_SPACE_RE = re.compile(r'\s+')
 
@@ -313,6 +331,10 @@ def parse_vietnamese_number(s: str) -> Optional[float]:
     s = s.strip()
     if not s or s in ('-', '–', '—', '*', 'x', 'X', 'N/A', ''):
         return None
+    # Dates appear frequently in multi-level headers.  Treating 31/12/2025
+    # as 31122025 creates fabricated financial values downstream.
+    if _is_date_cell(s):
+        return None
 
     negative = False
     if s.startswith('(') and s.endswith(')'):
@@ -353,6 +375,8 @@ class _TableHTMLParser(HTMLParser):
         self._current_row: list[str] = []
         self._current_cell: list[str] = []
         self._colspans: list[int] = []
+        self._rowspans: list[int] = []
+        self._pending_rowspans: dict[int, tuple[int, str]] = {}
         self._in_td = False
         self._in_table = False
 
@@ -363,11 +387,13 @@ class _TableHTMLParser(HTMLParser):
         elif tag_lower == 'tr' and self._in_table:
             self._current_row = []
             self._colspans = []
+            self._rowspans = []
         elif tag_lower in ('td', 'th') and self._in_table:
             self._in_td = True
             self._current_cell = []
             attrs_dict = dict(attrs)
             self._colspans.append(int(attrs_dict.get('colspan', '1') or '1'))
+            self._rowspans.append(int(attrs_dict.get('rowspan', '1') or '1'))
 
     def handle_endtag(self, tag: str) -> None:
         tag_lower = tag.lower()
@@ -375,13 +401,36 @@ class _TableHTMLParser(HTMLParser):
             self._in_td = False
             cell_text = ''.join(self._current_cell).strip()
             self._current_row.append(cell_text)
-        elif tag_lower == 'tr' and self._in_table and self._current_row:
+        elif tag_lower == 'tr' and self._in_table and (
+            self._current_row or self._pending_rowspans
+        ):
             expanded: list[str] = []
-            for i, cell in enumerate(self._current_row):
-                colspan = self._colspans[i] if i < len(self._colspans) else 1
+            source_cell = 0
+            column = 0
+            while source_cell < len(self._current_row) or column in self._pending_rowspans:
+                pending = self._pending_rowspans.get(column)
+                if pending:
+                    remaining, value = pending
+                    expanded.append(value)
+                    if remaining <= 1:
+                        del self._pending_rowspans[column]
+                    else:
+                        self._pending_rowspans[column] = (remaining - 1, value)
+                    column += 1
+                    continue
+
+                cell = self._current_row[source_cell]
+                colspan = self._colspans[source_cell] if source_cell < len(self._colspans) else 1
+                rowspan = self._rowspans[source_cell] if source_cell < len(self._rowspans) else 1
                 expanded.append(cell)
-                for _ in range(colspan - 1):
+                for offset in range(1, colspan):
                     expanded.append('')
+                if rowspan > 1:
+                    self._pending_rowspans[column] = (rowspan - 1, cell)
+                    for offset in range(1, colspan):
+                        self._pending_rowspans[column + offset] = (rowspan - 1, '')
+                source_cell += 1
+                column += colspan
             self.rows.append(expanded)
         elif tag_lower == 'table':
             self._in_table = False
@@ -395,8 +444,9 @@ def parse_html_table(html: str) -> list[list[str]]:
     """
     Parse an HTML table string into a 2D list of cell values.
 
-    Handles colspan by expanding cells. Rowspan is not handled
-    (rare in Vietnamese financial statement tables).
+    Expands ``colspan`` and ``rowspan`` into a rectangular cell grid.  The
+    top-left value of a rowspan is repeated in subsequent rows so a header
+    remains usable without borrowing cells from another source table.
     """
     parser = _TableHTMLParser()
     try:
@@ -635,8 +685,9 @@ def parse_all_files(inventory: pd.DataFrame, entity_type_map: dict[str, str], fs
 
         table_counter = 1
 
-        for page_text, page_start in pages:
+        for page_number, (page_text, page_start) in enumerate(pages, start=1):
             tables = extract_tables_from_text(page_text)
+            page_has_toc_heading = bool(TOC_HEADING_RE.search(page_text))
 
             for table_html, start_pos, end_pos in tables:
                 table_id = f"{doc_id}_table_{table_counter}"
@@ -649,6 +700,21 @@ def parse_all_files(inventory: pd.DataFrame, entity_type_map: dict[str, str], fs
 
                 preceding_text = get_preceding_text(page_text, start_pos, 300)
                 start_line = bisect_right(line_starts, page_start + start_pos)
+                parse_proofs = []
+                if re.search(r'\b(?:rowspan|colspan)\s*=', table_html, re.IGNORECASE):
+                    parse_proofs.append({
+                        'stage': 'parse_html',
+                        'rule': 'expand_table_spans',
+                        'action': 'expand_rowspan_colspan',
+                        'table_id': table_id,
+                        'doc_id': doc_id,
+                        'ticker': ticker,
+                        'year': year,
+                        'source_line': start_line,
+                        'source_table_ids': [table_id],
+                        'reason': 'source HTML declares rowspan or colspan',
+                        'benefit': 'preserve source cell alignment without merging tables',
+                    })
 
                 record = {
                     'doc_id': doc_id,
@@ -663,6 +729,13 @@ def parse_all_files(inventory: pd.DataFrame, entity_type_map: dict[str, str], fs
                     'consolidated': consolidated,
                     'doc_path': file_rel_path,
                     'folder_type': folder_type,
+                    # Internal audit context only.  It is intentionally not
+                    # included in the public metadata/Qdrant payload.
+                    'page_number': page_number,
+                    'page_has_toc_heading': page_has_toc_heading,
+                    'page_table_count': len(tables),
+                    'source_table_index': table_counter - 1,
+                    'repair_proofs': parse_proofs,
                 }
                 results.append(record)
 
@@ -722,13 +795,27 @@ def _set_note_heading_fields(tbl: dict, text: str) -> None:
     tbl['note_subtype'] = _extract_note_subtype(text)
 
 
-def _is_table_of_contents(preceding_text: str, rows: list[list[str]]) -> bool:
+def _is_table_of_contents(
+    preceding_text: str,
+    rows: list[list[str]],
+    page_has_toc_heading: bool = False,
+    page_table_count: int = 0,
+) -> bool:
     """Detect a document TOC without treating a generic “Nội dung” column as one."""
     first_rows = rows[:3]
     first_rows_text = ' '.join(str(cell) for row in first_rows for cell in row)
     nearby_text = f"{preceding_text[-300:]} {first_rows_text}"
     if TOC_HEADING_RE.search(nearby_text):
         return True
+
+    # Some OCR engines emit each TOC row as its own <table>.  The individual
+    # row cannot satisfy the usual “two page references” rule, but the page
+    # itself is still unambiguously a table of contents.
+    if page_has_toc_heading:
+        if page_table_count >= 3 and rows and all(len(row) <= 2 for row in rows):
+            row_text = ' '.join(str(cell) for row in rows for cell in row)
+            if TOC_PAGE_RE.search(row_text) or re.search(r'\d+\s*[-–]\s*\d+', row_text):
+                return True
 
     folded_cells = [_fold_text(cell).strip() for row in first_rows for cell in row]
     has_content_column = any(cell in ('noi dung', 'ten bao cao') for cell in folded_cells)
@@ -756,6 +843,15 @@ def classify_tables(raw_tables: list[dict]) -> list[dict]:
         tbl['note_number'] = ''
         tbl['note_title'] = ''
 
+        if tbl.get('skip_export_reason') == 'header_only':
+            tbl['table_type'] = 'header_only'
+            tbl['classification_method'] = 'header_recovery'
+            continue
+        if tbl.get('skip_export_reason') == 'administrative_boilerplate':
+            tbl['table_type'] = 'boilerplate'
+            tbl['classification_method'] = 'boilerplate_detection'
+            continue
+
         first_2_rows_text = ""
         for r in rows[:2]:
             first_2_rows_text += " ".join(str(cell) for cell in r) + " "
@@ -764,9 +860,22 @@ def classify_tables(raw_tables: list[dict]) -> list[dict]:
 
         # A TOC often names all three financial statements.  Detect it before
         # the financial heading tiers so those names cannot win classification.
-        if _is_table_of_contents(preceding_text, rows):
+        if _is_table_of_contents(
+            preceding_text,
+            rows,
+            bool(tbl.get('page_has_toc_heading')),
+            int(tbl.get('page_table_count') or 0),
+        ):
             tbl['table_type'] = 'table_of_contents'
             tbl['classification_method'] = 'toc_detection'
+            _append_proof(
+                tbl,
+                stage='classification',
+                rule='table_of_contents',
+                action='skip_toc',
+                reason='page/table evidence identifies a table-of-contents fragment',
+                benefit='prevent navigation rows from becoming financial CSVs',
+            )
             continue
 
         # Tier 1: Regex mã mẫu biểu
@@ -834,7 +943,8 @@ _PERIOD_HEADER_RE = re.compile(
     r'\b(?:nam\s*(?:nay|truoc|hien\s*hanh)|ky\s*(?:nay|truoc)|'
     r'so\s*(?:cuoi|dau)\s*nam|ngay\s*\d{1,2}|'
     r'thang\s*\d{1,2}|(?:19|20)\d{2}|vnd|trieu|nghin)\b'
-    r'|\d{1,2}\s*/\s*\d{1,2}\s*/\s*(?:19|20)?\d{2}'
+    r'|\d{1,2}\s*[./-]\s*\d{1,2}\s*[./-]\s*(?:19|20)?\d{2}'
+    r'|(?:19|20)\d{2}\s*(?:vnd|dong|trieu|nghin)'
 )
 _ITEM_CODE_RE = re.compile(
     r'^(?:[A-Z]|[IVXLCDM]+|\d{1,4}(?:\.\d{1,3})*[A-Z]?)\.?$',
@@ -881,6 +991,202 @@ def _leading_header_row_count(rows: list[list[str]]) -> int:
         else:
             break
     return count
+
+
+_DATE_CELL_RE = re.compile(
+    r'^\s*\d{1,2}\s*[./-]\s*\d{1,2}\s*[./-]\s*(?:19|20)\d{2}\s*$'
+)
+_DATE_WITH_UNIT_RE = re.compile(
+    r'^\s*\d{1,2}\s*[./-]\s*\d{1,2}\s*[./-]\s*(?:19|20)\d{2}'
+    r'\s*(?:(?:triệu|trieu|nghìn|nghin)\s*)?(?:vnd|đồng|dong)?\s*$',
+    re.IGNORECASE,
+)
+_UNIT_RE = re.compile(r'\b(?:vnd|đồng|dong|triệu|trieu|nghìn|nghin)\b', re.IGNORECASE)
+# A percent unit must be explicit in the OCR value or its own value-column
+# header.  Wording such as ``lãi suất`` can name a monetary maturity bucket,
+# so it is not unit evidence by itself.
+PERCENT_LITERAL_RE = re.compile(r'%')
+_ADMINISTRATIVE_BOILERPLATE_RE = re.compile(
+    r'\b(?:mẫu\s*số|mau\s*so|ban\s*hành|ban\s*hanh|thông\s*tư|thong\s*tu|'
+    r'bộ\s*tài\s*chính|bo\s*tai\s*chinh)\b',
+    re.IGNORECASE,
+)
+
+
+def _table_width(rows: list[list[str]]) -> int:
+    return max((len(row) for row in rows), default=0)
+
+
+def _is_date_cell(value: Any) -> bool:
+    text = str(value)
+    return bool(_DATE_CELL_RE.fullmatch(text) or _DATE_WITH_UNIT_RE.fullmatch(text))
+
+
+def _has_financial_number(value: Any) -> bool:
+    """Return True only for a value-shaped financial amount, never a date."""
+    text = str(value).strip()
+    if not text or _is_date_cell(text):
+        return False
+    return bool(re.search(r'(?<!\d)\d{1,3}(?:[.,]\d{3})+(?!\d)', text))
+
+
+def _is_header_only_table(rows: list[list[str]]) -> bool:
+    """Conservatively identify a detached header table.
+
+    This deliberately rejects short tables containing percentages or any
+    financial amount: a small data table must never be consumed as a header.
+    """
+    if not 1 <= len(rows) <= 3:
+        return False
+    cells = [str(cell).strip() for row in rows for cell in row if str(cell).strip()]
+    if not cells or any(_has_financial_number(cell) for cell in cells):
+        return False
+    if any(re.search(r'\d+(?:[,.]\d+)?\s*%', cell) for cell in cells):
+        return False
+    folded = ' '.join(_fold_text(cell) for cell in cells)
+    role_count = sum(bool(_header_cell_role(cell)) for cell in cells)
+    return role_count >= 2 or bool(
+        re.search(r'\b(?:thuyet minh|so cuoi|so dau|nam nay|nam truoc|don vi)\b', folded)
+        and _UNIT_RE.search(folded)
+    )
+
+
+def _is_administrative_boilerplate(rows: list[list[str]]) -> bool:
+    """Detect a form/legal fragment which must not become a data header."""
+    if not 1 <= len(rows) <= 3 or _table_width(rows) != 1:
+        return False
+    text = ' '.join(str(cell).strip() for row in rows for cell in row if str(cell).strip())
+    return bool(_ADMINISTRATIVE_BOILERPLATE_RE.search(text))
+
+
+def _has_recoverable_value_header(rows: list[list[str]]) -> bool:
+    """A detached header is useful only when it names at least two values."""
+    if _table_width(rows) < 2:
+        return False
+    value_columns = {
+        column
+        for row in rows
+        for column, cell in enumerate(row)
+        if _header_cell_role(cell) == 'value'
+    }
+    return len(value_columns) >= 2
+
+
+def _is_data_table(rows: list[list[str]]) -> bool:
+    if len(rows) < 2:
+        return False
+    cells = [str(cell).strip() for row in rows[1:] for cell in row if str(cell).strip()]
+    return len(cells) >= 2 and (
+        sum(_has_financial_number(cell) for cell in cells) >= 2
+        or len(rows) >= 4
+    )
+
+
+def _has_two_aligned_amount_rows(rows: list[list[str]], width: int) -> bool:
+    """Require two body rows that really carry the same value layout."""
+    matching_rows = []
+    for row in rows:
+        if len(row) != width:
+            continue
+        amount_columns = tuple(
+            index for index, cell in enumerate(row) if _has_financial_number(cell)
+        )
+        if len(amount_columns) >= 2:
+            matching_rows.append(amount_columns)
+    return any(
+        matching_rows.count(columns) >= 2 for columns in set(matching_rows)
+    )
+
+
+def _append_proof(table: dict, *, stage: str, rule: str, action: str,
+                  source_table_ids: list[str] | None = None,
+                  reason: str, benefit: str,
+                  evidence: dict[str, Any] | None = None) -> None:
+    """Attach an in-memory, source-traceable proof for a transformation."""
+    proof = {
+        'stage': stage,
+        'rule': rule,
+        'action': action,
+        'table_id': table.get('table_id'),
+        'doc_id': table.get('doc_id'),
+        'ticker': table.get('ticker'),
+        'year': table.get('year'),
+        'source_line': table.get('start_line'),
+        'source_table_ids': source_table_ids or [table.get('table_id')],
+        'source_table_sha256': hashlib.sha256(
+            str(table.get('table_html') or '').encode('utf-8')
+        ).hexdigest(),
+        'source_row_widths': [len(row) for row in table.get('rows') or []],
+        'reason': reason,
+        'benefit': benefit,
+    }
+    if evidence:
+        proof['evidence'] = evidence
+    table.setdefault('repair_proofs', []).append(proof)
+
+
+def recover_headers_without_merging(raw_tables: list[dict]) -> list[dict]:
+    """Attach a proven adjacent header to a body table without merging tables.
+
+    A header may cross exactly one page boundary, but it must be the immediate
+    previous source table in the same document and have the same expanded
+    width.  The original header table is retained for audit and merely marked
+    non-exportable; no rows are moved between table IDs.
+    """
+    by_doc: dict[str, list[dict]] = defaultdict(list)
+    for table in raw_tables:
+        by_doc[str(table.get('doc_id') or '')].append(table)
+
+    for tables in by_doc.values():
+        tables.sort(key=lambda table: int(table.get('start_line') or 0))
+        for table in tables:
+            if _is_administrative_boilerplate(table.get('rows') or []):
+                table['skip_export_reason'] = 'administrative_boilerplate'
+                _append_proof(
+                    table,
+                    stage='header_recovery',
+                    rule='administrative_boilerplate',
+                    action='skip_boilerplate',
+                    reason='one-column form/legal fragment is not a data header',
+                    benefit='prevent false header inheritance without exporting boilerplate',
+                )
+        for header, body in zip(tables, tables[1:]):
+            header_rows = header.get('rows') or []
+            body_rows = body.get('rows') or []
+            page_gap = int(body.get('page_number') or 0) - int(header.get('page_number') or 0)
+            if not (
+                0 <= page_gap <= 1
+                and _is_header_only_table(header_rows)
+                and not header.get('skip_export_reason')
+                and _has_recoverable_value_header(header_rows)
+                and _is_data_table(body_rows)
+                and _table_width(header_rows) == _table_width(body_rows)
+                and _has_two_aligned_amount_rows(body_rows, _table_width(header_rows))
+            ):
+                continue
+
+            body['effective_header_rows'] = [list(row) for row in header_rows]
+            body['header_source_table_id'] = header.get('table_id')
+            header['skip_export_reason'] = 'header_only'
+            _append_proof(
+                body,
+                stage='header_recovery',
+                rule='adjacent_header_only',
+                action='inherit_header_context',
+                source_table_ids=[header.get('table_id'), body.get('table_id')],
+                reason='adjacent header-only table has matching expanded width',
+                benefit='restore column meaning without merging source tables',
+            )
+            _append_proof(
+                header,
+                stage='header_recovery',
+                rule='adjacent_header_only',
+                action='skip_header_only',
+                source_table_ids=[header.get('table_id'), body.get('table_id')],
+                reason='table is used only as proven header context for the next body table',
+                benefit='prevent an empty/header-only CSV from entering the catalog',
+            )
+    return raw_tables
 
 
 def _column_samples(
@@ -1014,6 +1320,206 @@ def _detect_statement_columns(
     return label_col, code_col, note_col, val_cols, header_row_count
 
 
+def _effective_header_rows(table: dict) -> list[list[str]]:
+    return [list(row) for row in table.get('effective_header_rows') or []]
+
+
+def _detect_unit(table: dict, rows: list[list[str]]) -> str:
+    header_text = ' '.join(
+        str(cell) for row in (_effective_header_rows(table) or rows[:3]) for cell in row
+    ).lower()
+    if re.search(r'\b(?:triệu|trieu)\b', header_text):
+        return 'million_VND'
+    if re.search(r'\b(?:nghìn|nghin)\b', header_text):
+        return 'thousand_VND'
+    return 'VND'
+
+
+def _has_inline_section_headers(rows: list[list[str]]) -> bool:
+    """A numbered heading inside a table means one schema cannot be trusted."""
+    for row in rows[1:]:
+        nonempty = [str(cell).strip() for cell in row if str(cell).strip()]
+        if len(nonempty) == 1 and re.match(r'^\d+(?:\.\d+)+\.?\s+', nonempty[0]):
+            return True
+    return False
+
+
+def _has_more_than_two_value_columns(rows: list[list[str]]) -> bool:
+    header_rows = rows[:max(_leading_header_row_count(rows), 1)]
+    widest = max(header_rows, key=len, default=[])
+    return sum(_header_cell_role(cell) == 'value' for cell in widest) > 2
+
+
+def _note_requires_raw_fallback(rows: list[list[str]]) -> bool:
+    """Keep text cells in mixed note tables instead of silently nulling them."""
+    if len(rows) < 2:
+        return False
+    has_number = False
+    has_text_value = False
+    for row in rows[1:]:
+        for cell in row[1:]:
+            value = str(cell).strip()
+            if not value or value in {'-', '–', '—'}:
+                continue
+            has_number = has_number or parse_vietnamese_number(value) is not None
+            has_text_value = has_text_value or (
+                parse_vietnamese_number(value) is None and not _is_date_cell(value)
+            )
+    return has_number and has_text_value
+
+
+def _unsafe_merged_cell_evidence(table: Mapping[str, Any]) -> list[dict[str, Any]]:
+    """Return OCR evidence when a rowspan joins multiple unrecoverable rows.
+
+    This is deliberately high-precision.  A rowspan alone is a valid layout
+    construct and has already been expanded by ``parse_html_table``.  We only
+    reject a statement table when the source also proves that multiple labels
+    and multiple monetary values have been concatenated, leaving no OCR-backed
+    one-to-one mapping between them.
+    """
+    table_html = str(table.get('table_html') or '')
+    if not table_html:
+        return []
+
+    merged_labels: list[dict[str, Any]] = []
+    multi_amount_cells: list[dict[str, Any]] = []
+    for match in HTML_CELL_RE.finditer(table_html):
+        text = MULTI_SPACE_RE.sub(' ', HTML_TAG_RE.sub('', match.group('content'))).strip()
+        if not text:
+            continue
+        rowspan_match = HTML_ROWSPAN_RE.search(match.group('attrs'))
+        rowspan = int(rowspan_match.group(1)) if rowspan_match else 1
+        label_starts = MERGED_LABEL_START_RE.findall(text)
+        if rowspan > 1 and len(label_starts) >= 2 and re.search(r'[A-Za-zÀ-ỹ]', text):
+            merged_labels.append({
+                'rowspan': rowspan,
+                'cell_text': text,
+                'label_signal_count': len(label_starts),
+            })
+
+        amounts = FINANCIAL_AMOUNT_TOKEN_RE.findall(text)
+        if len(amounts) >= 2:
+            multi_amount_cells.append({
+                'cell_text': text,
+                'amount_tokens': amounts,
+            })
+
+    if not merged_labels or not multi_amount_cells:
+        return []
+    return [{
+        'mapping_conflict': 'rowspan_concatenates_multiple_labels_and_amounts',
+        'merged_label_cells': merged_labels[:5],
+        'multi_amount_cells': multi_amount_cells[:10],
+    }]
+
+
+def _raw_fallback_dataframe(rows: list[list[str]], note_number: str, note_title: str) -> pd.DataFrame:
+    width = _table_width(rows)
+    raw_data = []
+    for row_index, row in enumerate(rows):
+        raw_cells = [str(cell).strip() for cell in row]
+        if not any(raw_cells):
+            continue
+        record: dict[str, Any] = {
+            'row_index': row_index,
+            'row_label_raw': raw_cells[0] if raw_cells else '',
+            'note_number': note_number,
+            'note_title': note_title,
+        }
+        for column_index in range(1, width):
+            record[f'value_{column_index}_raw'] = (
+                raw_cells[column_index] if column_index < len(raw_cells) else ''
+            )
+        raw_data.append(record)
+    return pd.DataFrame(raw_data)
+
+
+def _percent_unit_evidence_for_row(
+    row: list[str],
+    value_columns: list[int],
+    header_rows: list[list[str]],
+) -> list[dict[str, Any]]:
+    """Return only explicit OCR percent evidence for this row's value columns."""
+    evidence: list[dict[str, Any]] = []
+    for column in value_columns:
+        if 0 <= column < len(row) and PERCENT_LITERAL_RE.search(str(row[column])):
+            evidence.append({
+                'source': 'value_cell', 'column': column, 'text': str(row[column]),
+            })
+    if evidence:
+        return evidence
+    for header_row_index, header in enumerate(header_rows):
+        for column in value_columns:
+            if column < len(header) and PERCENT_LITERAL_RE.search(str(header[column])):
+                evidence.append({
+                    'source': 'value_header', 'header_row_index': header_row_index,
+                    'column': column, 'text': str(header[column]),
+                })
+    return evidence
+
+
+def _percent_unit_for_row(
+    row: list[str], value_columns: list[int], header_rows: list[list[str]],
+) -> bool:
+    """Compatibility wrapper for explicit-percent unit detection."""
+    return bool(_percent_unit_evidence_for_row(row, value_columns, header_rows))
+
+
+def _mapping_failure_evidence(
+    rows: list[list[str]],
+    label_col: int,
+    code_col: int,
+    note_col: int,
+    value_columns: list[int],
+    data_start: int,
+) -> list[dict[str, Any]]:
+    """Prove that a proposed statement mapping puts an amount in its label."""
+    failures: list[dict[str, Any]] = []
+    if code_col == label_col and code_col >= 0:
+        # A canonical statement row needs independent code and label fields.
+        # Choosing either side of an OCR-shifted layout would silently discard
+        # the other, so preserve the table verbatim instead.
+        return [{
+            'mapping_conflict': 'code_and_label_use_same_column',
+            'source_rows': [
+                [str(cell) for cell in row]
+                for row in rows[data_start:data_start + 5]
+            ],
+            'proposed_label_column': label_col,
+            'proposed_code_column': code_col,
+            'proposed_note_column': note_col,
+            'proposed_value_columns': value_columns,
+        }]
+    for row_index, row in enumerate(rows[data_start:], start=data_start):
+        label = str(row[label_col]).strip() if 0 <= label_col < len(row) else ''
+        note = str(row[note_col]).strip() if 0 <= note_col < len(row) else ''
+        if not _has_financial_number(label) or not re.search(r'[A-Za-zÀ-ỹ]', note):
+            continue
+        failures.append({
+            'row_index': row_index,
+            'source_row': [str(cell) for cell in row],
+            'proposed_label_column': label_col,
+            'proposed_note_column': note_col,
+            'proposed_value_columns': value_columns,
+        })
+    return failures
+
+
+def _composed_header_names(header_rows: list[list[str]], width: int) -> list[str]:
+    """Compose one source-faithful name per column from a multi-row header."""
+    names = []
+    for column in range(width):
+        parts = []
+        for row in header_rows:
+            if column >= len(row):
+                continue
+            part = MULTI_SPACE_RE.sub(' ', str(row[column]).strip())
+            if part and part not in parts:
+                parts.append(part)
+        names.append(' '.join(parts) if parts else f'value_{column}')
+    return names
+
+
 def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list[dict]:
     """Normalize classified tables and export to CSV."""
     os.makedirs(output_dir, exist_ok=True)
@@ -1022,7 +1528,7 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
         table_type = tbl.get('table_type')
         rows = tbl.get('rows', [])
         tbl.pop('csv_path', None)
-        if table_type == 'table_of_contents':
+        if table_type in ('table_of_contents', 'header_only') or tbl.get('skip_export_reason'):
             continue
         if not rows:
             continue
@@ -1031,11 +1537,107 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
         entity_type = tbl.get('entity_type', 'DN')
 
         if table_type in ('balance_sheet', 'income_statement', 'cash_flow'):
+            unsafe_merged_cells = _unsafe_merged_cell_evidence(tbl)
+            if unsafe_merged_cells:
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='unsafe_merged_cell_mapping',
+                    action='raw_fallback',
+                    reason=(
+                        'rowspan cell concatenates multiple financial labels and '
+                        'other cells concatenate multiple amounts without an OCR-backed '
+                        'one-to-one mapping'
+                    ),
+                    benefit=(
+                        'preserve OCR cell positions without inventing financial rows or '
+                        'assigning an amount to an unproven label'
+                    ),
+                    evidence={'affected_cells': unsafe_merged_cells},
+                )
+                df = _raw_fallback_dataframe(
+                    rows,
+                    str(tbl.get('note_number') or ''),
+                    str(tbl.get('note_title') or ''),
+                )
+                if df.empty:
+                    tbl['skip_export_reason'] = 'normalization_produced_no_rows'
+                    continue
+                csv_path = os.path.join(output_dir, f"{table_id}.csv")
+                df.to_csv(csv_path, index=False)
+                tbl['csv_path'] = f"data/{table_id}.csv"
+                tbl['raw_fallback'] = True
+                tbl['unsafe_merged_cell'] = True
+                continue
+
+            detection_rows = _effective_header_rows(tbl) + rows
+            if _has_inline_section_headers(rows) or _has_more_than_two_value_columns(detection_rows):
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='non_binary_statement_schema',
+                    action='raw_fallback',
+                    reason='source table has inline sections or more than two value columns',
+                    benefit='preserve every OCR cell instead of shifting or dropping columns',
+                )
+                df = _raw_fallback_dataframe(
+                    rows,
+                    str(tbl.get('note_number') or ''),
+                    str(tbl.get('note_title') or ''),
+                )
+                if df.empty:
+                    tbl['skip_export_reason'] = 'normalization_produced_no_rows'
+                    continue
+                csv_path = os.path.join(output_dir, f"{table_id}.csv")
+                df.to_csv(csv_path, index=False)
+                tbl['csv_path'] = f"data/{table_id}.csv"
+                tbl['raw_fallback'] = True
+                continue
+
             label_col, code_col, note_col, val_cols, data_start = (
-                _detect_statement_columns(rows)
+                _detect_statement_columns(detection_rows)
             )
 
+            # Header context belongs to another source table.  It informs
+            # column detection only; body rows keep their own table identity.
+            if _effective_header_rows(tbl):
+                data_start = 0
+
+            # ``detection_rows`` also contains every body row and must never
+            # be used as unit evidence.  A percent elsewhere in a statement
+            # cannot change the unit of this row.
+            source_header_rows = _effective_header_rows(tbl) or rows[:data_start]
+            base_unit = _detect_unit(tbl, source_header_rows)
+
+            mapping_failures = _mapping_failure_evidence(
+                rows, label_col, code_col, note_col, val_cols, data_start
+            )
+            if mapping_failures:
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='column_mapping_unreliable',
+                    action='raw_fallback',
+                    reason='proposed statement label column contains an OCR amount',
+                    benefit='preserve source cell positions instead of exporting shifted values',
+                    evidence={'affected_rows': mapping_failures[:20]},
+                )
+                df = _raw_fallback_dataframe(
+                    rows,
+                    str(tbl.get('note_number') or ''),
+                    str(tbl.get('note_title') or ''),
+                )
+                if df.empty:
+                    tbl['skip_export_reason'] = 'normalization_produced_no_rows'
+                    continue
+                csv_path = os.path.join(output_dir, f"{table_id}.csv")
+                df.to_csv(csv_path, index=False)
+                tbl['csv_path'] = f"data/{table_id}.csv"
+                tbl['raw_fallback'] = True
+                continue
+
             data = []
+            percent_unit_proofs: list[dict[str, Any]] = []
             for r in rows[data_start:]:
                 item_code = (
                     str(r[code_col]).strip()
@@ -1056,6 +1658,17 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
 
                 period_current = parse_vietnamese_number(str(r[val_cols[0]])) if len(val_cols) > 0 and val_cols[0] < len(r) else None
                 period_prior = parse_vietnamese_number(str(r[val_cols[1]])) if len(val_cols) > 1 and val_cols[1] < len(r) else None
+                percent_evidence = _percent_unit_evidence_for_row(
+                    r, val_cols, source_header_rows
+                )
+                row_unit = 'percent' if percent_evidence else base_unit
+                if percent_evidence:
+                    percent_unit_proofs.append({
+                        'row_index': len(data) + data_start,
+                        'item_label_raw': item_label_raw,
+                        'unit': row_unit,
+                        'ocr_evidence': percent_evidence,
+                    })
 
                 data.append({
                     'item_code': item_code,
@@ -1064,17 +1677,52 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
                     'note_ref': note_ref,
                     'period_current': period_current,
                     'period_prior': period_prior,
-                    'unit': 'VND',
+                    'unit': row_unit,
                     'entity_type': entity_type
                 })
 
+            if not data:
+                tbl['skip_export_reason'] = 'normalization_produced_no_rows'
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='empty_normalized_table',
+                    action='skip_export',
+                    reason='no source row produced a usable statement record',
+                    benefit='prevent an empty CSV from entering the catalog',
+                )
+                continue
+            if percent_unit_proofs:
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='unit_from_ocr_evidence',
+                    action='assign_row_unit',
+                    reason=(
+                        'only rows with an explicit percent sign in an OCR value '
+                        'or matching value header use percent'
+                    ),
+                    benefit=(
+                        'prevent a percentage row or an interest-rate wording from '
+                        'changing monetary rows in the same table'
+                    ),
+                    evidence={
+                        'base_table_unit': base_unit,
+                        'percent_rows': percent_unit_proofs[:50],
+                    },
+                )
             df = pd.DataFrame(data)
             csv_path = os.path.join(output_dir, f"{table_id}.csv")
             df.to_csv(csv_path, index=False)
             tbl['csv_path'] = f"data/{table_id}.csv"
 
         elif table_type == 'note_table':
-            header = rows[0] if rows else []
+            header_rows = _effective_header_rows(tbl)
+            header = header_rows[-1] if header_rows else (rows[0] if rows else [])
+            composed_headers = (
+                _composed_header_names(header_rows, _table_width(header_rows))
+                if header_rows else []
+            )
             note_subtype = tbl.get('note_subtype', '')
             note_number = tbl.get('note_number', '')
             note_title = tbl.get('note_title', '')
@@ -1085,8 +1733,34 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
             if m and not note_title:
                 note_title = m.group(2).replace('_', ' ').title()
 
+            # When a note contains both text and numeric values, the old
+            # numeric-only export silently erased the text.  Use the existing
+            # generic raw schema for the single source table instead.
+            # A body may repeat a compact version of an inherited header.  It
+            # supplies no data and must never become a row such as 31122023.
+            body_header_count = _leading_header_row_count(rows) if header_rows else 0
+            note_rows = rows[body_header_count:] if header_rows else rows[1:]
+            if _has_inline_section_headers(rows) or _note_requires_raw_fallback(rows):
+                _append_proof(
+                    tbl,
+                    stage='normalization',
+                    rule='mixed_note_cells',
+                    action='raw_fallback',
+                    reason='numeric note export would discard non-numeric source cells',
+                    benefit='preserve every OCR cell without splitting or merging tables',
+                )
+                df = _raw_fallback_dataframe(rows, note_number, note_title)
+                if df.empty:
+                    tbl['skip_export_reason'] = 'normalization_produced_no_rows'
+                    continue
+                csv_path = os.path.join(output_dir, f"{table_id}.csv")
+                df.to_csv(csv_path, index=False)
+                tbl['csv_path'] = f"data/{table_id}.csv"
+                tbl['raw_fallback'] = True
+                continue
+
             data = []
-            for r in rows[1:]:
+            for r in note_rows:
                 if not r: continue
                 row_label_raw = str(r[0]).strip()
                 row_data = {
@@ -1098,7 +1772,15 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
                     val = parse_vietnamese_number(str(cell))
                     if val is not None:
                         has_numeric = True
-                    header_name = str(header[i]).strip() if i < len(header) and str(header[i]).strip() else f"value_{i}"
+                    header_name = (
+                        composed_headers[i]
+                        if i < len(composed_headers) and composed_headers[i]
+                        else (
+                            str(header[i]).strip()
+                            if i < len(header) and str(header[i]).strip()
+                            else f"value_{i}"
+                        )
+                    )
                     row_data[header_name] = val
 
                 if has_numeric:
@@ -1117,28 +1799,9 @@ def normalize_and_export(classified_tables: list[dict], output_dir: str) -> list
                 retrieval_terms = _note_retrieval_terms(tbl)
                 if not retrieval_terms:
                     continue
-                width = max((len(row) for row in rows), default=0)
-                raw_data = []
-                for row_index, row in enumerate(rows):
-                    raw_cells = [str(cell).strip() for cell in row]
-                    if not any(raw_cells):
-                        continue
-                    row_data = {
-                        'row_index': row_index,
-                        'row_label_raw': raw_cells[0] if raw_cells else '',
-                        'note_number': note_number,
-                        'note_title': note_title,
-                    }
-                    for column_index in range(1, width):
-                        row_data[f'value_{column_index}_raw'] = (
-                            raw_cells[column_index]
-                            if column_index < len(raw_cells)
-                            else ''
-                        )
-                    raw_data.append(row_data)
-                if not raw_data:
+                df = _raw_fallback_dataframe(rows, note_number, note_title)
+                if df.empty:
                     continue
-                df = pd.DataFrame(raw_data)
 
             csv_path = os.path.join(output_dir, f"{table_id}.csv")
             df.to_csv(csv_path, index=False)
@@ -1165,6 +1828,12 @@ def _to_canonical_id(name_vi: str) -> str:
     return s[:50].rstrip('_')
 
 
+def _is_semantic_label(value: str) -> bool:
+    """Reject OCR amounts/codes which cannot be a searchable label alias."""
+    text = str(value or '').strip()
+    return bool(text and re.search(r'[A-Za-zÀ-ỹ]', text) and not _has_financial_number(text))
+
+
 def build_taxonomy(tables: list[dict], output_dir: str) -> dict[str, list[dict]]:
     project_root = Path(__file__).resolve().parent
 
@@ -1174,11 +1843,26 @@ def build_taxonomy(tables: list[dict], output_dir: str) -> dict[str, list[dict]]
     # globally unique regulatory code.  Such an STT can identify several rows
     # in the same table and must not be allowed to merge unrelated concepts.
     ambiguous_keys: set[tuple[str, str, str]] = set()
+    exclusions: list[dict[str, Any]] = []
 
     for t in tables:
         if t.get('table_type') in ('balance_sheet', 'income_statement', 'cash_flow'):
             entity_type = t.get('entity_type')
             table_type = t.get('table_type')
+            if t.get('raw_fallback'):
+                if t.get('unsafe_merged_cell'):
+                    exclusions.append({
+                        'table_id': t.get('table_id', ''),
+                        'doc_id': t.get('doc_id', ''),
+                        'ticker': t.get('ticker', ''),
+                        'year': t.get('year', 0),
+                        'source_line': t.get('start_line', 0),
+                        'statement': table_type,
+                        'reason': 'unsafe_merged_cell_raw_fallback',
+                    })
+                # Raw fallback has no proven item-label schema.  Its text must
+                # not become a taxonomy alias or dense-retrieval keyword.
+                continue
             csv_path = project_root / t.get('csv_path', '')
 
             if not csv_path.exists():
@@ -1191,9 +1875,21 @@ def build_taxonomy(tables: list[dict], output_dir: str) -> dict[str, list[dict]]
                     for row in reader:
                         item_code = (row.get('item_code') or '').strip()
                         item_label_norm = (row.get('item_label_norm') or '').strip()
-                        if item_code and item_label_norm:
+                        if item_code and item_label_norm and _is_semantic_label(item_label_norm):
                             label_counts[entity_type][table_type][item_code][item_label_norm] += 1
                             labels_in_table[item_code].add(item_label_norm)
+                        elif item_code and item_label_norm:
+                            exclusions.append({
+                                'table_id': t.get('table_id', ''),
+                                'doc_id': t.get('doc_id', ''),
+                                'ticker': t.get('ticker', ''),
+                                'year': t.get('year', 0),
+                                'source_line': t.get('start_line', 0),
+                                'statement': table_type,
+                                'item_code': item_code,
+                                'rejected_alias': item_label_norm,
+                                'reason': 'numeric_or_code_like_label',
+                            })
                     for item_code, labels in labels_in_table.items():
                         if len(labels) > 1:
                             ambiguous_keys.add((entity_type, table_type, item_code))
@@ -1202,6 +1898,7 @@ def build_taxonomy(tables: list[dict], output_dir: str) -> dict[str, list[dict]]
 
     out_dir_path = Path(output_dir)
     out_dir_path.mkdir(parents=True, exist_ok=True)
+    _save_jsonl(exclusions, out_dir_path / 'taxonomy_exclusions.jsonl')
 
     result = {}
     universal_concepts: dict[str, set[str]] = defaultdict(set)
@@ -1289,6 +1986,9 @@ def assign_semantic_fields(tables: list[dict], taxonomy: dict[str, list[dict]]) 
         table_type = t.get('table_type')
         if table_type in ('balance_sheet', 'income_statement', 'cash_flow'):
             semantic_fields = []
+            if t.get('raw_fallback'):
+                t['semantic_fields'] = semantic_fields
+                continue
             seen_fields = set()
             entity_type = t.get('entity_type')
             csv_path = project_root / t.get('csv_path', '')
@@ -1350,7 +2050,7 @@ def assign_semantic_fields(tables: list[dict], taxonomy: dict[str, list[dict]]) 
                                     'canonical_name_vi': tax_entry['name_vi'],
                                     'aliases': tax_entry['aliases'],
                                     'item_code': item_code,
-                                    'unit': 'VND',
+                                    'unit': (row.get('unit') or 'VND').strip(),
                                 })
                 except (OSError, csv.Error) as exc:
                     logging.warning("Failed to assign semantics from %s: %s", csv_path, exc)
@@ -1588,6 +2288,8 @@ def _save_skipped_tables(tables: list[dict], path: Path) -> None:
     for table in tables:
         if table.get('table_type') == 'table_of_contents':
             reason = 'table_of_contents'
+        elif table.get('skip_export_reason'):
+            reason = str(table['skip_export_reason'])
         elif not table.get('csv_path'):
             reason = 'normalization_produced_no_csv'
         else:
@@ -1604,6 +2306,26 @@ def _save_skipped_tables(tables: list[dict], path: Path) -> None:
     _save_jsonl(records, path)
 
 
+def _save_transform_proofs(tables: list[dict], path: Path) -> None:
+    """Write one machine-readable PoC for every intentional transformation."""
+    proofs: list[dict[str, Any]] = []
+    for table in tables:
+        for proof in table.get('repair_proofs') or []:
+            record = dict(proof)
+            record['result_csv_path'] = table.get('csv_path', '')
+            csv_path = str(table.get('csv_path') or '')
+            if csv_path:
+                csv_file = path.parent.parent / csv_path
+                if csv_file.is_file():
+                    with csv_file.open(encoding='utf-8-sig', newline='') as handle:
+                        record['after_columns'] = next(csv.reader(handle), [])
+                    record['result_csv_sha256'] = hashlib.sha256(
+                        csv_file.read_bytes()
+                    ).hexdigest()
+            proofs.append(record)
+    _save_jsonl(proofs, path)
+
+
 def validate_generated_outputs(
     tables: list[dict],
     data_dir: str | Path,
@@ -1612,8 +2334,10 @@ def validate_generated_outputs(
     """Validate the final one-to-one CSV/table metadata contract."""
     usable = [table for table in tables if table.get('csv_path')]
     table_ids = [str(table.get('table_id') or '') for table in usable]
-    if any(table.get('table_type') == 'table_of_contents' for table in tables):
+    if any(table.get('table_type') == 'table_of_contents' for table in usable):
         raise ValueError('table_of_contents không được xuất vào catalog cuối')
+    if any(table.get('table_type') == 'header_only' for table in usable):
+        raise ValueError('header_only không được xuất vào catalog cuối')
     if any(not table_id for table_id in table_ids):
         raise ValueError('table metadata có table_id rỗng')
     if len(table_ids) != len(set(table_ids)):
@@ -1636,6 +2360,9 @@ def validate_generated_outputs(
             'consolidated', 'separate', 'aggregated', 'other',
         }:
             raise ValueError(f"report_type không hợp lệ cho {table['table_id']}")
+        csv_file = data_root / f"{table['table_id']}.csv"
+        if csv_file.stat().st_size <= 2:
+            raise ValueError(f"CSV rỗng không được export: {table['table_id']}")
 
     metadata_path = Path(metadata_dir) / 'tables_metadata.json'
     with metadata_path.open(encoding='utf-8') as handle:
@@ -1679,6 +2406,10 @@ def prepare(financial_statements_dir: str) -> None:
     _save_jsonl(raw_tables, root / "intermediate" / "raw_tables.jsonl")
     print(f"  {len(raw_tables)} tables extracted")
 
+    # Header context is attached before classification/normalization, but
+    # source tables remain separate and retain their original IDs.
+    recover_headers_without_merging(raw_tables)
+
     # ── Stage 2: Classify table_type ───────────────────────────────
     print("═══ Stage 2: Classify table_type ═══")
     classified = classify_tables(raw_tables)
@@ -1693,6 +2424,7 @@ def prepare(financial_statements_dir: str) -> None:
         print(f"  Removed {removed_stale} stale CSV artifacts")
     exported = normalize_and_export(classified, str(root / "data"))
     _save_skipped_tables(exported, root / "intermediate" / "skipped_tables.jsonl")
+    _save_transform_proofs(exported, root / "intermediate" / "transform_proofs.jsonl")
     exported_tables = [table for table in exported if table.get('csv_path')]
     exported_count = sum(bool(table.get('csv_path')) for table in exported)
     print(f"  {exported_count} CSV files written")
