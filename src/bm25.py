@@ -295,7 +295,7 @@ def search_bm25(
     clauses, filter_parameters = _filter_clauses(filters)
     sql = (
         "SELECT table_id, doc_id, ticker, company_name, year, report_type, "
-        "table_type, start_line, bm25(documents) AS score "
+        "table_type, start_line, index_text, bm25(documents) AS score "
         "FROM documents WHERE documents MATCH ?"
     )
     if clauses:
@@ -313,7 +313,7 @@ def search_bm25(
 
     candidates: list[dict[str, Any]] = []
     for rank, row in enumerate(rows, start=1):
-        raw_score = float(row[8])
+        raw_score = float(row[9])
         if not math.isfinite(raw_score):
             raise BM25IndexError("BM25 returned a non-finite score")
         payload = validate_qdrant_payload(
@@ -326,6 +326,7 @@ def search_bm25(
                 "report_type": row[5],
                 "table_type": row[6],
                 "start_line": int(row[7]),
+                "index_text": row[8],
             }
         )
         candidates.append(

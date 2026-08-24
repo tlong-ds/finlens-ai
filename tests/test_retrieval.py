@@ -39,6 +39,7 @@ def payload(
         "report_type": "separate",
         "table_type": table_type,
         "start_line": index,
+        "index_text": f"Bảng thuyết minh báo cáo tài chính {ticker} 2018",
     }
 
 

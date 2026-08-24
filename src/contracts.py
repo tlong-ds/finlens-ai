@@ -9,7 +9,7 @@ from typing import Any, TypedDict
 
 MIN_YEAR = 2015
 MAX_YEAR = 2025
-PAYLOAD_SCHEMA_VERSION = 3
+PAYLOAD_SCHEMA_VERSION = 4
 
 PAYLOAD_FIELDS = (
     "table_id",
@@ -20,6 +20,7 @@ PAYLOAD_FIELDS = (
     "report_type",
     "table_type",
     "start_line",
+    "index_text",
 )
 FILTER_FIELDS = ("ticker", "year", "report_type", "table_type")
 REPORT_TYPES = frozenset({"consolidated", "separate", "aggregated", "other"})
@@ -38,6 +39,7 @@ class QdrantTablePayload(TypedDict):
     report_type: str
     table_type: str
     start_line: int
+    index_text: str
 
 
 def validate_table_id(value: Any) -> str:
@@ -67,10 +69,10 @@ def resolve_csv_path(table_id: str, project_root: Path) -> Path:
 
 
 def validate_qdrant_payload(value: Mapping[str, Any]) -> QdrantTablePayload:
-    """Return a normalized payload only when it exactly matches schema v3."""
+    """Return a normalized payload only when it exactly matches schema v4."""
     if set(value) != set(PAYLOAD_FIELDS):
         raise ValueError(
-            "Payload Qdrant phải có đúng 8 trường: " + ", ".join(PAYLOAD_FIELDS)
+            "Payload Qdrant phải có đúng 9 trường: " + ", ".join(PAYLOAD_FIELDS)
         )
 
     string_fields = (
@@ -109,4 +111,9 @@ def validate_qdrant_payload(value: Mapping[str, Any]) -> QdrantTablePayload:
     if start_line < 1:
         raise ValueError("Payload field start_line phải lớn hơn hoặc bằng 1")
     normalized["start_line"] = start_line
+
+    index_text = value["index_text"]
+    if not isinstance(index_text, str) or not index_text.strip():
+        raise ValueError("Payload field index_text phải là chuỗi không rỗng")
+    normalized["index_text"] = " ".join(index_text.split())
     return normalized  # type: ignore[return-value]

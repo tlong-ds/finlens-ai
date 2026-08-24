@@ -31,6 +31,7 @@ def manifest_point(
             "report_type": report_type,
             "table_type": "note_table",
             "start_line": start_line,
+            "index_text": index_text,
         },
     }
 

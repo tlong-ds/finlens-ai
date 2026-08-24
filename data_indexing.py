@@ -449,10 +449,12 @@ def has_useful_note_metadata(record: Mapping[str, Any]) -> bool:
     return False
 
 
-def build_payload(record: Mapping[str, Any]) -> dict[str, Any]:
+def build_payload(record: Mapping[str, Any], index_text: str) -> dict[str, Any]:
     start_line = record.get("start_line")
     if isinstance(start_line, bool) or not isinstance(start_line, int) or start_line < 1:
         raise BaselineError("missing_or_invalid_start_line")
+    if not isinstance(index_text, str) or not index_text.strip():
+        raise BaselineError("missing_or_empty_index_text")
     payload = {
         "table_id": validate_table_id(normalize_text(record.get("table_id"))),
         "doc_id": normalize_text(record.get("doc_id")),
@@ -462,6 +464,7 @@ def build_payload(record: Mapping[str, Any]) -> dict[str, Any]:
         "report_type": normalize_text(record.get("report_type")),
         "table_type": normalize_text(record.get("table_type")),
         "start_line": start_line,
+        "index_text": index_text.strip(),
     }
     if tuple(payload) != PAYLOAD_FIELDS:
         raise AssertionError("Payload allowlist bị thay đổi")
@@ -551,7 +554,11 @@ def _candidate_to_manifest(
     if not normalize_text(record.get("csv_path")):
         raise BaselineError("empty_csv_path")
 
-    payload = build_payload(record)
+    index_text, metadata_quality = build_index_text(record)
+    if not index_text:
+        raise BaselineError("empty_index_text")
+
+    payload = build_payload(record, index_text)
     if not (MIN_YEAR <= payload["year"] <= MAX_YEAR):
         raise BaselineError("year_out_of_range")
     if check_files:
@@ -560,9 +567,6 @@ def _candidate_to_manifest(
         except FileNotFoundError as exc:
             raise BaselineError("derived_csv_missing") from exc
 
-    index_text, metadata_quality = build_index_text(record)
-    if not index_text:
-        raise BaselineError("empty_index_text")
     point_id = make_point_id(payload["table_id"])
     return {
         "record_type": "point",
@@ -1655,7 +1659,7 @@ def self_test() -> dict[str, Any]:
     assert quality == "ok"
     checks.append("metadata_only_index_text")
 
-    payload = build_payload(sample)
+    payload = build_payload(sample, index_text)
     assert tuple(payload) == PAYLOAD_FIELDS
     assert set(payload) == set(PAYLOAD_FIELDS)
     assert "csv_path" not in payload
@@ -1663,12 +1667,12 @@ def self_test() -> dict[str, Any]:
     invalid_start_line = dict(sample)
     invalid_start_line["start_line"] = 0
     try:
-        build_payload(invalid_start_line)
+        build_payload(invalid_start_line, index_text)
     except BaselineError as exc:
         assert str(exc) == "missing_or_invalid_start_line"
     else:
         raise AssertionError("start_line không hợp lệ vẫn được chấp nhận")
-    checks.append("eight_field_payload_and_start_line_validation")
+    checks.append("nine_field_payload_and_start_line_validation")
 
     point_id = make_point_id(sample["table_id"])
     assert point_id == make_point_id(sample["table_id"])
