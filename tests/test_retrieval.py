@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import tempfile
+import threading
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -183,6 +184,30 @@ class RerankerTests(unittest.TestCase):
         )
         self.assertEqual(len(result), 8)
         self.assertEqual([item["rerank_rank"] for item in result], list(range(1, 9)))
+
+    def test_two_scout_calls_run_in_parallel(self) -> None:
+        items = candidates(50)
+        both_scouts_started = threading.Barrier(2)
+
+        def wait_for_other_scout(prompt: str, **kwargs: object) -> dict[str, object]:
+            request = json.loads(prompt)
+            if "candidates" in request:
+                both_scouts_started.wait(timeout=2)
+            return valid_llm_response(prompt, **kwargs)
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, items)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=wait_for_other_scout,
+                ),
+            ):
+                result = rerank("Lãi tiền gửi là bao nhiêu?", items)
+
+        self.assertEqual(len(result), 8)
 
     def test_shortlist_rescues_strong_row_match_beyond_dense_top_thirty(self) -> None:
         items = [candidate(index) for index in range(1, 41)]

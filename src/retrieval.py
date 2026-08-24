@@ -11,6 +11,7 @@ import re
 import threading
 from collections import Counter
 from collections.abc import Mapping, Sequence
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any, cast
 
@@ -1331,6 +1332,35 @@ def _materialize_ranking(
     return result
 
 
+def _run_rerank_scout(
+    scout_index: int,
+    scout_prompt: str,
+    chunk_by_key: Mapping[str, Mapping[str, Any]],
+    scout_maximum: int,
+) -> tuple[Mapping[str, Any] | None, list[str], str | None]:
+    """Run one independent scout call and salvage its nominations."""
+    scout_response: Mapping[str, Any] | None = None
+    try:
+        scout_response = generate_structured(
+            scout_prompt,
+            system_prompt=RERANK_SCOUT_SYSTEM_PROMPT,
+            native=False,
+        )
+        scout_keys = _salvage_rerank_response(
+            scout_response,
+            chunk_by_key,
+            scout_maximum,
+        )
+        return scout_response, scout_keys, None
+    except (LLMResponseError, ValueError) as exc:
+        logger.warning(
+            "Rerank scout %d output is unusable: %s",
+            scout_index,
+            exc,
+        )
+        return scout_response, [], str(exc)
+
+
 def rerank_with_diagnostics(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
@@ -1364,13 +1394,12 @@ def rerank_with_diagnostics(
     scout_valid_counts: list[int] = []
     scout_diagnostics: list[dict[str, Any]] = []
     scout_prompt_payloads: list[dict[str, Any]] = []
+    scout_jobs: list[
+        tuple[int, str, dict[str, Mapping[str, Any]], int]
+    ] = []
     for scout_index, chunk in enumerate(scout_chunks, start=1):
         if not chunk:
             scout_prompt_chars.append(0)
-            scout_valid_counts.append(0)
-            scout_diagnostics.append(
-                {"scout_index": scout_index, "input_keys": [], "response": None, "nominated_keys": [], "error": None}
-            )
             continue
         scout_maximum = min(RERANK_SCOUT_OUTPUT_MAX, len(chunk))
         scout_prompt = build_rerank_scout_prompt(
@@ -1384,27 +1413,50 @@ def rerank_with_diagnostics(
             str(candidate["candidate_key"]): by_key[str(candidate["candidate_key"])]
             for candidate in chunk
         }
-        scout_keys: list[str] = []
-        scout_response: Mapping[str, Any] | None = None
-        scout_error: str | None = None
-        try:
-            scout_response = generate_structured(
-                scout_prompt,
-                system_prompt=RERANK_SCOUT_SYSTEM_PROMPT,
-                native=False,
+        scout_jobs.append((scout_index, scout_prompt, chunk_by_key, scout_maximum))
+
+    scout_results: dict[
+        int, tuple[Mapping[str, Any] | None, list[str], str | None]
+    ] = {}
+    if scout_jobs:
+        with ThreadPoolExecutor(
+            max_workers=len(scout_jobs),
+            thread_name_prefix="rerank-scout",
+        ) as executor:
+            futures = {
+                scout_index: executor.submit(
+                    _run_rerank_scout,
+                    scout_index,
+                    scout_prompt,
+                    chunk_by_key,
+                    scout_maximum,
+                )
+                for (
+                    scout_index,
+                    scout_prompt,
+                    chunk_by_key,
+                    scout_maximum,
+                ) in scout_jobs
+            }
+            scout_results = {
+                scout_index: future.result()
+                for scout_index, future in futures.items()
+            }
+
+    for scout_index, chunk in enumerate(scout_chunks, start=1):
+        if not chunk:
+            scout_valid_counts.append(0)
+            scout_diagnostics.append(
+                {
+                    "scout_index": scout_index,
+                    "input_keys": [],
+                    "response": None,
+                    "nominated_keys": [],
+                    "error": None,
+                }
             )
-            scout_keys = _salvage_rerank_response(
-                scout_response,
-                chunk_by_key,
-                scout_maximum,
-            )
-        except (LLMResponseError, ValueError) as exc:
-            scout_error = str(exc)
-            logger.warning(
-                "Rerank scout %d output is unusable: %s",
-                scout_index,
-                exc,
-            )
+            continue
+        scout_response, scout_keys, scout_error = scout_results[scout_index]
         for position, key in enumerate(scout_keys, start=1):
             nomination_priorities.setdefault(
                 key,
