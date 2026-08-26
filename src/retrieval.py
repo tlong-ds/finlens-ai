@@ -30,23 +30,24 @@ from src.embeddings import (
     DenseEmbeddingModel,
     EmbeddingError,
 )
+from src.fpt_reranker import rerank_documents
 from src.llm import LLMResponseError, generate_structured
 from src.prompt import (
-    RERANK_SCOUT_SYSTEM_PROMPT,
-    RERANK_SYSTEM_PROMPT,
-    build_rerank_prompt,
-    build_rerank_scout_prompt,
+    SELECTOR_SCOUT_SYSTEM_PROMPT,
+    SELECTOR_SYSTEM_PROMPT,
+    build_selector_prompt,
+    build_selector_scout_prompt,
 )
 from src.qdrant import QdrantConnectionError, get_collection_name, get_qdrant_client
 
 logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-RETRIEVAL_TOP_K = 50
+RETRIEVAL_TOP_K = 80
 RETRIEVAL_MODE_DEFAULT = "hybrid"
 RRF_K = 60
-RERANK_SHORTLIST_MAX = 30
-RERANK_SHORTLIST_RESCUE_MAX = 4
+FPT_RERANK_TOP_N = 20
+FPT_RERANK_DOCUMENT_MAX_CHARS = 6_000
 RERANK_SCOUT_COUNT = 2
 RERANK_SCOUT_OUTPUT_MAX = 8
 RERANK_OUTPUT_MIN = 8
@@ -541,10 +542,11 @@ def _attach_context_to_validated(
     enriched: list[Candidate] = []
     for raw_candidate in candidates:
         candidate = dict(raw_candidate)
-        candidate["rerank_context"] = build_csv_rerank_context(
-            question,
-            str(candidate["table_id"]),
-        )
+        if not isinstance(candidate.get("rerank_context"), Mapping):
+            candidate["rerank_context"] = build_csv_rerank_context(
+                question,
+                str(candidate["table_id"]),
+            )
         enriched.append(candidate)
     return enriched
 
@@ -555,6 +557,60 @@ def attach_rerank_context(
 ) -> list[Candidate]:
     """Validate Qdrant candidates and attach layered context from local CSVs."""
     return _attach_context_to_validated(question, _validate_candidates(candidates))
+
+
+def _fpt_candidate_document(candidate: Mapping[str, Any]) -> str:
+    """Serialize the exact bounded evidence contract used by the FPT benchmark."""
+    metadata = candidate["metadata"]
+    payload = {
+        "table_type": metadata.get("table_type"),
+        "index_text": metadata.get("index_text", ""),
+        "context": candidate["rerank_context"],
+    }
+    return json.dumps(payload, ensure_ascii=False)[:FPT_RERANK_DOCUMENT_MAX_CHARS]
+
+
+def rerank_with_fpt(
+    question: str,
+    candidates: Sequence[Mapping[str, Any]],
+) -> list[Candidate]:
+    """Rerank up to 80 retrieval candidates with FPT BGE and keep top 20."""
+    if not question.strip():
+        raise ValueError("question must not be empty")
+    if not candidates:
+        raise RerankerError("Không có candidate để FPT rerank")
+    if len(candidates) > RETRIEVAL_TOP_K:
+        raise RerankerError(
+            f"FPT reranker received {len(candidates)} candidates; maximum is "
+            f"{RETRIEVAL_TOP_K}"
+        )
+
+    enriched = _attach_context_to_validated(
+        question,
+        _validate_candidates(candidates),
+    )
+    ranked_pairs = rerank_documents(
+        question,
+        [_fpt_candidate_document(candidate) for candidate in enriched],
+        top_n=FPT_RERANK_TOP_N,
+    )
+    result: list[Candidate] = []
+    for rank, (index, score) in enumerate(ranked_pairs, start=1):
+        candidate = dict(enriched[index])
+        candidate.update(
+            {
+                "rerank_rank": rank,
+                "rerank_score": score,
+                "rerank_source": "fpt_bge_m3",
+            }
+        )
+        result.append(candidate)
+    logger.info(
+        "FPT rerank completed: input=%d output=%d",
+        len(candidates),
+        len(result),
+    )
+    return result
 
 
 def _salvage_rerank_response(
@@ -595,15 +651,18 @@ def _salvage_rerank_response(
 
 
 def _fallback_sort_key(candidate: Mapping[str, Any]) -> tuple[float, float, str]:
-    """Order candidates by effective retrieval rank, then retrieval score."""
-    retrieval_rank = candidate.get("retrieval_rank", candidate.get("dense_rank"))
+    """Order selector candidates by FPT rank, then the original retrieval rank."""
+    retrieval_rank = candidate.get(
+        "rerank_rank",
+        candidate.get("retrieval_rank", candidate.get("dense_rank")),
+    )
     rank_value = (
         float(retrieval_rank)
         if isinstance(retrieval_rank, (int, float))
         and not isinstance(retrieval_rank, bool)
         else math.inf
     )
-    retrieval_score = candidate.get("retrieval_score")
+    retrieval_score = candidate.get("rerank_score", candidate.get("retrieval_score"))
     score_value = (
         float(retrieval_score)
         if isinstance(retrieval_score, (int, float))
@@ -765,125 +824,6 @@ def _prioritized_rerank_context(
     }
 
 
-def _diversified_shortlist(
-    question: str,
-    candidates: Sequence[Mapping[str, Any]],
-    maximum: int = RERANK_SHORTLIST_MAX,
-    rescue_maximum: int = RERANK_SHORTLIST_RESCUE_MAX,
-) -> list[Candidate]:
-    """Preserve buckets/diversity and rescue strong row matches within one cap."""
-    if maximum < 1 or rescue_maximum < 0:
-        raise ValueError("Invalid rerank shortlist size")
-    buckets: dict[str, list[Mapping[str, Any]]] = {}
-    for candidate in sorted(candidates, key=_fallback_sort_key):
-        doc_id = str(candidate["metadata"]["doc_id"])
-        buckets.setdefault(doc_id, []).append(candidate)
-
-    ordered_doc_ids = sorted(
-        buckets,
-        key=lambda doc_id: _fallback_sort_key(buckets[doc_id][0]),
-    )
-    if len(ordered_doc_ids) > maximum:
-        logger.warning(
-            "Rerank candidate pool has more document buckets than shortlist: "
-            "buckets=%d maximum=%d",
-            len(ordered_doc_ids),
-            maximum,
-        )
-        ordered_doc_ids = ordered_doc_ids[:maximum]
-
-    selected: list[Candidate] = []
-    selected_ids: set[str] = set()
-
-    def add(candidate: Mapping[str, Any]) -> None:
-        item = dict(candidate)
-        selected.append(item)
-        selected_ids.add(str(item["table_id"]))
-
-    for doc_id in ordered_doc_ids:
-        add(buckets[doc_id][0])
-
-    eligible_doc_ids = set(ordered_doc_ids)
-    rescue_candidates: list[
-        tuple[tuple[int, int, float, float], Mapping[str, Any]]
-    ] = []
-    for candidate in candidates:
-        if str(candidate["metadata"]["doc_id"]) not in eligible_doc_ids:
-            continue
-        score = _lexical_rescue_score(question, candidate)
-        if score is not None:
-            rescue_candidates.append((score, candidate))
-    rescue_added = 0
-    for _, candidate in sorted(
-        rescue_candidates,
-        key=lambda item: (
-            -float(item[0][0]),
-            -float(item[0][1]),
-            -item[0][2],
-            -item[0][3],
-            *_fallback_sort_key(item[1]),
-        ),
-    ):
-        if len(selected) == maximum or rescue_added == rescue_maximum:
-            break
-        if str(candidate["table_id"]) in selected_ids:
-            continue
-        add(candidate)
-        rescue_added += 1
-
-    while len(selected) < maximum:
-        changed = False
-        for doc_id in ordered_doc_ids:
-            selected_types = {
-                str(item["metadata"]["table_type"])
-                for item in selected
-                if item["metadata"]["doc_id"] == doc_id
-            }
-            candidate = next(
-                (
-                    item
-                    for item in buckets[doc_id]
-                    if str(item["table_id"]) not in selected_ids
-                    and str(item["metadata"]["table_type"]) not in selected_types
-                ),
-                None,
-            )
-            if candidate is not None:
-                add(candidate)
-                changed = True
-                if len(selected) == maximum:
-                    break
-        if not changed:
-            break
-
-    while len(selected) < maximum:
-        changed = False
-        for doc_id in ordered_doc_ids:
-            candidate = next(
-                (
-                    item
-                    for item in buckets[doc_id]
-                    if str(item["table_id"]) not in selected_ids
-                ),
-                None,
-            )
-            if candidate is not None:
-                add(candidate)
-                changed = True
-                if len(selected) == maximum:
-                    break
-        if not changed:
-            break
-    logger.debug(
-        "Built rerank shortlist: input=%d buckets=%d rescue_added=%d output=%d",
-        len(candidates),
-        len(ordered_doc_ids),
-        rescue_added,
-        len(selected),
-    )
-    return selected
-
-
 def _dynamic_output_cap(
     required_bucket_count: int,
     coverage_cell_count: int,
@@ -1034,9 +974,7 @@ def _build_prompt_contract(
                 "candidate_key": key,
                 "bucket_key": bucket_key,
                 "table_type": candidate["metadata"]["table_type"],
-                "dense_rank": candidate.get(
-                    "retrieval_rank", candidate.get("dense_rank")
-                ),
+                "bge_rank": candidate.get("rerank_rank"),
                 "context": _prioritized_rerank_context(
                     question,
                     candidate["rerank_context"],
@@ -1314,7 +1252,7 @@ def _materialize_ranking(
     by_key: Mapping[str, Mapping[str, Any]],
     source_by_key: Mapping[str, str],
 ) -> list[Candidate]:
-    """Map opaque keys back to candidates and attach compatible rank metadata."""
+    """Map opaque keys back to candidates and attach selector metadata."""
     result: list[Candidate] = []
     count = len(selected_keys)
     for position, key in enumerate(selected_keys, start=1):
@@ -1322,28 +1260,28 @@ def _materialize_ranking(
         source = source_by_key.get(key, "llm")
         item.update(
             {
-                "rerank_score": (count - position + 1) / count,
-                "rerank_reason": source,
-                "rerank_rank": position,
-                "rerank_source": source,
+                "selection_score": (count - position + 1) / count,
+                "selection_reason": source,
+                "selection_rank": position,
+                "selection_source": source,
             }
         )
         result.append(item)
     return result
 
 
-def _run_rerank_scout(
+def _run_selector_scout(
     scout_index: int,
     scout_prompt: str,
     chunk_by_key: Mapping[str, Mapping[str, Any]],
     scout_maximum: int,
 ) -> tuple[Mapping[str, Any] | None, list[str], str | None]:
-    """Run one independent scout call and salvage its nominations."""
+    """Run one independent selector scout and salvage its nominations."""
     scout_response: Mapping[str, Any] | None = None
     try:
         scout_response = generate_structured(
             scout_prompt,
-            system_prompt=RERANK_SCOUT_SYSTEM_PROMPT,
+            system_prompt=SELECTOR_SCOUT_SYSTEM_PROMPT,
             native=False,
         )
         scout_keys = _salvage_rerank_response(
@@ -1354,26 +1292,30 @@ def _run_rerank_scout(
         return scout_response, scout_keys, None
     except (LLMResponseError, ValueError) as exc:
         logger.warning(
-            "Rerank scout %d output is unusable: %s",
+            "Selector scout %d output is unusable: %s",
             scout_index,
             exc,
         )
         return scout_response, [], str(exc)
 
 
-def rerank_with_diagnostics(
+def select_tables_with_diagnostics(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
 ) -> tuple[list[Candidate], dict[str, Any]]:
-    """Rerank candidates and expose loss-attribution diagnostics."""
+    """Prune FPT top-20 candidates for the planner with recall-first diagnostics."""
     if not question.strip():
         raise ValueError("question must not be empty")
     if not candidates:
         raise RerankerError("Không có candidate để rerank")
+    if len(candidates) > FPT_RERANK_TOP_N:
+        raise RerankerError(
+            f"Selector received {len(candidates)} candidates; maximum FPT input is "
+            f"{FPT_RERANK_TOP_N}"
+        )
 
     validated = _validate_candidates(candidates)
-    enriched_candidates = _attach_context_to_validated(question, validated)
-    enriched = _diversified_shortlist(question, enriched_candidates)
+    enriched = _attach_context_to_validated(question, validated)
     available_buckets, prompt_candidates, by_key, bucket_by_key = (
         _build_prompt_contract(question, enriched)
     )
@@ -1402,7 +1344,7 @@ def rerank_with_diagnostics(
             scout_prompt_chars.append(0)
             continue
         scout_maximum = min(RERANK_SCOUT_OUTPUT_MAX, len(chunk))
-        scout_prompt = build_rerank_scout_prompt(
+        scout_prompt = build_selector_scout_prompt(
             question,
             chunk,
             scout_maximum,
@@ -1425,7 +1367,7 @@ def rerank_with_diagnostics(
         ) as executor:
             futures = {
                 scout_index: executor.submit(
-                    _run_rerank_scout,
+                    _run_selector_scout,
                     scout_index,
                     scout_prompt,
                     chunk_by_key,
@@ -1500,7 +1442,7 @@ def rerank_with_diagnostics(
         for key in finalist_keys
     }
     hard_maximum = min(RERANK_OUTPUT_MAX, len(final_prompt_candidates))
-    final_prompt = build_rerank_prompt(
+    final_prompt = build_selector_prompt(
         question,
         available_buckets,
         final_prompt_candidates,
@@ -1513,7 +1455,7 @@ def rerank_with_diagnostics(
     try:
         final_response = generate_structured(
             final_prompt,
-            system_prompt=RERANK_SYSTEM_PROMPT,
+            system_prompt=SELECTOR_SYSTEM_PROMPT,
             native=False,
         )
         final_decision = _salvage_final_response(
@@ -1525,7 +1467,7 @@ def rerank_with_diagnostics(
     except (LLMResponseError, ValueError) as exc:
         final_error = str(exc)
         logger.warning(
-            "Final reranker output is unusable; using scout nominations: %s",
+            "Final selector output is unusable; using scout nominations: %s",
             exc,
         )
 
@@ -1576,7 +1518,7 @@ def rerank_with_diagnostics(
     else:
         if not nominated_keys and not coverage_locked_bucket_keys:
             raise RerankerError(
-                "Final reranker và cả hai scout đều không trả candidate hợp lệ"
+                "Final selector và cả hai scout đều không trả candidate hợp lệ"
             )
         required_bucket_keys = list(coverage_locked_bucket_keys)
         bucket_requirements = []
@@ -1618,6 +1560,8 @@ def rerank_with_diagnostics(
             ),
             "doc_id": candidate["metadata"]["doc_id"],
             "table_type": candidate["metadata"]["table_type"],
+            "bge_rank": candidate.get("rerank_rank"),
+            "bge_score": candidate.get("rerank_score"),
             "retrieval_rank": candidate.get(
                 "retrieval_rank", candidate.get("dense_rank")
             ),
@@ -1628,7 +1572,7 @@ def rerank_with_diagnostics(
         "input_candidate_count": len(candidates),
         "available_buckets": available_buckets,
         "candidate_catalog": candidate_catalog,
-        "shortlist_keys": list(by_key),
+        "selector_input_keys": list(by_key),
         "scout_prompts": scout_prompt_payloads,
         "scouts": scout_diagnostics,
         "scout_nominated_keys": nominated_keys,
@@ -1652,13 +1596,12 @@ def rerank_with_diagnostics(
         "output_cap": output_cap,
     }
     logger.info(
-        "Rerank completed: input=%d buckets=%d shortlist=%d scout_chunks=%s "
+        "Table selection completed: input=%d buckets=%d scout_chunks=%s "
         "scout_prompt_chars=%s scout_valid=%s finalists=%d final_prompt_chars=%d "
         "lexical_rescue=%d coverage_locked=%s required_buckets=%s output_cap=%d "
         "final_valid=%d coverage_added=%d unresolved=%s output=%d",
         len(candidates),
         len(available_buckets),
-        len(enriched),
         [len(chunk) for chunk in scout_chunks],
         scout_prompt_chars,
         scout_valid_counts,
@@ -1674,16 +1617,16 @@ def rerank_with_diagnostics(
         len(result),
     )
     logger.debug(
-        "Rerank scores: %s",
-        [(item["table_id"], item["rerank_score"]) for item in result],
+        "Selector scores: %s",
+        [(item["table_id"], item["selection_score"]) for item in result],
     )
     return result, diagnostics
 
 
-def rerank(
+def select_tables(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
 ) -> list[Candidate]:
-    """Nominate with two bounded scouts, then choose with one final arbiter."""
-    result, _ = rerank_with_diagnostics(question, candidates)
+    """Select planner evidence with two scouts and one final LLM call."""
+    result, _ = select_tables_with_diagnostics(question, candidates)
     return result

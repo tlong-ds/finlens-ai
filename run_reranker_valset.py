@@ -1,4 +1,4 @@
-"""Replay frozen retriever candidates and evaluate only the table reranker.
+"""Replay frozen FPT top-20 candidates and evaluate only the LLM selector.
 
 Example:
 
@@ -7,7 +7,7 @@ Example:
         --source-run val_submission/runs/reranker-03 \
         --concurrency 4
 
-The source run supplies the exact ``retrieve_tables`` output for every question.
+The source run supplies the exact ``rerank_tables`` output for every question.
 This runner never calls the parser, Qdrant, generator, or sandbox.
 """
 
@@ -32,22 +32,22 @@ from uuid import uuid4
 from dotenv import load_dotenv
 
 from src.llm import LLMTransientError
-from src.retrieval import rerank_with_diagnostics
+from src.retrieval import select_tables_with_diagnostics
 
 logger = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 DEFAULT_GOLDEN_PATH = PROJECT_ROOT / "golden_100.json"
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "val_submission" / "reranker_runs"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 PROVIDER_ATTEMPTS = 3
 STAGE_NAMES = (
-    "retriever",
-    "shortlist",
+    "reranker",
+    "selector_input",
     "scout_union",
     "finalists",
     "final_llm",
-    "reranker",
+    "selector",
 )
 
 
@@ -273,12 +273,12 @@ def _load_source_candidates(
         raise ValueError(f"Source artifact has no events for id={question_id}")
     raw_candidates: Any = None
     for event in events:
-        if isinstance(event, Mapping) and event.get("node") == "retrieve_tables":
+        if isinstance(event, Mapping) and event.get("node") == "rerank_tables":
             output = event.get("output")
             if isinstance(output, Mapping):
-                raw_candidates = output.get("candidates")
+                raw_candidates = output.get("reranked_tables")
     if not isinstance(raw_candidates, list) or not raw_candidates:
-        raise ValueError(f"Source artifact has no retriever candidates for id={question_id}")
+        raise ValueError(f"Source artifact has no FPT reranker candidates for id={question_id}")
     if not all(isinstance(candidate, Mapping) for candidate in raw_candidates):
         raise ValueError(f"Source artifact has malformed candidates for id={question_id}")
     return artifact_path, [dict(candidate) for candidate in raw_candidates]
@@ -293,12 +293,12 @@ def _loss_attribution(
             stage: table_ref in stage_rankings.get(stage, {}).get("tables", [])
             for stage in STAGE_NAMES
         }
-        if presence["reranker"]:
+        if presence["selector"]:
             terminal = "selected"
         else:
             terminal = next(
                 (stage for stage in STAGE_NAMES if not presence[stage]),
-                "reranker",
+                "selector",
             )
         output.append(
             {"table_ref": table_ref, "stage_presence": presence, "terminal": terminal}
@@ -322,7 +322,7 @@ def _run_question(
         for attempt in range(1, PROVIDER_ATTEMPTS + 1):
             provider_attempts = attempt
             try:
-                ranked, diagnostics = rerank_with_diagnostics(
+                ranked, diagnostics = select_tables_with_diagnostics(
                     str(record["question"]), candidates
                 )
                 break
@@ -331,18 +331,20 @@ def _run_question(
                     raise
                 time.sleep(0.5 * (2 ** (attempt - 1)))
     except Exception as exc:
-        logger.exception("Reranker-only question failed id=%s", record["id"])
+        logger.exception("Selector-only question failed id=%s", record["id"])
         error = {"type": type(exc).__name__, "message": str(exc)}
 
     stage_rankings = {
-        "retriever": _rankings_from_candidates(candidates),
-        "shortlist": _rankings_from_keys(diagnostics, diagnostics.get("shortlist_keys", [])),
+        "reranker": _rankings_from_candidates(candidates),
+        "selector_input": _rankings_from_keys(
+            diagnostics, diagnostics.get("selector_input_keys", [])
+        ),
         "scout_union": _rankings_from_keys(
             diagnostics, diagnostics.get("scout_nominated_keys", [])
         ),
         "finalists": _rankings_from_keys(diagnostics, diagnostics.get("finalist_keys", [])),
         "final_llm": _rankings_from_keys(diagnostics, diagnostics.get("final_llm_keys", [])),
-        "reranker": _rankings_from_candidates(ranked),
+        "selector": _rankings_from_candidates(ranked),
     }
     stage_metrics = {
         stage: _score_stage(record, rankings)
@@ -358,9 +360,9 @@ def _run_question(
         "provider_attempts": provider_attempts,
         "source_artifact": str(source_artifact) if source_artifact else None,
         "golden": dict(record),
-        "retriever_candidates": candidates,
-        "reranker_diagnostics": diagnostics,
-        "reranked_candidates": ranked,
+        "fpt_reranked_candidates": candidates,
+        "selector_diagnostics": diagnostics,
+        "selected_candidates": ranked,
         "stage_rankings": stage_rankings,
         "stage_metrics": stage_metrics,
         "loss_attribution": _loss_attribution(record, stage_rankings),
@@ -422,7 +424,7 @@ def _aggregate_diagnostics(artifacts: Sequence[Mapping[str, Any]]) -> dict[str, 
                 absent_by_stage.update(
                     stage for stage in STAGE_NAMES if not presence.get(stage, False)
                 )
-        diagnostics = artifact.get("reranker_diagnostics", {})
+        diagnostics = artifact.get("selector_diagnostics", {})
         catalog = diagnostics.get("candidate_catalog", {})
         bucket_docs: dict[str, str] = {}
         if isinstance(catalog, Mapping):
@@ -503,7 +505,7 @@ def _write_summary(
         ]
         slice_metrics[slice_name] = {
             "queries": len(subset),
-            "reranker": _mean_stage_metrics(subset, "reranker"),
+            "selector": _mean_stage_metrics(subset, "selector"),
         }
     payload = {
         "run_id": run_id,
@@ -560,7 +562,7 @@ def _run(args: argparse.Namespace) -> int:
         raise FileExistsError(f"Reranker run already exists: {run_dir}")
     if args.resume:
         if not status_path.is_file():
-            raise FileNotFoundError(f"Missing reranker status: {status_path}")
+            raise FileNotFoundError(f"Missing selector status: {status_path}")
         with status_path.open(encoding="utf-8") as handle:
             status = json.load(handle)
         config = status.get("config", {})
@@ -570,7 +572,7 @@ def _run(args: argparse.Namespace) -> int:
             or config.get("selected_question_ids")
             != [int(record["id"]) for record in selected]
         ):
-            raise ValueError("Resumed reranker run changed immutable config")
+            raise ValueError("Resumed selector run changed immutable config")
     else:
         run_dir.mkdir(parents=True)
         status = {
@@ -665,7 +667,7 @@ def _run(args: argparse.Namespace) -> int:
             "failed": failures,
         }
         _atomic_json(status_path, status)
-        print(json.dumps(metrics["stage_metrics"]["reranker"], ensure_ascii=False, indent=2))
+        print(json.dumps(metrics["stage_metrics"]["selector"], ensure_ascii=False, indent=2))
         return 1 if failures else 0
     finally:
         logging.getLogger().removeHandler(file_handler)
@@ -674,7 +676,7 @@ def _run(args: argparse.Namespace) -> int:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Replay frozen retriever candidates and evaluate only the reranker"
+        description="Replay frozen FPT top-20 candidates and evaluate only the selector"
     )
     parser.add_argument("--golden", type=Path, default=DEFAULT_GOLDEN_PATH)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_ROOT)
@@ -703,7 +705,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         return _run(args)
     except (FileExistsError, FileNotFoundError, ValueError) as exc:
-        print(f"Cannot initialize reranker run: {exc}", file=sys.stderr)
+        print(f"Cannot initialize selector run: {exc}", file=sys.stderr)
         return 2
 
 

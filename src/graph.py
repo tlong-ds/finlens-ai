@@ -19,6 +19,7 @@ from src.nodes import (
     plan_generation_context_node,
     rerank_tables_node,
     retrieve_tables_node,
+    select_tables_node,
 )
 from src.retrieval import TransientRetrievalError
 
@@ -32,6 +33,7 @@ class RetrievalState(TypedDict):
     filters: NotRequired[dict[str, list[str | int]]]
     semantic_query: NotRequired[str]
     candidates: NotRequired[list[dict[str, Any]]]
+    reranked_tables: NotRequired[list[dict[str, Any]]]
     retrieved_tables: NotRequired[list[dict[str, Any]]]
     dataframes: NotRequired[dict[str, pd.DataFrame]]
     evidence_sources: NotRequired[dict[str, dict[str, str]]]
@@ -70,7 +72,8 @@ def _add_node(name: str, action: Any, retry_policy: RetryPolicy | None = None) -
 _add_node("match_question", match_question_node)
 _add_node("parse_query", parse_query_node, _LLM_RETRY_POLICY)
 _add_node("retrieve_tables", retrieve_tables_node, _QDRANT_RETRY_POLICY)
-_add_node("rerank_tables", rerank_tables_node, _LLM_RETRY_POLICY)
+_add_node("rerank_tables", rerank_tables_node)
+_add_node("select_tables", select_tables_node, _LLM_RETRY_POLICY)
 _add_node("load_tables", load_tables_node)
 _add_node(
     "plan_generation_context",
@@ -84,7 +87,8 @@ builder.add_edge(START, "match_question")
 builder.add_edge("match_question", "parse_query")
 builder.add_edge("parse_query", "retrieve_tables")
 builder.add_edge("retrieve_tables", "rerank_tables")
-builder.add_edge("rerank_tables", "load_tables")
+builder.add_edge("rerank_tables", "select_tables")
+builder.add_edge("select_tables", "load_tables")
 builder.add_edge("load_tables", "plan_generation_context")
 
 graph = builder.compile()

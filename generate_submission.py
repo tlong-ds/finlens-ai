@@ -29,6 +29,7 @@ from uuid import uuid4
 
 from dotenv import load_dotenv
 
+from src.fpt_reranker import effective_fpt_reranker_config
 from src.graph import graph
 
 logger = logging.getLogger(__name__)
@@ -44,6 +45,7 @@ IMMUTABLE_RUN_CONFIG_FIELDS = (
     "qdrant_collection",
     "embedding_model",
     "embedding_revision",
+    "fpt_reranker",
 )
 
 _write_lock = threading.Lock()
@@ -122,6 +124,37 @@ def load_existing_submission(json_path: Path) -> dict[int, dict[str, Any]]:
     with open(json_path, encoding="utf-8") as fh:
         items = json.load(fh)
     return {int(item["id"]): item for item in items}
+
+
+def _retry_error_ids(path: Path, message: str | None) -> set[int] | None:
+    """Return failed question ids matching an exact error message."""
+    if not message:
+        return None
+    if not path.exists():
+        return set()
+    matched: set[int] = set()
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if record.get("error") == message:
+                matched.add(int(record["id"]))
+    return matched
+
+
+def _failure_messages(path: Path) -> dict[int, str]:
+    messages: dict[int, str] = {}
+    if path.exists():
+        with path.open(encoding="utf-8") as handle:
+            for line in handle:
+                try:
+                    record = json.loads(line)
+                    messages[int(record["id"])] = str(record.get("error", "unknown error"))
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+    return messages
 
 
 def run_question(question_text: str, max_attempts: int) -> dict[str, Any]:
@@ -380,6 +413,7 @@ def _run_config(args: argparse.Namespace, *, selected_ids: list[int]) -> dict[st
         "qdrant_collection": os.getenv("QDRANT_COLLECTION"),
         "embedding_model": os.getenv("EMBEDDING_MODEL"),
         "embedding_revision": os.getenv("EMBEDDING_REVISION"),
+        "fpt_reranker": effective_fpt_reranker_config(),
         "concurrency": getattr(args, "concurrency", 1),
         "force": bool(getattr(args, "force", False)),
     }
@@ -527,6 +561,7 @@ def _run_full(args: argparse.Namespace) -> int:
         )
         json_path = run_dir / "submission.json"
         records = load_existing_submission(json_path)
+        retry_ids = _retry_error_ids(run_dir / "failures.jsonl", args.retry_error)
         if args.force:
             for question in questions:
                 records.pop(int(question["id"]), None)
@@ -544,12 +579,24 @@ def _run_full(args: argparse.Namespace) -> int:
             resume=args.resume,
             force=args.force,
         )
+        if retry_ids is not None:
+            failure_messages = _failure_messages(run_dir / "failures.jsonl")
+            for question in questions:
+                qid = int(question["id"])
+                if qid not in records and qid not in retry_ids:
+                    status["questions"][str(qid)]["status"] = "failed"
+                    status["questions"][str(qid)]["error"] = failure_messages.get(qid)
+            _write_status(status, run_dir / "status.json")
     except (FileExistsError, FileNotFoundError, ValueError) as exc:
         print(f"Cannot initialize run: {exc}", file=sys.stderr)
         return 2
 
     done_ids = set() if args.force else set(records)
-    pending = [q for q in questions if q["id"] not in done_ids]
+    pending = [
+        q for q in questions
+        if q["id"] not in done_ids
+        and (retry_ids is None or q["id"] in retry_ids)
+    ]
     skipped = len(questions) - len(pending)
     print(
         f"{len(questions)} selected, {skipped} already done, {len(pending)} to run "
@@ -678,6 +725,10 @@ def _build_parser() -> argparse.ArgumentParser:
     full.add_argument("--ids", help="comma-separated question ids to restrict to")
     full.add_argument(
         "--force", action="store_true", help="rerun ids even if already present in submission.json"
+    )
+    full.add_argument(
+        "--retry-error",
+        help="on --resume, retry only failed ids whose exact error message matches this value",
     )
 
     return parser

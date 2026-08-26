@@ -33,7 +33,7 @@ GOLDEN = [
 def traced_success(question_id: int) -> dict[str, object]:
     golden = GOLDEN[question_id - 1]
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "started_at": "2026-01-01T00:00:00+00:00",
         "finished_at": "2026-01-01T00:00:01+00:00",
         "duration_seconds": 1.0,
@@ -44,6 +44,10 @@ def traced_success(question_id: int) -> dict[str, object]:
                 "tables": golden["relevant_tables"],
             },
             "reranker": {
+                "docs": golden["relevant_docs"],
+                "tables": golden["relevant_tables"],
+            },
+            "selector": {
                 "docs": golden["relevant_docs"],
                 "tables": golden["relevant_tables"],
             },
@@ -127,7 +131,8 @@ class TraceTests(unittest.TestCase):
                 self.stream_mode = stream_mode
                 yield {"parse_query": {"filters": {"year": [2020]}}}
                 yield {"retrieve_tables": {"candidates": [candidate]}}
-                yield {"rerank_tables": {"retrieved_tables": [candidate]}}
+                yield {"rerank_tables": {"reranked_tables": [candidate]}}
+                yield {"select_tables": {"retrieved_tables": [candidate]}}
                 yield {
                     "execute_code": {
                         "answer_record": {
@@ -145,10 +150,17 @@ class TraceTests(unittest.TestCase):
         self.assertIsNone(trace["error"])
         self.assertEqual(
             [event["node"] for event in trace["events"]],
-            ["parse_query", "retrieve_tables", "rerank_tables", "execute_code"],
+            [
+                "parse_query",
+                "retrieve_tables",
+                "rerank_tables",
+                "select_tables",
+                "execute_code",
+            ],
         )
         self.assertEqual(trace["stage_rankings"]["retriever"]["tables"], ["doc-1|10"])
         self.assertEqual(trace["stage_rankings"]["reranker"]["docs"], ["doc-1"])
+        self.assertEqual(trace["stage_rankings"]["selector"]["docs"], ["doc-1"])
 
     def test_real_compiled_graph_update_stream_yields_final_answer(self) -> None:
         question = (
@@ -164,6 +176,7 @@ class TraceTests(unittest.TestCase):
             "report_type": "separate",
             "table_type": "note_table",
             "start_line": 42,
+            "index_text": "Lãi tiền gửi VJC 2018",
         }
         candidate = {
             "table_id": metadata["table_id"],
@@ -172,7 +185,9 @@ class TraceTests(unittest.TestCase):
             "dense_rank": 1,
         }
 
-        def structured_response(_: str, *, system_prompt: str | None = None):
+        def structured_response(
+            _: str, *, system_prompt: str | None = None, **__: object
+        ):
             if system_prompt and "bộ định tuyến" in system_prompt:
                 return {
                     "ticker": ["c01"],
@@ -195,7 +210,8 @@ class TraceTests(unittest.TestCase):
                 patch("src.parser.generate_structured", side_effect=structured_response),
                 patch("src.nodes.generate_structured", side_effect=structured_response),
                 patch("src.nodes.retrieve", return_value=[candidate]),
-                patch("src.nodes.rerank", return_value=[candidate]),
+                patch("src.nodes.rerank_with_fpt", return_value=[candidate]),
+                patch("src.nodes.select_tables", return_value=[candidate]),
                 patch("src.nodes.run_code", return_value=123.0),
             ):
                 trace = run_valset.trace_graph_question(question, 2)
@@ -209,7 +225,9 @@ class TraceTests(unittest.TestCase):
                 "parse_query",
                 "retrieve_tables",
                 "rerank_tables",
+                "select_tables",
                 "load_tables",
+                "plan_generation_context",
                 "generate_code",
                 "execute_code",
             ],
@@ -293,7 +311,7 @@ class ValidationRunTests(unittest.TestCase):
                 )
 
             self.assertEqual((first, resumed), (1, 0))
-            rerun.assert_called_once_with(GOLDEN[1]["question"], 5)
+            rerun.assert_called_once_with(GOLDEN[1]["question"], 3)
             run_dir = root / "output" / "runs" / "resume-run"
             records = json.loads((run_dir / "submission.json").read_text())
             self.assertEqual([record["id"] for record in records], [1, 2])

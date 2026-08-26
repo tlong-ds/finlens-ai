@@ -6,7 +6,13 @@ from pathlib import Path
 from unittest.mock import patch
 
 from src.graph import graph
-from src.nodes import load_tables_node, parse_query_node, retrieve_tables_node
+from src.nodes import (
+    load_tables_node,
+    parse_query_node,
+    rerank_tables_node,
+    retrieve_tables_node,
+    select_tables_node,
+)
 from src.retrieval import NoMatchingCandidatesError, RetrievalError
 from src.routing import QueryRoutingError
 
@@ -27,6 +33,7 @@ def candidate() -> dict[str, object]:
         "report_type": "separate",
         "table_type": "note_table",
         "start_line": 42,
+        "index_text": "Lãi tiền gửi VJC 2018",
     }
     return {
         "table_id": metadata["table_id"],
@@ -201,7 +208,7 @@ class GraphTests(unittest.TestCase):
         self.assertEqual(
             [call["filters"]["ticker"] for call in calls], [["VJC"], ["ACB"]]
         )
-        self.assertEqual([call["top_n"] for call in calls], [25, 25])
+        self.assertEqual([call["top_n"] for call in calls], [40, 40])
         self.assertEqual(
             [item["metadata"]["ticker"] for item in result["candidates"]],
             ["VJC", "ACB", "VJC", "ACB"],
@@ -288,6 +295,21 @@ class GraphTests(unittest.TestCase):
             "VJC_financial_statements_2018_separate|42",
         )
 
+    def test_fpt_reranker_and_selector_are_separate_nodes(self) -> None:
+        item = candidate()
+        with patch("src.nodes.rerank_with_fpt", return_value=[item]) as fpt_mock:
+            reranked = rerank_tables_node(
+                {"question": QUESTION, "candidates": [item]}
+            )
+        with patch("src.nodes.select_tables", return_value=[item]) as selector_mock:
+            selected = select_tables_node(
+                {"question": QUESTION, "reranked_tables": reranked["reranked_tables"]}
+            )
+        self.assertEqual(reranked, {"reranked_tables": [item]})
+        self.assertEqual(selected, {"retrieved_tables": [item]})
+        fpt_mock.assert_called_once()
+        selector_mock.assert_called_once()
+
     def test_full_graph_returns_numeric_answer_record(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -299,7 +321,7 @@ class GraphTests(unittest.TestCase):
             )
 
             def structured_response(
-                _: str, *, system_prompt: str | None = None
+                _: str, *, system_prompt: str | None = None, **__: object
             ) -> dict[str, object]:
                 if system_prompt and "bộ định tuyến" in system_prompt:
                     return {
@@ -317,7 +339,8 @@ class GraphTests(unittest.TestCase):
                 patch("src.parser.generate_structured", side_effect=structured_response),
                 patch("src.nodes.generate_structured", side_effect=structured_response),
                 patch("src.nodes.retrieve", return_value=[candidate()]),
-                patch("src.nodes.rerank", return_value=[candidate()]),
+                patch("src.nodes.rerank_with_fpt", return_value=[candidate()]),
+                patch("src.nodes.select_tables", return_value=[candidate()]),
                 patch("src.nodes.run_code", return_value=123.0),
             ):
                 result = graph.invoke({"question": QUESTION, "max_attempts": 2})

@@ -99,10 +99,10 @@ not arbitrary free text. `max_attempts` must be between 1 and 5.
 TypedDict, threaded through these nodes (`src/nodes.py`):
 
 ```
-match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables -> generate_code
-                                                                                         |  ^
-                                                                                         v  |
-                                                                                   execute_code -> END
+match_question -> parse_query -> retrieve_tables -> rerank_tables -> select_tables
+                                                                      |
+                                                                      v
+                     END <- execute_code <-> generate_code <- plan_generation_context <- load_tables
 ```
 
 - `match_question_node` resolves free text to exactly one canonical question record from
@@ -110,17 +110,17 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
 - `parse_query_node` asks the LLM for conservative metadata filters (ticker/year/report_type/
   table_type); `src/helper.py:validate_filters` locally drops anything malformed or not in the
   allowed vocab before it ever reaches Qdrant.
-- `retrieve_tables_node` / `rerank_tables_node` call `src/retrieval.py`'s `retrieve()` (Qdrant
-  dense search, optionally fused with BM25) and `rerank()`. Retrieval embeds the semantic query
+- `retrieve_tables_node` calls `src/retrieval.py`'s `retrieve()` (Qdrant dense search, optionally
+  fused with BM25) and returns a balanced top 80. Retrieval embeds the semantic query
   with the shared Granite encoder and validates the exact nine-field Qdrant payload. In hybrid
   mode, BM25 scrolls only payloads matching the metadata filters and scores their `index_text`
-  at query time; it does not read a local manifest or SQLite lexical index. Reranking resolves
-  each candidate CSV from `table_id`, builds bounded question-aware context from its columns and
-  relevant rows, then performs hierarchical LLM reranking. The LLM only sees opaque candidate
-  keys; local code
-  maps them back to validated table IDs, salvages partial rankings, and uses deterministic dense
-  fallback when both structured-response attempts are unusable. The offline manifest is not read
-  at runtime.
+  at query time; it does not read a local manifest or SQLite lexical index. The table-ranking
+  stage resolves each candidate CSV from `table_id` and builds bounded question-aware context
+  from its columns and relevant rows. `rerank_tables_node` sends that same bounded context
+  contract used by the benchmark to FPT `bge-reranker-v2-m3` and keeps top 20. The call is strict,
+  retries transient failures three times, and has no quality-degrading fallback. `select_tables_node`
+  then uses two LLM scouts plus a final high-recall selector to prune for the planner with a hard
+  cap of 18. There is no heuristic 30-table shortlist. The offline manifest is not read at runtime.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.
@@ -136,11 +136,12 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> load_tables
   and evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from
   `evidence_variables`, so every accepted answer carries traceable provenance.
 
-Transient failures are handled at the graph level, not inside nodes: `parse_query` and
+LLM/Qdrant transient failures are handled at the graph level: `parse_query`, `select_tables`, and
 `generate_code` are wrapped with a `RetryPolicy` retrying
 `LLMTransientError` (`src/llm.py`), and `retrieve_tables` retries `TransientRetrievalError`
 (`src/retrieval.py`) — both up to 3 attempts with backoff, and neither consumes a semantic
-`attempt` from `max_attempts`.
+`attempt` from `max_attempts`. The FPT reranker performs its own three bounded transient retries
+so that exhausted questions fail and can be resumed by the experiment runners.
 
 ### Sandboxed execution (`src/sandbox.py`)
 

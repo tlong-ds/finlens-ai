@@ -7,16 +7,17 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.prompt import RERANK_SYSTEM_PROMPT
+from src.prompt import SELECTOR_SYSTEM_PROMPT
 from src.retrieval import (
     RerankerError,
     _build_match_summary,
     _dynamic_output_cap,
     attach_rerank_context,
     reciprocal_rank_fusion,
+    rerank_with_fpt,
     retrieve,
-    rerank,
-    rerank_with_diagnostics,
+    select_tables,
+    select_tables_with_diagnostics,
 )
 
 
@@ -56,6 +57,9 @@ def candidate(
         "metadata": metadata,
         "retrieval_score": 1 - index / 1000,
         "dense_rank": index,
+        "rerank_rank": index,
+        "rerank_score": 1 - index / 1000,
+        "rerank_source": "fpt_bge_m3",
     }
 
 
@@ -129,6 +133,35 @@ def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
 
 
 class RerankerTests(unittest.TestCase):
+    def test_fpt_rerank_materializes_top_twenty_with_stable_metadata(self) -> None:
+        items = candidates(25)
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, items)
+            ranked_pairs = [
+                (index, 1.0 - rank / 100)
+                for rank, index in enumerate(range(24, 4, -1), start=1)
+            ]
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.rerank_documents",
+                    return_value=ranked_pairs,
+                ) as fpt,
+            ):
+                result = rerank_with_fpt("Lãi tiền gửi là bao nhiêu?", items)
+
+        self.assertEqual(len(result), 20)
+        self.assertEqual(result[0]["table_id"], items[24]["table_id"])
+        self.assertEqual(
+            [item["rerank_rank"] for item in result], list(range(1, 21))
+        )
+        self.assertTrue(
+            all(item["rerank_source"] == "fpt_bge_m3" for item in result)
+        )
+        self.assertTrue(all("rerank_context" in item for item in result))
+        self.assertEqual(fpt.call_args.kwargs["top_n"], 20)
+
     def test_match_summary_exposes_exact_table_title_separately(self) -> None:
         summary = _build_match_summary(
             "Chi phí khác của SAM năm 2023 là bao nhiêu?",
@@ -141,17 +174,18 @@ class RerankerTests(unittest.TestCase):
         self.assertEqual(summary["exact_phrase_rows"][0]["label"], "Chi phí khác")
 
     def test_rerank_prompt_is_coverage_first_and_audits_exact_tables(self) -> None:
-        self.assertIn("Ưu tiên coverage trước precision", RERANK_SYSTEM_PROMPT)
-        self.assertIn("concept x required bucket", RERANK_SYSTEM_PROMPT)
-        self.assertIn("Phân biệt stock và flow", RERANK_SYSTEM_PROMPT)
-        self.assertIn("giữ cả hai", RERANK_SYSTEM_PROMPT)
-        self.assertIn("required_bucket_keys", RERANK_SYSTEM_PROMPT)
-        self.assertIn("BẮT BUỘC giữ note table", RERANK_SYSTEM_PROMPT)
-        self.assertIn("nhận ký cược, ký quỹ", RERANK_SYSTEM_PROMPT)
-        self.assertNotIn("Chọn tập nhỏ nhất", RERANK_SYSTEM_PROMPT)
+        self.assertIn("Ưu tiên coverage trước precision", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("concept x required bucket", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("Phân biệt stock và flow", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("giữ cả hai", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("required_bucket_keys", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("BẮT BUỘC giữ note table", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("nhận ký cược, ký quỹ", SELECTOR_SYSTEM_PROMPT)
+        self.assertIn("không phải reranking", SELECTOR_SYSTEM_PROMPT)
+        self.assertNotIn("Chọn tập nhỏ nhất", SELECTOR_SYSTEM_PROMPT)
 
-    def test_fifty_candidates_use_two_scouts_and_one_final_call(self) -> None:
-        items = candidates(50)
+    def test_twenty_candidates_use_two_scouts_and_one_final_call(self) -> None:
+        items = candidates(20)
         requests: list[dict[str, object]] = []
 
         def capture(prompt: str, **kwargs: object) -> dict[str, object]:
@@ -165,12 +199,12 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=capture) as call,
             ):
-                result = rerank("Lãi tiền gửi là bao nhiêu?", items)
+                result = select_tables("Lãi tiền gửi là bao nhiêu?", items)
 
         self.assertEqual(call.call_count, 3)
         self.assertEqual(
             [len(request["candidates"]) for request in requests[:2]],
-            [15, 15],
+            [10, 10],
         )
         self.assertIn("candidate_buckets", requests[2])
         self.assertIn("available_buckets", requests[2])
@@ -183,10 +217,11 @@ class RerankerTests(unittest.TestCase):
             16,
         )
         self.assertEqual(len(result), 8)
-        self.assertEqual([item["rerank_rank"] for item in result], list(range(1, 9)))
+        self.assertEqual([item["selection_rank"] for item in result], list(range(1, 9)))
+        self.assertTrue(all(item["rerank_source"] == "fpt_bge_m3" for item in result))
 
     def test_two_scout_calls_run_in_parallel(self) -> None:
-        items = candidates(50)
+        items = candidates(20)
         both_scouts_started = threading.Barrier(2)
 
         def wait_for_other_scout(prompt: str, **kwargs: object) -> dict[str, object]:
@@ -205,12 +240,12 @@ class RerankerTests(unittest.TestCase):
                     side_effect=wait_for_other_scout,
                 ),
             ):
-                result = rerank("Lãi tiền gửi là bao nhiêu?", items)
+                result = select_tables("Lãi tiền gửi là bao nhiêu?", items)
 
         self.assertEqual(len(result), 8)
 
-    def test_shortlist_rescues_strong_row_match_beyond_dense_top_thirty(self) -> None:
-        items = [candidate(index) for index in range(1, 41)]
+    def test_selector_scouts_receive_all_fpt_candidates_without_shortlist(self) -> None:
+        items = [candidate(index) for index in range(1, 21)]
         requests: list[dict[str, object]] = []
 
         def capture(prompt: str, **kwargs: object) -> dict[str, object]:
@@ -220,7 +255,7 @@ class RerankerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             write_csvs(root, items)
-            rescued = root / "data" / f"{items[34]['table_id']}.csv"
+            rescued = root / "data" / f"{items[17]['table_id']}.csv"
             rescued.write_text(
                 "row_label_raw,2018,note_title\n"
                 "Hàng tồn kho cuối năm,123,Chi tiết hàng tồn kho\n",
@@ -230,22 +265,20 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=capture) as call,
             ):
-                rerank("Hàng tồn kho cuối năm là bao nhiêu?", items)
+                select_tables("Hàng tồn kho cuối năm là bao nhiêu?", items)
 
-        dense_ranks = [
-            item["dense_rank"]
+        bge_ranks = [
+            item["bge_rank"]
             for request in requests[:2]
             for item in request["candidates"]
         ]
         self.assertEqual(call.call_count, 3)
-        self.assertEqual(len(dense_ranks), 30)
-        self.assertIn(35, dense_ranks)
-        self.assertNotIn(30, dense_ranks)
+        self.assertEqual(sorted(bge_ranks), list(range(1, 21)))
         rescued_card = next(
             item
             for request in requests[:2]
             for item in request["candidates"]
-            if item["dense_rank"] == 35
+            if item["bge_rank"] == 18
         )
         self.assertEqual(
             rescued_card["context"]["match_summary"]["exact_phrase_rows"][0][
@@ -269,7 +302,7 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=capture),
             ):
-                rerank("Câu hỏi", items)
+                select_tables("Câu hỏi", items)
 
         final_request = requests[2]
         prompt_candidates = [
@@ -332,11 +365,11 @@ class RerankerTests(unittest.TestCase):
                     side_effect=scouts_then_partial,
                 ) as call,
             ):
-                result = rerank("Câu hỏi", items)
+                result = select_tables("Câu hỏi", items)
 
         self.assertEqual(call.call_count, 3)
         self.assertEqual([item["table_id"] for item in result], [items[1]["table_id"]])
-        self.assertEqual([item["rerank_source"] for item in result], ["llm"])
+        self.assertEqual([item["selection_source"] for item in result], ["llm"])
 
     def test_valid_final_response_is_not_blindly_completed(self) -> None:
         items = candidates(6, documents=3)
@@ -374,11 +407,11 @@ class RerankerTests(unittest.TestCase):
                     ),
                 ),
             ):
-                result = rerank("Câu hỏi chỉ cần công ty đầu tiên", items)
+                result = select_tables("Câu hỏi chỉ cần công ty đầu tiên", items)
 
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]["metadata"]["doc_id"], items[0]["metadata"]["doc_id"])
-        self.assertEqual(result[0]["rerank_source"], "llm")
+        self.assertEqual(result[0]["selection_source"], "llm")
 
     def test_required_bucket_is_completed_from_best_scout_nomination(self) -> None:
         items = candidates(6, documents=2)
@@ -420,7 +453,7 @@ class RerankerTests(unittest.TestCase):
                     side_effect=select_only_first_bucket,
                 ),
             ):
-                result, diagnostics = rerank_with_diagnostics("So sánh hai công ty", items)
+                result, diagnostics = select_tables_with_diagnostics("So sánh hai công ty", items)
 
         self.assertEqual(
             {item["metadata"]["doc_id"] for item in result},
@@ -458,7 +491,7 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=omit_second_bucket),
             ):
-                _, diagnostics = rerank_with_diagnostics("So sánh hai công ty", items)
+                _, diagnostics = select_tables_with_diagnostics("So sánh hai công ty", items)
 
         self.assertEqual(
             list(diagnostics["coverage_completion"].values()),
@@ -508,7 +541,7 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=select_three_concepts),
             ):
-                result, diagnostics = rerank_with_diagnostics("Tính một tỷ lệ", items)
+                result, diagnostics = select_tables_with_diagnostics("Tính một tỷ lệ", items)
 
         self.assertEqual(len(result), 3)
         self.assertEqual(diagnostics["uncovered_concept_keys"], [])
@@ -531,11 +564,11 @@ class RerankerTests(unittest.TestCase):
                     side_effect=scouts_then_invalid_final,
                 ) as call,
             ):
-                result = rerank("Câu hỏi", items)
+                result = select_tables("Câu hỏi", items)
 
         self.assertEqual(call.call_count, 3)
         self.assertEqual(len(result), 6)
-        self.assertTrue(all(item["rerank_source"] == "scout_fallback" for item in result))
+        self.assertTrue(all(item["selection_source"] == "scout_fallback" for item in result))
 
     def test_concepts_without_selections_use_scout_fallback_not_anchor(self) -> None:
         items = candidates(6, documents=2)
@@ -572,14 +605,14 @@ class RerankerTests(unittest.TestCase):
                     side_effect=empty_concept_mapping,
                 ),
             ):
-                result, diagnostics = rerank_with_diagnostics("Câu hỏi", items)
+                result, diagnostics = select_tables_with_diagnostics("Câu hỏi", items)
 
         self.assertIn("không trả ranked_selection", diagnostics["final_error"])
-        self.assertTrue(all(item["rerank_source"] == "scout_fallback" for item in result))
+        self.assertTrue(all(item["selection_source"] == "scout_fallback" for item in result))
         self.assertEqual(diagnostics["coverage_completion"], {})
 
     def test_exact_lexical_candidate_bypasses_scout_pruning(self) -> None:
-        items = [candidate(index) for index in range(1, 41)]
+        items = [candidate(index) for index in range(1, 21)]
 
         def omit_exact_in_scout(prompt: str, **_: object) -> dict[str, object]:
             request = json.loads(prompt)
@@ -620,7 +653,7 @@ class RerankerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             write_csvs(root, items)
-            rescued = root / "data" / f"{items[34]['table_id']}.csv"
+            rescued = root / "data" / f"{items[17]['table_id']}.csv"
             rescued.write_text(
                 "row_label_raw,2018,note_title\n"
                 "Hàng tồn kho cuối năm,123,Chi tiết hàng tồn kho\n",
@@ -633,11 +666,11 @@ class RerankerTests(unittest.TestCase):
                     side_effect=omit_exact_in_scout,
                 ),
             ):
-                result, diagnostics = rerank_with_diagnostics(
+                result, diagnostics = select_tables_with_diagnostics(
                     "Hàng tồn kho cuối năm là bao nhiêu?", items
                 )
 
-        self.assertEqual(result[0]["table_id"], items[34]["table_id"])
+        self.assertEqual(result[0]["table_id"], items[17]["table_id"])
         self.assertTrue(diagnostics["lexical_finalist_keys"])
         self.assertNotIn(
             diagnostics["lexical_finalist_keys"][0],
@@ -645,7 +678,7 @@ class RerankerTests(unittest.TestCase):
         )
 
     def test_comparison_policy_restores_bucket_omitted_by_final(self) -> None:
-        items = candidates(36, documents=9)
+        items = candidates(18, documents=9)
 
         def omit_last_bucket(prompt: str, **_: object) -> dict[str, object]:
             request = json.loads(prompt)
@@ -673,7 +706,7 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=omit_last_bucket),
             ):
-                result, diagnostics = rerank_with_diagnostics(
+                result, diagnostics = select_tables_with_diagnostics(
                     "So sánh chín công ty", items
                 )
 
@@ -685,8 +718,8 @@ class RerankerTests(unittest.TestCase):
         self.assertEqual(diagnostics["policy_added_required_bucket_keys"], ["b09"])
         self.assertTrue(
             all(
-                item["rerank_source"] in {"llm", "coverage_completion_scout"}
-                or item["rerank_source"] == "locked_bucket_presence"
+                item["selection_source"] in {"llm", "coverage_completion_scout"}
+                or item["selection_source"] == "locked_bucket_presence"
                 for item in result
             )
         )
@@ -741,10 +774,10 @@ class RerankerTests(unittest.TestCase):
         self.assertTrue({7, 8, 9}.issubset(detailed_numbers))
         self.assertLessEqual(len(context["detailed_rows"]), 9)
 
-    def test_shortlist_is_deterministic_and_diversifies_table_types(self) -> None:
+    def test_selector_chunking_is_deterministic_and_keeps_all_fpt_inputs(self) -> None:
         items = [
             candidate(index, table_type=TABLE_TYPES[(index - 1) % 4])
-            for index in range(1, 41)
+            for index in range(1, 21)
         ]
         requests: list[dict[str, object]] = []
 
@@ -760,19 +793,22 @@ class RerankerTests(unittest.TestCase):
                 patch("src.retrieval.PROJECT_ROOT", root),
                 patch("src.retrieval.generate_structured", side_effect=capture),
             ):
-                rerank("Câu hỏi", items)
-                rerank("Câu hỏi", items)
+                select_tables("Câu hỏi", items)
+                select_tables("Câu hỏi", items)
 
         first_chunks = [
-            [item["dense_rank"] for item in request["candidates"]]
+            [item["bge_rank"] for item in request["candidates"]]
             for request in requests[:2]
         ]
         second_chunks = [
-            [item["dense_rank"] for item in request["candidates"]]
+            [item["bge_rank"] for item in request["candidates"]]
             for request in requests[3:5]
         ]
         self.assertEqual(first_chunks, second_chunks)
-        self.assertTrue({1, 2, 3, 4}.issubset({rank for chunk in first_chunks for rank in chunk}))
+        self.assertEqual(
+            sorted(rank for chunk in first_chunks for rank in chunk),
+            list(range(1, 21)),
+        )
 
     def test_dynamic_output_cap(self) -> None:
         self.assertEqual(_dynamic_output_cap(1, 3, 30), 8)

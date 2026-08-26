@@ -40,6 +40,7 @@ from generate_submission import (
     write_submission_json,
 )
 from src.graph import graph
+from src.fpt_reranker import effective_fpt_reranker_config
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +49,7 @@ DEFAULT_GOLDEN_PATH = PROJECT_ROOT / "golden_100.json"
 DEFAULT_OUTPUT_ROOT = PROJECT_ROOT / "val_submission"
 RUNS_DIRECTORY_NAME = "runs"
 STATUS_SCHEMA_VERSION = 1
-TRACE_SCHEMA_VERSION = 1
+TRACE_SCHEMA_VERSION = 2
 DEFAULT_ANSWER_RTOL = 1e-6
 DEFAULT_ANSWER_ATOL = 1e-6
 
@@ -127,6 +128,37 @@ def _sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _retry_error_ids(path: Path, message: str | None) -> set[int] | None:
+    """Return failed validation ids matching an exact error message."""
+    if not message:
+        return None
+    if not path.exists():
+        return set()
+    matched: set[int] = set()
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if record.get("error") == message:
+                matched.add(int(record["id"]))
+    return matched
+
+
+def _failure_messages(path: Path) -> dict[int, str]:
+    messages: dict[int, str] = {}
+    if path.exists():
+        with path.open(encoding="utf-8") as handle:
+            for line in handle:
+                try:
+                    record = json.loads(line)
+                    messages[int(record["id"])] = str(record.get("error", "unknown error"))
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+    return messages
 
 
 def load_golden(path: Path) -> list[dict[str, Any]]:
@@ -388,6 +420,7 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
     stages = {
         "retriever": {"docs": [], "tables": []},
         "reranker": {"docs": [], "tables": []},
+        "selector": {"docs": [], "tables": []},
     }
     error: dict[str, str] | None = None
 
@@ -424,6 +457,10 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
                     )
                 elif node_name == "rerank_tables":
                     stages["reranker"] = _rankings_from_candidates(
+                        output.get("reranked_tables")
+                    )
+                elif node_name == "select_tables":
+                    stages["selector"] = _rankings_from_candidates(
                         output.get("retrieved_tables")
                     )
                 candidate_answer = output.get("answer_record")
@@ -516,6 +553,7 @@ def _run_config(
         "qdrant_collection": os.getenv("QDRANT_COLLECTION"),
         "embedding_model": os.getenv("EMBEDDING_MODEL"),
         "embedding_revision": os.getenv("EMBEDDING_REVISION"),
+        "fpt_reranker": effective_fpt_reranker_config(),
         "concurrency": args.concurrency,
         "force": bool(args.force),
     }
@@ -545,6 +583,7 @@ def _initialize_status(
         "qdrant_collection",
         "embedding_model",
         "embedding_revision",
+        "fpt_reranker",
     }
     if resume:
         if not status_path.is_file():
@@ -795,6 +834,7 @@ def _write_metrics(
         "diagnostic_stage_metrics": {
             "retriever": _aggregate_stage_metrics(run_dir, evaluated, "retriever"),
             "reranker": _aggregate_stage_metrics(run_dir, evaluated, "reranker"),
+            "selector": _aggregate_stage_metrics(run_dir, evaluated, "selector"),
         },
     }
     _write_json(payload, run_dir / "metrics.json")
@@ -861,8 +901,21 @@ def _run(args: argparse.Namespace) -> int:
         )
         status_path = run_dir / "status.json"
         failures_path = run_dir / "failures.jsonl"
+        retry_ids = _retry_error_ids(failures_path, args.retry_error)
+        if retry_ids is not None:
+            failure_messages = _failure_messages(failures_path)
+            for record in selected:
+                qid = int(record["id"])
+                if qid not in records and qid not in retry_ids:
+                    status["questions"][str(qid)]["status"] = "failed"
+                    status["questions"][str(qid)]["error"] = failure_messages.get(qid)
+            _write_status(status, status_path)
 
-        pending = [record for record in selected if int(record["id"]) not in records]
+        pending = [
+            record for record in selected
+            if int(record["id"]) not in records
+            and (retry_ids is None or int(record["id"]) in retry_ids)
+        ]
         print(
             f"{len(selected)} selected, {len(selected) - len(pending)} already done, "
             f"{len(pending)} to run (concurrency={args.concurrency}, run={run_id})"
@@ -1042,11 +1095,19 @@ def _build_parser() -> argparse.ArgumentParser:
     ids.add_argument("--concurrency", type=int, default=5)
     ids.add_argument("--limit", type=int, help="run only the first N selected ids")
     ids.add_argument("--force", action="store_true", help="rerun completed ids on resume")
+    ids.add_argument(
+        "--retry-error",
+        help="on --resume, retry only failed ids whose exact error message matches this value",
+    )
 
     full = commands.add_parser("full", help="run every record in the golden validation file")
     full.add_argument("--concurrency", type=int, default=5)
     full.add_argument("--limit", type=int, help="run only the first N validation records")
     full.add_argument("--force", action="store_true", help="rerun completed ids on resume")
+    full.add_argument(
+        "--retry-error",
+        help="on --resume, retry only failed ids whose exact error message matches this value",
+    )
     return parser
 
 

@@ -39,9 +39,9 @@ def source_candidate() -> dict[str, object]:
     }
 
 
-def successful_rerank() -> tuple[list[dict[str, object]], dict[str, object]]:
+def successful_selection() -> tuple[list[dict[str, object]], dict[str, object]]:
     candidate = source_candidate()
-    ranked = [{**candidate, "rerank_rank": 1, "rerank_source": "llm"}]
+    ranked = [{**candidate, "selection_rank": 1, "selection_source": "llm"}]
     catalog = {
         "c01": {
             "bucket_key": "b01",
@@ -54,7 +54,7 @@ def successful_rerank() -> tuple[list[dict[str, object]], dict[str, object]]:
     }
     diagnostics = {
         "candidate_catalog": catalog,
-        "shortlist_keys": ["c01"],
+        "selector_input_keys": ["c01"],
         "scout_nominated_keys": ["c01"],
         "finalist_keys": ["c01"],
         "final_llm_keys": ["c01"],
@@ -90,8 +90,8 @@ class RerankerRunnerTests(unittest.TestCase):
                     "question": GOLDEN[0]["question"],
                     "events": [
                         {
-                            "node": "retrieve_tables",
-                            "output": {"candidates": [source_candidate()]},
+                            "node": "rerank_tables",
+                            "output": {"reranked_tables": [source_candidate()]},
                         }
                     ],
                 },
@@ -107,9 +107,9 @@ class RerankerRunnerTests(unittest.TestCase):
             golden_path, source_run = self._prepare(root)
             output_root = root / "output"
             with patch(
-                "run_reranker_valset.rerank_with_diagnostics",
-                return_value=successful_rerank(),
-            ) as rerank_call:
+                "run_reranker_valset.select_tables_with_diagnostics",
+                return_value=successful_selection(),
+            ) as selector_call:
                 result = run_reranker_valset.main(
                     [
                         "--golden",
@@ -126,11 +126,11 @@ class RerankerRunnerTests(unittest.TestCase):
                 )
 
             self.assertEqual(result, 0)
-            rerank_call.assert_called_once()
+            selector_call.assert_called_once()
             run_dir = output_root / "test-run"
             metrics = json.loads((run_dir / "metrics.json").read_text())
             self.assertEqual(
-                metrics["stage_metrics"]["reranker"]["TABLES F2-MACRO"], 1.0
+                metrics["stage_metrics"]["selector"]["TABLES F2-MACRO"], 1.0
             )
             self.assertEqual(
                 metrics["diagnostics"]["required_bucket_gold_recall"], 1.0
@@ -163,27 +163,27 @@ class RerankerRunnerTests(unittest.TestCase):
                 "1",
             ]
             with patch(
-                "run_reranker_valset.rerank_with_diagnostics",
-                return_value=successful_rerank(),
+                "run_reranker_valset.select_tables_with_diagnostics",
+                return_value=successful_selection(),
             ):
                 self.assertEqual(run_reranker_valset.main(base), 0)
             with patch(
-                "run_reranker_valset.rerank_with_diagnostics"
-            ) as rerank_call:
+                "run_reranker_valset.select_tables_with_diagnostics"
+            ) as selector_call:
                 self.assertEqual(run_reranker_valset.main([*base, "--resume"]), 0)
-            rerank_call.assert_not_called()
+            selector_call.assert_not_called()
 
-    def test_loss_attribution_identifies_shortlist_drop(self) -> None:
+    def test_loss_attribution_identifies_selector_input_drop(self) -> None:
         stages = {
             stage: {"docs": [], "tables": []}
             for stage in run_reranker_valset.STAGE_NAMES
         }
-        stages["retriever"] = {
+        stages["reranker"] = {
             "docs": GOLDEN[0]["relevant_docs"],
             "tables": GOLDEN[0]["relevant_tables"],
         }
         loss = run_reranker_valset._loss_attribution(GOLDEN[0], stages)
-        self.assertEqual(loss[0]["terminal"], "shortlist")
+        self.assertEqual(loss[0]["terminal"], "selector_input")
 
 
 if __name__ == "__main__":

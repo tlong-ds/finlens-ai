@@ -27,8 +27,9 @@ from src.parser import parse_query_with_diagnostics
 from src.retrieval import (
     RETRIEVAL_TOP_K,
     NoMatchingCandidatesError,
-    rerank,
+    rerank_with_fpt,
     retrieve,
+    select_tables,
 )
 from src.planning import (
     build_planning_inventory,
@@ -216,13 +217,26 @@ def retrieve_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Rerank candidates and return up to the configured maximum tables."""
-    retrieved_tables = rerank(
+    """Use FPT BGE-M3 to rerank up to 80 candidates into a top-20 list."""
+    reranked_tables = rerank_with_fpt(
         question=str(state.get("question") or ""),
         candidates=state.get("candidates", []),
     )
     logger.info(
-        "Final table IDs: %s",
+        "FPT top table IDs: %s",
+        [item.get("table_id") for item in reranked_tables],
+    )
+    return {"reranked_tables": reranked_tables}
+
+
+def select_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
+    """Prune FPT top-20 tables for the planner with recall-first LLM selection."""
+    retrieved_tables = select_tables(
+        question=str(state.get("question") or ""),
+        candidates=state.get("reranked_tables", []),
+    )
+    logger.info(
+        "Planner table IDs: %s",
         [item.get("table_id") for item in retrieved_tables],
     )
     return {"retrieved_tables": retrieved_tables}
