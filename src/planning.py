@@ -139,6 +139,90 @@ def build_planning_inventory(
     return inventory
 
 
+def generation_plan_feedback(
+    generation_plan: Mapping[str, Any],
+    inventory: Sequence[Mapping[str, Any]],
+) -> str | None:
+    """Validate planner references before generator retries depend on the plan."""
+    required_keys = {"evidence", "calculation", "unit_conversion", "audit"}
+    if not required_keys.issubset(generation_plan):
+        return (
+            "Planner response must contain evidence, calculation, "
+            "unit_conversion, and audit."
+        )
+    for field in ("calculation", "unit_conversion", "audit"):
+        value = generation_plan.get(field)
+        if not isinstance(value, str) or not value.strip():
+            return f"Planner field {field} must be a non-empty string."
+
+    table_inventory: dict[str, tuple[set[int], set[str]]] = {}
+    for raw_table in inventory:
+        if not isinstance(raw_table, Mapping):
+            continue
+        alias = raw_table.get("alias")
+        if not isinstance(alias, str):
+            continue
+        raw_rows = raw_table.get("row_catalog")
+        rows = {
+            row["row_position"]
+            for row in raw_rows
+            if isinstance(row, Mapping)
+            and isinstance(row.get("row_position"), int)
+            and not isinstance(row.get("row_position"), bool)
+        } if isinstance(raw_rows, Sequence) and not isinstance(raw_rows, (str, bytes)) else set()
+        raw_columns = raw_table.get("columns")
+        columns = {
+            column["name"]
+            for column in raw_columns
+            if isinstance(column, Mapping)
+            and isinstance(column.get("name"), str)
+        } if isinstance(raw_columns, Sequence) and not isinstance(raw_columns, (str, bytes)) else set()
+        table_inventory[alias] = (rows, columns)
+
+    raw_evidence = generation_plan.get("evidence")
+    if not isinstance(raw_evidence, Sequence) or isinstance(
+        raw_evidence, (str, bytes)
+    ) or not raw_evidence:
+        return "Planner evidence must be a non-empty array."
+    for item in raw_evidence:
+        if not isinstance(item, Mapping):
+            return "Every planner evidence item must be an object."
+        alias = item.get("alias")
+        if not isinstance(alias, str) or alias not in table_inventory:
+            return f"Planner evidence references unknown alias: {alias!r}."
+        raw_rows = item.get("rows")
+        if not isinstance(raw_rows, Sequence) or isinstance(
+            raw_rows, (str, bytes)
+        ) or not raw_rows:
+            return f"Planner evidence for {alias} must select at least one row."
+        available_rows, available_columns = table_inventory[alias]
+        for row in raw_rows:
+            if not isinstance(row, Mapping):
+                return f"Planner row selection for {alias} must be an object."
+            position = row.get("row_position")
+            raw_selected_columns = row.get("columns")
+            purpose = row.get("purpose")
+            if (
+                isinstance(position, bool)
+                or not isinstance(position, int)
+                or position not in available_rows
+            ):
+                return f"Planner row_position {position!r} does not exist in {alias}."
+            if (
+                not isinstance(raw_selected_columns, Sequence)
+                or isinstance(raw_selected_columns, (str, bytes))
+                or not raw_selected_columns
+                or not all(
+                    isinstance(column, str) and column in available_columns
+                    for column in raw_selected_columns
+                )
+            ):
+                return f"Planner columns for {alias} row {position} are not in inventory."
+            if not isinstance(purpose, str) or not purpose.strip():
+                return f"Planner purpose for {alias} row {position} must be non-empty."
+    return None
+
+
 def _planned_row_positions(
     generation_plan: Mapping[str, Any],
     allowed_aliases: set[str],

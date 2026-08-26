@@ -131,6 +131,10 @@ python run_valset.py --run-id val-reranker-v1 --resume ids --ids 1,5,7
 python run_valset.py --run-id val-full-v1 full
 ```
 
+`run_valset.py` mặc định `max_attempts=5` cho code generation để khớp baseline; có thể
+giảm bằng `--max-attempts` khi chỉ smoke retrieval. Retrieval repair có budget riêng và
+không tiêu thụ các attempt này.
+
 Output nằm tại `val_submission/runs/<run-id>/`. Ngoài `submission.json` và
 `submission.zip`, mỗi run có `metrics.json`, `metrics_per_question.jsonl`, `status.json`,
 `failures.jsonl`, log tổng tại `artifacts/run.log`, và trace từng lần chạy node tại
@@ -139,9 +143,30 @@ Output nằm tại `val_submission/runs/<run-id>/`. Ngoài `submission.json` và
 ngưỡng chính thức của BTC.
 
 Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
-fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
-xếp hạng theo batch và chọn tối đa 5 bảng mỗi batch, sau đó chọn tối đa 10
-finalist bằng các opaque candidate key. Response thừa, trùng hoặc chứa key ngoài batch
-được salvage mà không điền cho đủ mức tối đa; nếu response hoàn toàn
-không dùng được sau hai lần sửa, batch/final stage fallback theo dense rank để graph tiếp
-tục. CSV candidate bị thiếu/không đọc được vẫn là lỗi terminal.
+fallback sang global search. Parser filters được tách thành từng bucket
+`ticker × year × report_type`. Câu nhiều bucket rewrite semantic query riêng cho từng bucket;
+mỗi bucket hybrid-retrieve Top-40, FPT rerank Top-10 ở lượt đầu và gọi đúng một LLM selector.
+Repair round rerank sâu hơn tới Top-20 chỉ trên bucket bị validator chỉ định. Selector giữ tối đa
+hai phương án cho cùng concept và tối đa ba lexical exact-match anchors được xếp
+theo độ mạnh row/title (tăng tới năm khi LLM chỉ chọn một bảng); không tự động thêm
+rerank anchors cho response hợp lệ. Response selector không chuẩn
+schema được salvage/fallback trên chính finalist của bucket thay vì làm fail toàn câu. Một validator
+toàn cục kiểm tra đủ bucket/concept/toán hạng trước khi load DataFrame. Nếu thiếu, graph chỉ
+search lại bucket lỗi và giữ nguyên bucket đã đủ. Sau tối đa hai vòng, deterministic
+scope/presence failures vẫn fail-closed; semantic validator uncertainty trở thành advisory và chuyển
+evidence union cho planner audit, vì live validation cho thấy semantic validator có false-negative.
+Ngược lại, verdict `answerable=true` phải mang proof exact cho từng operand tới
+`table_id`, `row` và value columns có thật; proof sai được sửa một lần trên cùng inventory rồi
+chuyển thành planner advisory thay vì tiêu tốn retrieval repair. JSON selector hỏng dùng finalist
+fallback, còn JSON validator hỏng được retry đúng một lần thay vì làm fail toàn câu ngay lập tức.
+Planner dùng local exact inventory validation; nếu provider vẫn không giữ được contract
+sau ba lần, planner chuyển thành advisory để generator tự audit inventory thay vì làm fail toàn câu.
+Planner prompt bỏ duplicated cell values khi semantic row catalog đã phủ đủ bảng, nhưng giữ cells
+cho catalog dạng STT/matrix; prompt lớn dùng prompt-constrained JSON thay cho native response format.
+Coverage proofs hợp lệ được đổi từ CSV row sang DataFrame position và hydrate làm grounded seeds
+cho planner fallback; derivation contract được dùng chung ở validator, planner và generator.
+Depth reranker có thể benchmark bằng `run_bucket_reranker_sweep.py` với baseline,
+top-3, top-5, top-8 và top-10; validation-100 chọn Top-10 cho initial pass. Có thể override
+initial/repair depth bằng `FINLENS_BUCKET_RERANK_TOP_N` và `FINLENS_BUCKET_REPAIR_RERANK_TOP_N`.
+Bucket worker pool mặc định là 2
+và có thể chỉnh bằng `FINLENS_BUCKET_WORKERS`. CSV candidate bị thiếu/không đọc được vẫn là lỗi terminal.

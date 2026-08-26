@@ -3,7 +3,15 @@ from __future__ import annotations
 import json
 import unittest
 
-from src.prompt import PARSE_SYSTEM_PROMPT, build_parse_prompt
+from src.prompt import (
+    COVERAGE_VALIDATOR_SYSTEM_PROMPT,
+    GENERATOR_SYSTEM_PROMPT,
+    PARSE_SYSTEM_PROMPT,
+    PLANNER_SYSTEM_PROMPT,
+    build_coverage_validator_prompt,
+    build_parse_prompt,
+    build_planner_prompt,
+)
 from src.retrieval import build_qdrant_filter
 from src.routing import (
     QueryRoutingError,
@@ -83,6 +91,53 @@ class RoutingTests(unittest.TestCase):
         self.assertIn('trả ["separate"] và tuyệt đối không trả consolidated', PARSE_SYSTEM_PROMPT)
         self.assertIn('"của Ngân hàng A" -> ["consolidated"]', PARSE_SYSTEM_PROMPT)
         self.assertNotIn("table_type", PARSE_SYSTEM_PROMPT)
+
+    def test_coverage_validator_audits_operands_not_derived_metric_rows(self) -> None:
+        payload = json.loads(build_coverage_validator_prompt("Quick ratio", []))
+        self.assertEqual(
+            payload["derivation_contract"]["quick_ratio"],
+            ["tài sản ngắn hạn", "hàng tồn kho", "nợ ngắn hạn"],
+        )
+        self.assertIn("KHÔNG đòi một row trực tiếp", COVERAGE_VALIDATOR_SYSTEM_PROMPT)
+        self.assertIn("bảng ma trận", COVERAGE_VALIDATOR_SYSTEM_PROMPT)
+        self.assertIn("tổng nợ vay", COVERAGE_VALIDATOR_SYSTEM_PROMPT)
+        self.assertIn("table_total", payload["derivation_contract"])
+        self.assertTrue(payload["proof_contract"]["required_for_answerable_true"])
+        self.assertIn("coverage_proofs", COVERAGE_VALIDATOR_SYSTEM_PROMPT)
+        self.assertIn("EBIT = lợi nhuận trước thuế", PLANNER_SYSTEM_PROMPT)
+        self.assertIn("Không thay EBIT", GENERATOR_SYSTEM_PROMPT)
+
+    def test_planner_prompt_compacts_semantic_catalog_but_keeps_matrix_cells(self) -> None:
+        common = {
+            "columns": [{"name": "period_current"}],
+            "row_count": 1,
+            "detailed_rows": [
+                {"row_position": 0, "values": {"period_current": "123"}}
+            ],
+        }
+        payload = json.loads(
+            build_planner_prompt(
+                "Câu hỏi",
+                [
+                    {
+                        **common,
+                        "alias": "df_1",
+                        "row_catalog": [
+                            {"row_position": 0, "label": "Tổng tài sản"}
+                        ],
+                    },
+                    {
+                        **common,
+                        "alias": "df_2",
+                        "row_catalog": [{"row_position": 0, "label": "1"}],
+                    },
+                ],
+            )
+        )
+
+        semantic, matrix = payload["inventory"]
+        self.assertNotIn("detailed_rows", semantic)
+        self.assertIn("detailed_rows", matrix)
 
     def test_candidate_key_validation_rejects_unknown_and_duplicates(self) -> None:
         question = "Quỹ khen thưởng của HT1 cuối năm 2019 là bao nhiêu?"

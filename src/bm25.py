@@ -11,7 +11,9 @@ from collections import Counter
 from collections.abc import Mapping, Sequence
 from typing import Any, cast
 
+import httpx
 from qdrant_client import models
+from qdrant_client.http.exceptions import ResponseHandlingException, UnexpectedResponse
 
 from src.contracts import FILTER_FIELDS, validate_qdrant_payload
 from src.qdrant import get_collection_name, get_qdrant_client
@@ -54,6 +56,10 @@ _STOP_WORDS = frozenset(
 
 class BM25IndexError(RuntimeError):
     """Raised when Qdrant payloads cannot be collected or ranked safely."""
+
+
+class TransientBM25IndexError(BM25IndexError):
+    """Raised when Qdrant payload scrolling fails transiently."""
 
 
 def _positive_float_env(name: str, default: float) -> float:
@@ -197,6 +203,19 @@ def _scroll_payloads(
                 break
     except BM25IndexError:
         raise
+    except (httpx.TransportError, ResponseHandlingException) as exc:
+        raise TransientBM25IndexError(
+            "Temporary Qdrant BM25 payload failure"
+        ) from exc
+    except UnexpectedResponse as exc:
+        status_code = exc.status_code
+        if status_code in {408, 409, 425, 429} or (
+            status_code is not None and status_code >= 500
+        ):
+            raise TransientBM25IndexError(
+                "Temporary Qdrant BM25 payload failure"
+            ) from exc
+        raise BM25IndexError("Cannot read BM25 payloads from Qdrant") from exc
     except Exception as exc:
         raise BM25IndexError("Cannot read BM25 payloads from Qdrant") from exc
 

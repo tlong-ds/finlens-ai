@@ -99,28 +99,46 @@ not arbitrary free text. `max_attempts` must be between 1 and 5.
 TypedDict, threaded through these nodes (`src/nodes.py`):
 
 ```
-match_question -> parse_query -> retrieve_tables -> rerank_tables -> select_tables
-                                                                      |
-                                                                      v
-                     END <- execute_code <-> generate_code <- plan_generation_context <- load_tables
+match_question -> parse_query -> materialize_buckets -> rewrite_bucket_queries
+    -> retrieve_bucket_tables -> rerank_bucket_tables -> select_bucket_tables
+    -> validate_table_coverage -- sufficient --> load_tables -> plan_generation_context
+                                      ^                            -> generate_code <-> execute_code -> END
+                                      | insufficient (max 2 repairs)
+                                      +------ rewrite_bucket_queries
 ```
 
 - `match_question_node` resolves free text to exactly one canonical question record from
   `ViFinQA/questions/questions.jsonl` and initializes `attempt`/`feedback`/`max_attempts`.
-- `parse_query_node` asks the LLM for conservative metadata filters (ticker/year/report_type/
-  table_type); `src/helper.py:validate_filters` locally drops anything malformed or not in the
-  allowed vocab before it ever reaches Qdrant.
-- `retrieve_tables_node` calls `src/retrieval.py`'s `retrieve()` (Qdrant dense search, optionally
-  fused with BM25) and returns a balanced top 80. Retrieval embeds the semantic query
-  with the shared Granite encoder and validates the exact nine-field Qdrant payload. In hybrid
-  mode, BM25 scrolls only payloads matching the metadata filters and scores their `index_text`
-  at query time; it does not read a local manifest or SQLite lexical index. The table-ranking
-  stage resolves each candidate CSV from `table_id` and builds bounded question-aware context
-  from its columns and relevant rows. `rerank_tables_node` sends that same bounded context
-  contract used by the benchmark to FPT `bge-reranker-v2-m3` and keeps top 20. The call is strict,
-  retries transient failures three times, and has no quality-degrading fallback. `select_tables_node`
-  then uses two LLM scouts plus a final high-recall selector to prune for the planner with a hard
-  cap of 18. There is no heuristic 30-table shortlist. The offline manifest is not read at runtime.
+- `parse_query_node` asks the LLM for strict ticker/year/report_type filters. The graph materializes
+  their Cartesian product into stable metadata buckets; the parser contract itself is unchanged.
+- Multi-bucket questions get one focused semantic rewrite LLM call per bucket; an initial
+  single-bucket question reuses the parser semantic query. Each bucket independently retrieves a
+  hybrid Qdrant/BM25 top-40 under exact filters, reranks to top-10 initially (top-20 on targeted
+  repair rounds) with FPT `bge-reranker-v2-m3`, and uses exactly one selector LLM call. Bucket calls run concurrently
+  with a bounded worker pool (default 2, configurable with `FINLENS_BUCKET_WORKERS`). The
+  selector retains bounded same-concept alternatives plus up to three scored exact-lexical anchors
+  (five when the LLM returns only one table);
+  malformed selector shapes are salvaged or deterministically fall back to in-bucket finalists.
+- `validate_table_coverage_node` combines deterministic presence/scope/candidate-validity checks with one global LLM
+  solvability audit. Sufficient buckets are kept unchanged; only deficient buckets are rewritten
+  and searched again. Reranked finalists accumulate by `table_id`, raw retrieval is replaced each
+  round, and deterministic presence/scope failures remain fail-closed. After two repairs an
+  unresolved semantic LLM verdict becomes advisory and the planner audits the accumulated evidence;
+  every positive verdict must include exact operand proofs referencing an existing selected
+  `table_id`, row and value columns. Unverifiable positive proofs are retried once against the same
+  inventory, then become a planner advisory instead of consuming retrieval repair; malformed
+  validator JSON is also retried once. Malformed bucket-selector JSON uses the bounded in-bucket
+  finalist fallback.
+  Planner output uses local exact alias/row/column checks; after three unusable
+  responses it degrades to an explicit inventory advisory instead of becoming a terminal failure.
+  Planner prompts omit duplicated detailed cell values when a complete semantic row catalog exists,
+  retain cells for STT/matrix catalogs, and bypass native response format for prompts over 24k chars.
+  Exact coverage proofs are converted from CSV row numbers to DataFrame positions and hydrated as
+  grounded fallback seeds. Validator, planner, and generator share the same derivation contract.
+  set `FINLENS_FAIL_CLOSED_SEMANTIC_VALIDATOR=1` for strict benchmark behavior. The offline manifest
+  is not read at runtime.
+  `FINLENS_DISABLE_COVERAGE_VALIDATOR=1` and `FINLENS_MAX_RETRIEVAL_REPAIRS=0` are reserved for
+  benchmark A/B runs; normal online execution leaves both unset.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.
@@ -136,9 +154,9 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> select_tabl
   and evidence (source CSV paths, doc IDs, `doc_id|start_line` table refs) derived from
   `evidence_variables`, so every accepted answer carries traceable provenance.
 
-LLM/Qdrant transient failures are handled at the graph level: `parse_query`, `select_tables`, and
-`generate_code` are wrapped with a `RetryPolicy` retrying
-`LLMTransientError` (`src/llm.py`), and `retrieve_tables` retries `TransientRetrievalError`
+LLM/Qdrant transient failures are handled at the graph level: parser, bucket rewrite/selector,
+coverage validator, planner and generator nodes use a `RetryPolicy` for
+`LLMTransientError` (`src/llm.py`), and bucket retrieval retries `TransientRetrievalError`
 (`src/retrieval.py`) — both up to 3 attempts with backoff, and neither consumes a semantic
 `attempt` from `max_attempts`. The FPT reranker performs its own three bounded transient retries
 so that exhausted questions fail and can be resumed by the experiment runners.

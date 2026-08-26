@@ -183,6 +183,15 @@ class TraceTests(unittest.TestCase):
             "metadata": metadata,
             "retrieval_score": 0.9,
             "dense_rank": 1,
+            "rerank_context": {
+                "columns": ["item_label_norm", "period_current"],
+                "row_count": 1,
+                "table_titles": ["LÃI TIỀN GỬI"],
+                "row_catalog": [{"row": 2, "label": "Lãi tiền gửi"}],
+                "detailed_rows": [
+                    {"row": 2, "cells": ["Lãi tiền gửi", "123"]}
+                ],
+            },
         }
 
         def structured_response(
@@ -194,9 +203,69 @@ class TraceTests(unittest.TestCase):
                     "year": [2018],
                     "report_type": ["separate"],
                 }
+            if system_prompt and "validator độc lập" in system_prompt:
+                return {
+                    "answerable": True,
+                    "bucket_statuses": [
+                        {
+                            "bucket_key": "b01",
+                            "sufficient": True,
+                            "reason": "đủ",
+                            "required_operands": ["Lãi tiền gửi"],
+                        }
+                    ],
+                    "coverage_proofs": [
+                        {
+                            "bucket_key": "b01",
+                            "operand": "Lãi tiền gửi",
+                            "table_id": metadata["table_id"],
+                            "row": 2,
+                            "columns": ["period_current"],
+                            "derivation": "direct",
+                        }
+                    ],
+                    "missing_requirements": [],
+                    "target_bucket_keys": [],
+                    "feedback": "",
+                }
+            if system_prompt and "lập kế hoạch bằng chứng" in system_prompt:
+                return {
+                    "evidence": [
+                        {
+                            "alias": "df_1",
+                            "rows": [
+                                {
+                                    "row_position": 0,
+                                    "columns": ["2018"],
+                                    "purpose": "Lãi tiền gửi",
+                                }
+                            ],
+                        }
+                    ],
+                    "calculation": "Đọc giá trị",
+                    "unit_conversion": "Không đổi",
+                    "audit": "Đủ",
+                }
             return {
                 "pandas_query": "result = float(df_1.loc[0, '2018'])",
                 "evidence_variables": ["df_1"],
+            }
+
+        def bucket_selector_response(_: str, **__: object):
+            return {
+                "concepts": [
+                    {
+                        "concept_key": "k01",
+                        "description": "Lãi tiền gửi",
+                        "role": "direct",
+                    }
+                ],
+                "ranked_selections": [
+                    {
+                        "candidate_key": "c01",
+                        "covered_concept_keys": ["k01"],
+                    }
+                ],
             }
 
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -209,9 +278,12 @@ class TraceTests(unittest.TestCase):
                 patch("src.nodes._PROJECT_ROOT", root),
                 patch("src.parser.generate_structured", side_effect=structured_response),
                 patch("src.nodes.generate_structured", side_effect=structured_response),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=bucket_selector_response,
+                ),
                 patch("src.nodes.retrieve", return_value=[candidate]),
                 patch("src.nodes.rerank_with_fpt", return_value=[candidate]),
-                patch("src.nodes.select_tables", return_value=[candidate]),
                 patch("src.nodes.run_code", return_value=123.0),
             ):
                 trace = run_valset.trace_graph_question(question, 2)
@@ -223,9 +295,12 @@ class TraceTests(unittest.TestCase):
             [
                 "match_question",
                 "parse_query",
-                "retrieve_tables",
-                "rerank_tables",
-                "select_tables",
+                "materialize_buckets",
+                "rewrite_bucket_queries",
+                "retrieve_bucket_tables",
+                "rerank_bucket_tables",
+                "select_bucket_tables",
+                "validate_table_coverage",
                 "load_tables",
                 "plan_generation_context",
                 "generate_code",
@@ -311,12 +386,48 @@ class ValidationRunTests(unittest.TestCase):
                 )
 
             self.assertEqual((first, resumed), (1, 0))
-            rerun.assert_called_once_with(GOLDEN[1]["question"], 1)
+            rerun.assert_called_once_with(GOLDEN[1]["question"], 5)
             run_dir = root / "output" / "runs" / "resume-run"
             records = json.loads((run_dir / "submission.json").read_text())
             self.assertEqual([record["id"] for record in records], [1, 2])
             status = json.loads((run_dir / "status.json").read_text())
             self.assertEqual(status["state"], "completed")
+
+    def test_resume_rejects_changed_bucket_rerank_depth(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            golden_path = self._write_golden(root)
+            base = [
+                "--golden",
+                str(golden_path),
+                "--output-dir",
+                str(root / "output"),
+                "--run-id",
+                "immutable-retrieval-run",
+            ]
+            with (
+                patch.dict(
+                    "os.environ", {"FINLENS_BUCKET_RERANK_TOP_N": "10"}
+                ),
+                patch(
+                    "run_valset.trace_graph_question",
+                    side_effect=[traced_success(1), traced_success(2)],
+                ),
+            ):
+                self.assertEqual(
+                    run_valset.main([*base, "full", "--concurrency", "1"]),
+                    0,
+                )
+
+            with patch.dict(
+                "os.environ", {"FINLENS_BUCKET_RERANK_TOP_N": "20"}
+            ):
+                self.assertEqual(
+                    run_valset.main(
+                        [*base, "--resume", "full", "--concurrency", "1"]
+                    ),
+                    2,
+                )
 
 
 if __name__ == "__main__":

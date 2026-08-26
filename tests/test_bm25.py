@@ -3,7 +3,9 @@ from __future__ import annotations
 import unittest
 from unittest.mock import patch
 
-from src.bm25 import BM25IndexError, search_bm25
+import httpx
+
+from src.bm25 import BM25IndexError, TransientBM25IndexError, search_bm25
 
 
 def payload(
@@ -140,6 +142,23 @@ class BM25Tests(unittest.TestCase):
                 client=_ScrollClient([invalid]),
                 collection_name="tables",
             )
+
+    def test_transport_failure_is_classified_as_transient(self) -> None:
+        request = httpx.Request("POST", "https://qdrant.example/scroll")
+        client = _ScrollClient([])
+        with patch.object(
+            client,
+            "scroll",
+            side_effect=httpx.ConnectError("temporary", request=request),
+        ):
+            with self.assertRaises(TransientBM25IndexError):
+                search_bm25(
+                    "doanh thu",
+                    {"ticker": ["AAA"]},
+                    top_n=1,
+                    client=client,
+                    collection_name="tables",
+                )
 
     def test_zero_length_normalization_is_supported(self) -> None:
         client = _ScrollClient(

@@ -15,11 +15,14 @@ from src.nodes import (
     generate_code_node,
     load_tables_node,
     match_question_node,
+    materialize_buckets_node,
     parse_query_node,
     plan_generation_context_node,
-    rerank_tables_node,
-    retrieve_tables_node,
-    select_tables_node,
+    rerank_bucket_tables_node,
+    retrieve_bucket_tables_node,
+    rewrite_bucket_queries_node,
+    select_bucket_tables_node,
+    validate_table_coverage_node,
 )
 from src.retrieval import TransientRetrievalError
 
@@ -32,6 +35,13 @@ class RetrievalState(TypedDict):
     question_record: NotRequired[dict[str, Any]]
     filters: NotRequired[dict[str, list[str | int]]]
     semantic_query: NotRequired[str]
+    bucket_specs: NotRequired[list[dict[str, Any]]]
+    bucket_states: NotRequired[dict[str, dict[str, Any]]]
+    active_bucket_keys: NotRequired[list[str]]
+    retrieval_repair_round: NotRequired[int]
+    coverage_validation: NotRequired[dict[str, Any]]
+    validation_history: NotRequired[list[dict[str, Any]]]
+    bucket_pipeline_metrics: NotRequired[dict[str, int]]
     candidates: NotRequired[list[dict[str, Any]]]
     reranked_tables: NotRequired[list[dict[str, Any]]]
     retrieved_tables: NotRequired[list[dict[str, Any]]]
@@ -71,9 +81,12 @@ def _add_node(name: str, action: Any, retry_policy: RetryPolicy | None = None) -
 
 _add_node("match_question", match_question_node)
 _add_node("parse_query", parse_query_node, _LLM_RETRY_POLICY)
-_add_node("retrieve_tables", retrieve_tables_node, _QDRANT_RETRY_POLICY)
-_add_node("rerank_tables", rerank_tables_node)
-_add_node("select_tables", select_tables_node, _LLM_RETRY_POLICY)
+_add_node("materialize_buckets", materialize_buckets_node)
+_add_node("rewrite_bucket_queries", rewrite_bucket_queries_node, _LLM_RETRY_POLICY)
+_add_node("retrieve_bucket_tables", retrieve_bucket_tables_node, _QDRANT_RETRY_POLICY)
+_add_node("rerank_bucket_tables", rerank_bucket_tables_node)
+_add_node("select_bucket_tables", select_bucket_tables_node, _LLM_RETRY_POLICY)
+_add_node("validate_table_coverage", validate_table_coverage_node, _LLM_RETRY_POLICY)
 _add_node("load_tables", load_tables_node)
 _add_node(
     "plan_generation_context",
@@ -85,10 +98,12 @@ _add_node("execute_code", execute_code_node)
 
 builder.add_edge(START, "match_question")
 builder.add_edge("match_question", "parse_query")
-builder.add_edge("parse_query", "retrieve_tables")
-builder.add_edge("retrieve_tables", "rerank_tables")
-builder.add_edge("rerank_tables", "select_tables")
-builder.add_edge("select_tables", "load_tables")
+builder.add_edge("parse_query", "materialize_buckets")
+builder.add_edge("materialize_buckets", "rewrite_bucket_queries")
+builder.add_edge("rewrite_bucket_queries", "retrieve_bucket_tables")
+builder.add_edge("retrieve_bucket_tables", "rerank_bucket_tables")
+builder.add_edge("rerank_bucket_tables", "select_bucket_tables")
+builder.add_edge("select_bucket_tables", "validate_table_coverage")
 builder.add_edge("load_tables", "plan_generation_context")
 
 graph = builder.compile()

@@ -41,6 +41,7 @@ from generate_submission import (
 )
 from src.graph import graph
 from src.fpt_reranker import effective_fpt_reranker_config
+from src.retrieval import BUCKET_RERANK_DEFAULT_TOP_N
 
 logger = logging.getLogger(__name__)
 
@@ -52,6 +53,7 @@ STATUS_SCHEMA_VERSION = 1
 TRACE_SCHEMA_VERSION = 2
 DEFAULT_ANSWER_RTOL = 1e-6
 DEFAULT_ANSWER_ATOL = 1e-6
+RETRIEVAL_PIPELINE_REVISION = "bucket-aware-live-audit-v4"
 
 METRIC_NAMES = (
     "EXECUTION ACCURACY",
@@ -411,6 +413,38 @@ def _rankings_from_candidates(candidates: Any) -> dict[str, list[str]]:
     return {"docs": _ordered_unique(docs), "tables": _ordered_unique(tables)}
 
 
+def _rankings_from_bucket_states(
+    value: Any,
+    field: str,
+) -> dict[str, list[str]]:
+    """Flatten stable per-bucket candidates into the legacy stage contract."""
+    if not isinstance(value, Mapping):
+        return {"docs": [], "tables": []}
+    candidates: list[Mapping[str, Any]] = []
+    for runtime in value.values():
+        if not isinstance(runtime, Mapping):
+            continue
+        raw_candidates = runtime.get(field)
+        if not isinstance(raw_candidates, list):
+            continue
+        candidates.extend(
+            candidate
+            for candidate in raw_candidates
+            if isinstance(candidate, Mapping)
+        )
+    return _rankings_from_candidates(candidates)
+
+
+def _merge_rankings(
+    current: Mapping[str, Sequence[str]],
+    update: Mapping[str, Sequence[str]],
+) -> dict[str, list[str]]:
+    return {
+        name: _ordered_unique([*current.get(name, []), *update.get(name, [])])
+        for name in ("docs", "tables")
+    }
+
+
 def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
     """Run one graph stream and retain serializable output from every node."""
     started_at = _utc_now()
@@ -421,6 +455,13 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
         "retriever": {"docs": [], "tables": []},
         "reranker": {"docs": [], "tables": []},
         "selector": {"docs": [], "tables": []},
+    }
+    bucket_diagnostics: dict[str, Any] = {
+        "queries": {},
+        "rerank_depth": None,
+        "validation_history": [],
+        "repair_round": 0,
+        "pipeline_metrics": {},
     }
     error: dict[str, str] | None = None
 
@@ -463,6 +504,54 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
                     stages["selector"] = _rankings_from_candidates(
                         output.get("retrieved_tables")
                     )
+                elif node_name == "rewrite_bucket_queries":
+                    bucket_states = output.get("bucket_states")
+                    if isinstance(bucket_states, Mapping):
+                        bucket_diagnostics["queries"] = {
+                            str(key): runtime.get("query")
+                            for key, runtime in bucket_states.items()
+                            if isinstance(runtime, Mapping)
+                        }
+                elif node_name == "retrieve_bucket_tables":
+                    stages["retriever"] = _merge_rankings(
+                        stages["retriever"],
+                        _rankings_from_bucket_states(
+                            output.get("bucket_states"), "latest_candidates"
+                        ),
+                    )
+                elif node_name == "rerank_bucket_tables":
+                    stages["reranker"] = _merge_rankings(
+                        stages["reranker"],
+                        _rankings_from_bucket_states(
+                            output.get("bucket_states"), "finalists"
+                        ),
+                    )
+                    bucket_states = output.get("bucket_states")
+                    if isinstance(bucket_states, Mapping):
+                        depths = {
+                            int(runtime["rerank_depth"])
+                            for runtime in bucket_states.values()
+                            if isinstance(runtime, Mapping)
+                            and isinstance(runtime.get("rerank_depth"), int)
+                        }
+                        if len(depths) == 1:
+                            bucket_diagnostics["rerank_depth"] = depths.pop()
+                elif node_name == "select_bucket_tables":
+                    stages["selector"] = _rankings_from_bucket_states(
+                        output.get("bucket_states"), "selected_tables"
+                    )
+                elif node_name == "validate_table_coverage":
+                    validation = output.get("coverage_validation")
+                    if isinstance(validation, Mapping):
+                        bucket_diagnostics["validation_history"].append(
+                            _json_safe(validation)
+                        )
+                    repair_round = output.get("retrieval_repair_round")
+                    if isinstance(repair_round, int):
+                        bucket_diagnostics["repair_round"] = repair_round
+                metrics = output.get("bucket_pipeline_metrics")
+                if isinstance(metrics, Mapping):
+                    bucket_diagnostics["pipeline_metrics"] = _json_safe(metrics)
                 candidate_answer = output.get("answer_record")
                 if isinstance(candidate_answer, Mapping):
                     answer_record = dict(candidate_answer)
@@ -482,6 +571,7 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
         "duration_seconds": time.monotonic() - start_clock,
         "events": events,
         "stage_rankings": stages,
+        "bucket_diagnostics": bucket_diagnostics,
         "answer_record": answer_record,
         "error": error,
     }
@@ -554,6 +644,26 @@ def _run_config(
         "embedding_model": os.getenv("EMBEDDING_MODEL"),
         "embedding_revision": os.getenv("EMBEDDING_REVISION"),
         "fpt_reranker": effective_fpt_reranker_config(),
+        "retrieval_pipeline_revision": RETRIEVAL_PIPELINE_REVISION,
+        "bucket_rerank_top_n": os.getenv(
+            "FINLENS_BUCKET_RERANK_TOP_N",
+            str(BUCKET_RERANK_DEFAULT_TOP_N),
+        ),
+        "bucket_repair_rerank_top_n": os.getenv(
+            "FINLENS_BUCKET_REPAIR_RERANK_TOP_N", "20"
+        ),
+        "bucket_workers": os.getenv("FINLENS_BUCKET_WORKERS", "2"),
+        "max_retrieval_repairs": os.getenv(
+            "FINLENS_MAX_RETRIEVAL_REPAIRS", "2"
+        ),
+        "coverage_validator_disabled": os.getenv(
+            "FINLENS_DISABLE_COVERAGE_VALIDATOR", ""
+        ).strip().lower()
+        in {"1", "true", "yes"},
+        "fail_closed_semantic_validator": os.getenv(
+            "FINLENS_FAIL_CLOSED_SEMANTIC_VALIDATOR", ""
+        ).strip().lower()
+        in {"1", "true", "yes"},
         "concurrency": args.concurrency,
         "force": bool(args.force),
     }
@@ -584,6 +694,13 @@ def _initialize_status(
         "embedding_model",
         "embedding_revision",
         "fpt_reranker",
+        "retrieval_pipeline_revision",
+        "bucket_rerank_top_n",
+        "bucket_repair_rerank_top_n",
+        "bucket_workers",
+        "max_retrieval_repairs",
+        "coverage_validator_disabled",
+        "fail_closed_semantic_validator",
     }
     if resume:
         if not status_path.is_file():
@@ -779,6 +896,7 @@ def _aggregate_stage_metrics(
             "DOCS PRECISION": 0.0,
             "DOCS RECALL": 0.0,
             "DOCS MRR5": 0.0,
+            "COMPLETE TABLE COVERAGE": 0.0,
         }
 
     def mean(scope: str, metric: str) -> float:
@@ -793,6 +911,85 @@ def _aggregate_stage_metrics(
         "DOCS PRECISION": mean("docs", "precision"),
         "DOCS RECALL": mean("docs", "recall"),
         "DOCS MRR5": mean("docs", "mrr5"),
+        "COMPLETE TABLE COVERAGE": sum(
+            float(item["tables"]["recall"]) == 1.0 for item in scored
+        )
+        / len(scored),
+    }
+
+
+def _aggregate_bucket_diagnostics(
+    run_dir: Path,
+    selected: Sequence[Mapping[str, Any]],
+) -> dict[str, Any]:
+    diagnostics: list[dict[str, Any]] = []
+    exhausted = 0
+    semantic_advisory = 0
+    for golden in selected:
+        artifact_path = (
+            run_dir / "artifacts" / "questions" / f"{int(golden['id'])}.json"
+        )
+        if not artifact_path.is_file():
+            continue
+        with artifact_path.open(encoding="utf-8") as handle:
+            artifact = json.load(handle)
+        value = artifact.get("bucket_diagnostics")
+        if isinstance(value, Mapping):
+            diagnostics.append(dict(value))
+            history = value.get("validation_history")
+            if (
+                isinstance(history, list)
+                and history
+                and isinstance(history[-1], Mapping)
+                and history[-1].get("source") == "llm_exhausted_advisory"
+            ):
+                semantic_advisory += 1
+        error = artifact.get("error")
+        if isinstance(error, Mapping) and error.get("type") == "TableContextUnsolvableError":
+            exhausted += 1
+    if not diagnostics:
+        return {
+            "questions": 0,
+            "repaired_questions": 0,
+            "recovered_questions": 0,
+            "exhausted_questions": exhausted,
+            "semantic_advisory_questions": semantic_advisory,
+            "mean_repair_rounds": 0.0,
+            "mean_calls": {},
+        }
+    repaired = sum(int(item.get("repair_round", 0)) > 0 for item in diagnostics)
+    recovered = 0
+    metric_names: set[str] = set()
+    for item in diagnostics:
+        history = item.get("validation_history") or []
+        if (
+            int(item.get("repair_round", 0)) > 0
+            and isinstance(history, list)
+            and history
+            and isinstance(history[-1], Mapping)
+            and history[-1].get("answerable") is True
+        ):
+            recovered += 1
+        metrics = item.get("pipeline_metrics")
+        if isinstance(metrics, Mapping):
+            metric_names.update(str(name) for name in metrics)
+    mean_calls = {}
+    for name in sorted(metric_names):
+        mean_calls[name] = sum(
+            float(item.get("pipeline_metrics", {}).get(name, 0))
+            for item in diagnostics
+        ) / len(diagnostics)
+    return {
+        "questions": len(diagnostics),
+        "repaired_questions": repaired,
+        "recovered_questions": recovered,
+        "exhausted_questions": exhausted,
+        "semantic_advisory_questions": semantic_advisory,
+        "mean_repair_rounds": sum(
+            int(item.get("repair_round", 0)) for item in diagnostics
+        )
+        / len(diagnostics),
+        "mean_calls": mean_calls,
     }
 
 
@@ -836,6 +1033,7 @@ def _write_metrics(
             "reranker": _aggregate_stage_metrics(run_dir, evaluated, "reranker"),
             "selector": _aggregate_stage_metrics(run_dir, evaluated, "selector"),
         },
+        "bucket_pipeline": _aggregate_bucket_diagnostics(run_dir, evaluated),
     }
     _write_json(payload, run_dir / "metrics.json")
     _write_jsonl(details, run_dir / "metrics_per_question.jsonl")
@@ -1084,7 +1282,13 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="resume an existing --run-id and retry only unfinished/failed questions",
     )
-    parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=1)
+    parser.add_argument(
+        "--max-attempts",
+        type=int,
+        choices=range(1, 6),
+        default=5,
+        help="code-generation attempts per question (default: 5)",
+    )
     parser.add_argument("--answer-rtol", type=float, default=DEFAULT_ANSWER_RTOL)
     parser.add_argument("--answer-atol", type=float, default=DEFAULT_ANSWER_ATOL)
     parser.add_argument("--verbose", action="store_true")

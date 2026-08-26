@@ -7,15 +7,19 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from src.llm import LLMResponseError
 from src.prompt import SELECTOR_SYSTEM_PROMPT
 from src.retrieval import (
     RerankerError,
+    _bucket_selection_policy,
     _build_match_summary,
     _dynamic_output_cap,
+    _salvage_bucket_selector_response,
     attach_rerank_context,
     reciprocal_rank_fusion,
     rerank_with_fpt,
     retrieve,
+    select_bucket_tables_with_diagnostics,
     select_tables,
     select_tables_with_diagnostics,
 )
@@ -133,6 +137,141 @@ def valid_llm_response(prompt: str, **_: object) -> dict[str, object]:
 
 
 class RerankerTests(unittest.TestCase):
+    def test_bucket_selector_salvages_valid_keys_when_concepts_are_omitted(self) -> None:
+        by_key = {"c01": candidate(1), "c02": candidate(2)}
+        decision = _salvage_bucket_selector_response(
+            {
+                "ranked_selections": [
+                    {"candidate_key": "c02", "covered_concept_keys": []},
+                    {"candidate_key": "outside-bucket", "covered_concept_keys": []},
+                ]
+            },
+            by_key,
+        )
+
+        self.assertEqual(decision["selected_keys"], ["c02"])
+        self.assertEqual(
+            decision["concepts"][0]["concept_key"],
+            "salvaged_bucket_evidence",
+        )
+        self.assertEqual(
+            decision["covered_concepts_by_key"]["c02"],
+            ["salvaged_bucket_evidence"],
+        )
+
+    def test_bucket_selector_keeps_two_alternatives_per_concept(self) -> None:
+        by_key = {
+            "c01": candidate(1),
+            "c02": candidate(2),
+            "c03": candidate(3),
+            "c04": candidate(4),
+        }
+        decision = _salvage_bucket_selector_response(
+            {
+                "concepts": [
+                    {"concept_key": "revenue", "description": "Revenue", "role": "direct"},
+                    {"concept_key": "profit", "description": "Profit", "role": "numerator"},
+                ],
+                "ranked_selections": [
+                    {
+                        "candidate_key": "c01",
+                        "covered_concept_keys": ["revenue"],
+                    },
+                    {
+                        "candidate_key": "c02",
+                        "covered_concept_keys": ["revenue"],
+                    },
+                    {
+                        "candidate_key": "c03",
+                        "covered_concept_keys": ["revenue"],
+                    },
+                    {
+                        "candidate_key": "c04",
+                        "covered_concept_keys": ["profit"],
+                    },
+                ],
+            },
+            by_key,
+        )
+
+        self.assertEqual(decision["selected_keys"], ["c01", "c02", "c04"])
+
+    def test_bucket_selector_salvages_alias_list_shape(self) -> None:
+        decision = _salvage_bucket_selector_response(
+            {"ranked_candidate_keys": ["c02", "outside"]},
+            {"c01": candidate(1), "c02": candidate(2)},
+        )
+
+        self.assertEqual(decision["selected_keys"], ["c02"])
+        self.assertEqual(decision["selection_field"], "ranked_candidate_keys")
+        self.assertFalse(decision["fallback_used"])
+
+    def test_bucket_selector_malformed_response_falls_back_to_ranked_keys(self) -> None:
+        decision = _salvage_bucket_selector_response(
+            {"explanation": "missing structured selection"},
+            {"c01": candidate(1), "c02": candidate(2), "c03": candidate(3)},
+        )
+
+        self.assertEqual(decision["selected_keys"], ["c01", "c02"])
+        self.assertTrue(decision["fallback_used"])
+
+    def test_bucket_selector_invalid_json_uses_ranked_fallback(self) -> None:
+        items = candidates(3)
+        bucket = {
+            "bucket_key": "b01",
+            "ticker": "C01",
+            "year": 2018,
+            "report_type": "separate",
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_csvs(root, items)
+            with (
+                patch("src.retrieval.PROJECT_ROOT", root),
+                patch(
+                    "src.retrieval.generate_structured",
+                    side_effect=LLMResponseError("invalid JSON"),
+                ),
+            ):
+                selected, diagnostics = select_bucket_tables_with_diagnostics(
+                    "Lãi tiền gửi", bucket, items
+                )
+
+        self.assertEqual(
+            [item["table_id"] for item in selected[:2]],
+            [items[0]["table_id"], items[1]["table_id"]],
+        )
+        self.assertTrue(diagnostics["fallback_used"])
+        self.assertEqual(diagnostics["selector_error"], "invalid JSON")
+
+    def test_bucket_selection_policy_adds_only_exact_anchors(self) -> None:
+        selected, sources = _bucket_selection_policy(
+            {"selected_keys": ["c04"], "fallback_used": False},
+            [
+                {
+                    "candidate_key": "c01",
+                    "context": {"match_summary": {}},
+                },
+                {
+                    "candidate_key": "c02",
+                    "context": {"match_summary": {}},
+                },
+                {
+                    "candidate_key": "c03",
+                    "context": {
+                        "match_summary": {"exact_phrase_rows": [{"row": 7}]}
+                    },
+                },
+                {
+                    "candidate_key": "c04",
+                    "context": {"match_summary": {}},
+                },
+            ],
+        )
+
+        self.assertEqual(selected, ["c04", "c03"])
+        self.assertEqual(sources["c03"], "bucket_exact_anchor")
+
     def test_fpt_rerank_materializes_top_twenty_with_stable_metadata(self) -> None:
         items = candidates(25)
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -172,6 +311,17 @@ class RerankerTests(unittest.TestCase):
         )
         self.assertEqual(summary["exact_phrase_titles"], ["CHI PHÍ KHÁC"])
         self.assertEqual(summary["exact_phrase_rows"][0]["label"], "Chi phí khác")
+
+    def test_match_summary_tolerates_ocr_tone_error_in_multiword_title(self) -> None:
+        summary = _build_match_summary(
+            "Chi phí trả trước đầu năm là bao nhiêu?",
+            {
+                "row_catalog": [],
+                "table_titles": ["CHI PHÍ TRÀ TRƯỚC"],
+            },
+        )
+
+        self.assertEqual(summary["exact_phrase_titles"], ["CHI PHÍ TRÀ TRƯỚC"])
 
     def test_rerank_prompt_is_coverage_first_and_audits_exact_tables(self) -> None:
         self.assertIn("Ưu tiên coverage trước precision", SELECTOR_SYSTEM_PROMPT)
