@@ -170,7 +170,7 @@ class SubmissionRunTests(unittest.TestCase):
                 )
 
             self.assertEqual((first_result, resumed_result), (1, 0))
-            resumed_run.assert_called_once_with(QUESTIONS[1]["question"], 3)
+            resumed_run.assert_called_once_with(QUESTIONS[1]["question"], 1)
             final_status = json.loads((run_dir / "status.json").read_text())
             self.assertEqual(final_status["state"], "completed")
             self.assertEqual(final_status["counts"]["succeeded"], 2)

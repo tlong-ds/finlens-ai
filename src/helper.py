@@ -94,7 +94,7 @@ def retry_or_exhausted(
     current_attempt = int(state.get("attempt", 0)) if attempt is None else attempt
     destination = (
         "generate_code"
-        if current_attempt < int(state.get("max_attempts", 3))
+        if current_attempt < int(state.get("max_attempts", 1))
         else "execute_code"
     )
     return Command(update=update, goto=destination)

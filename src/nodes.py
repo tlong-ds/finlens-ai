@@ -59,6 +59,14 @@ _SANDBOX_TIMEOUT_SECONDS = 5.0
 _UNSUPPORTED_DATAFRAME_ATTRIBUTES = {"metadata", "attrs"}
 
 
+def _numeric_result_error(attempt: int, feedback: str) -> str:
+    """Format a terminal numeric-result error with correct singular grammar."""
+    noun = "attempt" if attempt == 1 else "attempts"
+    return (
+        f"Unable to produce a valid numeric result after {attempt} {noun}: {feedback}"
+    )
+
+
 def _unsupported_dataframe_attribute_feedback(
     code: str,
     aliases: set[str],
@@ -115,7 +123,7 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
     if not isinstance(question, str) or not question.strip():
         raise ValueError("question must not be empty")
 
-    max_attempts = state.get("max_attempts", 3)
+    max_attempts = state.get("max_attempts", 1)
     if isinstance(max_attempts, bool) or not isinstance(max_attempts, int):
         raise TypeError("max_attempts must be an integer")
     if not 1 <= max_attempts <= 5:
@@ -473,12 +481,9 @@ def execute_code_node(
     """Execute approved code and build the final answer for numeric success."""
     feedback = state.get("feedback") or ""
     attempt = int(state.get("attempt", 0))
-    max_attempts = int(state.get("max_attempts", 3))
+    max_attempts = int(state.get("max_attempts", 1))
     if feedback and attempt >= max_attempts:
-        raise RuntimeError(
-            "Unable to produce a valid numeric result after "
-            f"{attempt} attempts: {feedback}"
-        )
+        raise RuntimeError(_numeric_result_error(attempt, feedback))
 
     try:
         result = run_code(
@@ -491,8 +496,7 @@ def execute_code_node(
         execution_feedback = f"Sandbox execution failed: {concise_error(error)}"
         if attempt >= max_attempts:
             raise RuntimeError(
-                "Unable to produce a valid numeric result after "
-                f"{attempt} attempts: {execution_feedback}"
+                _numeric_result_error(attempt, execution_feedback)
             ) from error
         return retry_or_exhausted(
             state,
@@ -502,10 +506,7 @@ def execute_code_node(
     answer, feedback = numeric_result(result)
     if feedback:
         if attempt >= max_attempts:
-            raise RuntimeError(
-                "Unable to produce a valid numeric result after "
-                f"{attempt} attempts: {feedback}"
-            )
+            raise RuntimeError(_numeric_result_error(attempt, feedback))
         return retry_or_exhausted(state, {"feedback": feedback})
 
     aliases = ordered_unique(list(state.get("evidence_variables") or []))

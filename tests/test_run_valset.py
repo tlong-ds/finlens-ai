@@ -311,7 +311,7 @@ class ValidationRunTests(unittest.TestCase):
                 )
 
             self.assertEqual((first, resumed), (1, 0))
-            rerun.assert_called_once_with(GOLDEN[1]["question"], 3)
+            rerun.assert_called_once_with(GOLDEN[1]["question"], 1)
             run_dir = root / "output" / "runs" / "resume-run"
             records = json.loads((run_dir / "submission.json").read_text())
             self.assertEqual([record["id"] for record in records], [1, 2])
