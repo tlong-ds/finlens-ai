@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import ast
 import builtins
+import math
 import re
 from collections.abc import Mapping, Sequence
 from decimal import Decimal, InvalidOperation
@@ -327,6 +328,57 @@ def _expected_generated_unit_scale(
     return unit, target_factor / stored_unit_factor
 
 
+_KNOWN_UNIT_SCALES = {1e3, 1e5, 1e6, 1e9, 1e11, 1e12}
+
+
+def _match_known_scale(value: Any) -> tuple[float, bool] | None:
+    """Return (scale, is_reciprocal) if value matches a known scale or its reciprocal."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    numeric = float(value)
+    if not math.isfinite(numeric) or numeric <= 0:
+        return None
+    for scale in _KNOWN_UNIT_SCALES:
+        if math.isclose(numeric, scale, rel_tol=1e-5):
+            return scale, False
+        if math.isclose(numeric, 1.0 / scale, rel_tol=1e-5):
+            return scale, True
+    return None
+
+
+class _ReciprocalScaleTransformer(ast.NodeTransformer):
+    """Rewrite multiplication by reciprocal scales (e.g. * 1e-6) to division by scale (/ 1e6)."""
+
+    def visit_BinOp(self, node: ast.BinOp) -> ast.AST:
+        self.generic_visit(node)
+        if isinstance(node.op, ast.Mult):
+            if isinstance(node.right, ast.Constant):
+                match = _match_known_scale(node.right.value)
+                if match is not None and match[1] is True:
+                    scale, _ = match
+                    return ast.copy_location(
+                        ast.BinOp(
+                            left=node.left,
+                            op=ast.Div(),
+                            right=ast.Constant(value=scale),
+                        ),
+                        node,
+                    )
+            if isinstance(node.left, ast.Constant):
+                match = _match_known_scale(node.left.value)
+                if match is not None and match[1] is True:
+                    scale, _ = match
+                    return ast.copy_location(
+                        ast.BinOp(
+                            left=node.right,
+                            op=ast.Div(),
+                            right=ast.Constant(value=scale),
+                        ),
+                        node,
+                    )
+        return node
+
+
 def normalize_generated_semantics(
     code: str,
     question: str,
@@ -342,7 +394,10 @@ def normalize_generated_semantics(
     if expected is None:
         return code, None
     unit, expected_scale = expected
-    known_scales = {1e3, 1e5, 1e6, 1e9, 1e11, 1e12}
+
+    tree = _ReciprocalScaleTransformer().visit(tree)
+    ast.fix_missing_locations(tree)
+
     result_assignment = next(
         (
             node
@@ -364,12 +419,12 @@ def normalize_generated_semantics(
         if isinstance(node, ast.BinOp)
         and isinstance(node.op, ast.Div)
         and isinstance(node.right, ast.Constant)
-        and isinstance(node.right.value, (int, float))
-        and float(node.right.value) in known_scales
+        and _match_known_scale(node.right.value) is not None
+        and not _match_known_scale(node.right.value)[1]
     ]
-    existing_scales = {float(node.right.value) for node in scale_nodes}
-    if expected_scale in existing_scales or expected_scale == 1 and not scale_nodes:
-        return code, None
+    existing_scales = {_match_known_scale(node.right.value)[0] for node in scale_nodes}
+    if expected_scale in existing_scales or (expected_scale == 1 and not scale_nodes):
+        return ast.unparse(tree), None
     if len(scale_nodes) > 1 and len(existing_scales) > 1:
         return code, (
             f"The requested unit '{unit}' requires scale {expected_scale:g}, but "
@@ -426,9 +481,18 @@ def generated_semantic_feedback(
     expected = _expected_generated_unit_scale(tree, question, dataframes)
     if expected is not None:
         unit, expected_scale = expected
-        competing_scales = numeric_constants & {1e6, 1e9, 1e11, 1e12}
+        competing_scales = {
+            _match_known_scale(c)[0]
+            for c in numeric_constants
+            if _match_known_scale(c) is not None
+        }
         # Division by one is normally omitted from good generated code.
-        has_expected_scale = expected_scale == 1 or expected_scale in numeric_constants
+        has_expected_scale = expected_scale == 1 or any(
+            math.isclose(c, expected_scale, rel_tol=1e-5)
+            or math.isclose(c, 1.0 / expected_scale, rel_tol=1e-5)
+            for c in numeric_constants
+            if math.isfinite(c) and c > 0
+        )
         if not has_expected_scale:
             detail = (
                 f"; code currently uses {sorted(competing_scales)}"
