@@ -1,147 +1,114 @@
-# finlens-agent
+# FinLens AI
 
-Trả lời câu hỏi tài chính ViFinQA bằng dense retrieval, LLM reranking và mã pandas được kiểm định.
+FinLens answers Vietnamese financial-statement questions from the ViFinQA
+benchmark. It retrieves the relevant tables, selects the minimum evidence set,
+plans the required rows and calculations, generates pandas code, and executes the
+code in a network-disabled E2B sandbox.
 
-## Prerequisite: Download dataset:
+## Setup
 
-```git clone https://huggingface.co/datasets/AIGuruTinix/ViFinQA```
+The project uses Python 3.12.11 and `pyproject.toml` as its only dependency
+declaration. `uv.lock` is committed for reproducible installs.
 
-## Architecture
-
-```
-metadata/
-├── docs_metadata.json   # Document catalog (doc_id, doc_path, ticker, year)
-└── tables_metadata.json # Table catalog (table_id, doc_id, ticker, company_name, table_type, semantic_fields, csv_path)
-
-data/
-├── table_001.csv        # Extracted tables
-├── table_002.csv
-└── ...
-
-prepare.py -- Phase 1: text parsing, table extraction, metadata generation
-src/graph.py -- supported compiled workflow: retrieval, generation, validation, execution
-src/nodes.py -- graph node implementations
-src/contracts.py -- shared Qdrant payload schema and safe CSV resolution
-src/routing.py -- strict Vietnamese metadata routing and semantic-query cleanup
-src/helper.py -- graph validation and routing helpers
-src/prompt.py -- Vietnamese graph prompt templates and builders
-src/sandbox.py -- isolated code execution environment
-query.py -- deprecated retrieval-only wrapper
-```
-
-## Usage
-
-### Setup
 ```bash
-pip install -r requirements.txt
+uv sync --frozen --group dev
 ```
 
-`src/sandbox.py` executes generated pandas code inside an isolated
-[E2B](https://e2b.dev) Firecracker microVM with outbound internet disabled. DataFrames
-are transferred with dtype metadata, and only a bounded, validated numeric JSON result
-returns to the host. Create an E2B account, obtain an API key, and export it:
+Copy the ViFinQA dataset into `ViFinQA/`. Configure the OpenAI-compatible LLM,
+Qdrant, embedding, FPT reranker, and E2B providers in `.env`. All configuration is
+loaded once through `src.config.Settings`; provider modules do not read the
+environment themselves.
+
+Run the offline preparation and indexing phases before invoking the graph:
+
 ```bash
-export E2B_API_KEY=e2b_***
+python scripts/prepare.py --help
+python scripts/data_indexing.py self-test
+python scripts/data_indexing.py index --help
 ```
 
-Chạy `prepare.py` và `data_indexing.py` trước để collection Qdrant và các file
-`data/{table_id}.csv` được sinh từ cùng một phiên dữ liệu. Collection phải dùng
-named vector `dense` 384 chiều. Qdrant payload có đúng chín trường: `table_id`, `doc_id`,
-`ticker`, `company_name`, `year`, `report_type`, `table_type`, `start_line`, `index_text`.
-Ở chế độ `hybrid`, nhánh lexical scroll các payload trong đúng metadata filter và tính BM25
-trực tiếp trên `index_text`; nhánh dense vẫn tìm trên named vector `dense`, sau đó hai nhánh
-được hợp nhất bằng RRF. Graph resolve `data/{table_id}.csv` an toàn và dựng rerank context có
-giới hạn trực tiếp từ header/các dòng liên quan trong CSV. Manifest chỉ là artifact indexing
-offline, không được đọc trong runtime graph.
+`self-test` performs eleven local checks and makes no model or Qdrant call.
 
-Configure the embedding provider, Qdrant collection, and OpenAI-compatible LLM endpoint,
-then invoke the compiled graph with an exact canonical
-ViFinQA question:
+## Pipeline API
 
-```dotenv
-QDRANT_COLLECTION=finlens_tables_metadata_granite_97m_multilingual_r2_v2
-QDRANT_ALIAS=finlens_tables_current
-RETRIEVAL_MODE=hybrid
-EMBEDDING_MODEL=ibm-granite/granite-embedding-97m-multilingual-r2
-EMBEDDING_REVISION=835ad14087e140460703cf0fae09f97d469d65c2
-EMBEDDING_DEVICE=auto
-EMBEDDING_MAX_LENGTH=512
-```
-
-The default Granite multilingual encoder uses 384-dimensional normalized dense
-vectors. Index metadata and queries are encoded without model-specific prefixes.
-The offline manifest still uses Vietnamese-only metadata for embedding `index_text`:
-the Vietnamese table type label, semantic summary/keywords, and `canonical_name_vi`.
-Runtime reranking does not read that manifest; it builds bounded, question-aware context
-from the candidate CSVs returned by Qdrant. After changing the embedding contract, run
-`python data_indexing.py index --rebuild-manifest --force` during a maintenance window,
-then reconcile stale points and verify the collection before serving queries.
-
-Qdrant payloads include both `ticker` and the canonical `company_name` from
-`ViFinQA/code_stock.csv`; both fields remain keyword-indexed in the payload schema,
-but runtime query filters use `ticker`, `year`, `report_type`, and `table_type` only.
+The canonical API lives in `src.pipeline`:
 
 ```python
-from src.graph import graph
+from src.config import Settings
+from src.pipeline import PipelineDependencies, build_graph
 
-result = graph.invoke({"question": query_text, "max_attempts": 1})
+settings = Settings.from_env()
+pipeline = build_graph(settings, PipelineDependencies.from_settings(settings))
+result = pipeline.invoke({"question": query_text, "max_attempts": 2})
 answer = result["answer_record"]
 ```
 
-`max_attempts` defaults to `1` and accepts values from `1` through `5`. The final
-`answer_record` contains the numeric answer, evidence paths, relevant documents and
-tables, and the accepted pandas query. Transient LLM and Qdrant failures are retried
-up to three times with backoff without consuming a semantic generation attempt.
-`query.py` remains only as a deprecated retrieval-only compatibility wrapper; new
-callers should use the compiled graph.
+`from src.pipeline import graph` provides a default compiled graph for interactive
+use. `max_attempts` defaults to two and accepts values from one through five.
 
-Mỗi lần sinh submission được tách thành một experiment run độc lập:
+The graph order is:
 
-```bash
-python generate_submission.py --run-id baseline-reranker-v2 full --ids 1,7,12
+```text
+match_question -> parse_query -> retrieve_tables -> rerank_tables
+    -> select_tables -> load_tables -> plan_generation_context
+    -> generate_code -> execute_code
 ```
 
-Nếu bỏ `--run-id`, CLI tự tạo ID theo timestamp. Kết quả nằm tại
-`submission/runs/<run-id>/`, gồm `status.json`, `submission.json`, `submission.zip`,
-`failures.jsonl` và thư mục evidence `data/`. `submission/latest_run.json` trỏ đến run
-được khởi tạo gần nhất. Theo dõi tiến độ bằng:
+Generation and execution form a bounded retry loop. Selection owns table choice
+and DataFrame aliases. Planning may only map the selected tables to rows, columns,
+units, and calculations; it cannot replace or drop aliases.
 
-```bash
-python -m json.tool submission/runs/baseline-reranker-v2/status.json
+## Retrieval and payload contract
+
+Dense retrieval and runtime BM25 are fused with reciprocal-rank fusion. The FPT
+reranker and LLM selector retain their existing candidate limits, strict coverage
+checks, and failure behavior. Runtime retrieval never reads the offline manifest.
+
+Every Qdrant point has exactly these nine payload fields:
+
+```text
+table_id, doc_id, ticker, company_name, year, report_type,
+table_type, start_line, index_text
 ```
 
-Run đã tồn tại không bị ghi đè ngầm. Để chạy lại các câu chưa thành công trong đúng
-experiment đó, dùng cùng selection và resume rõ ràng:
+The collection uses the named dense vector `dense`. CSV paths are resolved from
+validated `table_id` values beneath the project `data/` directory.
+
+## Executable programs
+
+All programs live under `scripts/`:
 
 ```bash
-python generate_submission.py --run-id baseline-reranker-v2 --resume full --ids 1,7,12
+python scripts/doctor.py
+python scripts/prepare.py --help
+python scripts/data_indexing.py --help
+python scripts/generate_submission.py --help
+python scripts/run_valset.py --help
+python scripts/run_parser_valset.py --help
+python scripts/run_reranker_valset.py --help
 ```
 
-Resume giữ nguyên tập câu hỏi và các cấu hình ảnh hưởng kết quả như model, temperature,
-Qdrant collection, embedding contract và `max_attempts`; thay đổi một trong các giá trị
-này phải tạo run mới. Mỗi lần resume được ghi thêm vào `invocations` trong `status.json`.
-Lệnh `full` trả exit code `1` nếu còn câu thất bại, dù checkpoint và submission một phần
-vẫn được giữ đầy đủ để resume.
+Submission and validation outputs are experiment runs under `submission/runs/`
+or `val_submission/`. Every newly created run includes a credential-safe,
+path-portable `manifest.json` with source state, lock/question hashes, arguments,
+tolerances, retry and concurrency settings, provider identities, payload schema,
+and prompt/pipeline hashes.
 
-Đánh giá trên labelled valset (`golden_100.json`) bằng CLI riêng:
+Generated runs, logs, pointers, locks, caches, ZIP archives, `.DS_Store`, and
+graphify output are ignored. Existing local historical artifacts are not deleted.
 
-```bash
-python run_valset.py --run-id val-reranker-v1 ids --ids 1,5,7
-python run_valset.py --run-id val-reranker-v1 --resume ids --ids 1,5,7
-python run_valset.py --run-id val-full-v1 full
+## Repository layout
+
+```text
+src/
+  pipeline/        graph, state, and lifecycle nodes
+  retrieval/       dense, BM25, context, reranking, selection, routing
+  generation/      planning, normalization, and prompts
+  providers/       explicitly configured external adapters
+  data/            preparation and indexing services
+  experiments/     run storage, checkpoints, metrics, provenance, packaging
+scripts/            executable CLI programs
 ```
 
-Output nằm tại `val_submission/runs/<run-id>/`. Ngoài `submission.json` và
-`submission.zip`, mỗi run có `metrics.json`, `metrics_per_question.jsonl`, `status.json`,
-`failures.jsonl`, log tổng tại `artifacts/run.log`, và trace từng lần chạy node tại
-`artifacts/questions/<id>/attempt-<n>.json`. Ngưỡng so đáp án mặc định là
-`rtol=1e-6`, `atol=1e-6`; có thể thay bằng `--answer-rtol` và `--answer-atol` để khớp
-ngưỡng chính thức của BTC.
-
-Routing yêu cầu resolve được ít nhất một ticker và một năm từ 2015–2025; graph không
-fallback sang global search. Dense retrieval lấy Top-50, LLM dùng cùng cấu hình `.env`
-xếp hạng theo batch và chọn tối đa 5 bảng mỗi batch, sau đó chọn tối đa 10
-finalist bằng các opaque candidate key. Response thừa, trùng hoặc chứa key ngoài batch
-được salvage mà không điền cho đủ mức tối đa; nếu response hoàn toàn
-không dùng được sau hai lần sửa, batch/final stage fallback theo dense rank để graph tiếp
-tục. CSV candidate bị thiếu/không đọc được vẫn là lỗi terminal.
+See [Architecture](docs/architecture.md) and
+[Reproducibility](docs/reproducibility.md) for the detailed contracts.
