@@ -184,10 +184,8 @@ def run_code(
             for index, (alias, dataframe) in enumerate(dataframes.items(), start=1):
                 dataframe_path = f"/tmp/__finlens_dataframe_{index}.json"
                 sandbox.files.write(dataframe_path, _dataframe_payload(dataframe))
-                dtype_payload = _dataframe_dtypes(dataframe)
                 load_lines.append(
-                    f"{alias} = pd.read_json({dataframe_path!r}, orient='table').astype("
-                    f"_finlens_json.loads({dtype_payload!r}))"
+                    f"{alias} = pd.read_json({dataframe_path!r}, orient='table')"
                 )
 
             metadata_dict = dict(alias_metadata) if alias_metadata is not None else {}

@@ -24,13 +24,115 @@ from src.retrieval.dense import (
 logger = logging.getLogger(__name__)
 
 
+def _select_balanced_candidates(
+    scored_candidates: list[tuple[Candidate, float]],
+    maximum: int,
+) -> list[Candidate]:
+    """Select up to `maximum` candidates ensuring multi-bucket and statement coverage."""
+    if len(scored_candidates) <= maximum:
+        result: list[Candidate] = []
+        for rank, (cand, score) in enumerate(scored_candidates, start=1):
+            c = dict(cand)
+            c.update(
+                {
+                    "rerank_rank": rank,
+                    "rerank_score": score,
+                    "rerank_source": "fpt_bge_m3",
+                }
+            )
+            result.append(c)
+        return result
+
+    # Group by bucket: (ticker, year, report_type)
+    bucket_map: dict[tuple[Any, ...], list[tuple[Candidate, float]]] = {}
+    for cand, score in scored_candidates:
+        meta = cand.get("metadata", {})
+        bucket = (meta.get("ticker"), meta.get("year"), meta.get("report_type"))
+        bucket_map.setdefault(bucket, []).append((cand, score))
+
+    selected_ids: set[str] = set()
+    selected_scored: list[tuple[Candidate, float]] = []
+
+    # 1. If multiple buckets exist, ensure top candidates and core statement types per bucket are included
+    if len(bucket_map) > 1:
+        for _bucket, items in bucket_map.items():
+            top_cand, top_score = items[0]
+            cand_id = str(top_cand.get("metadata", {}).get("table_id") or "")
+            if cand_id and cand_id not in selected_ids:
+                selected_ids.add(cand_id)
+                selected_scored.append((top_cand, top_score))
+
+            seen_types: set[str] = set()
+            for cand, score in items:
+                raw_ttype = str(cand.get("metadata", {}).get("table_type") or "")
+                idx_text = str(
+                    cand.get("metadata", {}).get("index_text") or ""
+                ).casefold()
+                if raw_ttype == "balance_sheet":
+                    if "tài sản" in idx_text:
+                        ttype = "balance_sheet_assets"
+                    elif "nợ" in idx_text or "nguồn vốn" in idx_text:
+                        ttype = "balance_sheet_liabilities"
+                    else:
+                        ttype = "balance_sheet"
+                else:
+                    ttype = raw_ttype
+
+                if (
+                    ttype
+                    in {
+                        "balance_sheet_assets",
+                        "balance_sheet_liabilities",
+                        "balance_sheet",
+                        "income_statement",
+                        "cash_flow",
+                    }
+                    and ttype not in seen_types
+                ):
+                    seen_types.add(ttype)
+                    cand_id = str(cand.get("metadata", {}).get("table_id") or "")
+                    if (
+                        cand_id
+                        and cand_id not in selected_ids
+                        and len(selected_scored) < maximum
+                    ):
+                        selected_ids.add(cand_id)
+                        selected_scored.append((cand, score))
+
+    # 2. Fill remaining slots from global BGE ranked order
+    for cand, score in scored_candidates:
+        if len(selected_scored) >= maximum:
+            break
+        cand_id = str(cand.get("metadata", {}).get("table_id") or "")
+        if cand_id and cand_id not in selected_ids:
+            selected_ids.add(cand_id)
+            selected_scored.append((cand, score))
+
+    # Sort final selected candidates by BGE score descending
+    selected_scored.sort(key=lambda item: -item[1])
+
+    # Assign final rank 1..N
+    result: list[Candidate] = []
+    for rank, (cand, score) in enumerate(selected_scored[:maximum], start=1):
+        c = dict(cand)
+        c.update(
+            {
+                "rerank_rank": rank,
+                "rerank_score": score,
+                "rerank_source": "fpt_bge_m3",
+            }
+        )
+        result.append(c)
+    return result
+
+
 def rerank_with_fpt(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
     *,
     settings: Settings,
 ) -> list[Candidate]:
-    """Rerank up to 80 retrieval candidates with FPT BGE and keep top 20."""
+    """Rerank up to 80 retrieval candidates with FPT BGE and keep top 20 with balanced bucket coverage."""
     if not question.strip():
         raise ValueError("question must not be empty")
     if not candidates:
@@ -48,20 +150,11 @@ def rerank_with_fpt(
     ranked_pairs = rerank_documents(
         question,
         [_fpt_candidate_document(question, candidate) for candidate in enriched],
-        top_n=FPT_RERANK_TOP_N,
+        top_n=len(enriched),
         settings=settings,
     )
-    result: list[Candidate] = []
-    for rank, (index, score) in enumerate(ranked_pairs, start=1):
-        candidate = dict(enriched[index])
-        candidate.update(
-            {
-                "rerank_rank": rank,
-                "rerank_score": score,
-                "rerank_source": "fpt_bge_m3",
-            }
-        )
-        result.append(candidate)
+    scored_candidates = [(enriched[index], score) for index, score in ranked_pairs]
+    result = _select_balanced_candidates(scored_candidates, FPT_RERANK_TOP_N)
     logger.info(
         "FPT rerank completed: input=%d output=%d",
         len(candidates),

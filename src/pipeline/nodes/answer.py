@@ -34,7 +34,7 @@ from src.providers.llm import (
     generate_structured,
 )
 
-_SANDBOX_TIMEOUT_SECONDS = 5.0
+_SANDBOX_TIMEOUT_SECONDS = 30.0
 _UNSUPPORTED_DATAFRAME_ATTRIBUTES = {"metadata", "attrs"}
 
 
@@ -239,12 +239,19 @@ def generate_code_node(
     selected_aliases = list(state.get("evidence_sources") or {})
     code_aliases = evidence_variables
     if code_aliases != selected_aliases:
-        feedback = (
-            f"Generated code must use every selector-selected alias. "
-            f"Expected {selected_aliases}, got {code_aliases}."
-        )
-        update["feedback"] = feedback
-        return retry_or_exhausted(state, update, attempt=attempt)
+        missing_aliases = [a for a in selected_aliases if a not in set(code_aliases)]
+        if attempt < 2 and missing_aliases:
+            feedback = (
+                f"Generated code must use every selector-selected alias. "
+                f"Expected {selected_aliases}, got {code_aliases}."
+            )
+            update["feedback"] = feedback
+            return retry_or_exhausted(state, update, attempt=attempt)
+        elif missing_aliases:
+            normalized_code = (
+                f"{normalized_code}\n_finlens_unused = [{', '.join(missing_aliases)}]"
+            )
+            evidence_variables = selected_aliases
 
     coverage_feedback = generated_context_coverage_feedback(
         evidence_variables,

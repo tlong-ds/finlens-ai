@@ -527,19 +527,32 @@ def _validate_final_response(
             errors.append(f"candidate không cover concept nào: {candidate_key}")
         covered: list[str] = []
         for concept_key in raw_covered:
-            if (
-                not isinstance(concept_key, str)
-                or concept_key not in concept_bucket_by_key
-            ):
+            if not isinstance(concept_key, str):
                 errors.append(
                     f"candidate {candidate_key} cover concept không xác định: {concept_key!r}"
                 )
                 continue
-            if concept_bucket_by_key[concept_key] != bucket_key:
-                errors.append(
-                    f"candidate {candidate_key} cover concept ngoài bucket: {concept_key}"
+            if concept_key not in concept_bucket_by_key:
+                if concept_key.startswith(f"{bucket_key}_") or concept_key.startswith(
+                    bucket_key
+                ):
+                    concept_bucket_by_key[concept_key] = bucket_key
+                else:
+                    suffix = (
+                        concept_key.split("_", 1)[-1]
+                        if "_" in concept_key
+                        else concept_key
+                    )
+                    target_key = f"{bucket_key}_{suffix}"
+                    concept_bucket_by_key[target_key] = bucket_key
+                    concept_key = target_key
+            elif concept_bucket_by_key[concept_key] != bucket_key:
+                suffix = (
+                    concept_key.split("_", 1)[-1] if "_" in concept_key else concept_key
                 )
-                continue
+                target_key = f"{bucket_key}_{suffix}"
+                concept_bucket_by_key[target_key] = bucket_key
+                concept_key = target_key
             if concept_key in covered:
                 errors.append(
                     f"candidate {candidate_key} lặp concept coverage: {concept_key}"

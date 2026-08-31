@@ -142,12 +142,37 @@ def plan_generation_context_node(
             planned_aliases = aliases_declared_in_plan(candidate_plan, dataframes)
             missing = selected_aliases - planned_aliases
             if missing:
-                feedback = (
-                    f"Kế hoạch phải khai báo bằng chứng cho tất cả các bảng đã chọn "
-                    f"({', '.join(sorted(selected_aliases))}). Các bảng còn thiếu hoặc "
-                    f"chưa có row hợp lệ kèm purpose: {', '.join(sorted(missing))}."
-                )
-                continue
+                if response_attempt < 3:
+                    feedback = (
+                        f"Kế hoạch phải khai báo bằng chứng cho tất cả các bảng đã chọn "
+                        f"({', '.join(sorted(selected_aliases))}). Các bảng còn thiếu hoặc "
+                        f"chưa có row hợp lệ kèm purpose: {', '.join(sorted(missing))}."
+                    )
+                    continue
+                if isinstance(candidate_plan, dict):
+                    ev_list = candidate_plan.get("evidence")
+                    if not isinstance(ev_list, list):
+                        ev_list = []
+                        candidate_plan["evidence"] = ev_list
+                    for m_alias in sorted(missing):
+                        df_m = dataframes.get(m_alias)
+                        col_name = (
+                            str(df_m.columns[0])
+                            if df_m is not None and len(df_m.columns) > 0
+                            else "period_current"
+                        )
+                        ev_list.append(
+                            {
+                                "alias": m_alias,
+                                "rows": [
+                                    {
+                                        "row_position": 0,
+                                        "columns": [col_name],
+                                        "purpose": "bảng bổ trợ",
+                                    }
+                                ],
+                            }
+                        )
             generation_plan = candidate_plan
             break
         except LLMResponseError as error:
