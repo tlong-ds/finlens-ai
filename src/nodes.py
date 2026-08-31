@@ -29,9 +29,10 @@ from src.retrieval import (
     NoMatchingCandidatesError,
     rerank_with_fpt,
     retrieve,
-    select_tables,
+    select_tables_with_diagnostics,
 )
 from src.planning import (
+    aliases_declared_in_plan,
     build_planning_inventory,
     generated_evidence_variables,
     generated_context_coverage_feedback,
@@ -123,7 +124,7 @@ def match_question_node(state: Mapping[str, Any]) -> dict[str, Any]:
     if not isinstance(question, str) or not question.strip():
         raise ValueError("question must not be empty")
 
-    max_attempts = state.get("max_attempts", 1)
+    max_attempts = state.get("max_attempts", 2)
     if isinstance(max_attempts, bool) or not isinstance(max_attempts, int):
         raise TypeError("max_attempts must be an integer")
     if not 1 <= max_attempts <= 5:
@@ -238,8 +239,8 @@ def rerank_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 
 
 def select_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
-    """Prune FPT top-20 tables for the planner with recall-first LLM selection."""
-    retrieved_tables = select_tables(
+    """Select exact tables and retain bounded coverage diagnostics."""
+    retrieved_tables, selector_diagnostics = select_tables_with_diagnostics(
         question=str(state.get("question") or ""),
         candidates=state.get("reranked_tables", []),
     )
@@ -247,7 +248,10 @@ def select_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
         "Planner table IDs: %s",
         [item.get("table_id") for item in retrieved_tables],
     )
-    return {"retrieved_tables": retrieved_tables}
+    return {
+        "retrieved_tables": retrieved_tables,
+        "selector_diagnostics": selector_diagnostics,
+    }
 
 
 def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
@@ -306,7 +310,7 @@ def load_tables_node(state: Mapping[str, Any]) -> dict[str, Any]:
 def plan_generation_context_node(
     state: Mapping[str, Any],
 ) -> Command[Literal["generate_code"]]:
-    """Plan how to answer the user question from reranker-selected table context."""
+    """Plan how to answer the user question from selector-chosen tables."""
     dataframes = state.get("dataframes") or {}
     alias_metadata = state.get("alias_metadata") or {}
     inventory = build_planning_inventory(
@@ -315,26 +319,40 @@ def plan_generation_context_node(
         state.get("rerank_contexts") or {},
     )
     question = str(state.get("question") or "")
+    selected_aliases = set(dataframes)
     generation_plan: dict[str, Any] | None = None
-    response_error: LLMResponseError | None = None
+    response_error: Exception | None = None
+    feedback = ""
     for response_attempt in range(1, 4):
-        feedback = (
-            "Phản hồi trước không phải JSON object hợp lệ. Chỉ trả về JSON đúng "
-            "schema được yêu cầu."
-            if response_attempt > 1
-            else ""
-        )
         try:
-            generation_plan = generate_structured(
+            candidate_plan = generate_structured(
                 build_planner_prompt(question, inventory, feedback),
                 system_prompt=PLANNER_SYSTEM_PROMPT,
+                native=False,
             )
+            planned_aliases = aliases_declared_in_plan(candidate_plan, dataframes)
+            missing = selected_aliases - planned_aliases
+            if missing:
+                feedback = (
+                    f"Kế hoạch phải khai báo bằng chứng cho tất cả các bảng đã chọn "
+                    f"({', '.join(sorted(selected_aliases))}). Các bảng còn thiếu hoặc "
+                    f"chưa có row hợp lệ kèm purpose: {', '.join(sorted(missing))}."
+                )
+                continue
+            generation_plan = candidate_plan
             break
         except LLMResponseError as error:
             response_error = error
+            feedback = (
+                "Phản hồi trước không phải JSON object hợp lệ. Chỉ trả về JSON đúng "
+                "schema được yêu cầu."
+            )
     if generation_plan is None:
-        assert response_error is not None
-        raise response_error
+        if response_error is not None:
+            raise response_error
+        raise ValueError(
+            f"Planner không thể tạo kế hoạch hợp lệ cho tất cả các bảng đã chọn: {feedback}"
+        )
     selected_rows = hydrate_planned_rows(generation_plan, dataframes, inventory)
     return Command(
         update={
@@ -432,6 +450,16 @@ def generate_code_node(
         update["feedback"] = alias_feedback
         return retry_or_exhausted(state, update, attempt=attempt)
 
+    selected_aliases = list(state.get("evidence_sources") or {})
+    code_aliases = evidence_variables
+    if code_aliases != selected_aliases:
+        feedback = (
+            f"Generated code must use every selector-selected alias. "
+            f"Expected {selected_aliases}, got {code_aliases}."
+        )
+        update["feedback"] = feedback
+        return retry_or_exhausted(state, update, attempt=attempt)
+
     coverage_feedback = generated_context_coverage_feedback(
         evidence_variables,
         str(state.get("question") or ""),
@@ -509,8 +537,8 @@ def execute_code_node(
             raise RuntimeError(_numeric_result_error(attempt, feedback))
         return retry_or_exhausted(state, {"feedback": feedback})
 
-    aliases = ordered_unique(list(state.get("evidence_variables") or []))
     sources = state.get("evidence_sources") or {}
+    aliases = list(sources)  # selector order
     question_record = state.get("question_record") or {}
     answer_record = {
         "id": question_record["id"],

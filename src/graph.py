@@ -35,6 +35,7 @@ class RetrievalState(TypedDict):
     candidates: NotRequired[list[dict[str, Any]]]
     reranked_tables: NotRequired[list[dict[str, Any]]]
     retrieved_tables: NotRequired[list[dict[str, Any]]]
+    selector_diagnostics: NotRequired[dict[str, Any]]
     dataframes: NotRequired[dict[str, pd.DataFrame]]
     evidence_sources: NotRequired[dict[str, dict[str, str]]]
     alias_metadata: NotRequired[dict[str, dict[str, Any]]]

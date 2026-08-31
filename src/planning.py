@@ -173,6 +173,54 @@ def _planned_row_positions(
     return positions
 
 
+def aliases_declared_in_plan(
+    generation_plan: Mapping[str, Any],
+    dataframes: Mapping[str, pd.DataFrame] | None = None,
+) -> set[str]:
+    """Extract table aliases declared in generation_plan with at least one valid row and purpose."""
+    if not isinstance(generation_plan, Mapping):
+        return set()
+    raw_evidence = generation_plan.get("evidence")
+    if not isinstance(raw_evidence, Sequence) or isinstance(
+        raw_evidence, (str, bytes)
+    ):
+        return set()
+
+    declared_aliases: set[str] = set()
+    for raw_item in raw_evidence:
+        if not isinstance(raw_item, Mapping):
+            continue
+        alias = raw_item.get("alias")
+        if not isinstance(alias, str) or not alias:
+            continue
+        raw_rows = raw_item.get("rows")
+        if not isinstance(raw_rows, Sequence) or isinstance(
+            raw_rows, (str, bytes)
+        ):
+            continue
+        df = dataframes.get(alias) if dataframes is not None else None
+        max_rows = len(df) if df is not None else None
+        has_valid_row = False
+        for raw_row in raw_rows:
+            if not isinstance(raw_row, Mapping):
+                continue
+            position = raw_row.get("row_position")
+            purpose = raw_row.get("purpose")
+            if (
+                isinstance(position, int)
+                and not isinstance(position, bool)
+                and (max_rows is None or 0 <= position < max_rows)
+                and isinstance(purpose, str)
+                and purpose.strip()
+            ):
+                has_valid_row = True
+                break
+        if has_valid_row:
+            declared_aliases.add(alias)
+
+    return declared_aliases
+
+
 def hydrate_planned_rows(
     generation_plan: Mapping[str, Any],
     dataframes: Mapping[str, pd.DataFrame],

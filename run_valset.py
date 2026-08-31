@@ -422,6 +422,7 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
         "reranker": {"docs": [], "tables": []},
         "selector": {"docs": [], "tables": []},
     }
+    selector_diagnostics: dict[str, Any] | None = None
     error: dict[str, str] | None = None
 
     try:
@@ -463,11 +464,17 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
                     stages["selector"] = _rankings_from_candidates(
                         output.get("retrieved_tables")
                     )
+                    raw_selector_diagnostics = output.get("selector_diagnostics")
+                    if isinstance(raw_selector_diagnostics, Mapping):
+                        selector_diagnostics = dict(raw_selector_diagnostics)
                 candidate_answer = output.get("answer_record")
                 if isinstance(candidate_answer, Mapping):
                     answer_record = dict(candidate_answer)
     except Exception as exc:
         logger.exception("Validation question failed: %s", question)
+        raw_selector_diagnostics = getattr(exc, "diagnostics", None)
+        if isinstance(raw_selector_diagnostics, Mapping):
+            selector_diagnostics = dict(raw_selector_diagnostics)
         error = {"type": type(exc).__name__, "message": str(exc)}
 
     if answer_record is None and error is None:
@@ -482,6 +489,7 @@ def trace_graph_question(question: str, max_attempts: int) -> dict[str, Any]:
         "duration_seconds": time.monotonic() - start_clock,
         "events": events,
         "stage_rankings": stages,
+        "selector_diagnostics": selector_diagnostics,
         "answer_record": answer_record,
         "error": error,
     }
@@ -1084,7 +1092,7 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="resume an existing --run-id and retry only unfinished/failed questions",
     )
-    parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=1)
+    parser.add_argument("--max-attempts", type=int, choices=range(1, 6), default=2)
     parser.add_argument("--answer-rtol", type=float, default=DEFAULT_ANSWER_RTOL)
     parser.add_argument("--answer-atol", type=float, default=DEFAULT_ANSWER_ATOL)
     parser.add_argument("--verbose", action="store_true")

@@ -66,7 +66,7 @@ Invoking the retrieval+answer graph directly:
 ```python
 from src.graph import graph
 
-result = graph.invoke({"question": query_text, "max_attempts": 1})
+result = graph.invoke({"question": query_text, "max_attempts": 2})
 answer = result["answer_record"]
 ```
 
@@ -119,8 +119,8 @@ match_question -> parse_query -> retrieve_tables -> rerank_tables -> select_tabl
   from its columns and relevant rows. `rerank_tables_node` sends that same bounded context
   contract used by the benchmark to FPT `bge-reranker-v2-m3` and keeps top 20. The call is strict,
   retries transient failures three times, and has no quality-degrading fallback. `select_tables_node`
-  then uses two LLM scouts plus a final high-recall selector to prune for the planner with a hard
-  cap of 18. There is no heuristic 30-table shortlist. The offline manifest is not read at runtime.
+  then uses two LLM scouts plus a final exact selector to prune for the planner with minimal required
+  tables. There is no heuristic 30-table shortlist. The offline manifest is not read at runtime.
 - `load_tables_node` reads the retrieved tables' CSVs into DataFrames (aliased `df_1`, `df_2`,
   ...) and builds a compact JSON schema description (columns, dtypes, sample rows) for the
   generator prompt.

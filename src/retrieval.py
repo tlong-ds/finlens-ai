@@ -50,7 +50,6 @@ FPT_RERANK_TOP_N = 20
 FPT_RERANK_DOCUMENT_MAX_CHARS = 6_000
 RERANK_SCOUT_COUNT = 2
 RERANK_SCOUT_OUTPUT_MAX = 8
-RERANK_OUTPUT_MIN = 8
 RERANK_OUTPUT_MAX = 18
 RERANK_FINALIST_LEXICAL_RESCUE_MAX = 8
 RERANK_FINALIST_LEXICAL_RESCUE_PER_BUCKET = 2
@@ -119,6 +118,23 @@ class TransientRetrievalError(RetrievalError):
 
 class RerankerError(RuntimeError):
     """Raised when table reranking fails."""
+
+
+class SelectorResponseError(ValueError):
+    """Raised when a final selector response violates the coverage contract."""
+
+    def __init__(self, errors: Sequence[str], coverage_status: Mapping[str, Any]):
+        self.errors = list(errors)
+        self.coverage_status = dict(coverage_status)
+        super().__init__("; ".join(self.errors))
+
+
+class SelectorSelectionError(RerankerError):
+    """Raised after the bounded correction fails, retaining diagnostics."""
+
+    def __init__(self, message: str, diagnostics: Mapping[str, Any]):
+        self.diagnostics = dict(diagnostics)
+        super().__init__(message)
 
 
 def build_qdrant_filter(
@@ -559,15 +575,101 @@ def attach_rerank_context(
     return _attach_context_to_validated(question, _validate_candidates(candidates))
 
 
-def _fpt_candidate_document(candidate: Mapping[str, Any]) -> str:
-    """Serialize the exact bounded evidence contract used by the FPT benchmark."""
+def _fpt_candidate_document(
+    question: str,
+    candidate: Mapping[str, Any],
+) -> str:
+    """Pack valid, query-prioritized JSON within the FPT document limit."""
     metadata = candidate["metadata"]
+    raw_context = candidate["rerank_context"]
+    if not isinstance(raw_context, Mapping):
+        raise RerankerError("FPT candidate rerank_context must be an object")
+
+    match_summary = _build_match_summary(question, raw_context)
+    context: dict[str, Any] = {
+        "match_summary": match_summary,
+        "columns": list(raw_context.get("columns") or []),
+        "table_titles": list(raw_context.get("table_titles") or []),
+        "row_count": raw_context.get("row_count", 0),
+        "detailed_rows": [],
+        "row_catalog": [],
+    }
     payload = {
         "table_type": metadata.get("table_type"),
         "index_text": metadata.get("index_text", ""),
-        "context": candidate["rerank_context"],
+        "context": context,
     }
-    return json.dumps(payload, ensure_ascii=False)[:FPT_RERANK_DOCUMENT_MAX_CHARS]
+
+    def serialize() -> str:
+        return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+
+    serialized = serialize()
+    if len(serialized) > FPT_RERANK_DOCUMENT_MAX_CHARS:
+        raise RerankerError(
+            "FPT required table metadata exceeds the 6000-character document limit"
+        )
+
+    prioritized_row_numbers = [
+        row.get("row")
+        for name in ("exact_phrase_rows", "strong_overlap_rows")
+        for row in match_summary.get(name, [])
+        if isinstance(row, Mapping)
+    ]
+    priority_by_row = {
+        row_number: position
+        for position, row_number in enumerate(prioritized_row_numbers)
+    }
+
+    raw_detailed = raw_context.get("detailed_rows")
+    detailed_rows = (
+        [dict(row) for row in raw_detailed if isinstance(row, Mapping)]
+        if isinstance(raw_detailed, Sequence)
+        and not isinstance(raw_detailed, (str, bytes))
+        else []
+    )
+    detailed_rows = [
+        row
+        for _, row in sorted(
+            enumerate(detailed_rows),
+            key=lambda item: (
+                priority_by_row.get(
+                    item[1].get("row"), len(priority_by_row)
+                ),
+                item[0],
+            ),
+        )
+    ]
+
+    raw_catalog = raw_context.get("row_catalog")
+    row_catalog = (
+        [dict(row) for row in raw_catalog if isinstance(row, Mapping)]
+        if isinstance(raw_catalog, Sequence)
+        and not isinstance(raw_catalog, (str, bytes))
+        else []
+    )
+    row_catalog = [
+        row
+        for _, row in sorted(
+            enumerate(row_catalog),
+            key=lambda item: (
+                priority_by_row.get(
+                    item[1].get("row"), len(priority_by_row)
+                ),
+                item[0],
+            ),
+        )
+    ]
+
+    for field, rows in (("detailed_rows", detailed_rows), ("row_catalog", row_catalog)):
+        packed_rows = context[field]
+        for row in rows:
+            packed_rows.append(row)
+            candidate_serialized = serialize()
+            if len(candidate_serialized) > FPT_RERANK_DOCUMENT_MAX_CHARS:
+                packed_rows.pop()
+                break
+            serialized = candidate_serialized
+    return serialized
 
 
 def rerank_with_fpt(
@@ -591,7 +693,7 @@ def rerank_with_fpt(
     )
     ranked_pairs = rerank_documents(
         question,
-        [_fpt_candidate_document(candidate) for candidate in enriched],
+        [_fpt_candidate_document(question, candidate) for candidate in enriched],
         top_n=FPT_RERANK_TOP_N,
     )
     result: list[Candidate] = []
@@ -829,7 +931,7 @@ def _dynamic_output_cap(
     coverage_cell_count: int,
     finalist_count: int,
 ) -> int:
-    """Allow one slot per declared coverage cell without exceeding the hard cap."""
+    """Calculate minimal exact cap from required buckets and operand coverage."""
     if (
         required_bucket_count < 1
         or coverage_cell_count < 0
@@ -839,7 +941,7 @@ def _dynamic_output_cap(
     return min(
         finalist_count,
         RERANK_OUTPUT_MAX,
-        max(RERANK_OUTPUT_MIN, required_bucket_count, coverage_cell_count),
+        max(1, required_bucket_count, coverage_cell_count),
     )
 
 
@@ -1022,70 +1124,95 @@ def _ensure_nomination_bucket_coverage(
     return selected
 
 
-def _salvage_final_response(
+def _validate_final_response(
     response: Mapping[str, Any],
     by_key: Mapping[str, Mapping[str, Any]],
     bucket_by_candidate_key: Mapping[str, str],
     available_bucket_keys: Sequence[str],
+    coverage_locked_bucket_keys: Sequence[str],
+    maximum: int,
 ) -> dict[str, Any]:
-    """Salvage the structured final decision without inventing required buckets."""
+    """Reject any final decision that does not prove exact concept coverage."""
+    errors: list[str] = []
+    expected_fields = {
+        "required_bucket_keys",
+        "bucket_requirements",
+        "ranked_selections",
+    }
+    unexpected_fields = sorted(set(response) - expected_fields)
+    missing_fields = sorted(expected_fields - set(response))
+    if unexpected_fields:
+        errors.append("key không được phép: " + ", ".join(unexpected_fields))
+    if missing_fields:
+        errors.append("thiếu key: " + ", ".join(missing_fields))
+
     raw_required = response.get("required_bucket_keys")
     if not isinstance(raw_required, list):
-        raise ValueError("required_bucket_keys phải là một mảng")
+        errors.append("required_bucket_keys phải là một mảng")
+        raw_required = []
     available = set(available_bucket_keys)
     required_bucket_keys: list[str] = []
-    dropped_required = 0
     for raw_key in raw_required:
-        if (
-            not isinstance(raw_key, str)
-            or raw_key not in available
-            or raw_key in required_bucket_keys
-        ):
-            dropped_required += 1
+        if not isinstance(raw_key, str) or raw_key not in available:
+            errors.append(f"required bucket không hợp lệ: {raw_key!r}")
+            continue
+        if raw_key in required_bucket_keys:
+            errors.append(f"required bucket bị lặp: {raw_key}")
             continue
         required_bucket_keys.append(raw_key)
     if not required_bucket_keys:
-        raise ValueError("Final LLM không trả required bucket hợp lệ")
+        errors.append("không có required bucket hợp lệ")
+    missing_locked_buckets = sorted(
+        set(coverage_locked_bucket_keys) - set(required_bucket_keys)
+    )
+    if missing_locked_buckets:
+        errors.append(
+            "thiếu coverage_locked bucket: " + ", ".join(missing_locked_buckets)
+        )
 
     raw_requirements = response.get("bucket_requirements")
     if not isinstance(raw_requirements, list):
+        errors.append("bucket_requirements phải là một mảng")
         raw_requirements = []
     requirements: list[dict[str, Any]] = []
     seen_requirement_buckets: set[str] = set()
     concept_bucket_by_key: dict[str, str] = {}
-    invalid_requirements = 0
     for raw_requirement in raw_requirements:
         if not isinstance(raw_requirement, Mapping):
-            invalid_requirements += 1
+            errors.append("bucket_requirement phải là object")
             continue
         bucket_key = raw_requirement.get("bucket_key")
-        if (
-            not isinstance(bucket_key, str)
-            or bucket_key not in required_bucket_keys
-            or bucket_key in seen_requirement_buckets
-        ):
-            invalid_requirements += 1
+        if not isinstance(bucket_key, str) or bucket_key not in required_bucket_keys:
+            errors.append(f"requirement ngoài required bucket: {bucket_key!r}")
+            continue
+        if bucket_key in seen_requirement_buckets:
+            errors.append(f"bucket_requirement bị lặp: {bucket_key}")
             continue
         raw_concepts = raw_requirement.get("concepts")
         if not isinstance(raw_concepts, list):
+            errors.append(f"concepts của {bucket_key} phải là một mảng")
             raw_concepts = []
+        if not raw_concepts:
+            errors.append(f"required bucket không khai báo concept: {bucket_key}")
         concepts: list[dict[str, str]] = []
         for raw_concept in raw_concepts:
             if not isinstance(raw_concept, Mapping):
-                invalid_requirements += 1
+                errors.append(f"concept của {bucket_key} phải là object")
                 continue
             concept_key = raw_concept.get("concept_key")
             description = raw_concept.get("description")
             role = raw_concept.get("role")
-            if (
-                not isinstance(concept_key, str)
-                or not concept_key.strip()
-                or concept_key in concept_bucket_by_key
-                or not isinstance(description, str)
-                or not description.strip()
-                or role not in RERANK_CONCEPT_ROLES
-            ):
-                invalid_requirements += 1
+            if not isinstance(concept_key, str) or not concept_key.strip():
+                errors.append(f"concept_key rỗng/không hợp lệ trong {bucket_key}")
+                continue
+            if concept_key in concept_bucket_by_key:
+                errors.append(f"concept_key bị lặp: {concept_key}")
+                continue
+            if not isinstance(description, str) or not description.strip():
+                errors.append(f"concept thiếu description: {concept_key}")
+                continue
+            if role not in RERANK_CONCEPT_ROLES:
+                errors.append(f"concept role không hợp lệ: {concept_key}")
                 continue
             concept_bucket_by_key[concept_key] = bucket_key
             concepts.append(
@@ -1097,69 +1224,120 @@ def _salvage_final_response(
             )
         seen_requirement_buckets.add(bucket_key)
         requirements.append({"bucket_key": bucket_key, "concepts": concepts})
-    for bucket_key in required_bucket_keys:
-        if bucket_key not in seen_requirement_buckets:
-            requirements.append({"bucket_key": bucket_key, "concepts": []})
+    missing_requirement_buckets = sorted(
+        set(required_bucket_keys) - seen_requirement_buckets
+    )
+    if missing_requirement_buckets:
+        errors.append(
+            "required bucket thiếu requirement: "
+            + ", ".join(missing_requirement_buckets)
+        )
 
     raw_selections = response.get("ranked_selections")
     if not isinstance(raw_selections, list):
+        errors.append("ranked_selections phải là một mảng")
         raw_selections = []
     selected_keys: list[str] = []
     covered_concepts_by_key: dict[str, list[str]] = {}
-    invalid_selections = 0
+    empty_coverage_candidate_keys: list[str] = []
     for raw_selection in raw_selections:
         if not isinstance(raw_selection, Mapping):
-            invalid_selections += 1
+            errors.append("ranked_selection phải là object")
             continue
         candidate_key = raw_selection.get("candidate_key")
-        if (
-            not isinstance(candidate_key, str)
-            or candidate_key not in by_key
-            or candidate_key in selected_keys
-        ):
-            invalid_selections += 1
+        if not isinstance(candidate_key, str) or candidate_key not in by_key:
+            errors.append(f"candidate_key không xác định: {candidate_key!r}")
+            continue
+        if candidate_key in selected_keys:
+            errors.append(f"candidate_key bị lặp: {candidate_key}")
             continue
         bucket_key = bucket_by_candidate_key[candidate_key]
         if bucket_key not in required_bucket_keys:
-            invalid_selections += 1
+            errors.append(
+                f"candidate {candidate_key} nằm ngoài required bucket {bucket_key}"
+            )
             continue
         raw_covered = raw_selection.get("covered_concept_keys")
         if not isinstance(raw_covered, list):
+            errors.append(f"covered_concept_keys của {candidate_key} phải là mảng")
             raw_covered = []
+        if not raw_covered:
+            empty_coverage_candidate_keys.append(candidate_key)
+            errors.append(f"candidate không cover concept nào: {candidate_key}")
         covered: list[str] = []
         for concept_key in raw_covered:
-            if (
-                isinstance(concept_key, str)
-                and concept_bucket_by_key.get(concept_key) == bucket_key
-                and concept_key not in covered
-            ):
-                covered.append(concept_key)
-            else:
-                invalid_selections += 1
+            if not isinstance(concept_key, str) or concept_key not in concept_bucket_by_key:
+                errors.append(
+                    f"candidate {candidate_key} cover concept không xác định: {concept_key!r}"
+                )
+                continue
+            if concept_bucket_by_key[concept_key] != bucket_key:
+                errors.append(
+                    f"candidate {candidate_key} cover concept ngoài bucket: {concept_key}"
+                )
+                continue
+            if concept_key in covered:
+                errors.append(
+                    f"candidate {candidate_key} lặp concept coverage: {concept_key}"
+                )
+                continue
+            covered.append(concept_key)
         selected_keys.append(candidate_key)
         covered_concepts_by_key[candidate_key] = covered
+
+    if not selected_keys:
+        errors.append("không có ranked_selection hợp lệ")
+    if len(selected_keys) > maximum:
+        errors.append(
+            f"số selection {len(selected_keys)} vượt giới_hạn_cứng {maximum}"
+        )
 
     covered_concepts = {
         concept_key
         for values in covered_concepts_by_key.values()
         for concept_key in values
     }
-    if concept_bucket_by_key and not selected_keys:
-        raise ValueError(
-            "Final LLM khai báo concepts nhưng không trả ranked_selection hợp lệ"
+    uncovered_concept_keys = sorted(set(concept_bucket_by_key) - covered_concepts)
+    if uncovered_concept_keys:
+        errors.append(
+            "concept chưa được cover: " + ", ".join(uncovered_concept_keys)
         )
+    selected_bucket_keys = list(
+        dict.fromkeys(bucket_by_candidate_key[key] for key in selected_keys)
+    )
+    unrepresented_required_bucket_keys = sorted(
+        set(required_bucket_keys) - set(selected_bucket_keys)
+    )
+    if unrepresented_required_bucket_keys:
+        errors.append(
+            "required bucket chưa có selection: "
+            + ", ".join(unrepresented_required_bucket_keys)
+        )
+
+    coverage_status = {
+        "valid": not errors,
+        "errors": errors,
+        "required_bucket_keys": required_bucket_keys,
+        "coverage_locked_bucket_keys": list(coverage_locked_bucket_keys),
+        "missing_locked_bucket_keys": missing_locked_buckets,
+        "declared_concept_keys": list(concept_bucket_by_key),
+        "covered_concept_keys": sorted(covered_concepts),
+        "uncovered_concept_keys": uncovered_concept_keys,
+        "selected_candidate_keys": selected_keys,
+        "empty_coverage_candidate_keys": empty_coverage_candidate_keys,
+        "selected_bucket_keys": selected_bucket_keys,
+        "unrepresented_required_bucket_keys": unrepresented_required_bucket_keys,
+    }
+    if errors:
+        raise SelectorResponseError(errors, coverage_status)
+
     return {
         "required_bucket_keys": required_bucket_keys,
         "bucket_requirements": requirements,
         "selected_keys": selected_keys,
         "covered_concepts_by_key": covered_concepts_by_key,
-        "uncovered_concept_keys": sorted(
-            set(concept_bucket_by_key) - covered_concepts
-        ),
         "coverage_cell_count": len(concept_bucket_by_key),
-        "dropped_required_bucket_values": dropped_required,
-        "invalid_requirement_values": invalid_requirements,
-        "invalid_selection_values": invalid_selections,
+        "coverage_status": coverage_status,
     }
 
 
@@ -1299,11 +1477,60 @@ def _run_selector_scout(
         return scout_response, [], str(exc)
 
 
+def _bounded_selector_response(
+    response: Mapping[str, Any] | None,
+) -> dict[str, Any] | None:
+    """Keep only bounded expected selector fields in validation artifacts."""
+    if response is None:
+        return None
+
+    def bounded(value: Any, depth: int = 0) -> Any:
+        if depth >= 5:
+            return "<depth-limited>"
+        if isinstance(value, str):
+            return value[:500]
+        if isinstance(value, Mapping):
+            return {
+                str(key)[:100]: bounded(item, depth + 1)
+                for key, item in list(value.items())[:25]
+            }
+        if isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+            return [bounded(item, depth + 1) for item in list(value)[:25]]
+        if value is None or isinstance(value, (bool, int, float)):
+            return value
+        return str(value)[:500]
+
+    return {
+        key: bounded(response.get(key))
+        for key in (
+            "required_bucket_keys",
+            "bucket_requirements",
+            "ranked_selections",
+        )
+        if key in response
+    }
+
+
+def _bounded_scout_response(
+    response: Mapping[str, Any] | None,
+) -> dict[str, Any] | None:
+    if response is None:
+        return None
+    raw_keys = response.get("ranked_candidate_keys")
+    return {
+        "ranked_candidate_keys": (
+            [str(key)[:100] for key in raw_keys[:FPT_RERANK_TOP_N]]
+            if isinstance(raw_keys, list)
+            else None
+        )
+    }
+
+
 def select_tables_with_diagnostics(
     question: str,
     candidates: Sequence[Mapping[str, Any]],
 ) -> tuple[list[Candidate], dict[str, Any]]:
-    """Prune FPT top-20 candidates for the planner with recall-first diagnostics."""
+    """Select minimal exact tables from FPT top-20 candidates with diagnostics."""
     if not question.strip():
         raise ValueError("question must not be empty")
     if not candidates:
@@ -1335,7 +1562,6 @@ def select_tables_with_diagnostics(
     scout_prompt_chars: list[int] = []
     scout_valid_counts: list[int] = []
     scout_diagnostics: list[dict[str, Any]] = []
-    scout_prompt_payloads: list[dict[str, Any]] = []
     scout_jobs: list[
         tuple[int, str, dict[str, Mapping[str, Any]], int]
     ] = []
@@ -1349,7 +1575,6 @@ def select_tables_with_diagnostics(
             chunk,
             scout_maximum,
         )
-        scout_prompt_payloads.append(json.loads(scout_prompt))
         scout_prompt_chars.append(len(scout_prompt))
         chunk_by_key = {
             str(candidate["candidate_key"]): by_key[str(candidate["candidate_key"])]
@@ -1410,7 +1635,7 @@ def select_tables_with_diagnostics(
             {
                 "scout_index": scout_index,
                 "input_keys": [str(item["candidate_key"]) for item in chunk],
-                "response": dict(scout_response) if scout_response is not None else None,
+                "response": _bounded_scout_response(scout_response),
                 "nominated_keys": scout_keys,
                 "error": scout_error,
             }
@@ -1421,9 +1646,8 @@ def select_tables_with_diagnostics(
         key=lambda key: nomination_priorities[key],
     )
 
-    finalist_seed_keys = list(dict.fromkeys([*nominated_keys, *lexical_rescue_keys]))
     finalist_keys = _ensure_nomination_bucket_coverage(
-        finalist_seed_keys,
+        list(dict.fromkeys([*nominated_keys, *lexical_rescue_keys])),
         by_key,
         bucket_by_key,
         available_bucket_keys,
@@ -1432,122 +1656,112 @@ def select_tables_with_diagnostics(
         str(candidate["candidate_key"]): candidate
         for candidate in prompt_candidates
     }
-    final_prompt_candidates = [
-        prompt_candidate_by_key[key]
-        for key in finalist_keys
-    ]
+    final_prompt_candidates = [prompt_candidate_by_key[key] for key in finalist_keys]
     final_by_key = {key: by_key[key] for key in finalist_keys}
-    final_bucket_by_key = {
-        key: bucket_by_key[key]
-        for key in finalist_keys
-    }
+    final_bucket_by_key = {key: bucket_by_key[key] for key in finalist_keys}
     hard_maximum = min(RERANK_OUTPUT_MAX, len(final_prompt_candidates))
-    final_prompt = build_selector_prompt(
-        question,
-        available_buckets,
-        final_prompt_candidates,
-        hard_maximum,
-        coverage_locked_bucket_keys,
-    )
     final_response: Mapping[str, Any] | None = None
     final_decision: dict[str, Any] | None = None
-    final_error: str | None = None
-    try:
-        final_response = generate_structured(
-            final_prompt,
-            system_prompt=SELECTOR_SYSTEM_PROMPT,
-            native=False,
+    final_attempts: list[dict[str, Any]] = []
+    final_prompt_chars: list[int] = []
+    feedback = ""
+    previous_response: Mapping[str, Any] | None = None
+    for final_attempt in range(1, 3):
+        final_response = None
+        final_prompt = build_selector_prompt(
+            question,
+            available_buckets,
+            final_prompt_candidates,
+            hard_maximum,
+            coverage_locked_bucket_keys,
+            feedback,
+            previous_response,
         )
-        final_decision = _salvage_final_response(
-            final_response,
-            final_by_key,
-            final_bucket_by_key,
-            available_bucket_keys,
+        final_prompt_chars.append(len(final_prompt))
+        coverage_status: dict[str, Any]
+        attempt_error: str | None = None
+        try:
+            final_response = generate_structured(
+                final_prompt,
+                system_prompt=SELECTOR_SYSTEM_PROMPT,
+                native=False,
+            )
+            final_decision = _validate_final_response(
+                final_response,
+                final_by_key,
+                final_bucket_by_key,
+                available_bucket_keys,
+                coverage_locked_bucket_keys,
+                hard_maximum,
+            )
+            coverage_status = dict(final_decision["coverage_status"])
+        except SelectorResponseError as exc:
+            final_decision = None
+            coverage_status = dict(exc.coverage_status)
+            attempt_error = str(exc)
+        except LLMResponseError as exc:
+            final_decision = None
+            attempt_error = str(exc)
+            coverage_status = {
+                "valid": False,
+                "errors": [attempt_error],
+                "required_bucket_keys": [],
+                "coverage_locked_bucket_keys": coverage_locked_bucket_keys,
+                "declared_concept_keys": [],
+                "covered_concept_keys": [],
+                "uncovered_concept_keys": [],
+                "selected_candidate_keys": [],
+                "empty_coverage_candidate_keys": [],
+                "selected_bucket_keys": [],
+                "unrepresented_required_bucket_keys": coverage_locked_bucket_keys,
+            }
+        final_attempts.append(
+            {
+                "attempt": final_attempt,
+                "response": _bounded_selector_response(final_response),
+                "coverage_status": coverage_status,
+                "error": attempt_error,
+            }
         )
-    except (LLMResponseError, ValueError) as exc:
-        final_error = str(exc)
-        logger.warning(
-            "Final selector output is unusable; using scout nominations: %s",
-            exc,
+        if final_decision is not None:
+            break
+        if final_attempt == 1:
+            previous_response = final_response
+            feedback = (
+                "Phản hồi trước bị từ chối. Sửa đúng các lỗi coverage sau, đặc biệt "
+                "mọi concept chưa cover, candidate coverage rỗng và bucket còn thiếu: "
+                + (attempt_error or "response không đúng schema")
+            )[:4_000]
+
+    correction_attempt = {
+        "attempted": len(final_attempts) == 2,
+        "feedback": feedback or None,
+        "initial_response": (
+            final_attempts[0]["response"] if len(final_attempts) == 2 else None
+        ),
+        "succeeded": final_decision is not None,
+    }
+    if final_decision is None:
+        failure_diagnostics = {
+            "finalist_keys": finalist_keys,
+            "final_response": _bounded_selector_response(final_response),
+            "selected_keys": [],
+            "coverage_status": final_attempts[-1]["coverage_status"],
+            "correction_attempt": correction_attempt,
+            "selection_source": {},
+        }
+        raise SelectorSelectionError(
+            "Final selector vẫn vi phạm coverage contract sau một lần sửa: "
+            + str(final_attempts[-1]["error"] or "response không hợp lệ"),
+            failure_diagnostics,
         )
 
-    completion_sources: dict[str, str] = {}
-    unresolved_required_bucket_keys: list[str] = []
-    policy_added_required_bucket_keys: list[str] = []
-    if final_decision is not None:
-        final_keys = list(final_decision["selected_keys"])
-        required_bucket_keys = list(final_decision["required_bucket_keys"])
-        policy_added_required_bucket_keys = [
-            key
-            for key in coverage_locked_bucket_keys
-            if key not in required_bucket_keys
-        ]
-        required_bucket_keys.extend(policy_added_required_bucket_keys)
-        bucket_requirements = list(final_decision["bucket_requirements"])
-        bucket_requirements.extend(
-            {"bucket_key": key, "concepts": []}
-            for key in policy_added_required_bucket_keys
-        )
-        output_cap = _dynamic_output_cap(
-            len(required_bucket_keys),
-            int(final_decision["coverage_cell_count"]),
-            len(finalist_keys),
-        )
-        (
-            selected_keys,
-            completion_sources,
-            unresolved_required_bucket_keys,
-        ) = _complete_required_bucket_coverage(
-            final_keys,
-            nominated_keys,
-            lexical_rescue_keys,
-            finalist_keys,
-            final_bucket_by_key,
-            required_bucket_keys,
-            coverage_locked_bucket_keys,
-        )
-        selected_keys = _trim_coverage_aware(
-            selected_keys,
-            final_bucket_by_key,
-            required_bucket_keys,
-            final_decision["covered_concepts_by_key"],
-            output_cap,
-        )
-        source_by_key = {key: "llm" for key in final_keys}
-        source_by_key.update(completion_sources)
-    else:
-        if not nominated_keys and not coverage_locked_bucket_keys:
-            raise RerankerError(
-                "Final selector và cả hai scout đều không trả candidate hợp lệ"
-            )
-        required_bucket_keys = list(coverage_locked_bucket_keys)
-        bucket_requirements = []
-        final_keys = []
-        output_cap = min(RERANK_OUTPUT_MAX, len(finalist_keys))
-        selected_keys = nominated_keys[:output_cap]
-        source_by_key = {key: "scout_fallback" for key in selected_keys}
-        if required_bucket_keys:
-            (
-                selected_keys,
-                completion_sources,
-                unresolved_required_bucket_keys,
-            ) = _complete_required_bucket_coverage(
-                selected_keys,
-                nominated_keys,
-                lexical_rescue_keys,
-                finalist_keys,
-                final_bucket_by_key,
-                required_bucket_keys,
-                coverage_locked_bucket_keys,
-            )
-            selected_keys = _trim_coverage_aware(
-                selected_keys,
-                final_bucket_by_key,
-                required_bucket_keys,
-                {},
-                output_cap,
-            )
-            source_by_key.update(completion_sources)
+    selected_keys = list(final_decision["selected_keys"])
+    required_bucket_keys = list(final_decision["required_bucket_keys"])
+    bucket_requirements = list(final_decision["bucket_requirements"])
+    output_cap = hard_maximum
+    selection_source = "llm_correction" if len(final_attempts) == 2 else "llm"
+    source_by_key = {key: selection_source for key in selected_keys}
 
     result = _materialize_ranking(selected_keys, by_key, source_by_key)
     candidate_catalog = {
@@ -1573,47 +1787,39 @@ def select_tables_with_diagnostics(
         "available_buckets": available_buckets,
         "candidate_catalog": candidate_catalog,
         "selector_input_keys": list(by_key),
-        "scout_prompts": scout_prompt_payloads,
         "scouts": scout_diagnostics,
         "scout_nominated_keys": nominated_keys,
         "lexical_finalist_keys": lexical_rescue_keys,
         "finalist_keys": finalist_keys,
-        "final_prompt": json.loads(final_prompt),
-        "final_response": dict(final_response) if final_response is not None else None,
-        "final_error": final_error,
+        "final_response": _bounded_selector_response(final_response),
         "coverage_locked_bucket_keys": coverage_locked_bucket_keys,
         "coverage_lock_reasons": coverage_lock_reasons,
-        "policy_added_required_bucket_keys": policy_added_required_bucket_keys,
         "required_bucket_keys": required_bucket_keys,
         "bucket_requirements": bucket_requirements,
-        "uncovered_concept_keys": (
-            final_decision["uncovered_concept_keys"] if final_decision else []
-        ),
-        "final_llm_keys": final_keys,
-        "coverage_completion": completion_sources,
-        "unresolved_required_bucket_keys": unresolved_required_bucket_keys,
+        "coverage_status": final_decision["coverage_status"],
+        "correction_attempt": correction_attempt,
         "selected_keys": selected_keys,
+        "selection_source": source_by_key,
         "output_cap": output_cap,
     }
     logger.info(
         "Table selection completed: input=%d buckets=%d scout_chunks=%s "
         "scout_prompt_chars=%s scout_valid=%s finalists=%d final_prompt_chars=%d "
         "lexical_rescue=%d coverage_locked=%s required_buckets=%s output_cap=%d "
-        "final_valid=%d coverage_added=%d unresolved=%s output=%d",
+        "final_valid=%d correction_attempted=%s output=%d",
         len(candidates),
         len(available_buckets),
         [len(chunk) for chunk in scout_chunks],
         scout_prompt_chars,
         scout_valid_counts,
         len(finalist_keys),
-        len(final_prompt),
+        final_prompt_chars[-1],
         len(lexical_rescue_keys),
         coverage_locked_bucket_keys,
         required_bucket_keys,
         output_cap,
-        len(final_keys),
-        len(completion_sources),
-        unresolved_required_bucket_keys,
+        len(selected_keys),
+        correction_attempt["attempted"],
         len(result),
     )
     logger.debug(
