@@ -1,0 +1,300 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue!80!black}\bfseries,
+    commentstyle=\color{green!50!black}\itshape,
+    stringstyle=\color{red!70!black}
+}
+
+\begin{document}
+
+\title{FinLens: A Robust Text-to-Pandas Architecture with Concept Coverage Table Selection and AST-Governed Sandboxed Execution for Financial Statement Question Answering}
+
+\author{FinLens AI Research Team}
+
+\markboth{FinLens Technical Architecture Documentation}%
+{FinLens Technical Architecture Documentation}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+Answering numerical questions over real-world corporate financial statements requires complex multi-table reasoning, fine-grained tabular disambiguation, accounting unit harmonization, and precise programmatic computation. Standard retrieval-augmented generation (RAG) approaches frequently stumble on financial benchmarks due to two fundamental challenges: (1) semantic similarity ranking cannot guarantee computational completeness when queries require multiple distinct operands (e.g., combining balance sheet liabilities with income statement revenues), and (2) unconstrained large language model (LLM) code generation regularly introduces precision degradation, unauthorized schema hallucinations, and silent unit discrepancies. In this paper, we present the core technical architecture of \textbf{FinLens}, an end-to-end Text-to-Pandas system tailored for complex financial question answering. We structure the system around an online reasoning and execution state graph featuring layered cross-encoder reranking, a two-stage table selection mechanism powered by parallel scouts and a formal \textit{Concept Coverage Matrix}, grounded execution planning with dynamic row hydration, multi-pass Abstract Syntax Tree (AST) validation, and hardware-isolated microVM sandboxed execution with complete provenance tracking. We also detail the accompanying dataset characteristics, offline extraction pipelines across four regulatory accounting domains, and the empirical evaluation protocol.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Financial Question Answering, Text-to-Pandas, Table Retrieval, Cross-Encoder Reranking, Concept Coverage Matrix, AST Code Validation, Sandboxed Execution.
+\end{IEEEkeywords}}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+\IEEEPARstart{Q}{uestion} answering over corporate financial statements represents a critical frontier in document understanding and natural language reasoning~\cite{chen2021finqa,zhu2021tat,islam2023financebench}. Unlike open-domain question answering, financial queries are inherently quantitative, multi-step, and bound by strict accounting standards. Users frequently ask for profitability ratios, capital structure comparisons across peer enterprises, or consolidated versus separate entity indicators.
+
+Solving such queries over annual and quarterly disclosures presents three fundamental architectural hurdles:
+\begin{enumerate}
+    \item \textbf{Schema Heterogeneity \& Extraction Noise}: Corporate filings extracted from scanned PDF or HTML documents exhibit varying row label depths, note references, unit scales (e.g., raw currency vs. millions vs. billions), and non-standard tabular structures that resist rigid SQL schema assumptions.
+    \item \textbf{Computational Completeness vs. Semantic Similarity}: Standard dense retrievers and cross-encoders optimize for textual relevance rather than mathematical sufficiency. A financial calculation such as $R = \frac{\text{Current Assets}}{\text{Current Liabilities}}$ requires \textit{both} accounting concepts; returning multiple redundant asset tables while omitting liabilities results in computational failure.
+    \item \textbf{Code Generation Vulnerabilities}: Directly executing LLM-generated Python/Pandas logic can introduce silent precision drift from unrequested rounding, ungrounded access to metadata properties, and hazardous host execution environments~\cite{gao2023pal,chen2023pot,agache2020firecracker}.
+\end{enumerate}
+
+To overcome these challenges, \textbf{FinLens} adopts a neuro-symbolic Text-to-Pandas paradigm that pairs modern language models with deterministic compile-time and run-time guardrails. In this paper, we document the system's end-to-end architecture, dataset foundation, and evaluation framework.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/system_topology.png}
+\caption{\textbf{FinLens End-to-End System Topology.} The online inference pipeline transitions from upstream question parsing and hybrid retrieval through cross-encoder distillation, dual-scout selection, grounded planning, AST-governed code synthesis, and microVM execution with complete provenance tracking.}
+\label{fig:system_topology}
+\end{figure*}
+
+\section{System Architecture \& Online Inference}
+The FinLens online execution pipeline is formalized as an \textbf{Agentic StateGraph} state machine. The global execution context is governed by an immutable typed state container $\mathcal{S}$ (\texttt{RetrievalState}) containing the canonical user question $q$, active metadata filters $\mathcal{F}$, candidate table collections at progressive stages of distillation, isolated table DataFrames $\mathcal{D}$, planning context $\mathcal{P}$, generated code syntax $\mathcal{C}$, attempt counters, and execution feedback diagnostics.
+
+As shown in \Cref{fig:system_topology}, the architecture decouples specialized LLM reasoning agents from deterministic tools and execution environments across eight distinct stages:
+\begin{equation}
+\begin{aligned}
+    q &\xrightarrow{\text{Upstream}} \mathcal{T}_{80} \xrightarrow{\text{Rerank}} \mathcal{T}_{20} \xrightarrow{\text{Select}} \mathcal{T}^* \\
+      &\xrightarrow{\text{Load}} \mathcal{D} \xrightarrow{\text{Plan}} \mathcal{P} \xrightarrow{\text{Synthesize}} \mathcal{C} \underset{\text{Retry}}{\overset{\text{Execute}}{\rightleftharpoons}} \mathcal{A}
+\end{aligned}
+\end{equation}
+where $\mathcal{T}_{80}$ represents the top candidates from upstream hybrid retrieval, $\mathcal{T}_{20}$ denotes the cross-encoder reranked subset, $\mathcal{T}^*$ represents the minimal exact evidence tables, $\mathcal{D}$ denotes loaded memory-isolated DataFrames, $\mathcal{P}$ is the hydrated planning context, $\mathcal{C}$ is the validated AST-normalized Python script, and $\mathcal{A}$ is the verified final answer record.
+
+\subsection{Query Routing \& Hybrid Retrieval}
+Incoming queries are processed by a Query Router Agent that validates ticker symbols, reporting years (restricted to the canonical 2015--2025 window), and disclosure scopes (\textit{consolidated}, \textit{separate}, \textit{aggregated}). Candidate tables are retrieved using a hybrid strategy combining dense embedding search with BM25 lexical matching via Reciprocal Rank Fusion (RRF)~\cite{cormack2009reciprocal,robertson2009probabilistic} to produce a balanced pool of up to 80 candidate tables $\mathcal{T}_{80}$.
+
+\subsection{Cross-Encoder Reranking \& Context Packaging}
+To refine the initial candidate pool, FinLens deploys a multilingual cross-encoder reranker based on BGE-M3~\cite{chen2024bge}. Because full tabular CSVs exceed standard token windows, FinLens builds a layered contextual representation for each candidate table:
+\begin{itemize}
+    \item \textbf{Structural Header \& Metadata}: Extracted titles, reporting years, and column names.
+    \item \textbf{Complete Row Catalog}: A lightweight index mapping all row indices to standardized accounting line codes and normalized labels without truncation.
+    \item \textbf{Lexical Seed \& Neighbor Expansion}: Seed rows matching question tokens are expanded with immediate vertical neighbors $(r-1, r, r+1)$ to preserve subtotals and subsection hierarchy.
+    \item \textbf{Bounded Serialization}: High-signal match summaries are packed into a bounded document ($\le 6,000$ characters) for cross-encoder scoring, yielding the top 20 finalist tables ($\mathcal{T}_{20}$).
+\end{itemize}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/table_selection.png}
+\caption{\textbf{Two-Stage Table Selection Architecture.} Parallel scouts nominate high-recall candidate subsets, bolstered by an exact lexical rescue mechanism. The Concept Coverage Arbiter decomposes the query into formal accounting roles and strictly validates candidate-to-concept completeness before approving minimal evidence tables.}
+\label{fig:table_selection}
+\end{figure*}
+
+\subsection{Two-Stage Table Selection with Concept Coverage}
+To guarantee mathematical completeness, FinLens implements a two-stage selection mechanism governed by an explicit \textit{Concept Coverage Matrix} (\Cref{fig:table_selection}):
+\begin{enumerate}
+    \item \textbf{Parallel Scouting}: The 20 candidates are partitioned into balanced chunks across document buckets (ticker and year pairs), and two parallel LLM scouts nominate all candidates capable of providing at least one required operand.
+    \item \textbf{Lexical Rescue}: An out-of-band filter bypasses scout pruning for candidates containing exact multi-word indicator phrases from the question.
+    \item \textbf{Concept Coverage Arbiter}: The arbiter decomposes the question into financial concepts with explicit computational roles $\rho \in \mathcal{R}_{\text{roles}}$:
+    \begin{equation}
+        \mathcal{R}_{\text{roles}} = \left\{
+        \begin{array}{l}
+            \text{direct}, \, \text{numerator}, \, \text{denominator}, \\
+            \text{beginning\_balance}, \, \text{ending\_balance}, \\
+            \text{comparison\_operand}
+        \end{array}
+        \right\}
+    \end{equation}
+    Each concept must be bound to a candidate table covering the indicator. The arbiter enforces that no concepts remain uncovered, no orphan tables are selected, and multi-year/multi-ticker comparative buckets are structurally preserved. A correction sub-loop intercepts and fixes validation deficiencies within one attempt.
+\end{enumerate}
+
+\subsection{Grounded Planning \& Dynamic Row Hydration}
+Approved tables $\mathcal{T}^*$ are loaded into memory as isolated DataFrames $\mathcal{D} = \{ \text{df}_1: \mathbf{D}_1, \dots, \text{df}_m: \mathbf{D}_m \}$. A Planning Agent generates a four-field structured plan (\textit{evidence}, \textit{calculation}, \textit{unit\_conversion}, \textit{audit}) declaring exact row positions and operational purposes. If catalog rows outside the initial detailed preview are referenced, FinLens dynamically \textit{hydrates} their full numerical values from disk on demand, ensuring complete data access without prompt bloat.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/synthesis_and_sandbox.png}
+\caption{\textbf{AST-Governed Code Synthesis and Sandboxed Execution Workflow.} Generated Pandas code is subjected to an 8-pass static AST normalization and security guardrail pipeline before entering an isolated E2B microVM. Compiler errors and runtime exceptions trigger structured feedback for closed-loop self-correction.}
+\label{fig:synthesis_and_sandbox}
+\end{figure*}
+
+\subsection{AST-Governed Code Synthesis \& Multi-Pass Guardrails}
+The Code Synthesis Agent emits structured Python/Pandas logic $\mathcal{C}_{\text{raw}} = \{ \text{"pandas\_query"}: \text{str}, \, \text{"evidence\_variables"}: [\text{str}] \}$. Before execution, the code is parsed into an Abstract Syntax Tree (AST) and processed through an 8-pass normalization pipeline (\Cref{tab:ast_passes} and \Cref{fig:synthesis_and_sandbox}):
+\begin{itemize}
+    \item \textbf{Syntax \& Scalar Normalization}: Enforces parseable Python syntax and automatic assignment of the final scalar to \texttt{result}.
+    \item \textbf{Selector \& Unit Alignment}: Canonicalizes boolean filter literals (e.g., \texttt{'10.0'} $\rightarrow$ \texttt{'10'}) and automatically normalizes currency divisors ($10^6, 10^9, 10^{12}$) based on cell magnitudes.
+    \item \textbf{Security \& Precision Guards}: Intercepts and blocks unauthorized `.round()` invocations, ungrounded access to DataFrame metadata attributes (\texttt{df.metadata} / \texttt{df.attrs}), and improper ratio/difference formulas.
+\end{itemize}
+
+\begin{table*}[!t]
+\centering
+\caption{FinLens Multi-Pass AST Validation and Normalization Pipeline}
+\label{tab:ast_passes}
+\begin{tabular}{lllp{7.5cm}}
+\toprule
+\textbf{Pass} & \textbf{Validation Target} & \textbf{Action Type} & \textbf{Description \& Architectural Enforcement} \\
+\midrule
+1 & Syntax \& Envelope & Validation & Verifies parseable Python syntax and presence of required schema fields. \\
+2 & Scalar Assignment & Normalization & Ensures final value is assigned to \texttt{result}; converts bare trailing expressions to \texttt{result = expr}. \\
+3 & Name Resolution & Validation & Scans all \texttt{ast.Load} nodes to guarantee no undefined local variables exist before runtime. \\
+4 & Selector Alignment & Normalization / Rejection & Canonicalizes string and code filters against loaded DataFrame values; suggests valid context values on mismatch. \\
+5 & Unit Scale Normalizer & Normalization / Rejection & Aligns question currency units with cell magnitudes ($>10^{10}$ vs. $<10^9$); automatically inserts or corrects scale divisors. \\
+6 & Precision Guard & Rejection & Prohibits intermediate \texttt{.round()} calls unless the natural language question explicitly mandates rounding. \\
+7 & Metadata Isolation & Rejection & Traces variable assignments across all AST nodes and strictly blocks access to \texttt{df.metadata} or \texttt{df.attrs}. \\
+8 & Domain Semantics & Rejection & Verifies mathematical formulas: enforces $\times 100$ on percentage questions, requires subtraction for growth/difference, and ensures all selected aliases are utilized. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Sandboxed MicroVM Execution \& Dual-Layer Retries}
+Validated code is executed inside ephemeral Firecracker microVMs managed via E2B~\cite{agache2020firecracker}, with network access disabled (\texttt{allow\_internet\_access = False}) and a 5.0-second execution timeout. Results are extracted through a bounded two-step serialization protocol writing a verified scalar JSON payload ($\le 1,024$ bytes) to disk.
+
+The system incorporates a dual-layer fault-tolerance model:
+\begin{enumerate}
+    \item \textbf{Transient Retries}: Network and API hiccups are handled automatically by node-level retry policies without consuming semantic reasoning attempts.
+    \item \textbf{Semantic Retries}: AST validation rejections and runtime microVM exceptions are converted into structured diagnostic feedback and routed back to the Code Synthesis Agent (up to a configurable attempt limit $1 \le \text{max\_attempts} \le 5$).
+\end{enumerate}
+
+\subsection{Answer Provenance Assembly}
+Upon successful execution, FinLens constructs an immutable \texttt{answer\_record} that binds the final numeric answer to the original PDF document ID, the table start line within the document, the underlying CSV path, and the exact reproducible Pandas query.
+
+% =========================================================================
+% SECTION 3: DATASET & DATA PROCESSING PIPELINE (COLLABORATOR SECTION)
+% =========================================================================
+\section{Dataset \& Data Processing Pipeline}
+To support rigorous evaluation of numerical reasoning over Vietnamese corporate disclosures, the FinLens framework is grounded on the \textbf{ViFinQA} benchmark and an accompanying multi-stage offline ingestion pipeline.
+
+\subsection{ViFinQA Benchmark Characteristics}
+The ViFinQA dataset comprises complex quantitative questions formulated over official audited corporate financial statements spanning the 2015--2025 reporting period. The questions test a wide variety of financial analysis tasks, including direct single-line lookups, multi-table ratio computations, multi-year trend analysis, and comparative benchmarking across peer enterprises.
+
+\begin{table}[!t]
+\centering
+\caption{ViFinQA Dataset Statistics and Table Distribution (Placeholder)}
+\label{tab:dataset_stats}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lrr}
+\toprule
+\textbf{Metric / Category} & \textbf{Count / Value} & \textbf{Percentage} \\
+\midrule
+Total Evaluated Questions & [TBD] & 100.0\% \\
+Single-Table Questions & [TBD] & [TBD]\% \\
+Multi-Table / Ratio Questions & [TBD] & [TBD]\% \\
+Multi-Year Comparative Questions & [TBD] & [TBD]\% \\
+\midrule
+Total Corporate Filings & [TBD] & -- \\
+Standard Enterprises (Circular 200) & [TBD] & [TBD]\% \\
+Credit Institutions (Circular 49) & [TBD] & [TBD]\% \\
+Securities Companies (Circular 210/334) & [TBD] & [TBD]\% \\
+Insurance Companies (Circular 232) & [TBD] & [TBD]\% \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Offline Document Ingestion \& OCR Table Extraction}
+The raw inputs consist of multi-page scanned PDF filings and HTML corporate disclosures. An offline extraction pipeline performs document inventorying, layout analysis, optical character recognition (OCR), table boundary detection, and cell normalization. Extracted tables are converted into structured CSV files with standardized column names (\texttt{row\_label\_raw}, \texttt{item\_label\_norm}, \texttt{item\_code}, \texttt{note\_title}, and reporting period headers).
+
+\subsection{Regulatory Domain Classification \& Taxonomy Induction}
+Vietnamese accounting regulations prescribe distinct chart-of-accounts frameworks depending on the corporate entity type:
+\begin{itemize}
+    \item \textbf{General Enterprises (\textit{Doanh Nghiep - DN})}: Governed by Ministry of Finance Circular 200/2014/TT-BTC.
+    \item \textbf{Credit Institutions \& Commercial Banks (\textit{To Chuc Tin Dung - TCTD})}: Governed by Circular 49/2014/TT-NHNN.
+    \item \textbf{Securities Companies (\textit{Cong Ty Chung Khoan - CTCK})}: Governed by Circulars 210/2014/TT-BTC and 334/2016/TT-BTC.
+    \item \textbf{Insurance Enterprises (\textit{Bao Hiem - BH})}: Governed by Circular 232/2012/TT-BTC.
+\end{itemize}
+The offline pipeline automatically classifies each entity into its respective regulatory regime and induces hierarchical accounting taxonomies to map heterogeneous OCR labels to canonical financial concepts.
+
+\subsection{Hybrid Vector Indexing}
+Each normalized table is indexed into a hybrid vector store (Qdrant) utilizing dense embeddings alongside BM25 sparse indices, with payloads carrying ticker, fiscal year, disclosure type, regulatory domain, and induced accounting taxonomy tags.
+
+% =========================================================================
+% SECTION 4: EXPERIMENTS & BENCHMARK EVALUATION (COLLABORATOR SECTION)
+% =========================================================================
+\section{Experiments \& Benchmark Evaluation}
+
+\subsection{Experimental Setup \& Metrics}
+Evaluation is conducted across three primary quantitative metrics:
+\begin{itemize}
+    \item \textbf{Answer Accuracy (\%)}: Percentage of questions where the executed numerical result matches the ground-truth answer within a strict numerical tolerance ($\le 0.1\%$).
+    \item \textbf{Execution Success Rate (\%)}: Percentage of queries where the generated Pandas code successfully compiles and executes without sandbox exceptions.
+    \item \textbf{Evidence Retrieval $F_2$ Score}: Macro-averaged $F_2$ measure over retrieved and selected table identifiers, emphasizing recall of all necessary calculation operands.
+\end{itemize}
+
+\subsection{Main Benchmark Results}
+\Cref{tab:main_results} presents the comparative evaluation of FinLens against standard retrieval-augmented baseline architectures.
+
+\begin{table}[!t]
+\centering
+\caption{Main Results on ViFinQA Benchmark (Placeholder)}
+\label{tab:main_results}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method / Architecture} & \textbf{Accuracy (\%)} & \textbf{Exec. Rate (\%)} & \textbf{Evidence $F_2$} \\
+\midrule
+Standard Text-to-SQL Baseline & [TBD] & [TBD] & [TBD] \\
+Direct LLM Generation (Single-Shot) & [TBD] & [TBD] & [TBD] \\
+Dense RAG + Unconstrained Pandas & [TBD] & [TBD] & [TBD] \\
+\midrule
+\textbf{FinLens (Full Architecture)} & \textbf{[TBD]} & \textbf{[TBD]} & \textbf{[TBD]} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Ablation Studies}
+To quantify the individual contribution of each architectural component, \Cref{tab:ablation_results} summarizes systematic ablation passes removing specific modules from the pipeline.
+
+\begin{table}[!t]
+\centering
+\caption{Ablation Analysis of FinLens Pipeline Components (Placeholder)}
+\label{tab:ablation_results}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcc}
+\toprule
+\textbf{Ablated Configuration} & \textbf{Accuracy (\%)} & \textbf{$\Delta$ Accuracy} \\
+\midrule
+\textbf{FinLens Full Pipeline} & \textbf{[TBD]} & -- \\
+\quad w/o Cross-Encoder Reranker & [TBD] & [TBD] \\
+\quad w/o Two-Stage Concept Coverage Arbiter & [TBD] & [TBD] \\
+\quad w/o Multi-Pass AST Normalization & [TBD] & [TBD] \\
+\quad w/o Dynamic Row Hydration & [TBD] & [TBD] \\
+\quad w/o Dual-Layer Retry Feedback & [TBD] & [TBD] \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Error Analysis}
+A qualitative error audit categorizes residual failure modes into four primary types: (1) OCR extraction truncation on degraded filings, (2) subtle ambiguous footnotes requiring unstated accounting assumptions, (3) timeout exceptions on extremely large multi-table aggregations, and (4) edge-case unit confusion on non-standard disclosures.
+
+\section{Discussion \& Limitations}
+The architectural design of FinLens offers several practical takeaways for enterprise financial AI systems:
+\begin{itemize}
+    \item \textbf{Expressiveness of Text-to-Pandas}: While relational SQL is suited for structured databases, Pandas provides superior flexibility for OCR-extracted tables with variable row depths, multi-index labels, and complex non-linear arithmetic.
+    \item \textbf{Pre-Execution Semantic Verification}: Static AST validation and automatic scale normalization eliminate common LLM calculation errors without incurring costly additional LLM roundtrips.
+    \item \textbf{Limitations}: The system relies on accurate OCR tabular segmentation and is benchmark-scoped to quantitative financial statement question answering.
+\end{itemize}
+
+\section{Conclusion}
+In this paper, we presented the technical architecture of FinLens, an end-to-end Text-to-Pandas system for numerical question answering over financial statements. By combining layered cross-encoder reranking, concept-coverage table selection, grounded context planning, multi-pass AST normalization, and hardware-isolated sandboxed execution, FinLens provides reliable, mathematically sound, and fully auditable numerical reasoning over complex financial tables.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

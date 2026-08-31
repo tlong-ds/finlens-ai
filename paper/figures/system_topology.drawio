@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" modified="2026-08-31T00:00:00.000Z" agent="Antigravity" version="21.0.0" type="device">
+  <diagram id="system_topology" name="System Topology">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ROW 1: Upstream & Disambiguation -->
+        <mxCell id="n_question" value="Financial Question" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#475569;strokeWidth=1.5;fontStyle=1;fontSize=11;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_router" value="Query Router&#xa;(Metadata Parsing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0369a1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="30" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_retriever" value="Hybrid Retriever&#xa;(Dense + BM25 RRF)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0369a1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="30" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_reranker" value="Cross-Encoder Reranker&#xa;(BGE-M3 Top-20)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0369a1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="30" width="170" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_selector" value="Table Selection Agent&#xa;(Scouts + Concept Arbiter)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#1e3a8a;" vertex="1" parent="1">
+          <mxGeometry x="840" y="30" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- ROW 2: Planning, Synthesis & Execution -->
+        <mxCell id="n_loader" value="Evidence Table Loader&#xa;(CSV Hydration)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;fontSize=11;fontColor=#0369a1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="145" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_planner" value="Context Planner&#xa;(Operand Planning)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#1e3a8a;" vertex="1" parent="1">
+          <mxGeometry x="230" y="145" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_synthesizer" value="Code Synthesizer&#xa;(Pandas + AST Linter)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#92400e;" vertex="1" parent="1">
+          <mxGeometry x="430" y="145" width="160" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_sandbox" value="MicroVM Execution&#xa;(E2B Sandbox)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fed7aa;strokeColor=#ea580c;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#9a3412;" vertex="1" parent="1">
+          <mxGeometry x="630" y="145" width="170" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n_output" value="Verified Answer Record&#xa;(Result + Code + Trace)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#166534;" vertex="1" parent="1">
+          <mxGeometry x="840" y="145" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Feedback Edge -->
+        <mxCell id="e_feedback" value="Error Feedback (≤ N retries)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=1.5;fontColor=#b91c1c;fontSize=10;dashed=1;" edge="1" parent="1" source="n_sandbox" target="n_synthesizer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="715" y="235" />
+              <mxPoint x="510" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Row 1 Connections -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="n_question" target="n_router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" edge="1" parent="1" source="n_router" target="n_retriever">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284c7;strokeWidth=1.5;" edge="1" parent="1" source="n_retriever" target="n_reranker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2;" edge="1" parent="1" source="n_reranker" target="n_selector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Inter-Row Connection -->
+        <mxCell id="e_row" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2;" edge="1" parent="1" source="n_selector" target="n_loader">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="57" />
+              <mxPoint x="1050" y="115" />
+              <mxPoint x="10" y="115" />
+              <mxPoint x="10" y="172" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Row 2 Connections -->
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2;" edge="1" parent="1" source="n_loader" target="n_planner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563eb;strokeWidth=2;" edge="1" parent="1" source="n_planner" target="n_synthesizer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#ea580c;strokeWidth=2;" edge="1" parent="1" source="n_synthesizer" target="n_sandbox">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=2;" edge="1" parent="1" source="n_sandbox" target="n_output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
